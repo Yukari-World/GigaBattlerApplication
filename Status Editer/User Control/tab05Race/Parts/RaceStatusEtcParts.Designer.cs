@@ -68,11 +68,6 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// numericBase
 			// 
 			this.numericBase.DecimalPlaces = 2;
-			this.numericBase.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
 			this.numericBase.Location = new System.Drawing.Point(10, 30);
 			this.numericBase.Maximum = new decimal(new int[] {
             50000,
@@ -119,6 +114,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.numericLvPStatus.TabIndex = 3;
 			this.numericLvPStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericLvPStatus.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericLvPStatus, "特に支障がなければ0を指定すること");
 			// 
 			// toolTipInfo
 			// 

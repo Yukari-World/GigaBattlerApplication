@@ -37,50 +37,50 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableMonsterBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableMonsterBindingSource) {
+		/// <param name="tableUnitBindingSource">BindingSource</param>
+		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
 
-			labelName.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterName", true));
-			labelUnitType.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Race", true));
-			labelReqLv.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Req Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelMinLv.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Min Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelMaxLv.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Max Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelBaseHP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "HP", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPHP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvHP", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleHP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "HP Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseMeleeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MeleeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPMeleeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvMeleeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleMeleeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MeleeATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseMeleeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MeleeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPMeleeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvMeleeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleMeleeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MeleeDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseRangeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "RangeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPRangeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvRangeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleRangeATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "RangeATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseRangeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "RangeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPRangeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvRangeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleRangeDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "RangeDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseMagicATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MagicATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPMagicATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvMagicATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleMagicATK.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MagicATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseMagicDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MagicDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPMagicDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvMagicDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleMagicDEF.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MagicDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseSPD.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "SPD", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelLvPSPD.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvSPD", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelScaleSPD.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "SPD Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseLuck.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LUK", true));
-			labelLvPLuck.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvLUK", true));
-			labelBaseHIT.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "HIT", true));
-			labelLvPHIT.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvHIT", true));
-			labelBaseEVT.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "EVT", true));
-			labelLvPEVT.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvEVT", true));
-			labelBaseEXP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "EXP", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelLvPEXP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvEXP", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelScaleEXP.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "EXP Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
-			labelBaseMoney.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MNY", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelLvPMoney.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "LvMNY", true, DataSourceUpdateMode.OnValidation, null, "N0"));
-			labelScaleMoney.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MNY Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelName.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitName", true));
+			labelUnitType.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Race", true));
+			labelReqLv.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Req Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelMinLv.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Min Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelMaxLv.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Max Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelBaseHP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "HP", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPHP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvHP", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleHP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "HP Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseMeleeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MeleeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPMeleeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvMeleeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleMeleeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MeleeATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseMeleeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MeleeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPMeleeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvMeleeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleMeleeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MeleeDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseRangeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "RangeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPRangeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvRangeATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleRangeATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "RangeATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseRangeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "RangeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPRangeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvRangeDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleRangeDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "RangeDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseMagicATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MagicATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPMagicATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvMagicATK", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleMagicATK.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MagicATKPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseMagicDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MagicDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPMagicDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvMagicDEF", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleMagicDEF.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MagicDEFPer", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseSPD.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "SPD", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelLvPSPD.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvSPD", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelScaleSPD.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "SPD Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseLuck.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LUK", true));
+			labelLvPLuck.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvLUK", true));
+			labelBaseHIT.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "HIT", true));
+			labelLvPHIT.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvHIT", true));
+			labelBaseEVT.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "EVT", true));
+			labelLvPEVT.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvEVT", true));
+			labelBaseEXP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "EXP", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelLvPEXP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvEXP", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelScaleEXP.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "EXP Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
+			labelBaseMoney.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MNY", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelLvPMoney.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "LvMNY", true, DataSourceUpdateMode.OnValidation, null, "N0"));
+			labelScaleMoney.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "MNY Per", true, DataSourceUpdateMode.OnValidation, null, "N2"));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

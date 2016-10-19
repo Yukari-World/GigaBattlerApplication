@@ -31,13 +31,13 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupBasic = new System.Windows.Forms.GroupBox();
+			this.buttonSubmitRecommend = new System.Windows.Forms.Button();
+			this.labelRecommend = new System.Windows.Forms.Label();
 			this.numericBase = new System.Windows.Forms.NumericUpDown();
 			this.labelBase = new System.Windows.Forms.Label();
 			this.labelLvPStatus = new System.Windows.Forms.Label();
 			this.numericLvPStatus = new System.Windows.Forms.NumericUpDown();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.label1 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
 			this.groupBasic.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericBase)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPStatus)).BeginInit();
@@ -45,8 +45,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// 
 			// groupBasic
 			// 
-			this.groupBasic.Controls.Add(this.button1);
-			this.groupBasic.Controls.Add(this.label1);
+			this.groupBasic.Controls.Add(this.buttonSubmitRecommend);
+			this.groupBasic.Controls.Add(this.labelRecommend);
 			this.groupBasic.Controls.Add(this.numericBase);
 			this.groupBasic.Controls.Add(this.labelBase);
 			this.groupBasic.Controls.Add(this.labelLvPStatus);
@@ -58,13 +58,27 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.groupBasic.TabStop = false;
 			this.groupBasic.Text = "Label";
 			// 
+			// buttonSubmitRecommend
+			// 
+			this.buttonSubmitRecommend.Location = new System.Drawing.Point(500, 27);
+			this.buttonSubmitRecommend.Name = "buttonSubmitRecommend";
+			this.buttonSubmitRecommend.Size = new System.Drawing.Size(100, 23);
+			this.buttonSubmitRecommend.TabIndex = 5;
+			this.buttonSubmitRecommend.Text = "推奨値を使用";
+			this.buttonSubmitRecommend.UseVisualStyleBackColor = true;
+			this.buttonSubmitRecommend.Click += new System.EventHandler(this.buttonSubmitRecommend_Click);
+			// 
+			// labelRecommend
+			// 
+			this.labelRecommend.AutoSize = true;
+			this.labelRecommend.Location = new System.Drawing.Point(400, 32);
+			this.labelRecommend.Name = "labelRecommend";
+			this.labelRecommend.Size = new System.Drawing.Size(63, 12);
+			this.labelRecommend.TabIndex = 4;
+			this.labelRecommend.Text = "推奨値:6.30";
+			// 
 			// numericBase
 			// 
-			this.numericBase.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
 			this.numericBase.Location = new System.Drawing.Point(10, 30);
 			this.numericBase.Maximum = new decimal(new int[] {
             9999,
@@ -142,25 +156,6 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(400, 32);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(63, 12);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "推奨値:6.30";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(550, 27);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 5;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
 			// RaceStatusBasicParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -185,7 +180,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private Label labelLvPStatus;
 		private NumericUpDown numericLvPStatus;
 		private ToolTip toolTipInfo;
-		private Button button1;
-		private Label label1;
+		private Button buttonSubmitRecommend;
+		private Label labelRecommend;
 	}
 }

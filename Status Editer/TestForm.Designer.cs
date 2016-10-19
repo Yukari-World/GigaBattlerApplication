@@ -33,7 +33,7 @@ namespace Status_Editer {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.tablemonsterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.tableunitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
 			this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
 			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -47,9 +47,9 @@ namespace Status_Editer {
 			this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.___table_monsterTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_monsterTableAdapter();
-			this.monsterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.monsterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.___table_unitTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter();
+			this.unitIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.unitNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.raceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.reqLvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.minLvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -171,7 +171,7 @@ namespace Status_Editer {
 			this.ToolStripContainer.TopToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
 			this.bindingNavigator1.SuspendLayout();
@@ -202,8 +202,8 @@ namespace Status_Editer {
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.monsterIDDataGridViewTextBoxColumn,
-            this.monsterNameDataGridViewTextBoxColumn,
+            this.unitIDDataGridViewTextBoxColumn,
+            this.unitNameDataGridViewTextBoxColumn,
             this.raceDataGridViewTextBoxColumn,
             this.reqLvDataGridViewTextBoxColumn,
             this.minLvDataGridViewTextBoxColumn,
@@ -321,7 +321,7 @@ namespace Status_Editer {
             this.ability29DataGridViewTextBoxColumn,
             this.ability30DataGridViewTextBoxColumn,
             this.infoDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.tablemonsterBindingSource;
+			this.dataGridView1.DataSource = this.tableunitBindingSource;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
@@ -330,8 +330,8 @@ namespace Status_Editer {
 			// 
 			// tablemonsterBindingSource
 			// 
-			this.tablemonsterBindingSource.DataMember = "__table_monster";
-			this.tablemonsterBindingSource.DataSource = this.gigaBattlerDataSet;
+			this.tableunitBindingSource.DataMember = "__table_unit";
+			this.tableunitBindingSource.DataSource = this.gigaBattlerDataSet;
 			// 
 			// gigaBattlerDataSet
 			// 
@@ -341,7 +341,7 @@ namespace Status_Editer {
 			// bindingNavigator1
 			// 
 			this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-			this.bindingNavigator1.BindingSource = this.tablemonsterBindingSource;
+			this.bindingNavigator1.BindingSource = this.tableunitBindingSource;
 			this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
 			this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
 			this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
@@ -455,20 +455,20 @@ namespace Status_Editer {
 			// 
 			// ___table_monsterTableAdapter
 			// 
-			this.___table_monsterTableAdapter.ClearBeforeFill = true;
+			this.___table_unitTableAdapter.ClearBeforeFill = true;
 			// 
-			// monsterIDDataGridViewTextBoxColumn
+			// unitIDDataGridViewTextBoxColumn
 			// 
-			this.monsterIDDataGridViewTextBoxColumn.DataPropertyName = "MonsterID";
-			this.monsterIDDataGridViewTextBoxColumn.HeaderText = "MonsterID";
-			this.monsterIDDataGridViewTextBoxColumn.Name = "monsterIDDataGridViewTextBoxColumn";
-			this.monsterIDDataGridViewTextBoxColumn.Width = 82;
+			this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "MonsterID";
+			this.unitIDDataGridViewTextBoxColumn.HeaderText = "MonsterID";
+			this.unitIDDataGridViewTextBoxColumn.Name = "monsterIDDataGridViewTextBoxColumn";
+			this.unitIDDataGridViewTextBoxColumn.Width = 82;
 			// 
-			// monsterNameDataGridViewTextBoxColumn
+			// unitNameDataGridViewTextBoxColumn
 			// 
-			this.monsterNameDataGridViewTextBoxColumn.DataPropertyName = "MonsterName";
-			this.monsterNameDataGridViewTextBoxColumn.HeaderText = "MonsterName";
-			this.monsterNameDataGridViewTextBoxColumn.Name = "monsterNameDataGridViewTextBoxColumn";
+			this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "MonsterName";
+			this.unitNameDataGridViewTextBoxColumn.HeaderText = "MonsterName";
+			this.unitNameDataGridViewTextBoxColumn.Name = "monsterNameDataGridViewTextBoxColumn";
 			// 
 			// raceDataGridViewTextBoxColumn
 			// 
@@ -1305,7 +1305,7 @@ namespace Status_Editer {
 			this.ToolStripContainer.ResumeLayout(false);
 			this.ToolStripContainer.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
 			this.bindingNavigator1.ResumeLayout(false);
@@ -1319,8 +1319,8 @@ namespace Status_Editer {
 		private ToolStripContainer ToolStripContainer;
 		private DataGridView dataGridView1;
 		private GigaBattlerDataSet gigaBattlerDataSet;
-		private BindingSource tablemonsterBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_monsterTableAdapter ___table_monsterTableAdapter;
+		private BindingSource tableunitBindingSource;
+		private GigaBattlerDataSetTableAdapters.__table_unitTableAdapter ___table_unitTableAdapter;
 		private BindingNavigator bindingNavigator1;
 		private ToolStripButton bindingNavigatorAddNewItem;
 		private ToolStripLabel bindingNavigatorCountItem;
@@ -1333,8 +1333,8 @@ namespace Status_Editer {
 		private ToolStripButton bindingNavigatorMoveNextItem;
 		private ToolStripButton bindingNavigatorMoveLastItem;
 		private ToolStripSeparator bindingNavigatorSeparator2;
-		private DataGridViewTextBoxColumn monsterIDDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn monsterNameDataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn unitIDDataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn unitNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn raceDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn reqLvDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn minLvDataGridViewTextBoxColumn;

@@ -72,8 +72,12 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void numericBase_ValueChanged(object sender, EventArgs e) {
-			basicRate = numericBase.Value * 0.7m;
-			label1.Text = "推奨値:" + basicRate.ToString("N2");
+			if (groupBasic.Text == "HP") {
+				basicRate = numericBase.Value * 0.027m;
+			} else {
+				basicRate = numericBase.Value * 0.7m;
+			}
+			labelRecommend.Text = "推奨値:" + basicRate.ToString("N2");
 		}
 
 		/// <summary>
@@ -81,7 +85,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void button1_Click(object sender, EventArgs e) {
+		private void buttonSubmitRecommend_Click(object sender, EventArgs e) {
 			numericLvPStatus.Value = basicRate;
 		}
 	}

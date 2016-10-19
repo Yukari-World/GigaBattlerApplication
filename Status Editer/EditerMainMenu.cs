@@ -15,7 +15,7 @@ namespace Status_Editer {
 		// 変数
 		public string rootDirectory = "";
 		// TableAdapter
-		__table_monsterTableAdapter __table_monsterTableAdapter = new __table_monsterTableAdapter();
+		__table_unitTableAdapter __table_unitTableAdapter = new __table_unitTableAdapter();
 		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
 		__table_weaponTableAdapter __table_weaponTableAdapter = new __table_weaponTableAdapter();
 		__table_shieldTableAdapter __table_shieldTableAdapter = new __table_shieldTableAdapter();
@@ -24,7 +24,7 @@ namespace Status_Editer {
 		__table_accessoryTableAdapter __table_accessoryTableAdapter = new __table_accessoryTableAdapter();
 		__table_skillTableAdapter __table_skillTableAdapter = new __table_skillTableAdapter();
 		// BindingSource
-		BindingSource tableMonsterBindingSource = new BindingSource();
+		BindingSource tableUnitBindingSource = new BindingSource();
 		BindingSource tableRaceBindingSource = new BindingSource();
 		BindingSource tableArmorBingingSource = new BindingSource();
 
@@ -52,8 +52,8 @@ namespace Status_Editer {
 		/// 変更した更新内容を適用します。
 		/// </summary>
 		private void UpdateSQL() {
-			tableMonsterBindingSource.EndEdit();
-			__table_monsterTableAdapter.Update(GigaBattlerDataSet.@__table_monster);
+			tableUnitBindingSource.EndEdit();
+			__table_unitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
 		}
 
 
@@ -68,7 +68,7 @@ namespace Status_Editer {
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 初期化
-			__table_monsterTableAdapter.ClearBeforeFill = true;
+			__table_unitTableAdapter.ClearBeforeFill = true;
 			__table_raceTableAdapter.ClearBeforeFill = true;
 			__table_weaponTableAdapter.ClearBeforeFill = true;
 			__table_shieldTableAdapter.ClearBeforeFill = true;
@@ -79,8 +79,8 @@ namespace Status_Editer {
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の関連付け
-			tableMonsterBindingSource.DataMember = "__table_monster";
-			tableMonsterBindingSource.DataSource = GigaBattlerDataSet;
+			tableUnitBindingSource.DataMember = "__table_unit";
+			tableUnitBindingSource.DataSource = GigaBattlerDataSet;
 			tableRaceBindingSource.DataMember = "__table_race";
 			tableRaceBindingSource.DataSource = GigaBattlerDataSet;
 			tableArmorBingingSource.DataMember = "__table_armor";
@@ -95,9 +95,9 @@ namespace Status_Editer {
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
-			listUnit.DataSource = tableMonsterBindingSource;
-			listUnit.DisplayMember = "MonsterName";
-			listUnit.ValueMember = "MonsterID";
+			listUnit.DataSource = tableUnitBindingSource;
+			listUnit.DisplayMember = "UnitName";
+			listUnit.ValueMember = "UnitID";
 
 			listRace.DataSource = tableRaceBindingSource;
 			listRace.DisplayMember = "RaceName";
@@ -105,13 +105,13 @@ namespace Status_Editer {
 
 			try {
 				// 別コントロールへのバインディング設定
-				TotalUnitInfomation.LoadDataBindings(tableMonsterBindingSource);
-				UnitInfomation.LoadDataBindings(tableMonsterBindingSource);
-				DropInfomation.LoadDataBindings(tableMonsterBindingSource, __table_weaponTableAdapter);
-				StatusInfomation.LoadDataBindings(tableMonsterBindingSource);
-				ActiveSkillInfomation.LoadDataBindings(tableMonsterBindingSource, __table_skillTableAdapter);
+				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
+				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
+				DropInfomation.LoadDataBindings(tableUnitBindingSource, __table_weaponTableAdapter);
+				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
+				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, __table_skillTableAdapter);
 
-				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
+				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
@@ -183,7 +183,7 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
 			try {
-				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
+				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);

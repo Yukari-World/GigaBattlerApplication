@@ -34,15 +34,15 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableMonsterBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableMonsterBindingSource) {
-			textMonsterID.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterID", true));
-			checkAirType.DataBindings.Add(new Binding("CheckState", tableMonsterBindingSource, "Air", true));
-			checkAirType.DataBindings.Add(new Binding("Checked", tableMonsterBindingSource, "Air", true));
-			textUnitName.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterName", true));
-			numericRare.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "Rare", true));
-			numericWT.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "WT", true));
-			textInfo.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Info", true));
+		/// <param name="tableUnitBindingSource">BindingSource</param>
+		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+			textMonsterID.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitID", true));
+			checkAirType.DataBindings.Add(new Binding("CheckState", tableUnitBindingSource, "Air", true));
+			checkAirType.DataBindings.Add(new Binding("Checked", tableUnitBindingSource, "Air", true));
+			textUnitName.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitName", true));
+			numericRare.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Rare", true));
+			numericWT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "WT", true));
+			textInfo.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Info", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

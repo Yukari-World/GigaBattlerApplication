@@ -45,15 +45,15 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tablemonsterBindingSource">BindingSource</param>
+		/// <param name="tableUnitBindingSource">BindingSource</param>
 		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		/// <param name="bindTag">string</param>
-		public void SetDataBindings(BindingSource tablemonsterBindingSource, __table_skillTableAdapter SkillAdapter, string bindTag) {
+		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_skillTableAdapter SkillAdapter, string bindTag) {
 			SkillAdapter.Fill(SkillTable);
 
 			// データバインドの設定
 			// ここでは「Skill*」が入る
-			comboSkill.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, bindTag, true));
+			comboSkill.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, bindTag, true));
 
 			// バインド項目の設定
 			comboSkill.DataSource = SkillTable;

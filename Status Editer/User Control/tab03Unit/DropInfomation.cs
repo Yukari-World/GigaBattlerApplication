@@ -43,9 +43,9 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tablemonsterBindingSource">BindingSource</param>
+		/// <param name="tableUnitBindingSource">BindingSource</param>
 		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void LoadDataBindings(BindingSource tablemonsterBindingSource, __table_weaponTableAdapter WeaponAdapter) {
+		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_weaponTableAdapter WeaponAdapter) {
 			// 項目に関する準備
 			WeaponAdapter.Fill(WeaponTable_3_1);
 			WeaponAdapter.Fill(WeaponTable_3_2);
@@ -54,17 +54,17 @@ namespace Status_Editer.User_Control.tab03Unit {
 			WeaponAdapter.Fill(WeaponTable_3_5);
 
 			// データバインドの設定
-			comboDropTable1.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item1", true));
-			comboDropTable2.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item2", true));
-			comboDropTable3.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item3", true));
-			comboDropTable4.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item4", true));
-			comboDropTable5.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item5", true));
+			comboDropTable1.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item1", true));
+			comboDropTable2.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item2", true));
+			comboDropTable3.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item3", true));
+			comboDropTable4.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item4", true));
+			comboDropTable5.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item5", true));
 
-			numericDropRate1.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per1", true));
-			numericDropRate2.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per2", true));
-			numericDropRate3.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per3", true));
-			numericDropRate4.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per4", true));
-			numericDropRate5.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per5", true));
+			numericDropRate1.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per1", true));
+			numericDropRate2.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per2", true));
+			numericDropRate3.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per3", true));
+			numericDropRate4.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per4", true));
+			numericDropRate5.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per5", true));
 
 			// バインド項目の設定
 			comboDropTable1.DataSource = WeaponTable_3_1;
