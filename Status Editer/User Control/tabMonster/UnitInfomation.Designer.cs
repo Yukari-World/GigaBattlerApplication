@@ -26,6 +26,11 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnitInfomation));
 			this.groupUnitInfo = new System.Windows.Forms.GroupBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.numericWT = new System.Windows.Forms.NumericUpDown();
+			this.labelWT = new System.Windows.Forms.Label();
+			this.numericRare2 = new System.Windows.Forms.NumericUpDown();
+			this.labelRare2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textInfo = new System.Windows.Forms.TextBox();
 			this.numericRare = new System.Windows.Forms.NumericUpDown();
@@ -38,15 +43,10 @@
 			this.textMonsterID = new System.Windows.Forms.TextBox();
 			this.labelMonsterID = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.numericRare2 = new System.Windows.Forms.NumericUpDown();
-			this.labelRare2 = new System.Windows.Forms.Label();
-			this.numericWT = new System.Windows.Forms.NumericUpDown();
-			this.labelWT = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.groupUnitInfo.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupUnitInfo
@@ -70,6 +70,54 @@
 			resources.ApplyResources(this.groupUnitInfo, "groupUnitInfo");
 			this.groupUnitInfo.Name = "groupUnitInfo";
 			this.groupUnitInfo.TabStop = false;
+			// 
+			// label2
+			// 
+			resources.ApplyResources(this.label2, "label2");
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.label2.Name = "label2";
+			// 
+			// numericWT
+			// 
+			resources.ApplyResources(this.numericWT, "numericWT");
+			this.numericWT.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+			this.numericWT.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericWT.Name = "numericWT";
+			this.toolTipInfo.SetToolTip(this.numericWT, resources.GetString("numericWT.ToolTip"));
+			this.numericWT.Value = new decimal(new int[] {
+            85,
+            0,
+            0,
+            0});
+			// 
+			// labelWT
+			// 
+			resources.ApplyResources(this.labelWT, "labelWT");
+			this.labelWT.Name = "labelWT";
+			// 
+			// numericRare2
+			// 
+			resources.ApplyResources(this.numericRare2, "numericRare2");
+			this.numericRare2.Name = "numericRare2";
+			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
+			this.numericRare2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			// 
+			// labelRare2
+			// 
+			resources.ApplyResources(this.labelRare2, "labelRare2");
+			this.labelRare2.Name = "labelRare2";
 			// 
 			// label1
 			// 
@@ -132,6 +180,7 @@
 			this.comboMonsterGroup.FormattingEnabled = true;
 			resources.ApplyResources(this.comboMonsterGroup, "comboMonsterGroup");
 			this.comboMonsterGroup.Name = "comboMonsterGroup";
+			this.toolTipInfo.SetToolTip(this.comboMonsterGroup, resources.GetString("comboMonsterGroup.ToolTip"));
 			// 
 			// labelMonsterGroup
 			// 
@@ -158,54 +207,6 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// numericRare2
-			// 
-			resources.ApplyResources(this.numericRare2, "numericRare2");
-			this.numericRare2.Name = "numericRare2";
-			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
-			this.numericRare2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			// 
-			// labelRare2
-			// 
-			resources.ApplyResources(this.labelRare2, "labelRare2");
-			this.labelRare2.Name = "labelRare2";
-			// 
-			// numericWT
-			// 
-			resources.ApplyResources(this.numericWT, "numericWT");
-			this.numericWT.Maximum = new decimal(new int[] {
-            9999999,
-            0,
-            0,
-            0});
-			this.numericWT.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.numericWT.Name = "numericWT";
-			this.toolTipInfo.SetToolTip(this.numericWT, resources.GetString("numericWT.ToolTip"));
-			this.numericWT.Value = new decimal(new int[] {
-            85,
-            0,
-            0,
-            0});
-			// 
-			// labelWT
-			// 
-			resources.ApplyResources(this.labelWT, "labelWT");
-			this.labelWT.Name = "labelWT";
-			// 
-			// label2
-			// 
-			resources.ApplyResources(this.label2, "label2");
-			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label2.Name = "label2";
-			// 
 			// UnitInfomation
 			// 
 			resources.ApplyResources(this, "$this");
@@ -215,9 +216,9 @@
 			this.Name = "UnitInfomation";
 			this.groupUnitInfo.ResumeLayout(false);
 			this.groupUnitInfo.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
 			this.ResumeLayout(false);
 
 		}

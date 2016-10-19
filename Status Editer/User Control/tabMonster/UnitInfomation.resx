@@ -151,9 +151,6 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="toolTipInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="numericWT.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 200</value>
   </data>
@@ -170,9 +167,12 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="numericWT.ThousandsSeparator" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <metadata name="toolTipInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="numericWT.ToolTip" xml:space="preserve">
     <value>Weight。重さ。
-1 = 大体1kgで見ています。攻撃の優先順位やフィールドの重力などに影響します。
+1 = 大体1kgで換算。攻撃の優先順位やフィールドの重力などに影響。
 先制値: SPD / (WT * (Gravity ** 2 + 100) / 100)
 設定値: 1 ～ 9,999,999</value>
   </data>
@@ -397,9 +397,6 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="checkAirType.Text" xml:space="preserve">
     <value>飛行タイプ</value>
   </data>
-  <metadata name="toolTipInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="checkAirType.ToolTip" xml:space="preserve">
     <value>飛行タイプを設定したモンスターは、一部のスキルが命中しなくなる。
 ただし、飛行タイプに特効効果のあるスキルで1.5倍のダメージを受ける。</value>
@@ -480,6 +477,10 @@ Dragon: 2,000 ～ 25,000</value>
   </data>
   <data name="comboMonsterGroup.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="comboMonsterGroup.ToolTip" xml:space="preserve">
+    <value>ユニットの種類と属性相性情報。
+ユニークの場合、属性相性が異なることもある。</value>
   </data>
   <data name="&gt;&gt;comboMonsterGroup.Name" xml:space="preserve">
     <value>comboMonsterGroup</value>

@@ -14,6 +14,18 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// 変数
 		public string rootDirectory = "";
+		// TableAdapter
+		__table_monsterTableAdapter __table_monsterTableAdapter = new __table_monsterTableAdapter();
+		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
+		__table_weaponTableAdapter __table_weaponTableAdapter = new __table_weaponTableAdapter();
+		__table_shieldTableAdapter __table_shieldTableAdapter = new __table_shieldTableAdapter();
+		__table_helmetTableAdapter __table_helmetTableAdapter = new __table_helmetTableAdapter();
+		__table_armorTableAdapter __table_armorTableAdapter = new __table_armorTableAdapter();
+		__table_accessoryTableAdapter __table_accessoryTableAdapter = new __table_accessoryTableAdapter();
+		__table_skillTableAdapter __table_skillTableAdapter = new __table_skillTableAdapter();
+		// BindingSource
+		BindingSource tableMonsterBindingSource = new BindingSource();
+		BindingSource tableArmorBingingSource = new BindingSource();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,6 +47,13 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		/// <summary>
+		/// 変更した更新内容を適用します。
+		/// </summary>
+		private void UpdateSQL() {
+			tableMonsterBindingSource.EndEdit();
+			__table_monsterTableAdapter.Update(GigaBattlerDataSet.@__table_monster);
+		}
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,15 +65,30 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
+			__table_armorTableAdapter.ClearBeforeFill = true;
+			// バインド項目の関連付け
+			tableMonsterBindingSource.DataMember = "__table_monster";
+			tableMonsterBindingSource.DataSource = GigaBattlerDataSet;
+			tableArmorBingingSource.DataMember = "__table_armor";
+			tableArmorBingingSource.DataSource = GigaBattlerDataSet;
+
 			//----------------------------------------------------------------------------------------------------
 			// デザイナープロパティの設定
 			// できればデザイナープロパティに設定したいが、バグの関係でここで設定。
-			// TAB: モンスター
-			tabControlMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-			listMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			// TAB: ユニット
+			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
 			// データバインドの設定
 			try {
+				// データバインドの設定
+				//listMonster.DataBindings.Add("SelectedValue", tableMonsterBindingSource, "MonsterID");
+
+				// バインド項目の設定
+				listUnit.DataSource = tableMonsterBindingSource;
+				listUnit.DisplayMember = "MonsterName";
+				listUnit.ValueMember = "MonsterID";
+
 				// 別コントロールへのバインディング設定
 				UnitInfomation.LoadDataBindings(tableMonsterBindingSource);
 				DropInfomation.LoadDataBindings(tableMonsterBindingSource, __table_weaponTableAdapter);
@@ -116,6 +150,7 @@ namespace Status_Editer {
 			DialogResult result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			switch (result) {
 				case DialogResult.Yes:
+					UpdateSQL();
 					break;
 				case DialogResult.No:
 					break;
@@ -147,8 +182,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
-			tableMonsterBindingSource.EndEdit();
-			__table_monsterTableAdapter.Update(GigaBattlerDataSet.@__table_monster);
+			UpdateSQL();
 		}
 
 		/// <summary>
@@ -163,6 +197,6 @@ namespace Status_Editer {
 		}
 
 		//----------------------------------------------------------------------------------------------------
-		// TAB: モンスター
+		// TAB: ユニット
 	}
 }
