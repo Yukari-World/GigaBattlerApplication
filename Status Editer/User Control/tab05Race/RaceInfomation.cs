@@ -57,6 +57,8 @@ namespace Status_Editer.User_Control.tab05Race {
 			raceStatusMagicDEF.SetDataBindings(tableRaceBindingSource, "MDF");
 			raceStatusSPD.SetDataBindings(tableRaceBindingSource, "SPD");
 			raceStatusLuck.SetDataBindings(tableRaceBindingSource, "LUK");
+			raceStatusHIT.SetDataBindings(tableRaceBindingSource, "HIT");
+			raceStatusEVT.SetDataBindings(tableRaceBindingSource, "EVT");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

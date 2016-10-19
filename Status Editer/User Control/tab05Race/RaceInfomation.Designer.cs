@@ -37,11 +37,15 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.raceStatusMeleeATK = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusTP = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusHP = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
+			this.raceStatusHIT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
+			this.raceStatusEVT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.groupRaceInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupRaceInfo
 			// 
+			this.groupRaceInfo.Controls.Add(this.raceStatusEVT);
+			this.groupRaceInfo.Controls.Add(this.raceStatusHIT);
 			this.groupRaceInfo.Controls.Add(this.raceStatusLuck);
 			this.groupRaceInfo.Controls.Add(this.raceStatusSPD);
 			this.groupRaceInfo.Controls.Add(this.raceStatusMagicDEF);
@@ -150,6 +154,24 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.raceStatusHP.Size = new System.Drawing.Size(650, 80);
 			this.raceStatusHP.TabIndex = 0;
 			// 
+			// raceStatusHIT
+			// 
+			this.raceStatusHIT.BackColor = System.Drawing.Color.Transparent;
+			this.raceStatusHIT.labelText = "HIT";
+			this.raceStatusHIT.Location = new System.Drawing.Point(700, 15);
+			this.raceStatusHIT.Name = "raceStatusHIT";
+			this.raceStatusHIT.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusHIT.TabIndex = 10;
+			// 
+			// raceStatusEVT
+			// 
+			this.raceStatusEVT.BackColor = System.Drawing.Color.Transparent;
+			this.raceStatusEVT.labelText = "EVT";
+			this.raceStatusEVT.Location = new System.Drawing.Point(700, 101);
+			this.raceStatusEVT.Name = "raceStatusEVT";
+			this.raceStatusEVT.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusEVT.TabIndex = 11;
+			// 
 			// RaceInfomation
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -176,5 +198,7 @@ namespace Status_Editer.User_Control.tab05Race {
 		private Parts.RaceStatusBasicParts raceStatusMeleeDEF;
 		private Parts.RaceStatusBasicParts raceStatusMeleeATK;
 		private Parts.RaceStatusBasicParts raceStatusTP;
+		private Parts.RaceStatusBasicParts raceStatusEVT;
+		private Parts.RaceStatusBasicParts raceStatusHIT;
 	}
 }

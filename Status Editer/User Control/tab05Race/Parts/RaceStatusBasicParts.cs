@@ -20,6 +20,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		private decimal basicRate;
+		private int GrooveGauge;
+		private Label StatusBar = new Label();
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
@@ -31,6 +33,12 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		public string labelText {
 			get { return groupBasic.Text; }
 			set { groupBasic.Text = value; }
+		}
+		/// <summary>
+		/// [ReadOnly]ベースステータスの値を抽出します
+		/// </summary>
+		public decimal numericBaseValue {
+			get { return numericBase.Value; }
 		}
 
 
@@ -77,35 +85,64 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void RaceStatusBasicParts_Load(object sender, EventArgs e) {
+			// 特殊処理が必要なデータをGruopLabelから抽出
+			string[] LongValueIndex = new string[] { "HP", "TP", "HIT", "EVT" };
 			string[] ExtraIndex = new string[] { "TP", "Luck", "HIT", "EVT" };
+
+			// Gaugeの長さを設定する
+			if (Array.IndexOf(LongValueIndex, groupBasic.Text) != -1) {
+				GrooveGauge = 1;
+			} else {
+				GrooveGauge = 20;
+			}
+
+			// Labelの初期化
+			StatusBar.AutoSize = false;
+			StatusBar.BackColor = Color.Green;
+			StatusBar.BorderStyle = BorderStyle.FixedSingle;
+			StatusBar.Name = "StatusBar";
+			StatusBar.Location = new Point(10, 55);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+
+			// LabelをGroupBoxに追加する
+			groupBasic.Controls.Add(this.StatusBar);
+
+			// コントロールの設定変更
 			if (Array.IndexOf(ExtraIndex, groupBasic.Text) != -1) {
 				buttonSubmitRecommend.Visible = false;
 				labelRecommend.Visible = false;
-				numericBase.Increment = 5M;	// 変動幅を変更
-				// TPでなければ、設定可能最小値を変更
-				if (groupBasic.Text != "TP") {
+				numericBase.Increment = 5M; // 変動幅を変更
+
+
+				if (groupBasic.Text != "TP") {  // TPでなければ、設定可能最小値を変更
 					numericBase.Minimum = -9999M;
 					numericLvPStatus.Minimum = -9999.99M;
+				} else {    // TPなら設定可能最小値を0にする
+					numericBase.Minimum = 0M;
 				}
 			}
 		}
 
 		/// <summary>
-		/// 
+		/// Basic Statusの値が変化した時の処理
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void numericBase_ValueChanged(object sender, EventArgs e) {
+			// 推奨値の計算
 			if (groupBasic.Text == "HP") {
 				basicRate = numericBase.Value * 0.027m;
 			} else {
 				basicRate = numericBase.Value * 0.7m;
 			}
 			labelRecommend.Text = "推奨値:" + basicRate.ToString("N2");
+
+			// Gaugeの長さを変更する
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
 		}
 
 		/// <summary>
-		/// 
+		/// 「推奨値を使用」ボタンが押された時の処理。処理というほど大きな事はしていない
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>

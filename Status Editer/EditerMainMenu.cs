@@ -102,6 +102,10 @@ namespace Status_Editer {
 			listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
+			// TAB: 種族
+
+			listRace.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
 
@@ -115,13 +119,19 @@ namespace Status_Editer {
 
 			try {
 				// 別コントロールへのバインディング設定
+				// TAB: ユニット
+
 				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				DropInfomation.LoadDataBindings(tableUnitBindingSource, __table_weaponTableAdapter);
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
 				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, __table_skillTableAdapter);
 
+				// TAB: 種族
+
 				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
+
+				// 共通
 
 				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
@@ -195,13 +205,15 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
-			try {
-				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
-				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
-				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
-				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
-			} catch (Exception ex) {
-				MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				try {
+					__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
+					__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+					__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+					__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+				} catch (Exception ex) {
+					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 		}
 

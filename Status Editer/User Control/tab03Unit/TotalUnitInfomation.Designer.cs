@@ -490,17 +490,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelLv1HP.Text = "0.00";
 			this.labelLv1HP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
-			// labelMaxLvHP
-			// 
-			this.labelMaxLvHP.AutoSize = true;
-			this.labelMaxLvHP.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.labelMaxLvHP.Location = new System.Drawing.Point(739, 43);
-			this.labelMaxLvHP.Name = "labelMaxLvHP";
-			this.labelMaxLvHP.Size = new System.Drawing.Size(174, 20);
-			this.labelMaxLvHP.TabIndex = 19;
-			this.labelMaxLvHP.Text = "0.00";
-			this.labelMaxLvHP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
 			// labelMinLvHP
 			// 
 			this.labelMinLvHP.AutoSize = true;
@@ -511,6 +500,17 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMinLvHP.TabIndex = 18;
 			this.labelMinLvHP.Text = "0.00";
 			this.labelMinLvHP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelMaxLvHP
+			// 
+			this.labelMaxLvHP.AutoSize = true;
+			this.labelMaxLvHP.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelMaxLvHP.Location = new System.Drawing.Point(739, 43);
+			this.labelMaxLvHP.Name = "labelMaxLvHP";
+			this.labelMaxLvHP.Size = new System.Drawing.Size(174, 20);
+			this.labelMaxLvHP.TabIndex = 19;
+			this.labelMaxLvHP.Text = "0.00";
+			this.labelMaxLvHP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// labelMeleeATK
 			// 
@@ -1502,10 +1502,10 @@ namespace Status_Editer.User_Control.tab03Unit {
 		private Label labelLevel;
 		private Label labelReqLv;
 		private Label labelReqLvLabel;
-		private Label labelMinLv;
 		private Label labelMinLvLabel;
-		private Label labelMaxLv;
+		private Label labelMinLv;
 		private Label labelMaxLvLabel;
+		private Label labelMaxLv;
 		private Label labelBaseLabel;
 		private Label labelLvPLabel;
 		private Label labelCalcLabel;
