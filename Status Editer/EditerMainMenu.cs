@@ -18,8 +18,9 @@ namespace Status_Editer {
 		}
 
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
-			// TODO: このコード行はデータを 'gigaBattlerProtocol.monster_table' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-			monster_tableTableAdapter.Fill(gigaBattlerProtocol.monster_table);
+			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+			__table_monsterTableAdapter.Fill(gigaBattlerDataSet.@__table_monster);
+			__table_weaponTableAdapter.Fill(gigaBattlerDataSet.@__table_weapon);
 		}
 
 		/// <summary>
@@ -69,7 +70,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
-			monster_tableTableAdapter.Update(gigaBattlerProtocol.monster_table);
+			__table_monsterTableAdapter.Update(gigaBattlerDataSet.@__table_monster);
 		}
 
 		private void AirType_CheckedChanged(object sender, EventArgs e) {
@@ -81,6 +82,11 @@ namespace Status_Editer {
 
 					break;
 			}
+		}
+
+		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
+			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+			__table_monsterTableAdapter.Fill(gigaBattlerDataSet.@__table_monster);
 		}
 	}
 }

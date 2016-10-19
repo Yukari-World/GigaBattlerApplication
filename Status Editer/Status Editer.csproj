@@ -73,13 +73,13 @@
     <Compile Include="EditerMainMenu.Designer.cs">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GigaBattlerProtocol.cs">
-      <DependentUpon>GigaBattlerProtocol.xsd</DependentUpon>
+    <Compile Include="GigaBattlerDataSet.cs">
+      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="GigaBattlerProtocol.Designer.cs">
+    <Compile Include="GigaBattlerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GigaBattlerProtocol.xsd</DependentUpon>
+      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,16 +96,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
-    <None Include="GigaBattlerProtocol.xsc">
-      <DependentUpon>GigaBattlerProtocol.xsd</DependentUpon>
+    <None Include="GigaBattlerDataSet.xsc">
+      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </None>
-    <None Include="GigaBattlerProtocol.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GigaBattlerProtocol.Designer.cs</LastGenOutput>
+    <None Include="GigaBattlerDataSet.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GigaBattlerDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="GigaBattlerProtocol.xss">
-      <DependentUpon>GigaBattlerProtocol.xsd</DependentUpon>
+    <None Include="GigaBattlerDataSet.xss">
+      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
