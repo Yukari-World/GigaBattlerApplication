@@ -1,7 +1,7 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // RaceStatusBasicParts
 //
-// Edited By Yukari-World
+// Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
 using System.Drawing;
@@ -18,12 +18,13 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private Label StatusBar = new Label();
 		private Label PlusStatusBar = new Label();
 
+
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// グループラベルのテキストを設定します。
+		/// [R/W]グループラベルのテキストを設定します。
 		/// </summary>
 		public string labelText {
 			get { return groupBasic.Text; }
@@ -92,7 +93,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 				GrooveGauge = 20;
 			}
 
-			// Labelの初期化
+			// 1st Labelの初期化
 			StatusBar.AutoSize = false;
 			StatusBar.BackColor = Color.Green;
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
@@ -100,23 +101,24 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.Location = new Point(10, 50);
 			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
 
-			// Labelの初期化
+			// 2nd Labelの初期化
 			PlusStatusBar.AutoSize = false;
 			PlusStatusBar.BackColor = Color.Yellow;
 			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
 			PlusStatusBar.Name = "PlusStatusBar";
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);	// 10pxずらして配置
 			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
 
-			// LabelをGroupBoxに追加する
+			// 各種LabelをGroupBoxに追加する
 			groupBasic.Controls.Add(StatusBar);
 			groupBasic.Controls.Add(PlusStatusBar);
 
 			// コントロールの設定変更
+			// ExtraIndexのいずれかならば設定
 			if (Array.IndexOf(ExtraIndex, groupBasic.Text) != -1) {
-				buttonSubmitRecommend.Visible = false;
-				labelRecommend.Visible = false;
-				numericBase.Increment = 5M; // 変動幅を変更
+				buttonSubmitRecommend.Visible = false;	// ボタンを非表示
+				labelRecommend.Visible = false;			// 不要なラベルを非表示
+				numericBase.Increment = 5M; // 設定変動幅を変更
 
 				if (groupBasic.Text != "TP") {  // TPでなければ、設定可能最小値を変更
 					numericBase.Minimum = -9999M;
