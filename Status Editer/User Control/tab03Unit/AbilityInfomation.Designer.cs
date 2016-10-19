@@ -1,9 +1,13 @@
-﻿namespace Status_Editer.User_Control.tab03Unit {
+﻿using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.tab03Unit {
 	partial class AbilityInfomation {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -23,33 +27,33 @@
 		/// コード エディターで変更しないでください。
 		/// </summary>
 		private void InitializeComponent() {
-			this.groupActiveSkillInfo = new System.Windows.Forms.GroupBox();
+			this.groupActiveSkillInfo = new GroupBox();
 			this.SuspendLayout();
 			// 
 			// groupActiveSkillInfo
 			// 
-			this.groupActiveSkillInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupActiveSkillInfo.Location = new System.Drawing.Point(0, 0);
+			this.groupActiveSkillInfo.Dock = DockStyle.Fill;
+			this.groupActiveSkillInfo.Location = new Point(0, 0);
 			this.groupActiveSkillInfo.Name = "groupActiveSkillInfo";
-			this.groupActiveSkillInfo.Size = new System.Drawing.Size(1360, 800);
+			this.groupActiveSkillInfo.Size = new Size(1360, 800);
 			this.groupActiveSkillInfo.TabIndex = 0;
 			this.groupActiveSkillInfo.TabStop = false;
 			this.groupActiveSkillInfo.Text = "Skill Infomation(Passive)";
 			// 
 			// PassiveSkillInfomation
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
+			this.AutoScaleDimensions = new SizeF(6F, 12F);
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.Transparent;
 			this.Controls.Add(this.groupActiveSkillInfo);
 			this.Name = "PassiveSkillInfomation";
-			this.Size = new System.Drawing.Size(1360, 800);
+			this.Size = new Size(1360, 800);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.GroupBox groupActiveSkillInfo;
+		private GroupBox groupActiveSkillInfo;
 	}
 }

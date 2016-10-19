@@ -8,12 +8,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.GigaBattlerDataSet" Collapsed="true">
-    <Position X="10.25" Y="9" Width="1.5" />
+    <Position X="8.25" Y="9" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAEOCEACwgCIAJABAIAxAAAAQgGQBgAAAAIICEEFBA=</HashCode>
+      <HashCode>AAAEOCEACwgCMAJABAICxAAAAQgGQBpAAAAIICEEFBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.Program" Collapsed="true">
@@ -44,7 +44,7 @@
   <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.TableAdapterManager" Collapsed="true">
     <Position X="9.25" Y="2" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>QSAEAKAIQgBABAFBgABAcEAgAgACgAAAIAQAACAABQQ=</HashCode>
+      <HashCode>QSAEAKAIQgBABAFBgABAcEAgAgACgAAAoAQAECAABQQ=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.Properties.Resources" Collapsed="true">
@@ -54,7 +54,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.Properties.Settings" Collapsed="true">
-    <Position X="7.25" Y="9" Width="1.75" />
+    <Position X="5.25" Y="9" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAgAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
@@ -62,7 +62,7 @@
   <Class Name="Status_Editer.TestForm" Collapsed="true">
     <Position X="5.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>lrQdDcCBkGiIFFfCoBjENBATYBkAyCAgEAQKAATD5wE=</HashCode>
+      <HashCode>t7QdD8GBkGmIFHPCoBjENBATZBkB6KIoEBQKAATT50E=</HashCode>
       <FileName>TestForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -110,12 +110,12 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Data.DataSet" Collapsed="true">
-    <Position X="10.25" Y="7.5" Width="1.75" />
+    <Position X="8.25" Y="7.5" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
-    <Position X="7.25" Y="7.5" Width="1.75" />
+    <Position X="5.25" Y="7.5" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
@@ -125,15 +125,8 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="3.5" Y="7.5" Width="1.5" />
+    <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier />
-  </Class>
-  <Class Name="Status_Editer.StatusCalc" Collapsed="true">
-    <Position X="4.5" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>StatusCalc.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.AbilityInfomation" Collapsed="true">
     <Position X="10" Y="6.5" Width="1.5" />
@@ -166,7 +159,7 @@
   <Class Name="Status_Editer.User_Control.tab03Unit.TotalUnitInfomation" Collapsed="true">
     <Position X="7.5" Y="6.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>EBwCEAAAECEABBAEACCAAAACAAAACCAAAAAIBAAAACA=</HashCode>
+      <HashCode>8P8vmFEKtjsCAksF4qSIIABO1CBHHqpFjITaBUkhlTo=</HashCode>
       <FileName>User Control\tab03Unit\TotalUnitInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>

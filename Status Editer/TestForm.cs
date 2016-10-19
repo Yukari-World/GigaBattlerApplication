@@ -50,6 +50,8 @@ namespace Status_Editer {
 		private void TestForm_Load(object sender, EventArgs e) {
 			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
 			this.___table_monsterTableAdapter.Fill(this.gigaBattlerDataSet.@__table_monster);
+			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+			this.___table_monsterTableAdapter.Fill(this.gigaBattlerDataSet.@__table_monster);
 		}
 	}
 }

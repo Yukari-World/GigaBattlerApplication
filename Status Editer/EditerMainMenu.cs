@@ -14,8 +14,6 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// 変数
 		public string rootDirectory = "";
-		// Class
-		StatusCalc StatusCalc = new StatusCalc();
 		// TableAdapter
 		__table_monsterTableAdapter __table_monsterTableAdapter = new __table_monsterTableAdapter();
 		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
@@ -27,6 +25,7 @@ namespace Status_Editer {
 		__table_skillTableAdapter __table_skillTableAdapter = new __table_skillTableAdapter();
 		// BindingSource
 		BindingSource tableMonsterBindingSource = new BindingSource();
+		BindingSource tableRaceBindingSource = new BindingSource();
 		BindingSource tableArmorBingingSource = new BindingSource();
 
 
@@ -67,7 +66,10 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
+			//----------------------------------------------------------------------------------------------------
+			// 初期化
 			__table_monsterTableAdapter.ClearBeforeFill = true;
+			__table_raceTableAdapter.ClearBeforeFill = true;
 			__table_weaponTableAdapter.ClearBeforeFill = true;
 			__table_shieldTableAdapter.ClearBeforeFill = true;
 			__table_helmetTableAdapter.ClearBeforeFill = true;
@@ -79,6 +81,8 @@ namespace Status_Editer {
 			// バインド項目の関連付け
 			tableMonsterBindingSource.DataMember = "__table_monster";
 			tableMonsterBindingSource.DataSource = GigaBattlerDataSet;
+			tableRaceBindingSource.DataMember = "__table_race";
+			tableRaceBindingSource.DataSource = GigaBattlerDataSet;
 			tableArmorBingingSource.DataMember = "__table_armor";
 			tableArmorBingingSource.DataSource = GigaBattlerDataSet;
 
@@ -95,13 +99,13 @@ namespace Status_Editer {
 			listUnit.DisplayMember = "MonsterName";
 			listUnit.ValueMember = "MonsterID";
 
-			//----------------------------------------------------------------------------------------------------
-			// データバインドの設定
-			StatusCalc.NumericReqLv.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "Req Lv", true));
+			listRace.DataSource = tableRaceBindingSource;
+			listRace.DisplayMember = "RaceName";
+			listRace.ValueMember = "RaceID";
 
 			try {
 				// 別コントロールへのバインディング設定
-				TotalUnitInfomation.LoadDataBindings(tableMonsterBindingSource, StatusCalc);
+				TotalUnitInfomation.LoadDataBindings(tableMonsterBindingSource);
 				UnitInfomation.LoadDataBindings(tableMonsterBindingSource);
 				DropInfomation.LoadDataBindings(tableMonsterBindingSource, __table_weaponTableAdapter);
 				StatusInfomation.LoadDataBindings(tableMonsterBindingSource);

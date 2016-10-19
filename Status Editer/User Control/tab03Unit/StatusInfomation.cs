@@ -264,13 +264,13 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		private void ChartChanges() {
 			//グラフデータを更新する。
-			dataValue[0] = (numericMeleeATK.Value + numericLvPMeleeATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleMeleeATK.Value) / 100;
-			dataValue[1] = (numericMeleeDEF.Value + numericLvPMeleeDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleMeleeDEF.Value) / 100;
-			dataValue[2] = (numericRangeATK.Value + numericLvPRangeATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleRangeATK.Value) / 100;
-			dataValue[3] = (numericRangeDEF.Value + numericLvPRangeDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleRangeDEF.Value) / 100;
-			dataValue[4] = (numericMagicATK.Value + numericLvPMagicATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleMagicATK.Value) / 100;
-			dataValue[5] = (numericMagicDEF.Value + numericLvPMagicDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleMagicDEF.Value) / 100;
-			dataValue[6] = (numericSPD.Value + numericLvPSPD.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2) + 100M, numericScaleSPD.Value) / 100;
+			dataValue[0] = (numericMeleeATK.Value + numericLvPMeleeATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleMeleeATK.Value) / 100M;
+			dataValue[1] = (numericMeleeDEF.Value + numericLvPMeleeDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleMeleeDEF.Value) / 100M;
+			dataValue[2] = (numericRangeATK.Value + numericLvPRangeATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleRangeATK.Value) / 100M;
+			dataValue[3] = (numericRangeDEF.Value + numericLvPRangeDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleRangeDEF.Value) / 100M;
+			dataValue[4] = (numericMagicATK.Value + numericLvPMagicATK.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleMagicATK.Value) / 100M;
+			dataValue[5] = (numericMagicDEF.Value + numericLvPMagicDEF.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleMagicDEF.Value) / 100M;
+			dataValue[6] = (numericSPD.Value + numericLvPSPD.Value * numericTestLv.Value) * Math.Min((decimal)(Math.Sqrt((double)numericTestLv.Value) * 2D) + 100M, numericScaleSPD.Value) / 100M;
 
 			// 更新するため内容を消し去る
 			chartStatus.Titles.Clear();
@@ -284,19 +284,19 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 			// グラフデータ
 			dataPoint1.SetValueY(dataValue[0]);
-			dataPoint1.Label = "Melee ATK: " + dataValue[0].ToString("#,#0.00");
+			dataPoint1.Label = "Melee ATK: " + dataValue[0].ToString("N2");
 			dataPoint2.SetValueY(dataValue[1]);
-			dataPoint2.Label = "Melee DEF: " + dataValue[1].ToString("#,#0.00");
+			dataPoint2.Label = "Melee DEF: " + dataValue[1].ToString("N2");
 			dataPoint3.SetValueY(dataValue[2]);
-			dataPoint3.Label = "Range ATK: " + dataValue[2].ToString("#,#0.00");
+			dataPoint3.Label = "Range ATK: " + dataValue[2].ToString("N2");
 			dataPoint4.SetValueY(dataValue[3]);
-			dataPoint4.Label = "Range DEF: " + dataValue[3].ToString("#,#0.00");
+			dataPoint4.Label = "Range DEF: " + dataValue[3].ToString("N2");
 			dataPoint5.SetValueY(dataValue[4]);
-			dataPoint5.Label = "Magic ATK: " + dataValue[4].ToString("#,#0.00");
+			dataPoint5.Label = "Magic ATK: " + dataValue[4].ToString("N2");
 			dataPoint6.SetValueY(dataValue[5]);
-			dataPoint6.Label = "Magic DEF: " + dataValue[5].ToString("#,#0.00");
+			dataPoint6.Label = "Magic DEF: " + dataValue[5].ToString("N2");
 			dataPoint7.SetValueY(dataValue[6]);
-			dataPoint7.Label = "SPD: " + dataValue[6].ToString("#,#0.00");
+			dataPoint7.Label = "SPD: " + dataValue[6].ToString("N2");
 
 			// グラフ描画
 			chartStatus.Series[0].Points.Add(dataPoint1);

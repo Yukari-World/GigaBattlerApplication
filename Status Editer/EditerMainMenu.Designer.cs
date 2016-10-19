@@ -1,9 +1,15 @@
-﻿namespace Status_Editer {
+﻿using System;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Status_Editer {
 	partial class EditerMainMenu {
 		/// <summary>
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary>
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -40,7 +46,7 @@
 			this.StripMenuHelpHelp = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.StripMenuHelpVersion = new System.Windows.Forms.ToolStripMenuItem();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabControl = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -77,14 +83,16 @@
 			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.listRace = new System.Windows.Forms.ListBox();
 			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
 			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
 			this.StatusInfomation = new Status_Editer.User_Control.tab03Unit.StatusInfomation();
 			this.ActiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.SkillInfomation();
 			this.PassiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.AbilityInfomation();
+			this.userControl11 = new Status_Editer.User_Control.tab05Race.UserControl1();
 			this.StripMainMenu.SuspendLayout();
-			this.tabControl1.SuspendLayout();
+			this.tabControl.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlUnit.SuspendLayout();
 			this.tabPage21.SuspendLayout();
@@ -93,6 +101,7 @@
 			this.tabPage24.SuspendLayout();
 			this.tabPage25.SuspendLayout();
 			this.tabPage4.SuspendLayout();
+			this.tabPage5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -227,34 +236,34 @@
 			this.StripMenuHelpVersion.Size = new System.Drawing.Size(158, 22);
 			this.StripMenuHelpVersion.Text = "バージョン情報(&A)";
 			// 
-			// tabControl1
+			// tabControl
 			// 
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Controls.Add(this.tabPage3);
-			this.tabControl1.Controls.Add(this.tabPage4);
-			this.tabControl1.Controls.Add(this.tabPage5);
-			this.tabControl1.Controls.Add(this.tabPage6);
-			this.tabControl1.Controls.Add(this.tabPage7);
-			this.tabControl1.Controls.Add(this.tabPage8);
-			this.tabControl1.Controls.Add(this.tabPage9);
-			this.tabControl1.Controls.Add(this.tabPage10);
-			this.tabControl1.Controls.Add(this.tabPage11);
-			this.tabControl1.Controls.Add(this.tabPage12);
-			this.tabControl1.Controls.Add(this.tabPage13);
-			this.tabControl1.Controls.Add(this.tabPage14);
-			this.tabControl1.Controls.Add(this.tabPage15);
-			this.tabControl1.Controls.Add(this.tabPage16);
-			this.tabControl1.Controls.Add(this.tabPage17);
-			this.tabControl1.Controls.Add(this.tabPage18);
-			this.tabControl1.Controls.Add(this.tabPage19);
-			this.tabControl1.Controls.Add(this.tabPage20);
-			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControl1.Location = new System.Drawing.Point(0, 0);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1600, 854);
-			this.tabControl1.TabIndex = 2;
+			this.tabControl.Controls.Add(this.tabPage1);
+			this.tabControl.Controls.Add(this.tabPage2);
+			this.tabControl.Controls.Add(this.tabPage3);
+			this.tabControl.Controls.Add(this.tabPage4);
+			this.tabControl.Controls.Add(this.tabPage5);
+			this.tabControl.Controls.Add(this.tabPage6);
+			this.tabControl.Controls.Add(this.tabPage7);
+			this.tabControl.Controls.Add(this.tabPage8);
+			this.tabControl.Controls.Add(this.tabPage9);
+			this.tabControl.Controls.Add(this.tabPage10);
+			this.tabControl.Controls.Add(this.tabPage11);
+			this.tabControl.Controls.Add(this.tabPage12);
+			this.tabControl.Controls.Add(this.tabPage13);
+			this.tabControl.Controls.Add(this.tabPage14);
+			this.tabControl.Controls.Add(this.tabPage15);
+			this.tabControl.Controls.Add(this.tabPage16);
+			this.tabControl.Controls.Add(this.tabPage17);
+			this.tabControl.Controls.Add(this.tabPage18);
+			this.tabControl.Controls.Add(this.tabPage19);
+			this.tabControl.Controls.Add(this.tabPage20);
+			this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl.Location = new System.Drawing.Point(0, 0);
+			this.tabControl.Name = "tabControl";
+			this.tabControl.SelectedIndex = 0;
+			this.tabControl.Size = new System.Drawing.Size(1600, 854);
+			this.tabControl.TabIndex = 2;
 			// 
 			// tabPage1
 			// 
@@ -387,6 +396,8 @@
 			// 
 			// tabPage5
 			// 
+			this.tabPage5.Controls.Add(this.userControl11);
+			this.tabPage5.Controls.Add(this.listRace);
 			this.tabPage5.Location = new System.Drawing.Point(4, 22);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -557,7 +568,7 @@
 			// 
 			// ToolStripContainer.ContentPanel
 			// 
-			this.ToolStripContainer.ContentPanel.Controls.Add(this.tabControl1);
+			this.ToolStripContainer.ContentPanel.Controls.Add(this.tabControl);
 			this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1600, 854);
 			this.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ToolStripContainer.Location = new System.Drawing.Point(0, 0);
@@ -601,6 +612,15 @@
 			// notifyIcon
 			// 
 			this.notifyIcon.Visible = true;
+			// 
+			// listRace
+			// 
+			this.listRace.FormattingEnabled = true;
+			this.listRace.ItemHeight = 12;
+			this.listRace.Location = new System.Drawing.Point(3, 3);
+			this.listRace.Name = "listRace";
+			this.listRace.Size = new System.Drawing.Size(200, 820);
+			this.listRace.TabIndex = 1;
 			// 
 			// TotalUnitInfomation
 			// 
@@ -850,6 +870,14 @@
 			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
 			this.PassiveSkillInfomation.TabIndex = 1;
 			// 
+			// userControl11
+			// 
+			this.userControl11.BackColor = System.Drawing.Color.Transparent;
+			this.userControl11.Location = new System.Drawing.Point(210, 0);
+			this.userControl11.Name = "userControl11";
+			this.userControl11.Size = new System.Drawing.Size(1380, 820);
+			this.userControl11.TabIndex = 2;
+			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -864,7 +892,7 @@
 			this.Load += new System.EventHandler(this.EditerMainMenu_Load);
 			this.StripMainMenu.ResumeLayout(false);
 			this.StripMainMenu.PerformLayout();
-			this.tabControl1.ResumeLayout(false);
+			this.tabControl.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
 			this.tabControlUnit.ResumeLayout(false);
 			this.tabPage21.ResumeLayout(false);
@@ -873,6 +901,7 @@
 			this.tabPage24.ResumeLayout(false);
 			this.tabPage25.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
+			this.tabPage5.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
@@ -889,65 +918,66 @@
 
 		#endregion
 
-		private System.Windows.Forms.MenuStrip StripMainMenu;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuFile;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuEdit;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuViwer;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabase;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuHelp;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuFileOpen;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.TabPage tabPage3;
-		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.TabPage tabPage5;
-		private System.Windows.Forms.TabPage tabPage6;
-		private System.Windows.Forms.TabPage tabPage7;
-		private System.Windows.Forms.TabPage tabPage8;
-		private System.Windows.Forms.TabPage tabPage9;
-		private System.Windows.Forms.TabPage tabPage10;
-		private System.Windows.Forms.TabPage tabPage11;
-		private System.Windows.Forms.TabPage tabPage12;
-		private System.Windows.Forms.TabPage tabPage13;
-		private System.Windows.Forms.TabPage tabPage14;
-		private System.Windows.Forms.TabPage tabPage15;
-		private System.Windows.Forms.TabPage tabPage16;
-		private System.Windows.Forms.TabPage tabPage17;
-		private System.Windows.Forms.TabPage tabPage18;
-		private System.Windows.Forms.TabPage tabPage19;
-		private System.Windows.Forms.TabPage tabPage20;
-		private System.Windows.Forms.ListBox listUnit;
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.ToolStripContainer ToolStripContainer;
-		private System.Windows.Forms.StatusStrip StatusStrip;
-		private System.Windows.Forms.ToolStripStatusLabel StripInfo;
-		private System.Windows.Forms.ContextMenuStrip contextMenu;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuExit;
-		private System.Windows.Forms.NotifyIcon notifyIcon;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseReload;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseSave;
-		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+		private MenuStrip StripMainMenu;
+		private ToolStripContainer ToolStripContainer;
+		private ToolStripMenuItem StripMenuFile;
+		private ToolStripMenuItem StripMenuFileOpen;
+		private ToolStripSeparator toolStripSeparator1;
+		private ToolStripMenuItem StripMenuExit;
+		private ToolStripMenuItem StripMenuEdit;
+		private ToolStripMenuItem StripMenuViwer;
+		private ToolStripMenuItem StripMenuDatabase;
+		private ToolStripMenuItem StripMenuDatabaseReload;
+		private ToolStripMenuItem StripMenuDatabaseSave;
+		private ToolStripMenuItem StripMenuWindow;
+		private ToolStripMenuItem StripMenuWindowView;
+		private ToolStripMenuItem StripMenuHelp;
+		private ToolStripMenuItem StripMenuHelpHelp;
+		private ToolStripSeparator toolStripSeparator2;
+		private ToolStripMenuItem StripMenuHelpVersion;
+		private TabControl tabControl;
+		private TabPage tabPage1;
+		private TabPage tabPage2;
+		private TabPage tabPage3;
+		private TabPage tabPage4;
+		private TabPage tabPage5;
+		private TabPage tabPage6;
+		private TabPage tabPage7;
+		private TabPage tabPage8;
+		private TabPage tabPage9;
+		private TabPage tabPage10;
+		private TabPage tabPage11;
+		private TabPage tabPage12;
+		private TabPage tabPage13;
+		private TabPage tabPage14;
+		private TabPage tabPage15;
+		private TabPage tabPage16;
+		private TabPage tabPage17;
+		private TabPage tabPage18;
+		private TabPage tabPage19;
+		private TabPage tabPage20;
+		private ListBox listUnit;
+		private ToolTip toolTipInfo;
+		private StatusStrip StatusStrip;
+		private ToolStripStatusLabel StripInfo;
+		private ContextMenuStrip contextMenu;
+		private NotifyIcon notifyIcon;
+		private ToolStripProgressBar toolStripProgressBar1;
 		private GigaBattlerDataSet GigaBattlerDataSet;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuWindow;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuWindowView;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuHelpHelp;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuHelpVersion;
-		private System.Windows.Forms.TabControl tabControlUnit;
-		private System.Windows.Forms.TabPage tabPage21;
-		private System.Windows.Forms.TabPage tabPage22;
-		private System.Windows.Forms.TabPage tabPage23;
-		private System.Windows.Forms.ListBox listUnitType;
-		private System.Windows.Forms.TabPage tabPage24;
+		private TabControl tabControlUnit;
+		private TabPage tabPage21;
+		private TabPage tabPage22;
+		private TabPage tabPage23;
+		private ListBox listUnitType;
+		private TabPage tabPage24;
 		private User_Control.tab03Unit.DropInfomation DropInfomation;
 		private User_Control.tab03Unit.UnitInfomation UnitInfomation;
 		private User_Control.tab03Unit.StatusInfomation StatusInfomation;
 		private User_Control.tab03Unit.SkillInfomation ActiveSkillInfomation;
-		private System.Windows.Forms.TabPage tabPage25;
+		private TabPage tabPage25;
 		private User_Control.tab03Unit.AbilityInfomation PassiveSkillInfomation;
 		private User_Control.tab03Unit.TotalUnitInfomation TotalUnitInfomation;
+		private ListBox listRace;
+		private User_Control.tab05Race.UserControl1 userControl11;
 	}
 }
-
