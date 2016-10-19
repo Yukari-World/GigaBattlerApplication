@@ -3,17 +3,8 @@
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
 using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tabMonster {
 	public partial class ActiveSkillInfomation : UserControl {
@@ -76,7 +67,7 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="SkillAdapter">>__table_skillTableAdapter</param>
+		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
 			SkillInfomation1.ReloadBindings(SkillAdapter);
 			SkillInfomation2.ReloadBindings(SkillAdapter);

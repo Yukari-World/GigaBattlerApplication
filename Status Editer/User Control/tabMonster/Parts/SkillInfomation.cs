@@ -3,16 +3,8 @@
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tabMonster.Parts {
@@ -60,6 +52,7 @@ namespace Status_Editer.User_Control.tabMonster.Parts {
 			SkillAdapter.Fill(SkillTable);
 
 			// データバインドの設定
+			// ここでは「Skill*」が入る
 			comboSkill.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, bindTag, true));
 
 			// バインド項目の設定
@@ -71,7 +64,7 @@ namespace Status_Editer.User_Control.tabMonster.Parts {
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="SkillAdapter">>__table_skillTableAdapter</param>
+		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
 			SkillAdapter.Fill(SkillTable);
 		}

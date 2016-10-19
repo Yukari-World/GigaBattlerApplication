@@ -6,7 +6,6 @@
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
@@ -57,10 +56,10 @@ namespace Status_Editer {
 			// データバインドの設定
 			try {
 				// 別コントロールへのバインディング設定
-				UnitInfomation.LoadDataBindings(tablemonsterBindingSource);
-				DropInfomation.LoadDataBindings(tablemonsterBindingSource, __table_weaponTableAdapter);
-				StatusInfomation.LoadDataBindings(tablemonsterBindingSource);
-				ActiveSkillInfomation.LoadDataBindings(tablemonsterBindingSource, __table_skillTableAdapter);
+				UnitInfomation.LoadDataBindings(tableMonsterBindingSource);
+				DropInfomation.LoadDataBindings(tableMonsterBindingSource, __table_weaponTableAdapter);
+				StatusInfomation.LoadDataBindings(tableMonsterBindingSource);
+				ActiveSkillInfomation.LoadDataBindings(tableMonsterBindingSource, __table_skillTableAdapter);
 
 				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
@@ -148,7 +147,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
-			tablemonsterBindingSource.EndEdit();
+			tableMonsterBindingSource.EndEdit();
 			__table_monsterTableAdapter.Update(GigaBattlerDataSet.@__table_monster);
 		}
 

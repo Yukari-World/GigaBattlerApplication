@@ -91,7 +91,7 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="WeaponAdapter">>__table_weaponTableAdapter</param>
+		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
 		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter) {
 			WeaponAdapter.Fill(WeaponTable_3_1);
 			WeaponAdapter.Fill(WeaponTable_3_2);
