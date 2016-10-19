@@ -189,6 +189,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			set { numericScaleMoney.Value = value; }
 		}
 
+
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -320,7 +321,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 		private void numericTestLv_ValueChanged(object sender, EventArgs e) {
 			ChartChanges();
 		}
-
 
 		private void numericMinLevel_ValueChanged(object sender, EventArgs e) {
 			numericTestLv.Value = numericMinLevel.Value;

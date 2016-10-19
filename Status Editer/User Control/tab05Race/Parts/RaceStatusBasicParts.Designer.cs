@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab05Race.Parts {
-	partial class RaceStatusEtcParts {
+	partial class RaceStatusBasicParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -30,30 +30,63 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			this.groupEtc = new System.Windows.Forms.GroupBox();
-			this.labelBase = new System.Windows.Forms.Label();
+			this.groupBasic = new System.Windows.Forms.GroupBox();
 			this.numericBase = new System.Windows.Forms.NumericUpDown();
+			this.labelBase = new System.Windows.Forms.Label();
 			this.labelLvPStatus = new System.Windows.Forms.Label();
 			this.numericLvPStatus = new System.Windows.Forms.NumericUpDown();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.groupEtc.SuspendLayout();
+			this.label1 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.groupBasic.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericBase)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPStatus)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// groupEtc
+			// groupBasic
 			// 
-			this.groupEtc.Controls.Add(this.labelBase);
-			this.groupEtc.Controls.Add(this.numericBase);
-			this.groupEtc.Controls.Add(this.labelLvPStatus);
-			this.groupEtc.Controls.Add(this.numericLvPStatus);
-			this.groupEtc.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupEtc.Location = new System.Drawing.Point(0, 0);
-			this.groupEtc.Name = "groupEtc";
-			this.groupEtc.Size = new System.Drawing.Size(650, 75);
-			this.groupEtc.TabIndex = 0;
-			this.groupEtc.TabStop = false;
-			this.groupEtc.Text = "Label";
+			this.groupBasic.Controls.Add(this.button1);
+			this.groupBasic.Controls.Add(this.label1);
+			this.groupBasic.Controls.Add(this.numericBase);
+			this.groupBasic.Controls.Add(this.labelBase);
+			this.groupBasic.Controls.Add(this.labelLvPStatus);
+			this.groupBasic.Controls.Add(this.numericLvPStatus);
+			this.groupBasic.Location = new System.Drawing.Point(0, 0);
+			this.groupBasic.Name = "groupBasic";
+			this.groupBasic.Size = new System.Drawing.Size(650, 75);
+			this.groupBasic.TabIndex = 2;
+			this.groupBasic.TabStop = false;
+			this.groupBasic.Text = "Label";
+			// 
+			// numericBase
+			// 
+			this.numericBase.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.numericBase.Location = new System.Drawing.Point(10, 30);
+			this.numericBase.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+			this.numericBase.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericBase.Name = "numericBase";
+			this.numericBase.Size = new System.Drawing.Size(150, 19);
+			this.numericBase.TabIndex = 1;
+			this.numericBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericBase.ThousandsSeparator = true;
+			this.numericBase.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+			this.numericBase.ValueChanged += new System.EventHandler(this.numericBase_ValueChanged);
 			// 
 			// labelBase
 			// 
@@ -65,60 +98,40 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.labelBase.TabIndex = 0;
 			this.labelBase.Text = "Base";
 			// 
-			// numericBase
-			// 
-			this.numericBase.DecimalPlaces = 2;
-			this.numericBase.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-			this.numericBase.Location = new System.Drawing.Point(10, 30);
-			this.numericBase.Maximum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            0});
-			this.numericBase.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-			this.numericBase.Name = "numericBase";
-			this.numericBase.Size = new System.Drawing.Size(150, 19);
-			this.numericBase.TabIndex = 1;
-			this.numericBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericBase.ThousandsSeparator = true;
-			this.numericBase.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			// 
 			// labelLvPStatus
 			// 
 			this.labelLvPStatus.AutoSize = true;
 			this.labelLvPStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.labelLvPStatus.Location = new System.Drawing.Point(200, 15);
 			this.labelLvPStatus.Name = "labelLvPStatus";
-			this.labelLvPStatus.Size = new System.Drawing.Size(173, 12);
+			this.labelLvPStatus.Size = new System.Drawing.Size(90, 12);
 			this.labelLvPStatus.TabIndex = 2;
-			this.labelLvPStatus.Text = "Level Per Status(Lv.100まで有効)";
+			this.labelLvPStatus.Text = "Level Per Status";
 			// 
 			// numericLvPStatus
 			// 
 			this.numericLvPStatus.DecimalPlaces = 2;
+			this.numericLvPStatus.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
 			this.numericLvPStatus.Location = new System.Drawing.Point(200, 30);
-			this.numericLvPStatus.Minimum = new decimal(new int[] {
-            100,
+			this.numericLvPStatus.Maximum = new decimal(new int[] {
+            999999,
             0,
             0,
-            -2147483648});
+            131072});
 			this.numericLvPStatus.Name = "numericLvPStatus";
 			this.numericLvPStatus.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPStatus.TabIndex = 3;
 			this.numericLvPStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericLvPStatus.ThousandsSeparator = true;
+			this.numericLvPStatus.Value = new decimal(new int[] {
+            63,
+            0,
+            0,
+            65536});
 			// 
 			// toolTipInfo
 			// 
@@ -129,16 +142,35 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// RaceStatusEtcParts
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(400, 32);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(63, 12);
+			this.label1.TabIndex = 4;
+			this.label1.Text = "推奨値:6.30";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(550, 27);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 5;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// RaceStatusBasicParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Transparent;
-			this.Controls.Add(this.groupEtc);
-			this.Name = "RaceStatusEtcParts";
+			this.Controls.Add(this.groupBasic);
+			this.Name = "RaceStatusBasicParts";
 			this.Size = new System.Drawing.Size(650, 75);
-			this.groupEtc.ResumeLayout(false);
-			this.groupEtc.PerformLayout();
+			this.groupBasic.ResumeLayout(false);
+			this.groupBasic.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericBase)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPStatus)).EndInit();
 			this.ResumeLayout(false);
@@ -147,11 +179,13 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 
 		#endregion
 
-		private GroupBox groupEtc;
+		private GroupBox groupBasic;
 		private Label labelBase;
 		private NumericUpDown numericBase;
 		private Label labelLvPStatus;
 		private NumericUpDown numericLvPStatus;
 		private ToolTip toolTipInfo;
+		private Button button1;
+		private Label label1;
 	}
 }

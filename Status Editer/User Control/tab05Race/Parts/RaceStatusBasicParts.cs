@@ -1,20 +1,35 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// UnitInfomation
+// RaceStatusBasicParts
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control.tab03Unit {
-	public partial class UnitInfomation : UserControl {
+namespace Status_Editer.User_Control.tab05Race.Parts {
+	public partial class RaceStatusBasicParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+		decimal basicRate;
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		/// <summary>
+		/// グループラベルのテキストを設定します。
+		/// </summary>
+		public string labelText {
+			get { return groupBasic.Text; }
+			set { groupBasic.Text = value; }
+		}
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +38,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public UnitInfomation() {
+		public RaceStatusBasicParts() {
 			InitializeComponent();
 		}
 
@@ -34,19 +49,12 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableMonsterBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableMonsterBindingSource) {
-			textMonsterID.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterID", true));
-			checkAirType.DataBindings.Add(new Binding("CheckState", tableMonsterBindingSource, "Air", true));
-			checkAirType.DataBindings.Add(new Binding("Checked", tableMonsterBindingSource, "Air", true));
-			textUnitName.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterName", true));
-			numericRare.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "Rare", true));
-			numericWT.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "WT", true));
-			textInfo.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Info", true));
-
-			//----------------------------------------------------------------------------------------------------
-			// デザイナーの設定
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+		/// <param name="tableRaceBindingSource">BindingSource</param>
+		/// <param name="bindTag">string</param>
+		public void SetDataBindings(BindingSource tableRaceBindingSource, string bindTag) {
+			// データバインドの設定
+			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));
+			numericLvPStatus.DataBindings.Add(new Binding("Value", tableRaceBindingSource, "Lv" + bindTag, true));
 		}
 
 
@@ -58,5 +66,23 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericBase_ValueChanged(object sender, EventArgs e) {
+			basicRate = numericBase.Value * 0.7m;
+			label1.Text = "推奨値:" + basicRate.ToString("N2");
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void button1_Click(object sender, EventArgs e) {
+			numericLvPStatus.Value = basicRate;
+		}
 	}
 }

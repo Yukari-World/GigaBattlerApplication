@@ -27,8 +27,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// グループラベルのテキストを設定します。
 		/// </summary>
 		public string labelText {
-			get { return groupLuckHITEVT.Text; }
-			set { groupLuckHITEVT.Text = value; }
+			get { return groupEtc.Text; }
+			set { groupEtc.Text = value; }
 		}
 
 
@@ -46,32 +46,17 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// パブリック関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		///// <summary>
-		///// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
-		///// </summary>
-		///// <param name="tablemonsterBindingSource">BindingSource</param>
-		///// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		///// <param name="bindTag">string</param>
-		//public void SetDataBindings(BindingSource tablemonsterBindingSource, __table_skillTableAdapter SkillAdapter, string bindTag) {
-		//	SkillAdapter.Fill(SkillTable);
+		/// <summary>
+		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// </summary>
+		/// <param name="tableRaceBindingSource">BindingSource</param>
+		/// <param name="bindTag">string</param>
+		public void SetDataBindings(BindingSource tableRaceBindingSource, string bindTag) {
+			// データバインドの設定
+			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));
+			numericLvPStatus.DataBindings.Add(new Binding("Value", tableRaceBindingSource, "Lv" + bindTag, true));
+		}
 
-		//	// データバインドの設定
-		//	// ここでは「Skill*」が入る
-		//	comboSkill.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, bindTag, true));
-
-		//	// バインド項目の設定
-		//	comboSkill.DataSource = SkillTable;
-		//	comboSkill.DisplayMember = "SkillName";
-		//	comboSkill.ValueMember = "SkillID";
-		//}
-
-		///// <summary>
-		///// バインド項目を再読み込みします。
-		///// </summary>
-		///// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		//public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
-		//	SkillAdapter.Fill(SkillTable);
-		//}
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
