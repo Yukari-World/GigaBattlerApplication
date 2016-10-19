@@ -1,29 +1,39 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// DropInfomation
+// SkillInfomation
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Status_Editer.GigaBattlerDataSetTableAdapters;
 using static Status_Editer.GigaBattlerDataSet;
 
-namespace Status_Editer.User_Control.tabMonster {
-	public partial class DropInfomation : UserControl {
+namespace Status_Editer.User_Control.tabMonster.Parts {
+	public partial class SkillInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// バインド
-		// WeaponTable
-		private __table_weaponDataTable WeaponTable_3_1 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_2 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_3 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_4 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_5 = new __table_weaponDataTable();
+		private __table_skillDataTable SkillTable = new __table_skillDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		/// <summary>
+		/// グループラベルのテキストを設定します。
+		/// </summary>
+		public string labelText {
+			get { return groupSkill.Text; }
+			set { groupSkill.Text = value; }
+		}
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +42,7 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public DropInfomation() {
+		public SkillInfomation() {
 			InitializeComponent();
 		}
 
@@ -44,62 +54,27 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tablemonsterBindingSource">BindingSource</param>
-		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void LoadDataBindings(BindingSource tablemonsterBindingSource, __table_weaponTableAdapter WeaponAdapter) {
-			// 項目に関する準備
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
+		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
+		/// <param name="bindTag">string</param>
+		public void SetDataBindings(BindingSource tablemonsterBindingSource, __table_skillTableAdapter SkillAdapter, string bindTag) {
+			SkillAdapter.Fill(SkillTable);
 
 			// データバインドの設定
-			comboDropTable1.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item1", true));
-			comboDropTable2.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item2", true));
-			comboDropTable3.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item3", true));
-			comboDropTable4.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item4", true));
-			comboDropTable5.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item5", true));
-
-			numericDropRate1.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per1", true));
-			numericDropRate2.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per2", true));
-			numericDropRate3.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per3", true));
-			numericDropRate4.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per4", true));
-			numericDropRate5.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per5", true));
+			comboSkill.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, bindTag, true));
 
 			// バインド項目の設定
-			comboDropTable1.DataSource = WeaponTable_3_1;
-			comboDropTable1.DisplayMember = "WeaponName";
-			comboDropTable1.ValueMember = "WeaponID";
-			comboDropTable2.DataSource = WeaponTable_3_2;
-			comboDropTable2.DisplayMember = "WeaponName";
-			comboDropTable2.ValueMember = "WeaponID";
-			comboDropTable3.DataSource = WeaponTable_3_3;
-			comboDropTable3.DisplayMember = "WeaponName";
-			comboDropTable3.ValueMember = "WeaponID";
-			comboDropTable4.DataSource = WeaponTable_3_4;
-			comboDropTable4.DisplayMember = "WeaponName";
-			comboDropTable4.ValueMember = "WeaponID";
-			comboDropTable5.DataSource = WeaponTable_3_5;
-			comboDropTable5.DisplayMember = "WeaponName";
-			comboDropTable5.ValueMember = "WeaponID";
-
-			//----------------------------------------------------------------------------------------------------
-			// デザイナーの設定
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			comboSkill.DataSource = SkillTable;
+			comboSkill.DisplayMember = "SkillName";
+			comboSkill.ValueMember = "SkillID";
 		}
 
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="WeaponAdapter">>__table_weaponTableAdapter</param>
-		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter) {
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
+		/// <param name="SkillAdapter">>__table_skillTableAdapter</param>
+		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
+			SkillAdapter.Fill(SkillTable);
 		}
-
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数

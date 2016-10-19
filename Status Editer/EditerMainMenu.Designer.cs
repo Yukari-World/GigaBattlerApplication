@@ -51,13 +51,12 @@
 			this.tabPage22 = new System.Windows.Forms.TabPage();
 			this.StatusInfomation = new Status_Editer.User_Control.tabMonster.StatusInfomation();
 			this.tabPage23 = new System.Windows.Forms.TabPage();
-			this.groupSkillInfo = new System.Windows.Forms.GroupBox();
-			this.comboSkill1 = new System.Windows.Forms.ComboBox();
+			this.ActiveSkillInfomation = new Status_Editer.User_Control.tabMonster.ActiveSkillInfomation();
+			this.tabPage24 = new System.Windows.Forms.TabPage();
+			this.PassiveSkillInfomation = new Status_Editer.User_Control.tabMonster.PassiveSkillInfomation();
+			this.listMonster = new System.Windows.Forms.ListBox();
 			this.tablemonsterBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.GigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.tableskillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.labelSkill1 = new System.Windows.Forms.Label();
-			this.listMonster = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.listUnitType = new System.Windows.Forms.ListBox();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -76,6 +75,7 @@
 			this.tabPage18 = new System.Windows.Forms.TabPage();
 			this.tabPage19 = new System.Windows.Forms.TabPage();
 			this.tabPage20 = new System.Windows.Forms.TabPage();
+			this.tableskillBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableweaponBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
@@ -89,20 +89,18 @@
 			this.@__table_raceTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter();
 			this.tableraceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.@__table_skillTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter();
-			this.skillInfomation1 = new Status_Editer.User_Control.tabMonster.SkillInfomation();
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlMonster.SuspendLayout();
 			this.tabPage21.SuspendLayout();
 			this.tabPage22.SuspendLayout();
 			this.tabPage23.SuspendLayout();
-			this.groupSkillInfo.SuspendLayout();
+			this.tabPage24.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableskillBindingSource)).BeginInit();
 			this.tabPage4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tableskillBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -269,7 +267,6 @@
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.skillInfomation1);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -305,6 +302,7 @@
 			this.tabControlMonster.Controls.Add(this.tabPage21);
 			this.tabControlMonster.Controls.Add(this.tabPage22);
 			this.tabControlMonster.Controls.Add(this.tabPage23);
+			this.tabControlMonster.Controls.Add(this.tabPage24);
 			this.tabControlMonster.Location = new System.Drawing.Point(209, 0);
 			this.tabControlMonster.Margin = new System.Windows.Forms.Padding(0);
 			this.tabControlMonster.Name = "tabControlMonster";
@@ -330,7 +328,7 @@
 			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
 			this.DropInfomation.Name = "DropInfomation";
 			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
-			this.DropInfomation.TabIndex = 3;
+			this.DropInfomation.TabIndex = 1;
 			// 
 			// UnitInfomation
 			// 
@@ -338,7 +336,7 @@
 			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
 			this.UnitInfomation.Name = "UnitInfomation";
 			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
-			this.UnitInfomation.TabIndex = 2;
+			this.UnitInfomation.TabIndex = 0;
 			// 
 			// tabPage22
 			// 
@@ -556,66 +554,43 @@
             0,
             0,
             0});
-			this.StatusInfomation.Size = new System.Drawing.Size(1360, 800);
-			this.StatusInfomation.TabIndex = 1;
+			this.StatusInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.StatusInfomation.TabIndex = 0;
 			// 
 			// tabPage23
 			// 
-			this.tabPage23.Controls.Add(this.groupSkillInfo);
+			this.tabPage23.Controls.Add(this.ActiveSkillInfomation);
 			this.tabPage23.Location = new System.Drawing.Point(4, 22);
 			this.tabPage23.Name = "tabPage23";
 			this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage23.Size = new System.Drawing.Size(1379, 804);
 			this.tabPage23.TabIndex = 2;
-			this.tabPage23.Text = "スキル";
+			this.tabPage23.Text = "アクティブスキル";
 			this.tabPage23.UseVisualStyleBackColor = true;
 			// 
-			// groupSkillInfo
+			// ActiveSkillInfomation
 			// 
-			this.groupSkillInfo.Controls.Add(this.comboSkill1);
-			this.groupSkillInfo.Controls.Add(this.labelSkill1);
-			this.groupSkillInfo.Location = new System.Drawing.Point(6, 6);
-			this.groupSkillInfo.Name = "groupSkillInfo";
-			this.groupSkillInfo.Size = new System.Drawing.Size(768, 583);
-			this.groupSkillInfo.TabIndex = 7;
-			this.groupSkillInfo.TabStop = false;
-			this.groupSkillInfo.Text = "Skill Infomation";
+			this.ActiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
+			this.ActiveSkillInfomation.Name = "ActiveSkillInfomation";
+			this.ActiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.ActiveSkillInfomation.TabIndex = 0;
 			// 
-			// comboSkill1
+			// tabPage24
 			// 
-			this.comboSkill1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Skill1", true));
-			this.comboSkill1.DataSource = this.tableskillBindingSource;
-			this.comboSkill1.DisplayMember = "SkillName";
-			this.comboSkill1.FormattingEnabled = true;
-			this.comboSkill1.Location = new System.Drawing.Point(10, 35);
-			this.comboSkill1.Name = "comboSkill1";
-			this.comboSkill1.Size = new System.Drawing.Size(250, 20);
-			this.comboSkill1.TabIndex = 1;
-			this.comboSkill1.ValueMember = "SkillID";
+			this.tabPage24.Controls.Add(this.PassiveSkillInfomation);
+			this.tabPage24.Location = new System.Drawing.Point(4, 22);
+			this.tabPage24.Name = "tabPage24";
+			this.tabPage24.Size = new System.Drawing.Size(1379, 804);
+			this.tabPage24.TabIndex = 3;
+			this.tabPage24.Text = "パッシブスキル";
+			this.tabPage24.UseVisualStyleBackColor = true;
 			// 
-			// tablemonsterBindingSource
+			// PassiveSkillInfomation
 			// 
-			this.tablemonsterBindingSource.DataMember = "__table_monster";
-			this.tablemonsterBindingSource.DataSource = this.GigaBattlerDataSet;
-			// 
-			// GigaBattlerDataSet
-			// 
-			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// tableskillBindingSource
-			// 
-			this.tableskillBindingSource.DataMember = "__table_skill";
-			this.tableskillBindingSource.DataSource = this.GigaBattlerDataSet;
-			// 
-			// labelSkill1
-			// 
-			this.labelSkill1.AutoSize = true;
-			this.labelSkill1.Location = new System.Drawing.Point(10, 20);
-			this.labelSkill1.Name = "labelSkill1";
-			this.labelSkill1.Size = new System.Drawing.Size(37, 12);
-			this.labelSkill1.TabIndex = 0;
-			this.labelSkill1.Text = "Skill 1";
+			this.PassiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
+			this.PassiveSkillInfomation.Name = "PassiveSkillInfomation";
+			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.PassiveSkillInfomation.TabIndex = 0;
 			// 
 			// listMonster
 			// 
@@ -628,6 +603,16 @@
 			this.listMonster.Size = new System.Drawing.Size(200, 820);
 			this.listMonster.TabIndex = 0;
 			this.listMonster.ValueMember = "MonsterID";
+			// 
+			// tablemonsterBindingSource
+			// 
+			this.tablemonsterBindingSource.DataMember = "__table_monster";
+			this.tablemonsterBindingSource.DataSource = this.GigaBattlerDataSet;
+			// 
+			// GigaBattlerDataSet
+			// 
+			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// tabPage4
 			// 
@@ -798,6 +783,11 @@
 			this.tabPage20.Text = "tabPage20";
 			this.tabPage20.UseVisualStyleBackColor = true;
 			// 
+			// tableskillBindingSource
+			// 
+			this.tableskillBindingSource.DataMember = "__table_skill";
+			this.tableskillBindingSource.DataSource = this.GigaBattlerDataSet;
+			// 
 			// tableweaponBindingSource
 			// 
 			this.tableweaponBindingSource.DataMember = "__table_weapon";
@@ -887,13 +877,6 @@
 			// 
 			this.@__table_skillTableAdapter.ClearBeforeFill = true;
 			// 
-			// skillInfomation1
-			// 
-			this.skillInfomation1.Location = new System.Drawing.Point(232, 0);
-			this.skillInfomation1.Name = "skillInfomation1";
-			this.skillInfomation1.Size = new System.Drawing.Size(1360, 800);
-			this.skillInfomation1.TabIndex = 0;
-			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -909,18 +892,16 @@
 			this.StripMainMenu.ResumeLayout(false);
 			this.StripMainMenu.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
 			this.tabControlMonster.ResumeLayout(false);
 			this.tabPage21.ResumeLayout(false);
 			this.tabPage22.ResumeLayout(false);
 			this.tabPage23.ResumeLayout(false);
-			this.groupSkillInfo.ResumeLayout(false);
-			this.groupSkillInfo.PerformLayout();
+			this.tabPage24.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableskillBindingSource)).EndInit();
 			this.tabPage4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.tableskillBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
@@ -995,15 +976,14 @@
 		private User_Control.tabMonster.UnitInfomation UnitInfomation;
 		private System.Windows.Forms.TabPage tabPage22;
 		private System.Windows.Forms.TabPage tabPage23;
-		private System.Windows.Forms.GroupBox groupSkillInfo;
-		private System.Windows.Forms.ComboBox comboSkill1;
-		private System.Windows.Forms.Label labelSkill1;
 		private User_Control.tabMonster.StatusInfomation StatusInfomation;
 		private User_Control.tabMonster.DropInfomation DropInfomation;
 		private System.Windows.Forms.ListBox listUnitType;
 		private System.Windows.Forms.BindingSource tableskillBindingSource;
 		private GigaBattlerDataSetTableAdapters.__table_skillTableAdapter __table_skillTableAdapter;
-		private User_Control.tabMonster.SkillInfomation skillInfomation1;
+		private System.Windows.Forms.TabPage tabPage24;
+		private User_Control.tabMonster.ActiveSkillInfomation ActiveSkillInfomation;
+		private User_Control.tabMonster.PassiveSkillInfomation PassiveSkillInfomation;
 	}
 }
 

@@ -93,10 +93,22 @@
     <Compile Include="User Control\tabMonster\DropInfomation.Designer.cs">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\tabMonster\SkillInfomation.cs">
+    <Compile Include="User Control\tabMonster\ActiveSkillInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\tabMonster\SkillInfomation.Designer.cs">
+    <Compile Include="User Control\tabMonster\ActiveSkillInfomation.Designer.cs">
+      <DependentUpon>ActiveSkillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tabMonster\PassiveSkillInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tabMonster\PassiveSkillInfomation.Designer.cs">
+      <DependentUpon>PassiveSkillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tabMonster\Parts\SkillInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tabMonster\Parts\SkillInfomation.Designer.cs">
       <DependentUpon>SkillInfomation.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tabMonster\StatusInfomation.cs">
@@ -129,7 +141,13 @@
     <EmbeddedResource Include="User Control\tabMonster\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\tabMonster\SkillInfomation.resx">
+    <EmbeddedResource Include="User Control\tabMonster\ActiveSkillInfomation.resx">
+      <DependentUpon>ActiveSkillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tabMonster\PassiveSkillInfomation.resx">
+      <DependentUpon>PassiveSkillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tabMonster\Parts\SkillInfomation.resx">
       <DependentUpon>SkillInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tabMonster\StatusInfomation.resx">

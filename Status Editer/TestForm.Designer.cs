@@ -72,7 +72,6 @@
 			this.eXPPerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.mNYPerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.wTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.sSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.aTCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -238,7 +237,6 @@
             this.eXPPerDataGridViewTextBoxColumn,
             this.mNYPerDataGridViewTextBoxColumn,
             this.wTDataGridViewTextBoxColumn,
-            this.sSPDataGridViewTextBoxColumn,
             this.sPCDataGridViewTextBoxColumn,
             this.aTCDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn,
@@ -630,13 +628,6 @@
 			this.wTDataGridViewTextBoxColumn.HeaderText = "WT";
 			this.wTDataGridViewTextBoxColumn.Name = "wTDataGridViewTextBoxColumn";
 			this.wTDataGridViewTextBoxColumn.Width = 46;
-			// 
-			// sSPDataGridViewTextBoxColumn
-			// 
-			this.sSPDataGridViewTextBoxColumn.DataPropertyName = "S_SP";
-			this.sSPDataGridViewTextBoxColumn.HeaderText = "S_SP";
-			this.sSPDataGridViewTextBoxColumn.Name = "sSPDataGridViewTextBoxColumn";
-			this.sSPDataGridViewTextBoxColumn.Width = 55;
 			// 
 			// sPCDataGridViewTextBoxColumn
 			// 
@@ -1346,7 +1337,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn eXPPerDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn mNYPerDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn wTDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn sSPDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn sPCDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn aTCDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;

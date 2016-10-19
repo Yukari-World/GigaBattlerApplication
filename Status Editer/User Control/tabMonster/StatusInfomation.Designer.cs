@@ -52,81 +52,81 @@
 			this.labelTestLv = new System.Windows.Forms.Label();
 			this.numericTestLv = new System.Windows.Forms.NumericUpDown();
 			this.chartStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.groupBox15 = new System.Windows.Forms.GroupBox();
+			this.groupMoney = new System.Windows.Forms.GroupBox();
 			this.labelMoney = new System.Windows.Forms.Label();
 			this.numericMoney = new System.Windows.Forms.NumericUpDown();
 			this.labelLvPMoney = new System.Windows.Forms.Label();
 			this.numericLvPMoney = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleMoney = new System.Windows.Forms.Label();
-			this.groupBox14 = new System.Windows.Forms.GroupBox();
+			this.groupEXP = new System.Windows.Forms.GroupBox();
 			this.labelEXP = new System.Windows.Forms.Label();
 			this.numericEXP = new System.Windows.Forms.NumericUpDown();
 			this.labelLvPEXP = new System.Windows.Forms.Label();
 			this.numericLvPEXP = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleEXP = new System.Windows.Forms.Label();
-			this.groupBox13 = new System.Windows.Forms.GroupBox();
+			this.groupEVT = new System.Windows.Forms.GroupBox();
 			this.labelEVT = new System.Windows.Forms.Label();
 			this.labelLvPEVT = new System.Windows.Forms.Label();
-			this.groupBox12 = new System.Windows.Forms.GroupBox();
+			this.groupHIT = new System.Windows.Forms.GroupBox();
 			this.labelHIT = new System.Windows.Forms.Label();
 			this.labelLvPHIT = new System.Windows.Forms.Label();
-			this.groupBox11 = new System.Windows.Forms.GroupBox();
+			this.groupLuck = new System.Windows.Forms.GroupBox();
 			this.labelLuck = new System.Windows.Forms.Label();
 			this.labelLvPLuck = new System.Windows.Forms.Label();
-			this.groupBox10 = new System.Windows.Forms.GroupBox();
+			this.groupSPD = new System.Windows.Forms.GroupBox();
 			this.labelSPD = new System.Windows.Forms.Label();
 			this.numericSPD = new System.Windows.Forms.NumericUpDown();
 			this.labelLvPSPD = new System.Windows.Forms.Label();
 			this.numericLvPSPD = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleSPD = new System.Windows.Forms.Label();
-			this.groupBox9 = new System.Windows.Forms.GroupBox();
+			this.groupMagicDEF = new System.Windows.Forms.GroupBox();
 			this.labelMagicDEF = new System.Windows.Forms.Label();
 			this.numericMagicDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelLvPMagicDEF = new System.Windows.Forms.Label();
 			this.numericLvPMagicDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleMagicDEF = new System.Windows.Forms.Label();
-			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.groupMagicATK = new System.Windows.Forms.GroupBox();
 			this.numericMagicATK = new System.Windows.Forms.NumericUpDown();
 			this.labelMagicATK = new System.Windows.Forms.Label();
 			this.labelLvPMagicATK = new System.Windows.Forms.Label();
 			this.numericLvPMagicATK = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleMagicATK = new System.Windows.Forms.Label();
-			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.groupRangeDEF = new System.Windows.Forms.GroupBox();
 			this.numericRangeDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelRangeDEF = new System.Windows.Forms.Label();
 			this.labelLvPRangeDEF = new System.Windows.Forms.Label();
 			this.numericLvPRangeDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleRangeDEF = new System.Windows.Forms.Label();
-			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.groupRangeATK = new System.Windows.Forms.GroupBox();
 			this.numericRangeATK = new System.Windows.Forms.NumericUpDown();
 			this.labelRangeATK = new System.Windows.Forms.Label();
 			this.labelLvPRangeATK = new System.Windows.Forms.Label();
 			this.numericLvPRangeATK = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleRangeATK = new System.Windows.Forms.Label();
-			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.groupMeleeDEF = new System.Windows.Forms.GroupBox();
 			this.numericMeleeDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelMeleeDEF = new System.Windows.Forms.Label();
 			this.labelLvPMeleeDEF = new System.Windows.Forms.Label();
 			this.numericLvPMeleeDEF = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleDEF = new System.Windows.Forms.Label();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.groupMeleeATK = new System.Windows.Forms.GroupBox();
 			this.numericMeleeATK = new System.Windows.Forms.NumericUpDown();
 			this.labelMeleeATK = new System.Windows.Forms.Label();
 			this.labelLvPMeleeATK = new System.Windows.Forms.Label();
 			this.numericLvPMeleeATK = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleATK = new System.Windows.Forms.Label();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.groupTP = new System.Windows.Forms.GroupBox();
 			this.numericTP = new System.Windows.Forms.NumericUpDown();
 			this.labelTP = new System.Windows.Forms.Label();
 			this.labelMaxTP = new System.Windows.Forms.Label();
 			this.numericMaxTP = new System.Windows.Forms.NumericUpDown();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.groupHP = new System.Windows.Forms.GroupBox();
 			this.numericHP = new System.Windows.Forms.NumericUpDown();
 			this.labelHP = new System.Windows.Forms.Label();
 			this.labelLvPHP = new System.Windows.Forms.Label();
 			this.numericLvPHP = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleHP = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.groupLv = new System.Windows.Forms.GroupBox();
 			this.labelReqLv = new System.Windows.Forms.Label();
 			this.labelMinLevel = new System.Windows.Forms.Label();
 			this.label = new System.Windows.Forms.Label();
@@ -153,43 +153,43 @@
 			this.groupStatusInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTestLv)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartStatus)).BeginInit();
-			this.groupBox15.SuspendLayout();
+			this.groupMoney.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMoney)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMoney)).BeginInit();
-			this.groupBox14.SuspendLayout();
+			this.groupEXP.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericEXP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPEXP)).BeginInit();
-			this.groupBox13.SuspendLayout();
-			this.groupBox12.SuspendLayout();
-			this.groupBox11.SuspendLayout();
-			this.groupBox10.SuspendLayout();
+			this.groupEVT.SuspendLayout();
+			this.groupHIT.SuspendLayout();
+			this.groupLuck.SuspendLayout();
+			this.groupSPD.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericSPD)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPSPD)).BeginInit();
-			this.groupBox9.SuspendLayout();
+			this.groupMagicDEF.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMagicDEF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMagicDEF)).BeginInit();
-			this.groupBox8.SuspendLayout();
+			this.groupMagicATK.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMagicATK)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMagicATK)).BeginInit();
-			this.groupBox7.SuspendLayout();
+			this.groupRangeDEF.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRangeDEF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPRangeDEF)).BeginInit();
-			this.groupBox6.SuspendLayout();
+			this.groupRangeATK.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRangeATK)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPRangeATK)).BeginInit();
-			this.groupBox5.SuspendLayout();
+			this.groupMeleeDEF.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMeleeDEF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMeleeDEF)).BeginInit();
-			this.groupBox4.SuspendLayout();
+			this.groupMeleeATK.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMeleeATK)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMeleeATK)).BeginInit();
-			this.groupBox3.SuspendLayout();
+			this.groupTP.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxTP)).BeginInit();
-			this.groupBox2.SuspendLayout();
+			this.groupHP.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericHP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPHP)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.groupLv.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolTipInfo
@@ -658,21 +658,21 @@
 			this.groupStatusInfo.Controls.Add(this.labelTestLv);
 			this.groupStatusInfo.Controls.Add(this.numericTestLv);
 			this.groupStatusInfo.Controls.Add(this.chartStatus);
-			this.groupStatusInfo.Controls.Add(this.groupBox15);
-			this.groupStatusInfo.Controls.Add(this.groupBox14);
-			this.groupStatusInfo.Controls.Add(this.groupBox13);
-			this.groupStatusInfo.Controls.Add(this.groupBox12);
-			this.groupStatusInfo.Controls.Add(this.groupBox11);
-			this.groupStatusInfo.Controls.Add(this.groupBox10);
-			this.groupStatusInfo.Controls.Add(this.groupBox9);
-			this.groupStatusInfo.Controls.Add(this.groupBox8);
-			this.groupStatusInfo.Controls.Add(this.groupBox7);
-			this.groupStatusInfo.Controls.Add(this.groupBox6);
-			this.groupStatusInfo.Controls.Add(this.groupBox5);
-			this.groupStatusInfo.Controls.Add(this.groupBox4);
-			this.groupStatusInfo.Controls.Add(this.groupBox3);
-			this.groupStatusInfo.Controls.Add(this.groupBox2);
-			this.groupStatusInfo.Controls.Add(this.groupBox1);
+			this.groupStatusInfo.Controls.Add(this.groupMoney);
+			this.groupStatusInfo.Controls.Add(this.groupEXP);
+			this.groupStatusInfo.Controls.Add(this.groupEVT);
+			this.groupStatusInfo.Controls.Add(this.groupHIT);
+			this.groupStatusInfo.Controls.Add(this.groupLuck);
+			this.groupStatusInfo.Controls.Add(this.groupSPD);
+			this.groupStatusInfo.Controls.Add(this.groupMagicDEF);
+			this.groupStatusInfo.Controls.Add(this.groupMagicATK);
+			this.groupStatusInfo.Controls.Add(this.groupRangeDEF);
+			this.groupStatusInfo.Controls.Add(this.groupRangeATK);
+			this.groupStatusInfo.Controls.Add(this.groupMeleeDEF);
+			this.groupStatusInfo.Controls.Add(this.groupMeleeATK);
+			this.groupStatusInfo.Controls.Add(this.groupTP);
+			this.groupStatusInfo.Controls.Add(this.groupHP);
+			this.groupStatusInfo.Controls.Add(this.groupLv);
 			resources.ApplyResources(this.groupStatusInfo, "groupStatusInfo");
 			this.groupStatusInfo.Name = "groupStatusInfo";
 			this.groupStatusInfo.TabStop = false;
@@ -719,17 +719,17 @@
 			title1.Text = "Status Rader Chart";
 			this.chartStatus.Titles.Add(title1);
 			// 
-			// groupBox15
+			// groupMoney
 			// 
-			this.groupBox15.Controls.Add(this.labelMoney);
-			this.groupBox15.Controls.Add(this.numericMoney);
-			this.groupBox15.Controls.Add(this.labelLvPMoney);
-			this.groupBox15.Controls.Add(this.numericLvPMoney);
-			this.groupBox15.Controls.Add(this.labelScaleMoney);
-			this.groupBox15.Controls.Add(this.numericScaleMoney);
-			resources.ApplyResources(this.groupBox15, "groupBox15");
-			this.groupBox15.Name = "groupBox15";
-			this.groupBox15.TabStop = false;
+			this.groupMoney.Controls.Add(this.labelMoney);
+			this.groupMoney.Controls.Add(this.numericMoney);
+			this.groupMoney.Controls.Add(this.labelLvPMoney);
+			this.groupMoney.Controls.Add(this.numericLvPMoney);
+			this.groupMoney.Controls.Add(this.labelScaleMoney);
+			this.groupMoney.Controls.Add(this.numericScaleMoney);
+			resources.ApplyResources(this.groupMoney, "groupMoney");
+			this.groupMoney.Name = "groupMoney";
+			this.groupMoney.TabStop = false;
 			// 
 			// labelMoney
 			// 
@@ -786,17 +786,17 @@
 			resources.ApplyResources(this.labelScaleMoney, "labelScaleMoney");
 			this.labelScaleMoney.Name = "labelScaleMoney";
 			// 
-			// groupBox14
+			// groupEXP
 			// 
-			this.groupBox14.Controls.Add(this.labelEXP);
-			this.groupBox14.Controls.Add(this.numericEXP);
-			this.groupBox14.Controls.Add(this.labelLvPEXP);
-			this.groupBox14.Controls.Add(this.numericLvPEXP);
-			this.groupBox14.Controls.Add(this.labelScaleEXP);
-			this.groupBox14.Controls.Add(this.numericScaleEXP);
-			resources.ApplyResources(this.groupBox14, "groupBox14");
-			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.TabStop = false;
+			this.groupEXP.Controls.Add(this.labelEXP);
+			this.groupEXP.Controls.Add(this.numericEXP);
+			this.groupEXP.Controls.Add(this.labelLvPEXP);
+			this.groupEXP.Controls.Add(this.numericLvPEXP);
+			this.groupEXP.Controls.Add(this.labelScaleEXP);
+			this.groupEXP.Controls.Add(this.numericScaleEXP);
+			resources.ApplyResources(this.groupEXP, "groupEXP");
+			this.groupEXP.Name = "groupEXP";
+			this.groupEXP.TabStop = false;
 			// 
 			// labelEXP
 			// 
@@ -853,15 +853,15 @@
 			resources.ApplyResources(this.labelScaleEXP, "labelScaleEXP");
 			this.labelScaleEXP.Name = "labelScaleEXP";
 			// 
-			// groupBox13
+			// groupEVT
 			// 
-			this.groupBox13.Controls.Add(this.labelEVT);
-			this.groupBox13.Controls.Add(this.numericEVT);
-			this.groupBox13.Controls.Add(this.labelLvPEVT);
-			this.groupBox13.Controls.Add(this.numericLvPEVT);
-			resources.ApplyResources(this.groupBox13, "groupBox13");
-			this.groupBox13.Name = "groupBox13";
-			this.groupBox13.TabStop = false;
+			this.groupEVT.Controls.Add(this.labelEVT);
+			this.groupEVT.Controls.Add(this.numericEVT);
+			this.groupEVT.Controls.Add(this.labelLvPEVT);
+			this.groupEVT.Controls.Add(this.numericLvPEVT);
+			resources.ApplyResources(this.groupEVT, "groupEVT");
+			this.groupEVT.Name = "groupEVT";
+			this.groupEVT.TabStop = false;
 			// 
 			// labelEVT
 			// 
@@ -873,15 +873,15 @@
 			resources.ApplyResources(this.labelLvPEVT, "labelLvPEVT");
 			this.labelLvPEVT.Name = "labelLvPEVT";
 			// 
-			// groupBox12
+			// groupHIT
 			// 
-			this.groupBox12.Controls.Add(this.labelHIT);
-			this.groupBox12.Controls.Add(this.numericHIT);
-			this.groupBox12.Controls.Add(this.labelLvPHIT);
-			this.groupBox12.Controls.Add(this.numericLvPHIT);
-			resources.ApplyResources(this.groupBox12, "groupBox12");
-			this.groupBox12.Name = "groupBox12";
-			this.groupBox12.TabStop = false;
+			this.groupHIT.Controls.Add(this.labelHIT);
+			this.groupHIT.Controls.Add(this.numericHIT);
+			this.groupHIT.Controls.Add(this.labelLvPHIT);
+			this.groupHIT.Controls.Add(this.numericLvPHIT);
+			resources.ApplyResources(this.groupHIT, "groupHIT");
+			this.groupHIT.Name = "groupHIT";
+			this.groupHIT.TabStop = false;
 			// 
 			// labelHIT
 			// 
@@ -893,15 +893,15 @@
 			resources.ApplyResources(this.labelLvPHIT, "labelLvPHIT");
 			this.labelLvPHIT.Name = "labelLvPHIT";
 			// 
-			// groupBox11
+			// groupLuck
 			// 
-			this.groupBox11.Controls.Add(this.labelLuck);
-			this.groupBox11.Controls.Add(this.numericLuck);
-			this.groupBox11.Controls.Add(this.labelLvPLuck);
-			this.groupBox11.Controls.Add(this.numericLvPLuck);
-			resources.ApplyResources(this.groupBox11, "groupBox11");
-			this.groupBox11.Name = "groupBox11";
-			this.groupBox11.TabStop = false;
+			this.groupLuck.Controls.Add(this.labelLuck);
+			this.groupLuck.Controls.Add(this.numericLuck);
+			this.groupLuck.Controls.Add(this.labelLvPLuck);
+			this.groupLuck.Controls.Add(this.numericLvPLuck);
+			resources.ApplyResources(this.groupLuck, "groupLuck");
+			this.groupLuck.Name = "groupLuck";
+			this.groupLuck.TabStop = false;
 			// 
 			// labelLuck
 			// 
@@ -913,17 +913,17 @@
 			resources.ApplyResources(this.labelLvPLuck, "labelLvPLuck");
 			this.labelLvPLuck.Name = "labelLvPLuck";
 			// 
-			// groupBox10
+			// groupSPD
 			// 
-			this.groupBox10.Controls.Add(this.numericScaleSPD);
-			this.groupBox10.Controls.Add(this.labelSPD);
-			this.groupBox10.Controls.Add(this.numericSPD);
-			this.groupBox10.Controls.Add(this.labelLvPSPD);
-			this.groupBox10.Controls.Add(this.numericLvPSPD);
-			this.groupBox10.Controls.Add(this.labelScaleSPD);
-			resources.ApplyResources(this.groupBox10, "groupBox10");
-			this.groupBox10.Name = "groupBox10";
-			this.groupBox10.TabStop = false;
+			this.groupSPD.Controls.Add(this.numericScaleSPD);
+			this.groupSPD.Controls.Add(this.labelSPD);
+			this.groupSPD.Controls.Add(this.numericSPD);
+			this.groupSPD.Controls.Add(this.labelLvPSPD);
+			this.groupSPD.Controls.Add(this.numericLvPSPD);
+			this.groupSPD.Controls.Add(this.labelScaleSPD);
+			resources.ApplyResources(this.groupSPD, "groupSPD");
+			this.groupSPD.Name = "groupSPD";
+			this.groupSPD.TabStop = false;
 			// 
 			// labelSPD
 			// 
@@ -989,17 +989,17 @@
 			resources.ApplyResources(this.labelScaleSPD, "labelScaleSPD");
 			this.labelScaleSPD.Name = "labelScaleSPD";
 			// 
-			// groupBox9
+			// groupMagicDEF
 			// 
-			this.groupBox9.Controls.Add(this.numericScaleMagicDEF);
-			this.groupBox9.Controls.Add(this.labelMagicDEF);
-			this.groupBox9.Controls.Add(this.numericMagicDEF);
-			this.groupBox9.Controls.Add(this.labelLvPMagicDEF);
-			this.groupBox9.Controls.Add(this.numericLvPMagicDEF);
-			this.groupBox9.Controls.Add(this.labelScaleMagicDEF);
-			resources.ApplyResources(this.groupBox9, "groupBox9");
-			this.groupBox9.Name = "groupBox9";
-			this.groupBox9.TabStop = false;
+			this.groupMagicDEF.Controls.Add(this.numericScaleMagicDEF);
+			this.groupMagicDEF.Controls.Add(this.labelMagicDEF);
+			this.groupMagicDEF.Controls.Add(this.numericMagicDEF);
+			this.groupMagicDEF.Controls.Add(this.labelLvPMagicDEF);
+			this.groupMagicDEF.Controls.Add(this.numericLvPMagicDEF);
+			this.groupMagicDEF.Controls.Add(this.labelScaleMagicDEF);
+			resources.ApplyResources(this.groupMagicDEF, "groupMagicDEF");
+			this.groupMagicDEF.Name = "groupMagicDEF";
+			this.groupMagicDEF.TabStop = false;
 			// 
 			// labelMagicDEF
 			// 
@@ -1065,17 +1065,17 @@
 			resources.ApplyResources(this.labelScaleMagicDEF, "labelScaleMagicDEF");
 			this.labelScaleMagicDEF.Name = "labelScaleMagicDEF";
 			// 
-			// groupBox8
+			// groupMagicATK
 			// 
-			this.groupBox8.Controls.Add(this.numericMagicATK);
-			this.groupBox8.Controls.Add(this.labelMagicATK);
-			this.groupBox8.Controls.Add(this.labelLvPMagicATK);
-			this.groupBox8.Controls.Add(this.numericLvPMagicATK);
-			this.groupBox8.Controls.Add(this.labelScaleMagicATK);
-			this.groupBox8.Controls.Add(this.numericScaleMagicATK);
-			resources.ApplyResources(this.groupBox8, "groupBox8");
-			this.groupBox8.Name = "groupBox8";
-			this.groupBox8.TabStop = false;
+			this.groupMagicATK.Controls.Add(this.numericMagicATK);
+			this.groupMagicATK.Controls.Add(this.labelMagicATK);
+			this.groupMagicATK.Controls.Add(this.labelLvPMagicATK);
+			this.groupMagicATK.Controls.Add(this.numericLvPMagicATK);
+			this.groupMagicATK.Controls.Add(this.labelScaleMagicATK);
+			this.groupMagicATK.Controls.Add(this.numericScaleMagicATK);
+			resources.ApplyResources(this.groupMagicATK, "groupMagicATK");
+			this.groupMagicATK.Name = "groupMagicATK";
+			this.groupMagicATK.TabStop = false;
 			// 
 			// numericMagicATK
 			// 
@@ -1141,17 +1141,17 @@
 			resources.ApplyResources(this.labelScaleMagicATK, "labelScaleMagicATK");
 			this.labelScaleMagicATK.Name = "labelScaleMagicATK";
 			// 
-			// groupBox7
+			// groupRangeDEF
 			// 
-			this.groupBox7.Controls.Add(this.numericRangeDEF);
-			this.groupBox7.Controls.Add(this.labelRangeDEF);
-			this.groupBox7.Controls.Add(this.labelLvPRangeDEF);
-			this.groupBox7.Controls.Add(this.numericLvPRangeDEF);
-			this.groupBox7.Controls.Add(this.labelScaleRangeDEF);
-			this.groupBox7.Controls.Add(this.numericScaleRangeDEF);
-			resources.ApplyResources(this.groupBox7, "groupBox7");
-			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.TabStop = false;
+			this.groupRangeDEF.Controls.Add(this.numericRangeDEF);
+			this.groupRangeDEF.Controls.Add(this.labelRangeDEF);
+			this.groupRangeDEF.Controls.Add(this.labelLvPRangeDEF);
+			this.groupRangeDEF.Controls.Add(this.numericLvPRangeDEF);
+			this.groupRangeDEF.Controls.Add(this.labelScaleRangeDEF);
+			this.groupRangeDEF.Controls.Add(this.numericScaleRangeDEF);
+			resources.ApplyResources(this.groupRangeDEF, "groupRangeDEF");
+			this.groupRangeDEF.Name = "groupRangeDEF";
+			this.groupRangeDEF.TabStop = false;
 			// 
 			// numericRangeDEF
 			// 
@@ -1217,17 +1217,17 @@
 			resources.ApplyResources(this.labelScaleRangeDEF, "labelScaleRangeDEF");
 			this.labelScaleRangeDEF.Name = "labelScaleRangeDEF";
 			// 
-			// groupBox6
+			// groupRangeATK
 			// 
-			this.groupBox6.Controls.Add(this.numericRangeATK);
-			this.groupBox6.Controls.Add(this.labelRangeATK);
-			this.groupBox6.Controls.Add(this.labelLvPRangeATK);
-			this.groupBox6.Controls.Add(this.numericLvPRangeATK);
-			this.groupBox6.Controls.Add(this.labelScaleRangeATK);
-			this.groupBox6.Controls.Add(this.numericScaleRangeATK);
-			resources.ApplyResources(this.groupBox6, "groupBox6");
-			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.TabStop = false;
+			this.groupRangeATK.Controls.Add(this.numericRangeATK);
+			this.groupRangeATK.Controls.Add(this.labelRangeATK);
+			this.groupRangeATK.Controls.Add(this.labelLvPRangeATK);
+			this.groupRangeATK.Controls.Add(this.numericLvPRangeATK);
+			this.groupRangeATK.Controls.Add(this.labelScaleRangeATK);
+			this.groupRangeATK.Controls.Add(this.numericScaleRangeATK);
+			resources.ApplyResources(this.groupRangeATK, "groupRangeATK");
+			this.groupRangeATK.Name = "groupRangeATK";
+			this.groupRangeATK.TabStop = false;
 			// 
 			// numericRangeATK
 			// 
@@ -1293,17 +1293,17 @@
 			resources.ApplyResources(this.labelScaleRangeATK, "labelScaleRangeATK");
 			this.labelScaleRangeATK.Name = "labelScaleRangeATK";
 			// 
-			// groupBox5
+			// groupMeleeDEF
 			// 
-			this.groupBox5.Controls.Add(this.numericMeleeDEF);
-			this.groupBox5.Controls.Add(this.labelMeleeDEF);
-			this.groupBox5.Controls.Add(this.labelLvPMeleeDEF);
-			this.groupBox5.Controls.Add(this.numericLvPMeleeDEF);
-			this.groupBox5.Controls.Add(this.labelScaleDEF);
-			this.groupBox5.Controls.Add(this.numericScaleMeleeDEF);
-			resources.ApplyResources(this.groupBox5, "groupBox5");
-			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.TabStop = false;
+			this.groupMeleeDEF.Controls.Add(this.numericMeleeDEF);
+			this.groupMeleeDEF.Controls.Add(this.labelMeleeDEF);
+			this.groupMeleeDEF.Controls.Add(this.labelLvPMeleeDEF);
+			this.groupMeleeDEF.Controls.Add(this.numericLvPMeleeDEF);
+			this.groupMeleeDEF.Controls.Add(this.labelScaleDEF);
+			this.groupMeleeDEF.Controls.Add(this.numericScaleMeleeDEF);
+			resources.ApplyResources(this.groupMeleeDEF, "groupMeleeDEF");
+			this.groupMeleeDEF.Name = "groupMeleeDEF";
+			this.groupMeleeDEF.TabStop = false;
 			// 
 			// numericMeleeDEF
 			// 
@@ -1369,17 +1369,17 @@
 			resources.ApplyResources(this.labelScaleDEF, "labelScaleDEF");
 			this.labelScaleDEF.Name = "labelScaleDEF";
 			// 
-			// groupBox4
+			// groupMeleeATK
 			// 
-			this.groupBox4.Controls.Add(this.numericMeleeATK);
-			this.groupBox4.Controls.Add(this.labelMeleeATK);
-			this.groupBox4.Controls.Add(this.labelLvPMeleeATK);
-			this.groupBox4.Controls.Add(this.numericLvPMeleeATK);
-			this.groupBox4.Controls.Add(this.labelScaleATK);
-			this.groupBox4.Controls.Add(this.numericScaleMeleeATK);
-			resources.ApplyResources(this.groupBox4, "groupBox4");
-			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.TabStop = false;
+			this.groupMeleeATK.Controls.Add(this.numericMeleeATK);
+			this.groupMeleeATK.Controls.Add(this.labelMeleeATK);
+			this.groupMeleeATK.Controls.Add(this.labelLvPMeleeATK);
+			this.groupMeleeATK.Controls.Add(this.numericLvPMeleeATK);
+			this.groupMeleeATK.Controls.Add(this.labelScaleATK);
+			this.groupMeleeATK.Controls.Add(this.numericScaleMeleeATK);
+			resources.ApplyResources(this.groupMeleeATK, "groupMeleeATK");
+			this.groupMeleeATK.Name = "groupMeleeATK";
+			this.groupMeleeATK.TabStop = false;
 			// 
 			// numericMeleeATK
 			// 
@@ -1445,15 +1445,15 @@
 			resources.ApplyResources(this.labelScaleATK, "labelScaleATK");
 			this.labelScaleATK.Name = "labelScaleATK";
 			// 
-			// groupBox3
+			// groupTP
 			// 
-			this.groupBox3.Controls.Add(this.numericTP);
-			this.groupBox3.Controls.Add(this.labelTP);
-			this.groupBox3.Controls.Add(this.labelMaxTP);
-			this.groupBox3.Controls.Add(this.numericMaxTP);
-			resources.ApplyResources(this.groupBox3, "groupBox3");
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.TabStop = false;
+			this.groupTP.Controls.Add(this.numericTP);
+			this.groupTP.Controls.Add(this.labelTP);
+			this.groupTP.Controls.Add(this.labelMaxTP);
+			this.groupTP.Controls.Add(this.numericMaxTP);
+			resources.ApplyResources(this.groupTP, "groupTP");
+			this.groupTP.Name = "groupTP";
+			this.groupTP.TabStop = false;
 			// 
 			// numericTP
 			// 
@@ -1505,17 +1505,17 @@
             0,
             0});
 			// 
-			// groupBox2
+			// groupHP
 			// 
-			this.groupBox2.Controls.Add(this.numericHP);
-			this.groupBox2.Controls.Add(this.labelHP);
-			this.groupBox2.Controls.Add(this.labelLvPHP);
-			this.groupBox2.Controls.Add(this.numericLvPHP);
-			this.groupBox2.Controls.Add(this.labelScaleHP);
-			this.groupBox2.Controls.Add(this.numericScaleHP);
-			resources.ApplyResources(this.groupBox2, "groupBox2");
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.TabStop = false;
+			this.groupHP.Controls.Add(this.numericHP);
+			this.groupHP.Controls.Add(this.labelHP);
+			this.groupHP.Controls.Add(this.labelLvPHP);
+			this.groupHP.Controls.Add(this.numericLvPHP);
+			this.groupHP.Controls.Add(this.labelScaleHP);
+			this.groupHP.Controls.Add(this.numericScaleHP);
+			resources.ApplyResources(this.groupHP, "groupHP");
+			this.groupHP.Name = "groupHP";
+			this.groupHP.TabStop = false;
 			// 
 			// numericHP
 			// 
@@ -1579,18 +1579,18 @@
 			resources.ApplyResources(this.labelScaleHP, "labelScaleHP");
 			this.labelScaleHP.Name = "labelScaleHP";
 			// 
-			// groupBox1
+			// groupLv
 			// 
-			this.groupBox1.Controls.Add(this.numericReqLv);
-			this.groupBox1.Controls.Add(this.labelReqLv);
-			this.groupBox1.Controls.Add(this.labelMinLevel);
-			this.groupBox1.Controls.Add(this.numericMinLevel);
-			this.groupBox1.Controls.Add(this.label);
-			this.groupBox1.Controls.Add(this.labelMaxLevel);
-			this.groupBox1.Controls.Add(this.numericMaxLevel);
-			resources.ApplyResources(this.groupBox1, "groupBox1");
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.TabStop = false;
+			this.groupLv.Controls.Add(this.numericReqLv);
+			this.groupLv.Controls.Add(this.labelReqLv);
+			this.groupLv.Controls.Add(this.labelMinLevel);
+			this.groupLv.Controls.Add(this.numericMinLevel);
+			this.groupLv.Controls.Add(this.label);
+			this.groupLv.Controls.Add(this.labelMaxLevel);
+			this.groupLv.Controls.Add(this.numericMaxLevel);
+			resources.ApplyResources(this.groupLv, "groupLv");
+			this.groupLv.Name = "groupLv";
+			this.groupLv.TabStop = false;
 			// 
 			// labelReqLv
 			// 
@@ -1642,58 +1642,58 @@
 			this.groupStatusInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTestLv)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartStatus)).EndInit();
-			this.groupBox15.ResumeLayout(false);
-			this.groupBox15.PerformLayout();
+			this.groupMoney.ResumeLayout(false);
+			this.groupMoney.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMoney)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMoney)).EndInit();
-			this.groupBox14.ResumeLayout(false);
-			this.groupBox14.PerformLayout();
+			this.groupEXP.ResumeLayout(false);
+			this.groupEXP.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericEXP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPEXP)).EndInit();
-			this.groupBox13.ResumeLayout(false);
-			this.groupBox13.PerformLayout();
-			this.groupBox12.ResumeLayout(false);
-			this.groupBox12.PerformLayout();
-			this.groupBox11.ResumeLayout(false);
-			this.groupBox11.PerformLayout();
-			this.groupBox10.ResumeLayout(false);
-			this.groupBox10.PerformLayout();
+			this.groupEVT.ResumeLayout(false);
+			this.groupEVT.PerformLayout();
+			this.groupHIT.ResumeLayout(false);
+			this.groupHIT.PerformLayout();
+			this.groupLuck.ResumeLayout(false);
+			this.groupLuck.PerformLayout();
+			this.groupSPD.ResumeLayout(false);
+			this.groupSPD.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericSPD)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPSPD)).EndInit();
-			this.groupBox9.ResumeLayout(false);
-			this.groupBox9.PerformLayout();
+			this.groupMagicDEF.ResumeLayout(false);
+			this.groupMagicDEF.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMagicDEF)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMagicDEF)).EndInit();
-			this.groupBox8.ResumeLayout(false);
-			this.groupBox8.PerformLayout();
+			this.groupMagicATK.ResumeLayout(false);
+			this.groupMagicATK.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMagicATK)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMagicATK)).EndInit();
-			this.groupBox7.ResumeLayout(false);
-			this.groupBox7.PerformLayout();
+			this.groupRangeDEF.ResumeLayout(false);
+			this.groupRangeDEF.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRangeDEF)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPRangeDEF)).EndInit();
-			this.groupBox6.ResumeLayout(false);
-			this.groupBox6.PerformLayout();
+			this.groupRangeATK.ResumeLayout(false);
+			this.groupRangeATK.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRangeATK)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPRangeATK)).EndInit();
-			this.groupBox5.ResumeLayout(false);
-			this.groupBox5.PerformLayout();
+			this.groupMeleeDEF.ResumeLayout(false);
+			this.groupMeleeDEF.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMeleeDEF)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMeleeDEF)).EndInit();
-			this.groupBox4.ResumeLayout(false);
-			this.groupBox4.PerformLayout();
+			this.groupMeleeATK.ResumeLayout(false);
+			this.groupMeleeATK.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericMeleeATK)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMeleeATK)).EndInit();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
+			this.groupTP.ResumeLayout(false);
+			this.groupTP.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxTP)).EndInit();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
+			this.groupHP.ResumeLayout(false);
+			this.groupHP.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericHP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPHP)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.groupLv.ResumeLayout(false);
+			this.groupLv.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1713,50 +1713,50 @@
 		private System.Windows.Forms.Label labelLvPLuck;
 		private System.Windows.Forms.Label labelEXP;
 		private System.Windows.Forms.Label labelLuck;
-		private System.Windows.Forms.GroupBox groupBox10;
+		private System.Windows.Forms.GroupBox groupSPD;
 		private System.Windows.Forms.Label labelSPD;
 		private System.Windows.Forms.Label labelLvPSPD;
 		private System.Windows.Forms.Label labelScaleSPD;
-		private System.Windows.Forms.GroupBox groupBox9;
+		private System.Windows.Forms.GroupBox groupMagicDEF;
 		private System.Windows.Forms.Label labelMagicDEF;
 		private System.Windows.Forms.Label labelLvPMagicDEF;
 		private System.Windows.Forms.Label labelScaleMagicDEF;
-		private System.Windows.Forms.GroupBox groupBox8;
+		private System.Windows.Forms.GroupBox groupMagicATK;
 		private System.Windows.Forms.Label labelMagicATK;
 		private System.Windows.Forms.Label labelLvPMagicATK;
 		private System.Windows.Forms.Label labelScaleMagicATK;
-		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.GroupBox groupRangeDEF;
 		private System.Windows.Forms.Label labelRangeDEF;
 		private System.Windows.Forms.Label labelLvPRangeDEF;
 		private System.Windows.Forms.Label labelScaleRangeDEF;
-		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.GroupBox groupRangeATK;
 		private System.Windows.Forms.Label labelRangeATK;
 		private System.Windows.Forms.Label labelLvPRangeATK;
 		private System.Windows.Forms.Label labelScaleRangeATK;
-		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.GroupBox groupMeleeDEF;
 		private System.Windows.Forms.Label labelMeleeDEF;
 		private System.Windows.Forms.Label labelLvPMeleeDEF;
 		private System.Windows.Forms.Label labelScaleDEF;
-		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.GroupBox groupMeleeATK;
 		private System.Windows.Forms.Label labelMeleeATK;
 		private System.Windows.Forms.Label labelLvPMeleeATK;
 		private System.Windows.Forms.Label labelScaleATK;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox groupTP;
 		private System.Windows.Forms.Label labelTP;
 		private System.Windows.Forms.Label labelMaxTP;
-		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.GroupBox groupHP;
 		private System.Windows.Forms.Label labelHP;
 		private System.Windows.Forms.Label labelLvPHP;
 		private System.Windows.Forms.Label labelScaleHP;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupLv;
 		private System.Windows.Forms.Label labelMinLevel;
 		private System.Windows.Forms.Label label;
 		private System.Windows.Forms.Label labelMaxLevel;
-		private System.Windows.Forms.GroupBox groupBox15;
-		private System.Windows.Forms.GroupBox groupBox14;
-		private System.Windows.Forms.GroupBox groupBox13;
-		private System.Windows.Forms.GroupBox groupBox12;
-		private System.Windows.Forms.GroupBox groupBox11;
+		private System.Windows.Forms.GroupBox groupMoney;
+		private System.Windows.Forms.GroupBox groupEXP;
+		private System.Windows.Forms.GroupBox groupEVT;
+		private System.Windows.Forms.GroupBox groupHIT;
+		private System.Windows.Forms.GroupBox groupLuck;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chartStatus;
 		private System.Windows.Forms.NumericUpDown numericTestLv;
 		private System.Windows.Forms.Label labelTestLv;

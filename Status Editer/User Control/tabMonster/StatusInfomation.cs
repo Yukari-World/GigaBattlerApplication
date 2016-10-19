@@ -201,34 +201,12 @@ namespace Status_Editer.User_Control.tabMonster {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// フォームメソッド
-		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		/// <summary>
-		/// ステータス変更時の更新データ
-		/// </summary>
-		/// <param name="sender">object</param>
-		/// <param name="e">EventArgs</param>
-		private void numericTestLv_ValueChanged(object sender, EventArgs e) {
-			ChartChanges();
-		}
-
-
-		private void numericMinLevel_ValueChanged(object sender, EventArgs e) {
-			numericTestLv.Value = numericMinLevel.Value;
-		}
-
-		private void Status_ValueChanged(object sender, EventArgs e) {
-			ChartChanges();
-		}
-
-
-		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// パブリック関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tablemonsterBindingSource">BindingSource tablemonsterBindingSource</param>
+		/// <param name="tablemonsterBindingSource">BindingSource</param>
 		public void LoadDataBindings(BindingSource tablemonsterBindingSource) {
 			numericReqLv.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Req Lv", true));
 			numericMinLevel.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Min Lv", true));
@@ -328,6 +306,28 @@ namespace Status_Editer.User_Control.tabMonster {
 			chartStatus.Series[0].Points.Add(dataPoint5);
 			chartStatus.Series[0].Points.Add(dataPoint6);
 			chartStatus.Series[0].Points.Add(dataPoint7);
+		}
+
+
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		// コントロールメソッド
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		/// <summary>
+		/// ステータス変更時の更新データ
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericTestLv_ValueChanged(object sender, EventArgs e) {
+			ChartChanges();
+		}
+
+
+		private void numericMinLevel_ValueChanged(object sender, EventArgs e) {
+			numericTestLv.Value = numericMinLevel.Value;
+		}
+
+		private void Status_ValueChanged(object sender, EventArgs e) {
+			ChartChanges();
 		}
 	}
 }
