@@ -34,35 +34,49 @@
 			this.StripMenuDatabase = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDatabaseReload = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDatabaseSave = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindow = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindowView = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuHelpHelp = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.StripMenuHelpVersion = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.statusInfomation1 = new Status_Editer.StatusInfomation();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.tabControlMonster = new System.Windows.Forms.TabControl();
+			this.tabPage21 = new System.Windows.Forms.TabPage();
 			this.groupDropInfo = new System.Windows.Forms.GroupBox();
-			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+			this.numericDropRate4 = new System.Windows.Forms.NumericUpDown();
 			this.tablemonsterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.label5 = new System.Windows.Forms.Label();
-			this.comboBox4 = new System.Windows.Forms.ComboBox();
-			this.tableweaponBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.label6 = new System.Windows.Forms.Label();
-			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-			this.label7 = new System.Windows.Forms.Label();
-			this.comboBox5 = new System.Windows.Forms.ComboBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-			this.label3 = new System.Windows.Forms.Label();
-			this.comboBox3 = new System.Windows.Forms.ComboBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-			this.label1 = new System.Windows.Forms.Label();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.GigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
+			this.labelDropRate4 = new System.Windows.Forms.Label();
+			this.comboDropTable4 = new System.Windows.Forms.ComboBox();
+			this.tableweaponBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+			this.labelDropTable4 = new System.Windows.Forms.Label();
+			this.numericDropRate5 = new System.Windows.Forms.NumericUpDown();
+			this.labelDropRate5 = new System.Windows.Forms.Label();
+			this.comboDropTable5 = new System.Windows.Forms.ComboBox();
+			this.tableweaponBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+			this.labelDropTable5 = new System.Windows.Forms.Label();
+			this.numericDropRate3 = new System.Windows.Forms.NumericUpDown();
+			this.labelDropRate3 = new System.Windows.Forms.Label();
+			this.comboDropTable3 = new System.Windows.Forms.ComboBox();
+			this.tableweaponBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+			this.labelDropTable3 = new System.Windows.Forms.Label();
+			this.numericDropRate2 = new System.Windows.Forms.NumericUpDown();
+			this.labelDropRate2 = new System.Windows.Forms.Label();
+			this.comboDropTable2 = new System.Windows.Forms.ComboBox();
+			this.tableweaponBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.labelDropTable2 = new System.Windows.Forms.Label();
+			this.numericDropRate1 = new System.Windows.Forms.NumericUpDown();
 			this.labelDropRate1 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.comboDropTable1 = new System.Windows.Forms.ComboBox();
+			this.tableweaponBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.labelDropTable1 = new System.Windows.Forms.Label();
+			this.unitInfomation1 = new Status_Editer.User_Control.UnitInfomation();
+			this.tabPage22 = new System.Windows.Forms.TabPage();
 			this.groupStatusInfo = new System.Windows.Forms.GroupBox();
 			this.numericScaleMoney = new System.Windows.Forms.NumericUpDown();
 			this.numericLvPEVT = new System.Windows.Forms.NumericUpDown();
@@ -145,38 +159,59 @@
 			this.label = new System.Windows.Forms.Label();
 			this.numericMinLevel = new System.Windows.Forms.NumericUpDown();
 			this.labelMinLevel = new System.Windows.Forms.Label();
-			this.groupUnitInfo = new System.Windows.Forms.GroupBox();
-			this.AirType = new System.Windows.Forms.CheckBox();
-			this.textUnitName = new System.Windows.Forms.TextBox();
-			this.labelUnitName = new System.Windows.Forms.Label();
-			this.comboMonsterGroup = new System.Windows.Forms.ComboBox();
-			this.labelMonsterGroup = new System.Windows.Forms.Label();
-			this.textMonsterID = new System.Windows.Forms.TextBox();
-			this.labelMonsterID = new System.Windows.Forms.Label();
+			this.tabPage23 = new System.Windows.Forms.TabPage();
+			this.groupSkillInfo = new System.Windows.Forms.GroupBox();
+			this.comboSkill1 = new System.Windows.Forms.ComboBox();
+			this.labelSkill1 = new System.Windows.Forms.Label();
 			this.listMonster = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.tabPage6 = new System.Windows.Forms.TabPage();
+			this.tabPage7 = new System.Windows.Forms.TabPage();
+			this.tabPage8 = new System.Windows.Forms.TabPage();
+			this.tabPage9 = new System.Windows.Forms.TabPage();
+			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.tabPage11 = new System.Windows.Forms.TabPage();
+			this.tabPage12 = new System.Windows.Forms.TabPage();
+			this.tabPage13 = new System.Windows.Forms.TabPage();
+			this.tabPage14 = new System.Windows.Forms.TabPage();
+			this.tabPage15 = new System.Windows.Forms.TabPage();
+			this.tabPage16 = new System.Windows.Forms.TabPage();
+			this.tabPage17 = new System.Windows.Forms.TabPage();
+			this.tabPage18 = new System.Windows.Forms.TabPage();
+			this.tabPage19 = new System.Windows.Forms.TabPage();
+			this.tabPage20 = new System.Windows.Forms.TabPage();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
 			this.StatusStrip = new System.Windows.Forms.StatusStrip();
-			this.StripInfomationLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.StripInfo = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
 			this.@__table_monsterTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_monsterTableAdapter();
 			this.@__table_weaponTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter();
+			this.@__table_raceTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter();
+			this.tableraceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
+			this.tabPage2.SuspendLayout();
 			this.tabPage3.SuspendLayout();
+			this.tabControlMonster.SuspendLayout();
+			this.tabPage21.SuspendLayout();
 			this.groupDropInfo.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			this.tabPage22.SuspendLayout();
 			this.groupStatusInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleMoney)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPEVT)).BeginInit();
@@ -218,22 +253,26 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericTP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxLevel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMinLevel)).BeginInit();
-			this.groupUnitInfo.SuspendLayout();
+			this.tabPage23.SuspendLayout();
+			this.groupSkillInfo.SuspendLayout();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
 			this.ToolStripContainer.TopToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
 			this.StatusStrip.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tableraceBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// StripMainMenu
 			// 
+			this.StripMainMenu.BackColor = System.Drawing.Color.Transparent;
 			this.StripMainMenu.Dock = System.Windows.Forms.DockStyle.None;
 			this.StripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenuFile,
             this.StripMenuEdit,
             this.StripMenuViwer,
             this.StripMenuDatabase,
+            this.StripMenuWindow,
             this.StripMenuHelp});
 			this.StripMainMenu.Location = new System.Drawing.Point(0, 0);
 			this.StripMainMenu.Name = "StripMainMenu";
@@ -308,11 +347,47 @@
 			this.StripMenuDatabaseSave.Text = "変更を適用(&S)";
 			this.StripMenuDatabaseSave.Click += new System.EventHandler(this.StripMenuDatabaseSave_Click);
 			// 
+			// StripMenuWindow
+			// 
+			this.StripMenuWindow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuWindowView});
+			this.StripMenuWindow.Name = "StripMenuWindow";
+			this.StripMenuWindow.Size = new System.Drawing.Size(79, 20);
+			this.StripMenuWindow.Text = "ウィンドウ(&W)";
+			// 
+			// StripMenuWindowView
+			// 
+			this.StripMenuWindowView.Name = "StripMenuWindowView";
+			this.StripMenuWindowView.Size = new System.Drawing.Size(157, 22);
+			this.StripMenuWindowView.Text = "テーブルの表示(&T)";
+			this.StripMenuWindowView.Click += new System.EventHandler(this.StripMenuWindowView_Click);
+			// 
 			// StripMenuHelp
 			// 
+			this.StripMenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuHelpHelp,
+            this.toolStripSeparator2,
+            this.StripMenuHelpVersion});
 			this.StripMenuHelp.Name = "StripMenuHelp";
 			this.StripMenuHelp.Size = new System.Drawing.Size(65, 20);
 			this.StripMenuHelp.Text = "ヘルプ(&H)";
+			// 
+			// StripMenuHelpHelp
+			// 
+			this.StripMenuHelpHelp.Name = "StripMenuHelpHelp";
+			this.StripMenuHelpHelp.Size = new System.Drawing.Size(158, 22);
+			this.StripMenuHelpHelp.Text = "ヘルプの表示(&V)";
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(155, 6);
+			// 
+			// StripMenuHelpVersion
+			// 
+			this.StripMenuHelpVersion.Name = "StripMenuHelpVersion";
+			this.StripMenuHelpVersion.Size = new System.Drawing.Size(158, 22);
+			this.StripMenuHelpVersion.Text = "バージョン情報(&A)";
 			// 
 			// tabControl1
 			// 
@@ -321,6 +396,21 @@
 			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Controls.Add(this.tabPage4);
 			this.tabControl1.Controls.Add(this.tabPage5);
+			this.tabControl1.Controls.Add(this.tabPage6);
+			this.tabControl1.Controls.Add(this.tabPage7);
+			this.tabControl1.Controls.Add(this.tabPage8);
+			this.tabControl1.Controls.Add(this.tabPage9);
+			this.tabControl1.Controls.Add(this.tabPage10);
+			this.tabControl1.Controls.Add(this.tabPage11);
+			this.tabControl1.Controls.Add(this.tabPage12);
+			this.tabControl1.Controls.Add(this.tabPage13);
+			this.tabControl1.Controls.Add(this.tabPage14);
+			this.tabControl1.Controls.Add(this.tabPage15);
+			this.tabControl1.Controls.Add(this.tabPage16);
+			this.tabControl1.Controls.Add(this.tabPage17);
+			this.tabControl1.Controls.Add(this.tabPage18);
+			this.tabControl1.Controls.Add(this.tabPage19);
+			this.tabControl1.Controls.Add(this.tabPage20);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
@@ -330,30 +420,36 @@
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.BackColor = System.Drawing.Color.Transparent;
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage1.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "メイン";
+			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+			this.tabPage2.Controls.Add(this.statusInfomation1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "雑多";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// statusInfomation1
+			// 
+			this.statusInfomation1.BackColor = System.Drawing.Color.Transparent;
+			this.statusInfomation1.Location = new System.Drawing.Point(229, 3);
+			this.statusInfomation1.Name = "statusInfomation1";
+			this.statusInfomation1.Size = new System.Drawing.Size(1360, 800);
+			this.statusInfomation1.TabIndex = 0;
 			// 
 			// tabPage3
 			// 
-			this.tabPage3.BackColor = System.Drawing.Color.Transparent;
-			this.tabPage3.Controls.Add(this.groupDropInfo);
-			this.tabPage3.Controls.Add(this.groupStatusInfo);
-			this.tabPage3.Controls.Add(this.groupUnitInfo);
+			this.tabPage3.Controls.Add(this.tabControlMonster);
 			this.tabPage3.Controls.Add(this.listMonster);
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
@@ -361,247 +457,297 @@
 			this.tabPage3.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "モンスター";
+			this.tabPage3.UseVisualStyleBackColor = true;
+			// 
+			// tabControlMonster
+			// 
+			this.tabControlMonster.Controls.Add(this.tabPage21);
+			this.tabControlMonster.Controls.Add(this.tabPage22);
+			this.tabControlMonster.Controls.Add(this.tabPage23);
+			this.tabControlMonster.Location = new System.Drawing.Point(209, 0);
+			this.tabControlMonster.Name = "tabControlMonster";
+			this.tabControlMonster.SelectedIndex = 0;
+			this.tabControlMonster.Size = new System.Drawing.Size(1387, 832);
+			this.tabControlMonster.TabIndex = 1;
+			// 
+			// tabPage21
+			// 
+			this.tabPage21.Controls.Add(this.groupDropInfo);
+			this.tabPage21.Controls.Add(this.unitInfomation1);
+			this.tabPage21.Location = new System.Drawing.Point(4, 22);
+			this.tabPage21.Name = "tabPage21";
+			this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage21.Size = new System.Drawing.Size(1379, 806);
+			this.tabPage21.TabIndex = 0;
+			this.tabPage21.Text = "基本情報";
+			this.tabPage21.UseVisualStyleBackColor = true;
 			// 
 			// groupDropInfo
 			// 
-			this.groupDropInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupDropInfo.Controls.Add(this.numericUpDown4);
-			this.groupDropInfo.Controls.Add(this.label5);
-			this.groupDropInfo.Controls.Add(this.comboBox4);
-			this.groupDropInfo.Controls.Add(this.label6);
-			this.groupDropInfo.Controls.Add(this.numericUpDown5);
-			this.groupDropInfo.Controls.Add(this.label7);
-			this.groupDropInfo.Controls.Add(this.comboBox5);
-			this.groupDropInfo.Controls.Add(this.label8);
-			this.groupDropInfo.Controls.Add(this.numericUpDown3);
-			this.groupDropInfo.Controls.Add(this.label3);
-			this.groupDropInfo.Controls.Add(this.comboBox3);
-			this.groupDropInfo.Controls.Add(this.label4);
-			this.groupDropInfo.Controls.Add(this.numericUpDown2);
-			this.groupDropInfo.Controls.Add(this.label1);
-			this.groupDropInfo.Controls.Add(this.comboBox2);
-			this.groupDropInfo.Controls.Add(this.label2);
-			this.groupDropInfo.Controls.Add(this.numericUpDown1);
+			this.groupDropInfo.Controls.Add(this.numericDropRate4);
+			this.groupDropInfo.Controls.Add(this.labelDropRate4);
+			this.groupDropInfo.Controls.Add(this.comboDropTable4);
+			this.groupDropInfo.Controls.Add(this.labelDropTable4);
+			this.groupDropInfo.Controls.Add(this.numericDropRate5);
+			this.groupDropInfo.Controls.Add(this.labelDropRate5);
+			this.groupDropInfo.Controls.Add(this.comboDropTable5);
+			this.groupDropInfo.Controls.Add(this.labelDropTable5);
+			this.groupDropInfo.Controls.Add(this.numericDropRate3);
+			this.groupDropInfo.Controls.Add(this.labelDropRate3);
+			this.groupDropInfo.Controls.Add(this.comboDropTable3);
+			this.groupDropInfo.Controls.Add(this.labelDropTable3);
+			this.groupDropInfo.Controls.Add(this.numericDropRate2);
+			this.groupDropInfo.Controls.Add(this.labelDropRate2);
+			this.groupDropInfo.Controls.Add(this.comboDropTable2);
+			this.groupDropInfo.Controls.Add(this.labelDropTable2);
+			this.groupDropInfo.Controls.Add(this.numericDropRate1);
 			this.groupDropInfo.Controls.Add(this.labelDropRate1);
-			this.groupDropInfo.Controls.Add(this.comboBox1);
+			this.groupDropInfo.Controls.Add(this.comboDropTable1);
 			this.groupDropInfo.Controls.Add(this.labelDropTable1);
-			this.groupDropInfo.Location = new System.Drawing.Point(816, 6);
+			this.groupDropInfo.Location = new System.Drawing.Point(612, 6);
 			this.groupDropInfo.Name = "groupDropInfo";
-			this.groupDropInfo.Size = new System.Drawing.Size(768, 230);
-			this.groupDropInfo.TabIndex = 3;
+			this.groupDropInfo.Size = new System.Drawing.Size(761, 230);
+			this.groupDropInfo.TabIndex = 6;
 			this.groupDropInfo.TabStop = false;
-			this.groupDropInfo.Text = "Drop Infomation";
+			this.groupDropInfo.Text = "Drop, Etc. Infomation";
 			// 
-			// numericUpDown4
+			// numericDropRate4
 			// 
-			this.numericUpDown4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per4", true));
-			this.numericUpDown4.Location = new System.Drawing.Point(270, 156);
-			this.numericUpDown4.Maximum = new decimal(new int[] {
+			this.numericDropRate4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per4", true));
+			this.numericDropRate4.Location = new System.Drawing.Point(270, 156);
+			this.numericDropRate4.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-			this.numericUpDown4.Name = "numericUpDown4";
-			this.numericUpDown4.Size = new System.Drawing.Size(120, 19);
-			this.numericUpDown4.TabIndex = 15;
-			this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericUpDown4, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.numericDropRate4.Name = "numericDropRate4";
+			this.numericDropRate4.Size = new System.Drawing.Size(120, 19);
+			this.numericDropRate4.TabIndex = 15;
+			this.numericDropRate4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericDropRate4.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDropRate4, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
 			// 
 			// tablemonsterBindingSource
 			// 
 			this.tablemonsterBindingSource.DataMember = "__table_monster";
-			this.tablemonsterBindingSource.DataSource = this.gigaBattlerDataSet;
+			this.tablemonsterBindingSource.DataSource = this.GigaBattlerDataSet;
 			// 
-			// gigaBattlerDataSet
+			// GigaBattlerDataSet
 			// 
-			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
-			// label5
+			// labelDropRate4
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(270, 140);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(67, 12);
-			this.label5.TabIndex = 13;
-			this.label5.Text = "Drop Rate 4";
+			this.labelDropRate4.AutoSize = true;
+			this.labelDropRate4.Location = new System.Drawing.Point(270, 140);
+			this.labelDropRate4.Name = "labelDropRate4";
+			this.labelDropRate4.Size = new System.Drawing.Size(67, 12);
+			this.labelDropRate4.TabIndex = 13;
+			this.labelDropRate4.Text = "Drop Rate 4";
 			// 
-			// comboBox4
+			// comboDropTable4
 			// 
-			this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item4", true));
-			this.comboBox4.DataSource = this.tableweaponBindingSource;
-			this.comboBox4.DisplayMember = "WeaponName";
-			this.comboBox4.FormattingEnabled = true;
-			this.comboBox4.Location = new System.Drawing.Point(10, 155);
-			this.comboBox4.Name = "comboBox4";
-			this.comboBox4.Size = new System.Drawing.Size(250, 20);
-			this.comboBox4.TabIndex = 14;
-			this.comboBox4.ValueMember = "WeaponID";
+			this.comboDropTable4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboDropTable4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboDropTable4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item4", true));
+			this.comboDropTable4.DataSource = this.tableweaponBindingSource3;
+			this.comboDropTable4.DisplayMember = "WeaponName";
+			this.comboDropTable4.FormattingEnabled = true;
+			this.comboDropTable4.Location = new System.Drawing.Point(10, 155);
+			this.comboDropTable4.Name = "comboDropTable4";
+			this.comboDropTable4.Size = new System.Drawing.Size(250, 20);
+			this.comboDropTable4.TabIndex = 14;
+			this.comboDropTable4.ValueMember = "WeaponID";
 			// 
-			// tableweaponBindingSource
+			// tableweaponBindingSource3
 			// 
-			this.tableweaponBindingSource.DataMember = "__table_weapon";
-			this.tableweaponBindingSource.DataSource = this.gigaBattlerDataSet;
+			this.tableweaponBindingSource3.DataMember = "__table_weapon";
+			this.tableweaponBindingSource3.DataSource = this.GigaBattlerDataSet;
 			// 
-			// label6
+			// labelDropTable4
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(10, 140);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(71, 12);
-			this.label6.TabIndex = 12;
-			this.label6.Text = "Drop Table 4";
+			this.labelDropTable4.AutoSize = true;
+			this.labelDropTable4.Location = new System.Drawing.Point(10, 140);
+			this.labelDropTable4.Name = "labelDropTable4";
+			this.labelDropTable4.Size = new System.Drawing.Size(71, 12);
+			this.labelDropTable4.TabIndex = 12;
+			this.labelDropTable4.Text = "Drop Table 4";
 			// 
-			// numericUpDown5
+			// numericDropRate5
 			// 
-			this.numericUpDown5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per5", true));
-			this.numericUpDown5.Location = new System.Drawing.Point(270, 196);
-			this.numericUpDown5.Maximum = new decimal(new int[] {
+			this.numericDropRate5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per5", true));
+			this.numericDropRate5.Location = new System.Drawing.Point(270, 196);
+			this.numericDropRate5.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-			this.numericUpDown5.Name = "numericUpDown5";
-			this.numericUpDown5.Size = new System.Drawing.Size(120, 19);
-			this.numericUpDown5.TabIndex = 19;
-			this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericUpDown5, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.numericDropRate5.Name = "numericDropRate5";
+			this.numericDropRate5.Size = new System.Drawing.Size(120, 19);
+			this.numericDropRate5.TabIndex = 19;
+			this.numericDropRate5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericDropRate5.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDropRate5, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
 			// 
-			// label7
+			// labelDropRate5
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(270, 180);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(67, 12);
-			this.label7.TabIndex = 17;
-			this.label7.Text = "Drop Rate 5";
+			this.labelDropRate5.AutoSize = true;
+			this.labelDropRate5.Location = new System.Drawing.Point(270, 180);
+			this.labelDropRate5.Name = "labelDropRate5";
+			this.labelDropRate5.Size = new System.Drawing.Size(67, 12);
+			this.labelDropRate5.TabIndex = 17;
+			this.labelDropRate5.Text = "Drop Rate 5";
 			// 
-			// comboBox5
+			// comboDropTable5
 			// 
-			this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item5", true));
-			this.comboBox5.DataSource = this.tableweaponBindingSource;
-			this.comboBox5.DisplayMember = "WeaponName";
-			this.comboBox5.FormattingEnabled = true;
-			this.comboBox5.Location = new System.Drawing.Point(10, 195);
-			this.comboBox5.Name = "comboBox5";
-			this.comboBox5.Size = new System.Drawing.Size(250, 20);
-			this.comboBox5.TabIndex = 18;
-			this.comboBox5.ValueMember = "WeaponID";
+			this.comboDropTable5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboDropTable5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboDropTable5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item5", true));
+			this.comboDropTable5.DataSource = this.tableweaponBindingSource4;
+			this.comboDropTable5.DisplayMember = "WeaponName";
+			this.comboDropTable5.FormattingEnabled = true;
+			this.comboDropTable5.Location = new System.Drawing.Point(10, 195);
+			this.comboDropTable5.Name = "comboDropTable5";
+			this.comboDropTable5.Size = new System.Drawing.Size(250, 20);
+			this.comboDropTable5.TabIndex = 18;
+			this.comboDropTable5.ValueMember = "WeaponID";
 			// 
-			// label8
+			// tableweaponBindingSource4
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(10, 180);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(71, 12);
-			this.label8.TabIndex = 16;
-			this.label8.Text = "Drop Table 5";
+			this.tableweaponBindingSource4.DataMember = "__table_weapon";
+			this.tableweaponBindingSource4.DataSource = this.GigaBattlerDataSet;
 			// 
-			// numericUpDown3
+			// labelDropTable5
 			// 
-			this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per3", true));
-			this.numericUpDown3.Location = new System.Drawing.Point(270, 116);
-			this.numericUpDown3.Maximum = new decimal(new int[] {
+			this.labelDropTable5.AutoSize = true;
+			this.labelDropTable5.Location = new System.Drawing.Point(10, 180);
+			this.labelDropTable5.Name = "labelDropTable5";
+			this.labelDropTable5.Size = new System.Drawing.Size(71, 12);
+			this.labelDropTable5.TabIndex = 16;
+			this.labelDropTable5.Text = "Drop Table 5";
+			// 
+			// numericDropRate3
+			// 
+			this.numericDropRate3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per3", true));
+			this.numericDropRate3.Location = new System.Drawing.Point(270, 116);
+			this.numericDropRate3.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-			this.numericUpDown3.Name = "numericUpDown3";
-			this.numericUpDown3.Size = new System.Drawing.Size(120, 19);
-			this.numericUpDown3.TabIndex = 11;
-			this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericUpDown3, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.numericDropRate3.Name = "numericDropRate3";
+			this.numericDropRate3.Size = new System.Drawing.Size(120, 19);
+			this.numericDropRate3.TabIndex = 11;
+			this.numericDropRate3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericDropRate3.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDropRate3, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
 			// 
-			// label3
+			// labelDropRate3
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(270, 100);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(67, 12);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "Drop Rate 3";
+			this.labelDropRate3.AutoSize = true;
+			this.labelDropRate3.Location = new System.Drawing.Point(270, 100);
+			this.labelDropRate3.Name = "labelDropRate3";
+			this.labelDropRate3.Size = new System.Drawing.Size(67, 12);
+			this.labelDropRate3.TabIndex = 9;
+			this.labelDropRate3.Text = "Drop Rate 3";
 			// 
-			// comboBox3
+			// comboDropTable3
 			// 
-			this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item3", true));
-			this.comboBox3.DataSource = this.tableweaponBindingSource;
-			this.comboBox3.DisplayMember = "WeaponName";
-			this.comboBox3.FormattingEnabled = true;
-			this.comboBox3.Location = new System.Drawing.Point(10, 115);
-			this.comboBox3.Name = "comboBox3";
-			this.comboBox3.Size = new System.Drawing.Size(250, 20);
-			this.comboBox3.TabIndex = 10;
-			this.comboBox3.ValueMember = "WeaponID";
+			this.comboDropTable3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboDropTable3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboDropTable3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item3", true));
+			this.comboDropTable3.DataSource = this.tableweaponBindingSource2;
+			this.comboDropTable3.DisplayMember = "WeaponName";
+			this.comboDropTable3.FormattingEnabled = true;
+			this.comboDropTable3.Location = new System.Drawing.Point(10, 115);
+			this.comboDropTable3.Name = "comboDropTable3";
+			this.comboDropTable3.Size = new System.Drawing.Size(250, 20);
+			this.comboDropTable3.TabIndex = 10;
+			this.comboDropTable3.ValueMember = "WeaponID";
 			// 
-			// label4
+			// tableweaponBindingSource2
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(10, 100);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(71, 12);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Drop Table 3";
+			this.tableweaponBindingSource2.DataMember = "__table_weapon";
+			this.tableweaponBindingSource2.DataSource = this.GigaBattlerDataSet;
 			// 
-			// numericUpDown2
+			// labelDropTable3
 			// 
-			this.numericUpDown2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per2", true));
-			this.numericUpDown2.Location = new System.Drawing.Point(270, 76);
-			this.numericUpDown2.Maximum = new decimal(new int[] {
+			this.labelDropTable3.AutoSize = true;
+			this.labelDropTable3.Location = new System.Drawing.Point(10, 100);
+			this.labelDropTable3.Name = "labelDropTable3";
+			this.labelDropTable3.Size = new System.Drawing.Size(71, 12);
+			this.labelDropTable3.TabIndex = 8;
+			this.labelDropTable3.Text = "Drop Table 3";
+			// 
+			// numericDropRate2
+			// 
+			this.numericDropRate2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per2", true));
+			this.numericDropRate2.Location = new System.Drawing.Point(270, 76);
+			this.numericDropRate2.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(120, 19);
-			this.numericUpDown2.TabIndex = 7;
-			this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericUpDown2, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.numericDropRate2.Name = "numericDropRate2";
+			this.numericDropRate2.Size = new System.Drawing.Size(120, 19);
+			this.numericDropRate2.TabIndex = 7;
+			this.numericDropRate2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericDropRate2.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDropRate2, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
 			// 
-			// label1
+			// labelDropRate2
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(270, 60);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(67, 12);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Drop Rate 2";
+			this.labelDropRate2.AutoSize = true;
+			this.labelDropRate2.Location = new System.Drawing.Point(270, 60);
+			this.labelDropRate2.Name = "labelDropRate2";
+			this.labelDropRate2.Size = new System.Drawing.Size(67, 12);
+			this.labelDropRate2.TabIndex = 5;
+			this.labelDropRate2.Text = "Drop Rate 2";
 			// 
-			// comboBox2
+			// comboDropTable2
 			// 
-			this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item2", true));
-			this.comboBox2.DataSource = this.tableweaponBindingSource;
-			this.comboBox2.DisplayMember = "WeaponName";
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Location = new System.Drawing.Point(10, 75);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(250, 20);
-			this.comboBox2.TabIndex = 6;
-			this.comboBox2.ValueMember = "WeaponID";
+			this.comboDropTable2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboDropTable2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboDropTable2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item2", true));
+			this.comboDropTable2.DataSource = this.tableweaponBindingSource1;
+			this.comboDropTable2.DisplayMember = "WeaponName";
+			this.comboDropTable2.FormattingEnabled = true;
+			this.comboDropTable2.Location = new System.Drawing.Point(10, 75);
+			this.comboDropTable2.Name = "comboDropTable2";
+			this.comboDropTable2.Size = new System.Drawing.Size(250, 20);
+			this.comboDropTable2.TabIndex = 6;
+			this.comboDropTable2.ValueMember = "WeaponID";
 			// 
-			// label2
+			// tableweaponBindingSource1
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(10, 60);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(71, 12);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Drop Table 2";
+			this.tableweaponBindingSource1.DataMember = "__table_weapon";
+			this.tableweaponBindingSource1.DataSource = this.GigaBattlerDataSet;
 			// 
-			// numericUpDown1
+			// labelDropTable2
 			// 
-			this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per1", true));
-			this.numericUpDown1.Location = new System.Drawing.Point(270, 36);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
+			this.labelDropTable2.AutoSize = true;
+			this.labelDropTable2.Location = new System.Drawing.Point(10, 60);
+			this.labelDropTable2.Name = "labelDropTable2";
+			this.labelDropTable2.Size = new System.Drawing.Size(71, 12);
+			this.labelDropTable2.TabIndex = 4;
+			this.labelDropTable2.Text = "Drop Table 2";
+			// 
+			// numericDropRate1
+			// 
+			this.numericDropRate1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per1", true));
+			this.numericDropRate1.Location = new System.Drawing.Point(270, 36);
+			this.numericDropRate1.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(120, 19);
-			this.numericUpDown1.TabIndex = 3;
-			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericUpDown1, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.numericDropRate1.Name = "numericDropRate1";
+			this.numericDropRate1.Size = new System.Drawing.Size(120, 19);
+			this.numericDropRate1.TabIndex = 3;
+			this.numericDropRate1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericDropRate1.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDropRate1, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
 			// 
 			// labelDropRate1
 			// 
@@ -612,17 +758,24 @@
 			this.labelDropRate1.TabIndex = 1;
 			this.labelDropRate1.Text = "Drop Rate 1";
 			// 
-			// comboBox1
+			// comboDropTable1
 			// 
-			this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item1", true));
-			this.comboBox1.DataSource = this.tableweaponBindingSource;
-			this.comboBox1.DisplayMember = "WeaponName";
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(10, 35);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(250, 20);
-			this.comboBox1.TabIndex = 2;
-			this.comboBox1.ValueMember = "WeaponID";
+			this.comboDropTable1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboDropTable1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboDropTable1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item1", true));
+			this.comboDropTable1.DataSource = this.tableweaponBindingSource;
+			this.comboDropTable1.DisplayMember = "WeaponName";
+			this.comboDropTable1.FormattingEnabled = true;
+			this.comboDropTable1.Location = new System.Drawing.Point(10, 35);
+			this.comboDropTable1.Name = "comboDropTable1";
+			this.comboDropTable1.Size = new System.Drawing.Size(250, 20);
+			this.comboDropTable1.TabIndex = 2;
+			this.comboDropTable1.ValueMember = "WeaponID";
+			// 
+			// tableweaponBindingSource
+			// 
+			this.tableweaponBindingSource.DataMember = "__table_weapon";
+			this.tableweaponBindingSource.DataSource = this.GigaBattlerDataSet;
 			// 
 			// labelDropTable1
 			// 
@@ -633,10 +786,27 @@
 			this.labelDropTable1.TabIndex = 0;
 			this.labelDropTable1.Text = "Drop Table 1";
 			// 
+			// unitInfomation1
+			// 
+			this.unitInfomation1.BackColor = System.Drawing.Color.Transparent;
+			this.unitInfomation1.Location = new System.Drawing.Point(6, 6);
+			this.unitInfomation1.Name = "unitInfomation1";
+			this.unitInfomation1.Size = new System.Drawing.Size(600, 125);
+			this.unitInfomation1.TabIndex = 2;
+			// 
+			// tabPage22
+			// 
+			this.tabPage22.Controls.Add(this.groupStatusInfo);
+			this.tabPage22.Location = new System.Drawing.Point(4, 22);
+			this.tabPage22.Name = "tabPage22";
+			this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage22.Size = new System.Drawing.Size(1379, 806);
+			this.tabPage22.TabIndex = 1;
+			this.tabPage22.Text = "パラメータ";
+			this.tabPage22.UseVisualStyleBackColor = true;
+			// 
 			// groupStatusInfo
 			// 
-			this.groupStatusInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
 			this.groupStatusInfo.Controls.Add(this.numericScaleMoney);
 			this.groupStatusInfo.Controls.Add(this.numericLvPEVT);
 			this.groupStatusInfo.Controls.Add(this.labelScaleMoney);
@@ -718,10 +888,10 @@
 			this.groupStatusInfo.Controls.Add(this.label);
 			this.groupStatusInfo.Controls.Add(this.numericMinLevel);
 			this.groupStatusInfo.Controls.Add(this.labelMinLevel);
-			this.groupStatusInfo.Location = new System.Drawing.Point(210, 135);
+			this.groupStatusInfo.Location = new System.Drawing.Point(6, 6);
 			this.groupStatusInfo.Name = "groupStatusInfo";
-			this.groupStatusInfo.Size = new System.Drawing.Size(600, 687);
-			this.groupStatusInfo.TabIndex = 2;
+			this.groupStatusInfo.Size = new System.Drawing.Size(1367, 794);
+			this.groupStatusInfo.TabIndex = 4;
 			this.groupStatusInfo.TabStop = false;
 			this.groupStatusInfo.Text = "Status Infomation";
 			// 
@@ -740,10 +910,17 @@
             0,
             0,
             131072});
+			this.numericScaleMoney.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
 			this.numericScaleMoney.Name = "numericScaleMoney";
 			this.numericScaleMoney.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleMoney.TabIndex = 80;
 			this.numericScaleMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleMoney.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleMoney, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleMoney.Value = new decimal(new int[] {
             1000,
             0,
@@ -763,8 +940,9 @@
 			this.numericLvPEVT.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPEVT.TabIndex = 68;
 			this.numericLvPEVT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericLvPEVT, "Lvが1上昇する毎に増加する回避力の値。\r\n効果が高すぎるため、100までの制限がある。\r\nなお、回避力は1辺り回避率が0.03%上昇する。\r\n設定値:-100 " +
-        "～ 100");
+			this.numericLvPEVT.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericLvPEVT, "Lvが1上昇する毎に増加する回避力の値。\r\n効果が高すぎるため、Lv100までの成長制限がある。\r\nなお、回避力は1辺り回避率が0.03%上昇する。\r\n設定値:-" +
+        "100 ～ 100");
 			// 
 			// labelScaleMoney
 			// 
@@ -802,6 +980,7 @@
 			this.numericLvPMoney.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPMoney.TabIndex = 78;
 			this.numericLvPMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPMoney.ThousandsSeparator = true;
 			this.numericLvPMoney.Value = new decimal(new int[] {
             10,
             0,
@@ -810,6 +989,7 @@
 			// 
 			// numericEVT
 			// 
+			this.numericEVT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "LvEVT", true));
 			this.numericEVT.Increment = new decimal(new int[] {
             5,
             0,
@@ -830,6 +1010,7 @@
 			this.numericEVT.Size = new System.Drawing.Size(150, 19);
 			this.numericEVT.TabIndex = 66;
 			this.numericEVT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericEVT.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericEVT, "基礎回避力。プレイヤーには表示されないステータス。\r\n回避力は1辺り回避率が0.03%上昇する。\r\n設定値:-50,000 ～ 50,000");
 			this.numericEVT.Value = new decimal(new int[] {
             10,
@@ -857,6 +1038,7 @@
 			// 
 			// numericMoney
 			// 
+			this.numericMoney.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "MNY", true));
 			this.numericMoney.Increment = new decimal(new int[] {
             5,
             0,
@@ -872,6 +1054,7 @@
 			this.numericMoney.Size = new System.Drawing.Size(150, 19);
 			this.numericMoney.TabIndex = 76;
 			this.numericMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMoney.ThousandsSeparator = true;
 			this.numericMoney.Value = new decimal(new int[] {
             50,
             0,
@@ -900,8 +1083,9 @@
 			this.numericLvPHIT.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPHIT.TabIndex = 64;
 			this.numericLvPHIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericLvPHIT, "Lvが1上昇する毎に増加する命中力の値。\r\n効果が高すぎるため、100までの制限がある。\r\nなお、命中力は1辺り命中率が0.03%上昇する。\r\n設定値:-100 " +
-        "～ 100");
+			this.numericLvPHIT.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericLvPHIT, "Lvが1上昇する毎に増加する命中力の値。\r\n効果が高すぎるため、Lv100までの成長制限がある。\r\nなお、命中力は1辺り命中率が0.03%上昇する。\r\n設定値:-" +
+        "100 ～ 100");
 			// 
 			// numericScaleEXP
 			// 
@@ -918,10 +1102,17 @@
             0,
             0,
             131072});
+			this.numericScaleEXP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
 			this.numericScaleEXP.Name = "numericScaleEXP";
 			this.numericScaleEXP.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleEXP.TabIndex = 74;
 			this.numericScaleEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleEXP.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleEXP, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleEXP.Value = new decimal(new int[] {
             1000,
             0,
@@ -948,6 +1139,7 @@
 			// 
 			// numericHIT
 			// 
+			this.numericHIT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "HIT", true));
 			this.numericHIT.Increment = new decimal(new int[] {
             5,
             0,
@@ -968,6 +1160,7 @@
 			this.numericHIT.Size = new System.Drawing.Size(150, 19);
 			this.numericHIT.TabIndex = 62;
 			this.numericHIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericHIT.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericHIT, "基礎命中力。プレイヤーには表示されないステータス。\r\n命中力は1辺り命中率が0.03%上昇する。\r\n設定値:-50,000 ～ 50,000");
 			this.numericHIT.Value = new decimal(new int[] {
             10,
@@ -993,6 +1186,7 @@
 			this.numericLvPEXP.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPEXP.TabIndex = 72;
 			this.numericLvPEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPEXP.ThousandsSeparator = true;
 			this.numericLvPEXP.Value = new decimal(new int[] {
             10,
             0,
@@ -1030,11 +1224,13 @@
 			this.numericLvPLuck.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPLuck.TabIndex = 60;
 			this.numericLvPLuck.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericLvPLuck, "Lvが1上昇する毎に増加する運の値。\r\n効果が高すぎるため、100までの制限がある。\r\nなお、運は1辺り命中率と回避率が0.01%上昇し、クリティカル発生率が上昇" +
-        "し、微量ダメージ補正にボーナスがかかる。\r\n設定値:-100 ～ 100");
+			this.numericLvPLuck.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericLvPLuck, "Lvが1上昇する毎に増加する運の値。\r\n効果が高すぎるため、Lv100までの成長制限がある。\r\nなお、運は1辺り命中率と回避率が0.01%上昇し、クリティカル発生" +
+        "率が上昇し、微量ダメージ補正にボーナスがかかる。\r\n設定値:-100 ～ 100");
 			// 
 			// numericEXP
 			// 
+			this.numericEXP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "EXP", true));
 			this.numericEXP.Increment = new decimal(new int[] {
             5,
             0,
@@ -1050,6 +1246,7 @@
 			this.numericEXP.Size = new System.Drawing.Size(150, 19);
 			this.numericEXP.TabIndex = 70;
 			this.numericEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericEXP.ThousandsSeparator = true;
 			this.numericEXP.Value = new decimal(new int[] {
             50,
             0,
@@ -1096,6 +1293,7 @@
 			this.numericLuck.Size = new System.Drawing.Size(150, 19);
 			this.numericLuck.TabIndex = 58;
 			this.numericLuck.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLuck.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericLuck, "基礎運。プレイヤーには表示されないステータス。\r\n運は1辺り命中率と回避率が0.01%上昇し、クリティカル発生率が上昇し、微量ダメージ補正にボーナスがかかる。\r\n" +
         "設定値:-50,000 ～ 50,000");
 			this.numericLuck.Value = new decimal(new int[] {
@@ -1137,6 +1335,8 @@
 			this.numericScaleSPD.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleSPD.TabIndex = 56;
 			this.numericScaleSPD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleSPD.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleSPD, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleSPD.Value = new decimal(new int[] {
             1000,
             0,
@@ -1171,6 +1371,7 @@
 			this.numericLvPSPD.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPSPD.TabIndex = 54;
 			this.numericLvPSPD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPSPD.ThousandsSeparator = true;
 			this.numericLvPSPD.Value = new decimal(new int[] {
             10,
             0,
@@ -1210,6 +1411,7 @@
 			this.numericSPD.Size = new System.Drawing.Size(150, 19);
 			this.numericSPD.TabIndex = 52;
 			this.numericSPD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericSPD.ThousandsSeparator = true;
 			this.numericSPD.Value = new decimal(new int[] {
             50,
             0,
@@ -1249,6 +1451,8 @@
 			this.numericScaleMagicDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleMagicDEF.TabIndex = 50;
 			this.numericScaleMagicDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleMagicDEF.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleMagicDEF, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleMagicDEF.Value = new decimal(new int[] {
             1000,
             0,
@@ -1283,6 +1487,7 @@
 			this.numericLvPMagicDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPMagicDEF.TabIndex = 48;
 			this.numericLvPMagicDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPMagicDEF.ThousandsSeparator = true;
 			this.numericLvPMagicDEF.Value = new decimal(new int[] {
             10,
             0,
@@ -1322,6 +1527,7 @@
 			this.numericMagicDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericMagicDEF.TabIndex = 46;
 			this.numericMagicDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMagicDEF.ThousandsSeparator = true;
 			this.numericMagicDEF.Value = new decimal(new int[] {
             50,
             0,
@@ -1361,6 +1567,8 @@
 			this.numericScaleMagicATK.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleMagicATK.TabIndex = 44;
 			this.numericScaleMagicATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleMagicATK.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleMagicATK, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleMagicATK.Value = new decimal(new int[] {
             1000,
             0,
@@ -1395,6 +1603,7 @@
 			this.numericLvPMagicATK.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPMagicATK.TabIndex = 42;
 			this.numericLvPMagicATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPMagicATK.ThousandsSeparator = true;
 			this.numericLvPMagicATK.Value = new decimal(new int[] {
             10,
             0,
@@ -1434,6 +1643,7 @@
 			this.numericMagicATK.Size = new System.Drawing.Size(150, 19);
 			this.numericMagicATK.TabIndex = 40;
 			this.numericMagicATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMagicATK.ThousandsSeparator = true;
 			this.numericMagicATK.Value = new decimal(new int[] {
             50,
             0,
@@ -1473,6 +1683,8 @@
 			this.numericScaleRangeDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleRangeDEF.TabIndex = 38;
 			this.numericScaleRangeDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleRangeDEF.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleRangeDEF, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleRangeDEF.Value = new decimal(new int[] {
             1000,
             0,
@@ -1507,6 +1719,7 @@
 			this.numericLvPRangeDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPRangeDEF.TabIndex = 36;
 			this.numericLvPRangeDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPRangeDEF.ThousandsSeparator = true;
 			this.numericLvPRangeDEF.Value = new decimal(new int[] {
             10,
             0,
@@ -1546,6 +1759,7 @@
 			this.numericRangeDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericRangeDEF.TabIndex = 34;
 			this.numericRangeDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericRangeDEF.ThousandsSeparator = true;
 			this.numericRangeDEF.Value = new decimal(new int[] {
             50,
             0,
@@ -1585,6 +1799,8 @@
 			this.numericScaleRangeATK.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleRangeATK.TabIndex = 32;
 			this.numericScaleRangeATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleRangeATK.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleRangeATK, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleRangeATK.Value = new decimal(new int[] {
             1000,
             0,
@@ -1619,6 +1835,7 @@
 			this.numericLvPRangeATK.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPRangeATK.TabIndex = 30;
 			this.numericLvPRangeATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPRangeATK.ThousandsSeparator = true;
 			this.numericLvPRangeATK.Value = new decimal(new int[] {
             10,
             0,
@@ -1658,6 +1875,7 @@
 			this.numericRangeATK.Size = new System.Drawing.Size(150, 19);
 			this.numericRangeATK.TabIndex = 28;
 			this.numericRangeATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericRangeATK.ThousandsSeparator = true;
 			this.numericRangeATK.Value = new decimal(new int[] {
             50,
             0,
@@ -1697,6 +1915,8 @@
 			this.numericScaleDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleDEF.TabIndex = 26;
 			this.numericScaleDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleDEF.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleDEF, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleDEF.Value = new decimal(new int[] {
             1000,
             0,
@@ -1731,6 +1951,7 @@
 			this.numericLvPMeleeDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPMeleeDEF.TabIndex = 24;
 			this.numericLvPMeleeDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPMeleeDEF.ThousandsSeparator = true;
 			this.numericLvPMeleeDEF.Value = new decimal(new int[] {
             10,
             0,
@@ -1770,6 +1991,7 @@
 			this.numericMeleeDEF.Size = new System.Drawing.Size(150, 19);
 			this.numericMeleeDEF.TabIndex = 22;
 			this.numericMeleeDEF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMeleeDEF.ThousandsSeparator = true;
 			this.numericMeleeDEF.Value = new decimal(new int[] {
             50,
             0,
@@ -1809,6 +2031,8 @@
 			this.numericScaleMeleeATK.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleMeleeATK.TabIndex = 20;
 			this.numericScaleMeleeATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleMeleeATK.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleMeleeATK, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleMeleeATK.Value = new decimal(new int[] {
             1000,
             0,
@@ -1843,6 +2067,7 @@
 			this.numericLvPATK.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPATK.TabIndex = 18;
 			this.numericLvPATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPATK.ThousandsSeparator = true;
 			this.numericLvPATK.Value = new decimal(new int[] {
             10,
             0,
@@ -1882,6 +2107,7 @@
 			this.numericMeleeATK.Size = new System.Drawing.Size(150, 19);
 			this.numericMeleeATK.TabIndex = 16;
 			this.numericMeleeATK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMeleeATK.ThousandsSeparator = true;
 			this.numericMeleeATK.Value = new decimal(new int[] {
             50,
             0,
@@ -1921,6 +2147,8 @@
 			this.numericScaleHP.Size = new System.Drawing.Size(150, 19);
 			this.numericScaleHP.TabIndex = 14;
 			this.numericScaleHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericScaleHP.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericScaleHP, "倍率上昇上限。(Lv ^ 0.5 + 100)%で計算される。\r\n高い程高レベル帯でステータスが大きく上昇する。\r\n設定値: 100.00 ～ 9,999.99");
 			this.numericScaleHP.Value = new decimal(new int[] {
             1000,
             0,
@@ -1955,6 +2183,7 @@
 			this.numericLvPHP.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPHP.TabIndex = 12;
 			this.numericLvPHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericLvPHP.ThousandsSeparator = true;
 			this.numericLvPHP.Value = new decimal(new int[] {
             20,
             0,
@@ -1994,6 +2223,7 @@
 			this.numericHP.Size = new System.Drawing.Size(150, 19);
 			this.numericHP.TabIndex = 10;
 			this.numericHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericHP.ThousandsSeparator = true;
 			this.numericHP.Value = new decimal(new int[] {
             100,
             0,
@@ -2011,7 +2241,7 @@
 			// 
 			// numericMaxTP
 			// 
-			this.numericMaxTP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "MaxTP", true));
+			this.numericMaxTP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "MaxTP", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "500"));
 			this.numericMaxTP.Increment = new decimal(new int[] {
             5,
             0,
@@ -2027,6 +2257,12 @@
 			this.numericMaxTP.Size = new System.Drawing.Size(150, 19);
 			this.numericMaxTP.TabIndex = 8;
 			this.numericMaxTP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMaxTP.ThousandsSeparator = true;
+			this.numericMaxTP.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
 			// 
 			// labelMaxTP
 			// 
@@ -2039,7 +2275,7 @@
 			// 
 			// numericTP
 			// 
-			this.numericTP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "StartTP", true));
+			this.numericTP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "StartTP", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"));
 			this.numericTP.Increment = new decimal(new int[] {
             5,
             0,
@@ -2055,6 +2291,7 @@
 			this.numericTP.Size = new System.Drawing.Size(150, 19);
 			this.numericTP.TabIndex = 6;
 			this.numericTP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericTP.ThousandsSeparator = true;
 			// 
 			// labelTP
 			// 
@@ -2067,7 +2304,7 @@
 			// 
 			// numericMaxLevel
 			// 
-			this.numericMaxLevel.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Max Lv", true));
+			this.numericMaxLevel.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Max Lv", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-1"));
 			this.numericMaxLevel.Location = new System.Drawing.Point(200, 35);
 			this.numericMaxLevel.Maximum = new decimal(new int[] {
             1661992959,
@@ -2083,6 +2320,7 @@
 			this.numericMaxLevel.Size = new System.Drawing.Size(150, 19);
 			this.numericMaxLevel.TabIndex = 4;
 			this.numericMaxLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMaxLevel.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericMaxLevel, "最高レベル。限界突破補正などに影響します。\r\n-1を指定すると無制限となります。\r\n設定値:1 ～ 99,999,999,999,999,999,999 もしくは" +
         " -1");
 			this.numericMaxLevel.Value = new decimal(new int[] {
@@ -2111,17 +2349,24 @@
 			// 
 			// numericMinLevel
 			// 
-			this.numericMinLevel.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Min Lv", true));
+			this.numericMinLevel.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Min Lv", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "1"));
 			this.numericMinLevel.Location = new System.Drawing.Point(10, 35);
 			this.numericMinLevel.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
+			this.numericMinLevel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			this.numericMinLevel.Name = "numericMinLevel";
 			this.numericMinLevel.Size = new System.Drawing.Size(150, 19);
 			this.numericMinLevel.TabIndex = 1;
 			this.numericMinLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMinLevel.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericMinLevel, "最低レベル。");
 			this.numericMinLevel.Value = new decimal(new int[] {
             1,
             0,
@@ -2137,126 +2382,221 @@
 			this.labelMinLevel.TabIndex = 0;
 			this.labelMinLevel.Text = "Min Level";
 			// 
-			// groupUnitInfo
+			// tabPage23
 			// 
-			this.groupUnitInfo.Controls.Add(this.AirType);
-			this.groupUnitInfo.Controls.Add(this.textUnitName);
-			this.groupUnitInfo.Controls.Add(this.labelUnitName);
-			this.groupUnitInfo.Controls.Add(this.comboMonsterGroup);
-			this.groupUnitInfo.Controls.Add(this.labelMonsterGroup);
-			this.groupUnitInfo.Controls.Add(this.textMonsterID);
-			this.groupUnitInfo.Controls.Add(this.labelMonsterID);
-			this.groupUnitInfo.Location = new System.Drawing.Point(210, 5);
-			this.groupUnitInfo.Name = "groupUnitInfo";
-			this.groupUnitInfo.Size = new System.Drawing.Size(600, 125);
-			this.groupUnitInfo.TabIndex = 1;
-			this.groupUnitInfo.TabStop = false;
-			this.groupUnitInfo.Text = "Unit Infomation";
+			this.tabPage23.Controls.Add(this.groupSkillInfo);
+			this.tabPage23.Location = new System.Drawing.Point(4, 22);
+			this.tabPage23.Name = "tabPage23";
+			this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage23.Size = new System.Drawing.Size(1379, 806);
+			this.tabPage23.TabIndex = 2;
+			this.tabPage23.Text = "スキル";
+			this.tabPage23.UseVisualStyleBackColor = true;
 			// 
-			// AirType
+			// groupSkillInfo
 			// 
-			this.AirType.AutoSize = true;
-			this.AirType.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tablemonsterBindingSource, "Air", true));
-			this.AirType.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.tablemonsterBindingSource, "Air", true));
-			this.AirType.Location = new System.Drawing.Point(500, 47);
-			this.AirType.Name = "AirType";
-			this.AirType.Size = new System.Drawing.Size(72, 16);
-			this.AirType.TabIndex = 4;
-			this.AirType.Text = "空中属性";
-			this.toolTipInfo.SetToolTip(this.AirType, "空中属性を設定したモンスターは、一部のスキルが命中しなくなります。");
-			this.AirType.UseVisualStyleBackColor = true;
-			this.AirType.CheckedChanged += new System.EventHandler(this.AirType_CheckedChanged);
+			this.groupSkillInfo.Controls.Add(this.comboSkill1);
+			this.groupSkillInfo.Controls.Add(this.labelSkill1);
+			this.groupSkillInfo.Location = new System.Drawing.Point(6, 6);
+			this.groupSkillInfo.Name = "groupSkillInfo";
+			this.groupSkillInfo.Size = new System.Drawing.Size(768, 583);
+			this.groupSkillInfo.TabIndex = 7;
+			this.groupSkillInfo.TabStop = false;
+			this.groupSkillInfo.Text = "Skill Infomation";
 			// 
-			// textUnitName
+			// comboSkill1
 			// 
-			this.textUnitName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tablemonsterBindingSource, "MonsterName", true));
-			this.textUnitName.Location = new System.Drawing.Point(10, 90);
-			this.textUnitName.Name = "textUnitName";
-			this.textUnitName.Size = new System.Drawing.Size(465, 19);
-			this.textUnitName.TabIndex = 6;
+			this.comboSkill1.FormattingEnabled = true;
+			this.comboSkill1.Location = new System.Drawing.Point(10, 35);
+			this.comboSkill1.Name = "comboSkill1";
+			this.comboSkill1.Size = new System.Drawing.Size(250, 20);
+			this.comboSkill1.TabIndex = 1;
 			// 
-			// labelUnitName
+			// labelSkill1
 			// 
-			this.labelUnitName.AutoSize = true;
-			this.labelUnitName.Location = new System.Drawing.Point(10, 75);
-			this.labelUnitName.Name = "labelUnitName";
-			this.labelUnitName.Size = new System.Drawing.Size(121, 12);
-			this.labelUnitName.TabIndex = 5;
-			this.labelUnitName.Text = "Unit Name(表記データ):";
-			// 
-			// comboMonsterGroup
-			// 
-			this.comboMonsterGroup.FormattingEnabled = true;
-			this.comboMonsterGroup.Location = new System.Drawing.Point(350, 45);
-			this.comboMonsterGroup.MaxDropDownItems = 10;
-			this.comboMonsterGroup.Name = "comboMonsterGroup";
-			this.comboMonsterGroup.Size = new System.Drawing.Size(125, 20);
-			this.comboMonsterGroup.TabIndex = 3;
-			// 
-			// labelMonsterGroup
-			// 
-			this.labelMonsterGroup.AutoSize = true;
-			this.labelMonsterGroup.Location = new System.Drawing.Point(350, 30);
-			this.labelMonsterGroup.Name = "labelMonsterGroup";
-			this.labelMonsterGroup.Size = new System.Drawing.Size(37, 12);
-			this.labelMonsterGroup.TabIndex = 2;
-			this.labelMonsterGroup.Text = "Group:";
-			// 
-			// textMonsterID
-			// 
-			this.textMonsterID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tablemonsterBindingSource, "MonsterID", true));
-			this.textMonsterID.Location = new System.Drawing.Point(10, 45);
-			this.textMonsterID.Name = "textMonsterID";
-			this.textMonsterID.Size = new System.Drawing.Size(300, 19);
-			this.textMonsterID.TabIndex = 1;
-			// 
-			// labelMonsterID
-			// 
-			this.labelMonsterID.AutoSize = true;
-			this.labelMonsterID.Location = new System.Drawing.Point(10, 30);
-			this.labelMonsterID.Name = "labelMonsterID";
-			this.labelMonsterID.Size = new System.Drawing.Size(199, 12);
-			this.labelMonsterID.TabIndex = 0;
-			this.labelMonsterID.Text = "Monster ID(システムで識別されるデータ):";
+			this.labelSkill1.AutoSize = true;
+			this.labelSkill1.Location = new System.Drawing.Point(10, 20);
+			this.labelSkill1.Name = "labelSkill1";
+			this.labelSkill1.Size = new System.Drawing.Size(37, 12);
+			this.labelSkill1.TabIndex = 0;
+			this.labelSkill1.Text = "Skill 1";
 			// 
 			// listMonster
 			// 
-			this.listMonster.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
 			this.listMonster.DataSource = this.tablemonsterBindingSource;
 			this.listMonster.DisplayMember = "MonsterName";
 			this.listMonster.FormattingEnabled = true;
 			this.listMonster.ItemHeight = 12;
 			this.listMonster.Location = new System.Drawing.Point(3, 3);
 			this.listMonster.Name = "listMonster";
-			this.listMonster.Size = new System.Drawing.Size(200, 808);
+			this.listMonster.Size = new System.Drawing.Size(200, 820);
 			this.listMonster.TabIndex = 0;
 			this.listMonster.ValueMember = "MonsterID";
 			// 
 			// tabPage4
 			// 
-			this.tabPage4.BackColor = System.Drawing.Color.Transparent;
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage4.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage4.TabIndex = 3;
-			this.tabPage4.Text = "種族";
+			this.tabPage4.Text = "ユニットタイプ";
+			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
 			// tabPage5
 			// 
-			this.tabPage5.BackColor = System.Drawing.Color.Transparent;
 			this.tabPage5.Location = new System.Drawing.Point(4, 22);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage5.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage5.TabIndex = 4;
-			this.tabPage5.Text = "ジョブ";
+			this.tabPage5.Text = "種族";
+			this.tabPage5.UseVisualStyleBackColor = true;
+			// 
+			// tabPage6
+			// 
+			this.tabPage6.Location = new System.Drawing.Point(4, 22);
+			this.tabPage6.Name = "tabPage6";
+			this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage6.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage6.TabIndex = 5;
+			this.tabPage6.Text = "ジョブ";
+			this.tabPage6.UseVisualStyleBackColor = true;
+			// 
+			// tabPage7
+			// 
+			this.tabPage7.Location = new System.Drawing.Point(4, 22);
+			this.tabPage7.Name = "tabPage7";
+			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage7.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage7.TabIndex = 6;
+			this.tabPage7.Text = "武器";
+			this.tabPage7.UseVisualStyleBackColor = true;
+			// 
+			// tabPage8
+			// 
+			this.tabPage8.Location = new System.Drawing.Point(4, 22);
+			this.tabPage8.Name = "tabPage8";
+			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage8.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage8.TabIndex = 7;
+			this.tabPage8.Text = "盾";
+			this.tabPage8.UseVisualStyleBackColor = true;
+			// 
+			// tabPage9
+			// 
+			this.tabPage9.Location = new System.Drawing.Point(4, 22);
+			this.tabPage9.Name = "tabPage9";
+			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage9.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage9.TabIndex = 8;
+			this.tabPage9.Text = "頭防具";
+			this.tabPage9.UseVisualStyleBackColor = true;
+			// 
+			// tabPage10
+			// 
+			this.tabPage10.Location = new System.Drawing.Point(4, 22);
+			this.tabPage10.Name = "tabPage10";
+			this.tabPage10.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage10.TabIndex = 9;
+			this.tabPage10.Text = "籠手";
+			this.tabPage10.UseVisualStyleBackColor = true;
+			// 
+			// tabPage11
+			// 
+			this.tabPage11.Location = new System.Drawing.Point(4, 22);
+			this.tabPage11.Name = "tabPage11";
+			this.tabPage11.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage11.TabIndex = 10;
+			this.tabPage11.Text = "体防具";
+			this.tabPage11.UseVisualStyleBackColor = true;
+			// 
+			// tabPage12
+			// 
+			this.tabPage12.Location = new System.Drawing.Point(4, 22);
+			this.tabPage12.Name = "tabPage12";
+			this.tabPage12.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage12.TabIndex = 11;
+			this.tabPage12.Text = "アクセサリー";
+			this.tabPage12.UseVisualStyleBackColor = true;
+			// 
+			// tabPage13
+			// 
+			this.tabPage13.Location = new System.Drawing.Point(4, 22);
+			this.tabPage13.Name = "tabPage13";
+			this.tabPage13.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage13.TabIndex = 12;
+			this.tabPage13.Text = "スキル";
+			this.tabPage13.UseVisualStyleBackColor = true;
+			// 
+			// tabPage14
+			// 
+			this.tabPage14.Location = new System.Drawing.Point(4, 22);
+			this.tabPage14.Name = "tabPage14";
+			this.tabPage14.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage14.TabIndex = 13;
+			this.tabPage14.Text = "都市名・地名";
+			this.tabPage14.UseVisualStyleBackColor = true;
+			// 
+			// tabPage15
+			// 
+			this.tabPage15.Location = new System.Drawing.Point(4, 22);
+			this.tabPage15.Name = "tabPage15";
+			this.tabPage15.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage15.TabIndex = 14;
+			this.tabPage15.Text = "戦闘場所";
+			this.tabPage15.UseVisualStyleBackColor = true;
+			// 
+			// tabPage16
+			// 
+			this.tabPage16.Location = new System.Drawing.Point(4, 22);
+			this.tabPage16.Name = "tabPage16";
+			this.tabPage16.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage16.TabIndex = 15;
+			this.tabPage16.Text = "Wave管理";
+			this.tabPage16.UseVisualStyleBackColor = true;
+			// 
+			// tabPage17
+			// 
+			this.tabPage17.Location = new System.Drawing.Point(4, 22);
+			this.tabPage17.Name = "tabPage17";
+			this.tabPage17.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage17.TabIndex = 16;
+			this.tabPage17.Text = "tabPage17";
+			this.tabPage17.UseVisualStyleBackColor = true;
+			// 
+			// tabPage18
+			// 
+			this.tabPage18.Location = new System.Drawing.Point(4, 22);
+			this.tabPage18.Name = "tabPage18";
+			this.tabPage18.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage18.TabIndex = 17;
+			this.tabPage18.Text = "tabPage18";
+			this.tabPage18.UseVisualStyleBackColor = true;
+			// 
+			// tabPage19
+			// 
+			this.tabPage19.Location = new System.Drawing.Point(4, 22);
+			this.tabPage19.Name = "tabPage19";
+			this.tabPage19.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage19.TabIndex = 18;
+			this.tabPage19.Text = "tabPage19";
+			this.tabPage19.UseVisualStyleBackColor = true;
+			// 
+			// tabPage20
+			// 
+			this.tabPage20.Location = new System.Drawing.Point(4, 22);
+			this.tabPage20.Name = "tabPage20";
+			this.tabPage20.Size = new System.Drawing.Size(1592, 828);
+			this.tabPage20.TabIndex = 19;
+			this.tabPage20.Text = "tabPage20";
+			this.tabPage20.UseVisualStyleBackColor = true;
 			// 
 			// toolTipInfo
 			// 
 			this.toolTipInfo.AutoPopDelay = 50000;
 			this.toolTipInfo.InitialDelay = 500;
+			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
 			// 
 			// ToolStripContainer
@@ -2285,23 +2625,23 @@
 			// 
 			this.StatusStrip.Dock = System.Windows.Forms.DockStyle.None;
 			this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StripInfomationLabel,
+            this.StripInfo,
             this.toolStripProgressBar1});
 			this.StatusStrip.Location = new System.Drawing.Point(0, 0);
 			this.StatusStrip.Name = "StatusStrip";
 			this.StatusStrip.Size = new System.Drawing.Size(1600, 22);
 			this.StatusStrip.TabIndex = 2;
 			// 
-			// StripInfomationLabel
+			// StripInfo
 			// 
-			this.StripInfomationLabel.Name = "StripInfomationLabel";
-			this.StripInfomationLabel.Size = new System.Drawing.Size(117, 17);
-			this.StripInfomationLabel.Text = "StripInfomationLabel";
+			this.StripInfo.Name = "StripInfo";
+			this.StripInfo.Size = new System.Drawing.Size(117, 17);
+			this.StripInfo.Text = "StripInfomationLabel";
 			// 
 			// toolStripProgressBar1
 			// 
 			this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-			this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+			this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 16);
 			// 
 			// contextMenu
 			// 
@@ -2321,6 +2661,15 @@
 			// 
 			this.@__table_weaponTableAdapter.ClearBeforeFill = true;
 			// 
+			// __table_raceTableAdapter
+			// 
+			this.@__table_raceTableAdapter.ClearBeforeFill = true;
+			// 
+			// tableraceBindingSource
+			// 
+			this.tableraceBindingSource.DataMember = "__table_race";
+			this.tableraceBindingSource.DataSource = this.GigaBattlerDataSet;
+			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2336,17 +2685,25 @@
 			this.StripMainMenu.ResumeLayout(false);
 			this.StripMainMenu.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
+			this.tabPage2.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
+			this.tabControlMonster.ResumeLayout(false);
+			this.tabPage21.ResumeLayout(false);
 			this.groupDropInfo.ResumeLayout(false);
 			this.groupDropInfo.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericDropRate1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			this.tabPage22.ResumeLayout(false);
 			this.groupStatusInfo.ResumeLayout(false);
 			this.groupStatusInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleMoney)).EndInit();
@@ -2389,8 +2746,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericTP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxLevel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMinLevel)).EndInit();
-			this.groupUnitInfo.ResumeLayout(false);
-			this.groupUnitInfo.PerformLayout();
+			this.tabPage23.ResumeLayout(false);
+			this.groupSkillInfo.ResumeLayout(false);
+			this.groupSkillInfo.PerformLayout();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
 			this.ToolStripContainer.ContentPanel.ResumeLayout(false);
@@ -2400,6 +2758,7 @@
 			this.ToolStripContainer.PerformLayout();
 			this.StatusStrip.ResumeLayout(false);
 			this.StatusStrip.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tableraceBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -2419,42 +2778,117 @@
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TabPage tabPage4;
 		private System.Windows.Forms.TabPage tabPage5;
+		private System.Windows.Forms.TabPage tabPage6;
+		private System.Windows.Forms.TabPage tabPage7;
+		private System.Windows.Forms.TabPage tabPage8;
+		private System.Windows.Forms.TabPage tabPage9;
+		private System.Windows.Forms.TabPage tabPage10;
+		private System.Windows.Forms.TabPage tabPage11;
+		private System.Windows.Forms.TabPage tabPage12;
+		private System.Windows.Forms.TabPage tabPage13;
+		private System.Windows.Forms.TabPage tabPage14;
+		private System.Windows.Forms.TabPage tabPage15;
+		private System.Windows.Forms.TabPage tabPage16;
+		private System.Windows.Forms.TabPage tabPage17;
+		private System.Windows.Forms.TabPage tabPage18;
+		private System.Windows.Forms.TabPage tabPage19;
+		private System.Windows.Forms.TabPage tabPage20;
 		private System.Windows.Forms.ListBox listMonster;
-		private System.Windows.Forms.GroupBox groupUnitInfo;
-		private System.Windows.Forms.Label labelMonsterID;
-		private System.Windows.Forms.TextBox textMonsterID;
-		private System.Windows.Forms.ComboBox comboMonsterGroup;
-		private System.Windows.Forms.Label labelMonsterGroup;
-		private System.Windows.Forms.Label labelUnitName;
-		private System.Windows.Forms.TextBox textUnitName;
+		private System.Windows.Forms.ToolTip toolTipInfo;
+		private System.Windows.Forms.ToolStripContainer ToolStripContainer;
+		private System.Windows.Forms.StatusStrip StatusStrip;
+		private System.Windows.Forms.ToolStripStatusLabel StripInfo;
+		private System.Windows.Forms.ContextMenuStrip contextMenu;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuExit;
+		private System.Windows.Forms.NotifyIcon notifyIcon;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseReload;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseSave;
+		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+		private GigaBattlerDataSet GigaBattlerDataSet;
+		private GigaBattlerDataSetTableAdapters.__table_monsterTableAdapter __table_monsterTableAdapter;
+		private GigaBattlerDataSetTableAdapters.__table_weaponTableAdapter __table_weaponTableAdapter;
+		private GigaBattlerDataSetTableAdapters.__table_raceTableAdapter __table_raceTableAdapter;
+		public System.Windows.Forms.BindingSource tableraceBindingSource;
+		public System.Windows.Forms.BindingSource tablemonsterBindingSource;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuWindow;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuWindowView;
+		private System.Windows.Forms.BindingSource tableweaponBindingSource1;
+		private System.Windows.Forms.BindingSource tableweaponBindingSource3;
+		private System.Windows.Forms.BindingSource tableweaponBindingSource2;
+		private System.Windows.Forms.BindingSource tableweaponBindingSource;
+		private System.Windows.Forms.BindingSource tableweaponBindingSource4;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuHelpHelp;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuHelpVersion;
+		private System.Windows.Forms.TabControl tabControlMonster;
+		private System.Windows.Forms.TabPage tabPage21;
+		private User_Control.UnitInfomation unitInfomation1;
+		private System.Windows.Forms.TabPage tabPage22;
+		private System.Windows.Forms.GroupBox groupDropInfo;
+		private System.Windows.Forms.NumericUpDown numericDropRate4;
+		private System.Windows.Forms.Label labelDropRate4;
+		private System.Windows.Forms.ComboBox comboDropTable4;
+		private System.Windows.Forms.Label labelDropTable4;
+		private System.Windows.Forms.NumericUpDown numericDropRate5;
+		private System.Windows.Forms.Label labelDropRate5;
+		private System.Windows.Forms.ComboBox comboDropTable5;
+		private System.Windows.Forms.Label labelDropTable5;
+		private System.Windows.Forms.NumericUpDown numericDropRate3;
+		private System.Windows.Forms.Label labelDropRate3;
+		private System.Windows.Forms.ComboBox comboDropTable3;
+		private System.Windows.Forms.Label labelDropTable3;
+		private System.Windows.Forms.NumericUpDown numericDropRate2;
+		private System.Windows.Forms.Label labelDropRate2;
+		private System.Windows.Forms.ComboBox comboDropTable2;
+		private System.Windows.Forms.Label labelDropTable2;
+		private System.Windows.Forms.NumericUpDown numericDropRate1;
+		private System.Windows.Forms.Label labelDropRate1;
+		private System.Windows.Forms.ComboBox comboDropTable1;
+		private System.Windows.Forms.Label labelDropTable1;
 		private System.Windows.Forms.GroupBox groupStatusInfo;
-		private System.Windows.Forms.NumericUpDown numericMaxLevel;
-		private System.Windows.Forms.Label labelMaxLevel;
-		private System.Windows.Forms.Label label;
-		private System.Windows.Forms.NumericUpDown numericMinLevel;
-		private System.Windows.Forms.Label labelMinLevel;
-		private System.Windows.Forms.NumericUpDown numericTP;
-		private System.Windows.Forms.Label labelTP;
-		private System.Windows.Forms.NumericUpDown numericMaxTP;
-		private System.Windows.Forms.Label labelMaxTP;
-		private System.Windows.Forms.NumericUpDown numericHP;
-		private System.Windows.Forms.Label labelHP;
-		private System.Windows.Forms.NumericUpDown numericLvPHP;
-		private System.Windows.Forms.Label labelLvPHP;
-		private System.Windows.Forms.NumericUpDown numericScaleHP;
-		private System.Windows.Forms.Label labelScaleHP;
-		private System.Windows.Forms.NumericUpDown numericScaleDEF;
-		private System.Windows.Forms.Label labelScaleDEF;
-		private System.Windows.Forms.NumericUpDown numericLvPMeleeDEF;
-		private System.Windows.Forms.Label labelLvPMeleeDEF;
-		private System.Windows.Forms.NumericUpDown numericMeleeDEF;
-		private System.Windows.Forms.Label labelMeleeDEF;
-		private System.Windows.Forms.NumericUpDown numericScaleMeleeATK;
-		private System.Windows.Forms.Label labelScaleATK;
-		private System.Windows.Forms.NumericUpDown numericLvPATK;
-		private System.Windows.Forms.Label labelLvPMeleeATK;
-		private System.Windows.Forms.NumericUpDown numericMeleeATK;
-		private System.Windows.Forms.Label labelMeleeATK;
+		private System.Windows.Forms.NumericUpDown numericScaleMoney;
+		private System.Windows.Forms.NumericUpDown numericLvPEVT;
+		private System.Windows.Forms.Label labelScaleMoney;
+		private System.Windows.Forms.Label labelLvPEVT;
+		private System.Windows.Forms.NumericUpDown numericLvPMoney;
+		private System.Windows.Forms.NumericUpDown numericEVT;
+		private System.Windows.Forms.Label labelLvPMoney;
+		private System.Windows.Forms.Label labelEVT;
+		private System.Windows.Forms.NumericUpDown numericMoney;
+		private System.Windows.Forms.Label labelMoney;
+		private System.Windows.Forms.NumericUpDown numericLvPHIT;
+		private System.Windows.Forms.NumericUpDown numericScaleEXP;
+		private System.Windows.Forms.Label labelLvPHIT;
+		private System.Windows.Forms.Label labelScaleEXP;
+		private System.Windows.Forms.NumericUpDown numericHIT;
+		private System.Windows.Forms.NumericUpDown numericLvPEXP;
+		private System.Windows.Forms.Label labelHIT;
+		private System.Windows.Forms.Label labelLvPEXP;
+		private System.Windows.Forms.NumericUpDown numericLvPLuck;
+		private System.Windows.Forms.NumericUpDown numericEXP;
+		private System.Windows.Forms.Label labelLvPLuck;
+		private System.Windows.Forms.Label labelEXP;
+		private System.Windows.Forms.NumericUpDown numericLuck;
+		private System.Windows.Forms.Label labelLuck;
+		private System.Windows.Forms.NumericUpDown numericScaleSPD;
+		private System.Windows.Forms.Label labelScaleSPD;
+		private System.Windows.Forms.NumericUpDown numericLvPSPD;
+		private System.Windows.Forms.Label labelLvPSPD;
+		private System.Windows.Forms.NumericUpDown numericSPD;
+		private System.Windows.Forms.Label labelSPD;
+		private System.Windows.Forms.NumericUpDown numericScaleMagicDEF;
+		private System.Windows.Forms.Label labelScaleMagicDEF;
+		private System.Windows.Forms.NumericUpDown numericLvPMagicDEF;
+		private System.Windows.Forms.Label labelLvPMagicDEF;
+		private System.Windows.Forms.NumericUpDown numericMagicDEF;
+		private System.Windows.Forms.Label labelMagicDEF;
+		private System.Windows.Forms.NumericUpDown numericScaleMagicATK;
+		private System.Windows.Forms.Label labelScaleMagicATK;
+		private System.Windows.Forms.NumericUpDown numericLvPMagicATK;
+		private System.Windows.Forms.Label labelLvPMagicATK;
+		private System.Windows.Forms.NumericUpDown numericMagicATK;
+		private System.Windows.Forms.Label labelMagicATK;
 		private System.Windows.Forms.NumericUpDown numericScaleRangeDEF;
 		private System.Windows.Forms.Label labelScaleRangeDEF;
 		private System.Windows.Forms.NumericUpDown numericLvPRangeDEF;
@@ -2467,86 +2901,38 @@
 		private System.Windows.Forms.Label labelLvPRangeATK;
 		private System.Windows.Forms.NumericUpDown numericRangeATK;
 		private System.Windows.Forms.Label labelRangeATK;
-		private System.Windows.Forms.Label labelMagicATK;
-		private System.Windows.Forms.NumericUpDown numericMagicATK;
-		private System.Windows.Forms.Label labelLvPMagicATK;
-		private System.Windows.Forms.NumericUpDown numericLvPMagicATK;
-		private System.Windows.Forms.Label labelScaleMagicATK;
-		private System.Windows.Forms.NumericUpDown numericScaleMagicATK;
-		private System.Windows.Forms.Label labelMagicDEF;
-		private System.Windows.Forms.NumericUpDown numericMagicDEF;
-		private System.Windows.Forms.Label labelLvPMagicDEF;
-		private System.Windows.Forms.NumericUpDown numericLvPMagicDEF;
-		private System.Windows.Forms.Label labelScaleMagicDEF;
-		private System.Windows.Forms.NumericUpDown numericScaleMagicDEF;
-		private System.Windows.Forms.NumericUpDown numericLvPLuck;
-		private System.Windows.Forms.Label labelLvPLuck;
-		private System.Windows.Forms.NumericUpDown numericLuck;
-		private System.Windows.Forms.Label labelLuck;
-		private System.Windows.Forms.NumericUpDown numericScaleSPD;
-		private System.Windows.Forms.Label labelScaleSPD;
-		private System.Windows.Forms.NumericUpDown numericLvPSPD;
-		private System.Windows.Forms.Label labelLvPSPD;
-		private System.Windows.Forms.NumericUpDown numericSPD;
-		private System.Windows.Forms.Label labelSPD;
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.NumericUpDown numericLvPEVT;
-		private System.Windows.Forms.Label labelLvPEVT;
-		private System.Windows.Forms.NumericUpDown numericEVT;
-		private System.Windows.Forms.Label labelEVT;
-		private System.Windows.Forms.NumericUpDown numericLvPHIT;
-		private System.Windows.Forms.Label labelLvPHIT;
-		private System.Windows.Forms.NumericUpDown numericHIT;
-		private System.Windows.Forms.Label labelHIT;
-		private System.Windows.Forms.GroupBox groupDropInfo;
-		private System.Windows.Forms.ToolStripContainer ToolStripContainer;
-		private System.Windows.Forms.StatusStrip StatusStrip;
-		private System.Windows.Forms.ToolStripStatusLabel StripInfomationLabel;
-		private System.Windows.Forms.ContextMenuStrip contextMenu;
-		private System.Windows.Forms.NumericUpDown numericScaleMoney;
-		private System.Windows.Forms.Label labelScaleMoney;
-		private System.Windows.Forms.NumericUpDown numericLvPMoney;
-		private System.Windows.Forms.Label labelLvPMoney;
-		private System.Windows.Forms.NumericUpDown numericMoney;
-		private System.Windows.Forms.Label labelMoney;
-		private System.Windows.Forms.NumericUpDown numericScaleEXP;
-		private System.Windows.Forms.Label labelScaleEXP;
-		private System.Windows.Forms.NumericUpDown numericLvPEXP;
-		private System.Windows.Forms.Label labelLvPEXP;
-		private System.Windows.Forms.NumericUpDown numericEXP;
-		private System.Windows.Forms.Label labelEXP;
-		private System.Windows.Forms.CheckBox AirType;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
-		private System.Windows.Forms.Label labelDropRate1;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.Label labelDropTable1;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuExit;
-		private System.Windows.Forms.NotifyIcon notifyIcon;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseReload;
-		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseSave;
-		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-		private GigaBattlerDataSet gigaBattlerDataSet;
-		private System.Windows.Forms.BindingSource tablemonsterBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_monsterTableAdapter __table_monsterTableAdapter;
-		private System.Windows.Forms.BindingSource tableweaponBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_weaponTableAdapter __table_weaponTableAdapter;
-		private System.Windows.Forms.NumericUpDown numericUpDown4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.NumericUpDown numericUpDown5;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.ComboBox comboBox5;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.NumericUpDown numericUpDown3;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.ComboBox comboBox3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.NumericUpDown numericUpDown2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.NumericUpDown numericScaleDEF;
+		private System.Windows.Forms.Label labelScaleDEF;
+		private System.Windows.Forms.NumericUpDown numericLvPMeleeDEF;
+		private System.Windows.Forms.Label labelLvPMeleeDEF;
+		private System.Windows.Forms.NumericUpDown numericMeleeDEF;
+		private System.Windows.Forms.Label labelMeleeDEF;
+		private System.Windows.Forms.NumericUpDown numericScaleMeleeATK;
+		private System.Windows.Forms.Label labelScaleATK;
+		private System.Windows.Forms.NumericUpDown numericLvPATK;
+		private System.Windows.Forms.Label labelLvPMeleeATK;
+		private System.Windows.Forms.NumericUpDown numericMeleeATK;
+		private System.Windows.Forms.Label labelMeleeATK;
+		private System.Windows.Forms.NumericUpDown numericScaleHP;
+		private System.Windows.Forms.Label labelScaleHP;
+		private System.Windows.Forms.NumericUpDown numericLvPHP;
+		private System.Windows.Forms.Label labelLvPHP;
+		private System.Windows.Forms.NumericUpDown numericHP;
+		private System.Windows.Forms.Label labelHP;
+		private System.Windows.Forms.NumericUpDown numericMaxTP;
+		private System.Windows.Forms.Label labelMaxTP;
+		private System.Windows.Forms.NumericUpDown numericTP;
+		private System.Windows.Forms.Label labelTP;
+		private System.Windows.Forms.NumericUpDown numericMaxLevel;
+		private System.Windows.Forms.Label labelMaxLevel;
+		private System.Windows.Forms.Label label;
+		private System.Windows.Forms.NumericUpDown numericMinLevel;
+		private System.Windows.Forms.Label labelMinLevel;
+		private System.Windows.Forms.TabPage tabPage23;
+		private System.Windows.Forms.GroupBox groupSkillInfo;
+		private System.Windows.Forms.ComboBox comboSkill1;
+		private System.Windows.Forms.Label labelSkill1;
+		private StatusInfomation statusInfomation1;
 	}
 }
 

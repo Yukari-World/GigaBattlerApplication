@@ -1,26 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System;
 using System.Windows.Forms;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
 		//Initialize
 		public string rootDirectory = "";
+		BindingSource f;
+
+		__table_monsterTableAdapter dds = new __table_monsterTableAdapter();
+		GigaBattlerDataSet.__table_monsterDataTable tbla = new GigaBattlerDataSet.__table_monsterDataTable();
 
 		public EditerMainMenu() {
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// フォーム読み込み時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
-			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-			__table_monsterTableAdapter.Fill(gigaBattlerDataSet.@__table_monster);
-			__table_weaponTableAdapter.Fill(gigaBattlerDataSet.@__table_weapon);
+			//データバインドの設定。UserControlはここでしか定義できない
+			unitInfomation1.checkAirType.DataBindings.Add(new Binding("CheckState", tablemonsterBindingSource, "Air", true));
+			unitInfomation1.checkAirType.DataBindings.Add(new Binding("Checked", tablemonsterBindingSource, "Air", true));
+			unitInfomation1.textMonsterID.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "MonsterID", true));
+			unitInfomation1.textUnitName.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "MonsterName", true));
+			unitInfomation1.numericRare.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Rare", true));
+			//できればデザイナープロパティに設定したいが、バグの関係でここで設定
+			tabControlMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			listMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			groupStatusInfo.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			groupDropInfo.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+			groupSkillInfo.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			f = new BindingSource();
+			f.DataSource = GigaBattlerDataSet;
+			f.DataMember = "__table_weapon";
+			try {
+				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
+				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+			} catch (Exception em) {
+				MessageBox.Show("System Load Failed:\n" + em.ToString(), "Error!!");
+				Application.Exit();
+			}
+			StripInfo.Text = "Welcome!!";
 		}
 
 		/// <summary>
@@ -42,7 +66,7 @@ namespace Status_Editer {
 
 			//最初に選択するフォルダを指定する
 			//RootFolder以下にあるフォルダである必要がある
-			fbd.SelectedPath = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+			fbd.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
 			//ユーザーが新しいフォルダを作成できるようにする
 			//デフォルトでTrue
@@ -61,7 +85,31 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuExit_Click(object sender, EventArgs e) {
+			var result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+			switch (result) {
+				case DialogResult.Yes:
+					break;
+				case DialogResult.No:
+					break;
+				case DialogResult.Cancel:
+					return;
+			}
 			Application.Exit();
+		}
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
+			try {
+				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
+				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+			} catch (Exception em) {
+				MessageBox.Show("Database Load Failed:\n" + em.ToString(), "Error!!");
+			}
 		}
 
 		/// <summary>
@@ -70,23 +118,14 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
-			__table_monsterTableAdapter.Update(gigaBattlerDataSet.@__table_monster);
+			tablemonsterBindingSource.EndEdit();
+			__table_monsterTableAdapter.Update(GigaBattlerDataSet.@__table_monster);
 		}
 
-		private void AirType_CheckedChanged(object sender, EventArgs e) {
-			switch (AirType.Checked) {
-				case true:
-
-					break;
-				case false:
-
-					break;
-			}
-		}
-
-		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
-			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_monster' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-			__table_monsterTableAdapter.Fill(gigaBattlerDataSet.@__table_monster);
+		private void StripMenuWindowView_Click(object sender, EventArgs e) {
+			TestForm Form2 = new TestForm();
+			Form2.Show();
+			//DataBindings();
 		}
 	}
 }

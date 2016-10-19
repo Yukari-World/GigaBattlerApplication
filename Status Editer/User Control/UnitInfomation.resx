@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="numericRare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 90</value>
+  </data>
+  <data name="numericRare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numericRare.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;numericRare.Name" xml:space="preserve">
+    <value>numericRare</value>
+  </data>
+  <data name="&gt;&gt;numericRare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericRare.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;numericRare.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelRare.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelRare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 75</value>
+  </data>
+  <data name="labelRare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="labelRare.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelRare.Text" xml:space="preserve">
+    <value>Rare</value>
+  </data>
+  <data name="&gt;&gt;labelRare.Name" xml:space="preserve">
+    <value>labelRare</value>
+  </data>
+  <data name="&gt;&gt;labelRare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRare.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;labelRare.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkAirType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkAirType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 47</value>
+  </data>
+  <data name="checkAirType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="checkAirType.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkAirType.Text" xml:space="preserve">
+    <value>飛行タイプ</value>
+  </data>
+  <metadata name="toolTipInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="checkAirType.ToolTip" xml:space="preserve">
+    <value>飛行タイプを設定したモンスターは、一部のスキルが命中しなくなります。
+ただし、飛行タイプに特効効果のあるスキルで1.5倍のダメージを受けます。</value>
+  </data>
+  <data name="&gt;&gt;checkAirType.Name" xml:space="preserve">
+    <value>checkAirType</value>
+  </data>
+  <data name="&gt;&gt;checkAirType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkAirType.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;checkAirType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textUnitName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 90</value>
+  </data>
+  <data name="textUnitName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 19</value>
+  </data>
+  <data name="textUnitName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="textUnitName.ToolTip" xml:space="preserve">
+    <value>ゲームユーザーが視認する名前。
+ユニークの場合、肩書『名前』で表記する。
+《》を利用する場合、特殊なユニークであること。</value>
+  </data>
+  <data name="&gt;&gt;textUnitName.Name" xml:space="preserve">
+    <value>textUnitName</value>
+  </data>
+  <data name="&gt;&gt;textUnitName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textUnitName.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;textUnitName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelUnitName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUnitName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 75</value>
+  </data>
+  <data name="labelUnitName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 12</value>
+  </data>
+  <data name="labelUnitName.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelUnitName.Text" xml:space="preserve">
+    <value>Unit Name(表記データ):</value>
+  </data>
+  <data name="&gt;&gt;labelUnitName.Name" xml:space="preserve">
+    <value>labelUnitName</value>
+  </data>
+  <data name="&gt;&gt;labelUnitName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelUnitName.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;labelUnitName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboMonsterGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 45</value>
+  </data>
+  <data name="comboMonsterGroup.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="comboMonsterGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
+  <data name="comboMonsterGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboMonsterGroup.Name" xml:space="preserve">
+    <value>comboMonsterGroup</value>
+  </data>
+  <data name="&gt;&gt;comboMonsterGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboMonsterGroup.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;comboMonsterGroup.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelMonsterGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMonsterGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 30</value>
+  </data>
+  <data name="labelMonsterGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 12</value>
+  </data>
+  <data name="labelMonsterGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelMonsterGroup.Text" xml:space="preserve">
+    <value>Group:</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterGroup.Name" xml:space="preserve">
+    <value>labelMonsterGroup</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterGroup.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterGroup.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textMonsterID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 45</value>
+  </data>
+  <data name="textMonsterID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 19</value>
+  </data>
+  <data name="textMonsterID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="textMonsterID.ToolTip" xml:space="preserve">
+    <value>ゲームシステム側で識別されるデータ。
+ID名は英名表記で統一し、データの整合性のため、変更を行わないこと。</value>
+  </data>
+  <data name="&gt;&gt;textMonsterID.Name" xml:space="preserve">
+    <value>textMonsterID</value>
+  </data>
+  <data name="&gt;&gt;textMonsterID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textMonsterID.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;textMonsterID.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelMonsterID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMonsterID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="labelMonsterID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 12</value>
+  </data>
+  <data name="labelMonsterID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelMonsterID.Text" xml:space="preserve">
+    <value>Monster ID(システムで識別されるデータ):</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterID.Name" xml:space="preserve">
+    <value>labelMonsterID</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterID.Parent" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;labelMonsterID.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupUnitInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupUnitInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupUnitInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 125</value>
+  </data>
+  <data name="groupUnitInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupUnitInfo.Text" xml:space="preserve">
+    <value>Unit Infomation</value>
+  </data>
+  <data name="&gt;&gt;groupUnitInfo.Name" xml:space="preserve">
+    <value>groupUnitInfo</value>
+  </data>
+  <data name="&gt;&gt;groupUnitInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupUnitInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupUnitInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 125</value>
+  </data>
+  <data name="&gt;&gt;toolTipInfo.Name" xml:space="preserve">
+    <value>toolTipInfo</value>
+  </data>
+  <data name="&gt;&gt;toolTipInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UnitInfomation</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

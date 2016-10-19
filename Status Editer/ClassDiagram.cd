@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="Status_Editer.EditerMainMenu" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FwGN2VsO4HmpUVNnRgTtsYkW+Urztbf3HIDCgAWpjZw=</HashCode>
+      <FileName>EditerMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSet" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_accessoryRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_helmetRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_skillRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_monsterDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_weaponRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_armorRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_shieldRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_helmetRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_helmetDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_shieldDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_shieldRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_raceRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_raceDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_weaponRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_accessoryRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_weaponRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_skillRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_monsterRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_accessoryRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_helmetRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_monsterRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_monsterRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_armorRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_accessoryDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_skillDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_shieldRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_weaponDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_armorDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_raceRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="Status_Editer.GigaBattlerDataSet.@__table_skillRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_armorRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="Status_Editer.GigaBattlerDataSet.@__table_raceRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEOCEACwgCIAJABAIAxAAAAQgGQBgAAAAIICEEFBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.Program" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_monsterTableAdapter" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QSAEAKAIQgBABAFBgABAcEAgAgACgAAAIAQAACAABQQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.Properties.Resources" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.Properties.Settings" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAgAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.TestForm" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lrQdDcCBkGiIFFfCoBjENBATYBkAyKAgEAQKAATD5wE=</HashCode>
+      <FileName>TestForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_accessoryTableAdapter" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_armorTableAdapter" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.StatusInfomation" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgGJSFEKYDkBAFJDAgTJsAgG+ArxtKLFDIDCAAGhhYg=</HashCode>
+      <FileName>User Control\StatusInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_helmetTableAdapter" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_shieldTableAdapter" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.UnitInfomation" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIEAGAAABAAQACAAAACgAAAAAAAAAAAgACAgAA=</HashCode>
+      <FileName>User Control\UnitInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>

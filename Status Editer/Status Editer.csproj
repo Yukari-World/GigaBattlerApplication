@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -73,9 +73,6 @@
     <Compile Include="EditerMainMenu.Designer.cs">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GigaBattlerDataSet.cs">
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GigaBattlerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +80,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\StatusInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\StatusInfomation.Designer.cs">
+      <DependentUpon>StatusInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\UnitInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UnitInfomation.Designer.cs">
+      <DependentUpon>UnitInfomation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EditerMainMenu.resx">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,14 +110,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\StatusInfomation.resx">
+      <DependentUpon>StatusInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UnitInfomation.resx">
+      <DependentUpon>UnitInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
     <None Include="GigaBattlerDataSet.xsc">
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </None>
     <None Include="GigaBattlerDataSet.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>GigaBattlerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="GigaBattlerDataSet.xss">
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>

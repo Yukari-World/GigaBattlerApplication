@@ -1,0 +1,3460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolTipInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;numericScaleSPD.Name" xml:space="preserve">
+    <value>numericScaleSPD</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Name" xml:space="preserve">
+    <value>labelSPD</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Name" xml:space="preserve">
+    <value>numericSPD</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Name" xml:space="preserve">
+    <value>labelLvPSPD</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Name" xml:space="preserve">
+    <value>numericLvPSPD</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Name" xml:space="preserve">
+    <value>labelScaleSPD</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 650</value>
+  </data>
+  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Name" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Name" xml:space="preserve">
+    <value>numericScaleMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Name" xml:space="preserve">
+    <value>labelMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Name" xml:space="preserve">
+    <value>numericMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Name" xml:space="preserve">
+    <value>labelLvPMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Name" xml:space="preserve">
+    <value>numericLvPMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Name" xml:space="preserve">
+    <value>labelScaleMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 580</value>
+  </data>
+  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Name" xml:space="preserve">
+    <value>numericMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Name" xml:space="preserve">
+    <value>labelMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Name" xml:space="preserve">
+    <value>labelLvPMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Name" xml:space="preserve">
+    <value>numericLvPMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Name" xml:space="preserve">
+    <value>labelScaleMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Name" xml:space="preserve">
+    <value>numericScaleMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 510</value>
+  </data>
+  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Name" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Name" xml:space="preserve">
+    <value>numericRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Name" xml:space="preserve">
+    <value>labelRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Name" xml:space="preserve">
+    <value>labelLvPRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Name" xml:space="preserve">
+    <value>numericLvPRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Name" xml:space="preserve">
+    <value>labelScaleRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Name" xml:space="preserve">
+    <value>numericScaleRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 440</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Name" xml:space="preserve">
+    <value>numericRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Name" xml:space="preserve">
+    <value>labelRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Name" xml:space="preserve">
+    <value>labelLvPRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Name" xml:space="preserve">
+    <value>numericLvPRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Name" xml:space="preserve">
+    <value>labelScaleRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Name" xml:space="preserve">
+    <value>numericScaleRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 370</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Name" xml:space="preserve">
+    <value>numericMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Name" xml:space="preserve">
+    <value>labelMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Name" xml:space="preserve">
+    <value>labelLvPMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Name" xml:space="preserve">
+    <value>numericLvPMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Name" xml:space="preserve">
+    <value>labelScaleDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Name" xml:space="preserve">
+    <value>numericScaleDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 300</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Name" xml:space="preserve">
+    <value>numericMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Name" xml:space="preserve">
+    <value>labelMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Name" xml:space="preserve">
+    <value>labelLvPMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Name" xml:space="preserve">
+    <value>numericLvPATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Name" xml:space="preserve">
+    <value>labelScaleATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Name" xml:space="preserve">
+    <value>numericScaleMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 230</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Name" xml:space="preserve">
+    <value>numericTP</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;numericTP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Name" xml:space="preserve">
+    <value>labelTP</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;labelTP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Name" xml:space="preserve">
+    <value>labelMaxTP</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Name" xml:space="preserve">
+    <value>numericMaxTP</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 160</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Name" xml:space="preserve">
+    <value>numericHP</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericHP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Name" xml:space="preserve">
+    <value>labelHP</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelHP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Name" xml:space="preserve">
+    <value>labelLvPHP</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Name" xml:space="preserve">
+    <value>numericLvPHP</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Name" xml:space="preserve">
+    <value>labelScaleHP</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Name" xml:space="preserve">
+    <value>numericScaleHP</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 90</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Name" xml:space="preserve">
+    <value>labelMinLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Name" xml:space="preserve">
+    <value>numericMinLevel</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label.Name" xml:space="preserve">
+    <value>label</value>
+  </data>
+  <data name="&gt;&gt;label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Name" xml:space="preserve">
+    <value>labelMaxLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Name" xml:space="preserve">
+    <value>numericMaxLevel</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 20</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 60</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="numericScaleMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 660</value>
+  </data>
+  <data name="numericScaleMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numericScaleMoney.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleMoney.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleMoney.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMoney.Name" xml:space="preserve">
+    <value>numericScaleMoney</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMoney.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="numericLvPEVT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 580</value>
+  </data>
+  <data name="numericLvPEVT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPEVT.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="numericLvPEVT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPEVT.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericLvPEVT.ToolTip" xml:space="preserve">
+    <value>Lvが1上昇する毎に増加する回避力の値。
+効果が高すぎるため、Lv100までの成長制限がある。
+なお、回避力は1辺り回避率が0.03%上昇する。
+設定値:-100 ～ 100</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEVT.Name" xml:space="preserve">
+    <value>numericLvPEVT</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEVT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEVT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEVT.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelScaleMoney.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 645</value>
+  </data>
+  <data name="labelScaleMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 12</value>
+  </data>
+  <data name="labelScaleMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="labelScaleMoney.Text" xml:space="preserve">
+    <value>Scale Money</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMoney.Name" xml:space="preserve">
+    <value>labelScaleMoney</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMoney.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelLvPEVT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPEVT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 565</value>
+  </data>
+  <data name="labelLvPEVT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 12</value>
+  </data>
+  <data name="labelLvPEVT.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="labelLvPEVT.Text" xml:space="preserve">
+    <value>Level Per EVT(Lv.100まで有効)</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEVT.Name" xml:space="preserve">
+    <value>labelLvPEVT</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEVT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEVT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEVT.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="numericLvPMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 660</value>
+  </data>
+  <data name="numericLvPMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="numericLvPMoney.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPMoney.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMoney.Name" xml:space="preserve">
+    <value>numericLvPMoney</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMoney.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="numericEVT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 580</value>
+  </data>
+  <data name="numericEVT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericEVT.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="numericEVT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericEVT.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericEVT.ToolTip" xml:space="preserve">
+    <value>基礎回避力。プレイヤーには表示されないステータス。
+回避力は1辺り回避率が0.03%上昇する。
+設定値:-50,000 ～ 50,000</value>
+  </data>
+  <data name="&gt;&gt;numericEVT.Name" xml:space="preserve">
+    <value>numericEVT</value>
+  </data>
+  <data name="&gt;&gt;numericEVT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericEVT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericEVT.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelLvPMoney.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 645</value>
+  </data>
+  <data name="labelLvPMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 12</value>
+  </data>
+  <data name="labelLvPMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="labelLvPMoney.Text" xml:space="preserve">
+    <value>Level Per Money</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMoney.Name" xml:space="preserve">
+    <value>labelLvPMoney</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMoney.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelEVT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelEVT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 565</value>
+  </data>
+  <data name="labelEVT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 12</value>
+  </data>
+  <data name="labelEVT.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="labelEVT.Text" xml:space="preserve">
+    <value>EVT</value>
+  </data>
+  <data name="&gt;&gt;labelEVT.Name" xml:space="preserve">
+    <value>labelEVT</value>
+  </data>
+  <data name="&gt;&gt;labelEVT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelEVT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelEVT.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="numericMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 660</value>
+  </data>
+  <data name="numericMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="numericMoney.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMoney.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMoney.Name" xml:space="preserve">
+    <value>numericMoney</value>
+  </data>
+  <data name="&gt;&gt;numericMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericMoney.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="labelMoney.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 645</value>
+  </data>
+  <data name="labelMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 12</value>
+  </data>
+  <data name="labelMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="labelMoney.Text" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="&gt;&gt;labelMoney.Name" xml:space="preserve">
+    <value>labelMoney</value>
+  </data>
+  <data name="&gt;&gt;labelMoney.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMoney.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelMoney.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="numericLvPHIT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 540</value>
+  </data>
+  <data name="numericLvPHIT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPHIT.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="numericLvPHIT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPHIT.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericLvPHIT.ToolTip" xml:space="preserve">
+    <value>Lvが1上昇する毎に増加する命中力の値。
+効果が高すぎるため、Lv100までの成長制限がある。
+なお、命中力は1辺り命中率が0.03%上昇する。
+設定値:-100 ～ 100</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHIT.Name" xml:space="preserve">
+    <value>numericLvPHIT</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHIT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHIT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHIT.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="numericScaleEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 620</value>
+  </data>
+  <data name="numericScaleEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="numericScaleEXP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleEXP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleEXP.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleEXP.Name" xml:space="preserve">
+    <value>numericScaleEXP</value>
+  </data>
+  <data name="&gt;&gt;numericScaleEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericScaleEXP.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labelLvPHIT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPHIT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 525</value>
+  </data>
+  <data name="labelLvPHIT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 12</value>
+  </data>
+  <data name="labelLvPHIT.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="labelLvPHIT.Text" xml:space="preserve">
+    <value>Level Per HIT(Lv.100まで有効)</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHIT.Name" xml:space="preserve">
+    <value>labelLvPHIT</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHIT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHIT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHIT.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="labelScaleEXP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 605</value>
+  </data>
+  <data name="labelScaleEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 12</value>
+  </data>
+  <data name="labelScaleEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="labelScaleEXP.Text" xml:space="preserve">
+    <value>Scale EXP</value>
+  </data>
+  <data name="&gt;&gt;labelScaleEXP.Name" xml:space="preserve">
+    <value>labelScaleEXP</value>
+  </data>
+  <data name="&gt;&gt;labelScaleEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelScaleEXP.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="numericHIT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 540</value>
+  </data>
+  <data name="numericHIT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericHIT.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="numericHIT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericHIT.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericHIT.ToolTip" xml:space="preserve">
+    <value>基礎命中力。プレイヤーには表示されないステータス。
+命中力は1辺り命中率が0.03%上昇する。
+設定値:-50,000 ～ 50,000</value>
+  </data>
+  <data name="&gt;&gt;numericHIT.Name" xml:space="preserve">
+    <value>numericHIT</value>
+  </data>
+  <data name="&gt;&gt;numericHIT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericHIT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericHIT.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="numericLvPEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 620</value>
+  </data>
+  <data name="numericLvPEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="numericLvPEXP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPEXP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEXP.Name" xml:space="preserve">
+    <value>numericLvPEXP</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLvPEXP.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="labelHIT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHIT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 525</value>
+  </data>
+  <data name="labelHIT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 12</value>
+  </data>
+  <data name="labelHIT.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="labelHIT.Text" xml:space="preserve">
+    <value>HIT</value>
+  </data>
+  <data name="&gt;&gt;labelHIT.Name" xml:space="preserve">
+    <value>labelHIT</value>
+  </data>
+  <data name="&gt;&gt;labelHIT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHIT.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelHIT.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="labelLvPEXP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 605</value>
+  </data>
+  <data name="labelLvPEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 12</value>
+  </data>
+  <data name="labelLvPEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="labelLvPEXP.Text" xml:space="preserve">
+    <value>Level Per EXP</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEXP.Name" xml:space="preserve">
+    <value>labelLvPEXP</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLvPEXP.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="numericLvPLuck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 500</value>
+  </data>
+  <data name="numericLvPLuck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPLuck.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="numericLvPLuck.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPLuck.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericLvPLuck.ToolTip" xml:space="preserve">
+    <value>Lvが1上昇する毎に増加する運の値。
+効果が高すぎるため、Lv100までの成長制限がある。
+なお、運は1辺り命中率と回避率が0.01%上昇し、クリティカル発生率が上昇し、微量ダメージ補正にボーナスがかかる。
+設定値:-100 ～ 100</value>
+  </data>
+  <data name="&gt;&gt;numericLvPLuck.Name" xml:space="preserve">
+    <value>numericLvPLuck</value>
+  </data>
+  <data name="&gt;&gt;numericLvPLuck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPLuck.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLvPLuck.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="numericEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 620</value>
+  </data>
+  <data name="numericEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="numericEXP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericEXP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericEXP.Name" xml:space="preserve">
+    <value>numericEXP</value>
+  </data>
+  <data name="&gt;&gt;numericEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericEXP.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="labelLvPLuck.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPLuck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 485</value>
+  </data>
+  <data name="labelLvPLuck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 12</value>
+  </data>
+  <data name="labelLvPLuck.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="labelLvPLuck.Text" xml:space="preserve">
+    <value>Level Per Luck(Lv.100まで有効)</value>
+  </data>
+  <data name="&gt;&gt;labelLvPLuck.Name" xml:space="preserve">
+    <value>labelLvPLuck</value>
+  </data>
+  <data name="&gt;&gt;labelLvPLuck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPLuck.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLvPLuck.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="labelEXP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelEXP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 605</value>
+  </data>
+  <data name="labelEXP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 12</value>
+  </data>
+  <data name="labelEXP.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="labelEXP.Text" xml:space="preserve">
+    <value>EXP</value>
+  </data>
+  <data name="&gt;&gt;labelEXP.Name" xml:space="preserve">
+    <value>labelEXP</value>
+  </data>
+  <data name="&gt;&gt;labelEXP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelEXP.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelEXP.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="numericLuck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 500</value>
+  </data>
+  <data name="numericLuck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLuck.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="numericLuck.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLuck.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericLuck.ToolTip" xml:space="preserve">
+    <value>基礎運。プレイヤーには表示されないステータス。
+運は1辺り命中率と回避率が0.01%上昇し、クリティカル発生率が上昇し、微量ダメージ補正にボーナスがかかる。
+設定値:-50,000 ～ 50,000</value>
+  </data>
+  <data name="&gt;&gt;numericLuck.Name" xml:space="preserve">
+    <value>numericLuck</value>
+  </data>
+  <data name="&gt;&gt;numericLuck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLuck.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;numericLuck.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="labelLuck.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLuck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 485</value>
+  </data>
+  <data name="labelLuck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="labelLuck.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="labelLuck.Text" xml:space="preserve">
+    <value>Luck</value>
+  </data>
+  <data name="&gt;&gt;labelLuck.Name" xml:space="preserve">
+    <value>labelLuck</value>
+  </data>
+  <data name="&gt;&gt;labelLuck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLuck.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;labelLuck.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="groupStatusInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupStatusInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1360, 800</value>
+  </data>
+  <data name="groupStatusInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupStatusInfo.Text" xml:space="preserve">
+    <value>Status Infomation</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Name" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericScaleSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="numericScaleSPD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleSPD.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleSPD.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.Name" xml:space="preserve">
+    <value>numericScaleSPD</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericScaleSPD.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelSPD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSPD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 12</value>
+  </data>
+  <data name="labelSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="labelSPD.Text" xml:space="preserve">
+    <value>SPD</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Name" xml:space="preserve">
+    <value>labelSPD</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelSPD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="numericSPD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericSPD.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Name" xml:space="preserve">
+    <value>numericSPD</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericSPD.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelLvPSPD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPSPD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 12</value>
+  </data>
+  <data name="labelLvPSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="labelLvPSPD.Text" xml:space="preserve">
+    <value>Level Per SPD</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Name" xml:space="preserve">
+    <value>labelLvPSPD</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelLvPSPD.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericLvPSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="numericLvPSPD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPSPD.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Name" xml:space="preserve">
+    <value>numericLvPSPD</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericLvPSPD.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelScaleSPD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleSPD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleSPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleSPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="labelScaleSPD.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="labelScaleSPD.Text" xml:space="preserve">
+    <value>Scale SPD</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Name" xml:space="preserve">
+    <value>labelScaleSPD</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;labelScaleSPD.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericScaleMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="numericScaleMagicDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleMagicDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleMagicDEF.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Name" xml:space="preserve">
+    <value>numericScaleMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMagicDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMagicDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 12</value>
+  </data>
+  <data name="labelMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="labelMagicDEF.Text" xml:space="preserve">
+    <value>Magic DEF</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Name" xml:space="preserve">
+    <value>labelMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelMagicDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="numericMagicDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMagicDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Name" xml:space="preserve">
+    <value>numericMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericMagicDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelLvPMagicDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPMagicDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="labelLvPMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="labelLvPMagicDEF.Text" xml:space="preserve">
+    <value>Level Per Magic DEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Name" xml:space="preserve">
+    <value>labelLvPMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericLvPMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="numericLvPMagicDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPMagicDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Name" xml:space="preserve">
+    <value>numericLvPMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelScaleMagicDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleMagicDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleMagicDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleMagicDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 12</value>
+  </data>
+  <data name="labelScaleMagicDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="labelScaleMagicDEF.Text" xml:space="preserve">
+    <value>Scale Magic DEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Name" xml:space="preserve">
+    <value>labelScaleMagicDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="numericMagicATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMagicATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Name" xml:space="preserve">
+    <value>numericMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericMagicATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMagicATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMagicATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 12</value>
+  </data>
+  <data name="labelMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="labelMagicATK.Text" xml:space="preserve">
+    <value>Magic ATK</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Name" xml:space="preserve">
+    <value>labelMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelMagicATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPMagicATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPMagicATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="labelLvPMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="labelLvPMagicATK.Text" xml:space="preserve">
+    <value>Level Per Magic ATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Name" xml:space="preserve">
+    <value>labelLvPMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMagicATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="numericLvPMagicATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPMagicATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Name" xml:space="preserve">
+    <value>numericLvPMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMagicATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleMagicATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleMagicATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 12</value>
+  </data>
+  <data name="labelScaleMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="labelScaleMagicATK.Text" xml:space="preserve">
+    <value>Scale Magic ATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Name" xml:space="preserve">
+    <value>labelScaleMagicATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMagicATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleMagicATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleMagicATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleMagicATK.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="numericScaleMagicATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleMagicATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleMagicATK.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Name" xml:space="preserve">
+    <value>numericScaleMagicATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.Parent" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMagicATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="numericRangeDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericRangeDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Name" xml:space="preserve">
+    <value>numericRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericRangeDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelRangeDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelRangeDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 12</value>
+  </data>
+  <data name="labelRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="labelRangeDEF.Text" xml:space="preserve">
+    <value>Range DEF</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Name" xml:space="preserve">
+    <value>labelRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelRangeDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPRangeDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPRangeDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 12</value>
+  </data>
+  <data name="labelLvPRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="labelLvPRangeDEF.Text" xml:space="preserve">
+    <value>Level Per Range DEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Name" xml:space="preserve">
+    <value>labelLvPRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="numericLvPRangeDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPRangeDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Name" xml:space="preserve">
+    <value>numericLvPRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleRangeDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleRangeDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 12</value>
+  </data>
+  <data name="labelScaleRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="labelScaleRangeDEF.Text" xml:space="preserve">
+    <value>Scale Range DEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Name" xml:space="preserve">
+    <value>labelScaleRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleRangeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleRangeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="numericScaleRangeDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleRangeDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleRangeDEF.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Name" xml:space="preserve">
+    <value>numericScaleRangeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="numericRangeATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericRangeATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Name" xml:space="preserve">
+    <value>numericRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericRangeATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelRangeATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelRangeATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 12</value>
+  </data>
+  <data name="labelRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="labelRangeATK.Text" xml:space="preserve">
+    <value>Range ATK</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Name" xml:space="preserve">
+    <value>labelRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelRangeATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPRangeATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPRangeATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 12</value>
+  </data>
+  <data name="labelLvPRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labelLvPRangeATK.Text" xml:space="preserve">
+    <value>Level Per Range ATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Name" xml:space="preserve">
+    <value>labelLvPRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelLvPRangeATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="numericLvPRangeATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPRangeATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Name" xml:space="preserve">
+    <value>numericLvPRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericLvPRangeATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleRangeATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleRangeATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 12</value>
+  </data>
+  <data name="labelScaleRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labelScaleRangeATK.Text" xml:space="preserve">
+    <value>Scale Range ATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Name" xml:space="preserve">
+    <value>labelScaleRangeATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;labelScaleRangeATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleRangeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleRangeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleRangeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="numericScaleRangeATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleRangeATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleRangeATK.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Name" xml:space="preserve">
+    <value>numericScaleRangeATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;numericScaleRangeATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericMeleeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericMeleeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMeleeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="numericMeleeDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMeleeDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Name" xml:space="preserve">
+    <value>numericMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeDEF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMeleeDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMeleeDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMeleeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelMeleeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 12</value>
+  </data>
+  <data name="labelMeleeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelMeleeDEF.Text" xml:space="preserve">
+    <value>Melee DEF</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Name" xml:space="preserve">
+    <value>labelMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeDEF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPMeleeDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPMeleeDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPMeleeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPMeleeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="labelLvPMeleeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="labelLvPMeleeDEF.Text" xml:space="preserve">
+    <value>Level Per Melee DEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Name" xml:space="preserve">
+    <value>labelLvPMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeDEF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPMeleeDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPMeleeDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPMeleeDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="numericLvPMeleeDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPMeleeDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Name" xml:space="preserve">
+    <value>numericLvPMeleeDEF</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericLvPMeleeDEF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleDEF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleDEF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 12</value>
+  </data>
+  <data name="labelScaleDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labelScaleDEF.Text" xml:space="preserve">
+    <value>Scale Melee DEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Name" xml:space="preserve">
+    <value>labelScaleDEF</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labelScaleDEF.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleDEF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleDEF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleDEF.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="numericScaleDEF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleDEF.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleDEF.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Name" xml:space="preserve">
+    <value>numericScaleDEF</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;numericScaleDEF.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericMeleeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericMeleeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMeleeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="numericMeleeATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMeleeATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Name" xml:space="preserve">
+    <value>numericMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericMeleeATK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMeleeATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMeleeATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMeleeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelMeleeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 12</value>
+  </data>
+  <data name="labelMeleeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="labelMeleeATK.Text" xml:space="preserve">
+    <value>Melee ATK</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Name" xml:space="preserve">
+    <value>labelMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelMeleeATK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPMeleeATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPMeleeATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPMeleeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPMeleeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="labelLvPMeleeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="labelLvPMeleeATK.Text" xml:space="preserve">
+    <value>Level Per Melee ATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Name" xml:space="preserve">
+    <value>labelLvPMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelLvPMeleeATK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPATK.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="numericLvPATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Name" xml:space="preserve">
+    <value>numericLvPATK</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericLvPATK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleATK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleATK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 12</value>
+  </data>
+  <data name="labelScaleATK.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelScaleATK.Text" xml:space="preserve">
+    <value>Scale Melee ATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Name" xml:space="preserve">
+    <value>labelScaleATK</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelScaleATK.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleMeleeATK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleMeleeATK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleMeleeATK.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="numericScaleMeleeATK.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleMeleeATK.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleMeleeATK.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Name" xml:space="preserve">
+    <value>numericScaleMeleeATK</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;numericScaleMeleeATK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericTP.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="numericTP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericTP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Name" xml:space="preserve">
+    <value>numericTP</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;numericTP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelTP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 12</value>
+  </data>
+  <data name="labelTP.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelTP.Text" xml:space="preserve">
+    <value>TP</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Name" xml:space="preserve">
+    <value>labelTP</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;labelTP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMaxTP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMaxTP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMaxTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelMaxTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 12</value>
+  </data>
+  <data name="labelMaxTP.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelMaxTP.Text" xml:space="preserve">
+    <value>Max TP</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Name" xml:space="preserve">
+    <value>labelMaxTP</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;labelMaxTP.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericMaxTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericMaxTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMaxTP.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="numericMaxTP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMaxTP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Name" xml:space="preserve">
+    <value>numericMaxTP</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;numericMaxTP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericHP.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="numericHP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericHP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Name" xml:space="preserve">
+    <value>numericHP</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericHP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelHP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 12</value>
+  </data>
+  <data name="labelHP.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelHP.Text" xml:space="preserve">
+    <value>HP</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Name" xml:space="preserve">
+    <value>labelHP</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelHP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelLvPHP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLvPHP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLvPHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelLvPHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 12</value>
+  </data>
+  <data name="labelLvPHP.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelLvPHP.Text" xml:space="preserve">
+    <value>Level Per HP</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Name" xml:space="preserve">
+    <value>labelLvPHP</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelLvPHP.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericLvPHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericLvPHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericLvPHP.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="numericLvPHP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericLvPHP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Name" xml:space="preserve">
+    <value>numericLvPHP</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericLvPHP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelScaleHP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScaleHP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelScaleHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelScaleHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 12</value>
+  </data>
+  <data name="labelScaleHP.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelScaleHP.Text" xml:space="preserve">
+    <value>Scale HP</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Name" xml:space="preserve">
+    <value>labelScaleHP</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelScaleHP.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericScaleHP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="numericScaleHP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericScaleHP.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="numericScaleHP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericScaleHP.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericScaleHP.ToolTip" xml:space="preserve">
+    <value>倍率上昇上限。((Lv ^ 0.5) * 2 + 100)%で計算される。
+高い程高レベル帯でステータスが大きく上昇する。
+設定値: 100.00 ～ 9,999.99</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Name" xml:space="preserve">
+    <value>numericScaleHP</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericScaleHP.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelMinLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMinLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMinLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelMinLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 12</value>
+  </data>
+  <data name="labelMinLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelMinLevel.Text" xml:space="preserve">
+    <value>Min Level</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Name" xml:space="preserve">
+    <value>labelMinLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericMinLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericMinLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMinLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="numericMinLevel.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMinLevel.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericMinLevel.ToolTip" xml:space="preserve">
+    <value>最低レベル。</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Name" xml:space="preserve">
+    <value>numericMinLevel</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericMinLevel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 32</value>
+  </data>
+  <data name="label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label.Text" xml:space="preserve">
+    <value>～</value>
+  </data>
+  <data name="&gt;&gt;label.Name" xml:space="preserve">
+    <value>label</value>
+  </data>
+  <data name="&gt;&gt;label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelMaxLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMaxLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMaxLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelMaxLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 12</value>
+  </data>
+  <data name="labelMaxLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelMaxLevel.Text" xml:space="preserve">
+    <value>Max Level</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Name" xml:space="preserve">
+    <value>labelMaxLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericMaxLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="numericMaxLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericMaxLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="numericMaxLevel.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericMaxLevel.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericMaxLevel.ToolTip" xml:space="preserve">
+    <value>最高レベル。限界突破補正などに影響します。
+-1を指定すると無制限となります。
+設定値:1 ～ 99,999,999,999,999,999,999 もしくは -1</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Name" xml:space="preserve">
+    <value>numericMaxLevel</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericMaxLevel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1360, 790</value>
+  </data>
+  <data name="&gt;&gt;toolTipInfo.Name" xml:space="preserve">
+    <value>toolTipInfo</value>
+  </data>
+  <data name="&gt;&gt;toolTipInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StatusInfomation</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
