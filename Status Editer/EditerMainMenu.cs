@@ -17,14 +17,14 @@ namespace Status_Editer {
 		public string rootDirectory = "";
 
 		// TableAdapter
-		__table_unitTableAdapter __table_unitTableAdapter = new __table_unitTableAdapter();
-		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
-		__table_weaponTableAdapter __table_weaponTableAdapter = new __table_weaponTableAdapter();
-		__table_shieldTableAdapter __table_shieldTableAdapter = new __table_shieldTableAdapter();
-		__table_helmetTableAdapter __table_helmetTableAdapter = new __table_helmetTableAdapter();
-		__table_armorTableAdapter __table_armorTableAdapter = new __table_armorTableAdapter();
-		__table_accessoryTableAdapter __table_accessoryTableAdapter = new __table_accessoryTableAdapter();
-		__table_skillTableAdapter __table_skillTableAdapter = new __table_skillTableAdapter();
+		__table_unitTableAdapter tableUnitTableAdapter = new __table_unitTableAdapter();
+		__table_raceTableAdapter tableRaceTableAdapter = new __table_raceTableAdapter();
+		__table_weaponTableAdapter tableWeaponTableAdapter = new __table_weaponTableAdapter();
+		__table_shieldTableAdapter tableShieldTableAdapter = new __table_shieldTableAdapter();
+		__table_helmetTableAdapter tableHelmetTableAdapter = new __table_helmetTableAdapter();
+		__table_armorTableAdapter tableArmorTableAdapter = new __table_armorTableAdapter();
+		__table_accessoryTableAdapter tableAccessoryTableAdapter = new __table_accessoryTableAdapter();
+		__table_skillTableAdapter tableSkillTableAdapter = new __table_skillTableAdapter();
 
 		// BindingSource
 		BindingSource tableUnitBindingSource = new BindingSource();
@@ -58,7 +58,7 @@ namespace Status_Editer {
 		/// </summary>
 		private void UpdateSQL() {
 			tableUnitBindingSource.EndEdit();
-			__table_unitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
+			tableUnitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
 		}
 
 
@@ -75,14 +75,14 @@ namespace Status_Editer {
 			//----------------------------------------------------------------------------------------------------
 			// 初期化
 
-			__table_unitTableAdapter.ClearBeforeFill = true;
-			__table_raceTableAdapter.ClearBeforeFill = true;
-			__table_weaponTableAdapter.ClearBeforeFill = true;
-			__table_shieldTableAdapter.ClearBeforeFill = true;
-			__table_helmetTableAdapter.ClearBeforeFill = true;
-			__table_armorTableAdapter.ClearBeforeFill = true;
-			__table_accessoryTableAdapter.ClearBeforeFill = true;
-			__table_skillTableAdapter.ClearBeforeFill = true;
+			tableUnitTableAdapter.ClearBeforeFill = true;
+			tableRaceTableAdapter.ClearBeforeFill = true;
+			tableWeaponTableAdapter.ClearBeforeFill = true;
+			tableShieldTableAdapter.ClearBeforeFill = true;
+			tableHelmetTableAdapter.ClearBeforeFill = true;
+			tableArmorTableAdapter.ClearBeforeFill = true;
+			tableAccessoryTableAdapter.ClearBeforeFill = true;
+			tableSkillTableAdapter.ClearBeforeFill = true;
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の関連付け
@@ -123,9 +123,9 @@ namespace Status_Editer {
 
 				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
-				DropInfomation.LoadDataBindings(tableUnitBindingSource, __table_weaponTableAdapter);
+				DropInfomation.LoadDataBindings(tableUnitBindingSource, tableWeaponTableAdapter);
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
-				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, __table_skillTableAdapter);
+				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, tableSkillTableAdapter);
 
 				// TAB: ユニットタイプ
 
@@ -145,10 +145,14 @@ namespace Status_Editer {
 
 				// 共通
 
-				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
-				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
-				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
-				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+				tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
+				tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+				tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+				tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
+				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
+				tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
+				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
+				tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 			} catch (Exception ex) {
 				MessageBox.Show("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
@@ -222,10 +226,14 @@ namespace Status_Editer {
 				tabControl.Invalidate(true);
 
 				try {
-					__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
-					__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
-					__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
-					__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+					tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
+					tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+					tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+					tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
+					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
+					tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
+					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
+					tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 				} catch (Exception ex) {
 					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
