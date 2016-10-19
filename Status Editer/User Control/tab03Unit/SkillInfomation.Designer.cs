@@ -1,5 +1,5 @@
-﻿namespace Status_Editer.User_Control.tabMonster {
-	partial class ActiveSkillInfomation {
+﻿namespace Status_Editer.User_Control.tab03Unit {
+	partial class SkillInfomation {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -24,26 +24,26 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.groupActiveSkillInfo = new System.Windows.Forms.GroupBox();
-			this.SkillInfomation1 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation2 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation3 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation4 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation5 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation6 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation7 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation8 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation9 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation10 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation11 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation12 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation13 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation14 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation15 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation16 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation17 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation18 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation19 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
-			this.SkillInfomation20 = new Status_Editer.User_Control.tabMonster.Parts.SkillInfomation();
+			this.SkillInfomation1 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation2 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation3 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation4 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation5 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation6 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation7 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation8 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation9 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation10 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation11 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation12 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation13 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation14 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation15 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation16 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation17 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation18 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation19 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
+			this.SkillInfomation20 = new Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation();
 			this.groupActiveSkillInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 

@@ -3253,7 +3253,7 @@ namespace Status_Editer {
             
             private global::System.Data.DataColumn columnRare;
             
-            private global::System.Data.DataColumn columnPert;
+            private global::System.Data.DataColumn columnRare2;
             
             private global::System.Data.DataColumn columnItem1;
             
@@ -3315,65 +3315,65 @@ namespace Status_Editer {
             
             private global::System.Data.DataColumn columnSkill20;
             
-            private global::System.Data.DataColumn columnSkill21;
+            private global::System.Data.DataColumn columnAbility1;
             
-            private global::System.Data.DataColumn columnSkill22;
+            private global::System.Data.DataColumn columnAbility2;
             
-            private global::System.Data.DataColumn columnSkill23;
+            private global::System.Data.DataColumn columnAbility3;
             
-            private global::System.Data.DataColumn columnSkill24;
+            private global::System.Data.DataColumn columnAbility4;
             
-            private global::System.Data.DataColumn columnSkill25;
+            private global::System.Data.DataColumn columnAbility5;
             
-            private global::System.Data.DataColumn columnSkill26;
+            private global::System.Data.DataColumn columnAbility6;
             
-            private global::System.Data.DataColumn columnSkill27;
+            private global::System.Data.DataColumn columnAbility7;
             
-            private global::System.Data.DataColumn columnSkill28;
+            private global::System.Data.DataColumn columnAbility8;
             
-            private global::System.Data.DataColumn columnSkill29;
+            private global::System.Data.DataColumn columnAbility9;
             
-            private global::System.Data.DataColumn columnSkill30;
+            private global::System.Data.DataColumn columnAbility10;
             
-            private global::System.Data.DataColumn columnSkill31;
+            private global::System.Data.DataColumn columnAbility11;
             
-            private global::System.Data.DataColumn columnSkill32;
+            private global::System.Data.DataColumn columnAbility12;
             
-            private global::System.Data.DataColumn columnSkill33;
+            private global::System.Data.DataColumn columnAbility13;
             
-            private global::System.Data.DataColumn columnSkill34;
+            private global::System.Data.DataColumn columnAbility14;
             
-            private global::System.Data.DataColumn columnSkill35;
+            private global::System.Data.DataColumn columnAbility15;
             
-            private global::System.Data.DataColumn columnSkill36;
+            private global::System.Data.DataColumn columnAbility16;
             
-            private global::System.Data.DataColumn columnSkill37;
+            private global::System.Data.DataColumn columnAbility17;
             
-            private global::System.Data.DataColumn columnSkill38;
+            private global::System.Data.DataColumn columnAbility18;
             
-            private global::System.Data.DataColumn columnSkill39;
+            private global::System.Data.DataColumn columnAbility19;
             
-            private global::System.Data.DataColumn columnSkill40;
+            private global::System.Data.DataColumn columnAbility20;
             
-            private global::System.Data.DataColumn columnSkill41;
+            private global::System.Data.DataColumn columnAbility21;
             
-            private global::System.Data.DataColumn columnSkill42;
+            private global::System.Data.DataColumn columnAbility22;
             
-            private global::System.Data.DataColumn columnSkill43;
+            private global::System.Data.DataColumn columnAbility23;
             
-            private global::System.Data.DataColumn columnSkill44;
+            private global::System.Data.DataColumn columnAbility24;
             
-            private global::System.Data.DataColumn columnSkill45;
+            private global::System.Data.DataColumn columnAbility25;
             
-            private global::System.Data.DataColumn columnSkill46;
+            private global::System.Data.DataColumn columnAbility26;
             
-            private global::System.Data.DataColumn columnSkill47;
+            private global::System.Data.DataColumn columnAbility27;
             
-            private global::System.Data.DataColumn columnSkill48;
+            private global::System.Data.DataColumn columnAbility28;
             
-            private global::System.Data.DataColumn columnSkill49;
+            private global::System.Data.DataColumn columnAbility29;
             
-            private global::System.Data.DataColumn columnSkill50;
+            private global::System.Data.DataColumn columnAbility30;
             
             private global::System.Data.DataColumn columnInfo;
             
@@ -3852,9 +3852,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PertColumn {
+            public global::System.Data.DataColumn Rare2Column {
                 get {
-                    return this.columnPert;
+                    return this.columnRare2;
                 }
             }
             
@@ -4100,241 +4100,241 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill21Column {
+            public global::System.Data.DataColumn Ability1Column {
                 get {
-                    return this.columnSkill21;
+                    return this.columnAbility1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill22Column {
+            public global::System.Data.DataColumn Ability2Column {
                 get {
-                    return this.columnSkill22;
+                    return this.columnAbility2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill23Column {
+            public global::System.Data.DataColumn Ability3Column {
                 get {
-                    return this.columnSkill23;
+                    return this.columnAbility3;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill24Column {
+            public global::System.Data.DataColumn Ability4Column {
                 get {
-                    return this.columnSkill24;
+                    return this.columnAbility4;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill25Column {
+            public global::System.Data.DataColumn Ability5Column {
                 get {
-                    return this.columnSkill25;
+                    return this.columnAbility5;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill26Column {
+            public global::System.Data.DataColumn Ability6Column {
                 get {
-                    return this.columnSkill26;
+                    return this.columnAbility6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill27Column {
+            public global::System.Data.DataColumn Ability7Column {
                 get {
-                    return this.columnSkill27;
+                    return this.columnAbility7;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill28Column {
+            public global::System.Data.DataColumn Ability8Column {
                 get {
-                    return this.columnSkill28;
+                    return this.columnAbility8;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill29Column {
+            public global::System.Data.DataColumn Ability9Column {
                 get {
-                    return this.columnSkill29;
+                    return this.columnAbility9;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill30Column {
+            public global::System.Data.DataColumn Ability10Column {
                 get {
-                    return this.columnSkill30;
+                    return this.columnAbility10;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill31Column {
+            public global::System.Data.DataColumn Ability11Column {
                 get {
-                    return this.columnSkill31;
+                    return this.columnAbility11;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill32Column {
+            public global::System.Data.DataColumn Ability12Column {
                 get {
-                    return this.columnSkill32;
+                    return this.columnAbility12;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill33Column {
+            public global::System.Data.DataColumn Ability13Column {
                 get {
-                    return this.columnSkill33;
+                    return this.columnAbility13;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill34Column {
+            public global::System.Data.DataColumn Ability14Column {
                 get {
-                    return this.columnSkill34;
+                    return this.columnAbility14;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill35Column {
+            public global::System.Data.DataColumn Ability15Column {
                 get {
-                    return this.columnSkill35;
+                    return this.columnAbility15;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill36Column {
+            public global::System.Data.DataColumn Ability16Column {
                 get {
-                    return this.columnSkill36;
+                    return this.columnAbility16;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill37Column {
+            public global::System.Data.DataColumn Ability17Column {
                 get {
-                    return this.columnSkill37;
+                    return this.columnAbility17;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill38Column {
+            public global::System.Data.DataColumn Ability18Column {
                 get {
-                    return this.columnSkill38;
+                    return this.columnAbility18;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill39Column {
+            public global::System.Data.DataColumn Ability19Column {
                 get {
-                    return this.columnSkill39;
+                    return this.columnAbility19;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill40Column {
+            public global::System.Data.DataColumn Ability20Column {
                 get {
-                    return this.columnSkill40;
+                    return this.columnAbility20;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill41Column {
+            public global::System.Data.DataColumn Ability21Column {
                 get {
-                    return this.columnSkill41;
+                    return this.columnAbility21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill42Column {
+            public global::System.Data.DataColumn Ability22Column {
                 get {
-                    return this.columnSkill42;
+                    return this.columnAbility22;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill43Column {
+            public global::System.Data.DataColumn Ability23Column {
                 get {
-                    return this.columnSkill43;
+                    return this.columnAbility23;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill44Column {
+            public global::System.Data.DataColumn Ability24Column {
                 get {
-                    return this.columnSkill44;
+                    return this.columnAbility24;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill45Column {
+            public global::System.Data.DataColumn Ability25Column {
                 get {
-                    return this.columnSkill45;
+                    return this.columnAbility25;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill46Column {
+            public global::System.Data.DataColumn Ability26Column {
                 get {
-                    return this.columnSkill46;
+                    return this.columnAbility26;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill47Column {
+            public global::System.Data.DataColumn Ability27Column {
                 get {
-                    return this.columnSkill47;
+                    return this.columnAbility27;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill48Column {
+            public global::System.Data.DataColumn Ability28Column {
                 get {
-                    return this.columnSkill48;
+                    return this.columnAbility28;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill49Column {
+            public global::System.Data.DataColumn Ability29Column {
                 get {
-                    return this.columnSkill49;
+                    return this.columnAbility29;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Skill50Column {
+            public global::System.Data.DataColumn Ability30Column {
                 get {
-                    return this.columnSkill50;
+                    return this.columnAbility30;
                 }
             }
             
@@ -4439,7 +4439,7 @@ namespace Status_Editer {
                         int Algorithm, 
                         int AI_ID, 
                         sbyte Rare, 
-                        int Pert, 
+                        int Rare2, 
                         string Item1, 
                         ushort Per1, 
                         string Item2, 
@@ -4470,36 +4470,36 @@ namespace Status_Editer {
                         string Skill18, 
                         string Skill19, 
                         string Skill20, 
-                        string Skill21, 
-                        string Skill22, 
-                        string Skill23, 
-                        string Skill24, 
-                        string Skill25, 
-                        string Skill26, 
-                        string Skill27, 
-                        string Skill28, 
-                        string Skill29, 
-                        string Skill30, 
-                        string Skill31, 
-                        string Skill32, 
-                        string Skill33, 
-                        string Skill34, 
-                        string Skill35, 
-                        string Skill36, 
-                        string Skill37, 
-                        string Skill38, 
-                        string Skill39, 
-                        string Skill40, 
-                        string Skill41, 
-                        string Skill42, 
-                        string Skill43, 
-                        string Skill44, 
-                        string Skill45, 
-                        string Skill46, 
-                        string Skill47, 
-                        string Skill48, 
-                        string Skill49, 
-                        string Skill50, 
+                        string Ability1, 
+                        string Ability2, 
+                        string Ability3, 
+                        string Ability4, 
+                        string Ability5, 
+                        string Ability6, 
+                        string Ability7, 
+                        string Ability8, 
+                        string Ability9, 
+                        string Ability10, 
+                        string Ability11, 
+                        string Ability12, 
+                        string Ability13, 
+                        string Ability14, 
+                        string Ability15, 
+                        string Ability16, 
+                        string Ability17, 
+                        string Ability18, 
+                        string Ability19, 
+                        string Ability20, 
+                        string Ability21, 
+                        string Ability22, 
+                        string Ability23, 
+                        string Ability24, 
+                        string Ability25, 
+                        string Ability26, 
+                        string Ability27, 
+                        string Ability28, 
+                        string Ability29, 
+                        string Ability30, 
                         string Info) {
                 @__table_monsterRow row__table_monsterRow = ((@__table_monsterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -4558,7 +4558,7 @@ namespace Status_Editer {
                         Algorithm,
                         AI_ID,
                         Rare,
-                        Pert,
+                        Rare2,
                         Item1,
                         Per1,
                         Item2,
@@ -4589,36 +4589,36 @@ namespace Status_Editer {
                         Skill18,
                         Skill19,
                         Skill20,
-                        Skill21,
-                        Skill22,
-                        Skill23,
-                        Skill24,
-                        Skill25,
-                        Skill26,
-                        Skill27,
-                        Skill28,
-                        Skill29,
-                        Skill30,
-                        Skill31,
-                        Skill32,
-                        Skill33,
-                        Skill34,
-                        Skill35,
-                        Skill36,
-                        Skill37,
-                        Skill38,
-                        Skill39,
-                        Skill40,
-                        Skill41,
-                        Skill42,
-                        Skill43,
-                        Skill44,
-                        Skill45,
-                        Skill46,
-                        Skill47,
-                        Skill48,
-                        Skill49,
-                        Skill50,
+                        Ability1,
+                        Ability2,
+                        Ability3,
+                        Ability4,
+                        Ability5,
+                        Ability6,
+                        Ability7,
+                        Ability8,
+                        Ability9,
+                        Ability10,
+                        Ability11,
+                        Ability12,
+                        Ability13,
+                        Ability14,
+                        Ability15,
+                        Ability16,
+                        Ability17,
+                        Ability18,
+                        Ability19,
+                        Ability20,
+                        Ability21,
+                        Ability22,
+                        Ability23,
+                        Ability24,
+                        Ability25,
+                        Ability26,
+                        Ability27,
+                        Ability28,
+                        Ability29,
+                        Ability30,
                         Info};
                 row__table_monsterRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row__table_monsterRow);
@@ -4704,7 +4704,7 @@ namespace Status_Editer {
                 this.columnAlgorithm = base.Columns["Algorithm"];
                 this.columnAI_ID = base.Columns["AI ID"];
                 this.columnRare = base.Columns["Rare"];
-                this.columnPert = base.Columns["Pert"];
+                this.columnRare2 = base.Columns["Rare2"];
                 this.columnItem1 = base.Columns["Item1"];
                 this.columnPer1 = base.Columns["Per1"];
                 this.columnItem2 = base.Columns["Item2"];
@@ -4735,36 +4735,36 @@ namespace Status_Editer {
                 this.columnSkill18 = base.Columns["Skill18"];
                 this.columnSkill19 = base.Columns["Skill19"];
                 this.columnSkill20 = base.Columns["Skill20"];
-                this.columnSkill21 = base.Columns["Skill21"];
-                this.columnSkill22 = base.Columns["Skill22"];
-                this.columnSkill23 = base.Columns["Skill23"];
-                this.columnSkill24 = base.Columns["Skill24"];
-                this.columnSkill25 = base.Columns["Skill25"];
-                this.columnSkill26 = base.Columns["Skill26"];
-                this.columnSkill27 = base.Columns["Skill27"];
-                this.columnSkill28 = base.Columns["Skill28"];
-                this.columnSkill29 = base.Columns["Skill29"];
-                this.columnSkill30 = base.Columns["Skill30"];
-                this.columnSkill31 = base.Columns["Skill31"];
-                this.columnSkill32 = base.Columns["Skill32"];
-                this.columnSkill33 = base.Columns["Skill33"];
-                this.columnSkill34 = base.Columns["Skill34"];
-                this.columnSkill35 = base.Columns["Skill35"];
-                this.columnSkill36 = base.Columns["Skill36"];
-                this.columnSkill37 = base.Columns["Skill37"];
-                this.columnSkill38 = base.Columns["Skill38"];
-                this.columnSkill39 = base.Columns["Skill39"];
-                this.columnSkill40 = base.Columns["Skill40"];
-                this.columnSkill41 = base.Columns["Skill41"];
-                this.columnSkill42 = base.Columns["Skill42"];
-                this.columnSkill43 = base.Columns["Skill43"];
-                this.columnSkill44 = base.Columns["Skill44"];
-                this.columnSkill45 = base.Columns["Skill45"];
-                this.columnSkill46 = base.Columns["Skill46"];
-                this.columnSkill47 = base.Columns["Skill47"];
-                this.columnSkill48 = base.Columns["Skill48"];
-                this.columnSkill49 = base.Columns["Skill49"];
-                this.columnSkill50 = base.Columns["Skill50"];
+                this.columnAbility1 = base.Columns["Ability1"];
+                this.columnAbility2 = base.Columns["Ability2"];
+                this.columnAbility3 = base.Columns["Ability3"];
+                this.columnAbility4 = base.Columns["Ability4"];
+                this.columnAbility5 = base.Columns["Ability5"];
+                this.columnAbility6 = base.Columns["Ability6"];
+                this.columnAbility7 = base.Columns["Ability7"];
+                this.columnAbility8 = base.Columns["Ability8"];
+                this.columnAbility9 = base.Columns["Ability9"];
+                this.columnAbility10 = base.Columns["Ability10"];
+                this.columnAbility11 = base.Columns["Ability11"];
+                this.columnAbility12 = base.Columns["Ability12"];
+                this.columnAbility13 = base.Columns["Ability13"];
+                this.columnAbility14 = base.Columns["Ability14"];
+                this.columnAbility15 = base.Columns["Ability15"];
+                this.columnAbility16 = base.Columns["Ability16"];
+                this.columnAbility17 = base.Columns["Ability17"];
+                this.columnAbility18 = base.Columns["Ability18"];
+                this.columnAbility19 = base.Columns["Ability19"];
+                this.columnAbility20 = base.Columns["Ability20"];
+                this.columnAbility21 = base.Columns["Ability21"];
+                this.columnAbility22 = base.Columns["Ability22"];
+                this.columnAbility23 = base.Columns["Ability23"];
+                this.columnAbility24 = base.Columns["Ability24"];
+                this.columnAbility25 = base.Columns["Ability25"];
+                this.columnAbility26 = base.Columns["Ability26"];
+                this.columnAbility27 = base.Columns["Ability27"];
+                this.columnAbility28 = base.Columns["Ability28"];
+                this.columnAbility29 = base.Columns["Ability29"];
+                this.columnAbility30 = base.Columns["Ability30"];
                 this.columnInfo = base.Columns["Info"];
             }
             
@@ -4881,8 +4881,8 @@ namespace Status_Editer {
                 base.Columns.Add(this.columnAI_ID);
                 this.columnRare = new global::System.Data.DataColumn("Rare", typeof(sbyte), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRare);
-                this.columnPert = new global::System.Data.DataColumn("Pert", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPert);
+                this.columnRare2 = new global::System.Data.DataColumn("Rare2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRare2);
                 this.columnItem1 = new global::System.Data.DataColumn("Item1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItem1);
                 this.columnPer1 = new global::System.Data.DataColumn("Per1", typeof(ushort), null, global::System.Data.MappingType.Element);
@@ -4943,66 +4943,66 @@ namespace Status_Editer {
                 base.Columns.Add(this.columnSkill19);
                 this.columnSkill20 = new global::System.Data.DataColumn("Skill20", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSkill20);
-                this.columnSkill21 = new global::System.Data.DataColumn("Skill21", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill21);
-                this.columnSkill22 = new global::System.Data.DataColumn("Skill22", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill22);
-                this.columnSkill23 = new global::System.Data.DataColumn("Skill23", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill23);
-                this.columnSkill24 = new global::System.Data.DataColumn("Skill24", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill24);
-                this.columnSkill25 = new global::System.Data.DataColumn("Skill25", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill25);
-                this.columnSkill26 = new global::System.Data.DataColumn("Skill26", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill26);
-                this.columnSkill27 = new global::System.Data.DataColumn("Skill27", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill27);
-                this.columnSkill28 = new global::System.Data.DataColumn("Skill28", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill28);
-                this.columnSkill29 = new global::System.Data.DataColumn("Skill29", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill29);
-                this.columnSkill30 = new global::System.Data.DataColumn("Skill30", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill30);
-                this.columnSkill31 = new global::System.Data.DataColumn("Skill31", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill31);
-                this.columnSkill32 = new global::System.Data.DataColumn("Skill32", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill32);
-                this.columnSkill33 = new global::System.Data.DataColumn("Skill33", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill33);
-                this.columnSkill34 = new global::System.Data.DataColumn("Skill34", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill34);
-                this.columnSkill35 = new global::System.Data.DataColumn("Skill35", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill35);
-                this.columnSkill36 = new global::System.Data.DataColumn("Skill36", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill36);
-                this.columnSkill37 = new global::System.Data.DataColumn("Skill37", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill37);
-                this.columnSkill38 = new global::System.Data.DataColumn("Skill38", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill38);
-                this.columnSkill39 = new global::System.Data.DataColumn("Skill39", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill39);
-                this.columnSkill40 = new global::System.Data.DataColumn("Skill40", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill40);
-                this.columnSkill41 = new global::System.Data.DataColumn("Skill41", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill41);
-                this.columnSkill42 = new global::System.Data.DataColumn("Skill42", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill42);
-                this.columnSkill43 = new global::System.Data.DataColumn("Skill43", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill43);
-                this.columnSkill44 = new global::System.Data.DataColumn("Skill44", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill44);
-                this.columnSkill45 = new global::System.Data.DataColumn("Skill45", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill45);
-                this.columnSkill46 = new global::System.Data.DataColumn("Skill46", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill46);
-                this.columnSkill47 = new global::System.Data.DataColumn("Skill47", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill47);
-                this.columnSkill48 = new global::System.Data.DataColumn("Skill48", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill48);
-                this.columnSkill49 = new global::System.Data.DataColumn("Skill49", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill49);
-                this.columnSkill50 = new global::System.Data.DataColumn("Skill50", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSkill50);
+                this.columnAbility1 = new global::System.Data.DataColumn("Ability1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility1);
+                this.columnAbility2 = new global::System.Data.DataColumn("Ability2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility2);
+                this.columnAbility3 = new global::System.Data.DataColumn("Ability3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility3);
+                this.columnAbility4 = new global::System.Data.DataColumn("Ability4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility4);
+                this.columnAbility5 = new global::System.Data.DataColumn("Ability5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility5);
+                this.columnAbility6 = new global::System.Data.DataColumn("Ability6", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility6);
+                this.columnAbility7 = new global::System.Data.DataColumn("Ability7", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility7);
+                this.columnAbility8 = new global::System.Data.DataColumn("Ability8", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility8);
+                this.columnAbility9 = new global::System.Data.DataColumn("Ability9", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility9);
+                this.columnAbility10 = new global::System.Data.DataColumn("Ability10", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility10);
+                this.columnAbility11 = new global::System.Data.DataColumn("Ability11", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility11);
+                this.columnAbility12 = new global::System.Data.DataColumn("Ability12", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility12);
+                this.columnAbility13 = new global::System.Data.DataColumn("Ability13", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility13);
+                this.columnAbility14 = new global::System.Data.DataColumn("Ability14", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility14);
+                this.columnAbility15 = new global::System.Data.DataColumn("Ability15", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility15);
+                this.columnAbility16 = new global::System.Data.DataColumn("Ability16", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility16);
+                this.columnAbility17 = new global::System.Data.DataColumn("Ability17", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility17);
+                this.columnAbility18 = new global::System.Data.DataColumn("Ability18", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility18);
+                this.columnAbility19 = new global::System.Data.DataColumn("Ability19", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility19);
+                this.columnAbility20 = new global::System.Data.DataColumn("Ability20", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility20);
+                this.columnAbility21 = new global::System.Data.DataColumn("Ability21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility21);
+                this.columnAbility22 = new global::System.Data.DataColumn("Ability22", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility22);
+                this.columnAbility23 = new global::System.Data.DataColumn("Ability23", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility23);
+                this.columnAbility24 = new global::System.Data.DataColumn("Ability24", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility24);
+                this.columnAbility25 = new global::System.Data.DataColumn("Ability25", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility25);
+                this.columnAbility26 = new global::System.Data.DataColumn("Ability26", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility26);
+                this.columnAbility27 = new global::System.Data.DataColumn("Ability27", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility27);
+                this.columnAbility28 = new global::System.Data.DataColumn("Ability28", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility28);
+                this.columnAbility29 = new global::System.Data.DataColumn("Ability29", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility29);
+                this.columnAbility30 = new global::System.Data.DataColumn("Ability30", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbility30);
                 this.columnInfo = new global::System.Data.DataColumn("Info", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInfo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -5066,7 +5066,7 @@ namespace Status_Editer {
                 this.columnAlgorithm.AllowDBNull = false;
                 this.columnAI_ID.AllowDBNull = false;
                 this.columnRare.AllowDBNull = false;
-                this.columnPert.AllowDBNull = false;
+                this.columnRare2.AllowDBNull = false;
                 this.columnItem1.AllowDBNull = false;
                 this.columnItem1.MaxLength = 32;
                 this.columnPer1.AllowDBNull = false;
@@ -5122,66 +5122,66 @@ namespace Status_Editer {
                 this.columnSkill19.MaxLength = 32;
                 this.columnSkill20.AllowDBNull = false;
                 this.columnSkill20.MaxLength = 32;
-                this.columnSkill21.AllowDBNull = false;
-                this.columnSkill21.MaxLength = 32;
-                this.columnSkill22.AllowDBNull = false;
-                this.columnSkill22.MaxLength = 32;
-                this.columnSkill23.AllowDBNull = false;
-                this.columnSkill23.MaxLength = 32;
-                this.columnSkill24.AllowDBNull = false;
-                this.columnSkill24.MaxLength = 32;
-                this.columnSkill25.AllowDBNull = false;
-                this.columnSkill25.MaxLength = 32;
-                this.columnSkill26.AllowDBNull = false;
-                this.columnSkill26.MaxLength = 32;
-                this.columnSkill27.AllowDBNull = false;
-                this.columnSkill27.MaxLength = 32;
-                this.columnSkill28.AllowDBNull = false;
-                this.columnSkill28.MaxLength = 32;
-                this.columnSkill29.AllowDBNull = false;
-                this.columnSkill29.MaxLength = 32;
-                this.columnSkill30.AllowDBNull = false;
-                this.columnSkill30.MaxLength = 32;
-                this.columnSkill31.AllowDBNull = false;
-                this.columnSkill31.MaxLength = 32;
-                this.columnSkill32.AllowDBNull = false;
-                this.columnSkill32.MaxLength = 32;
-                this.columnSkill33.AllowDBNull = false;
-                this.columnSkill33.MaxLength = 32;
-                this.columnSkill34.AllowDBNull = false;
-                this.columnSkill34.MaxLength = 32;
-                this.columnSkill35.AllowDBNull = false;
-                this.columnSkill35.MaxLength = 32;
-                this.columnSkill36.AllowDBNull = false;
-                this.columnSkill36.MaxLength = 32;
-                this.columnSkill37.AllowDBNull = false;
-                this.columnSkill37.MaxLength = 32;
-                this.columnSkill38.AllowDBNull = false;
-                this.columnSkill38.MaxLength = 32;
-                this.columnSkill39.AllowDBNull = false;
-                this.columnSkill39.MaxLength = 32;
-                this.columnSkill40.AllowDBNull = false;
-                this.columnSkill40.MaxLength = 32;
-                this.columnSkill41.AllowDBNull = false;
-                this.columnSkill41.MaxLength = 32;
-                this.columnSkill42.AllowDBNull = false;
-                this.columnSkill42.MaxLength = 32;
-                this.columnSkill43.AllowDBNull = false;
-                this.columnSkill43.MaxLength = 32;
-                this.columnSkill44.AllowDBNull = false;
-                this.columnSkill44.MaxLength = 32;
-                this.columnSkill45.AllowDBNull = false;
-                this.columnSkill45.MaxLength = 32;
-                this.columnSkill46.AllowDBNull = false;
-                this.columnSkill46.MaxLength = 32;
-                this.columnSkill47.AllowDBNull = false;
-                this.columnSkill47.MaxLength = 32;
-                this.columnSkill48.AllowDBNull = false;
-                this.columnSkill48.MaxLength = 32;
-                this.columnSkill49.AllowDBNull = false;
-                this.columnSkill49.MaxLength = 32;
-                this.columnSkill50.AllowDBNull = false;
-                this.columnSkill50.MaxLength = 32;
+                this.columnAbility1.AllowDBNull = false;
+                this.columnAbility1.MaxLength = 32;
+                this.columnAbility2.AllowDBNull = false;
+                this.columnAbility2.MaxLength = 32;
+                this.columnAbility3.AllowDBNull = false;
+                this.columnAbility3.MaxLength = 32;
+                this.columnAbility4.AllowDBNull = false;
+                this.columnAbility4.MaxLength = 32;
+                this.columnAbility5.AllowDBNull = false;
+                this.columnAbility5.MaxLength = 32;
+                this.columnAbility6.AllowDBNull = false;
+                this.columnAbility6.MaxLength = 32;
+                this.columnAbility7.AllowDBNull = false;
+                this.columnAbility7.MaxLength = 32;
+                this.columnAbility8.AllowDBNull = false;
+                this.columnAbility8.MaxLength = 32;
+                this.columnAbility9.AllowDBNull = false;
+                this.columnAbility9.MaxLength = 32;
+                this.columnAbility10.AllowDBNull = false;
+                this.columnAbility10.MaxLength = 32;
+                this.columnAbility11.AllowDBNull = false;
+                this.columnAbility11.MaxLength = 32;
+                this.columnAbility12.AllowDBNull = false;
+                this.columnAbility12.MaxLength = 32;
+                this.columnAbility13.AllowDBNull = false;
+                this.columnAbility13.MaxLength = 32;
+                this.columnAbility14.AllowDBNull = false;
+                this.columnAbility14.MaxLength = 32;
+                this.columnAbility15.AllowDBNull = false;
+                this.columnAbility15.MaxLength = 32;
+                this.columnAbility16.AllowDBNull = false;
+                this.columnAbility16.MaxLength = 32;
+                this.columnAbility17.AllowDBNull = false;
+                this.columnAbility17.MaxLength = 32;
+                this.columnAbility18.AllowDBNull = false;
+                this.columnAbility18.MaxLength = 32;
+                this.columnAbility19.AllowDBNull = false;
+                this.columnAbility19.MaxLength = 32;
+                this.columnAbility20.AllowDBNull = false;
+                this.columnAbility20.MaxLength = 32;
+                this.columnAbility21.AllowDBNull = false;
+                this.columnAbility21.MaxLength = 32;
+                this.columnAbility22.AllowDBNull = false;
+                this.columnAbility22.MaxLength = 32;
+                this.columnAbility23.AllowDBNull = false;
+                this.columnAbility23.MaxLength = 32;
+                this.columnAbility24.AllowDBNull = false;
+                this.columnAbility24.MaxLength = 32;
+                this.columnAbility25.AllowDBNull = false;
+                this.columnAbility25.MaxLength = 32;
+                this.columnAbility26.AllowDBNull = false;
+                this.columnAbility26.MaxLength = 32;
+                this.columnAbility27.AllowDBNull = false;
+                this.columnAbility27.MaxLength = 32;
+                this.columnAbility28.AllowDBNull = false;
+                this.columnAbility28.MaxLength = 32;
+                this.columnAbility29.AllowDBNull = false;
+                this.columnAbility29.MaxLength = 32;
+                this.columnAbility30.AllowDBNull = false;
+                this.columnAbility30.MaxLength = 32;
                 this.columnInfo.AllowDBNull = false;
                 this.columnInfo.MaxLength = 256;
             }
@@ -10557,12 +10557,12 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Pert {
+            public int Rare2 {
                 get {
-                    return ((int)(this[this.table__table_monster.PertColumn]));
+                    return ((int)(this[this.table__table_monster.Rare2Column]));
                 }
                 set {
-                    this[this.table__table_monster.PertColumn] = value;
+                    this[this.table__table_monster.Rare2Column] = value;
                 }
             }
             
@@ -10898,331 +10898,331 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill21 {
+            public string Ability1 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill21Column]));
+                    return ((string)(this[this.table__table_monster.Ability1Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill21Column] = value;
+                    this[this.table__table_monster.Ability1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill22 {
+            public string Ability2 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill22Column]));
+                    return ((string)(this[this.table__table_monster.Ability2Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill22Column] = value;
+                    this[this.table__table_monster.Ability2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill23 {
+            public string Ability3 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill23Column]));
+                    return ((string)(this[this.table__table_monster.Ability3Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill23Column] = value;
+                    this[this.table__table_monster.Ability3Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill24 {
+            public string Ability4 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill24Column]));
+                    return ((string)(this[this.table__table_monster.Ability4Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill24Column] = value;
+                    this[this.table__table_monster.Ability4Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill25 {
+            public string Ability5 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill25Column]));
+                    return ((string)(this[this.table__table_monster.Ability5Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill25Column] = value;
+                    this[this.table__table_monster.Ability5Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill26 {
+            public string Ability6 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill26Column]));
+                    return ((string)(this[this.table__table_monster.Ability6Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill26Column] = value;
+                    this[this.table__table_monster.Ability6Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill27 {
+            public string Ability7 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill27Column]));
+                    return ((string)(this[this.table__table_monster.Ability7Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill27Column] = value;
+                    this[this.table__table_monster.Ability7Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill28 {
+            public string Ability8 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill28Column]));
+                    return ((string)(this[this.table__table_monster.Ability8Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill28Column] = value;
+                    this[this.table__table_monster.Ability8Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill29 {
+            public string Ability9 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill29Column]));
+                    return ((string)(this[this.table__table_monster.Ability9Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill29Column] = value;
+                    this[this.table__table_monster.Ability9Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill30 {
+            public string Ability10 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill30Column]));
+                    return ((string)(this[this.table__table_monster.Ability10Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill30Column] = value;
+                    this[this.table__table_monster.Ability10Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill31 {
+            public string Ability11 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill31Column]));
+                    return ((string)(this[this.table__table_monster.Ability11Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill31Column] = value;
+                    this[this.table__table_monster.Ability11Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill32 {
+            public string Ability12 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill32Column]));
+                    return ((string)(this[this.table__table_monster.Ability12Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill32Column] = value;
+                    this[this.table__table_monster.Ability12Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill33 {
+            public string Ability13 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill33Column]));
+                    return ((string)(this[this.table__table_monster.Ability13Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill33Column] = value;
+                    this[this.table__table_monster.Ability13Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill34 {
+            public string Ability14 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill34Column]));
+                    return ((string)(this[this.table__table_monster.Ability14Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill34Column] = value;
+                    this[this.table__table_monster.Ability14Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill35 {
+            public string Ability15 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill35Column]));
+                    return ((string)(this[this.table__table_monster.Ability15Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill35Column] = value;
+                    this[this.table__table_monster.Ability15Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill36 {
+            public string Ability16 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill36Column]));
+                    return ((string)(this[this.table__table_monster.Ability16Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill36Column] = value;
+                    this[this.table__table_monster.Ability16Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill37 {
+            public string Ability17 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill37Column]));
+                    return ((string)(this[this.table__table_monster.Ability17Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill37Column] = value;
+                    this[this.table__table_monster.Ability17Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill38 {
+            public string Ability18 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill38Column]));
+                    return ((string)(this[this.table__table_monster.Ability18Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill38Column] = value;
+                    this[this.table__table_monster.Ability18Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill39 {
+            public string Ability19 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill39Column]));
+                    return ((string)(this[this.table__table_monster.Ability19Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill39Column] = value;
+                    this[this.table__table_monster.Ability19Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill40 {
+            public string Ability20 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill40Column]));
+                    return ((string)(this[this.table__table_monster.Ability20Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill40Column] = value;
+                    this[this.table__table_monster.Ability20Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill41 {
+            public string Ability21 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill41Column]));
+                    return ((string)(this[this.table__table_monster.Ability21Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill41Column] = value;
+                    this[this.table__table_monster.Ability21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill42 {
+            public string Ability22 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill42Column]));
+                    return ((string)(this[this.table__table_monster.Ability22Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill42Column] = value;
+                    this[this.table__table_monster.Ability22Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill43 {
+            public string Ability23 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill43Column]));
+                    return ((string)(this[this.table__table_monster.Ability23Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill43Column] = value;
+                    this[this.table__table_monster.Ability23Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill44 {
+            public string Ability24 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill44Column]));
+                    return ((string)(this[this.table__table_monster.Ability24Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill44Column] = value;
+                    this[this.table__table_monster.Ability24Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill45 {
+            public string Ability25 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill45Column]));
+                    return ((string)(this[this.table__table_monster.Ability25Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill45Column] = value;
+                    this[this.table__table_monster.Ability25Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill46 {
+            public string Ability26 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill46Column]));
+                    return ((string)(this[this.table__table_monster.Ability26Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill46Column] = value;
+                    this[this.table__table_monster.Ability26Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill47 {
+            public string Ability27 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill47Column]));
+                    return ((string)(this[this.table__table_monster.Ability27Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill47Column] = value;
+                    this[this.table__table_monster.Ability27Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill48 {
+            public string Ability28 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill48Column]));
+                    return ((string)(this[this.table__table_monster.Ability28Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill48Column] = value;
+                    this[this.table__table_monster.Ability28Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill49 {
+            public string Ability29 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill49Column]));
+                    return ((string)(this[this.table__table_monster.Ability29Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill49Column] = value;
+                    this[this.table__table_monster.Ability29Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Skill50 {
+            public string Ability30 {
                 get {
-                    return ((string)(this[this.table__table_monster.Skill50Column]));
+                    return ((string)(this[this.table__table_monster.Ability30Column]));
                 }
                 set {
-                    this[this.table__table_monster.Skill50Column] = value;
+                    this[this.table__table_monster.Ability30Column] = value;
                 }
             }
             
@@ -19566,7 +19566,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Algorithm", "Algorithm");
             tableMapping.ColumnMappings.Add("AI ID", "AI ID");
             tableMapping.ColumnMappings.Add("Rare", "Rare");
-            tableMapping.ColumnMappings.Add("Pert", "Pert");
+            tableMapping.ColumnMappings.Add("Rare2", "Rare2");
             tableMapping.ColumnMappings.Add("Item1", "Item1");
             tableMapping.ColumnMappings.Add("Per1", "Per1");
             tableMapping.ColumnMappings.Add("Item2", "Item2");
@@ -19597,36 +19597,36 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Skill18", "Skill18");
             tableMapping.ColumnMappings.Add("Skill19", "Skill19");
             tableMapping.ColumnMappings.Add("Skill20", "Skill20");
-            tableMapping.ColumnMappings.Add("Skill21", "Skill21");
-            tableMapping.ColumnMappings.Add("Skill22", "Skill22");
-            tableMapping.ColumnMappings.Add("Skill23", "Skill23");
-            tableMapping.ColumnMappings.Add("Skill24", "Skill24");
-            tableMapping.ColumnMappings.Add("Skill25", "Skill25");
-            tableMapping.ColumnMappings.Add("Skill26", "Skill26");
-            tableMapping.ColumnMappings.Add("Skill27", "Skill27");
-            tableMapping.ColumnMappings.Add("Skill28", "Skill28");
-            tableMapping.ColumnMappings.Add("Skill29", "Skill29");
-            tableMapping.ColumnMappings.Add("Skill30", "Skill30");
-            tableMapping.ColumnMappings.Add("Skill31", "Skill31");
-            tableMapping.ColumnMappings.Add("Skill32", "Skill32");
-            tableMapping.ColumnMappings.Add("Skill33", "Skill33");
-            tableMapping.ColumnMappings.Add("Skill34", "Skill34");
-            tableMapping.ColumnMappings.Add("Skill35", "Skill35");
-            tableMapping.ColumnMappings.Add("Skill36", "Skill36");
-            tableMapping.ColumnMappings.Add("Skill37", "Skill37");
-            tableMapping.ColumnMappings.Add("Skill38", "Skill38");
-            tableMapping.ColumnMappings.Add("Skill39", "Skill39");
-            tableMapping.ColumnMappings.Add("Skill40", "Skill40");
-            tableMapping.ColumnMappings.Add("Skill41", "Skill41");
-            tableMapping.ColumnMappings.Add("Skill42", "Skill42");
-            tableMapping.ColumnMappings.Add("Skill43", "Skill43");
-            tableMapping.ColumnMappings.Add("Skill44", "Skill44");
-            tableMapping.ColumnMappings.Add("Skill45", "Skill45");
-            tableMapping.ColumnMappings.Add("Skill46", "Skill46");
-            tableMapping.ColumnMappings.Add("Skill47", "Skill47");
-            tableMapping.ColumnMappings.Add("Skill48", "Skill48");
-            tableMapping.ColumnMappings.Add("Skill49", "Skill49");
-            tableMapping.ColumnMappings.Add("Skill50", "Skill50");
+            tableMapping.ColumnMappings.Add("Ability1", "Ability1");
+            tableMapping.ColumnMappings.Add("Ability2", "Ability2");
+            tableMapping.ColumnMappings.Add("Ability3", "Ability3");
+            tableMapping.ColumnMappings.Add("Ability4", "Ability4");
+            tableMapping.ColumnMappings.Add("Ability5", "Ability5");
+            tableMapping.ColumnMappings.Add("Ability6", "Ability6");
+            tableMapping.ColumnMappings.Add("Ability7", "Ability7");
+            tableMapping.ColumnMappings.Add("Ability8", "Ability8");
+            tableMapping.ColumnMappings.Add("Ability9", "Ability9");
+            tableMapping.ColumnMappings.Add("Ability10", "Ability10");
+            tableMapping.ColumnMappings.Add("Ability11", "Ability11");
+            tableMapping.ColumnMappings.Add("Ability12", "Ability12");
+            tableMapping.ColumnMappings.Add("Ability13", "Ability13");
+            tableMapping.ColumnMappings.Add("Ability14", "Ability14");
+            tableMapping.ColumnMappings.Add("Ability15", "Ability15");
+            tableMapping.ColumnMappings.Add("Ability16", "Ability16");
+            tableMapping.ColumnMappings.Add("Ability17", "Ability17");
+            tableMapping.ColumnMappings.Add("Ability18", "Ability18");
+            tableMapping.ColumnMappings.Add("Ability19", "Ability19");
+            tableMapping.ColumnMappings.Add("Ability20", "Ability20");
+            tableMapping.ColumnMappings.Add("Ability21", "Ability21");
+            tableMapping.ColumnMappings.Add("Ability22", "Ability22");
+            tableMapping.ColumnMappings.Add("Ability23", "Ability23");
+            tableMapping.ColumnMappings.Add("Ability24", "Ability24");
+            tableMapping.ColumnMappings.Add("Ability25", "Ability25");
+            tableMapping.ColumnMappings.Add("Ability26", "Ability26");
+            tableMapping.ColumnMappings.Add("Ability27", "Ability27");
+            tableMapping.ColumnMappings.Add("Ability28", "Ability28");
+            tableMapping.ColumnMappings.Add("Ability29", "Ability29");
+            tableMapping.ColumnMappings.Add("Ability30", "Ability30");
             tableMapping.ColumnMappings.Add("Info", "Info");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
@@ -19646,25 +19646,25 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                 " @p41) AND (`SPD Per` = @p42) AND (`EXP Per` = @p43) AND (`MNY Per` = @p44) AND " +
                 "(`WT` = @p45) AND (`SSP` = @p46) AND (`SPC` = @p47) AND (`ATC` = @p48) AND (`Typ" +
                 "e` = @p49) AND (`DMG Per` = @p50) AND (`Air` = @p51) AND (`Ver` = @p52) AND (`Al" +
-                "gorithm` = @p53) AND (`AI ID` = @p54) AND (`Rare` = @p55) AND (`Pert` = @p56) AN" +
-                "D (`Item1` = @p57) AND (`Per1` = @p58) AND (`Item2` = @p59) AND (`Per2` = @p60) " +
-                "AND (`Item3` = @p61) AND (`Per3` = @p62) AND (`Item4` = @p63) AND (`Per4` = @p64" +
-                ") AND (`Item5` = @p65) AND (`Per5` = @p66) AND (`Skill1` = @p67) AND (`Skill2` =" +
-                " @p68) AND (`Skill3` = @p69) AND (`Skill4` = @p70) AND (`Skill5` = @p71) AND (`S" +
-                "kill6` = @p72) AND (`Skill7` = @p73) AND (`Skill8` = @p74) AND (`Skill9` = @p75)" +
-                " AND (`Skill10` = @p76) AND (`Skill11` = @p77) AND (`Skill12` = @p78) AND (`Skil" +
-                "l13` = @p79) AND (`Skill14` = @p80) AND (`Skill15` = @p81) AND (`Skill16` = @p82" +
-                ") AND (`Skill17` = @p83) AND (`Skill18` = @p84) AND (`Skill19` = @p85) AND (`Ski" +
-                "ll20` = @p86) AND (`Skill21` = @p87) AND (`Skill22` = @p88) AND (`Skill23` = @p8" +
-                "9) AND (`Skill24` = @p90) AND (`Skill25` = @p91) AND (`Skill26` = @p92) AND (`Sk" +
-                "ill27` = @p93) AND (`Skill28` = @p94) AND (`Skill29` = @p95) AND (`Skill30` = @p" +
-                "96) AND (`Skill31` = @p97) AND (`Skill32` = @p98) AND (`Skill33` = @p99) AND (`S" +
-                "kill34` = @p100) AND (`Skill35` = @p101) AND (`Skill36` = @p102) AND (`Skill37` " +
-                "= @p103) AND (`Skill38` = @p104) AND (`Skill39` = @p105) AND (`Skill40` = @p106)" +
-                " AND (`Skill41` = @p107) AND (`Skill42` = @p108) AND (`Skill43` = @p109) AND (`S" +
-                "kill44` = @p110) AND (`Skill45` = @p111) AND (`Skill46` = @p112) AND (`Skill47` " +
-                "= @p113) AND (`Skill48` = @p114) AND (`Skill49` = @p115) AND (`Skill50` = @p116)" +
-                " AND (`Info` = @p117))";
+                "gorithm` = @p53) AND (`AI ID` = @p54) AND (`Rare` = @p55) AND (`Rare2` = @p56) A" +
+                "ND (`Item1` = @p57) AND (`Per1` = @p58) AND (`Item2` = @p59) AND (`Per2` = @p60)" +
+                " AND (`Item3` = @p61) AND (`Per3` = @p62) AND (`Item4` = @p63) AND (`Per4` = @p6" +
+                "4) AND (`Item5` = @p65) AND (`Per5` = @p66) AND (`Skill1` = @p67) AND (`Skill2` " +
+                "= @p68) AND (`Skill3` = @p69) AND (`Skill4` = @p70) AND (`Skill5` = @p71) AND (`" +
+                "Skill6` = @p72) AND (`Skill7` = @p73) AND (`Skill8` = @p74) AND (`Skill9` = @p75" +
+                ") AND (`Skill10` = @p76) AND (`Skill11` = @p77) AND (`Skill12` = @p78) AND (`Ski" +
+                "ll13` = @p79) AND (`Skill14` = @p80) AND (`Skill15` = @p81) AND (`Skill16` = @p8" +
+                "2) AND (`Skill17` = @p83) AND (`Skill18` = @p84) AND (`Skill19` = @p85) AND (`Sk" +
+                "ill20` = @p86) AND (`Ability1` = @p87) AND (`Ability2` = @p88) AND (`Ability3` =" +
+                " @p89) AND (`Ability4` = @p90) AND (`Ability5` = @p91) AND (`Ability6` = @p92) A" +
+                "ND (`Ability7` = @p93) AND (`Ability8` = @p94) AND (`Ability9` = @p95) AND (`Abi" +
+                "lity10` = @p96) AND (`Ability11` = @p97) AND (`Ability12` = @p98) AND (`Ability1" +
+                "3` = @p99) AND (`Ability14` = @p100) AND (`Ability15` = @p101) AND (`Ability16` " +
+                "= @p102) AND (`Ability17` = @p103) AND (`Ability18` = @p104) AND (`Ability19` = " +
+                "@p105) AND (`Ability20` = @p106) AND (`Ability21` = @p107) AND (`Ability22` = @p" +
+                "108) AND (`Ability23` = @p109) AND (`Ability24` = @p110) AND (`Ability25` = @p11" +
+                "1) AND (`Ability26` = @p112) AND (`Ability27` = @p113) AND (`Ability28` = @p114)" +
+                " AND (`Ability29` = @p115) AND (`Ability30` = @p116) AND (`Info` = @p117))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -20111,7 +20111,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Pert";
+            param.SourceColumn = "Rare2";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20359,7 +20359,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill21";
+            param.SourceColumn = "Ability1";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20367,7 +20367,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill22";
+            param.SourceColumn = "Ability2";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20375,7 +20375,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill23";
+            param.SourceColumn = "Ability3";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20383,7 +20383,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill24";
+            param.SourceColumn = "Ability4";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20391,7 +20391,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill25";
+            param.SourceColumn = "Ability5";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20399,7 +20399,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill26";
+            param.SourceColumn = "Ability6";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20407,7 +20407,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill27";
+            param.SourceColumn = "Ability7";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20415,7 +20415,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill28";
+            param.SourceColumn = "Ability8";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20423,7 +20423,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill29";
+            param.SourceColumn = "Ability9";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20431,7 +20431,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill30";
+            param.SourceColumn = "Ability10";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20439,7 +20439,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill31";
+            param.SourceColumn = "Ability11";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20447,7 +20447,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill32";
+            param.SourceColumn = "Ability12";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20455,7 +20455,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill33";
+            param.SourceColumn = "Ability13";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20463,7 +20463,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill34";
+            param.SourceColumn = "Ability14";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20471,7 +20471,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill35";
+            param.SourceColumn = "Ability15";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20479,7 +20479,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill36";
+            param.SourceColumn = "Ability16";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20487,7 +20487,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill37";
+            param.SourceColumn = "Ability17";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20495,7 +20495,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill38";
+            param.SourceColumn = "Ability18";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20503,7 +20503,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill39";
+            param.SourceColumn = "Ability19";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20511,7 +20511,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill40";
+            param.SourceColumn = "Ability20";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20519,7 +20519,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill41";
+            param.SourceColumn = "Ability21";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20527,7 +20527,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill42";
+            param.SourceColumn = "Ability22";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20535,7 +20535,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill43";
+            param.SourceColumn = "Ability23";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20543,7 +20543,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill44";
+            param.SourceColumn = "Ability24";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20551,7 +20551,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill45";
+            param.SourceColumn = "Ability25";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20559,7 +20559,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill46";
+            param.SourceColumn = "Ability26";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20567,7 +20567,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill47";
+            param.SourceColumn = "Ability27";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20575,7 +20575,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill48";
+            param.SourceColumn = "Ability28";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20583,7 +20583,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill49";
+            param.SourceColumn = "Ability29";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20591,7 +20591,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill50";
+            param.SourceColumn = "Ability30";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -20611,24 +20611,25 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                 "icDEF`, `LvSPD`, `LvLUK`, `LvHIT`, `LvEVT`, `LvEXP`, `LvMNY`, `HP Per`, `MeleeAT" +
                 "KPer`, `MeleeDEFPer`, `RangeATKPer`, `RangeDEFPer`, `MagicATKPer`, `MagicDEFPer`" +
                 ", `SPD Per`, `EXP Per`, `MNY Per`, `WT`, `SSP`, `SPC`, `ATC`, `Type`, `DMG Per`," +
-                " `Air`, `Ver`, `Algorithm`, `AI ID`, `Rare`, `Pert`, `Item1`, `Per1`, `Item2`, `" +
-                "Per2`, `Item3`, `Per3`, `Item4`, `Per4`, `Item5`, `Per5`, `Skill1`, `Skill2`, `S" +
-                "kill3`, `Skill4`, `Skill5`, `Skill6`, `Skill7`, `Skill8`, `Skill9`, `Skill10`, `" +
-                "Skill11`, `Skill12`, `Skill13`, `Skill14`, `Skill15`, `Skill16`, `Skill17`, `Ski" +
-                "ll18`, `Skill19`, `Skill20`, `Skill21`, `Skill22`, `Skill23`, `Skill24`, `Skill2" +
-                "5`, `Skill26`, `Skill27`, `Skill28`, `Skill29`, `Skill30`, `Skill31`, `Skill32`," +
-                " `Skill33`, `Skill34`, `Skill35`, `Skill36`, `Skill37`, `Skill38`, `Skill39`, `S" +
-                "kill40`, `Skill41`, `Skill42`, `Skill43`, `Skill44`, `Skill45`, `Skill46`, `Skil" +
-                "l47`, `Skill48`, `Skill49`, `Skill50`, `Info`) VALUES (@p1, @p2, @p3, @p4, @p5, " +
-                "@p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, " +
-                "@p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p" +
-                "33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46" +
-                ", @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, " +
-                "@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, @p72, @p" +
-                "73, @p74, @p75, @p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, @p84, @p85, @p86" +
-                ", @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, @p99, " +
-                "@p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109, @p110, @p1" +
-                "11, @p112, @p113, @p114, @p115, @p116, @p117)";
+                " `Air`, `Ver`, `Algorithm`, `AI ID`, `Rare`, `Rare2`, `Item1`, `Per1`, `Item2`, " +
+                "`Per2`, `Item3`, `Per3`, `Item4`, `Per4`, `Item5`, `Per5`, `Skill1`, `Skill2`, `" +
+                "Skill3`, `Skill4`, `Skill5`, `Skill6`, `Skill7`, `Skill8`, `Skill9`, `Skill10`, " +
+                "`Skill11`, `Skill12`, `Skill13`, `Skill14`, `Skill15`, `Skill16`, `Skill17`, `Sk" +
+                "ill18`, `Skill19`, `Skill20`, `Ability1`, `Ability2`, `Ability3`, `Ability4`, `A" +
+                "bility5`, `Ability6`, `Ability7`, `Ability8`, `Ability9`, `Ability10`, `Ability1" +
+                "1`, `Ability12`, `Ability13`, `Ability14`, `Ability15`, `Ability16`, `Ability17`" +
+                ", `Ability18`, `Ability19`, `Ability20`, `Ability21`, `Ability22`, `Ability23`, " +
+                "`Ability24`, `Ability25`, `Ability26`, `Ability27`, `Ability28`, `Ability29`, `A" +
+                "bility30`, `Info`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p" +
+                "11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24" +
+                ", @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, " +
+                "@p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, @p50, @p" +
+                "51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64" +
+                ", @p65, @p66, @p67, @p68, @p69, @p70, @p71, @p72, @p73, @p74, @p75, @p76, @p77, " +
+                "@p78, @p79, @p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, @p90, @p" +
+                "91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, " +
+                "@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111, @p112, @p113, @p114, @p1" +
+                "15, @p116, @p117)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -21020,7 +21021,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Pert";
+            param.SourceColumn = "Rare2";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p57";
@@ -21237,210 +21238,210 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill21";
+            param.SourceColumn = "Ability1";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p88";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill22";
+            param.SourceColumn = "Ability2";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p89";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill23";
+            param.SourceColumn = "Ability3";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p90";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill24";
+            param.SourceColumn = "Ability4";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p91";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill25";
+            param.SourceColumn = "Ability5";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p92";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill26";
+            param.SourceColumn = "Ability6";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p93";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill27";
+            param.SourceColumn = "Ability7";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p94";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill28";
+            param.SourceColumn = "Ability8";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p95";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill29";
+            param.SourceColumn = "Ability9";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p96";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill30";
+            param.SourceColumn = "Ability10";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p97";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill31";
+            param.SourceColumn = "Ability11";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p98";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill32";
+            param.SourceColumn = "Ability12";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p99";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill33";
+            param.SourceColumn = "Ability13";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p100";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill34";
+            param.SourceColumn = "Ability14";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p101";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill35";
+            param.SourceColumn = "Ability15";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p102";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill36";
+            param.SourceColumn = "Ability16";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p103";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill37";
+            param.SourceColumn = "Ability17";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p104";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill38";
+            param.SourceColumn = "Ability18";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p105";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill39";
+            param.SourceColumn = "Ability19";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p106";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill40";
+            param.SourceColumn = "Ability20";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p107";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill41";
+            param.SourceColumn = "Ability21";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p108";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill42";
+            param.SourceColumn = "Ability22";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p109";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill43";
+            param.SourceColumn = "Ability23";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p110";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill44";
+            param.SourceColumn = "Ability24";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p111";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill45";
+            param.SourceColumn = "Ability25";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p112";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill46";
+            param.SourceColumn = "Ability26";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p113";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill47";
+            param.SourceColumn = "Ability27";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p114";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill48";
+            param.SourceColumn = "Ability28";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p115";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill49";
+            param.SourceColumn = "Ability29";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p116";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill50";
+            param.SourceColumn = "Ability30";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p117";
@@ -21463,55 +21464,56 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                 "ATKPer` = @p40, `MagicDEFPer` = @p41, `SPD Per` = @p42, `EXP Per` = @p43, `MNY P" +
                 "er` = @p44, `WT` = @p45, `SSP` = @p46, `SPC` = @p47, `ATC` = @p48, `Type` = @p49" +
                 ", `DMG Per` = @p50, `Air` = @p51, `Ver` = @p52, `Algorithm` = @p53, `AI ID` = @p" +
-                "54, `Rare` = @p55, `Pert` = @p56, `Item1` = @p57, `Per1` = @p58, `Item2` = @p59," +
-                " `Per2` = @p60, `Item3` = @p61, `Per3` = @p62, `Item4` = @p63, `Per4` = @p64, `I" +
-                "tem5` = @p65, `Per5` = @p66, `Skill1` = @p67, `Skill2` = @p68, `Skill3` = @p69, " +
-                "`Skill4` = @p70, `Skill5` = @p71, `Skill6` = @p72, `Skill7` = @p73, `Skill8` = @" +
-                "p74, `Skill9` = @p75, `Skill10` = @p76, `Skill11` = @p77, `Skill12` = @p78, `Ski" +
-                "ll13` = @p79, `Skill14` = @p80, `Skill15` = @p81, `Skill16` = @p82, `Skill17` = " +
-                "@p83, `Skill18` = @p84, `Skill19` = @p85, `Skill20` = @p86, `Skill21` = @p87, `S" +
-                "kill22` = @p88, `Skill23` = @p89, `Skill24` = @p90, `Skill25` = @p91, `Skill26` " +
-                "= @p92, `Skill27` = @p93, `Skill28` = @p94, `Skill29` = @p95, `Skill30` = @p96, " +
-                "`Skill31` = @p97, `Skill32` = @p98, `Skill33` = @p99, `Skill34` = @p100, `Skill3" +
-                "5` = @p101, `Skill36` = @p102, `Skill37` = @p103, `Skill38` = @p104, `Skill39` =" +
-                " @p105, `Skill40` = @p106, `Skill41` = @p107, `Skill42` = @p108, `Skill43` = @p1" +
-                "09, `Skill44` = @p110, `Skill45` = @p111, `Skill46` = @p112, `Skill47` = @p113, " +
-                "`Skill48` = @p114, `Skill49` = @p115, `Skill50` = @p116, `Info` = @p117 WHERE ((" +
-                "`MonsterID` = @p118) AND (`MonsterName` = @p119) AND (`Race` = @p120) AND (`Req " +
-                "Lv` = @p121) AND (`Min Lv` = @p122) AND (`Max Lv` = @p123) AND (`StartTP` = @p12" +
-                "4) AND (`MaxTP` = @p125) AND (`HP` = @p126) AND (`MeleeATK` = @p127) AND (`Melee" +
-                "DEF` = @p128) AND (`RangeATK` = @p129) AND (`RangeDEF` = @p130) AND (`MagicATK` " +
-                "= @p131) AND (`MagicDEF` = @p132) AND (`SPD` = @p133) AND (`LUK` = @p134) AND (`" +
-                "HIT` = @p135) AND (`EVT` = @p136) AND (`EXP` = @p137) AND (`MNY` = @p138) AND (`" +
-                "LvHP` = @p139) AND (`LvMeleeATK` = @p140) AND (`LvMeleeDEF` = @p141) AND (`LvRan" +
-                "geATK` = @p142) AND (`LvRangeDEF` = @p143) AND (`LvMagicATK` = @p144) AND (`LvMa" +
-                "gicDEF` = @p145) AND (`LvSPD` = @p146) AND (`LvLUK` = @p147) AND (`LvHIT` = @p14" +
-                "8) AND (`LvEVT` = @p149) AND (`LvEXP` = @p150) AND (`LvMNY` = @p151) AND (`HP Pe" +
-                "r` = @p152) AND (`MeleeATKPer` = @p153) AND (`MeleeDEFPer` = @p154) AND (`RangeA" +
-                "TKPer` = @p155) AND (`RangeDEFPer` = @p156) AND (`MagicATKPer` = @p157) AND (`Ma" +
-                "gicDEFPer` = @p158) AND (`SPD Per` = @p159) AND (`EXP Per` = @p160) AND (`MNY Pe" +
-                "r` = @p161) AND (`WT` = @p162) AND (`SSP` = @p163) AND (`SPC` = @p164) AND (`ATC" +
-                "` = @p165) AND (`Type` = @p166) AND (`DMG Per` = @p167) AND (`Air` = @p168) AND " +
-                "(`Ver` = @p169) AND (`Algorithm` = @p170) AND (`AI ID` = @p171) AND (`Rare` = @p" +
-                "172) AND (`Pert` = @p173) AND (`Item1` = @p174) AND (`Per1` = @p175) AND (`Item2" +
-                "` = @p176) AND (`Per2` = @p177) AND (`Item3` = @p178) AND (`Per3` = @p179) AND (" +
-                "`Item4` = @p180) AND (`Per4` = @p181) AND (`Item5` = @p182) AND (`Per5` = @p183)" +
-                " AND (`Skill1` = @p184) AND (`Skill2` = @p185) AND (`Skill3` = @p186) AND (`Skil" +
-                "l4` = @p187) AND (`Skill5` = @p188) AND (`Skill6` = @p189) AND (`Skill7` = @p190" +
-                ") AND (`Skill8` = @p191) AND (`Skill9` = @p192) AND (`Skill10` = @p193) AND (`Sk" +
-                "ill11` = @p194) AND (`Skill12` = @p195) AND (`Skill13` = @p196) AND (`Skill14` =" +
-                " @p197) AND (`Skill15` = @p198) AND (`Skill16` = @p199) AND (`Skill17` = @p200) " +
-                "AND (`Skill18` = @p201) AND (`Skill19` = @p202) AND (`Skill20` = @p203) AND (`Sk" +
-                "ill21` = @p204) AND (`Skill22` = @p205) AND (`Skill23` = @p206) AND (`Skill24` =" +
-                " @p207) AND (`Skill25` = @p208) AND (`Skill26` = @p209) AND (`Skill27` = @p210) " +
-                "AND (`Skill28` = @p211) AND (`Skill29` = @p212) AND (`Skill30` = @p213) AND (`Sk" +
-                "ill31` = @p214) AND (`Skill32` = @p215) AND (`Skill33` = @p216) AND (`Skill34` =" +
-                " @p217) AND (`Skill35` = @p218) AND (`Skill36` = @p219) AND (`Skill37` = @p220) " +
-                "AND (`Skill38` = @p221) AND (`Skill39` = @p222) AND (`Skill40` = @p223) AND (`Sk" +
-                "ill41` = @p224) AND (`Skill42` = @p225) AND (`Skill43` = @p226) AND (`Skill44` =" +
-                " @p227) AND (`Skill45` = @p228) AND (`Skill46` = @p229) AND (`Skill47` = @p230) " +
-                "AND (`Skill48` = @p231) AND (`Skill49` = @p232) AND (`Skill50` = @p233) AND (`In" +
-                "fo` = @p234))";
+                "54, `Rare` = @p55, `Rare2` = @p56, `Item1` = @p57, `Per1` = @p58, `Item2` = @p59" +
+                ", `Per2` = @p60, `Item3` = @p61, `Per3` = @p62, `Item4` = @p63, `Per4` = @p64, `" +
+                "Item5` = @p65, `Per5` = @p66, `Skill1` = @p67, `Skill2` = @p68, `Skill3` = @p69," +
+                " `Skill4` = @p70, `Skill5` = @p71, `Skill6` = @p72, `Skill7` = @p73, `Skill8` = " +
+                "@p74, `Skill9` = @p75, `Skill10` = @p76, `Skill11` = @p77, `Skill12` = @p78, `Sk" +
+                "ill13` = @p79, `Skill14` = @p80, `Skill15` = @p81, `Skill16` = @p82, `Skill17` =" +
+                " @p83, `Skill18` = @p84, `Skill19` = @p85, `Skill20` = @p86, `Ability1` = @p87, " +
+                "`Ability2` = @p88, `Ability3` = @p89, `Ability4` = @p90, `Ability5` = @p91, `Abi" +
+                "lity6` = @p92, `Ability7` = @p93, `Ability8` = @p94, `Ability9` = @p95, `Ability" +
+                "10` = @p96, `Ability11` = @p97, `Ability12` = @p98, `Ability13` = @p99, `Ability" +
+                "14` = @p100, `Ability15` = @p101, `Ability16` = @p102, `Ability17` = @p103, `Abi" +
+                "lity18` = @p104, `Ability19` = @p105, `Ability20` = @p106, `Ability21` = @p107, " +
+                "`Ability22` = @p108, `Ability23` = @p109, `Ability24` = @p110, `Ability25` = @p1" +
+                "11, `Ability26` = @p112, `Ability27` = @p113, `Ability28` = @p114, `Ability29` =" +
+                " @p115, `Ability30` = @p116, `Info` = @p117 WHERE ((`MonsterID` = @p118) AND (`M" +
+                "onsterName` = @p119) AND (`Race` = @p120) AND (`Req Lv` = @p121) AND (`Min Lv` =" +
+                " @p122) AND (`Max Lv` = @p123) AND (`StartTP` = @p124) AND (`MaxTP` = @p125) AND" +
+                " (`HP` = @p126) AND (`MeleeATK` = @p127) AND (`MeleeDEF` = @p128) AND (`RangeATK" +
+                "` = @p129) AND (`RangeDEF` = @p130) AND (`MagicATK` = @p131) AND (`MagicDEF` = @" +
+                "p132) AND (`SPD` = @p133) AND (`LUK` = @p134) AND (`HIT` = @p135) AND (`EVT` = @" +
+                "p136) AND (`EXP` = @p137) AND (`MNY` = @p138) AND (`LvHP` = @p139) AND (`LvMelee" +
+                "ATK` = @p140) AND (`LvMeleeDEF` = @p141) AND (`LvRangeATK` = @p142) AND (`LvRang" +
+                "eDEF` = @p143) AND (`LvMagicATK` = @p144) AND (`LvMagicDEF` = @p145) AND (`LvSPD" +
+                "` = @p146) AND (`LvLUK` = @p147) AND (`LvHIT` = @p148) AND (`LvEVT` = @p149) AND" +
+                " (`LvEXP` = @p150) AND (`LvMNY` = @p151) AND (`HP Per` = @p152) AND (`MeleeATKPe" +
+                "r` = @p153) AND (`MeleeDEFPer` = @p154) AND (`RangeATKPer` = @p155) AND (`RangeD" +
+                "EFPer` = @p156) AND (`MagicATKPer` = @p157) AND (`MagicDEFPer` = @p158) AND (`SP" +
+                "D Per` = @p159) AND (`EXP Per` = @p160) AND (`MNY Per` = @p161) AND (`WT` = @p16" +
+                "2) AND (`SSP` = @p163) AND (`SPC` = @p164) AND (`ATC` = @p165) AND (`Type` = @p1" +
+                "66) AND (`DMG Per` = @p167) AND (`Air` = @p168) AND (`Ver` = @p169) AND (`Algori" +
+                "thm` = @p170) AND (`AI ID` = @p171) AND (`Rare` = @p172) AND (`Rare2` = @p173) A" +
+                "ND (`Item1` = @p174) AND (`Per1` = @p175) AND (`Item2` = @p176) AND (`Per2` = @p" +
+                "177) AND (`Item3` = @p178) AND (`Per3` = @p179) AND (`Item4` = @p180) AND (`Per4" +
+                "` = @p181) AND (`Item5` = @p182) AND (`Per5` = @p183) AND (`Skill1` = @p184) AND" +
+                " (`Skill2` = @p185) AND (`Skill3` = @p186) AND (`Skill4` = @p187) AND (`Skill5` " +
+                "= @p188) AND (`Skill6` = @p189) AND (`Skill7` = @p190) AND (`Skill8` = @p191) AN" +
+                "D (`Skill9` = @p192) AND (`Skill10` = @p193) AND (`Skill11` = @p194) AND (`Skill" +
+                "12` = @p195) AND (`Skill13` = @p196) AND (`Skill14` = @p197) AND (`Skill15` = @p" +
+                "198) AND (`Skill16` = @p199) AND (`Skill17` = @p200) AND (`Skill18` = @p201) AND" +
+                " (`Skill19` = @p202) AND (`Skill20` = @p203) AND (`Ability1` = @p204) AND (`Abil" +
+                "ity2` = @p205) AND (`Ability3` = @p206) AND (`Ability4` = @p207) AND (`Ability5`" +
+                " = @p208) AND (`Ability6` = @p209) AND (`Ability7` = @p210) AND (`Ability8` = @p" +
+                "211) AND (`Ability9` = @p212) AND (`Ability10` = @p213) AND (`Ability11` = @p214" +
+                ") AND (`Ability12` = @p215) AND (`Ability13` = @p216) AND (`Ability14` = @p217) " +
+                "AND (`Ability15` = @p218) AND (`Ability16` = @p219) AND (`Ability17` = @p220) AN" +
+                "D (`Ability18` = @p221) AND (`Ability19` = @p222) AND (`Ability20` = @p223) AND " +
+                "(`Ability21` = @p224) AND (`Ability22` = @p225) AND (`Ability23` = @p226) AND (`" +
+                "Ability24` = @p227) AND (`Ability25` = @p228) AND (`Ability26` = @p229) AND (`Ab" +
+                "ility27` = @p230) AND (`Ability28` = @p231) AND (`Ability29` = @p232) AND (`Abil" +
+                "ity30` = @p233) AND (`Info` = @p234))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -21903,7 +21905,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Pert";
+            param.SourceColumn = "Rare2";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p57";
@@ -22120,210 +22122,210 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill21";
+            param.SourceColumn = "Ability1";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p88";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill22";
+            param.SourceColumn = "Ability2";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p89";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill23";
+            param.SourceColumn = "Ability3";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p90";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill24";
+            param.SourceColumn = "Ability4";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p91";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill25";
+            param.SourceColumn = "Ability5";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p92";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill26";
+            param.SourceColumn = "Ability6";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p93";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill27";
+            param.SourceColumn = "Ability7";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p94";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill28";
+            param.SourceColumn = "Ability8";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p95";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill29";
+            param.SourceColumn = "Ability9";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p96";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill30";
+            param.SourceColumn = "Ability10";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p97";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill31";
+            param.SourceColumn = "Ability11";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p98";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill32";
+            param.SourceColumn = "Ability12";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p99";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill33";
+            param.SourceColumn = "Ability13";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p100";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill34";
+            param.SourceColumn = "Ability14";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p101";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill35";
+            param.SourceColumn = "Ability15";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p102";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill36";
+            param.SourceColumn = "Ability16";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p103";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill37";
+            param.SourceColumn = "Ability17";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p104";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill38";
+            param.SourceColumn = "Ability18";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p105";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill39";
+            param.SourceColumn = "Ability19";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p106";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill40";
+            param.SourceColumn = "Ability20";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p107";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill41";
+            param.SourceColumn = "Ability21";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p108";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill42";
+            param.SourceColumn = "Ability22";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p109";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill43";
+            param.SourceColumn = "Ability23";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p110";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill44";
+            param.SourceColumn = "Ability24";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p111";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill45";
+            param.SourceColumn = "Ability25";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p112";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill46";
+            param.SourceColumn = "Ability26";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p113";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill47";
+            param.SourceColumn = "Ability27";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p114";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill48";
+            param.SourceColumn = "Ability28";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p115";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill49";
+            param.SourceColumn = "Ability29";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p116";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill50";
+            param.SourceColumn = "Ability30";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p117";
@@ -22777,7 +22779,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Pert";
+            param.SourceColumn = "Rare2";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23025,7 +23027,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill21";
+            param.SourceColumn = "Ability1";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23033,7 +23035,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill22";
+            param.SourceColumn = "Ability2";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23041,7 +23043,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill23";
+            param.SourceColumn = "Ability3";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23049,7 +23051,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill24";
+            param.SourceColumn = "Ability4";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23057,7 +23059,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill25";
+            param.SourceColumn = "Ability5";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23065,7 +23067,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill26";
+            param.SourceColumn = "Ability6";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23073,7 +23075,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill27";
+            param.SourceColumn = "Ability7";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23081,7 +23083,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill28";
+            param.SourceColumn = "Ability8";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23089,7 +23091,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill29";
+            param.SourceColumn = "Ability9";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23097,7 +23099,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill30";
+            param.SourceColumn = "Ability10";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23105,7 +23107,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill31";
+            param.SourceColumn = "Ability11";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23113,7 +23115,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill32";
+            param.SourceColumn = "Ability12";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23121,7 +23123,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill33";
+            param.SourceColumn = "Ability13";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23129,7 +23131,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill34";
+            param.SourceColumn = "Ability14";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23137,7 +23139,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill35";
+            param.SourceColumn = "Ability15";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23145,7 +23147,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill36";
+            param.SourceColumn = "Ability16";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23153,7 +23155,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill37";
+            param.SourceColumn = "Ability17";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23161,7 +23163,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill38";
+            param.SourceColumn = "Ability18";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23169,7 +23171,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill39";
+            param.SourceColumn = "Ability19";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23177,7 +23179,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill40";
+            param.SourceColumn = "Ability20";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23185,7 +23187,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill41";
+            param.SourceColumn = "Ability21";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23193,7 +23195,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill42";
+            param.SourceColumn = "Ability22";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23201,7 +23203,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill43";
+            param.SourceColumn = "Ability23";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23209,7 +23211,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill44";
+            param.SourceColumn = "Ability24";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23217,7 +23219,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill45";
+            param.SourceColumn = "Ability25";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23225,7 +23227,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill46";
+            param.SourceColumn = "Ability26";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23233,7 +23235,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill47";
+            param.SourceColumn = "Ability27";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23241,7 +23243,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill48";
+            param.SourceColumn = "Ability28";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23249,7 +23251,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill49";
+            param.SourceColumn = "Ability29";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23257,7 +23259,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Skill50";
+            param.SourceColumn = "Ability30";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -23283,7 +23285,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT `MonsterID`, `MonsterName`, `Race`, `Req Lv`, `Min Lv`, `Max Lv`, `StartTP`, `MaxTP`, `HP`, `MeleeATK`, `MeleeDEF`, `RangeATK`, `RangeDEF`, `MagicATK`, `MagicDEF`, `SPD`, `LUK`, `HIT`, `EVT`, `EXP`, `MNY`, `LvHP`, `LvMeleeATK`, `LvMeleeDEF`, `LvRangeATK`, `LvRangeDEF`, `LvMagicATK`, `LvMagicDEF`, `LvSPD`, `LvLUK`, `LvHIT`, `LvEVT`, `LvEXP`, `LvMNY`, `HP Per`, `MeleeATKPer`, `MeleeDEFPer`, `RangeATKPer`, `RangeDEFPer`, `MagicATKPer`, `MagicDEFPer`, `SPD Per`, `EXP Per`, `MNY Per`, `WT`, `SSP`, `SPC`, `ATC`, `Type`, `DMG Per`, `Air`, `Ver`, `Algorithm`, `AI ID`, `Rare`, `Pert`, `Item1`, `Per1`, `Item2`, `Per2`, `Item3`, `Per3`, `Item4`, `Per4`, `Item5`, `Per5`, `Skill1`, `Skill2`, `Skill3`, `Skill4`, `Skill5`, `Skill6`, `Skill7`, `Skill8`, `Skill9`, `Skill10`, `Skill11`, `Skill12`, `Skill13`, `Skill14`, `Skill15`, `Skill16`, `Skill17`, `Skill18`, `Skill19`, `Skill20`, `Skill21`, `Skill22`, `Skill23`, `Skill24`, `Skill25`, `Skill26`, `Skill27`, `Skill28`, `Skill29`, `Skill30`, `Skill31`, `Skill32`, `Skill33`, `Skill34`, `Skill35`, `Skill36`, `Skill37`, `Skill38`, `Skill39`, `Skill40`, `Skill41`, `Skill42`, `Skill43`, `Skill44`, `Skill45`, `Skill46`, `Skill47`, `Skill48`, `Skill49`, `Skill50`, `Info` FROM `__table_monster`";
+            this._commandCollection[0].CommandText = @"SELECT `MonsterID`, `MonsterName`, `Race`, `Req Lv`, `Min Lv`, `Max Lv`, `StartTP`, `MaxTP`, `HP`, `MeleeATK`, `MeleeDEF`, `RangeATK`, `RangeDEF`, `MagicATK`, `MagicDEF`, `SPD`, `LUK`, `HIT`, `EVT`, `EXP`, `MNY`, `LvHP`, `LvMeleeATK`, `LvMeleeDEF`, `LvRangeATK`, `LvRangeDEF`, `LvMagicATK`, `LvMagicDEF`, `LvSPD`, `LvLUK`, `LvHIT`, `LvEVT`, `LvEXP`, `LvMNY`, `HP Per`, `MeleeATKPer`, `MeleeDEFPer`, `RangeATKPer`, `RangeDEFPer`, `MagicATKPer`, `MagicDEFPer`, `SPD Per`, `EXP Per`, `MNY Per`, `WT`, `SSP`, `SPC`, `ATC`, `Type`, `DMG Per`, `Air`, `Ver`, `Algorithm`, `AI ID`, `Rare`, `Rare2`, `Item1`, `Per1`, `Item2`, `Per2`, `Item3`, `Per3`, `Item4`, `Per4`, `Item5`, `Per5`, `Skill1`, `Skill2`, `Skill3`, `Skill4`, `Skill5`, `Skill6`, `Skill7`, `Skill8`, `Skill9`, `Skill10`, `Skill11`, `Skill12`, `Skill13`, `Skill14`, `Skill15`, `Skill16`, `Skill17`, `Skill18`, `Skill19`, `Skill20`, `Ability1`, `Ability2`, `Ability3`, `Ability4`, `Ability5`, `Ability6`, `Ability7`, `Ability8`, `Ability9`, `Ability10`, `Ability11`, `Ability12`, `Ability13`, `Ability14`, `Ability15`, `Ability16`, `Ability17`, `Ability18`, `Ability19`, `Ability20`, `Ability21`, `Ability22`, `Ability23`, `Ability24`, `Ability25`, `Ability26`, `Ability27`, `Ability28`, `Ability29`, `Ability30`, `Info` FROM `__table_monster`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -1,5 +1,5 @@
-﻿namespace Status_Editer.User_Control.tabMonster {
-	partial class PassiveSkillInfomation {
+﻿namespace Status_Editer.User_Control.tab03Unit {
+	partial class AbilityInfomation {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>

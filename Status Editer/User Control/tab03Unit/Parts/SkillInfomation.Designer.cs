@@ -1,4 +1,4 @@
-﻿namespace Status_Editer.User_Control.tabMonster.Parts {
+﻿namespace Status_Editer.User_Control.tab03Unit.Parts {
 	partial class SkillInfomation {
 		/// <summary> 
 		/// 必要なデザイナー変数です。

@@ -1,24 +1,16 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// DropInfomation
+// ActiveSkillInfomation
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
 
-namespace Status_Editer.User_Control.tabMonster {
-	public partial class DropInfomation : UserControl {
+namespace Status_Editer.User_Control.tab03Unit {
+	public partial class SkillInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// バインド
-		// WeaponTable
-		private __table_weaponDataTable WeaponTable_3_1 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_2 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_3 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_4 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_5 = new __table_weaponDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +24,7 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public DropInfomation() {
+		public SkillInfomation() {
 			InitializeComponent();
 		}
 
@@ -44,44 +36,28 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tablemonsterBindingSource">BindingSource</param>
-		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void LoadDataBindings(BindingSource tablemonsterBindingSource, __table_weaponTableAdapter WeaponAdapter) {
-			// 項目に関する準備
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
-
-			// データバインドの設定
-			comboDropTable1.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item1", true));
-			comboDropTable2.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item2", true));
-			comboDropTable3.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item3", true));
-			comboDropTable4.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item4", true));
-			comboDropTable5.DataBindings.Add(new Binding("SelectedValue", tablemonsterBindingSource, "Item5", true));
-
-			numericDropRate1.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per1", true));
-			numericDropRate2.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per2", true));
-			numericDropRate3.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per3", true));
-			numericDropRate4.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per4", true));
-			numericDropRate5.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Per5", true));
-
-			// バインド項目の設定
-			comboDropTable1.DataSource = WeaponTable_3_1;
-			comboDropTable1.DisplayMember = "WeaponName";
-			comboDropTable1.ValueMember = "WeaponID";
-			comboDropTable2.DataSource = WeaponTable_3_2;
-			comboDropTable2.DisplayMember = "WeaponName";
-			comboDropTable2.ValueMember = "WeaponID";
-			comboDropTable3.DataSource = WeaponTable_3_3;
-			comboDropTable3.DisplayMember = "WeaponName";
-			comboDropTable3.ValueMember = "WeaponID";
-			comboDropTable4.DataSource = WeaponTable_3_4;
-			comboDropTable4.DisplayMember = "WeaponName";
-			comboDropTable4.ValueMember = "WeaponID";
-			comboDropTable5.DataSource = WeaponTable_3_5;
-			comboDropTable5.DisplayMember = "WeaponName";
-			comboDropTable5.ValueMember = "WeaponID";
+		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
+		public void LoadDataBindings(BindingSource tablemonsterBindingSource, __table_skillTableAdapter SkillAdapter) {
+			SkillInfomation1.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill1");
+			SkillInfomation2.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill2");
+			SkillInfomation3.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill3");
+			SkillInfomation4.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill4");
+			SkillInfomation5.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill5");
+			SkillInfomation6.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill6");
+			SkillInfomation7.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill7");
+			SkillInfomation8.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill8");
+			SkillInfomation9.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill9");
+			SkillInfomation10.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill10");
+			SkillInfomation11.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill11");
+			SkillInfomation12.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill12");
+			SkillInfomation13.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill13");
+			SkillInfomation14.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill14");
+			SkillInfomation15.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill15");
+			SkillInfomation16.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill16");
+			SkillInfomation17.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill17");
+			SkillInfomation18.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill18");
+			SkillInfomation19.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill19");
+			SkillInfomation20.SetDataBindings(tablemonsterBindingSource, SkillAdapter, "Skill20");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -91,13 +67,28 @@ namespace Status_Editer.User_Control.tabMonster {
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter) {
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
+		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
+		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
+			SkillInfomation1.ReloadBindings(SkillAdapter);
+			SkillInfomation2.ReloadBindings(SkillAdapter);
+			SkillInfomation3.ReloadBindings(SkillAdapter);
+			SkillInfomation4.ReloadBindings(SkillAdapter);
+			SkillInfomation5.ReloadBindings(SkillAdapter);
+			SkillInfomation6.ReloadBindings(SkillAdapter);
+			SkillInfomation7.ReloadBindings(SkillAdapter);
+			SkillInfomation8.ReloadBindings(SkillAdapter);
+			SkillInfomation9.ReloadBindings(SkillAdapter);
+			SkillInfomation10.ReloadBindings(SkillAdapter);
+			SkillInfomation11.ReloadBindings(SkillAdapter);
+			SkillInfomation12.ReloadBindings(SkillAdapter);
+			SkillInfomation13.ReloadBindings(SkillAdapter);
+			SkillInfomation14.ReloadBindings(SkillAdapter);
+			SkillInfomation15.ReloadBindings(SkillAdapter);
+			SkillInfomation16.ReloadBindings(SkillAdapter);
+			SkillInfomation17.ReloadBindings(SkillAdapter);
+			SkillInfomation18.ReloadBindings(SkillAdapter);
+			SkillInfomation19.ReloadBindings(SkillAdapter);
+			SkillInfomation20.ReloadBindings(SkillAdapter);
 		}
 
 

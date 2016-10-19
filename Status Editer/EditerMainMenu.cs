@@ -76,13 +76,14 @@ namespace Status_Editer {
 			// デザイナープロパティの設定
 			// できればデザイナープロパティに設定したいが、バグの関係でここで設定。
 			// TAB: ユニット
-			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 			listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			TotalInfomation.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
 			// データバインドの設定
 			try {
 				// データバインドの設定
-				//listMonster.DataBindings.Add("SelectedValue", tableMonsterBindingSource, "MonsterID");
+				//listUnit.DataBindings.Add("SelectedValue", tableMonsterBindingSource, "MonsterID");
 
 				// バインド項目の設定
 				listUnit.DataSource = tableMonsterBindingSource;
@@ -100,7 +101,7 @@ namespace Status_Editer {
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 			} catch (Exception ex) {
-				MessageBox.Show("System Load Failed:\n" + ex.ToString(), "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
 			}
 
@@ -149,13 +150,13 @@ namespace Status_Editer {
 		private void StripMenuExit_Click(object sender, EventArgs e) {
 			DialogResult result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			switch (result) {
-				case DialogResult.Yes:
-					UpdateSQL();
-					break;
-				case DialogResult.No:
-					break;
-				case DialogResult.Cancel:
-					return;
+			case DialogResult.Yes:
+				UpdateSQL();
+				break;
+			case DialogResult.No:
+				break;
+			case DialogResult.Cancel:
+				return;
 			}// End Switch
 			Application.Exit();
 		}
@@ -172,7 +173,7 @@ namespace Status_Editer {
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 			} catch (Exception ex) {
-				MessageBox.Show("Database Load Failed:\n" + ex.ToString(), "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

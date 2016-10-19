@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace Status_Editer.User_Control.tabMonster {
+namespace Status_Editer.User_Control.tab03Unit {
 	public partial class StatusInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
