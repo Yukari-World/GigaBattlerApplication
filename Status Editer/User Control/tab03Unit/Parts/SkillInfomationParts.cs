@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit.Parts {
-	public partial class SkillInfomation : UserControl {
+	public partial class SkillInfomationParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public SkillInfomation() {
+		public SkillInfomationParts() {
 			InitializeComponent();
 		}
 

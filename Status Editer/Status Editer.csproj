@@ -105,11 +105,11 @@
     <Compile Include="User Control\tab03Unit\AbilityInfomation.Designer.cs">
       <DependentUpon>AbilityInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\tab03Unit\Parts\SkillInfomation.cs">
+    <Compile Include="User Control\tab03Unit\Parts\SkillInfomationParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\tab03Unit\Parts\SkillInfomation.Designer.cs">
-      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    <Compile Include="User Control\tab03Unit\Parts\SkillInfomationParts.Designer.cs">
+      <DependentUpon>SkillInfomationParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab03Unit\StatusInfomation.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +128,12 @@
     </Compile>
     <Compile Include="User Control\tab03Unit\UnitInfomation.Designer.cs">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceStatusEtcParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceStatusEtcParts.Designer.cs">
+      <DependentUpon>RaceStatusEtcParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab05Race\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -159,8 +165,8 @@
     <EmbeddedResource Include="User Control\tab03Unit\AbilityInfomation.resx">
       <DependentUpon>AbilityInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\tab03Unit\Parts\SkillInfomation.resx">
-      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    <EmbeddedResource Include="User Control\tab03Unit\Parts\SkillInfomationParts.resx">
+      <DependentUpon>SkillInfomationParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\StatusInfomation.resx">
       <DependentUpon>StatusInfomation.cs</DependentUpon>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\UnitInfomation.resx">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab05Race\Parts\RaceStatusEtcParts.resx">
+      <DependentUpon>RaceStatusEtcParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab05Race\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -212,7 +221,6 @@
   <ItemGroup>
     <Folder Include="User Control\CommonParts\" />
     <Folder Include="User Control\tab04UnitType\Parts\" />
-    <Folder Include="User Control\tab05Race\Parts\" />
     <Folder Include="User Control\tab06Job\Parts\" />
     <Folder Include="User Control\tab07Maker\Parts\" />
     <Folder Include="User Control\tab08Weapon\Parts\" />

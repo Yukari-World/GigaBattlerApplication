@@ -28,26 +28,26 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		private void InitializeComponent() {
 			this.groupActiveSkillInfo = new GroupBox();
-			this.SkillInfomation1 = new Parts.SkillInfomation();
-			this.SkillInfomation2 = new Parts.SkillInfomation();
-			this.SkillInfomation3 = new Parts.SkillInfomation();
-			this.SkillInfomation4 = new Parts.SkillInfomation();
-			this.SkillInfomation5 = new Parts.SkillInfomation();
-			this.SkillInfomation6 = new Parts.SkillInfomation();
-			this.SkillInfomation7 = new Parts.SkillInfomation();
-			this.SkillInfomation8 = new Parts.SkillInfomation();
-			this.SkillInfomation9 = new Parts.SkillInfomation();
-			this.SkillInfomation10 = new Parts.SkillInfomation();
-			this.SkillInfomation11 = new Parts.SkillInfomation();
-			this.SkillInfomation12 = new Parts.SkillInfomation();
-			this.SkillInfomation13 = new Parts.SkillInfomation();
-			this.SkillInfomation14 = new Parts.SkillInfomation();
-			this.SkillInfomation15 = new Parts.SkillInfomation();
-			this.SkillInfomation16 = new Parts.SkillInfomation();
-			this.SkillInfomation17 = new Parts.SkillInfomation();
-			this.SkillInfomation18 = new Parts.SkillInfomation();
-			this.SkillInfomation19 = new Parts.SkillInfomation();
-			this.SkillInfomation20 = new Parts.SkillInfomation();
+			this.SkillInfomation1 = new Parts.SkillInfomationParts();
+			this.SkillInfomation2 = new Parts.SkillInfomationParts();
+			this.SkillInfomation3 = new Parts.SkillInfomationParts();
+			this.SkillInfomation4 = new Parts.SkillInfomationParts();
+			this.SkillInfomation5 = new Parts.SkillInfomationParts();
+			this.SkillInfomation6 = new Parts.SkillInfomationParts();
+			this.SkillInfomation7 = new Parts.SkillInfomationParts();
+			this.SkillInfomation8 = new Parts.SkillInfomationParts();
+			this.SkillInfomation9 = new Parts.SkillInfomationParts();
+			this.SkillInfomation10 = new Parts.SkillInfomationParts();
+			this.SkillInfomation11 = new Parts.SkillInfomationParts();
+			this.SkillInfomation12 = new Parts.SkillInfomationParts();
+			this.SkillInfomation13 = new Parts.SkillInfomationParts();
+			this.SkillInfomation14 = new Parts.SkillInfomationParts();
+			this.SkillInfomation15 = new Parts.SkillInfomationParts();
+			this.SkillInfomation16 = new Parts.SkillInfomationParts();
+			this.SkillInfomation17 = new Parts.SkillInfomationParts();
+			this.SkillInfomation18 = new Parts.SkillInfomationParts();
+			this.SkillInfomation19 = new Parts.SkillInfomationParts();
+			this.SkillInfomation20 = new Parts.SkillInfomationParts();
 			this.groupActiveSkillInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -277,25 +277,25 @@ namespace Status_Editer.User_Control.tab03Unit {
 		#endregion
 
 		private GroupBox groupActiveSkillInfo;
-		private Parts.SkillInfomation SkillInfomation1;
-		private Parts.SkillInfomation SkillInfomation11;
-		private Parts.SkillInfomation SkillInfomation10;
-		private Parts.SkillInfomation SkillInfomation9;
-		private Parts.SkillInfomation SkillInfomation8;
-		private Parts.SkillInfomation SkillInfomation7;
-		private Parts.SkillInfomation SkillInfomation4;
-		private Parts.SkillInfomation SkillInfomation5;
-		private Parts.SkillInfomation SkillInfomation6;
-		private Parts.SkillInfomation SkillInfomation3;
-		private Parts.SkillInfomation SkillInfomation2;
-		private Parts.SkillInfomation SkillInfomation20;
-		private Parts.SkillInfomation SkillInfomation19;
-		private Parts.SkillInfomation SkillInfomation18;
-		private Parts.SkillInfomation SkillInfomation17;
-		private Parts.SkillInfomation SkillInfomation16;
-		private Parts.SkillInfomation SkillInfomation15;
-		private Parts.SkillInfomation SkillInfomation14;
-		private Parts.SkillInfomation SkillInfomation13;
-		private Parts.SkillInfomation SkillInfomation12;
+		private Parts.SkillInfomationParts SkillInfomation1;
+		private Parts.SkillInfomationParts SkillInfomation11;
+		private Parts.SkillInfomationParts SkillInfomation10;
+		private Parts.SkillInfomationParts SkillInfomation9;
+		private Parts.SkillInfomationParts SkillInfomation8;
+		private Parts.SkillInfomationParts SkillInfomation7;
+		private Parts.SkillInfomationParts SkillInfomation4;
+		private Parts.SkillInfomationParts SkillInfomation5;
+		private Parts.SkillInfomationParts SkillInfomation6;
+		private Parts.SkillInfomationParts SkillInfomation3;
+		private Parts.SkillInfomationParts SkillInfomation2;
+		private Parts.SkillInfomationParts SkillInfomation20;
+		private Parts.SkillInfomationParts SkillInfomation19;
+		private Parts.SkillInfomationParts SkillInfomation18;
+		private Parts.SkillInfomationParts SkillInfomation17;
+		private Parts.SkillInfomationParts SkillInfomation16;
+		private Parts.SkillInfomationParts SkillInfomation15;
+		private Parts.SkillInfomationParts SkillInfomation14;
+		private Parts.SkillInfomationParts SkillInfomation13;
+		private Parts.SkillInfomationParts SkillInfomation12;
 	}
 }
