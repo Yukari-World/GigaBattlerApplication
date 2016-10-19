@@ -36,12 +36,16 @@
 			this.textMonsterID = new System.Windows.Forms.TextBox();
 			this.labelMonsterID = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
+			this.textInfo = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.groupUnitInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupUnitInfo
 			// 
+			this.groupUnitInfo.Controls.Add(this.label1);
+			this.groupUnitInfo.Controls.Add(this.textInfo);
 			this.groupUnitInfo.Controls.Add(this.numericRare);
 			this.groupUnitInfo.Controls.Add(this.labelRare);
 			this.groupUnitInfo.Controls.Add(this.checkAirType);
@@ -129,6 +133,17 @@
 			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
 			// 
+			// textInfo
+			// 
+			resources.ApplyResources(this.textInfo, "textInfo");
+			this.textInfo.Name = "textInfo";
+			this.toolTipInfo.SetToolTip(this.textInfo, resources.GetString("textInfo.ToolTip"));
+			// 
+			// label1
+			// 
+			resources.ApplyResources(this.label1, "label1");
+			this.label1.Name = "label1";
+			// 
 			// UnitInfomation
 			// 
 			resources.ApplyResources(this, "$this");
@@ -150,11 +165,13 @@
 		private System.Windows.Forms.Label labelUnitName;
 		private System.Windows.Forms.Label labelMonsterGroup;
 		private System.Windows.Forms.Label labelMonsterID;
-		public System.Windows.Forms.TextBox textMonsterID;
-		public System.Windows.Forms.TextBox textUnitName;
-		public System.Windows.Forms.CheckBox checkAirType;
-		public System.Windows.Forms.ComboBox comboMonsterGroup;
-		public System.Windows.Forms.NumericUpDown numericRare;
+		private System.Windows.Forms.TextBox textMonsterID;
+		private System.Windows.Forms.TextBox textUnitName;
+		private System.Windows.Forms.CheckBox checkAirType;
+		private System.Windows.Forms.ComboBox comboMonsterGroup;
+		private System.Windows.Forms.NumericUpDown numericRare;
 		private System.Windows.Forms.ToolTip toolTipInfo;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox textInfo;
 	}
 }
