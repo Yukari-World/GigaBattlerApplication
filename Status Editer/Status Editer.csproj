@@ -73,6 +73,9 @@
     <Compile Include="EditerMainMenu.Designer.cs">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GigaBattlerProtocol.cs">
+      <DependentUpon>GigaBattlerProtocol.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GigaBattlerProtocol.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

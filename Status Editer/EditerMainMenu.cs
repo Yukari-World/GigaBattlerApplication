@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
 		//Initialize
-		public string rootdirectory = "";
+		public string rootDirectory = "";
 
 		public EditerMainMenu() {
 			InitializeComponent();
@@ -19,12 +19,14 @@ namespace Status_Editer {
 
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
 			// TODO: このコード行はデータを 'gigaBattlerProtocol.monster_table' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-			this.monster_tableTableAdapter.Fill(this.gigaBattlerProtocol.monster_table);
+			monster_tableTableAdapter.Fill(gigaBattlerProtocol.monster_table);
 		}
 
 		/// <summary>
 		/// 「ファイル」→「開く」の処理内容
 		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
 		private void StripMenuFileOpen_Click(object sender, EventArgs e) {
 			//http://dobon.net/vb/dotnet/form/folderdialog.htmlより参照
 			//FolderBrowserDialogクラスのインスタンスを作成
@@ -48,7 +50,36 @@ namespace Status_Editer {
 			//ダイアログを表示する
 			if (fbd.ShowDialog(this) == DialogResult.OK) {
 				//選択されたフォルダを表示する
-				rootdirectory = fbd.SelectedPath;
+				rootDirectory = fbd.SelectedPath;
+			}
+		}
+
+		/// <summary>
+		/// 「ファイル」→「アプリケーションの終了」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuExit_Click(object sender, EventArgs e) {
+			Application.Exit();
+		}
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
+			monster_tableTableAdapter.Update(gigaBattlerProtocol.monster_table);
+		}
+
+		private void AirType_CheckedChanged(object sender, EventArgs e) {
+			switch (AirType.Checked) {
+				case true:
+
+					break;
+				case false:
+
+					break;
 			}
 		}
 	}

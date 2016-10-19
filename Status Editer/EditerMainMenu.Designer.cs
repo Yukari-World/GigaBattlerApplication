@@ -27,9 +27,13 @@
 			this.StripMainMenu = new System.Windows.Forms.MenuStrip();
 			this.StripMenuFile = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.StripMenuExit = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuEdit = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuViwer = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDatabase = new System.Windows.Forms.ToolStripMenuItem();
+			this.再読み込みToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuDatabaseSave = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -37,14 +41,14 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.groupDropInfo = new System.Windows.Forms.GroupBox();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.monsterTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gigaBattlerProtocol = new Status_Editer.GigaBattlerProtocol();
 			this.labelDropRate1 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.labelDropTable1 = new System.Windows.Forms.Label();
 			this.groupStatusInfo = new System.Windows.Forms.GroupBox();
 			this.numericScaleMoney = new System.Windows.Forms.NumericUpDown();
 			this.numericLvPEVT = new System.Windows.Forms.NumericUpDown();
-			this.monsterTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerProtocol = new Status_Editer.GigaBattlerProtocol();
 			this.labelScaleMoney = new System.Windows.Forms.Label();
 			this.labelLvPEVT = new System.Windows.Forms.Label();
 			this.numericLvPMoney = new System.Windows.Forms.NumericUpDown();
@@ -141,19 +145,18 @@
 			this.StatusStrip = new System.Windows.Forms.StatusStrip();
 			this.StripInfomationLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.groupDropInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.monsterTableBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerProtocol)).BeginInit();
 			this.groupStatusInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleMoney)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPEVT)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.monsterTableBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerProtocol)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMoney)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEVT)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMoney)).BeginInit();
@@ -218,8 +221,8 @@
 			// 
 			this.StripMenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenuFileOpen,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.toolStripSeparator1,
+            this.StripMenuExit});
 			this.StripMenuFile.Name = "StripMenuFile";
 			this.StripMenuFile.Size = new System.Drawing.Size(66, 20);
 			this.StripMenuFile.Text = "ファイル(&F)";
@@ -229,9 +232,23 @@
 			this.StripMenuFileOpen.Name = "StripMenuFileOpen";
 			this.StripMenuFileOpen.ShortcutKeyDisplayString = "";
 			this.StripMenuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.StripMenuFileOpen.Size = new System.Drawing.Size(192, 22);
+			this.StripMenuFileOpen.Size = new System.Drawing.Size(234, 22);
 			this.StripMenuFileOpen.Text = "開く(&O)";
 			this.StripMenuFileOpen.Click += new System.EventHandler(this.StripMenuFileOpen_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(231, 6);
+			// 
+			// StripMenuExit
+			// 
+			this.StripMenuExit.Name = "StripMenuExit";
+			this.StripMenuExit.ShortcutKeyDisplayString = "";
+			this.StripMenuExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+			this.StripMenuExit.Size = new System.Drawing.Size(234, 22);
+			this.StripMenuExit.Text = "アプリケーションの終了(&X)";
+			this.StripMenuExit.Click += new System.EventHandler(this.StripMenuExit_Click);
 			// 
 			// StripMenuEdit
 			// 
@@ -247,9 +264,25 @@
 			// 
 			// StripMenuDatabase
 			// 
+			this.StripMenuDatabase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.再読み込みToolStripMenuItem,
+            this.StripMenuDatabaseSave});
 			this.StripMenuDatabase.Name = "StripMenuDatabase";
 			this.StripMenuDatabase.Size = new System.Drawing.Size(88, 20);
 			this.StripMenuDatabase.Text = "データベース(&D)";
+			// 
+			// 再読み込みToolStripMenuItem
+			// 
+			this.再読み込みToolStripMenuItem.Name = "再読み込みToolStripMenuItem";
+			this.再読み込みToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.再読み込みToolStripMenuItem.Text = "再読み込み(&R)";
+			// 
+			// StripMenuDatabaseSave
+			// 
+			this.StripMenuDatabaseSave.Name = "StripMenuDatabaseSave";
+			this.StripMenuDatabaseSave.Size = new System.Drawing.Size(147, 22);
+			this.StripMenuDatabaseSave.Text = "変更を適用(&S)";
+			this.StripMenuDatabaseSave.Click += new System.EventHandler(this.StripMenuDatabaseSave_Click);
 			// 
 			// StripMenuHelp
 			// 
@@ -334,6 +367,16 @@
 			this.numericUpDown1.TabIndex = 3;
 			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.toolTipInfo.SetToolTip(this.numericUpDown1, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			// 
+			// monsterTableBindingSource
+			// 
+			this.monsterTableBindingSource.DataMember = "monster table";
+			this.monsterTableBindingSource.DataSource = this.gigaBattlerProtocol;
+			// 
+			// gigaBattlerProtocol
+			// 
+			this.gigaBattlerProtocol.DataSetName = "GigaBattlerProtocol";
+			this.gigaBattlerProtocol.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// labelDropRate1
 			// 
@@ -493,16 +536,6 @@
 			this.numericLvPEVT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.toolTipInfo.SetToolTip(this.numericLvPEVT, "Lvが1上昇する毎に増加する回避力の値。\r\n効果が高すぎるため、100までの制限がある。\r\nなお、回避力は1辺り回避率が0.03%上昇する。\r\n設定値:-100 " +
         "～ 100");
-			// 
-			// monsterTableBindingSource
-			// 
-			this.monsterTableBindingSource.DataMember = "monster table";
-			this.monsterTableBindingSource.DataSource = this.gigaBattlerProtocol;
-			// 
-			// gigaBattlerProtocol
-			// 
-			this.gigaBattlerProtocol.DataSetName = "GigaBattlerProtocol";
-			this.gigaBattlerProtocol.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// labelScaleMoney
 			// 
@@ -1902,6 +1935,7 @@
 			this.AirType.Text = "空中属性";
 			this.toolTipInfo.SetToolTip(this.AirType, "空中属性を設定したモンスターは、一部のスキルが命中しなくなります。");
 			this.AirType.UseVisualStyleBackColor = true;
+			this.AirType.CheckedChanged += new System.EventHandler(this.AirType_CheckedChanged);
 			// 
 			// textUnitName
 			// 
@@ -2026,7 +2060,8 @@
 			// 
 			this.StatusStrip.Dock = System.Windows.Forms.DockStyle.None;
 			this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StripInfomationLabel});
+            this.StripInfomationLabel,
+            this.toolStripProgressBar1});
 			this.StatusStrip.Location = new System.Drawing.Point(0, 0);
 			this.StatusStrip.Name = "StatusStrip";
 			this.StatusStrip.Size = new System.Drawing.Size(1600, 22);
@@ -2044,25 +2079,14 @@
 			this.contextMenu.Name = "contextMenu";
 			this.contextMenu.Size = new System.Drawing.Size(61, 4);
 			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.ShortcutKeyDisplayString = "";
-			this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
-			this.toolStripMenuItem1.Text = "上書き保存(&S)";
-			// 
-			// toolStripMenuItem2
-			// 
-			this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-			this.toolStripMenuItem2.ShortcutKeyDisplayString = "";
-			this.toolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-			this.toolStripMenuItem2.Size = new System.Drawing.Size(234, 22);
-			this.toolStripMenuItem2.Text = "アプリケーションの終了(&X)";
-			// 
 			// notifyIcon
 			// 
 			this.notifyIcon.Visible = true;
+			// 
+			// toolStripProgressBar1
+			// 
+			this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+			this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
 			// 
 			// EditerMainMenu
 			// 
@@ -2083,12 +2107,12 @@
 			this.groupDropInfo.ResumeLayout(false);
 			this.groupDropInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.monsterTableBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerProtocol)).EndInit();
 			this.groupStatusInfo.ResumeLayout(false);
 			this.groupStatusInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleMoney)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPEVT)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.monsterTableBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerProtocol)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPMoney)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEVT)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMoney)).EndInit();
@@ -2261,9 +2285,12 @@
 		private System.Windows.Forms.Label labelDropRate1;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label labelDropTable1;
-		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuExit;
 		private System.Windows.Forms.NotifyIcon notifyIcon;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem 再読み込みToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem StripMenuDatabaseSave;
+		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
 	}
 }
 
