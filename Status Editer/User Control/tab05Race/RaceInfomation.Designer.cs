@@ -59,7 +59,7 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.groupRaceInfo.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupRaceInfo.Location = new System.Drawing.Point(0, 0);
 			this.groupRaceInfo.Name = "groupRaceInfo";
-			this.groupRaceInfo.Size = new System.Drawing.Size(1590, 820);
+			this.groupRaceInfo.Size = new System.Drawing.Size(1380, 820);
 			this.groupRaceInfo.TabIndex = 0;
 			this.groupRaceInfo.TabStop = false;
 			this.groupRaceInfo.Text = "Race Infomation";
@@ -179,7 +179,7 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupRaceInfo);
 			this.Name = "RaceInfomation";
-			this.Size = new System.Drawing.Size(1590, 820);
+			this.Size = new System.Drawing.Size(1380, 820);
 			this.groupRaceInfo.ResumeLayout(false);
 			this.ResumeLayout(false);
 

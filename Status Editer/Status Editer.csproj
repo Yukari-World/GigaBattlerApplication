@@ -79,6 +79,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="User Control\tab06Job\JobInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab06Job\JobInfomation.Designer.cs">
+      <DependentUpon>JobInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.Designer.cs">
+      <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     <EmbeddedResource Include="User Control\tab05Race\RaceInfomation.resx">
       <DependentUpon>RaceInfomation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab06Job\JobInfomation.resx">
+      <DependentUpon>JobInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab06Job\Parts\JobStatusBasicParts.resx">
+      <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="GigaBattlerDataSet.xsc">
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
@@ -224,7 +242,6 @@
   <ItemGroup>
     <Folder Include="User Control\CommonParts\" />
     <Folder Include="User Control\tab04UnitType\Parts\" />
-    <Folder Include="User Control\tab06Job\Parts\" />
     <Folder Include="User Control\tab07Maker\Parts\" />
     <Folder Include="User Control\tab08Weapon\Parts\" />
     <Folder Include="User Control\tab09Shield\Parts\" />

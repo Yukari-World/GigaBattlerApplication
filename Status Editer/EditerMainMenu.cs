@@ -106,6 +106,17 @@ namespace Status_Editer {
 
 			listRace.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
+			// TAB: ジョブ
+
+			listJob.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
+			// TAB: メーカー
+			// TAB: 武器
+			// TAB: 盾
+			// TAB: 頭防具
+			// TAB: 腕防具
+			// TAB: 体防具
+
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
 
