@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab05Race {
-	public partial class RaceInfomation : UserControl {
+	public partial class RaceInfomation : ZUserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -59,6 +59,7 @@ namespace Status_Editer.User_Control.tab05Race {
 			raceStatusLuck.SetDataBindings(tableRaceBindingSource, "LUK");
 			raceStatusHIT.SetDataBindings(tableRaceBindingSource, "HIT");
 			raceStatusEVT.SetDataBindings(tableRaceBindingSource, "EVT");
+			//NextEXP
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

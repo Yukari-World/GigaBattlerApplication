@@ -4,17 +4,11 @@
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab05Race.Parts {
-	public partial class RaceStatusBasicParts : UserControl {
+	public partial class RaceStatusBasicParts : ZUserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,6 +29,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			get { return groupBasic.Text; }
 			set { groupBasic.Text = value; }
 		}
+
 		/// <summary>
 		/// [ReadOnly]ベースステータスの値を抽出します
 		/// </summary>
@@ -103,15 +98,15 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
 			StatusBar.Location = new Point(10, 55);
-			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
 
 			// Labelの初期化
 			PlusStatusBar.AutoSize = false;
 			PlusStatusBar.BackColor = Color.Yellow;
 			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
 			PlusStatusBar.Name = "PlusStatusBar";
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width, 55);
-			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 5, 55);
+			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
 
 			// LabelをGroupBoxに追加する
 			groupBasic.Controls.Add(StatusBar);
@@ -122,7 +117,6 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 				buttonSubmitRecommend.Visible = false;
 				labelRecommend.Visible = false;
 				numericBase.Increment = 5M; // 変動幅を変更
-
 
 				if (groupBasic.Text != "TP") {  // TPでなければ、設定可能最小値を変更
 					numericBase.Minimum = -9999M;
@@ -148,9 +142,9 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			labelRecommend.Text = "推奨値:" + basicRate.ToString("N2");
 
 			// Gaugeの長さを変更する
-			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
 			// Gaugeの位置を変更する
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width, 55);
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 5, 55);
 		}
 
 		/// <summary>
@@ -160,7 +154,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <param name="e">EventArgs</param>
 		private void numericLvPStatus_ValueChanged(object sender, EventArgs e) {
 			// Gaugeの長さを変更する
-			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
+			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
 		}
 
 		/// <summary>

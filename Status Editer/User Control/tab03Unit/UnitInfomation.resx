@@ -521,56 +521,56 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="&gt;&gt;labelMonsterGroup.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="textMonsterID.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textUnitID.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 45</value>
   </data>
-  <data name="textMonsterID.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textUnitID.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 19</value>
   </data>
-  <data name="textMonsterID.TabIndex" type="System.Int32, mscorlib">
+  <data name="textUnitID.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="textMonsterID.ToolTip" xml:space="preserve">
+  <data name="textUnitID.ToolTip" xml:space="preserve">
     <value>ゲームシステム側で識別されるデータ。
 ID名は英名表記で統一し、データの整合性のため、変更を行わないこと。</value>
   </data>
-  <data name="&gt;&gt;textMonsterID.Name" xml:space="preserve">
-    <value>textMonsterID</value>
+  <data name="&gt;&gt;textUnitID.Name" xml:space="preserve">
+    <value>textUnitID</value>
   </data>
-  <data name="&gt;&gt;textMonsterID.Type" xml:space="preserve">
+  <data name="&gt;&gt;textUnitID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textMonsterID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textUnitID.Parent" xml:space="preserve">
     <value>groupUnitInfo</value>
   </data>
-  <data name="&gt;&gt;textMonsterID.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textUnitID.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="labelMonsterID.AutoSize" type="System.Boolean, mscorlib">
+  <data name="labelUnitID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelMonsterID.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="labelUnitID.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
-  <data name="labelMonsterID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 12</value>
+  <data name="labelUnitID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 12</value>
   </data>
-  <data name="labelMonsterID.TabIndex" type="System.Int32, mscorlib">
+  <data name="labelUnitID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="labelMonsterID.Text" xml:space="preserve">
-    <value>Monster ID(システムで識別されるデータ):</value>
+  <data name="labelUnitID.Text" xml:space="preserve">
+    <value>Unit ID(システムで識別されるデータ):</value>
   </data>
-  <data name="&gt;&gt;labelMonsterID.Name" xml:space="preserve">
-    <value>labelMonsterID</value>
+  <data name="&gt;&gt;labelUnitID.Name" xml:space="preserve">
+    <value>labelUnitID</value>
   </data>
-  <data name="&gt;&gt;labelMonsterID.Type" xml:space="preserve">
+  <data name="&gt;&gt;labelUnitID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelMonsterID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelUnitID.Parent" xml:space="preserve">
     <value>groupUnitInfo</value>
   </data>
-  <data name="&gt;&gt;labelMonsterID.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;labelUnitID.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="groupUnitInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -619,6 +619,6 @@ ID名は英名表記で統一し、データの整合性のため、変更を行
     <value>UnitInfomation</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Status_Editer.ZUserControl, Status Editer, Version=0.1.7.53, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

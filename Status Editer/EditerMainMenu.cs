@@ -127,9 +127,21 @@ namespace Status_Editer {
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
 				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, __table_skillTableAdapter);
 
+				// TAB: ユニットタイプ
+
+				// NULL
+
 				// TAB: 種族
 
 				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
+
+				// TAB: ジョブ
+				// TAB: メーカー
+				// TAB: 武器
+				// TAB: 盾
+				// TAB: 頭防具
+				// TAB: 腕防具
+				// TAB: 体防具
 
 				// 共通
 
@@ -206,6 +218,9 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// 処理軽減のため画面更新を止める
+				tabControl.Invalidate(true);
+
 				try {
 					__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 					__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
@@ -235,6 +250,19 @@ namespace Status_Editer {
 			TestForm Form2 = new TestForm();
 			Form2.Show();
 			//DataBindings();
+		}
+
+		//----------------------------------------------------------------------------------------------------
+		// TAB
+
+		/// <summary>
+		/// TAB変更時に発生する内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void tabControl_SelectedIndexChanged(object sender, EventArgs e) {
+			// 処理軽減のため画面更新を止める
+			tabControl.Invalidate(true);
 		}
 
 		//----------------------------------------------------------------------------------------------------

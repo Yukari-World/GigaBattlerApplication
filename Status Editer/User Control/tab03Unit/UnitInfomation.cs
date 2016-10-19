@@ -6,7 +6,7 @@
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab03Unit {
-	public partial class UnitInfomation : UserControl {
+	public partial class UnitInfomation : ZUserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		/// <param name="tableUnitBindingSource">BindingSource</param>
 		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
-			textMonsterID.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitID", true));
+			textUnitID.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitID", true));
 			checkAirType.DataBindings.Add(new Binding("CheckState", tableUnitBindingSource, "Air", true));
 			checkAirType.DataBindings.Add(new Binding("Checked", tableUnitBindingSource, "Air", true));
 			textUnitName.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitName", true));
@@ -49,6 +49,9 @@ namespace Status_Editer.User_Control.tab03Unit {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
+			textUnitID.MaxLength = maxIDTextSize;
+			textUnitName.MaxLength = maxNameTextSize;
+			textInfo.MaxLength = maxInfomationTextSize;
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 		}
 

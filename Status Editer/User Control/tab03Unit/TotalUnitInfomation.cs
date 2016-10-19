@@ -15,6 +15,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		// 変数
 		private long minLv = 0;
 		private long maxLv = 0;
+		int ref_f = 0;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -212,6 +213,15 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void labelMinLv_TextChanged(object sender, EventArgs e) {
+			// 処理速度の都合で更新を停止する
+			tableLayoutPanel1.Invalidate(true);
+
+			// データベース再取得時の不具合回避
+			if (labelMinLv.Text == "") {
+				ref_f = 1;
+				return;
+			}
+
 			minLv = long.Parse(labelMinLv.Text.Replace(",", ""));
 			labelLvMin.Text = "Lv." + labelMinLv.Text;
 		}
@@ -222,8 +232,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void labelLv_TextChanged(object sender, EventArgs e) {
+			// 処理速度の都合で更新を停止する
+			tableLayoutPanel1.Invalidate(true);
+
+			// データベース再取得時の不具合回避
+			if (ref_f == 1)
+				return;
+
+
 			if (labelMaxLv.Text == "-1") {
-				maxLv = Math.Max(long.Parse(labelMinLv.Text.Replace(",", "")), long.Parse(labelReqLv.Text.Replace(",", ""))) * 5L;
+				maxLv = Math.Max(long.Parse(labelMinLv.Text.Replace(",", "")), long.Parse(labelReqLv.Text.Replace(",", ""))) * 50L;
 			} else {
 				maxLv = long.Parse(labelMaxLv.Text.Replace(",", ""));
 			}
@@ -236,6 +254,13 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void labelStatus_TextChanged(object sender, EventArgs e) {
+			// 処理速度の都合で更新を停止する
+			tableLayoutPanel1.Invalidate(true);
+
+			// データベース再取得時の不具合回避
+			if (ref_f == 1)
+				return;
+
 			Change_LvValue();
 		}
 	}

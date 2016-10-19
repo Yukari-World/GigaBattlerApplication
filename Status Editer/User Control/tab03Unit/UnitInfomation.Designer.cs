@@ -26,30 +26,30 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// コード エディターで変更しないでください。
 		/// </summary>
 		private void InitializeComponent() {
-			this.components = new Container();
-			ComponentResourceManager resources = new ComponentResourceManager(typeof(UnitInfomation));
-			this.groupUnitInfo = new GroupBox();
-			this.label2 = new Label();
-			this.numericWT = new NumericUpDown();
-			this.labelWT = new Label();
-			this.numericRare2 = new NumericUpDown();
-			this.labelRare2 = new Label();
-			this.label1 = new Label();
-			this.textInfo = new TextBox();
-			this.numericRare = new NumericUpDown();
-			this.labelRare = new Label();
-			this.checkAirType = new CheckBox();
-			this.textUnitName = new TextBox();
-			this.labelUnitName = new Label();
-			this.comboMonsterGroup = new ComboBox();
-			this.labelMonsterGroup = new Label();
-			this.textMonsterID = new TextBox();
-			this.labelMonsterID = new Label();
-			this.toolTipInfo = new ToolTip(this.components);
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnitInfomation));
+			this.groupUnitInfo = new System.Windows.Forms.GroupBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.numericWT = new System.Windows.Forms.NumericUpDown();
+			this.labelWT = new System.Windows.Forms.Label();
+			this.numericRare2 = new System.Windows.Forms.NumericUpDown();
+			this.labelRare2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.textInfo = new System.Windows.Forms.TextBox();
+			this.numericRare = new System.Windows.Forms.NumericUpDown();
+			this.labelRare = new System.Windows.Forms.Label();
+			this.checkAirType = new System.Windows.Forms.CheckBox();
+			this.textUnitName = new System.Windows.Forms.TextBox();
+			this.labelUnitName = new System.Windows.Forms.Label();
+			this.comboMonsterGroup = new System.Windows.Forms.ComboBox();
+			this.labelMonsterGroup = new System.Windows.Forms.Label();
+			this.textUnitID = new System.Windows.Forms.TextBox();
+			this.labelUnitID = new System.Windows.Forms.Label();
+			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.groupUnitInfo.SuspendLayout();
-			((ISupportInitialize)(this.numericWT)).BeginInit();
-			((ISupportInitialize)(this.numericRare2)).BeginInit();
-			((ISupportInitialize)(this.numericRare)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericWT)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupUnitInfo
@@ -68,8 +68,8 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.groupUnitInfo.Controls.Add(this.labelUnitName);
 			this.groupUnitInfo.Controls.Add(this.comboMonsterGroup);
 			this.groupUnitInfo.Controls.Add(this.labelMonsterGroup);
-			this.groupUnitInfo.Controls.Add(this.textMonsterID);
-			this.groupUnitInfo.Controls.Add(this.labelMonsterID);
+			this.groupUnitInfo.Controls.Add(this.textUnitID);
+			this.groupUnitInfo.Controls.Add(this.labelUnitID);
 			resources.ApplyResources(this.groupUnitInfo, "groupUnitInfo");
 			this.groupUnitInfo.Name = "groupUnitInfo";
 			this.groupUnitInfo.TabStop = false;
@@ -77,29 +77,29 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// label2
 			// 
 			resources.ApplyResources(this.label2, "label2");
-			this.label2.BorderStyle = BorderStyle.FixedSingle;
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.label2.Name = "label2";
 			// 
 			// numericWT
 			// 
 			resources.ApplyResources(this.numericWT, "numericWT");
 			this.numericWT.Maximum = new decimal(new int[] {
-			9999999,
-			0,
-			0,
-			0});
+            9999999,
+            0,
+            0,
+            0});
 			this.numericWT.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericWT.Name = "numericWT";
 			this.toolTipInfo.SetToolTip(this.numericWT, resources.GetString("numericWT.ToolTip"));
 			this.numericWT.Value = new decimal(new int[] {
-			85,
-			0,
-			0,
-			0});
+            85,
+            0,
+            0,
+            0});
 			// 
 			// labelWT
 			// 
@@ -112,10 +112,10 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.numericRare2.Name = "numericRare2";
 			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
 			this.numericRare2.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelRare2
 			// 
@@ -137,21 +137,21 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			resources.ApplyResources(this.numericRare, "numericRare");
 			this.numericRare.Maximum = new decimal(new int[] {
-			30,
-			0,
-			0,
-			0});
+            30,
+            0,
+            0,
+            0});
 			this.numericRare.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericRare.Name = "numericRare";
 			this.numericRare.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelRare
 			// 
@@ -178,8 +178,8 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// comboMonsterGroup
 			// 
-			this.comboMonsterGroup.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-			this.comboMonsterGroup.AutoCompleteSource = AutoCompleteSource.ListItems;
+			this.comboMonsterGroup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboMonsterGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboMonsterGroup.FormattingEnabled = true;
 			resources.ApplyResources(this.comboMonsterGroup, "comboMonsterGroup");
 			this.comboMonsterGroup.Name = "comboMonsterGroup";
@@ -190,16 +190,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 			resources.ApplyResources(this.labelMonsterGroup, "labelMonsterGroup");
 			this.labelMonsterGroup.Name = "labelMonsterGroup";
 			// 
-			// textMonsterID
+			// textUnitID
 			// 
-			resources.ApplyResources(this.textMonsterID, "textMonsterID");
-			this.textMonsterID.Name = "textMonsterID";
-			this.toolTipInfo.SetToolTip(this.textMonsterID, resources.GetString("textMonsterID.ToolTip"));
+			resources.ApplyResources(this.textUnitID, "textUnitID");
+			this.textUnitID.Name = "textUnitID";
+			this.toolTipInfo.SetToolTip(this.textUnitID, resources.GetString("textUnitID.ToolTip"));
 			// 
-			// labelMonsterID
+			// labelUnitID
 			// 
-			resources.ApplyResources(this.labelMonsterID, "labelMonsterID");
-			this.labelMonsterID.Name = "labelMonsterID";
+			resources.ApplyResources(this.labelUnitID, "labelUnitID");
+			this.labelUnitID.Name = "labelUnitID";
 			// 
 			// toolTipInfo
 			// 
@@ -207,21 +207,21 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.toolTipInfo.InitialDelay = 500;
 			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
-			this.toolTipInfo.ToolTipIcon = ToolTipIcon.Info;
+			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
 			// UnitInfomation
 			// 
 			resources.ApplyResources(this, "$this");
-			this.AutoScaleMode = AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupUnitInfo);
 			this.Name = "UnitInfomation";
 			this.groupUnitInfo.ResumeLayout(false);
 			this.groupUnitInfo.PerformLayout();
-			((ISupportInitialize)(this.numericWT)).EndInit();
-			((ISupportInitialize)(this.numericRare2)).EndInit();
-			((ISupportInitialize)(this.numericRare)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericWT)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -232,8 +232,8 @@ namespace Status_Editer.User_Control.tab03Unit {
 		private Label labelRare;
 		private Label labelUnitName;
 		private Label labelMonsterGroup;
-		private Label labelMonsterID;
-		private TextBox textMonsterID;
+		private Label labelUnitID;
+		private TextBox textUnitID;
 		private TextBox textUnitName;
 		private CheckBox checkAirType;
 		private ComboBox comboMonsterGroup;
