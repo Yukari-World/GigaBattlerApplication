@@ -27,6 +27,8 @@ namespace Status_Editer.User_Control.tab05Race {
 		/// </summary>
 		private void InitializeComponent() {
 			this.groupRaceInfo = new System.Windows.Forms.GroupBox();
+			this.raceStatusEVT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
+			this.raceStatusHIT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusLuck = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusSPD = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusMagicDEF = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
@@ -37,8 +39,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.raceStatusMeleeATK = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusTP = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.raceStatusHP = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
-			this.raceStatusHIT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
-			this.raceStatusEVT = new Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts();
 			this.groupRaceInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -64,85 +64,103 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.groupRaceInfo.TabStop = false;
 			this.groupRaceInfo.Text = "Race Infomation";
 			// 
+			// raceStatusEVT
+			// 
+			this.raceStatusEVT.BackColor = System.Drawing.Color.Transparent;
+			this.raceStatusEVT.labelText = "EVT";
+			this.raceStatusEVT.Location = new System.Drawing.Point(10, 675);
+			this.raceStatusEVT.Name = "raceStatusEVT";
+			this.raceStatusEVT.Size = new System.Drawing.Size(650, 60);
+			this.raceStatusEVT.TabIndex = 11;
+			// 
+			// raceStatusHIT
+			// 
+			this.raceStatusHIT.BackColor = System.Drawing.Color.Transparent;
+			this.raceStatusHIT.labelText = "HIT";
+			this.raceStatusHIT.Location = new System.Drawing.Point(10, 615);
+			this.raceStatusHIT.Name = "raceStatusHIT";
+			this.raceStatusHIT.Size = new System.Drawing.Size(650, 60);
+			this.raceStatusHIT.TabIndex = 10;
+			// 
 			// raceStatusLuck
 			// 
 			this.raceStatusLuck.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusLuck.labelText = "Luck";
-			this.raceStatusLuck.Location = new System.Drawing.Point(10, 735);
+			this.raceStatusLuck.Location = new System.Drawing.Point(10, 555);
 			this.raceStatusLuck.Name = "raceStatusLuck";
-			this.raceStatusLuck.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusLuck.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusLuck.TabIndex = 9;
 			// 
 			// raceStatusSPD
 			// 
 			this.raceStatusSPD.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusSPD.labelText = "SPD";
-			this.raceStatusSPD.Location = new System.Drawing.Point(10, 655);
+			this.raceStatusSPD.Location = new System.Drawing.Point(10, 495);
 			this.raceStatusSPD.Name = "raceStatusSPD";
-			this.raceStatusSPD.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusSPD.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusSPD.TabIndex = 8;
 			// 
 			// raceStatusMagicDEF
 			// 
 			this.raceStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMagicDEF.labelText = "Magic DEF";
-			this.raceStatusMagicDEF.Location = new System.Drawing.Point(10, 575);
+			this.raceStatusMagicDEF.Location = new System.Drawing.Point(10, 435);
 			this.raceStatusMagicDEF.Name = "raceStatusMagicDEF";
-			this.raceStatusMagicDEF.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusMagicDEF.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusMagicDEF.TabIndex = 7;
 			// 
 			// raceStatusMagicATK
 			// 
 			this.raceStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMagicATK.labelText = "Magic ATK";
-			this.raceStatusMagicATK.Location = new System.Drawing.Point(10, 495);
+			this.raceStatusMagicATK.Location = new System.Drawing.Point(10, 375);
 			this.raceStatusMagicATK.Name = "raceStatusMagicATK";
-			this.raceStatusMagicATK.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusMagicATK.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusMagicATK.TabIndex = 6;
 			// 
 			// raceStatusRangeDEF
 			// 
 			this.raceStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusRangeDEF.labelText = "Range DEF";
-			this.raceStatusRangeDEF.Location = new System.Drawing.Point(10, 415);
+			this.raceStatusRangeDEF.Location = new System.Drawing.Point(10, 315);
 			this.raceStatusRangeDEF.Name = "raceStatusRangeDEF";
-			this.raceStatusRangeDEF.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusRangeDEF.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusRangeDEF.TabIndex = 5;
 			// 
 			// raceStatusRangeATK
 			// 
 			this.raceStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusRangeATK.labelText = "Range ATK";
-			this.raceStatusRangeATK.Location = new System.Drawing.Point(10, 335);
+			this.raceStatusRangeATK.Location = new System.Drawing.Point(10, 255);
 			this.raceStatusRangeATK.Name = "raceStatusRangeATK";
-			this.raceStatusRangeATK.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusRangeATK.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusRangeATK.TabIndex = 4;
 			// 
 			// raceStatusMeleeDEF
 			// 
 			this.raceStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMeleeDEF.labelText = "Melee DEF";
-			this.raceStatusMeleeDEF.Location = new System.Drawing.Point(10, 255);
+			this.raceStatusMeleeDEF.Location = new System.Drawing.Point(10, 195);
 			this.raceStatusMeleeDEF.Name = "raceStatusMeleeDEF";
-			this.raceStatusMeleeDEF.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusMeleeDEF.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusMeleeDEF.TabIndex = 3;
 			// 
 			// raceStatusMeleeATK
 			// 
 			this.raceStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMeleeATK.labelText = "Melee ATK";
-			this.raceStatusMeleeATK.Location = new System.Drawing.Point(10, 175);
+			this.raceStatusMeleeATK.Location = new System.Drawing.Point(10, 135);
 			this.raceStatusMeleeATK.Name = "raceStatusMeleeATK";
-			this.raceStatusMeleeATK.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusMeleeATK.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusMeleeATK.TabIndex = 2;
 			// 
 			// raceStatusTP
 			// 
 			this.raceStatusTP.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusTP.labelText = "TP";
-			this.raceStatusTP.Location = new System.Drawing.Point(10, 95);
+			this.raceStatusTP.Location = new System.Drawing.Point(10, 75);
 			this.raceStatusTP.Name = "raceStatusTP";
-			this.raceStatusTP.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusTP.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusTP.TabIndex = 1;
 			// 
 			// raceStatusHP
@@ -151,26 +169,8 @@ namespace Status_Editer.User_Control.tab05Race {
 			this.raceStatusHP.labelText = "HP";
 			this.raceStatusHP.Location = new System.Drawing.Point(10, 15);
 			this.raceStatusHP.Name = "raceStatusHP";
-			this.raceStatusHP.Size = new System.Drawing.Size(650, 80);
+			this.raceStatusHP.Size = new System.Drawing.Size(650, 60);
 			this.raceStatusHP.TabIndex = 0;
-			// 
-			// raceStatusHIT
-			// 
-			this.raceStatusHIT.BackColor = System.Drawing.Color.Transparent;
-			this.raceStatusHIT.labelText = "HIT";
-			this.raceStatusHIT.Location = new System.Drawing.Point(700, 15);
-			this.raceStatusHIT.Name = "raceStatusHIT";
-			this.raceStatusHIT.Size = new System.Drawing.Size(650, 80);
-			this.raceStatusHIT.TabIndex = 10;
-			// 
-			// raceStatusEVT
-			// 
-			this.raceStatusEVT.BackColor = System.Drawing.Color.Transparent;
-			this.raceStatusEVT.labelText = "EVT";
-			this.raceStatusEVT.Location = new System.Drawing.Point(700, 101);
-			this.raceStatusEVT.Name = "raceStatusEVT";
-			this.raceStatusEVT.Size = new System.Drawing.Size(650, 80);
-			this.raceStatusEVT.TabIndex = 11;
 			// 
 			// RaceInfomation
 			// 

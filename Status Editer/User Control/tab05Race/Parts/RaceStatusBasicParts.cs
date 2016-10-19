@@ -97,7 +97,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.BackColor = Color.Green;
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
-			StatusBar.Location = new Point(10, 55);
+			StatusBar.Location = new Point(10, 50);
 			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
 
 			// Labelの初期化
@@ -105,7 +105,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			PlusStatusBar.BackColor = Color.Yellow;
 			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
 			PlusStatusBar.Name = "PlusStatusBar";
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 5, 55);
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);
 			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
 
 			// LabelをGroupBoxに追加する
@@ -144,7 +144,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// Gaugeの長さを変更する
 			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
 			// Gaugeの位置を変更する
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 5, 55);
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);
 		}
 
 		/// <summary>
