@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control {
+namespace Status_Editer.User_Control.tabMonster {
 	public partial class UnitInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
@@ -37,6 +37,8 @@ namespace Status_Editer.User_Control {
 			numericWT.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "WT", true));
 			textInfo.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "Info", true));
 
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 		}
 	}

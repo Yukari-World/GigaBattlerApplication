@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace Status_Editer {
+namespace Status_Editer.User_Control.tabMonster {
 	public partial class StatusInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
@@ -272,6 +272,8 @@ namespace Status_Editer {
 			numericLvPMoney.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "LvMNY", true));
 			numericScaleMoney.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "MNY Per", true));
 
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 

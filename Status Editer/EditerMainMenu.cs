@@ -6,6 +6,7 @@
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
@@ -17,65 +18,58 @@ namespace Status_Editer {
 
 		//----------------------------------------------------------------------------------------------------
 		// バインド
-		// WeaponTable
-		private __table_weaponTableAdapter WeaponAdapter = new __table_weaponTableAdapter();
-		// 数が多いが、仕様なので仕方ない
-		private GigaBattlerDataSet.__table_weaponDataTable WeaponTable_3_1 = new GigaBattlerDataSet.__table_weaponDataTable();
-		private GigaBattlerDataSet.__table_weaponDataTable WeaponTable_3_2 = new GigaBattlerDataSet.__table_weaponDataTable();
-		private GigaBattlerDataSet.__table_weaponDataTable WeaponTable_3_3 = new GigaBattlerDataSet.__table_weaponDataTable();
-		private GigaBattlerDataSet.__table_weaponDataTable WeaponTable_3_4 = new GigaBattlerDataSet.__table_weaponDataTable();
-		private GigaBattlerDataSet.__table_weaponDataTable WeaponTable_3_5 = new GigaBattlerDataSet.__table_weaponDataTable();
+		// SkillTable
 		// 素直にExcelを使った方が効率よさそうに見えてくる。冗談のように見えるが、仕様である。
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_01 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_02 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_03 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_04 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_05 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_06 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_07 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_08 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_09 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_10 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_11 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_12 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_13 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_14 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_15 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_16 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_17 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_18 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_19 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_20 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_21 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_22 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_23 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_24 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_25 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_26 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_27 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_28 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_29 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_30 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_31 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_32 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_33 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_34 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_35 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_36 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_37 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_38 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_39 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_40 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_41 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_42 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_43 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_44 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_45 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_46 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_47 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_48 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_49 = new GigaBattlerDataSet.__table_skillDataTable();
-		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_50 = new GigaBattlerDataSet.__table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_01 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_02 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_03 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_04 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_05 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_06 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_07 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_08 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_09 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_10 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_11 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_12 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_13 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_14 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_15 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_16 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_17 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_18 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_19 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_20 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_21 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_22 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_23 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_24 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_25 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_26 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_27 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_28 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_29 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_30 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_31 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_32 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_33 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_34 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_35 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_36 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_37 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_38 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_39 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_40 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_41 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_42 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_43 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_44 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_45 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_46 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_47 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_48 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_49 = new __table_skillDataTable();
+		private __table_skillDataTable SkillTable_3_50 = new __table_skillDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -95,7 +89,7 @@ namespace Status_Editer {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// フォームメソッド
+		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		/// <summary>
 		/// フォーム読み込み時の処理
@@ -113,15 +107,6 @@ namespace Status_Editer {
 
 			// データバインドの設定
 			try {
-				//----------------------------------------------------------------------------------------------------
-				// バインド項目の設定
-				// TAB: モンスター
-				WeaponAdapter.Fill(WeaponTable_3_1);
-				WeaponAdapter.Fill(WeaponTable_3_2);
-				WeaponAdapter.Fill(WeaponTable_3_3);
-				WeaponAdapter.Fill(WeaponTable_3_4);
-				WeaponAdapter.Fill(WeaponTable_3_5);
-
 				// 別コントロールへのバインディング設定
 				UnitInfomation.LoadDataBindings(tablemonsterBindingSource);
 				StatusInfomation.LoadDataBindings(tablemonsterBindingSource);
@@ -130,6 +115,7 @@ namespace Status_Editer {
 				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 			} catch (Exception ex) {
 				MessageBox.Show("System Load Failed:\n" + ex.ToString(), "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
@@ -200,8 +186,9 @@ namespace Status_Editer {
 				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
-			} catch (Exception em) {
-				MessageBox.Show("Database Load Failed:\n" + em.ToString(), "Error!!");
+				__table_skillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+			} catch (Exception ex) {
+				MessageBox.Show("Database Load Failed:\n" + ex.ToString(), "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -220,6 +207,7 @@ namespace Status_Editer {
 			Form2.Show();
 			//DataBindings();
 		}
+
 		//----------------------------------------------------------------------------------------------------
 		// TAB: モンスター
 

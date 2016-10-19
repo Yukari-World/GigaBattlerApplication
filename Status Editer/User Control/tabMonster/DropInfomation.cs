@@ -1,8 +1,13 @@
-﻿using Status_Editer.GigaBattlerDataSetTableAdapters;
+﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// DropInfomation
+//
+// Edited By Yukari-World
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
-namespace Status_Editer.User_Control {
+namespace Status_Editer.User_Control.tabMonster {
 	public partial class DropInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
@@ -37,9 +42,7 @@ namespace Status_Editer.User_Control {
 		/// <param name="tableweaponBindingSource">BindingSource tableweaponBindingSource</param>
 		/// <param name="tablemonsterBindingSource">BindingSource tablemonsterBindingSource</param>
 		public void LoadDataBindings(BindingSource tableweaponBindingSource, BindingSource tablemonsterBindingSource ) {
-			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
-			// TAB: モンスター
 			WeaponAdapter.Fill(WeaponTable_3_1);
 			WeaponAdapter.Fill(WeaponTable_3_2);
 			WeaponAdapter.Fill(WeaponTable_3_3);
@@ -74,6 +77,8 @@ namespace Status_Editer.User_Control {
 			comboDropTable5.DisplayMember = "WeaponName";
 			comboDropTable5.ValueMember = "WeaponID";
 
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 	}

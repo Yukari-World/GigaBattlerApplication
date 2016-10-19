@@ -87,22 +87,28 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\DropInfomation.cs">
+    <Compile Include="User Control\tabMonster\DropInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\DropInfomation.Designer.cs">
+    <Compile Include="User Control\tabMonster\DropInfomation.Designer.cs">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\StatusInfomation.cs">
+    <Compile Include="User Control\tabMonster\SkillInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\StatusInfomation.Designer.cs">
+    <Compile Include="User Control\tabMonster\SkillInfomation.Designer.cs">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tabMonster\StatusInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tabMonster\StatusInfomation.Designer.cs">
       <DependentUpon>StatusInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\UnitInfomation.cs">
+    <Compile Include="User Control\tabMonster\UnitInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\UnitInfomation.Designer.cs">
+    <Compile Include="User Control\tabMonster\UnitInfomation.Designer.cs">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EditerMainMenu.resx">
@@ -120,13 +126,16 @@
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\DropInfomation.resx">
+    <EmbeddedResource Include="User Control\tabMonster\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\StatusInfomation.resx">
+    <EmbeddedResource Include="User Control\tabMonster\SkillInfomation.resx">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tabMonster\StatusInfomation.resx">
       <DependentUpon>StatusInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\UnitInfomation.resx">
+    <EmbeddedResource Include="User Control\tabMonster\UnitInfomation.resx">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
