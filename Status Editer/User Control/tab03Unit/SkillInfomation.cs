@@ -21,6 +21,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
@@ -32,12 +33,14 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// パブリック関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableUnitBindingSource">BindingSource</param>
 		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_skillTableAdapter SkillAdapter) {
+			// データバインドの設定
 			SkillInfomation1.SetDataBindings(tableUnitBindingSource, SkillAdapter, "Skill1");
 			SkillInfomation2.SetDataBindings(tableUnitBindingSource, SkillAdapter, "Skill2");
 			SkillInfomation3.SetDataBindings(tableUnitBindingSource, SkillAdapter, "Skill3");

@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// RaceStatusEtcParts
+// RaceStatusBasicParts
 //
 // Edited By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -13,8 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control.tab05Race.Parts {
-	public partial class RaceStatusEtcParts : UserControl {
+namespace Status_Editer.User_Control.tab05Race {
+	public partial class RaceInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,22 +23,16 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		/// <summary>
-		/// グループラベルのテキストを設定します。
-		/// </summary>
-		public string labelText {
-			get { return groupEtc.Text; }
-			set { groupEtc.Text = value; }
-		}
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public RaceStatusEtcParts() {
+		public RaceInfomation() {
 			InitializeComponent();
 		}
 
@@ -46,15 +40,28 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// パブリック関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableRaceBindingSource">BindingSource</param>
-		/// <param name="bindTag">string</param>
-		public void SetDataBindings(BindingSource tableRaceBindingSource, string bindTag) {
+		public void LoadDataBindings(BindingSource tableRaceBindingSource) {
 			// データバインドの設定
-			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));
-			numericLvPStatus.DataBindings.Add(new Binding("Value", tableRaceBindingSource, "Lv" + bindTag, true));
+			raceStatusHP.SetDataBindings(tableRaceBindingSource, "HP");
+			raceStatusTP.SetDataBindings(tableRaceBindingSource, "TP");
+			raceStatusMeleeATK.SetDataBindings(tableRaceBindingSource, "ATK");
+			raceStatusMeleeDEF.SetDataBindings(tableRaceBindingSource, "DEF");
+			raceStatusRangeATK.SetDataBindings(tableRaceBindingSource, "RAT");
+			raceStatusRangeDEF.SetDataBindings(tableRaceBindingSource, "RDF");
+			raceStatusMagicATK.SetDataBindings(tableRaceBindingSource, "MAT");
+			raceStatusMagicDEF.SetDataBindings(tableRaceBindingSource, "MDF");
+			raceStatusSPD.SetDataBindings(tableRaceBindingSource, "SPD");
+			raceStatusLuck.SetDataBindings(tableRaceBindingSource, "LUK");
+
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 
 

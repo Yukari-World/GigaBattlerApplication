@@ -12,8 +12,10 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		// 変数
 		public string rootDirectory = "";
+
 		// TableAdapter
 		__table_unitTableAdapter __table_unitTableAdapter = new __table_unitTableAdapter();
 		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
@@ -23,6 +25,7 @@ namespace Status_Editer {
 		__table_armorTableAdapter __table_armorTableAdapter = new __table_armorTableAdapter();
 		__table_accessoryTableAdapter __table_accessoryTableAdapter = new __table_accessoryTableAdapter();
 		__table_skillTableAdapter __table_skillTableAdapter = new __table_skillTableAdapter();
+
 		// BindingSource
 		BindingSource tableUnitBindingSource = new BindingSource();
 		BindingSource tableRaceBindingSource = new BindingSource();
@@ -37,6 +40,7 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
@@ -48,6 +52,7 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// 変更した更新内容を適用します。
 		/// </summary>
@@ -60,6 +65,7 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// フォーム読み込み時の処理
 		/// </summary>
@@ -68,6 +74,7 @@ namespace Status_Editer {
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 初期化
+
 			__table_unitTableAdapter.ClearBeforeFill = true;
 			__table_raceTableAdapter.ClearBeforeFill = true;
 			__table_weaponTableAdapter.ClearBeforeFill = true;
@@ -79,6 +86,7 @@ namespace Status_Editer {
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の関連付け
+
 			tableUnitBindingSource.DataMember = "__table_unit";
 			tableUnitBindingSource.DataSource = GigaBattlerDataSet;
 			tableRaceBindingSource.DataMember = "__table_race";
@@ -90,11 +98,13 @@ namespace Status_Editer {
 			// デザイナープロパティの設定
 			// できればデザイナープロパティに設定したいが、バグの関係でここで設定。
 			// TAB: ユニット
+
 			listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
+
 			listUnit.DataSource = tableUnitBindingSource;
 			listUnit.DisplayMember = "UnitName";
 			listUnit.ValueMember = "UnitID";
@@ -111,6 +121,8 @@ namespace Status_Editer {
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
 				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, __table_skillTableAdapter);
 
+				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
+
 				__table_unitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
@@ -125,6 +137,7 @@ namespace Status_Editer {
 
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
+
 		/// <summary>
 		/// 「ファイル」→「開く」の処理内容
 		/// http://dobon.net/vb/dotnet/form/folderdialog.htmlより参照

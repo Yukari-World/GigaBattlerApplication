@@ -11,6 +11,8 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		// 変数
 		private long minLv = 0;
 		private long maxLv = 0;
 
@@ -23,6 +25,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コンストラクタメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
@@ -34,12 +37,13 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// パブリック関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableUnitBindingSource">BindingSource</param>
 		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
-
+			// データバインドの設定
 			labelName.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitName", true));
 			labelUnitType.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Race", true));
 			labelReqLv.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Req Lv", true, DataSourceUpdateMode.OnValidation, null, "N0"));
@@ -84,6 +88,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
+
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 
@@ -91,8 +96,13 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// ステータス演算関数
+		/// </summary>
 		private void Change_LvValue() {
-			//無駄に多い変数
+			// 無駄に多い変数
+			// 読み取り対象がLabelなため、一度変換が必要
 			decimal BaseHP = decimal.Parse(labelBaseHP.Text.Replace(",", ""));
 			decimal LvPHP = decimal.Parse(labelLvPHP.Text.Replace(",", ""));
 			decimal ScaleHP = decimal.Parse(labelScaleHP.Text.Replace(",", ""));
@@ -132,7 +142,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			decimal LvPMoney = decimal.Parse(labelLvPMoney.Text.Replace(",", ""));
 			decimal ScaleMoney = decimal.Parse(labelScaleMoney.Text.Replace(",", ""));
 
-			//一時保管用変数
+			// 一時保管用変数
 			decimal Lv1SPD = ((BaseSPD + LvPSPD) * Math.Min(102M, ScaleSPD) / 100M);
 			decimal MinLvSPD = ((BaseSPD + LvPSPD * minLv) * Math.Min((decimal)(Math.Sqrt(minLv) * 2D) + 100M, ScaleSPD) / 100M);
 			decimal MaxLvSPD = ((BaseSPD + LvPSPD * maxLv) * Math.Min((decimal)(Math.Sqrt(maxLv) * 2D) + 100M, ScaleSPD) / 100M);
@@ -145,7 +155,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			labelLv1RangeDEF.Text = ((BaseRangeDEF + LvPRangeDEF) * Math.Min(102M, ScaleRangeDEF) / 100M).ToString("N2");
 			labelLv1MagicATK.Text = ((BaseMagicATK + LvPMagicATK) * Math.Min(102M, ScaleMagicATK) / 100M).ToString("N2");
 			labelLv1MagicDEF.Text = ((BaseMagicDEF + LvPMagicDEF) * Math.Min(102M, ScaleMagicDEF) / 100M).ToString("N2");
-			labelLv1SPD.Text= Lv1SPD.ToString("N2");
+			labelLv1SPD.Text = Lv1SPD.ToString("N2");
 			labelLv1Luck.Text = (BaseLuck + LvPLuck).ToString("N0");
 			labelLv1HIT.Text = (BaseHIT + LvPHIT + (decimal)Math.Sqrt((double)Lv1SPD / 10D)).ToString("N0");
 			labelLv1EVT.Text = (BaseEVT + LvPEVT + (decimal)Math.Sqrt((double)Lv1SPD / 10D)).ToString("N0");
@@ -187,6 +197,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// コントロール読み込み時の処理
 		/// </summary>

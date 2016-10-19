@@ -135,17 +135,11 @@
     <Compile Include="User Control\tab05Race\Parts\RaceStatusBasicParts.Designer.cs">
       <DependentUpon>RaceStatusBasicParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\tab05Race\Parts\RaceStatusEtcParts.cs">
+    <Compile Include="User Control\tab05Race\RaceInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\tab05Race\Parts\RaceStatusEtcParts.Designer.cs">
-      <DependentUpon>RaceStatusEtcParts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Control\tab05Race\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\tab05Race\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="User Control\tab05Race\RaceInfomation.Designer.cs">
+      <DependentUpon>RaceInfomation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EditerMainMenu.resx">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
@@ -186,11 +180,8 @@
     <EmbeddedResource Include="User Control\tab05Race\Parts\RaceStatusBasicParts.resx">
       <DependentUpon>RaceStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\tab05Race\Parts\RaceStatusEtcParts.resx">
-      <DependentUpon>RaceStatusEtcParts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control\tab05Race\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="User Control\tab05Race\RaceInfomation.resx">
+      <DependentUpon>RaceInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="GigaBattlerDataSet.xsc">
