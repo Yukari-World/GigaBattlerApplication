@@ -49,6 +49,7 @@
 			this.tabPage22 = new System.Windows.Forms.TabPage();
 			this.tabPage23 = new System.Windows.Forms.TabPage();
 			this.tabPage24 = new System.Windows.Forms.TabPage();
+			this.tabPage25 = new System.Windows.Forms.TabPage();
 			this.listUnit = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.listUnitType = new System.Windows.Forms.ListBox();
@@ -76,13 +77,12 @@
 			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-			this.tabPage25 = new System.Windows.Forms.TabPage();
+			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
 			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
 			this.StatusInfomation = new Status_Editer.User_Control.tab03Unit.StatusInfomation();
 			this.ActiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.SkillInfomation();
 			this.PassiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.AbilityInfomation();
-			this.TotalInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage3.SuspendLayout();
@@ -91,6 +91,7 @@
 			this.tabPage22.SuspendLayout();
 			this.tabPage23.SuspendLayout();
 			this.tabPage24.SuspendLayout();
+			this.tabPage25.SuspendLayout();
 			this.tabPage4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
@@ -98,7 +99,6 @@
 			this.ToolStripContainer.TopToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
 			this.StatusStrip.SuspendLayout();
-			this.tabPage25.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// StripMainMenu
@@ -304,7 +304,7 @@
 			// 
 			// tabPage21
 			// 
-			this.tabPage21.Controls.Add(this.TotalInfomation);
+			this.tabPage21.Controls.Add(this.TotalUnitInfomation);
 			this.tabPage21.Location = new System.Drawing.Point(4, 22);
 			this.tabPage21.Name = "tabPage21";
 			this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
@@ -345,6 +345,16 @@
 			this.tabPage24.TabIndex = 3;
 			this.tabPage24.Text = "スキル";
 			this.tabPage24.UseVisualStyleBackColor = true;
+			// 
+			// tabPage25
+			// 
+			this.tabPage25.Controls.Add(this.PassiveSkillInfomation);
+			this.tabPage25.Location = new System.Drawing.Point(4, 22);
+			this.tabPage25.Name = "tabPage25";
+			this.tabPage25.Size = new System.Drawing.Size(1379, 804);
+			this.tabPage25.TabIndex = 4;
+			this.tabPage25.Text = "アビリティ";
+			this.tabPage25.UseVisualStyleBackColor = true;
 			// 
 			// listUnit
 			// 
@@ -592,15 +602,13 @@
 			// 
 			this.notifyIcon.Visible = true;
 			// 
-			// tabPage25
+			// TotalUnitInfomation
 			// 
-			this.tabPage25.Controls.Add(this.PassiveSkillInfomation);
-			this.tabPage25.Location = new System.Drawing.Point(4, 22);
-			this.tabPage25.Name = "tabPage25";
-			this.tabPage25.Size = new System.Drawing.Size(1379, 804);
-			this.tabPage25.TabIndex = 4;
-			this.tabPage25.Text = "アビリティ";
-			this.tabPage25.UseVisualStyleBackColor = true;
+			this.TotalUnitInfomation.BackColor = System.Drawing.Color.Transparent;
+			this.TotalUnitInfomation.Location = new System.Drawing.Point(0, 0);
+			this.TotalUnitInfomation.Name = "TotalUnitInfomation";
+			this.TotalUnitInfomation.Size = new System.Drawing.Size(1360, 800);
+			this.TotalUnitInfomation.TabIndex = 0;
 			// 
 			// DropInfomation
 			// 
@@ -842,13 +850,6 @@
 			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
 			this.PassiveSkillInfomation.TabIndex = 1;
 			// 
-			// TotalInfomation
-			// 
-			this.TotalInfomation.Location = new System.Drawing.Point(0, 0);
-			this.TotalInfomation.Name = "TotalInfomation";
-			this.TotalInfomation.Size = new System.Drawing.Size(1360, 800);
-			this.TotalInfomation.TabIndex = 0;
-			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -870,6 +871,7 @@
 			this.tabPage22.ResumeLayout(false);
 			this.tabPage23.ResumeLayout(false);
 			this.tabPage24.ResumeLayout(false);
+			this.tabPage25.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
@@ -881,7 +883,6 @@
 			this.ToolStripContainer.PerformLayout();
 			this.StatusStrip.ResumeLayout(false);
 			this.StatusStrip.PerformLayout();
-			this.tabPage25.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -946,7 +947,7 @@
 		private User_Control.tab03Unit.SkillInfomation ActiveSkillInfomation;
 		private System.Windows.Forms.TabPage tabPage25;
 		private User_Control.tab03Unit.AbilityInfomation PassiveSkillInfomation;
-		private User_Control.tab03Unit.TotalUnitInfomation TotalInfomation;
+		private User_Control.tab03Unit.TotalUnitInfomation TotalUnitInfomation;
 	}
 }
 

@@ -14,6 +14,8 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// 変数
 		public string rootDirectory = "";
+		// Class
+		StatusCalc StatusCalc = new StatusCalc();
 		// TableAdapter
 		__table_monsterTableAdapter __table_monsterTableAdapter = new __table_monsterTableAdapter();
 		__table_raceTableAdapter __table_raceTableAdapter = new __table_raceTableAdapter();
@@ -65,7 +67,15 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
+			__table_monsterTableAdapter.ClearBeforeFill = true;
+			__table_weaponTableAdapter.ClearBeforeFill = true;
+			__table_shieldTableAdapter.ClearBeforeFill = true;
+			__table_helmetTableAdapter.ClearBeforeFill = true;
 			__table_armorTableAdapter.ClearBeforeFill = true;
+			__table_accessoryTableAdapter.ClearBeforeFill = true;
+			__table_skillTableAdapter.ClearBeforeFill = true;
+
+			//----------------------------------------------------------------------------------------------------
 			// バインド項目の関連付け
 			tableMonsterBindingSource.DataMember = "__table_monster";
 			tableMonsterBindingSource.DataSource = GigaBattlerDataSet;
@@ -78,19 +88,20 @@ namespace Status_Editer {
 			// TAB: ユニット
 			listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 			tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-			TotalInfomation.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
+			//----------------------------------------------------------------------------------------------------
+			// バインド項目の設定
+			listUnit.DataSource = tableMonsterBindingSource;
+			listUnit.DisplayMember = "MonsterName";
+			listUnit.ValueMember = "MonsterID";
+
+			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
+			StatusCalc.NumericReqLv.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "Req Lv", true));
+
 			try {
-				// データバインドの設定
-				//listUnit.DataBindings.Add("SelectedValue", tableMonsterBindingSource, "MonsterID");
-
-				// バインド項目の設定
-				listUnit.DataSource = tableMonsterBindingSource;
-				listUnit.DisplayMember = "MonsterName";
-				listUnit.ValueMember = "MonsterID";
-
 				// 別コントロールへのバインディング設定
+				TotalUnitInfomation.LoadDataBindings(tableMonsterBindingSource, StatusCalc);
 				UnitInfomation.LoadDataBindings(tableMonsterBindingSource);
 				DropInfomation.LoadDataBindings(tableMonsterBindingSource, __table_weaponTableAdapter);
 				StatusInfomation.LoadDataBindings(tableMonsterBindingSource);
@@ -150,13 +161,13 @@ namespace Status_Editer {
 		private void StripMenuExit_Click(object sender, EventArgs e) {
 			DialogResult result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			switch (result) {
-			case DialogResult.Yes:
-				UpdateSQL();
-				break;
-			case DialogResult.No:
-				break;
-			case DialogResult.Cancel:
-				return;
+				case DialogResult.Yes:
+					UpdateSQL();
+					break;
+				case DialogResult.No:
+					break;
+				case DialogResult.Cancel:
+					return;
 			}// End Switch
 			Application.Exit();
 		}

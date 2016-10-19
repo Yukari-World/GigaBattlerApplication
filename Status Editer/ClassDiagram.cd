@@ -3,12 +3,12 @@
   <Class Name="Status_Editer.EditerMainMenu" Collapsed="true">
     <Position X="3" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EADFWQlKwDGIQRAkBgDgIYEGGQASEAuiACBAAAQpBIA=</HashCode>
+      <HashCode>EADFSQlKgjOIQRAkBgDgIYACmQgSECuiABBACgQpBIA=</HashCode>
       <FileName>EditerMainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.GigaBattlerDataSet" Collapsed="true">
-    <Position X="8.25" Y="9" Width="1.5" />
+    <Position X="10.25" Y="9" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -54,7 +54,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.Properties.Settings" Collapsed="true">
-    <Position X="5.25" Y="9" Width="1.75" />
+    <Position X="7.25" Y="9" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAgAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
@@ -96,33 +96,12 @@
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.DropInfomation" Collapsed="true">
-    <Position X="12" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AwAIgAAIACAIAAAAAACEAAASAAAACQAgECAAAAAACBw=</HashCode>
-      <FileName>User Control\tabMonster\DropInfomation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.StatusInfomation" Collapsed="true">
-    <Position X="9.75" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>H03JedELYDkpAFLzTgTJsY5W/Avx/rLFDIDD9IPxxcg=</HashCode>
-      <FileName>User Control\tabMonster\StatusInfomation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.UnitInfomation" Collapsed="true">
-    <Position X="14.25" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AACAAAMEAKAIABAAQgCAAQACgAAACAAAAABAgACAgAA=</HashCode>
-      <FileName>User Control\tabMonster\UnitInfomation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="System.Windows.Forms.UserControl" Collapsed="true">
-    <Position X="13" Y="5" Width="1.5" />
+    <Position X="14.5" Y="5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Windows.Forms.Form" Collapsed="true">
-    <Position X="4" Y="5" Width="1.5" />
+    <Position X="4.25" Y="5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.ComponentModel.Component" Collapsed="true">
@@ -131,43 +110,78 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Data.DataSet" Collapsed="true">
-    <Position X="8.25" Y="7.5" Width="1.75" />
+    <Position X="10.25" Y="7.5" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
-    <Position X="5.25" Y="7.5" Width="1.75" />
+    <Position X="7.25" Y="7.5" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Windows.Forms.ContainerControl" Collapsed="true">
-    <Position X="10.75" Y="3.5" Width="1.5" />
+    <Position X="12.25" Y="3.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="2.25" Y="7.5" Width="1.5" />
+    <Position X="3.5" Y="7.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.ActiveSkillInfomation" Collapsed="true">
-    <Position X="16.5" Y="6.5" Width="1.5" />
+  <Class Name="Status_Editer.StatusCalc" Collapsed="true">
+    <Position X="4.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAEAACAAAAAAAACIAAACAAAACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>User Control\tabMonster\ActiveSkillInfomation.cs</FileName>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>StatusCalc.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.PassiveSkillInfomation" Collapsed="true">
-    <Position X="18.75" Y="6.5" Width="1.5" />
+  <Class Name="Status_Editer.User_Control.tab03Unit.AbilityInfomation" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>User Control\tabMonster\PassiveSkillInfomation.cs</FileName>
+      <FileName>User Control\tab03Unit\AbilityInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.User_Control.tabMonster.Parts.SkillInfomation" Collapsed="true">
-    <Position X="7.5" Y="6.5" Width="1.5" />
+  <Class Name="Status_Editer.User_Control.tab03Unit.DropInfomation" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAIgAAIACAIAAAAAACEAAASAAAACQAgECAAAAAACBw=</HashCode>
+      <FileName>User Control\tab03Unit\DropInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.tab03Unit.SkillInfomation" Collapsed="true">
+    <Position X="19" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEgACAAAAAQgED4DwACADABCAAAIAEAAAAAgEA=</HashCode>
+      <FileName>User Control\tab03Unit\SkillInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.tab03Unit.StatusInfomation" Collapsed="true">
+    <Position X="21.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>H03JedELYDkpAFLzTgTJsY5W/Avx/rLFDIDD9IPxxcg=</HashCode>
+      <FileName>User Control\tab03Unit\StatusInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.tab03Unit.TotalUnitInfomation" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EBwCEAAAECEABBAEACCAAAACAAAACCAAAAAIBAAAACA=</HashCode>
+      <FileName>User Control\tab03Unit\TotalUnitInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.tab03Unit.UnitInfomation" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAMEAKAIABAAQgCAAQACgAAACAAAAABAgACAgAA=</HashCode>
+      <FileName>User Control\tab03Unit\UnitInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.tab03Unit.Parts.SkillInfomation" Collapsed="true">
+    <Position X="16.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAIAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAIkAEA=</HashCode>
-      <FileName>User Control\tabMonster\Parts\SkillInfomation.cs</FileName>
+      <FileName>User Control\tab03Unit\Parts\SkillInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Yu Gothic UI" Size="9" />

@@ -34,19 +34,20 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tablemonsterBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tablemonsterBindingSource) {
-			textMonsterID.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "MonsterID", true));
-			checkAirType.DataBindings.Add(new Binding("CheckState", tablemonsterBindingSource, "Air", true));
-			checkAirType.DataBindings.Add(new Binding("Checked", tablemonsterBindingSource, "Air", true));
-			textUnitName.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "MonsterName", true));
-			numericRare.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Rare", true));
-			numericWT.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "WT", true));
-			textInfo.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "Info", true));
+		/// <param name="tableMonsterBindingSource">BindingSource</param>
+		public void LoadDataBindings(BindingSource tableMonsterBindingSource) {
+			textMonsterID.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterID", true));
+			checkAirType.DataBindings.Add(new Binding("CheckState", tableMonsterBindingSource, "Air", true));
+			checkAirType.DataBindings.Add(new Binding("Checked", tableMonsterBindingSource, "Air", true));
+			textUnitName.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "MonsterName", true));
+			numericRare.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "Rare", true));
+			numericWT.DataBindings.Add(new Binding("Value", tableMonsterBindingSource, "WT", true));
+			textInfo.DataBindings.Add(new Binding("Text", tableMonsterBindingSource, "Info", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+		}
 
 
 			//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -57,6 +58,5 @@ namespace Status_Editer.User_Control.tab03Unit {
 			//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			// コントロールメソッド
 			//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		}
 	}
 }
