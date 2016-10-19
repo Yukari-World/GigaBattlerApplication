@@ -22,6 +22,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private decimal basicRate;
 		private int GrooveGauge;
 		private Label StatusBar = new Label();
+		private Label PlusStatusBar = new Label();
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
@@ -104,8 +105,17 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.Location = new Point(10, 55);
 			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
 
+			// Labelの初期化
+			PlusStatusBar.AutoSize = false;
+			PlusStatusBar.BackColor = Color.Yellow;
+			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
+			PlusStatusBar.Name = "PlusStatusBar";
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width, 55);
+			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
+
 			// LabelをGroupBoxに追加する
-			groupBasic.Controls.Add(this.StatusBar);
+			groupBasic.Controls.Add(StatusBar);
+			groupBasic.Controls.Add(PlusStatusBar);
 
 			// コントロールの設定変更
 			if (Array.IndexOf(ExtraIndex, groupBasic.Text) != -1) {
@@ -139,6 +149,18 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 
 			// Gaugeの長さを変更する
 			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+			// Gaugeの位置を変更する
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width, 55);
+		}
+
+		/// <summary>
+		/// Lv Per Statusの値が変化した時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericLvPStatus_ValueChanged(object sender, EventArgs e) {
+			// Gaugeの長さを変更する
+			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
 		}
 
 		/// <summary>

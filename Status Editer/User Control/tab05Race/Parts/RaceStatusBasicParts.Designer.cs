@@ -147,6 +147,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
             0,
             0,
             65536});
+			this.numericLvPStatus.ValueChanged += new System.EventHandler(this.numericLvPStatus_ValueChanged);
 			// 
 			// toolTipInfo
 			// 
