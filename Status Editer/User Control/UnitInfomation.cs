@@ -34,7 +34,10 @@ namespace Status_Editer.User_Control {
 			checkAirType.DataBindings.Add(new Binding("Checked", tablemonsterBindingSource, "Air", true));
 			textUnitName.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "MonsterName", true));
 			numericRare.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "Rare", true));
+			numericWT.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "WT", true));
 			textInfo.DataBindings.Add(new Binding("Text", tablemonsterBindingSource, "Info", true));
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 		}
 	}
 }

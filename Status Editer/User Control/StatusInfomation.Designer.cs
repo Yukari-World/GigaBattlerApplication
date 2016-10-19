@@ -25,9 +25,9 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatusInfomation));
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.numericScaleMoney = new System.Windows.Forms.NumericUpDown();
 			this.numericLvPEVT = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +47,7 @@
 			this.numericScaleHP = new System.Windows.Forms.NumericUpDown();
 			this.numericMinLevel = new System.Windows.Forms.NumericUpDown();
 			this.numericMaxLevel = new System.Windows.Forms.NumericUpDown();
+			this.numericReqLv = new System.Windows.Forms.NumericUpDown();
 			this.groupStatusInfo = new System.Windows.Forms.GroupBox();
 			this.labelTestLv = new System.Windows.Forms.Label();
 			this.numericTestLv = new System.Windows.Forms.NumericUpDown();
@@ -126,7 +127,6 @@
 			this.numericLvPHP = new System.Windows.Forms.NumericUpDown();
 			this.labelScaleHP = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.numericReqLv = new System.Windows.Forms.NumericUpDown();
 			this.labelReqLv = new System.Windows.Forms.Label();
 			this.labelMinLevel = new System.Windows.Forms.Label();
 			this.label = new System.Windows.Forms.Label();
@@ -149,6 +149,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleHP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMinLevel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxLevel)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericReqLv)).BeginInit();
 			this.groupStatusInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTestLv)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartStatus)).BeginInit();
@@ -189,7 +190,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericHP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPHP)).BeginInit();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericReqLv)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// toolTipInfo
@@ -198,6 +198,8 @@
 			this.toolTipInfo.InitialDelay = 500;
 			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
+			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
 			// numericScaleMoney
 			// 
@@ -630,6 +632,27 @@
             0,
             -2147483648});
 			// 
+			// numericReqLv
+			// 
+			resources.ApplyResources(this.numericReqLv, "numericReqLv");
+			this.numericReqLv.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+			this.numericReqLv.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericReqLv.Name = "numericReqLv";
+			this.toolTipInfo.SetToolTip(this.numericReqLv, resources.GetString("numericReqLv.ToolTip"));
+			this.numericReqLv.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			// 
 			// groupStatusInfo
 			// 
 			this.groupStatusInfo.Controls.Add(this.labelTestLv);
@@ -682,19 +705,19 @@
 			// 
 			// chartStatus
 			// 
-			chartArea3.AxisY.MaximumAutoSize = 90F;
-			chartArea3.Name = "ChartArea1";
-			this.chartStatus.ChartAreas.Add(chartArea3);
+			chartArea1.AxisY.MaximumAutoSize = 90F;
+			chartArea1.Name = "ChartArea1";
+			this.chartStatus.ChartAreas.Add(chartArea1);
 			resources.ApplyResources(this.chartStatus, "chartStatus");
 			this.chartStatus.Name = "chartStatus";
-			series3.ChartArea = "ChartArea1";
-			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Radar;
-			series3.Name = "Series1";
-			this.chartStatus.Series.Add(series3);
-			title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			title3.Name = "ChartTitle";
-			title3.Text = "Status Rader Chart";
-			this.chartStatus.Titles.Add(title3);
+			series1.ChartArea = "ChartArea1";
+			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Radar;
+			series1.Name = "Series1";
+			this.chartStatus.Series.Add(series1);
+			title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			title1.Name = "ChartTitle";
+			title1.Text = "Status Rader Chart";
+			this.chartStatus.Titles.Add(title1);
 			// 
 			// groupBox15
 			// 
@@ -1569,27 +1592,6 @@
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.TabStop = false;
 			// 
-			// numericReqLv
-			// 
-			resources.ApplyResources(this.numericReqLv, "numericReqLv");
-			this.numericReqLv.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-			this.numericReqLv.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.numericReqLv.Name = "numericReqLv";
-			this.toolTipInfo.SetToolTip(this.numericReqLv, resources.GetString("numericReqLv.ToolTip"));
-			this.numericReqLv.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			// 
 			// labelReqLv
 			// 
 			resources.ApplyResources(this.labelReqLv, "labelReqLv");
@@ -1635,6 +1637,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericScaleHP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMinLevel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericMaxLevel)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericReqLv)).EndInit();
 			this.groupStatusInfo.ResumeLayout(false);
 			this.groupStatusInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericTestLv)).EndInit();
@@ -1691,7 +1694,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericLvPHP)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericReqLv)).EndInit();
 			this.ResumeLayout(false);
 
 		}

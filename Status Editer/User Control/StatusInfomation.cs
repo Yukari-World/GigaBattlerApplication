@@ -271,6 +271,8 @@ namespace Status_Editer {
 			numericMoney.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "MNY", true));
 			numericLvPMoney.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "LvMNY", true));
 			numericScaleMoney.DataBindings.Add(new Binding("Value", tablemonsterBindingSource, "MNY Per", true));
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 
 

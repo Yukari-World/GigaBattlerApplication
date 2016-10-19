@@ -26,6 +26,8 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnitInfomation));
 			this.groupUnitInfo = new System.Windows.Forms.GroupBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.textInfo = new System.Windows.Forms.TextBox();
 			this.numericRare = new System.Windows.Forms.NumericUpDown();
 			this.labelRare = new System.Windows.Forms.Label();
 			this.checkAirType = new System.Windows.Forms.CheckBox();
@@ -36,14 +38,24 @@
 			this.textMonsterID = new System.Windows.Forms.TextBox();
 			this.labelMonsterID = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.textInfo = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.numericRare2 = new System.Windows.Forms.NumericUpDown();
+			this.labelRare2 = new System.Windows.Forms.Label();
+			this.numericWT = new System.Windows.Forms.NumericUpDown();
+			this.labelWT = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.groupUnitInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericWT)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupUnitInfo
 			// 
+			this.groupUnitInfo.Controls.Add(this.label2);
+			this.groupUnitInfo.Controls.Add(this.numericWT);
+			this.groupUnitInfo.Controls.Add(this.labelWT);
+			this.groupUnitInfo.Controls.Add(this.numericRare2);
+			this.groupUnitInfo.Controls.Add(this.labelRare2);
 			this.groupUnitInfo.Controls.Add(this.label1);
 			this.groupUnitInfo.Controls.Add(this.textInfo);
 			this.groupUnitInfo.Controls.Add(this.numericRare);
@@ -58,6 +70,17 @@
 			resources.ApplyResources(this.groupUnitInfo, "groupUnitInfo");
 			this.groupUnitInfo.Name = "groupUnitInfo";
 			this.groupUnitInfo.TabStop = false;
+			// 
+			// label1
+			// 
+			resources.ApplyResources(this.label1, "label1");
+			this.label1.Name = "label1";
+			// 
+			// textInfo
+			// 
+			resources.ApplyResources(this.textInfo, "textInfo");
+			this.textInfo.Name = "textInfo";
+			this.toolTipInfo.SetToolTip(this.textInfo, resources.GetString("textInfo.ToolTip"));
 			// 
 			// numericRare
 			// 
@@ -132,17 +155,56 @@
 			this.toolTipInfo.InitialDelay = 500;
 			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
+			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// textInfo
+			// numericRare2
 			// 
-			resources.ApplyResources(this.textInfo, "textInfo");
-			this.textInfo.Name = "textInfo";
-			this.toolTipInfo.SetToolTip(this.textInfo, resources.GetString("textInfo.ToolTip"));
+			resources.ApplyResources(this.numericRare2, "numericRare2");
+			this.numericRare2.Name = "numericRare2";
+			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
+			this.numericRare2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			// 
-			// label1
+			// labelRare2
 			// 
-			resources.ApplyResources(this.label1, "label1");
-			this.label1.Name = "label1";
+			resources.ApplyResources(this.labelRare2, "labelRare2");
+			this.labelRare2.Name = "labelRare2";
+			// 
+			// numericWT
+			// 
+			resources.ApplyResources(this.numericWT, "numericWT");
+			this.numericWT.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+			this.numericWT.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericWT.Name = "numericWT";
+			this.toolTipInfo.SetToolTip(this.numericWT, resources.GetString("numericWT.ToolTip"));
+			this.numericWT.Value = new decimal(new int[] {
+            85,
+            0,
+            0,
+            0});
+			// 
+			// labelWT
+			// 
+			resources.ApplyResources(this.labelWT, "labelWT");
+			this.labelWT.Name = "labelWT";
+			// 
+			// label2
+			// 
+			resources.ApplyResources(this.label2, "label2");
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.label2.Name = "label2";
 			// 
 			// UnitInfomation
 			// 
@@ -154,6 +216,8 @@
 			this.groupUnitInfo.ResumeLayout(false);
 			this.groupUnitInfo.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericRare2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericWT)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -173,5 +237,10 @@
 		private System.Windows.Forms.ToolTip toolTipInfo;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textInfo;
+		private System.Windows.Forms.NumericUpDown numericRare2;
+		private System.Windows.Forms.Label labelRare2;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.NumericUpDown numericWT;
+		private System.Windows.Forms.Label labelWT;
 	}
 }

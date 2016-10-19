@@ -87,6 +87,12 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\DropInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\DropInfomation.Designer.cs">
+      <DependentUpon>DropInfomation.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\StatusInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\DropInfomation.resx">
+      <DependentUpon>DropInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\StatusInfomation.resx">
       <DependentUpon>StatusInfomation.cs</DependentUpon>

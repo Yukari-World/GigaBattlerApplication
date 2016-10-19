@@ -46,30 +46,8 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabControlMonster = new System.Windows.Forms.TabControl();
 			this.tabPage21 = new System.Windows.Forms.TabPage();
-			this.groupDropInfo = new System.Windows.Forms.GroupBox();
-			this.numericDropRate4 = new System.Windows.Forms.NumericUpDown();
-			this.tablemonsterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.GigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.labelDropRate4 = new System.Windows.Forms.Label();
-			this.comboDropTable4 = new System.Windows.Forms.ComboBox();
-			this.labelDropTable4 = new System.Windows.Forms.Label();
-			this.numericDropRate5 = new System.Windows.Forms.NumericUpDown();
-			this.labelDropRate5 = new System.Windows.Forms.Label();
-			this.comboDropTable5 = new System.Windows.Forms.ComboBox();
-			this.labelDropTable5 = new System.Windows.Forms.Label();
-			this.numericDropRate3 = new System.Windows.Forms.NumericUpDown();
-			this.labelDropRate3 = new System.Windows.Forms.Label();
-			this.comboDropTable3 = new System.Windows.Forms.ComboBox();
-			this.labelDropTable3 = new System.Windows.Forms.Label();
-			this.numericDropRate2 = new System.Windows.Forms.NumericUpDown();
-			this.labelDropRate2 = new System.Windows.Forms.Label();
-			this.comboDropTable2 = new System.Windows.Forms.ComboBox();
-			this.labelDropTable2 = new System.Windows.Forms.Label();
-			this.numericDropRate1 = new System.Windows.Forms.NumericUpDown();
-			this.labelDropRate1 = new System.Windows.Forms.Label();
-			this.comboDropTable1 = new System.Windows.Forms.ComboBox();
-			this.labelDropTable1 = new System.Windows.Forms.Label();
-			this.unitInfomation1 = new Status_Editer.User_Control.UnitInfomation();
+			this.DropInfomation = new Status_Editer.User_Control.DropInfomation();
+			this.UnitInfomation = new Status_Editer.User_Control.UnitInfomation();
 			this.tabPage22 = new System.Windows.Forms.TabPage();
 			this.StatusInfomation = new Status_Editer.StatusInfomation();
 			this.tabPage23 = new System.Windows.Forms.TabPage();
@@ -77,6 +55,8 @@
 			this.comboSkill1 = new System.Windows.Forms.ComboBox();
 			this.labelSkill1 = new System.Windows.Forms.Label();
 			this.listMonster = new System.Windows.Forms.ListBox();
+			this.tablemonsterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.GigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -106,22 +86,18 @@
 			this.@__table_weaponTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter();
 			this.@__table_raceTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter();
 			this.tableraceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.listUnitType = new System.Windows.Forms.ListBox();
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlMonster.SuspendLayout();
 			this.tabPage21.SuspendLayout();
-			this.groupDropInfo.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate1)).BeginInit();
 			this.tabPage22.SuspendLayout();
 			this.tabPage23.SuspendLayout();
 			this.groupSkillInfo.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
+			this.tabPage4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -331,8 +307,8 @@
 			// 
 			// tabPage21
 			// 
-			this.tabPage21.Controls.Add(this.groupDropInfo);
-			this.tabPage21.Controls.Add(this.unitInfomation1);
+			this.tabPage21.Controls.Add(this.DropInfomation);
+			this.tabPage21.Controls.Add(this.UnitInfomation);
 			this.tabPage21.Location = new System.Drawing.Point(4, 22);
 			this.tabPage21.Name = "tabPage21";
 			this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
@@ -341,277 +317,21 @@
 			this.tabPage21.Text = "基本情報";
 			this.tabPage21.UseVisualStyleBackColor = true;
 			// 
-			// groupDropInfo
+			// DropInfomation
 			// 
-			this.groupDropInfo.Controls.Add(this.numericDropRate4);
-			this.groupDropInfo.Controls.Add(this.labelDropRate4);
-			this.groupDropInfo.Controls.Add(this.comboDropTable4);
-			this.groupDropInfo.Controls.Add(this.labelDropTable4);
-			this.groupDropInfo.Controls.Add(this.numericDropRate5);
-			this.groupDropInfo.Controls.Add(this.labelDropRate5);
-			this.groupDropInfo.Controls.Add(this.comboDropTable5);
-			this.groupDropInfo.Controls.Add(this.labelDropTable5);
-			this.groupDropInfo.Controls.Add(this.numericDropRate3);
-			this.groupDropInfo.Controls.Add(this.labelDropRate3);
-			this.groupDropInfo.Controls.Add(this.comboDropTable3);
-			this.groupDropInfo.Controls.Add(this.labelDropTable3);
-			this.groupDropInfo.Controls.Add(this.numericDropRate2);
-			this.groupDropInfo.Controls.Add(this.labelDropRate2);
-			this.groupDropInfo.Controls.Add(this.comboDropTable2);
-			this.groupDropInfo.Controls.Add(this.labelDropTable2);
-			this.groupDropInfo.Controls.Add(this.numericDropRate1);
-			this.groupDropInfo.Controls.Add(this.labelDropRate1);
-			this.groupDropInfo.Controls.Add(this.comboDropTable1);
-			this.groupDropInfo.Controls.Add(this.labelDropTable1);
-			this.groupDropInfo.Location = new System.Drawing.Point(612, 6);
-			this.groupDropInfo.Name = "groupDropInfo";
-			this.groupDropInfo.Size = new System.Drawing.Size(761, 230);
-			this.groupDropInfo.TabIndex = 6;
-			this.groupDropInfo.TabStop = false;
-			this.groupDropInfo.Text = "Drop, Etc. Infomation";
+			this.DropInfomation.BackColor = System.Drawing.Color.Transparent;
+			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
+			this.DropInfomation.Name = "DropInfomation";
+			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
+			this.DropInfomation.TabIndex = 3;
 			// 
-			// numericDropRate4
+			// UnitInfomation
 			// 
-			this.numericDropRate4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per4", true));
-			this.numericDropRate4.Location = new System.Drawing.Point(270, 156);
-			this.numericDropRate4.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericDropRate4.Name = "numericDropRate4";
-			this.numericDropRate4.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate4.TabIndex = 15;
-			this.numericDropRate4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericDropRate4.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate4, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
-			// 
-			// tablemonsterBindingSource
-			// 
-			this.tablemonsterBindingSource.DataMember = "__table_monster";
-			this.tablemonsterBindingSource.DataSource = this.GigaBattlerDataSet;
-			// 
-			// GigaBattlerDataSet
-			// 
-			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// labelDropRate4
-			// 
-			this.labelDropRate4.AutoSize = true;
-			this.labelDropRate4.Location = new System.Drawing.Point(270, 140);
-			this.labelDropRate4.Name = "labelDropRate4";
-			this.labelDropRate4.Size = new System.Drawing.Size(67, 12);
-			this.labelDropRate4.TabIndex = 13;
-			this.labelDropRate4.Text = "Drop Rate 4";
-			// 
-			// comboDropTable4
-			// 
-			this.comboDropTable4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboDropTable4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboDropTable4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item4", true));
-			this.comboDropTable4.FormattingEnabled = true;
-			this.comboDropTable4.Location = new System.Drawing.Point(10, 155);
-			this.comboDropTable4.Name = "comboDropTable4";
-			this.comboDropTable4.Size = new System.Drawing.Size(250, 20);
-			this.comboDropTable4.TabIndex = 14;
-			// 
-			// labelDropTable4
-			// 
-			this.labelDropTable4.AutoSize = true;
-			this.labelDropTable4.Location = new System.Drawing.Point(10, 140);
-			this.labelDropTable4.Name = "labelDropTable4";
-			this.labelDropTable4.Size = new System.Drawing.Size(71, 12);
-			this.labelDropTable4.TabIndex = 12;
-			this.labelDropTable4.Text = "Drop Table 4";
-			// 
-			// numericDropRate5
-			// 
-			this.numericDropRate5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per5", true));
-			this.numericDropRate5.Location = new System.Drawing.Point(270, 196);
-			this.numericDropRate5.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericDropRate5.Name = "numericDropRate5";
-			this.numericDropRate5.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate5.TabIndex = 19;
-			this.numericDropRate5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericDropRate5.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate5, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
-			// 
-			// labelDropRate5
-			// 
-			this.labelDropRate5.AutoSize = true;
-			this.labelDropRate5.Location = new System.Drawing.Point(270, 180);
-			this.labelDropRate5.Name = "labelDropRate5";
-			this.labelDropRate5.Size = new System.Drawing.Size(67, 12);
-			this.labelDropRate5.TabIndex = 17;
-			this.labelDropRate5.Text = "Drop Rate 5";
-			// 
-			// comboDropTable5
-			// 
-			this.comboDropTable5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboDropTable5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboDropTable5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item5", true));
-			this.comboDropTable5.FormattingEnabled = true;
-			this.comboDropTable5.Location = new System.Drawing.Point(10, 195);
-			this.comboDropTable5.Name = "comboDropTable5";
-			this.comboDropTable5.Size = new System.Drawing.Size(250, 20);
-			this.comboDropTable5.TabIndex = 18;
-			// 
-			// labelDropTable5
-			// 
-			this.labelDropTable5.AutoSize = true;
-			this.labelDropTable5.Location = new System.Drawing.Point(10, 180);
-			this.labelDropTable5.Name = "labelDropTable5";
-			this.labelDropTable5.Size = new System.Drawing.Size(71, 12);
-			this.labelDropTable5.TabIndex = 16;
-			this.labelDropTable5.Text = "Drop Table 5";
-			// 
-			// numericDropRate3
-			// 
-			this.numericDropRate3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per3", true));
-			this.numericDropRate3.Location = new System.Drawing.Point(270, 116);
-			this.numericDropRate3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericDropRate3.Name = "numericDropRate3";
-			this.numericDropRate3.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate3.TabIndex = 11;
-			this.numericDropRate3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericDropRate3.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate3, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
-			// 
-			// labelDropRate3
-			// 
-			this.labelDropRate3.AutoSize = true;
-			this.labelDropRate3.Location = new System.Drawing.Point(270, 100);
-			this.labelDropRate3.Name = "labelDropRate3";
-			this.labelDropRate3.Size = new System.Drawing.Size(67, 12);
-			this.labelDropRate3.TabIndex = 9;
-			this.labelDropRate3.Text = "Drop Rate 3";
-			// 
-			// comboDropTable3
-			// 
-			this.comboDropTable3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboDropTable3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboDropTable3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item3", true));
-			this.comboDropTable3.FormattingEnabled = true;
-			this.comboDropTable3.Location = new System.Drawing.Point(10, 115);
-			this.comboDropTable3.Name = "comboDropTable3";
-			this.comboDropTable3.Size = new System.Drawing.Size(250, 20);
-			this.comboDropTable3.TabIndex = 10;
-			// 
-			// labelDropTable3
-			// 
-			this.labelDropTable3.AutoSize = true;
-			this.labelDropTable3.Location = new System.Drawing.Point(10, 100);
-			this.labelDropTable3.Name = "labelDropTable3";
-			this.labelDropTable3.Size = new System.Drawing.Size(71, 12);
-			this.labelDropTable3.TabIndex = 8;
-			this.labelDropTable3.Text = "Drop Table 3";
-			// 
-			// numericDropRate2
-			// 
-			this.numericDropRate2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per2", true));
-			this.numericDropRate2.Location = new System.Drawing.Point(270, 76);
-			this.numericDropRate2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericDropRate2.Name = "numericDropRate2";
-			this.numericDropRate2.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate2.TabIndex = 7;
-			this.numericDropRate2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericDropRate2.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate2, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
-			// 
-			// labelDropRate2
-			// 
-			this.labelDropRate2.AutoSize = true;
-			this.labelDropRate2.Location = new System.Drawing.Point(270, 60);
-			this.labelDropRate2.Name = "labelDropRate2";
-			this.labelDropRate2.Size = new System.Drawing.Size(67, 12);
-			this.labelDropRate2.TabIndex = 5;
-			this.labelDropRate2.Text = "Drop Rate 2";
-			// 
-			// comboDropTable2
-			// 
-			this.comboDropTable2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboDropTable2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboDropTable2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item2", true));
-			this.comboDropTable2.FormattingEnabled = true;
-			this.comboDropTable2.Location = new System.Drawing.Point(10, 75);
-			this.comboDropTable2.Name = "comboDropTable2";
-			this.comboDropTable2.Size = new System.Drawing.Size(250, 20);
-			this.comboDropTable2.TabIndex = 6;
-			// 
-			// labelDropTable2
-			// 
-			this.labelDropTable2.AutoSize = true;
-			this.labelDropTable2.Location = new System.Drawing.Point(10, 60);
-			this.labelDropTable2.Name = "labelDropTable2";
-			this.labelDropTable2.Size = new System.Drawing.Size(71, 12);
-			this.labelDropTable2.TabIndex = 4;
-			this.labelDropTable2.Text = "Drop Table 2";
-			// 
-			// numericDropRate1
-			// 
-			this.numericDropRate1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tablemonsterBindingSource, "Per1", true));
-			this.numericDropRate1.Location = new System.Drawing.Point(270, 36);
-			this.numericDropRate1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericDropRate1.Name = "numericDropRate1";
-			this.numericDropRate1.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate1.TabIndex = 3;
-			this.numericDropRate1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericDropRate1.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate1, "ドロップ率。\r\n0だと絶対に出現せず、10000だと必ず出現する\r\n設定値: 0 ～ 10,000");
-			// 
-			// labelDropRate1
-			// 
-			this.labelDropRate1.AutoSize = true;
-			this.labelDropRate1.Location = new System.Drawing.Point(270, 20);
-			this.labelDropRate1.Name = "labelDropRate1";
-			this.labelDropRate1.Size = new System.Drawing.Size(67, 12);
-			this.labelDropRate1.TabIndex = 1;
-			this.labelDropRate1.Text = "Drop Rate 1";
-			// 
-			// comboDropTable1
-			// 
-			this.comboDropTable1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboDropTable1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboDropTable1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tablemonsterBindingSource, "Item1", true));
-			this.comboDropTable1.FormattingEnabled = true;
-			this.comboDropTable1.Location = new System.Drawing.Point(10, 35);
-			this.comboDropTable1.Name = "comboDropTable1";
-			this.comboDropTable1.Size = new System.Drawing.Size(250, 20);
-			this.comboDropTable1.TabIndex = 2;
-			// 
-			// labelDropTable1
-			// 
-			this.labelDropTable1.AutoSize = true;
-			this.labelDropTable1.Location = new System.Drawing.Point(10, 20);
-			this.labelDropTable1.Name = "labelDropTable1";
-			this.labelDropTable1.Size = new System.Drawing.Size(71, 12);
-			this.labelDropTable1.TabIndex = 0;
-			this.labelDropTable1.Text = "Drop Table 1";
-			// 
-			// unitInfomation1
-			// 
-			this.unitInfomation1.BackColor = System.Drawing.Color.Transparent;
-			this.unitInfomation1.Location = new System.Drawing.Point(6, 6);
-			this.unitInfomation1.Name = "unitInfomation1";
-			this.unitInfomation1.Size = new System.Drawing.Size(600, 500);
-			this.unitInfomation1.TabIndex = 2;
+			this.UnitInfomation.BackColor = System.Drawing.Color.Transparent;
+			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
+			this.UnitInfomation.Name = "UnitInfomation";
+			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
+			this.UnitInfomation.TabIndex = 2;
 			// 
 			// tabPage22
 			// 
@@ -883,8 +603,19 @@
 			this.listMonster.TabIndex = 0;
 			this.listMonster.ValueMember = "MonsterID";
 			// 
+			// tablemonsterBindingSource
+			// 
+			this.tablemonsterBindingSource.DataMember = "__table_monster";
+			this.tablemonsterBindingSource.DataSource = this.GigaBattlerDataSet;
+			// 
+			// GigaBattlerDataSet
+			// 
+			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
 			// tabPage4
 			// 
+			this.tabPage4.Controls.Add(this.listUnitType);
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1053,6 +784,8 @@
 			this.toolTipInfo.InitialDelay = 500;
 			this.toolTipInfo.IsBalloon = true;
 			this.toolTipInfo.ReshowDelay = 100;
+			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
 			// ToolStripContainer
 			// 
@@ -1125,6 +858,15 @@
 			this.tableraceBindingSource.DataMember = "__table_race";
 			this.tableraceBindingSource.DataSource = this.GigaBattlerDataSet;
 			// 
+			// listUnitType
+			// 
+			this.listUnitType.FormattingEnabled = true;
+			this.listUnitType.ItemHeight = 12;
+			this.listUnitType.Location = new System.Drawing.Point(3, 3);
+			this.listUnitType.Name = "listUnitType";
+			this.listUnitType.Size = new System.Drawing.Size(200, 820);
+			this.listUnitType.TabIndex = 0;
+			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1143,19 +885,13 @@
 			this.tabPage3.ResumeLayout(false);
 			this.tabControlMonster.ResumeLayout(false);
 			this.tabPage21.ResumeLayout(false);
-			this.groupDropInfo.ResumeLayout(false);
-			this.groupDropInfo.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericDropRate1)).EndInit();
 			this.tabPage22.ResumeLayout(false);
 			this.tabPage23.ResumeLayout(false);
 			this.groupSkillInfo.ResumeLayout(false);
 			this.groupSkillInfo.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tablemonsterBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
+			this.tabPage4.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
@@ -1227,34 +963,15 @@
 		private System.Windows.Forms.ToolStripMenuItem StripMenuHelpVersion;
 		private System.Windows.Forms.TabControl tabControlMonster;
 		private System.Windows.Forms.TabPage tabPage21;
-		private User_Control.UnitInfomation unitInfomation1;
+		private User_Control.UnitInfomation UnitInfomation;
 		private System.Windows.Forms.TabPage tabPage22;
-		private System.Windows.Forms.GroupBox groupDropInfo;
-		private System.Windows.Forms.NumericUpDown numericDropRate4;
-		private System.Windows.Forms.Label labelDropRate4;
-		private System.Windows.Forms.ComboBox comboDropTable4;
-		private System.Windows.Forms.Label labelDropTable4;
-		private System.Windows.Forms.NumericUpDown numericDropRate5;
-		private System.Windows.Forms.Label labelDropRate5;
-		private System.Windows.Forms.ComboBox comboDropTable5;
-		private System.Windows.Forms.Label labelDropTable5;
-		private System.Windows.Forms.NumericUpDown numericDropRate3;
-		private System.Windows.Forms.Label labelDropRate3;
-		private System.Windows.Forms.ComboBox comboDropTable3;
-		private System.Windows.Forms.Label labelDropTable3;
-		private System.Windows.Forms.NumericUpDown numericDropRate2;
-		private System.Windows.Forms.Label labelDropRate2;
-		private System.Windows.Forms.ComboBox comboDropTable2;
-		private System.Windows.Forms.Label labelDropTable2;
-		private System.Windows.Forms.NumericUpDown numericDropRate1;
-		private System.Windows.Forms.Label labelDropRate1;
-		private System.Windows.Forms.ComboBox comboDropTable1;
-		private System.Windows.Forms.Label labelDropTable1;
 		private System.Windows.Forms.TabPage tabPage23;
 		private System.Windows.Forms.GroupBox groupSkillInfo;
 		private System.Windows.Forms.ComboBox comboSkill1;
 		private System.Windows.Forms.Label labelSkill1;
 		private StatusInfomation StatusInfomation;
+		private User_Control.DropInfomation DropInfomation;
+		private System.Windows.Forms.ListBox listUnitType;
 	}
 }
 

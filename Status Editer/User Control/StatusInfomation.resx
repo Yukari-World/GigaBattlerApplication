@@ -703,6 +703,38 @@
   <data name="&gt;&gt;numericMaxLevel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="numericReqLv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="numericReqLv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="numericReqLv.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="numericReqLv.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="numericReqLv.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericReqLv.ToolTip" xml:space="preserve">
+    <value>出現条件レベル。非常に高いレベルのユニットが出現することによるゲームバランスを崩さないための処置。
+この条件を突破しない限り、絶対に出現することはない(出るとしたらバグ)。
+設定値: 1 ～ 999,999,999,999</value>
+  </data>
+  <data name="&gt;&gt;numericReqLv.Name" xml:space="preserve">
+    <value>numericReqLv</value>
+  </data>
+  <data name="&gt;&gt;numericReqLv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericReqLv.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericReqLv.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="labelTestLv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -761,7 +793,7 @@
     <value>700, 395</value>
   </data>
   <data name="chartStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 400</value>
+    <value>650, 400</value>
   </data>
   <data name="chartStatus.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -777,1259 +809,6 @@
   </data>
   <data name="&gt;&gt;chartStatus.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelMoney.Name" xml:space="preserve">
-    <value>labelMoney</value>
-  </data>
-  <data name="&gt;&gt;labelMoney.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMoney.Parent" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;labelMoney.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;numericMoney.Name" xml:space="preserve">
-    <value>numericMoney</value>
-  </data>
-  <data name="&gt;&gt;numericMoney.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMoney.Parent" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;numericMoney.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMoney.Name" xml:space="preserve">
-    <value>labelLvPMoney</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMoney.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMoney.Parent" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMoney.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMoney.Name" xml:space="preserve">
-    <value>numericLvPMoney</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMoney.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMoney.Parent" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMoney.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMoney.Name" xml:space="preserve">
-    <value>labelScaleMoney</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMoney.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMoney.Parent" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMoney.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 320</value>
-  </data>
-  <data name="groupBox15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox15.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="groupBox15.Text" xml:space="preserve">
-    <value>Money</value>
-  </data>
-  <data name="&gt;&gt;groupBox15.Name" xml:space="preserve">
-    <value>groupBox15</value>
-  </data>
-  <data name="&gt;&gt;groupBox15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox15.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelEXP.Name" xml:space="preserve">
-    <value>labelEXP</value>
-  </data>
-  <data name="&gt;&gt;labelEXP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelEXP.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;labelEXP.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;numericEXP.Name" xml:space="preserve">
-    <value>numericEXP</value>
-  </data>
-  <data name="&gt;&gt;numericEXP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericEXP.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;numericEXP.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEXP.Name" xml:space="preserve">
-    <value>labelLvPEXP</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEXP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEXP.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEXP.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPEXP.Name" xml:space="preserve">
-    <value>numericLvPEXP</value>
-  </data>
-  <data name="&gt;&gt;numericLvPEXP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPEXP.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;numericLvPEXP.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleEXP.Name" xml:space="preserve">
-    <value>labelScaleEXP</value>
-  </data>
-  <data name="&gt;&gt;labelScaleEXP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleEXP.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;labelScaleEXP.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 245</value>
-  </data>
-  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="groupBox14.Text" xml:space="preserve">
-    <value>Experience</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelEVT.Name" xml:space="preserve">
-    <value>labelEVT</value>
-  </data>
-  <data name="&gt;&gt;labelEVT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelEVT.Parent" xml:space="preserve">
-    <value>groupBox13</value>
-  </data>
-  <data name="&gt;&gt;labelEVT.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEVT.Name" xml:space="preserve">
-    <value>labelLvPEVT</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEVT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEVT.Parent" xml:space="preserve">
-    <value>groupBox13</value>
-  </data>
-  <data name="&gt;&gt;labelLvPEVT.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 170</value>
-  </data>
-  <data name="groupBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox13.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="groupBox13.Text" xml:space="preserve">
-    <value>Evait</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Name" xml:space="preserve">
-    <value>groupBox13</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;labelHIT.Name" xml:space="preserve">
-    <value>labelHIT</value>
-  </data>
-  <data name="&gt;&gt;labelHIT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHIT.Parent" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;labelHIT.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHIT.Name" xml:space="preserve">
-    <value>labelLvPHIT</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHIT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHIT.Parent" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHIT.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 95</value>
-  </data>
-  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="groupBox12.Text" xml:space="preserve">
-    <value>Hit</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;labelLuck.Name" xml:space="preserve">
-    <value>labelLuck</value>
-  </data>
-  <data name="&gt;&gt;labelLuck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLuck.Parent" xml:space="preserve">
-    <value>groupBox11</value>
-  </data>
-  <data name="&gt;&gt;labelLuck.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelLvPLuck.Name" xml:space="preserve">
-    <value>labelLvPLuck</value>
-  </data>
-  <data name="&gt;&gt;labelLvPLuck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPLuck.Parent" xml:space="preserve">
-    <value>groupBox11</value>
-  </data>
-  <data name="&gt;&gt;labelLvPLuck.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 20</value>
-  </data>
-  <data name="groupBox11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox11.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="groupBox11.Text" xml:space="preserve">
-    <value>Luck</value>
-  </data>
-  <data name="&gt;&gt;groupBox11.Name" xml:space="preserve">
-    <value>groupBox11</value>
-  </data>
-  <data name="&gt;&gt;groupBox11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox11.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox11.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelSPD.Name" xml:space="preserve">
-    <value>labelSPD</value>
-  </data>
-  <data name="&gt;&gt;labelSPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelSPD.Parent" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;labelSPD.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;numericSPD.Name" xml:space="preserve">
-    <value>numericSPD</value>
-  </data>
-  <data name="&gt;&gt;numericSPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericSPD.Parent" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;numericSPD.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelLvPSPD.Name" xml:space="preserve">
-    <value>labelLvPSPD</value>
-  </data>
-  <data name="&gt;&gt;labelLvPSPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPSPD.Parent" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;labelLvPSPD.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;numericLvPSPD.Name" xml:space="preserve">
-    <value>numericLvPSPD</value>
-  </data>
-  <data name="&gt;&gt;numericLvPSPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPSPD.Parent" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;numericLvPSPD.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelScaleSPD.Name" xml:space="preserve">
-    <value>labelScaleSPD</value>
-  </data>
-  <data name="&gt;&gt;labelScaleSPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleSPD.Parent" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;labelScaleSPD.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 695</value>
-  </data>
-  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Speed</value>
-  </data>
-  <data name="&gt;&gt;groupBox10.Name" xml:space="preserve">
-    <value>groupBox10</value>
-  </data>
-  <data name="&gt;&gt;groupBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox10.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox10.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;labelMagicDEF.Name" xml:space="preserve">
-    <value>labelMagicDEF</value>
-  </data>
-  <data name="&gt;&gt;labelMagicDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMagicDEF.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;labelMagicDEF.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;numericMagicDEF.Name" xml:space="preserve">
-    <value>numericMagicDEF</value>
-  </data>
-  <data name="&gt;&gt;numericMagicDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMagicDEF.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;numericMagicDEF.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicDEF.Name" xml:space="preserve">
-    <value>labelLvPMagicDEF</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicDEF.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicDEF.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicDEF.Name" xml:space="preserve">
-    <value>numericLvPMagicDEF</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicDEF.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicDEF.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicDEF.Name" xml:space="preserve">
-    <value>labelScaleMagicDEF</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicDEF.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicDEF.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 620</value>
-  </data>
-  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Magic DEF</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;numericMagicATK.Name" xml:space="preserve">
-    <value>numericMagicATK</value>
-  </data>
-  <data name="&gt;&gt;numericMagicATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMagicATK.Parent" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;numericMagicATK.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelMagicATK.Name" xml:space="preserve">
-    <value>labelMagicATK</value>
-  </data>
-  <data name="&gt;&gt;labelMagicATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMagicATK.Parent" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;labelMagicATK.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicATK.Name" xml:space="preserve">
-    <value>labelLvPMagicATK</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicATK.Parent" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMagicATK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicATK.Name" xml:space="preserve">
-    <value>numericLvPMagicATK</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicATK.Parent" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMagicATK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicATK.Name" xml:space="preserve">
-    <value>labelScaleMagicATK</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicATK.Parent" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;labelScaleMagicATK.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 545</value>
-  </data>
-  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>Magic ATK</value>
-  </data>
-  <data name="&gt;&gt;groupBox8.Name" xml:space="preserve">
-    <value>groupBox8</value>
-  </data>
-  <data name="&gt;&gt;groupBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox8.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox8.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;numericRangeDEF.Name" xml:space="preserve">
-    <value>numericRangeDEF</value>
-  </data>
-  <data name="&gt;&gt;numericRangeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericRangeDEF.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;numericRangeDEF.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelRangeDEF.Name" xml:space="preserve">
-    <value>labelRangeDEF</value>
-  </data>
-  <data name="&gt;&gt;labelRangeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelRangeDEF.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;labelRangeDEF.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeDEF.Name" xml:space="preserve">
-    <value>labelLvPRangeDEF</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeDEF.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeDEF.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeDEF.Name" xml:space="preserve">
-    <value>numericLvPRangeDEF</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeDEF.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeDEF.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeDEF.Name" xml:space="preserve">
-    <value>labelScaleRangeDEF</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeDEF.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeDEF.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 470</value>
-  </data>
-  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>Range DEF</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;numericRangeATK.Name" xml:space="preserve">
-    <value>numericRangeATK</value>
-  </data>
-  <data name="&gt;&gt;numericRangeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericRangeATK.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;numericRangeATK.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelRangeATK.Name" xml:space="preserve">
-    <value>labelRangeATK</value>
-  </data>
-  <data name="&gt;&gt;labelRangeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelRangeATK.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;labelRangeATK.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeATK.Name" xml:space="preserve">
-    <value>labelLvPRangeATK</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeATK.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;labelLvPRangeATK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeATK.Name" xml:space="preserve">
-    <value>numericLvPRangeATK</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeATK.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;numericLvPRangeATK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeATK.Name" xml:space="preserve">
-    <value>labelScaleRangeATK</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeATK.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;labelScaleRangeATK.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 395</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Range ATK</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeDEF.Name" xml:space="preserve">
-    <value>numericMeleeDEF</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeDEF.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeDEF.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeDEF.Name" xml:space="preserve">
-    <value>labelMeleeDEF</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeDEF.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeDEF.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeDEF.Name" xml:space="preserve">
-    <value>labelLvPMeleeDEF</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeDEF.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeDEF.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeDEF.Name" xml:space="preserve">
-    <value>numericLvPMeleeDEF</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeDEF.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeDEF.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleDEF.Name" xml:space="preserve">
-    <value>labelScaleDEF</value>
-  </data>
-  <data name="&gt;&gt;labelScaleDEF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleDEF.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;labelScaleDEF.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 320</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Melee DEF</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeATK.Name" xml:space="preserve">
-    <value>numericMeleeATK</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeATK.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;numericMeleeATK.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeATK.Name" xml:space="preserve">
-    <value>labelMeleeATK</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeATK.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;labelMeleeATK.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeATK.Name" xml:space="preserve">
-    <value>labelLvPMeleeATK</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeATK.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;labelLvPMeleeATK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeATK.Name" xml:space="preserve">
-    <value>numericLvPMeleeATK</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeATK.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;numericLvPMeleeATK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleATK.Name" xml:space="preserve">
-    <value>labelScaleATK</value>
-  </data>
-  <data name="&gt;&gt;labelScaleATK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleATK.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;labelScaleATK.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 245</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Melee ATK</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;numericTP.Name" xml:space="preserve">
-    <value>numericTP</value>
-  </data>
-  <data name="&gt;&gt;numericTP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericTP.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;numericTP.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelTP.Name" xml:space="preserve">
-    <value>labelTP</value>
-  </data>
-  <data name="&gt;&gt;labelTP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTP.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;labelTP.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelMaxTP.Name" xml:space="preserve">
-    <value>labelMaxTP</value>
-  </data>
-  <data name="&gt;&gt;labelMaxTP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMaxTP.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;labelMaxTP.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericMaxTP.Name" xml:space="preserve">
-    <value>numericMaxTP</value>
-  </data>
-  <data name="&gt;&gt;numericMaxTP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericMaxTP.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;numericMaxTP.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 170</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>TP</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;numericHP.Name" xml:space="preserve">
-    <value>numericHP</value>
-  </data>
-  <data name="&gt;&gt;numericHP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericHP.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;numericHP.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelHP.Name" xml:space="preserve">
-    <value>labelHP</value>
-  </data>
-  <data name="&gt;&gt;labelHP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHP.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;labelHP.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHP.Name" xml:space="preserve">
-    <value>labelLvPHP</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHP.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;labelLvPHP.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPHP.Name" xml:space="preserve">
-    <value>numericLvPHP</value>
-  </data>
-  <data name="&gt;&gt;numericLvPHP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericLvPHP.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;numericLvPHP.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelScaleHP.Name" xml:space="preserve">
-    <value>labelScaleHP</value>
-  </data>
-  <data name="&gt;&gt;labelScaleHP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScaleHP.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;labelScaleHP.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 95</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>HP</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="numericReqLv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 30</value>
-  </data>
-  <data name="numericReqLv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 19</value>
-  </data>
-  <data name="numericReqLv.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="numericReqLv.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="numericReqLv.ThousandsSeparator" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericReqLv.ToolTip" xml:space="preserve">
-    <value>出現条件レベル。非常に高いレベルのユニットが出現することによるゲームバランスを崩さないための処置。
-この条件を突破しない限り、絶対に出現することはない(出るとしたらバグ)。
-設定値: 1 ～ 999,999,999,999</value>
-  </data>
-  <data name="&gt;&gt;numericReqLv.Name" xml:space="preserve">
-    <value>numericReqLv</value>
-  </data>
-  <data name="&gt;&gt;numericReqLv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericReqLv.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;numericReqLv.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelReqLv.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelReqLv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 15</value>
-  </data>
-  <data name="labelReqLv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 12</value>
-  </data>
-  <data name="labelReqLv.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelReqLv.Text" xml:space="preserve">
-    <value>Requier Lv</value>
-  </data>
-  <data name="&gt;&gt;labelReqLv.Name" xml:space="preserve">
-    <value>labelReqLv</value>
-  </data>
-  <data name="&gt;&gt;labelReqLv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelReqLv.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;labelReqLv.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelMinLevel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelMinLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelMinLevel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 15</value>
-  </data>
-  <data name="labelMinLevel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 12</value>
-  </data>
-  <data name="labelMinLevel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelMinLevel.Text" xml:space="preserve">
-    <value>Min Level</value>
-  </data>
-  <data name="&gt;&gt;labelMinLevel.Name" xml:space="preserve">
-    <value>labelMinLevel</value>
-  </data>
-  <data name="&gt;&gt;labelMinLevel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMinLevel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;labelMinLevel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 32</value>
-  </data>
-  <data name="label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
-  </data>
-  <data name="label.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label.Text" xml:space="preserve">
-    <value>～</value>
-  </data>
-  <data name="&gt;&gt;label.Name" xml:space="preserve">
-    <value>label</value>
-  </data>
-  <data name="&gt;&gt;label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelMaxLevel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelMaxLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelMaxLevel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 15</value>
-  </data>
-  <data name="labelMaxLevel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 12</value>
-  </data>
-  <data name="labelMaxLevel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="labelMaxLevel.Text" xml:space="preserve">
-    <value>Max Level</value>
-  </data>
-  <data name="&gt;&gt;labelMaxLevel.Name" xml:space="preserve">
-    <value>labelMaxLevel</value>
-  </data>
-  <data name="&gt;&gt;labelMaxLevel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMaxLevel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;labelMaxLevel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 20</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 75</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Level</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="groupStatusInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupStatusInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1360, 800</value>
-  </data>
-  <data name="groupStatusInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupStatusInfo.Text" xml:space="preserve">
-    <value>Status Infomation</value>
-  </data>
-  <data name="&gt;&gt;groupStatusInfo.Name" xml:space="preserve">
-    <value>groupStatusInfo</value>
-  </data>
-  <data name="&gt;&gt;groupStatusInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupStatusInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupStatusInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="labelMoney.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2166,6 +945,30 @@
   <data name="&gt;&gt;labelScaleMoney.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="groupBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 320</value>
+  </data>
+  <data name="groupBox15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox15.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="groupBox15.Text" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="&gt;&gt;groupBox15.Name" xml:space="preserve">
+    <value>groupBox15</value>
+  </data>
+  <data name="&gt;&gt;groupBox15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox15.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="labelEXP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2301,6 +1104,30 @@
   <data name="&gt;&gt;labelScaleEXP.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 245</value>
+  </data>
+  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="groupBox14.Text" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="labelEVT.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2354,6 +1181,30 @@
   </data>
   <data name="&gt;&gt;labelLvPEVT.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="groupBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 170</value>
+  </data>
+  <data name="groupBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox13.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="groupBox13.Text" xml:space="preserve">
+    <value>Evait</value>
+  </data>
+  <data name="&gt;&gt;groupBox13.Name" xml:space="preserve">
+    <value>groupBox13</value>
+  </data>
+  <data name="&gt;&gt;groupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox13.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox13.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="labelHIT.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2409,6 +1260,30 @@
   <data name="&gt;&gt;labelLvPHIT.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 95</value>
+  </data>
+  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox12.Text" xml:space="preserve">
+    <value>Hit</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="labelLuck.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2462,6 +1337,30 @@
   </data>
   <data name="&gt;&gt;labelLvPLuck.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="groupBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 20</value>
+  </data>
+  <data name="groupBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Luck</value>
+  </data>
+  <data name="&gt;&gt;groupBox11.Name" xml:space="preserve">
+    <value>groupBox11</value>
+  </data>
+  <data name="&gt;&gt;groupBox11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox11.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox11.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="labelSPD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2607,6 +1506,30 @@
   <data name="&gt;&gt;labelScaleSPD.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 695</value>
+  </data>
+  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Name" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="labelMagicDEF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2750,6 +1673,30 @@
   </data>
   <data name="&gt;&gt;labelScaleMagicDEF.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 620</value>
+  </data>
+  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Magic DEF</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="numericMagicATK.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
@@ -2895,6 +1842,30 @@
   <data name="&gt;&gt;labelScaleMagicATK.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="groupBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 545</value>
+  </data>
+  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Magic ATK</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Name" xml:space="preserve">
+    <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox8.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="numericRangeDEF.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
@@ -3038,6 +2009,30 @@
   </data>
   <data name="&gt;&gt;labelScaleRangeDEF.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 470</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Range DEF</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="numericRangeATK.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
@@ -3183,6 +2178,30 @@
   <data name="&gt;&gt;labelScaleRangeATK.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 395</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Range ATK</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <data name="numericMeleeDEF.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
@@ -3326,6 +2345,30 @@
   </data>
   <data name="&gt;&gt;labelScaleDEF.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 320</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Melee DEF</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="numericMeleeATK.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
@@ -3471,6 +2514,30 @@
   <data name="&gt;&gt;labelScaleATK.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 245</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Melee ATK</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <data name="numericTP.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
@@ -3584,6 +2651,30 @@
   </data>
   <data name="&gt;&gt;numericMaxTP.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 170</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>TP</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="numericHP.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
@@ -3728,6 +2819,198 @@
   </data>
   <data name="&gt;&gt;labelScaleHP.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 95</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>HP</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelReqLv.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelReqLv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="labelReqLv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 12</value>
+  </data>
+  <data name="labelReqLv.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelReqLv.Text" xml:space="preserve">
+    <value>Requier Lv</value>
+  </data>
+  <data name="&gt;&gt;labelReqLv.Name" xml:space="preserve">
+    <value>labelReqLv</value>
+  </data>
+  <data name="&gt;&gt;labelReqLv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelReqLv.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelReqLv.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMinLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMinLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMinLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 15</value>
+  </data>
+  <data name="labelMinLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 12</value>
+  </data>
+  <data name="labelMinLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelMinLevel.Text" xml:space="preserve">
+    <value>Min Level</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Name" xml:space="preserve">
+    <value>labelMinLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMinLevel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 32</value>
+  </data>
+  <data name="label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label.Text" xml:space="preserve">
+    <value>～</value>
+  </data>
+  <data name="&gt;&gt;label.Name" xml:space="preserve">
+    <value>label</value>
+  </data>
+  <data name="&gt;&gt;label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelMaxLevel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMaxLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMaxLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 15</value>
+  </data>
+  <data name="labelMaxLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 12</value>
+  </data>
+  <data name="labelMaxLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelMaxLevel.Text" xml:space="preserve">
+    <value>Max Level</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Name" xml:space="preserve">
+    <value>labelMaxLevel</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelMaxLevel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 20</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 75</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="groupStatusInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupStatusInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupStatusInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1360, 790</value>
+  </data>
+  <data name="groupStatusInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupStatusInfo.Text" xml:space="preserve">
+    <value>Status Infomation</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Name" xml:space="preserve">
+    <value>groupStatusInfo</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupStatusInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

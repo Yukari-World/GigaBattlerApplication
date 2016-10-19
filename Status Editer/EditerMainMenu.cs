@@ -77,14 +77,10 @@ namespace Status_Editer {
 		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_49 = new GigaBattlerDataSet.__table_skillDataTable();
 		private GigaBattlerDataSet.__table_skillDataTable SkillTable_3_50 = new GigaBattlerDataSet.__table_skillDataTable();
 
-		
+
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		public decimal Pool {
-			get { return numericDropRate1.Value; }
-			set { numericDropRate1.Value = value; }
-		}
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,8 +109,6 @@ namespace Status_Editer {
 			// TAB: モンスター
 			tabControlMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 			listMonster.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
-			StatusInfomation.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-			groupDropInfo.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
 			groupSkillInfo.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
 			// データバインドの設定
@@ -128,32 +122,16 @@ namespace Status_Editer {
 				WeaponAdapter.Fill(WeaponTable_3_4);
 				WeaponAdapter.Fill(WeaponTable_3_5);
 
-
-				comboDropTable1.DataSource = WeaponTable_3_1;
-				comboDropTable1.DisplayMember = "WeaponName";
-				comboDropTable1.ValueMember = "WeaponID";
-				comboDropTable2.DataSource = WeaponTable_3_2;
-				comboDropTable2.DisplayMember = "WeaponName";
-				comboDropTable2.ValueMember = "WeaponID";
-				comboDropTable3.DataSource = WeaponTable_3_3;
-				comboDropTable3.DisplayMember = "WeaponName";
-				comboDropTable3.ValueMember = "WeaponID";
-				comboDropTable4.DataSource = WeaponTable_3_4;
-				comboDropTable4.DisplayMember = "WeaponName";
-				comboDropTable4.ValueMember = "WeaponID";
-				comboDropTable5.DataSource = WeaponTable_3_5;
-				comboDropTable5.DisplayMember = "WeaponName";
-				comboDropTable5.ValueMember = "WeaponID";
-
 				// 別コントロールへのバインディング設定
-				unitInfomation1.LoadDataBindings(tablemonsterBindingSource);
+				UnitInfomation.LoadDataBindings(tablemonsterBindingSource);
 				StatusInfomation.LoadDataBindings(tablemonsterBindingSource);
+				DropInfomation.LoadDataBindings(tableweaponBindingSource, tablemonsterBindingSource);
 
 				__table_monsterTableAdapter.Fill(GigaBattlerDataSet.@__table_monster);
 				__table_weaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				__table_raceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 			} catch (Exception ex) {
-				MessageBox.Show("System Load Failed:\n" + ex.ToString(), "Error!!");
+				MessageBox.Show("System Load Failed:\n" + ex.ToString(), "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
 			}
 
