@@ -133,6 +133,10 @@ namespace Status_Editer {
 			listRace.DisplayMember = "RaceName";
 			listRace.ValueMember = "RaceID";
 
+			listJob.DataSource = tableJobBindingSource;
+			listJob.DisplayMember = "JobName";
+			listJob.ValueMember = "JobID";
+
 			try {
 				// 別コントロールへのバインディング設定
 				// TAB: ユニット

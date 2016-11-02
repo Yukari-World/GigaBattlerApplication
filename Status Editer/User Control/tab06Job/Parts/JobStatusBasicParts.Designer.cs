@@ -25,14 +25,14 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.groupBase = new System.Windows.Forms.GroupBox();
-			this.labelBaseStatus = new System.Windows.Forms.Label();
-			this.numericBasicStatus = new System.Windows.Forms.NumericUpDown();
-			this.labelBonusStatus = new System.Windows.Forms.Label();
+			this.numericBaseStatus = new System.Windows.Forms.NumericUpDown();
 			this.numericBonusStatus = new System.Windows.Forms.NumericUpDown();
-			this.groupBase.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericBasicStatus)).BeginInit();
+			this.groupBase = new System.Windows.Forms.GroupBox();
+			this.labelBonusStatus = new System.Windows.Forms.Label();
+			this.labelBaseStatus = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.numericBaseStatus)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericBonusStatus)).BeginInit();
+			this.groupBase.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolTipInfo
@@ -44,11 +44,50 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
+			// numericBaseStatus
+			// 
+			this.numericBaseStatus.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.numericBaseStatus.Location = new System.Drawing.Point(10, 30);
+			this.numericBaseStatus.Maximum = new decimal(new int[] {
+            9000,
+            0,
+            0,
+            0});
+			this.numericBaseStatus.Name = "numericBaseStatus";
+			this.numericBaseStatus.Size = new System.Drawing.Size(120, 19);
+			this.numericBaseStatus.TabIndex = 1;
+			this.numericBaseStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTipInfo.SetToolTip(this.numericBaseStatus, "基本ステータスに対して影響を受ける割合(%)\r\n設定値: 0 ～ 9,000");
+			this.numericBaseStatus.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.numericBaseStatus.ValueChanged += new System.EventHandler(this.numericBaseStatus_ValueChanged);
+			// 
+			// numericBonusStatus
+			// 
+			this.numericBonusStatus.Location = new System.Drawing.Point(150, 30);
+			this.numericBonusStatus.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+			this.numericBonusStatus.Name = "numericBonusStatus";
+			this.numericBonusStatus.Size = new System.Drawing.Size(120, 19);
+			this.numericBonusStatus.TabIndex = 3;
+			this.numericBonusStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTipInfo.SetToolTip(this.numericBonusStatus, "ジョブマスター時に獲得できるボーナスステータス\r\n設定値: 0 ～ 99");
+			// 
 			// groupBase
 			// 
 			this.groupBase.Controls.Add(this.numericBonusStatus);
 			this.groupBase.Controls.Add(this.labelBonusStatus);
-			this.groupBase.Controls.Add(this.numericBasicStatus);
+			this.groupBase.Controls.Add(this.numericBaseStatus);
 			this.groupBase.Controls.Add(this.labelBaseStatus);
 			this.groupBase.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBase.Location = new System.Drawing.Point(0, 0);
@@ -57,39 +96,6 @@
 			this.groupBase.TabIndex = 0;
 			this.groupBase.TabStop = false;
 			this.groupBase.Text = "Label";
-			// 
-			// labelBaseStatus
-			// 
-			this.labelBaseStatus.AutoSize = true;
-			this.labelBaseStatus.Location = new System.Drawing.Point(10, 15);
-			this.labelBaseStatus.Name = "labelBaseStatus";
-			this.labelBaseStatus.Size = new System.Drawing.Size(31, 12);
-			this.labelBaseStatus.TabIndex = 0;
-			this.labelBaseStatus.Text = "Base";
-			// 
-			// numericBasicStatus
-			// 
-			this.numericBasicStatus.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-			this.numericBasicStatus.Location = new System.Drawing.Point(10, 30);
-			this.numericBasicStatus.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericBasicStatus.Name = "numericBasicStatus";
-			this.numericBasicStatus.Size = new System.Drawing.Size(120, 19);
-			this.numericBasicStatus.TabIndex = 1;
-			this.numericBasicStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericBasicStatus, "基本ステータスに対して影響を受ける割合(%)");
-			this.numericBasicStatus.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
 			// 
 			// labelBonusStatus
 			// 
@@ -100,19 +106,14 @@
 			this.labelBonusStatus.TabIndex = 2;
 			this.labelBonusStatus.Text = "Bonus Status";
 			// 
-			// numericBonusStatus
+			// labelBaseStatus
 			// 
-			this.numericBonusStatus.Location = new System.Drawing.Point(150, 30);
-			this.numericBonusStatus.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.numericBonusStatus.Name = "numericBonusStatus";
-			this.numericBonusStatus.Size = new System.Drawing.Size(120, 19);
-			this.numericBonusStatus.TabIndex = 3;
-			this.numericBonusStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericBonusStatus, "ジョブマスター時に獲得できるボーナスステータス");
+			this.labelBaseStatus.AutoSize = true;
+			this.labelBaseStatus.Location = new System.Drawing.Point(10, 15);
+			this.labelBaseStatus.Name = "labelBaseStatus";
+			this.labelBaseStatus.Size = new System.Drawing.Size(31, 12);
+			this.labelBaseStatus.TabIndex = 0;
+			this.labelBaseStatus.Text = "Base";
 			// 
 			// JobStatusBasicParts
 			// 
@@ -122,10 +123,11 @@
 			this.Controls.Add(this.groupBase);
 			this.Name = "JobStatusBasicParts";
 			this.Size = new System.Drawing.Size(650, 60);
+			this.Load += new System.EventHandler(this.JobStatusBasicParts_Load);
+			((System.ComponentModel.ISupportInitialize)(this.numericBaseStatus)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericBonusStatus)).EndInit();
 			this.groupBase.ResumeLayout(false);
 			this.groupBase.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericBasicStatus)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericBonusStatus)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -136,7 +138,7 @@
 		private System.Windows.Forms.GroupBox groupBase;
 		private System.Windows.Forms.NumericUpDown numericBonusStatus;
 		private System.Windows.Forms.Label labelBonusStatus;
-		private System.Windows.Forms.NumericUpDown numericBasicStatus;
+		private System.Windows.Forms.NumericUpDown numericBaseStatus;
 		private System.Windows.Forms.Label labelBaseStatus;
 	}
 }

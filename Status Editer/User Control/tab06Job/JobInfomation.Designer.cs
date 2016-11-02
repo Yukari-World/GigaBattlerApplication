@@ -25,32 +25,36 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupJobInfo = new System.Windows.Forms.GroupBox();
+			this.jobStatusLuck = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusSPD = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusMagicDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusMagicATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusRangeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusRangeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusMeleeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusMeleeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusTP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusHP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.jobStatusBasicParts1 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts2 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts3 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts4 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts5 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts6 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts7 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts8 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts9 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusBasicParts10 = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusHIT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusEVT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.groupJobInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupJobInfo
 			// 
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts10);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts9);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts8);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts7);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts6);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts5);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts4);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts3);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts2);
-			this.groupJobInfo.Controls.Add(this.jobStatusBasicParts1);
+			this.groupJobInfo.Controls.Add(this.jobStatusEVT);
+			this.groupJobInfo.Controls.Add(this.jobStatusHIT);
+			this.groupJobInfo.Controls.Add(this.jobStatusLuck);
+			this.groupJobInfo.Controls.Add(this.jobStatusSPD);
+			this.groupJobInfo.Controls.Add(this.jobStatusMagicDEF);
+			this.groupJobInfo.Controls.Add(this.jobStatusMagicATK);
+			this.groupJobInfo.Controls.Add(this.jobStatusRangeDEF);
+			this.groupJobInfo.Controls.Add(this.jobStatusRangeATK);
+			this.groupJobInfo.Controls.Add(this.jobStatusMeleeDEF);
+			this.groupJobInfo.Controls.Add(this.jobStatusMeleeATK);
+			this.groupJobInfo.Controls.Add(this.jobStatusTP);
+			this.groupJobInfo.Controls.Add(this.jobStatusHP);
 			this.groupJobInfo.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupJobInfo.Location = new System.Drawing.Point(0, 0);
 			this.groupJobInfo.Name = "groupJobInfo";
@@ -58,6 +62,96 @@
 			this.groupJobInfo.TabIndex = 0;
 			this.groupJobInfo.TabStop = false;
 			this.groupJobInfo.Text = "Job Infomation";
+			// 
+			// jobStatusLuck
+			// 
+			this.jobStatusLuck.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusLuck.labelText = "Luck";
+			this.jobStatusLuck.Location = new System.Drawing.Point(10, 555);
+			this.jobStatusLuck.Name = "jobStatusLuck";
+			this.jobStatusLuck.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusLuck.TabIndex = 9;
+			// 
+			// jobStatusSPD
+			// 
+			this.jobStatusSPD.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusSPD.labelText = "SPD";
+			this.jobStatusSPD.Location = new System.Drawing.Point(10, 495);
+			this.jobStatusSPD.Name = "jobStatusSPD";
+			this.jobStatusSPD.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusSPD.TabIndex = 8;
+			// 
+			// jobStatusMagicDEF
+			// 
+			this.jobStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusMagicDEF.labelText = "Magic DEF";
+			this.jobStatusMagicDEF.Location = new System.Drawing.Point(10, 435);
+			this.jobStatusMagicDEF.Name = "jobStatusMagicDEF";
+			this.jobStatusMagicDEF.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusMagicDEF.TabIndex = 7;
+			// 
+			// jobStatusMagicATK
+			// 
+			this.jobStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusMagicATK.labelText = "Magic ATK";
+			this.jobStatusMagicATK.Location = new System.Drawing.Point(10, 375);
+			this.jobStatusMagicATK.Name = "jobStatusMagicATK";
+			this.jobStatusMagicATK.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusMagicATK.TabIndex = 6;
+			// 
+			// jobStatusRangeDEF
+			// 
+			this.jobStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusRangeDEF.labelText = "Range DEF";
+			this.jobStatusRangeDEF.Location = new System.Drawing.Point(10, 315);
+			this.jobStatusRangeDEF.Name = "jobStatusRangeDEF";
+			this.jobStatusRangeDEF.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusRangeDEF.TabIndex = 5;
+			// 
+			// jobStatusRangeATK
+			// 
+			this.jobStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusRangeATK.labelText = "Range ATK";
+			this.jobStatusRangeATK.Location = new System.Drawing.Point(10, 255);
+			this.jobStatusRangeATK.Name = "jobStatusRangeATK";
+			this.jobStatusRangeATK.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusRangeATK.TabIndex = 4;
+			// 
+			// jobStatusMeleeDEF
+			// 
+			this.jobStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusMeleeDEF.labelText = "Melee DEF";
+			this.jobStatusMeleeDEF.Location = new System.Drawing.Point(10, 195);
+			this.jobStatusMeleeDEF.Name = "jobStatusMeleeDEF";
+			this.jobStatusMeleeDEF.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusMeleeDEF.TabIndex = 3;
+			// 
+			// jobStatusMeleeATK
+			// 
+			this.jobStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusMeleeATK.labelText = "Melee ATK";
+			this.jobStatusMeleeATK.Location = new System.Drawing.Point(10, 135);
+			this.jobStatusMeleeATK.Name = "jobStatusMeleeATK";
+			this.jobStatusMeleeATK.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusMeleeATK.TabIndex = 2;
+			// 
+			// jobStatusTP
+			// 
+			this.jobStatusTP.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusTP.labelText = "TP";
+			this.jobStatusTP.Location = new System.Drawing.Point(10, 75);
+			this.jobStatusTP.Name = "jobStatusTP";
+			this.jobStatusTP.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusTP.TabIndex = 1;
+			// 
+			// jobStatusHP
+			// 
+			this.jobStatusHP.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusHP.labelText = "HP";
+			this.jobStatusHP.Location = new System.Drawing.Point(10, 15);
+			this.jobStatusHP.Name = "jobStatusHP";
+			this.jobStatusHP.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusHP.TabIndex = 0;
 			// 
 			// toolTipInfo
 			// 
@@ -68,85 +162,23 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// jobStatusBasicParts1
+			// jobStatusHIT
 			// 
-			this.jobStatusBasicParts1.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts1.Location = new System.Drawing.Point(10, 15);
-			this.jobStatusBasicParts1.Name = "jobStatusBasicParts1";
-			this.jobStatusBasicParts1.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts1.TabIndex = 0;
+			this.jobStatusHIT.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusHIT.labelText = "HIT";
+			this.jobStatusHIT.Location = new System.Drawing.Point(10, 615);
+			this.jobStatusHIT.Name = "jobStatusHIT";
+			this.jobStatusHIT.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusHIT.TabIndex = 10;
 			// 
-			// jobStatusBasicParts2
+			// jobStatusEVT
 			// 
-			this.jobStatusBasicParts2.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts2.Location = new System.Drawing.Point(10, 75);
-			this.jobStatusBasicParts2.Name = "jobStatusBasicParts2";
-			this.jobStatusBasicParts2.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts2.TabIndex = 1;
-			// 
-			// jobStatusBasicParts3
-			// 
-			this.jobStatusBasicParts3.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts3.Location = new System.Drawing.Point(10, 135);
-			this.jobStatusBasicParts3.Name = "jobStatusBasicParts3";
-			this.jobStatusBasicParts3.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts3.TabIndex = 2;
-			// 
-			// jobStatusBasicParts4
-			// 
-			this.jobStatusBasicParts4.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts4.Location = new System.Drawing.Point(10, 195);
-			this.jobStatusBasicParts4.Name = "jobStatusBasicParts4";
-			this.jobStatusBasicParts4.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts4.TabIndex = 3;
-			// 
-			// jobStatusBasicParts5
-			// 
-			this.jobStatusBasicParts5.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts5.Location = new System.Drawing.Point(10, 255);
-			this.jobStatusBasicParts5.Name = "jobStatusBasicParts5";
-			this.jobStatusBasicParts5.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts5.TabIndex = 4;
-			// 
-			// jobStatusBasicParts6
-			// 
-			this.jobStatusBasicParts6.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts6.Location = new System.Drawing.Point(10, 315);
-			this.jobStatusBasicParts6.Name = "jobStatusBasicParts6";
-			this.jobStatusBasicParts6.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts6.TabIndex = 5;
-			// 
-			// jobStatusBasicParts7
-			// 
-			this.jobStatusBasicParts7.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts7.Location = new System.Drawing.Point(10, 375);
-			this.jobStatusBasicParts7.Name = "jobStatusBasicParts7";
-			this.jobStatusBasicParts7.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts7.TabIndex = 6;
-			// 
-			// jobStatusBasicParts8
-			// 
-			this.jobStatusBasicParts8.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts8.Location = new System.Drawing.Point(10, 435);
-			this.jobStatusBasicParts8.Name = "jobStatusBasicParts8";
-			this.jobStatusBasicParts8.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts8.TabIndex = 7;
-			// 
-			// jobStatusBasicParts9
-			// 
-			this.jobStatusBasicParts9.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts9.Location = new System.Drawing.Point(10, 495);
-			this.jobStatusBasicParts9.Name = "jobStatusBasicParts9";
-			this.jobStatusBasicParts9.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts9.TabIndex = 8;
-			// 
-			// jobStatusBasicParts10
-			// 
-			this.jobStatusBasicParts10.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusBasicParts10.Location = new System.Drawing.Point(10, 555);
-			this.jobStatusBasicParts10.Name = "jobStatusBasicParts10";
-			this.jobStatusBasicParts10.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusBasicParts10.TabIndex = 9;
+			this.jobStatusEVT.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusEVT.labelText = "EVT";
+			this.jobStatusEVT.Location = new System.Drawing.Point(10, 675);
+			this.jobStatusEVT.Name = "jobStatusEVT";
+			this.jobStatusEVT.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusEVT.TabIndex = 11;
 			// 
 			// JobInfomation
 			// 
@@ -165,15 +197,17 @@
 
 		private System.Windows.Forms.GroupBox groupJobInfo;
 		private System.Windows.Forms.ToolTip toolTipInfo;
-		private Parts.JobStatusBasicParts jobStatusBasicParts1;
-		private Parts.JobStatusBasicParts jobStatusBasicParts10;
-		private Parts.JobStatusBasicParts jobStatusBasicParts9;
-		private Parts.JobStatusBasicParts jobStatusBasicParts8;
-		private Parts.JobStatusBasicParts jobStatusBasicParts7;
-		private Parts.JobStatusBasicParts jobStatusBasicParts6;
-		private Parts.JobStatusBasicParts jobStatusBasicParts5;
-		private Parts.JobStatusBasicParts jobStatusBasicParts4;
-		private Parts.JobStatusBasicParts jobStatusBasicParts3;
-		private Parts.JobStatusBasicParts jobStatusBasicParts2;
+		private Parts.JobStatusBasicParts jobStatusHP;
+		private Parts.JobStatusBasicParts jobStatusLuck;
+		private Parts.JobStatusBasicParts jobStatusSPD;
+		private Parts.JobStatusBasicParts jobStatusMagicDEF;
+		private Parts.JobStatusBasicParts jobStatusMagicATK;
+		private Parts.JobStatusBasicParts jobStatusRangeDEF;
+		private Parts.JobStatusBasicParts jobStatusRangeATK;
+		private Parts.JobStatusBasicParts jobStatusMeleeDEF;
+		private Parts.JobStatusBasicParts jobStatusMeleeATK;
+		private Parts.JobStatusBasicParts jobStatusTP;
+		private Parts.JobStatusBasicParts jobStatusEVT;
+		private Parts.JobStatusBasicParts jobStatusHIT;
 	}
 }

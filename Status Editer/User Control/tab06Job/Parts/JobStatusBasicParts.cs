@@ -14,10 +14,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab06Job.Parts {
-	public partial class JobStatusBasicParts : UserControl {
+	public partial class JobStatusBasicParts : ZUserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		private int GrooveGauge;
+		private Label StatusBar = new Label();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -27,9 +30,18 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]Basic Statusの値を返します
 		/// </summary>
-		public decimal basicStatus {
+		public decimal numericBaseValue {
 			get {
-				return numericBasicStatus.Value;
+				return numericBaseStatus.Value;
+			}
+		}
+
+		/// <summary>
+		/// [ReadOnly]Bonus Statusの値を返します
+		/// </summary>
+		public decimal numericBonusValue {
+			get {
+				return numericBonusStatus.Value;
 			}
 		}
 
@@ -63,16 +75,17 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		/// <param name="tableJobBindingSource">BindingSource</param>
 		/// <param name="bindTag">Status Tag</param>
-		public void LoadDataBindings(BindingSource tableJobBindingSource, string bindTag) {
+		public void SetDataBindings(BindingSource tableJobBindingSource, string bindTag) {
 			// データバインドの設定
-			//numericBase.DataBindings.Add(new Binding("Value", tableJobBindingSource, bindTag, true));
-			//numericLvPStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, "Lv" + bindTag, true));
+			numericBaseStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, bindTag, true));
+			numericBonusStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, "Bonus" + bindTag, true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
+
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -83,5 +96,45 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// フォーム読み込み時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void JobStatusBasicParts_Load(object sender, EventArgs e) {
+			// 特殊処理が必要なデータをGruopLabelから抽出
+			string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
+
+			// Gaugeの長さを設定する
+			if (groupBase.Text == "Luck") {
+				GrooveGauge = 10;
+			} else if (Array.IndexOf(ExtraIndex, groupBase.Text) != -1) {
+				GrooveGauge = 1;
+			} else {
+				GrooveGauge = 2;
+			}
+
+			// Labelの初期化
+			StatusBar.AutoSize = false;
+			StatusBar.BackColor = Color.Green;
+			StatusBar.BorderStyle = BorderStyle.FixedSingle;
+			StatusBar.Name = "StatusBar";
+			StatusBar.Location = new Point(10, 50);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+
+			// LabelをGroupBoxに追加する
+			groupBase.Controls.Add(StatusBar);
+		}
+
+		/// <summary>
+		/// Base Statusの値が変化した時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericBaseStatus_ValueChanged(object sender, EventArgs e) {
+			// Gaugeの長さを変更する
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+		}
 	}
 }

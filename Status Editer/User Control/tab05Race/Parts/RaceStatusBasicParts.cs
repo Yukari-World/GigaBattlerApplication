@@ -79,8 +79,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <summary>
 		/// フォーム読み込み時の処理
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
 		private void RaceStatusBasicParts_Load(object sender, EventArgs e) {
 			// 特殊処理が必要なデータをGruopLabelから抽出
 			string[] LongValueIndex = new string[] { "HP", "TP", "HIT", "EVT" };
@@ -99,7 +99,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
 			StatusBar.Location = new Point(10, 50);
-			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
 
 			// 2nd Labelの初期化
 			PlusStatusBar.AutoSize = false;
@@ -107,7 +107,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
 			PlusStatusBar.Name = "PlusStatusBar";
 			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);	// 10pxずらして配置
-			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
+			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
 
 			// 各種LabelをGroupBoxに追加する
 			groupBasic.Controls.Add(StatusBar);
@@ -144,7 +144,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			labelRecommend.Text = "推奨値:" + basicRate.ToString("N2");
 
 			// Gaugeの長さを変更する
-			StatusBar.Size = new Size(Math.Max((int)(numericBaseValue * GrooveGauge), 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
 			// Gaugeの位置を変更する
 			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);
 		}
@@ -156,7 +156,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <param name="e">EventArgs</param>
 		private void numericLvPStatus_ValueChanged(object sender, EventArgs e) {
 			// Gaugeの長さを変更する
-			PlusStatusBar.Size = new Size(Math.Max((int)(numericLvPStatus.Value * GrooveGauge), 0), 5);
+			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
 		}
 
 		/// <summary>
