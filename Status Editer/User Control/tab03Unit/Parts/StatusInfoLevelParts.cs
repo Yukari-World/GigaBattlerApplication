@@ -23,7 +23,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -33,7 +33,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		public decimal numMinLevel {
 			get { return numericMinLevel.Value; }
 			set { numericMinLevel.Value = value; }
-		}
+		}// End Property
 
 		/// <summary>
 		/// [R/W]最大レベルを指定します
@@ -42,7 +42,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		public decimal numMaxLevel {
 			get { return numericMaxLevel.Value; }
 			set { numericMaxLevel.Value = value; }
-		}
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

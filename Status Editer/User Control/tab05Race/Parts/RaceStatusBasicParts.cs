@@ -22,7 +22,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// </summary>
 		public decimal numericBaseValue {
 			get { return numericBase.Value; }
-		}
+		}// End Property
 
 		/// <summary>
 		/// [R/W]グループラベルのテキストを設定します。
@@ -38,7 +38,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		public string labelText {
 			get { return groupBasic.Text; }
 			set { groupBasic.Text = value; }
-		}
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// データバインドの設定
 			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));
 			numericLvPStatus.DataBindings.Add(new Binding("Value", tableRaceBindingSource, "Lv" + bindTag, true));
-		}
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 					numericBase.Minimum = 0M;
 				}// End If
 			}// End If
-		}
+		}// End Function
 
 		/// <summary>
 		/// Basic Statusの値が変化した時の処理
@@ -149,7 +149,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
 			// Gaugeの位置を変更する
 			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);
-		}
+		}// End Function
 
 		/// <summary>
 		/// Lv Per Statusの値が変化した時の処理
@@ -159,7 +159,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private void numericLvPStatus_ValueChanged(object sender, EventArgs e) {
 			// Gaugeの長さを変更する
 			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
-		}
+		}// End Function
 
 		/// <summary>
 		/// 「推奨値を使用」ボタンが押された時の処理。処理というほど大きな事はしていない
@@ -168,6 +168,6 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// <param name="e">EventArgs</param>
 		private void buttonSubmitRecommend_Click(object sender, EventArgs e) {
 			numericLvPStatus.Value = basicRate;
-		}
-	}
+		}// End Function
+	}// End Class
 }

@@ -20,7 +20,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -29,7 +29,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		public string labelText {
 			get { return groupSkill.Text; }
 			set { groupSkill.Text = value; }
-		}
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// </summary>
 		public SkillInfoParts() {
 			InitializeComponent();
-		}
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			comboSkill.DataSource = SkillTable;
 			comboSkill.DisplayMember = "SkillName";
 			comboSkill.ValueMember = "SkillID";
-		}
+		}// End Function
 
 		/// <summary>
 		/// バインド項目を再読み込みします。
@@ -73,7 +73,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
 			SkillAdapter.Fill(SkillTable);
-		}
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

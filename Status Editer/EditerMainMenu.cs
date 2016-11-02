@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// EditerMainMenu
+// Editer Main Menu
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -22,6 +22,7 @@ namespace Status_Editer {
 		__table_jobTableAdapter tableJobTableAdapter = new __table_jobTableAdapter();
 		__table_weaponTableAdapter tableWeaponTableAdapter = new __table_weaponTableAdapter();
 		__table_shieldTableAdapter tableShieldTableAdapter = new __table_shieldTableAdapter();
+		__table_gauntletTableAdapter tableGauntletTableAdapter = new __table_gauntletTableAdapter();
 		__table_helmetTableAdapter tableHelmetTableAdapter = new __table_helmetTableAdapter();
 		__table_armorTableAdapter tableArmorTableAdapter = new __table_armorTableAdapter();
 		__table_accessoryTableAdapter tableAccessoryTableAdapter = new __table_accessoryTableAdapter();
@@ -35,7 +36,7 @@ namespace Status_Editer {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -48,7 +49,7 @@ namespace Status_Editer {
 		/// </summary>
 		public EditerMainMenu() {
 			InitializeComponent();
-		}
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,7 +62,7 @@ namespace Status_Editer {
 		private void UpdateSQL() {
 			tableUnitBindingSource.EndEdit();
 			tableUnitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
-		}
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -82,6 +83,7 @@ namespace Status_Editer {
 			tableJobTableAdapter.ClearBeforeFill = true;
 			tableWeaponTableAdapter.ClearBeforeFill = true;
 			tableShieldTableAdapter.ClearBeforeFill = true;
+			tableGauntletTableAdapter.ClearBeforeFill = true;
 			tableHelmetTableAdapter.ClearBeforeFill = true;
 			tableArmorTableAdapter.ClearBeforeFill = true;
 			tableAccessoryTableAdapter.ClearBeforeFill = true;
@@ -143,7 +145,7 @@ namespace Status_Editer {
 
 				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
-				DropInfomation.LoadDataBindings(tableUnitBindingSource, tableWeaponTableAdapter);
+				DropInfomation.LoadDataBindings(tableUnitBindingSource, tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
 				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, tableSkillTableAdapter);
 
@@ -173,6 +175,7 @@ namespace Status_Editer {
 				tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
 				tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
+				tableGauntletTableAdapter.Fill(GigaBattlerDataSet.@__table_gauntlet);
 				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
 				tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
 				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
@@ -183,7 +186,7 @@ namespace Status_Editer {
 			}// End Try
 
 			StripInfo.Text = "Welcome!!";
-		}
+		}// End Function
 
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
@@ -217,8 +220,8 @@ namespace Status_Editer {
 			if (fbd.ShowDialog(this) == DialogResult.OK) {
 				// 選択されたフォルダを表示する
 				rootDirectory = fbd.SelectedPath;
-			}
-		}
+			}// End If
+		}// End Function
 
 		/// <summary>
 		/// 「ファイル」→「アプリケーションの終了」の処理内容
@@ -237,7 +240,7 @@ namespace Status_Editer {
 					return;
 			}// End Switch
 			Application.Exit();
-		}
+		}// End Function
 
 		/// <summary>
 		/// 「データベース」→「再読み込み」の処理内容
@@ -255,6 +258,7 @@ namespace Status_Editer {
 					tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
 					tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 					tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
+					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.@__table_gauntlet);
 					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
 					tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
 					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
@@ -263,7 +267,7 @@ namespace Status_Editer {
 					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}// End Try
 			}// End If
-		}
+		}// End Function
 
 		/// <summary>
 		/// 「データベース」→「変更の適用」の処理内容
@@ -272,7 +276,7 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
 			UpdateSQL();
-		}
+		}// End Function
 
 		/// <summary>
 		/// 
@@ -283,7 +287,7 @@ namespace Status_Editer {
 			TestForm Form2 = new TestForm();
 			Form2.Show();
 			//DataBindings();
-		}
+		}// End Function
 
 		//----------------------------------------------------------------------------------------------------
 		// TAB
@@ -296,9 +300,9 @@ namespace Status_Editer {
 		private void tabControl_SelectedIndexChanged(object sender, EventArgs e) {
 			// 処理軽減のため画面更新を止める
 			tabControl.Invalidate(true);
-		}
+		}// End Function
 
 		//----------------------------------------------------------------------------------------------------
 		// TAB: ユニット
-	}
+	}// End Class
 }

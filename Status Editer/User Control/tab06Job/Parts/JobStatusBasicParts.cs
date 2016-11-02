@@ -27,6 +27,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		private int CostMultiplier;	// ステータスコスト倍率
 		private int GrooveGauge;	// ステータスバーの比率
 		private Label StatusBar = new Label();
+
 		/// <summary>
 		/// 特殊処理が必要なデータをGruopLabelから抽出
 		/// </summary>
@@ -53,7 +54,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -62,7 +63,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		[Description("[ReadOnly]Basic Statusの値を返します")]
 		public decimal numericBaseValue {
 			get { return numericBaseStatus.Value; }
-		}
+		}// End Property
 
 		/// <summary>
 		/// [ReadOnly]Bonus Statusの値を返します
@@ -70,7 +71,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		[Description("[ReadOnly]Bonus Statusの値を返します")]
 		public decimal numericBonusValue {
 			get { return numericBonusStatus.Value; }
-		}
+		}// End Property
 
 		/// <summary>
 		/// [R/W]グループラベルのテキストを設定します
@@ -79,7 +80,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		public string labelText {
 			get { return groupBase.Text; }
 			set { groupBase.Text = value; }
-		}
+		}// End Property
 
 		/// <summary>
 		/// [R/W Private]ステータスコストを換算します
@@ -95,7 +96,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 				ex.Value = _StatusCost;// 送るデータの中身
 				OnCostMultiplierChanged(ex);
 			}
-		}
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

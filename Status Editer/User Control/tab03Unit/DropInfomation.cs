@@ -16,16 +16,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// バインド
-		// WeaponTable
-		private __table_weaponDataTable WeaponTable_3_1 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_2 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_3 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_4 = new __table_weaponDataTable();
-		private __table_weaponDataTable WeaponTable_3_5 = new __table_weaponDataTable();
+		private __table_weaponDataTable WeaponTable = new __table_weaponDataTable();
+		private __table_shieldDataTable ShieldTable = new __table_shieldDataTable();
+		private __table_helmetDataTable HelmetTable = new __table_helmetDataTable();
+		private __table_gauntletDataTable GauntletTable = new __table_gauntletDataTable();
+		private __table_armorDataTable ArmorTable = new __table_armorDataTable();
+		private __table_accessoryDataTable AccresoryTable = new __table_accessoryDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -38,7 +38,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		public DropInfomation() {
 			InitializeComponent();
-		}
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -50,61 +50,52 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		/// <param name="tableUnitBindingSource">BindingSource</param>
 		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_weaponTableAdapter WeaponAdapter) {
+		/// <param name="ShieldAdapter">__table_shieldTableAdapter</param>
+		/// <param name="HelmetAdapter">__table_helmetTableAdapter</param>
+		/// <param name="GauntletAdapter">__table_gauntletTableAdapter</param>
+		/// <param name="ArmorAdapter">__table_armorTableAdapter</param>
+		/// <param name="AccessoryAdapter">__table_accessoryTableAdapter</param>
+		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
 			// 項目に関する準備
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
+			WeaponAdapter.Fill(WeaponTable);
+			ShieldAdapter.Fill(ShieldTable);
+			HelmetAdapter.Fill(HelmetTable);
+			GauntletAdapter.Fill(GauntletTable);
+			ArmorAdapter.Fill(ArmorTable);
+			AccessoryAdapter.Fill(AccresoryTable);
 
 			// データバインドの設定
-			comboDropTable1.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item1", true));
-			comboDropTable2.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item2", true));
-			comboDropTable3.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item3", true));
-			comboDropTable4.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item4", true));
-			comboDropTable5.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item5", true));
-
-			numericDropRate1.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per1", true));
-			numericDropRate2.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per2", true));
-			numericDropRate3.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per3", true));
-			numericDropRate4.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per4", true));
-			numericDropRate5.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per5", true));
-
-			// バインド項目の設定
-			comboDropTable1.DataSource = WeaponTable_3_1;
-			comboDropTable1.DisplayMember = "WeaponName";
-			comboDropTable1.ValueMember = "WeaponID";
-			comboDropTable2.DataSource = WeaponTable_3_2;
-			comboDropTable2.DisplayMember = "WeaponName";
-			comboDropTable2.ValueMember = "WeaponID";
-			comboDropTable3.DataSource = WeaponTable_3_3;
-			comboDropTable3.DisplayMember = "WeaponName";
-			comboDropTable3.ValueMember = "WeaponID";
-			comboDropTable4.DataSource = WeaponTable_3_4;
-			comboDropTable4.DisplayMember = "WeaponName";
-			comboDropTable4.ValueMember = "WeaponID";
-			comboDropTable5.DataSource = WeaponTable_3_5;
-			comboDropTable5.DisplayMember = "WeaponName";
-			comboDropTable5.ValueMember = "WeaponID";
+			// オーバーロードを利用して大体コピペで済むように
+			dropInfoParts1.SetDataBindings(tableUnitBindingSource, WeaponTable);
+			dropInfoParts2.SetDataBindings(tableUnitBindingSource, ShieldTable);
+			dropInfoParts3.SetDataBindings(tableUnitBindingSource, HelmetTable);
+			dropInfoParts4.SetDataBindings(tableUnitBindingSource, GauntletTable);
+			dropInfoParts5.SetDataBindings(tableUnitBindingSource, ArmorTable);
+			dropInfoParts6.SetDataBindings(tableUnitBindingSource, AccresoryTable);
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}
+		}// End Function
 
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
 		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter) {
-			WeaponAdapter.Fill(WeaponTable_3_1);
-			WeaponAdapter.Fill(WeaponTable_3_2);
-			WeaponAdapter.Fill(WeaponTable_3_3);
-			WeaponAdapter.Fill(WeaponTable_3_4);
-			WeaponAdapter.Fill(WeaponTable_3_5);
-		}
+		/// <param name="ShieldAdapter">__table_shieldTableAdapter</param>
+		/// <param name="HelmetAdapter">__table_helmetTableAdapter</param>
+		/// <param name="GauntletAdapter">__table_gauntletTableAdapter</param>
+		/// <param name="ArmorAdapter">__table_armorTableAdapter</param>
+		/// <param name="AccessoryAdapter">__table_accessoryTableAdapter</param>
+		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
+			WeaponAdapter.Fill(WeaponTable);
+			ShieldAdapter.Fill(ShieldTable);
+			HelmetAdapter.Fill(HelmetTable);
+			GauntletAdapter.Fill(GauntletTable);
+			ArmorAdapter.Fill(ArmorTable);
+			AccessoryAdapter.Fill(AccresoryTable);
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -115,5 +106,5 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	}
+	}// End Class
 }

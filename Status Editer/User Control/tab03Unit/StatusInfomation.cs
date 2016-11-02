@@ -29,169 +29,169 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// private変数へのアクセス
+		// プロパティ
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		public decimal numMinLevel {
 			get { return numericMinLevel.Value; }
 			set { numericMinLevel.Value = value; }
-		}
+		}// End Property
 		public decimal numMaxLevel {
 			get { return numericMaxLevel.Value; }
 			set { numericMaxLevel.Value = value; }
-		}
+		}// End Property
 		public decimal numHP {
 			get { return numericHP.Value; }
 			set { numericHP.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPHP {
 			get { return numericLvPHP.Value; }
 			set { numericLvPHP.Value = value; }
-		}
+		}// End Property
 		public decimal numTP {
 			get { return numericTP.Value; }
 			set { numericTP.Value = value; }
-		}
+		}// End Property
 		public decimal numMaxTP {
 			get { return numericMaxTP.Value; }
 			set { numericMaxTP.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleHP {
 			get { return numericScaleHP.Value; }
 			set { numericScaleHP.Value = value; }
-		}
+		}// End Property
 		public decimal numMeleeATK {
 			get { return numericMeleeATK.Value; }
 			set { numericMeleeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPMeleeATK {
 			get { return numericLvPMeleeATK.Value; }
 			set { numericLvPMeleeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleMeleeATK {
 			get { return numericScaleMeleeATK.Value; }
 			set { numericScaleMeleeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numMeleeDEF {
 			get { return numericMeleeDEF.Value; }
 			set { numericMeleeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPMeleeDEF {
 			get { return numericLvPMeleeDEF.Value; }
 			set { numericLvPMeleeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleMeleeDEF {
 			get { return numericScaleMeleeDEF.Value; }
 			set { numericScaleMeleeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numRangeATK {
 			get { return numericRangeATK.Value; }
 			set { numericRangeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPRangeATK {
 			get { return numericLvPRangeATK.Value; }
 			set { numericLvPRangeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleRangeATK {
 			get { return numericScaleRangeATK.Value; }
 			set { numericScaleRangeATK.Value = value; }
-		}
+		}// End Property
 		public decimal numRangeDEF {
 			get { return numericRangeDEF.Value; }
 			set { numericRangeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPRangeDEF {
 			get { return numericLvPRangeDEF.Value; }
 			set { numericLvPRangeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleRangeDEF {
 			get { return numericScaleRangeDEF.Value; }
 			set { numericScaleRangeDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numMagicATK {
 			get { return numericMagicATK.Value; }
 			set { numericMagicATK.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPMagicATK {
 			get { return numericLvPMagicATK.Value; }
 			set { numericLvPMagicATK.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleMagicATK {
 			get { return numericScaleMagicATK.Value; }
 			set { numericScaleMagicATK.Value = value; }
-		}
+		}// End Property
 		public decimal numMagicDEF {
 			get { return numericMagicDEF.Value; }
 			set { numericMagicDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPMagicDEF {
 			get { return numericLvPMagicDEF.Value; }
 			set { numericLvPMagicDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleMagicDEF {
 			get { return numericScaleMagicDEF.Value; }
 			set { numericScaleMagicDEF.Value = value; }
-		}
+		}// End Property
 		public decimal numSPD {
 			get { return numericSPD.Value; }
 			set { numericSPD.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPSPD {
 			get { return numericLvPSPD.Value; }
 			set { numericLvPSPD.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleSPD {
 			get { return numericScaleSPD.Value; }
 			set { numericScaleSPD.Value = value; }
-		}
+		}// End Property
 		public decimal numLuck {
 			get { return numericLuck.Value; }
 			set { numericLuck.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPLuck {
 			get { return numericLvPLuck.Value; }
 			set { numericLvPLuck.Value = value; }
-		}
+		}// End Property
 		public decimal numHIT {
 			get { return numericHIT.Value; }
 			set { numericHIT.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPHIT {
 			get { return numericLvPHIT.Value; }
 			set { numericLvPHIT.Value = value; }
-		}
+		}// End Property
 		public decimal numEVT {
 			get { return numericEVT.Value; }
 			set { numericEVT.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPEVT {
 			get { return numericLvPEVT.Value; }
 			set { numericLvPEVT.Value = value; }
-		}
+		}// End Property
 		public decimal numEXP {
 			get { return numericEXP.Value; }
 			set { numericEXP.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPEXP {
 			get { return numericLvPEXP.Value; }
 			set { numericLvPEXP.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleEXP {
 			get { return numericScaleEXP.Value; }
 			set { numericScaleEXP.Value = value; }
-		}
+		}// End Property
 		public decimal numMoney {
 			get { return numericMoney.Value; }
 			set { numericMoney.Value = value; }
-		}
+		}// End Property
 		public decimal numLvPMoney {
 			get { return numericLvPMoney.Value; }
 			set { numericLvPMoney.Value = value; }
-		}
+		}// End Property
 		public decimal numScaleMoney {
 			get { return numericScaleMoney.Value; }
 			set { numericScaleMoney.Value = value; }
-		}
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -262,7 +262,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -316,7 +316,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			chartStatus.Series[0].Points.Add(dataPoint5);
 			chartStatus.Series[0].Points.Add(dataPoint6);
 			chartStatus.Series[0].Points.Add(dataPoint7);
-		}
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -330,14 +330,14 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="e">EventArgs</param>
 		private void numericTestLv_ValueChanged(object sender, EventArgs e) {
 			ChartChanges();
-		}
+		}// End Function
 
 		private void numericMinLevel_ValueChanged(object sender, EventArgs e) {
 			numericTestLv.Value = numericMinLevel.Value;
-		}
+		}// End Function
 
 		private void Status_ValueChanged(object sender, EventArgs e) {
 			ChartChanges();
-		}
-	}
+		}// End Function
+	}// End Class
 }
