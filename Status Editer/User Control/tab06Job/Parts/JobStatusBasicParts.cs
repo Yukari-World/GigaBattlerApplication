@@ -27,6 +27,8 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// 特殊処理が必要なデータをGruopLabelから抽出
 		/// </summary>
 		string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
+		// EventHandler
+		public event EventHandler<EventArgs> numericBaseValue_Changed;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -36,6 +38,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]ステータスコストを換算します
 		/// </summary>
+		[Description(@"[ReadOnly]ステータスコストを換算します")]
 		public int StatusCost {
 			get {
 				return _StatusCost;
@@ -45,6 +48,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]Basic Statusの値を返します
 		/// </summary>
+		[Description(@"[ReadOnly]Basic Statusの値を返します")]
 		public decimal numericBaseValue {
 			get {
 				return numericBaseStatus.Value;
@@ -54,6 +58,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]Bonus Statusの値を返します
 		/// </summary>
+		[Description(@"[ReadOnly]Bonus Statusの値を返します")]
 		public decimal numericBonusValue {
 			get {
 				return numericBonusStatus.Value;
@@ -61,8 +66,9 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		}
 
 		/// <summary>
-		/// [R/W]グループラベルのテキストを設定します。
+		/// [R/W]グループラベルのテキストを設定します
 		/// </summary>
+		[Description(@"[R/W]グループラベルのテキストを設定します")]
 		public string labelText {
 			get { return groupBase.Text; }
 			set { groupBase.Text = value; }
@@ -158,10 +164,27 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 				case "EVT":
 					_StatusCost = (int)numericBaseStatus.Value - 100;
 					break;
+				case "TP":
+					_StatusCost = (int)numericBaseStatus.Value / 5;
+					break;
 				default:
 					_StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
 					break;
 			}// End Switch
 		}
+
+
+		///// <summary> 
+		///// チェック状態が変更された場合に発生します 
+		///// </summary> 
+		///// <param name="e"></param> 
+		//[Browsable(true)]
+		//[Description("チェック状態が変更されるときに発生するイベントです")]
+		//protected virtual void OnCheckedChanged(EventArgs e) {
+		//	EventHandler<EventArgs> eventHandler = CheckedChanged;
+		//	if (eventHandler != null) {
+		//		eventHandler(this, e);
+		//	}
+		//}
 	}
 }

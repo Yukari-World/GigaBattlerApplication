@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.tab06Job.Parts {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.tab06Job.Parts {
 	partial class JobStatusBasicParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -134,11 +137,11 @@
 
 		#endregion
 
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.GroupBox groupBase;
-		private System.Windows.Forms.NumericUpDown numericBonusStatus;
-		private System.Windows.Forms.Label labelBonusStatus;
-		private System.Windows.Forms.NumericUpDown numericBaseStatus;
-		private System.Windows.Forms.Label labelBaseStatus;
+		private ToolTip toolTipInfo;
+		private GroupBox groupBase;
+		private NumericUpDown numericBonusStatus;
+		private Label labelBonusStatus;
+		private NumericUpDown numericBaseStatus;
+		private Label labelBaseStatus;
 	}
 }

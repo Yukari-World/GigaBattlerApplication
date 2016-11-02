@@ -5968,8 +5968,8 @@ namespace Status_Editer {
                         ushort MDF, 
                         ushort SPD, 
                         byte LUK, 
-                        ushort HIT, 
-                        ushort EVT, 
+                        short HIT, 
+                        short EVT, 
                         string Skill, 
                         byte Class, 
                         uint EXP, 
@@ -6124,9 +6124,9 @@ namespace Status_Editer {
                 base.Columns.Add(this.columnSPD);
                 this.columnLUK = new global::System.Data.DataColumn("LUK", typeof(byte), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLUK);
-                this.columnHIT = new global::System.Data.DataColumn("HIT", typeof(ushort), null, global::System.Data.MappingType.Element);
+                this.columnHIT = new global::System.Data.DataColumn("HIT", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHIT);
-                this.columnEVT = new global::System.Data.DataColumn("EVT", typeof(ushort), null, global::System.Data.MappingType.Element);
+                this.columnEVT = new global::System.Data.DataColumn("EVT", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEVT);
                 this.columnSkill = new global::System.Data.DataColumn("Skill", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSkill);
@@ -14961,9 +14961,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ushort HIT {
+            public short HIT {
                 get {
-                    return ((ushort)(this[this.table__table_job.HITColumn]));
+                    return ((short)(this[this.table__table_job.HITColumn]));
                 }
                 set {
                     this[this.table__table_job.HITColumn] = value;
@@ -14972,9 +14972,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ushort EVT {
+            public short EVT {
                 get {
-                    return ((ushort)(this[this.table__table_job.EVTColumn]));
+                    return ((short)(this[this.table__table_job.EVTColumn]));
                 }
                 set {
                     this[this.table__table_job.EVTColumn] = value;
