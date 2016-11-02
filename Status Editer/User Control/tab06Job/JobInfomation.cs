@@ -66,6 +66,10 @@ namespace Status_Editer.User_Control.tab06Job {
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 
+		private void jobStatusHP_numericBaseValueChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+			label1.Text = e.Value.ToString();
+		}
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数

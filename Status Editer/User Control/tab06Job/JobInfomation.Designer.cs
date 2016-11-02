@@ -25,6 +25,8 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupJobInfo = new System.Windows.Forms.GroupBox();
+			this.jobStatusEVT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.jobStatusHIT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.jobStatusLuck = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.jobStatusSPD = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.jobStatusMagicDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
@@ -36,13 +38,13 @@
 			this.jobStatusTP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.jobStatusHP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.jobStatusHIT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusEVT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.label1 = new System.Windows.Forms.Label();
 			this.groupJobInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupJobInfo
 			// 
+			this.groupJobInfo.Controls.Add(this.label1);
 			this.groupJobInfo.Controls.Add(this.jobStatusEVT);
 			this.groupJobInfo.Controls.Add(this.jobStatusHIT);
 			this.groupJobInfo.Controls.Add(this.jobStatusLuck);
@@ -62,6 +64,24 @@
 			this.groupJobInfo.TabIndex = 0;
 			this.groupJobInfo.TabStop = false;
 			this.groupJobInfo.Text = "Job Infomation";
+			// 
+			// jobStatusEVT
+			// 
+			this.jobStatusEVT.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusEVT.labelText = "EVT";
+			this.jobStatusEVT.Location = new System.Drawing.Point(10, 675);
+			this.jobStatusEVT.Name = "jobStatusEVT";
+			this.jobStatusEVT.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusEVT.TabIndex = 11;
+			// 
+			// jobStatusHIT
+			// 
+			this.jobStatusHIT.BackColor = System.Drawing.Color.Transparent;
+			this.jobStatusHIT.labelText = "HIT";
+			this.jobStatusHIT.Location = new System.Drawing.Point(10, 615);
+			this.jobStatusHIT.Name = "jobStatusHIT";
+			this.jobStatusHIT.Size = new System.Drawing.Size(650, 60);
+			this.jobStatusHIT.TabIndex = 10;
 			// 
 			// jobStatusLuck
 			// 
@@ -152,6 +172,7 @@
 			this.jobStatusHP.Name = "jobStatusHP";
 			this.jobStatusHP.Size = new System.Drawing.Size(650, 60);
 			this.jobStatusHP.TabIndex = 0;
+			this.jobStatusHP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusHP_numericBaseValueChanged);
 			// 
 			// toolTipInfo
 			// 
@@ -162,23 +183,14 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// jobStatusHIT
+			// label1
 			// 
-			this.jobStatusHIT.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusHIT.labelText = "HIT";
-			this.jobStatusHIT.Location = new System.Drawing.Point(10, 615);
-			this.jobStatusHIT.Name = "jobStatusHIT";
-			this.jobStatusHIT.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusHIT.TabIndex = 10;
-			// 
-			// jobStatusEVT
-			// 
-			this.jobStatusEVT.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusEVT.labelText = "EVT";
-			this.jobStatusEVT.Location = new System.Drawing.Point(10, 675);
-			this.jobStatusEVT.Name = "jobStatusEVT";
-			this.jobStatusEVT.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusEVT.TabIndex = 11;
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(702, 121);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(35, 12);
+			this.label1.TabIndex = 12;
+			this.label1.Text = "label1";
 			// 
 			// JobInfomation
 			// 
@@ -189,6 +201,7 @@
 			this.Name = "JobInfomation";
 			this.Size = new System.Drawing.Size(1380, 820);
 			this.groupJobInfo.ResumeLayout(false);
+			this.groupJobInfo.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -209,5 +222,6 @@
 		private Parts.JobStatusBasicParts jobStatusTP;
 		private Parts.JobStatusBasicParts jobStatusEVT;
 		private Parts.JobStatusBasicParts jobStatusHIT;
+		private System.Windows.Forms.Label label1;
 	}
 }

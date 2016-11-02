@@ -6,8 +6,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +19,9 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		// イベントの登録を許可
+		[Browsable(true)]
+
 		private int _StatusCost;
 		private int CostMultiplier;
 		private int GrooveGauge;
@@ -27,8 +30,24 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// 特殊処理が必要なデータをGruopLabelから抽出
 		/// </summary>
 		string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
+
+		// Class in Class
+		public class NumEventArgs : EventArgs {
+			public int Value;
+		}// End Class
+
+		// Delegate
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">NumEventArgs</param>
+		public delegate void BaseValueChangedEventHandler(object sender, NumEventArgs e);
+
 		// EventHandler
-		public event EventHandler<EventArgs> numericBaseValue_Changed;
+		// イベントデリゲートの宣言
+		[Description("StatusCostの値が変動した時に発動するイベントです")]
+		public event BaseValueChangedEventHandler CostMultiplierChanged;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -40,9 +59,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		[Description(@"[ReadOnly]ステータスコストを換算します")]
 		public int StatusCost {
-			get {
-				return _StatusCost;
-			}
+			get { return _StatusCost; }
 		}
 
 		/// <summary>
@@ -50,9 +67,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		[Description(@"[ReadOnly]Basic Statusの値を返します")]
 		public decimal numericBaseValue {
-			get {
-				return numericBaseStatus.Value;
-			}
+			get { return numericBaseStatus.Value; }
 		}
 
 		/// <summary>
@@ -60,9 +75,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		[Description(@"[ReadOnly]Bonus Statusの値を返します")]
 		public decimal numericBonusValue {
-			get {
-				return numericBonusStatus.Value;
-			}
+			get { return numericBonusStatus.Value; }
 		}
 
 		/// <summary>
@@ -171,20 +184,20 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 					_StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
 					break;
 			}// End Switch
+
+			// 転送用準備
+			NumEventArgs ex = new NumEventArgs();
+			ex.Value = _StatusCost;// 送るデータの中身
+			OnCostMultiplierChanged(ex);
 		}
 
-
-		///// <summary> 
-		///// チェック状態が変更された場合に発生します 
-		///// </summary> 
-		///// <param name="e"></param> 
-		//[Browsable(true)]
-		//[Description("チェック状態が変更されるときに発生するイベントです")]
-		//protected virtual void OnCheckedChanged(EventArgs e) {
-		//	EventHandler<EventArgs> eventHandler = CheckedChanged;
-		//	if (eventHandler != null) {
-		//		eventHandler(this, e);
-		//	}
-		//}
-	}
+		/// <summary>
+		/// イベント『CostMultiplierChanged』のデータを転送します
+		/// </summary>
+		/// <param name="e">NumEventArgs</param>
+		protected virtual void OnCostMultiplierChanged(NumEventArgs e) {
+			// この1行で済むらしい……
+			CostMultiplierChanged?.Invoke(this, e);
+		}
+	}// End Class
 }
