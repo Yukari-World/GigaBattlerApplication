@@ -19,13 +19,28 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		private int _StatusCost;
+		private int CostMultiplier;
 		private int GrooveGauge;
 		private Label StatusBar = new Label();
+		/// <summary>
+		/// 特殊処理が必要なデータをGruopLabelから抽出
+		/// </summary>
+		string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// [ReadOnly]ステータスコストを換算します
+		/// </summary>
+		public int StatusCost {
+			get {
+				return _StatusCost;
+			}
+		}
 
 		/// <summary>
 		/// [ReadOnly]Basic Statusの値を返します
@@ -103,17 +118,18 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void JobStatusBasicParts_Load(object sender, EventArgs e) {
-			// 特殊処理が必要なデータをGruopLabelから抽出
-			string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
-
 			// Gaugeの長さを設定する
 			if (groupBase.Text == "Luck") {
 				GrooveGauge = 10;
+				CostMultiplier = 5;
 			} else if (Array.IndexOf(ExtraIndex, groupBase.Text) != -1) {
 				GrooveGauge = 1;
+				CostMultiplier = 5;
+				numericBaseStatus.Increment = 5;
 			} else {
 				GrooveGauge = 2;
-			}
+				CostMultiplier = 1;
+			}// End If
 
 			// Labelの初期化
 			StatusBar.AutoSize = false;
@@ -121,7 +137,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
 			StatusBar.Location = new Point(10, 50);
-			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseStatus.Value * GrooveGauge, 0), 5);
 
 			// LabelをGroupBoxに追加する
 			groupBase.Controls.Add(StatusBar);
@@ -134,7 +150,18 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <param name="e">EventArgs</param>
 		private void numericBaseStatus_ValueChanged(object sender, EventArgs e) {
 			// Gaugeの長さを変更する
-			StatusBar.Size = new Size(Math.Max((int)numericBaseValue * GrooveGauge, 0), 5);
+			StatusBar.Size = new Size(Math.Max((int)numericBaseStatus.Value * GrooveGauge, 0), 5);
+
+			// コストの計算
+			switch (groupBase.Text) {
+				case "HIT":
+				case "EVT":
+					_StatusCost = (int)numericBaseStatus.Value - 100;
+					break;
+				default:
+					_StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
+					break;
+			}// End Switch
 		}
 	}
 }

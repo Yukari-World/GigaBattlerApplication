@@ -180,7 +180,7 @@ namespace Status_Editer {
 			} catch (Exception ex) {
 				MessageBox.Show("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
-			}
+			}// End Try
 
 			StripInfo.Text = "Welcome!!";
 		}
@@ -261,8 +261,8 @@ namespace Status_Editer {
 					tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
 				} catch (Exception ex) {
 					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-			}
+				}// End Try
+			}// End If
 		}
 
 		/// <summary>

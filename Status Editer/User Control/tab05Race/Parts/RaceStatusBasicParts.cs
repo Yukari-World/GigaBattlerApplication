@@ -91,7 +91,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 				GrooveGauge = 1;
 			} else {
 				GrooveGauge = 20;
-			}
+			}// End If
 
 			// 1st Labelの初期化
 			StatusBar.AutoSize = false;
@@ -125,8 +125,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 					numericLvPStatus.Minimum = -9999.99M;
 				} else {    // TPなら設定可能最小値を0にする
 					numericBase.Minimum = 0M;
-				}
-			}
+				}// End If
+			}// End If
 		}
 
 		/// <summary>
@@ -140,7 +140,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 				basicRate = numericBase.Value * 0.027m;
 			} else {
 				basicRate = numericBase.Value * 0.7m;
-			}
+			}// End If
 			labelRecommend.Text = "推奨値:" + basicRate.ToString("N2");
 
 			// Gaugeの長さを変更する
