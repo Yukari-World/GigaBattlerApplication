@@ -314,6 +314,7 @@ namespace Status_Editer {
 			this.tabControlUnit.SelectedIndex = 0;
 			this.tabControlUnit.Size = new System.Drawing.Size(1387, 830);
 			this.tabControlUnit.TabIndex = 1;
+			this.tabControlUnit.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
 			// 
 			// tabPage21
 			// 

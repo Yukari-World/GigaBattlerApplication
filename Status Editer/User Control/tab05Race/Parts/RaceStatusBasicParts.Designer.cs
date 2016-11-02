@@ -80,6 +80,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// 
 			// numericBase
 			// 
+			this.numericBase.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBase.Location = new System.Drawing.Point(10, 30);
 			this.numericBase.Maximum = new decimal(new int[] {
             9999,
@@ -126,6 +127,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// numericLvPStatus
 			// 
 			this.numericLvPStatus.DecimalPlaces = 2;
+			this.numericLvPStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericLvPStatus.Increment = new decimal(new int[] {
             5,
             0,

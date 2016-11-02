@@ -151,6 +151,10 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numericWT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
   <data name="numericWT.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 200</value>
   </data>
@@ -160,7 +164,6 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="numericWT.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="numericWT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -217,6 +220,9 @@ Dragon: 2,000 ～ 25,000</value>
   </data>
   <data name="&gt;&gt;labelWT.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="numericRare2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
   </data>
   <data name="numericRare2.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 135</value>
@@ -330,6 +336,9 @@ Dragon: 2,000 ～ 25,000</value>
   </data>
   <data name="&gt;&gt;textInfo.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="numericRare.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
   </data>
   <data name="numericRare.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 135</value>
@@ -466,6 +475,9 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="&gt;&gt;labelUnitName.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="comboMonsterGroup.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
   <data name="comboMonsterGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>350, 45</value>
   </data>
@@ -520,6 +532,9 @@ Dragon: 2,000 ～ 25,000</value>
   </data>
   <data name="&gt;&gt;labelMonsterGroup.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="textUnitID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
   </data>
   <data name="textUnitID.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 45</value>
@@ -619,6 +634,6 @@ ID名は英名表記で統一し、データの整合性のため、変更を行
     <value>UnitInfomation</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Status_Editer.ZUserControl, Status Editer, Version=0.1.7.53, Culture=neutral, PublicKeyToken=null</value>
+    <value>Status_Editer.ZUserControl, Status Editer, Version=0.2.0.102, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -49,6 +49,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// 
 			// numericBaseStatus
 			// 
+			this.numericBaseStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBaseStatus.Increment = new decimal(new int[] {
             5,
             0,
@@ -74,6 +75,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// 
 			// numericBonusStatus
 			// 
+			this.numericBonusStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBonusStatus.Location = new System.Drawing.Point(150, 30);
 			this.numericBonusStatus.Maximum = new decimal(new int[] {
             99,

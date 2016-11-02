@@ -52,6 +52,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.groupLv.Controls.Add(this.labelMaxLevel);
 			this.groupLv.Controls.Add(this.numericMaxLevel);
 			this.groupLv.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupLv.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.groupLv.Location = new System.Drawing.Point(0, 0);
 			this.groupLv.Name = "groupLv";
 			this.groupLv.Size = new System.Drawing.Size(650, 75);
@@ -61,6 +62,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericReqLv
 			// 
+			this.numericReqLv.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericReqLv.Location = new System.Drawing.Point(10, 30);
 			this.numericReqLv.Maximum = new decimal(new int[] {
             -727379969,
@@ -107,6 +109,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericMinLevel
 			// 
+			this.numericMinLevel.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMinLevel.Location = new System.Drawing.Point(200, 30);
 			this.numericMinLevel.Maximum = new decimal(new int[] {
             -727379969,
@@ -152,6 +155,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericMaxLevel
 			// 
+			this.numericMaxLevel.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMaxLevel.Location = new System.Drawing.Point(402, 30);
 			this.numericMaxLevel.Maximum = new decimal(new int[] {
             1661992959,
