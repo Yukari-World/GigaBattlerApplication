@@ -19,6 +19,8 @@ namespace Status_Editer.User_Control.tab06Job {
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		private int sumCost;
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
@@ -66,10 +68,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}
 
-		private void jobStatusHP_numericBaseValueChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
-			label1.Text = e.Value.ToString();
-		}
-
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
@@ -79,5 +77,53 @@ namespace Status_Editer.User_Control.tab06Job {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// コントロールメソッド
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	}
+
+		private void jobStatusHP_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+			label1.Text = e.Value.ToString();
+		}
+
+		private void jobStatusTP_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusMeleeATK_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusMeleeDEF_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusRangeATK_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusRangeDEF_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusMagicATK_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusMagicDEF_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusSPD_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusLuck_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusHIT_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+
+		private void jobStatusEVT_CostMultiplierChanged(object sender, Parts.JobStatusBasicParts.NumEventArgs e) {
+
+		}
+	}// End Class
 }

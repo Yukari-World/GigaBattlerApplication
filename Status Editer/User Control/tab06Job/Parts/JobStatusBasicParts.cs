@@ -38,7 +38,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 		// Delegate
 		/// <summary>
-		/// 
+		/// BaseValueChangedのデリゲート宣言
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">NumEventArgs</param>
@@ -46,6 +46,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 		// EventHandler
 		// イベントデリゲートの宣言
+		[Category("Action")]
 		[Description("StatusCostの値が変動した時に発動するイベントです")]
 		public event BaseValueChangedEventHandler CostMultiplierChanged;
 
@@ -53,14 +54,6 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// private変数へのアクセス
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// [ReadOnly]ステータスコストを換算します
-		/// </summary>
-		[Description(@"[ReadOnly]ステータスコストを換算します")]
-		public int StatusCost {
-			get { return _StatusCost; }
-		}
 
 		/// <summary>
 		/// [ReadOnly]Basic Statusの値を返します
@@ -85,6 +78,22 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		public string labelText {
 			get { return groupBase.Text; }
 			set { groupBase.Text = value; }
+		}
+
+		/// <summary>
+		/// [R/W]ステータスコストを換算します
+		/// </summary>
+		[Description(@"[R/W]ステータスコストを換算します")]
+		private int StatusCost {
+			get { return _StatusCost; }
+			set {
+				_StatusCost = value;
+
+				// 転送用準備
+				NumEventArgs ex = new NumEventArgs();
+				ex.Value = _StatusCost;// 送るデータの中身
+				OnCostMultiplierChanged(ex);
+			}
 		}
 
 
@@ -144,11 +153,25 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			} else if (Array.IndexOf(ExtraIndex, groupBase.Text) != -1) {
 				GrooveGauge = 1;
 				CostMultiplier = 5;
-				numericBaseStatus.Increment = 5;
+				numericBaseStatus.Increment = 5;	// 5の倍数で指定する
 			} else {
 				GrooveGauge = 2;
 				CostMultiplier = 1;
 			}// End If
+
+			// コストの計算
+			switch (groupBase.Text) {
+				case "HIT":
+				case "EVT":
+					StatusCost = (int)numericBaseStatus.Value - 100;
+					break;
+				case "TP":
+					StatusCost = (int)numericBaseStatus.Value / 5;
+					break;
+				default:
+					StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
+					break;
+			}// End Switch
 
 			// Labelの初期化
 			StatusBar.AutoSize = false;
@@ -175,20 +198,15 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			switch (groupBase.Text) {
 				case "HIT":
 				case "EVT":
-					_StatusCost = (int)numericBaseStatus.Value - 100;
+					StatusCost = (int)numericBaseStatus.Value - 100;
 					break;
 				case "TP":
-					_StatusCost = (int)numericBaseStatus.Value / 5;
+					StatusCost = (int)numericBaseStatus.Value / 5;
 					break;
 				default:
-					_StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
+					StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
 					break;
 			}// End Switch
-
-			// 転送用準備
-			NumEventArgs ex = new NumEventArgs();
-			ex.Value = _StatusCost;// 送るデータの中身
-			OnCostMultiplierChanged(ex);
 		}
 
 		/// <summary>
@@ -196,7 +214,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		/// <param name="e">NumEventArgs</param>
 		protected virtual void OnCostMultiplierChanged(NumEventArgs e) {
-			// この1行で済むらしい……
+			// この1行で済むらしい……?
 			CostMultiplierChanged?.Invoke(this, e);
 		}
 	}// End Class
