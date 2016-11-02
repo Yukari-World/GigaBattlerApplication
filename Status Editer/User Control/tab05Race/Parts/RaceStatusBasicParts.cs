@@ -24,18 +24,18 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
+		/// [ReadOnly]ベースステータスの値を抽出します
+		/// </summary>
+		public decimal numericBaseValue {
+			get { return numericBase.Value; }
+		}
+
+		/// <summary>
 		/// [R/W]グループラベルのテキストを設定します。
 		/// </summary>
 		public string labelText {
 			get { return groupBasic.Text; }
 			set { groupBasic.Text = value; }
-		}
-
-		/// <summary>
-		/// [ReadOnly]ベースステータスの値を抽出します
-		/// </summary>
-		public decimal numericBaseValue {
-			get { return numericBase.Value; }
 		}
 
 
@@ -59,7 +59,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableRaceBindingSource">BindingSource</param>
-		/// <param name="bindTag">string</param>
+		/// <param name="bindTag">Status Tag</param>
 		public void SetDataBindings(BindingSource tableRaceBindingSource, string bindTag) {
 			// データバインドの設定
 			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));

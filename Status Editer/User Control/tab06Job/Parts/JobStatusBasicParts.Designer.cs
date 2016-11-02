@@ -25,7 +25,14 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.groupBase = new System.Windows.Forms.GroupBox();
+			this.labelBaseStatus = new System.Windows.Forms.Label();
+			this.numericBasicStatus = new System.Windows.Forms.NumericUpDown();
+			this.labelBonusStatus = new System.Windows.Forms.Label();
+			this.numericBonusStatus = new System.Windows.Forms.NumericUpDown();
+			this.groupBase.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericBasicStatus)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericBonusStatus)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// toolTipInfo
@@ -37,24 +44,88 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// groupBox1
+			// groupBase
 			// 
-			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupBox1.Location = new System.Drawing.Point(0, 0);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(650, 60);
-			this.groupBox1.TabIndex = 0;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "groupBox1";
+			this.groupBase.Controls.Add(this.numericBonusStatus);
+			this.groupBase.Controls.Add(this.labelBonusStatus);
+			this.groupBase.Controls.Add(this.numericBasicStatus);
+			this.groupBase.Controls.Add(this.labelBaseStatus);
+			this.groupBase.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBase.Location = new System.Drawing.Point(0, 0);
+			this.groupBase.Name = "groupBase";
+			this.groupBase.Size = new System.Drawing.Size(650, 60);
+			this.groupBase.TabIndex = 0;
+			this.groupBase.TabStop = false;
+			this.groupBase.Text = "Label";
+			// 
+			// labelBaseStatus
+			// 
+			this.labelBaseStatus.AutoSize = true;
+			this.labelBaseStatus.Location = new System.Drawing.Point(10, 15);
+			this.labelBaseStatus.Name = "labelBaseStatus";
+			this.labelBaseStatus.Size = new System.Drawing.Size(31, 12);
+			this.labelBaseStatus.TabIndex = 0;
+			this.labelBaseStatus.Text = "Base";
+			// 
+			// numericBasicStatus
+			// 
+			this.numericBasicStatus.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.numericBasicStatus.Location = new System.Drawing.Point(10, 30);
+			this.numericBasicStatus.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.numericBasicStatus.Name = "numericBasicStatus";
+			this.numericBasicStatus.Size = new System.Drawing.Size(120, 19);
+			this.numericBasicStatus.TabIndex = 1;
+			this.numericBasicStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTipInfo.SetToolTip(this.numericBasicStatus, "基本ステータスに対して影響を受ける割合(%)");
+			this.numericBasicStatus.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			// 
+			// labelBonusStatus
+			// 
+			this.labelBonusStatus.AutoSize = true;
+			this.labelBonusStatus.Location = new System.Drawing.Point(148, 15);
+			this.labelBonusStatus.Name = "labelBonusStatus";
+			this.labelBonusStatus.Size = new System.Drawing.Size(74, 12);
+			this.labelBonusStatus.TabIndex = 2;
+			this.labelBonusStatus.Text = "Bonus Status";
+			// 
+			// numericBonusStatus
+			// 
+			this.numericBonusStatus.Location = new System.Drawing.Point(150, 30);
+			this.numericBonusStatus.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.numericBonusStatus.Name = "numericBonusStatus";
+			this.numericBonusStatus.Size = new System.Drawing.Size(120, 19);
+			this.numericBonusStatus.TabIndex = 3;
+			this.numericBonusStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTipInfo.SetToolTip(this.numericBonusStatus, "ジョブマスター時に獲得できるボーナスステータス");
 			// 
 			// JobStatusBasicParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Transparent;
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.groupBase);
 			this.Name = "JobStatusBasicParts";
 			this.Size = new System.Drawing.Size(650, 60);
+			this.groupBase.ResumeLayout(false);
+			this.groupBase.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericBasicStatus)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericBonusStatus)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -62,6 +133,10 @@
 		#endregion
 
 		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBase;
+		private System.Windows.Forms.NumericUpDown numericBonusStatus;
+		private System.Windows.Forms.Label labelBonusStatus;
+		private System.Windows.Forms.NumericUpDown numericBasicStatus;
+		private System.Windows.Forms.Label labelBaseStatus;
 	}
 }

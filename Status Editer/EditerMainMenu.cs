@@ -19,6 +19,7 @@ namespace Status_Editer {
 		// TableAdapter
 		__table_unitTableAdapter tableUnitTableAdapter = new __table_unitTableAdapter();
 		__table_raceTableAdapter tableRaceTableAdapter = new __table_raceTableAdapter();
+		__table_jobTableAdapter tableJobTableAdapter = new __table_jobTableAdapter();
 		__table_weaponTableAdapter tableWeaponTableAdapter = new __table_weaponTableAdapter();
 		__table_shieldTableAdapter tableShieldTableAdapter = new __table_shieldTableAdapter();
 		__table_helmetTableAdapter tableHelmetTableAdapter = new __table_helmetTableAdapter();
@@ -29,6 +30,7 @@ namespace Status_Editer {
 		// BindingSource
 		BindingSource tableUnitBindingSource = new BindingSource();
 		BindingSource tableRaceBindingSource = new BindingSource();
+		BindingSource tableJobBindingSource = new BindingSource();
 		BindingSource tableArmorBingingSource = new BindingSource();
 
 
@@ -77,6 +79,7 @@ namespace Status_Editer {
 
 			tableUnitTableAdapter.ClearBeforeFill = true;
 			tableRaceTableAdapter.ClearBeforeFill = true;
+			tableJobTableAdapter.ClearBeforeFill = true;
 			tableWeaponTableAdapter.ClearBeforeFill = true;
 			tableShieldTableAdapter.ClearBeforeFill = true;
 			tableHelmetTableAdapter.ClearBeforeFill = true;
@@ -91,6 +94,8 @@ namespace Status_Editer {
 			tableUnitBindingSource.DataSource = GigaBattlerDataSet;
 			tableRaceBindingSource.DataMember = "__table_race";
 			tableRaceBindingSource.DataSource = GigaBattlerDataSet;
+			tableJobBindingSource.DataMember = "__table_job";
+			tableJobBindingSource.DataSource = GigaBattlerDataSet;
 			tableArmorBingingSource.DataMember = "__table_armor";
 			tableArmorBingingSource.DataSource = GigaBattlerDataSet;
 
@@ -147,6 +152,9 @@ namespace Status_Editer {
 				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
 
 				// TAB: ジョブ
+
+				JobInfomation.LoadDataBindings(tableJobBindingSource);
+
 				// TAB: メーカー
 				// TAB: 武器
 				// TAB: 盾
@@ -158,6 +166,7 @@ namespace Status_Editer {
 
 				tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+				tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
 				tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 				tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
 				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
@@ -239,6 +248,7 @@ namespace Status_Editer {
 				try {
 					tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 					tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+					tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
 					tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
 					tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
 					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
