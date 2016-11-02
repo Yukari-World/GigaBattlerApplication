@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab03Unit.Parts {
-	partial class SkillInfomationParts {
+	partial class SkillInfoParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>

@@ -79,6 +79,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.Designer.cs">
+      <DependentUpon>DropInfoParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab03Unit\Parts\StatusInfoLevelParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab03Unit\Parts\StatusInfoLevelParts.Designer.cs">
+      <DependentUpon>StatusInfoLevelParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\tab06Job\JobInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,11 +132,11 @@
     <Compile Include="User Control\tab03Unit\AbilityInfomation.Designer.cs">
       <DependentUpon>AbilityInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\tab03Unit\Parts\SkillInfomationParts.cs">
+    <Compile Include="User Control\tab03Unit\Parts\SkillInfoParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\tab03Unit\Parts\SkillInfomationParts.Designer.cs">
-      <DependentUpon>SkillInfomationParts.cs</DependentUpon>
+    <Compile Include="User Control\tab03Unit\Parts\SkillInfoParts.Designer.cs">
+      <DependentUpon>SkillInfoParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab03Unit\StatusInfomation.cs">
       <SubType>UserControl</SubType>
@@ -174,14 +186,20 @@
     <EmbeddedResource Include="User Control\tab03Unit\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab03Unit\Parts\DropInfoParts.resx">
+      <DependentUpon>DropInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab03Unit\Parts\StatusInfoLevelParts.resx">
+      <DependentUpon>StatusInfoLevelParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\SkillInfomation.resx">
       <DependentUpon>SkillInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\AbilityInfomation.resx">
       <DependentUpon>AbilityInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\tab03Unit\Parts\SkillInfomationParts.resx">
-      <DependentUpon>SkillInfomationParts.cs</DependentUpon>
+    <EmbeddedResource Include="User Control\tab03Unit\Parts\SkillInfoParts.resx">
+      <DependentUpon>SkillInfoParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\StatusInfomation.resx">
       <DependentUpon>StatusInfomation.cs</DependentUpon>

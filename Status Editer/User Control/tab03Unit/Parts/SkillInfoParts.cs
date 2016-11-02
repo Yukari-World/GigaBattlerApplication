@@ -1,14 +1,16 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// SkillInfomation
+// Skill Infomation
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System.ComponentModel;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit.Parts {
-	public partial class SkillInfomationParts : UserControl {
+	[ToolboxItem(true)]
+	public partial class SkillInfoParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -37,7 +39,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public SkillInfomationParts() {
+		public SkillInfoParts() {
 			InitializeComponent();
 		}
 

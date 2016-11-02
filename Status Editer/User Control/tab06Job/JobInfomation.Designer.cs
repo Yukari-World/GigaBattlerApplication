@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.tab06Job {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.tab06Job {
 	partial class JobInfomation {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -25,38 +28,36 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupJobInfo = new System.Windows.Forms.GroupBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.jobStatusEVT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusHIT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusLuck = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusSPD = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusMagicDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusMagicATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusRangeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusRangeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusMeleeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusMeleeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusTP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
-			this.jobStatusHP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusEVT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusHIT = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusLuck = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusSPD = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusMagicDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusMagicATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusRangeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusRangeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusMeleeDEF = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusMeleeATK = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusTP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
+			this.JobStatusHP = new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.groupJobInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupJobInfo
 			// 
-			this.groupJobInfo.Controls.Add(this.label1);
-			this.groupJobInfo.Controls.Add(this.jobStatusEVT);
-			this.groupJobInfo.Controls.Add(this.jobStatusHIT);
-			this.groupJobInfo.Controls.Add(this.jobStatusLuck);
-			this.groupJobInfo.Controls.Add(this.jobStatusSPD);
-			this.groupJobInfo.Controls.Add(this.jobStatusMagicDEF);
-			this.groupJobInfo.Controls.Add(this.jobStatusMagicATK);
-			this.groupJobInfo.Controls.Add(this.jobStatusRangeDEF);
-			this.groupJobInfo.Controls.Add(this.jobStatusRangeATK);
-			this.groupJobInfo.Controls.Add(this.jobStatusMeleeDEF);
-			this.groupJobInfo.Controls.Add(this.jobStatusMeleeATK);
-			this.groupJobInfo.Controls.Add(this.jobStatusTP);
-			this.groupJobInfo.Controls.Add(this.jobStatusHP);
+			this.groupJobInfo.Controls.Add(this.JobStatusEVT);
+			this.groupJobInfo.Controls.Add(this.JobStatusHIT);
+			this.groupJobInfo.Controls.Add(this.JobStatusLuck);
+			this.groupJobInfo.Controls.Add(this.JobStatusSPD);
+			this.groupJobInfo.Controls.Add(this.JobStatusMagicDEF);
+			this.groupJobInfo.Controls.Add(this.JobStatusMagicATK);
+			this.groupJobInfo.Controls.Add(this.JobStatusRangeDEF);
+			this.groupJobInfo.Controls.Add(this.JobStatusRangeATK);
+			this.groupJobInfo.Controls.Add(this.JobStatusMeleeDEF);
+			this.groupJobInfo.Controls.Add(this.JobStatusMeleeATK);
+			this.groupJobInfo.Controls.Add(this.JobStatusTP);
+			this.groupJobInfo.Controls.Add(this.JobStatusHP);
 			this.groupJobInfo.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupJobInfo.Location = new System.Drawing.Point(0, 0);
 			this.groupJobInfo.Name = "groupJobInfo";
@@ -65,134 +66,125 @@
 			this.groupJobInfo.TabStop = false;
 			this.groupJobInfo.Text = "Job Infomation";
 			// 
-			// label1
+			// JobStatusEVT
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(702, 121);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 12);
-			this.label1.TabIndex = 12;
-			this.label1.Text = "label1";
+			this.JobStatusEVT.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusEVT.labelText = "EVT";
+			this.JobStatusEVT.Location = new System.Drawing.Point(720, 675);
+			this.JobStatusEVT.Name = "JobStatusEVT";
+			this.JobStatusEVT.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusEVT.TabIndex = 11;
+			this.JobStatusEVT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusEVT_CostMultiplierChanged);
 			// 
-			// jobStatusEVT
+			// JobStatusHIT
 			// 
-			this.jobStatusEVT.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusEVT.labelText = "EVT";
-			this.jobStatusEVT.Location = new System.Drawing.Point(10, 675);
-			this.jobStatusEVT.Name = "jobStatusEVT";
-			this.jobStatusEVT.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusEVT.TabIndex = 11;
-			this.jobStatusEVT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusEVT_CostMultiplierChanged);
+			this.JobStatusHIT.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusHIT.labelText = "HIT";
+			this.JobStatusHIT.Location = new System.Drawing.Point(720, 615);
+			this.JobStatusHIT.Name = "JobStatusHIT";
+			this.JobStatusHIT.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusHIT.TabIndex = 10;
+			this.JobStatusHIT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusHIT_CostMultiplierChanged);
 			// 
-			// jobStatusHIT
+			// JobStatusLuck
 			// 
-			this.jobStatusHIT.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusHIT.labelText = "HIT";
-			this.jobStatusHIT.Location = new System.Drawing.Point(10, 615);
-			this.jobStatusHIT.Name = "jobStatusHIT";
-			this.jobStatusHIT.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusHIT.TabIndex = 10;
-			this.jobStatusHIT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusHIT_CostMultiplierChanged);
+			this.JobStatusLuck.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusLuck.labelText = "Luck";
+			this.JobStatusLuck.Location = new System.Drawing.Point(720, 555);
+			this.JobStatusLuck.Name = "JobStatusLuck";
+			this.JobStatusLuck.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusLuck.TabIndex = 9;
+			this.JobStatusLuck.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusLuck_CostMultiplierChanged);
 			// 
-			// jobStatusLuck
+			// JobStatusSPD
 			// 
-			this.jobStatusLuck.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusLuck.labelText = "Luck";
-			this.jobStatusLuck.Location = new System.Drawing.Point(10, 555);
-			this.jobStatusLuck.Name = "jobStatusLuck";
-			this.jobStatusLuck.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusLuck.TabIndex = 9;
-			this.jobStatusLuck.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusLuck_CostMultiplierChanged);
+			this.JobStatusSPD.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusSPD.labelText = "SPD";
+			this.JobStatusSPD.Location = new System.Drawing.Point(720, 495);
+			this.JobStatusSPD.Name = "JobStatusSPD";
+			this.JobStatusSPD.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusSPD.TabIndex = 8;
+			this.JobStatusSPD.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusSPD_CostMultiplierChanged);
 			// 
-			// jobStatusSPD
+			// JobStatusMagicDEF
 			// 
-			this.jobStatusSPD.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusSPD.labelText = "SPD";
-			this.jobStatusSPD.Location = new System.Drawing.Point(10, 495);
-			this.jobStatusSPD.Name = "jobStatusSPD";
-			this.jobStatusSPD.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusSPD.TabIndex = 8;
-			this.jobStatusSPD.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusSPD_CostMultiplierChanged);
+			this.JobStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusMagicDEF.labelText = "Magic DEF";
+			this.JobStatusMagicDEF.Location = new System.Drawing.Point(720, 435);
+			this.JobStatusMagicDEF.Name = "JobStatusMagicDEF";
+			this.JobStatusMagicDEF.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusMagicDEF.TabIndex = 7;
+			this.JobStatusMagicDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMagicDEF_CostMultiplierChanged);
 			// 
-			// jobStatusMagicDEF
+			// JobStatusMagicATK
 			// 
-			this.jobStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusMagicDEF.labelText = "Magic DEF";
-			this.jobStatusMagicDEF.Location = new System.Drawing.Point(10, 435);
-			this.jobStatusMagicDEF.Name = "jobStatusMagicDEF";
-			this.jobStatusMagicDEF.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusMagicDEF.TabIndex = 7;
-			this.jobStatusMagicDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusMagicDEF_CostMultiplierChanged);
+			this.JobStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusMagicATK.labelText = "Magic ATK";
+			this.JobStatusMagicATK.Location = new System.Drawing.Point(720, 375);
+			this.JobStatusMagicATK.Name = "JobStatusMagicATK";
+			this.JobStatusMagicATK.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusMagicATK.TabIndex = 6;
+			this.JobStatusMagicATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMagicATK_CostMultiplierChanged);
 			// 
-			// jobStatusMagicATK
+			// JobStatusRangeDEF
 			// 
-			this.jobStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusMagicATK.labelText = "Magic ATK";
-			this.jobStatusMagicATK.Location = new System.Drawing.Point(10, 375);
-			this.jobStatusMagicATK.Name = "jobStatusMagicATK";
-			this.jobStatusMagicATK.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusMagicATK.TabIndex = 6;
-			this.jobStatusMagicATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusMagicATK_CostMultiplierChanged);
+			this.JobStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusRangeDEF.labelText = "Range DEF";
+			this.JobStatusRangeDEF.Location = new System.Drawing.Point(720, 315);
+			this.JobStatusRangeDEF.Name = "JobStatusRangeDEF";
+			this.JobStatusRangeDEF.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusRangeDEF.TabIndex = 5;
+			this.JobStatusRangeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusRangeDEF_CostMultiplierChanged);
 			// 
-			// jobStatusRangeDEF
+			// JobStatusRangeATK
 			// 
-			this.jobStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusRangeDEF.labelText = "Range DEF";
-			this.jobStatusRangeDEF.Location = new System.Drawing.Point(10, 315);
-			this.jobStatusRangeDEF.Name = "jobStatusRangeDEF";
-			this.jobStatusRangeDEF.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusRangeDEF.TabIndex = 5;
-			this.jobStatusRangeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusRangeDEF_CostMultiplierChanged);
+			this.JobStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusRangeATK.labelText = "Range ATK";
+			this.JobStatusRangeATK.Location = new System.Drawing.Point(720, 255);
+			this.JobStatusRangeATK.Name = "JobStatusRangeATK";
+			this.JobStatusRangeATK.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusRangeATK.TabIndex = 4;
+			this.JobStatusRangeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusRangeATK_CostMultiplierChanged);
 			// 
-			// jobStatusRangeATK
+			// JobStatusMeleeDEF
 			// 
-			this.jobStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusRangeATK.labelText = "Range ATK";
-			this.jobStatusRangeATK.Location = new System.Drawing.Point(10, 255);
-			this.jobStatusRangeATK.Name = "jobStatusRangeATK";
-			this.jobStatusRangeATK.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusRangeATK.TabIndex = 4;
-			this.jobStatusRangeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusRangeATK_CostMultiplierChanged);
+			this.JobStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusMeleeDEF.labelText = "Melee DEF";
+			this.JobStatusMeleeDEF.Location = new System.Drawing.Point(720, 195);
+			this.JobStatusMeleeDEF.Name = "JobStatusMeleeDEF";
+			this.JobStatusMeleeDEF.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusMeleeDEF.TabIndex = 3;
+			this.JobStatusMeleeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMeleeDEF_CostMultiplierChanged);
 			// 
-			// jobStatusMeleeDEF
+			// JobStatusMeleeATK
 			// 
-			this.jobStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusMeleeDEF.labelText = "Melee DEF";
-			this.jobStatusMeleeDEF.Location = new System.Drawing.Point(10, 195);
-			this.jobStatusMeleeDEF.Name = "jobStatusMeleeDEF";
-			this.jobStatusMeleeDEF.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusMeleeDEF.TabIndex = 3;
-			this.jobStatusMeleeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusMeleeDEF_CostMultiplierChanged);
+			this.JobStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusMeleeATK.labelText = "Melee ATK";
+			this.JobStatusMeleeATK.Location = new System.Drawing.Point(720, 135);
+			this.JobStatusMeleeATK.Name = "JobStatusMeleeATK";
+			this.JobStatusMeleeATK.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusMeleeATK.TabIndex = 2;
+			this.JobStatusMeleeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMeleeATK_CostMultiplierChanged);
 			// 
-			// jobStatusMeleeATK
+			// JobStatusTP
 			// 
-			this.jobStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusMeleeATK.labelText = "Melee ATK";
-			this.jobStatusMeleeATK.Location = new System.Drawing.Point(10, 135);
-			this.jobStatusMeleeATK.Name = "jobStatusMeleeATK";
-			this.jobStatusMeleeATK.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusMeleeATK.TabIndex = 2;
-			this.jobStatusMeleeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusMeleeATK_CostMultiplierChanged);
+			this.JobStatusTP.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusTP.labelText = "TP";
+			this.JobStatusTP.Location = new System.Drawing.Point(720, 75);
+			this.JobStatusTP.Name = "JobStatusTP";
+			this.JobStatusTP.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusTP.TabIndex = 1;
+			this.JobStatusTP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusTP_CostMultiplierChanged);
 			// 
-			// jobStatusTP
+			// JobStatusHP
 			// 
-			this.jobStatusTP.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusTP.labelText = "TP";
-			this.jobStatusTP.Location = new System.Drawing.Point(10, 75);
-			this.jobStatusTP.Name = "jobStatusTP";
-			this.jobStatusTP.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusTP.TabIndex = 1;
-			this.jobStatusTP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusTP_CostMultiplierChanged);
-			// 
-			// jobStatusHP
-			// 
-			this.jobStatusHP.BackColor = System.Drawing.Color.Transparent;
-			this.jobStatusHP.labelText = "HP";
-			this.jobStatusHP.Location = new System.Drawing.Point(10, 15);
-			this.jobStatusHP.Name = "jobStatusHP";
-			this.jobStatusHP.Size = new System.Drawing.Size(650, 60);
-			this.jobStatusHP.TabIndex = 0;
-			this.jobStatusHP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.jobStatusHP_CostMultiplierChanged);
+			this.JobStatusHP.BackColor = System.Drawing.Color.Transparent;
+			this.JobStatusHP.labelText = "HP";
+			this.JobStatusHP.Location = new System.Drawing.Point(720, 15);
+			this.JobStatusHP.Name = "JobStatusHP";
+			this.JobStatusHP.Size = new System.Drawing.Size(650, 60);
+			this.JobStatusHP.TabIndex = 0;
+			this.JobStatusHP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusHP_CostMultiplierChanged);
 			// 
 			// toolTipInfo
 			// 
@@ -212,27 +204,25 @@
 			this.Name = "JobInfomation";
 			this.Size = new System.Drawing.Size(1380, 820);
 			this.groupJobInfo.ResumeLayout(false);
-			this.groupJobInfo.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.GroupBox groupJobInfo;
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private Parts.JobStatusBasicParts jobStatusHP;
-		private Parts.JobStatusBasicParts jobStatusLuck;
-		private Parts.JobStatusBasicParts jobStatusSPD;
-		private Parts.JobStatusBasicParts jobStatusMagicDEF;
-		private Parts.JobStatusBasicParts jobStatusMagicATK;
-		private Parts.JobStatusBasicParts jobStatusRangeDEF;
-		private Parts.JobStatusBasicParts jobStatusRangeATK;
-		private Parts.JobStatusBasicParts jobStatusMeleeDEF;
-		private Parts.JobStatusBasicParts jobStatusMeleeATK;
-		private Parts.JobStatusBasicParts jobStatusTP;
-		private Parts.JobStatusBasicParts jobStatusEVT;
-		private Parts.JobStatusBasicParts jobStatusHIT;
-		private System.Windows.Forms.Label label1;
+		private GroupBox groupJobInfo;
+		private ToolTip toolTipInfo;
+		private Parts.JobStatusBasicParts JobStatusHP;
+		private Parts.JobStatusBasicParts JobStatusLuck;
+		private Parts.JobStatusBasicParts JobStatusSPD;
+		private Parts.JobStatusBasicParts JobStatusMagicDEF;
+		private Parts.JobStatusBasicParts JobStatusMagicATK;
+		private Parts.JobStatusBasicParts JobStatusRangeDEF;
+		private Parts.JobStatusBasicParts JobStatusRangeATK;
+		private Parts.JobStatusBasicParts JobStatusMeleeDEF;
+		private Parts.JobStatusBasicParts JobStatusMeleeATK;
+		private Parts.JobStatusBasicParts JobStatusTP;
+		private Parts.JobStatusBasicParts JobStatusEVT;
+		private Parts.JobStatusBasicParts JobStatusHIT;
 	}
 }

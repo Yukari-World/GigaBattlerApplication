@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.tab06Job.Parts {
+	[ToolboxItem(true)]
 	public partial class JobStatusBasicParts : ZUserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
@@ -22,9 +23,9 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		// イベントの登録を許可
 		[Browsable(true)]
 
-		private int _StatusCost;
-		private int CostMultiplier;
-		private int GrooveGauge;
+		private int _StatusCost;	// ステータスコスト計算用
+		private int CostMultiplier;	// ステータスコスト倍率
+		private int GrooveGauge;	// ステータスバーの比率
 		private Label StatusBar = new Label();
 		/// <summary>
 		/// 特殊処理が必要なデータをGruopLabelから抽出
@@ -58,7 +59,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]Basic Statusの値を返します
 		/// </summary>
-		[Description(@"[ReadOnly]Basic Statusの値を返します")]
+		[Description("[ReadOnly]Basic Statusの値を返します")]
 		public decimal numericBaseValue {
 			get { return numericBaseStatus.Value; }
 		}
@@ -66,7 +67,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [ReadOnly]Bonus Statusの値を返します
 		/// </summary>
-		[Description(@"[ReadOnly]Bonus Statusの値を返します")]
+		[Description("[ReadOnly]Bonus Statusの値を返します")]
 		public decimal numericBonusValue {
 			get { return numericBonusStatus.Value; }
 		}
@@ -74,16 +75,16 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <summary>
 		/// [R/W]グループラベルのテキストを設定します
 		/// </summary>
-		[Description(@"[R/W]グループラベルのテキストを設定します")]
+		[Description("[R/W]グループラベルのテキストを設定します")]
 		public string labelText {
 			get { return groupBase.Text; }
 			set { groupBase.Text = value; }
 		}
 
 		/// <summary>
-		/// [R/W]ステータスコストを換算します
+		/// [R/W Private]ステータスコストを換算します
 		/// </summary>
-		[Description(@"[R/W]ステータスコストを換算します")]
+		[Description("[R/W Private]ステータスコストを換算します")]
 		private int StatusCost {
 			get { return _StatusCost; }
 			set {
@@ -106,7 +107,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		public JobStatusBasicParts() {
 			InitializeComponent();
-		}
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -127,13 +128,22 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}
+		}// End Function
 
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// プライベート関数
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// イベント『CostMultiplierChanged』のデータを転送します
+		/// </summary>
+		/// <param name="e">NumEventArgs</param>
+		protected virtual void OnCostMultiplierChanged(NumEventArgs e) {
+			// この1行で済むらしい……?
+			CostMultiplierChanged?.Invoke(this, e);
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,7 +173,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			switch (groupBase.Text) {
 				case "HIT":
 				case "EVT":
-					StatusCost = (int)numericBaseStatus.Value - 100;
+					StatusCost = (int)numericBaseStatus.Value;
 					break;
 				case "TP":
 					StatusCost = (int)numericBaseStatus.Value / 5;
@@ -183,7 +193,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 			// LabelをGroupBoxに追加する
 			groupBase.Controls.Add(StatusBar);
-		}
+		}// End Function
 
 		/// <summary>
 		/// Base Statusの値が変化した時の処理
@@ -207,15 +217,6 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 					StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
 					break;
 			}// End Switch
-		}
-
-		/// <summary>
-		/// イベント『CostMultiplierChanged』のデータを転送します
-		/// </summary>
-		/// <param name="e">NumEventArgs</param>
-		protected virtual void OnCostMultiplierChanged(NumEventArgs e) {
-			// この1行で済むらしい……?
-			CostMultiplierChanged?.Invoke(this, e);
-		}
+		}// End Function
 	}// End Class
 }
