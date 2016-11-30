@@ -479,6 +479,7 @@ namespace Status_Editer {
 
 				// コントロール側の処理はメソッドに移動
 				ReloadControl();
+				toolStripProgressBar1.Value = 0;    // 値をリセット
 			} catch (Exception ex) {
 				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -592,6 +593,127 @@ namespace Status_Editer {
 
 		//----------------------------------------------------------------------------------------------------
 		#region データベース
+
+		#region 新規登録
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ユニット」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddUnit_Click(object sender, EventArgs e) {
+			tableUnitBindingSource.AddNew();
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ユニットタイプ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddUnitType_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「種族」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddRace_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ジョブ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddJob_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「メーカー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddMaker_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「武器」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddWeapon_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「盾」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddShield_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「頭防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddHelmet_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「腕防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddGauntlet_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「体防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddArmor_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「アクセサリー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddAccessory_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「スキル」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddSkill_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「アビリティ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddAbility_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		#endregion
 
 		#region 再読み込み
 

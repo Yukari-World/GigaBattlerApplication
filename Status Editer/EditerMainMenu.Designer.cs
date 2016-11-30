@@ -81,6 +81,7 @@ namespace Status_Editer {
 			this.StripMenuExit = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuEdit = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuViwer = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuViwerStatusBar = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDatabase = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDatabaseReload = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuDbReloadAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,7 +124,6 @@ namespace Status_Editer {
 			this.StripMenuHelpVersion = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-			this.StripMenuViwerStatusBar = new System.Windows.Forms.ToolStripMenuItem();
 			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
 			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
@@ -150,6 +150,20 @@ namespace Status_Editer {
 			this.ItemAbilityInfoParts6 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
 			this.EquipItemAccessory = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
 			this.ItemInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.toolStripDatabaseAdd = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddUnit = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddUnitType = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddRace = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddJob = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddMaker = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddWeapon = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddShield = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddHelmet = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddGauntlet = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddArmor = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddAccessory = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddSkill = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripDbAddAbility = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlUnit.SuspendLayout();
@@ -721,9 +735,19 @@ namespace Status_Editer {
 			this.StripMenuViwer.Size = new System.Drawing.Size(58, 20);
 			this.StripMenuViwer.Text = "表示(&V)";
 			// 
+			// StripMenuViwerStatusBar
+			// 
+			this.StripMenuViwerStatusBar.Checked = true;
+			this.StripMenuViwerStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.StripMenuViwerStatusBar.Name = "StripMenuViwerStatusBar";
+			this.StripMenuViwerStatusBar.Size = new System.Drawing.Size(150, 22);
+			this.StripMenuViwerStatusBar.Text = "ステータスバー(&S)";
+			this.StripMenuViwerStatusBar.Click += new System.EventHandler(this.StripMenuViwerStatusBar_Click);
+			// 
 			// StripMenuDatabase
 			// 
 			this.StripMenuDatabase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDatabaseAdd,
             this.StripMenuDatabaseReload,
             this.StripMenuDatabaseSave});
 			this.StripMenuDatabase.Name = "StripMenuDatabase";
@@ -1042,15 +1066,6 @@ namespace Status_Editer {
 			// notifyIcon
 			// 
 			this.notifyIcon.Visible = true;
-			// 
-			// StripMenuViwerStatusBar
-			// 
-			this.StripMenuViwerStatusBar.Checked = true;
-			this.StripMenuViwerStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.StripMenuViwerStatusBar.Name = "StripMenuViwerStatusBar";
-			this.StripMenuViwerStatusBar.Size = new System.Drawing.Size(152, 22);
-			this.StripMenuViwerStatusBar.Text = "ステータスバー(&S)";
-			this.StripMenuViwerStatusBar.Click += new System.EventHandler(this.StripMenuViwerStatusBar_Click);
 			// 
 			// TotalUnitInfomation
 			// 
@@ -1460,6 +1475,117 @@ namespace Status_Editer {
 			this.ItemInfoAccessory.Size = new System.Drawing.Size(600, 820);
 			this.ItemInfoAccessory.TabIndex = 1;
 			// 
+			// toolStripDatabaseAdd
+			// 
+			this.toolStripDatabaseAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDbAddUnit,
+            this.toolStripDbAddUnitType,
+            this.toolStripDbAddRace,
+            this.toolStripDbAddJob,
+            this.toolStripDbAddMaker,
+            this.toolStripDbAddWeapon,
+            this.toolStripDbAddShield,
+            this.toolStripDbAddHelmet,
+            this.toolStripDbAddGauntlet,
+            this.toolStripDbAddArmor,
+            this.toolStripDbAddAccessory,
+            this.toolStripDbAddSkill,
+            this.toolStripDbAddAbility});
+			this.toolStripDatabaseAdd.Name = "toolStripDatabaseAdd";
+			this.toolStripDatabaseAdd.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDatabaseAdd.Text = "新規登録(&N)";
+			// 
+			// toolStripDbAddUnit
+			// 
+			this.toolStripDbAddUnit.Name = "toolStripDbAddUnit";
+			this.toolStripDbAddUnit.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddUnit.Text = "ユニット(&U)";
+			this.toolStripDbAddUnit.Click += new System.EventHandler(this.toolStripDbAddUnit_Click);
+			// 
+			// toolStripDbAddUnitType
+			// 
+			this.toolStripDbAddUnitType.Name = "toolStripDbAddUnitType";
+			this.toolStripDbAddUnitType.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddUnitType.Text = "ユニットタイプ(&E)";
+			this.toolStripDbAddUnitType.Click += new System.EventHandler(this.toolStripDbAddUnitType_Click);
+			// 
+			// toolStripDbAddRace
+			// 
+			this.toolStripDbAddRace.Name = "toolStripDbAddRace";
+			this.toolStripDbAddRace.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddRace.Text = "種族(&R)";
+			this.toolStripDbAddRace.Click += new System.EventHandler(this.toolStripDbAddRace_Click);
+			// 
+			// toolStripDbAddJob
+			// 
+			this.toolStripDbAddJob.Name = "toolStripDbAddJob";
+			this.toolStripDbAddJob.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddJob.Text = "ジョブ(&J)";
+			this.toolStripDbAddJob.Click += new System.EventHandler(this.toolStripDbAddJob_Click);
+			// 
+			// toolStripDbAddMaker
+			// 
+			this.toolStripDbAddMaker.Name = "toolStripDbAddMaker";
+			this.toolStripDbAddMaker.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddMaker.Text = "メーカー(&M)";
+			this.toolStripDbAddMaker.Click += new System.EventHandler(this.toolStripDbAddMaker_Click);
+			// 
+			// toolStripDbAddWeapon
+			// 
+			this.toolStripDbAddWeapon.Name = "toolStripDbAddWeapon";
+			this.toolStripDbAddWeapon.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddWeapon.Text = "武器(&W)";
+			this.toolStripDbAddWeapon.Click += new System.EventHandler(this.toolStripDbAddWeapon_Click);
+			// 
+			// toolStripDbAddShield
+			// 
+			this.toolStripDbAddShield.Name = "toolStripDbAddShield";
+			this.toolStripDbAddShield.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddShield.Text = "盾(&S)";
+			this.toolStripDbAddShield.Click += new System.EventHandler(this.toolStripDbAddShield_Click);
+			// 
+			// toolStripDbAddHelmet
+			// 
+			this.toolStripDbAddHelmet.Name = "toolStripDbAddHelmet";
+			this.toolStripDbAddHelmet.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddHelmet.Text = "頭防具(&H)";
+			this.toolStripDbAddHelmet.Click += new System.EventHandler(this.toolStripDbAddHelmet_Click);
+			// 
+			// toolStripDbAddGauntlet
+			// 
+			this.toolStripDbAddGauntlet.Name = "toolStripDbAddGauntlet";
+			this.toolStripDbAddGauntlet.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddGauntlet.Text = "腕防具(&G)";
+			this.toolStripDbAddGauntlet.Click += new System.EventHandler(this.toolStripDbAddGauntlet_Click);
+			// 
+			// toolStripDbAddArmor
+			// 
+			this.toolStripDbAddArmor.Name = "toolStripDbAddArmor";
+			this.toolStripDbAddArmor.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddArmor.Text = "体防具(&B)";
+			this.toolStripDbAddArmor.Click += new System.EventHandler(this.toolStripDbAddArmor_Click);
+			// 
+			// toolStripDbAddAccessory
+			// 
+			this.toolStripDbAddAccessory.Name = "toolStripDbAddAccessory";
+			this.toolStripDbAddAccessory.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddAccessory.Text = "アクセサリー(&A)";
+			this.toolStripDbAddAccessory.Click += new System.EventHandler(this.toolStripDbAddAccessory_Click);
+			// 
+			// toolStripDbAddSkill
+			// 
+			this.toolStripDbAddSkill.Name = "toolStripDbAddSkill";
+			this.toolStripDbAddSkill.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddSkill.Text = "スキル(&N)";
+			this.toolStripDbAddSkill.Click += new System.EventHandler(this.toolStripDbAddSkill_Click);
+			// 
+			// toolStripDbAddAbility
+			// 
+			this.toolStripDbAddAbility.Name = "toolStripDbAddAbility";
+			this.toolStripDbAddAbility.Size = new System.Drawing.Size(152, 22);
+			this.toolStripDbAddAbility.Text = "アビリティ(&P)";
+			this.toolStripDbAddAbility.Click += new System.EventHandler(this.toolStripDbAddAbility_Click);
+			// 
 			// EditerMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1507,6 +1633,7 @@ namespace Status_Editer {
 		}
 
 		#endregion
+
 		private ToolStripContainer ToolStripContainer;
 		private TabControl tabControl;
 		private TabPage tabPage1;
@@ -1627,5 +1754,19 @@ namespace Status_Editer {
 		private ToolStripMenuItem StripMenuDbSaveSkill;
 		private ToolStripMenuItem StripMenuDbSaveAbility;
 		private ToolStripMenuItem StripMenuViwerStatusBar;
+		private ToolStripMenuItem toolStripDatabaseAdd;
+		private ToolStripMenuItem toolStripDbAddUnit;
+		private ToolStripMenuItem toolStripDbAddUnitType;
+		private ToolStripMenuItem toolStripDbAddRace;
+		private ToolStripMenuItem toolStripDbAddJob;
+		private ToolStripMenuItem toolStripDbAddMaker;
+		private ToolStripMenuItem toolStripDbAddWeapon;
+		private ToolStripMenuItem toolStripDbAddShield;
+		private ToolStripMenuItem toolStripDbAddHelmet;
+		private ToolStripMenuItem toolStripDbAddGauntlet;
+		private ToolStripMenuItem toolStripDbAddArmor;
+		private ToolStripMenuItem toolStripDbAddAccessory;
+		private ToolStripMenuItem toolStripDbAddSkill;
+		private ToolStripMenuItem toolStripDbAddAbility;
 	}
 }
