@@ -81,7 +81,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.numericUpDown1);
 			this.Name = "ItemStatusParts";
-			this.Size = new System.Drawing.Size(450, 20);
+			this.Size = new System.Drawing.Size(730, 20);
 			this.Load += new System.EventHandler(this.ItemStatusParts_Load);
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemStatusParts_Paint);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

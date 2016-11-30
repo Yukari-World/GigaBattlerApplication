@@ -55,7 +55,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.groupBasic.Location = new System.Drawing.Point(0, 0);
 			this.groupBasic.Name = "groupBasic";
 			this.groupBasic.Size = new System.Drawing.Size(650, 60);
-			this.groupBasic.TabIndex = 2;
+			this.groupBasic.TabIndex = 0;
 			this.groupBasic.TabStop = false;
 			this.groupBasic.Text = "Label";
 			// 
