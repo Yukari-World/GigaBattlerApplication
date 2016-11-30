@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 using static Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts;
 
 namespace Status_Editer.User_Control.tab06Job {
@@ -47,23 +48,23 @@ namespace Status_Editer.User_Control.tab06Job {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableJobBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableJobBindingSource) {
+		/// <param name="TableJobDataTable">Job Data Table</param>
+		public void LoadDataBindings(__table_jobDataTable TableJobDataTable) {
 			// データバインドの設定
-			JobStatusHP.SetDataBindings(tableJobBindingSource, "HP");
-			JobStatusTP.SetDataBindings(tableJobBindingSource, "TP");
-			JobStatusMeleeATK.SetDataBindings(tableJobBindingSource, "ATK");
-			JobStatusMeleeDEF.SetDataBindings(tableJobBindingSource, "DEF");
-			JobStatusRangeATK.SetDataBindings(tableJobBindingSource, "RAT");
-			JobStatusRangeDEF.SetDataBindings(tableJobBindingSource, "RDF");
-			JobStatusMagicATK.SetDataBindings(tableJobBindingSource, "MAT");
-			JobStatusMagicDEF.SetDataBindings(tableJobBindingSource, "MDF");
-			JobStatusSPD.SetDataBindings(tableJobBindingSource, "SPD");
-			JobStatusLuck.SetDataBindings(tableJobBindingSource, "LUK");
-			JobStatusHIT.SetDataBindings(tableJobBindingSource, "HIT");
-			JobStatusEVT.SetDataBindings(tableJobBindingSource, "EVT");
+			JobStatusHP.SetDataBindings(TableJobDataTable, "HP");
+			JobStatusTP.SetDataBindings(TableJobDataTable, "TP");
+			JobStatusMeleeATK.SetDataBindings(TableJobDataTable, "ATK");
+			JobStatusMeleeDEF.SetDataBindings(TableJobDataTable, "DEF");
+			JobStatusRangeATK.SetDataBindings(TableJobDataTable, "RAT");
+			JobStatusRangeDEF.SetDataBindings(TableJobDataTable, "RDF");
+			JobStatusMagicATK.SetDataBindings(TableJobDataTable, "MAT");
+			JobStatusMagicDEF.SetDataBindings(TableJobDataTable, "MDF");
+			JobStatusSPD.SetDataBindings(TableJobDataTable, "SPD");
+			JobStatusLuck.SetDataBindings(TableJobDataTable, "LUK");
+			JobStatusHIT.SetDataBindings(TableJobDataTable, "HIT");
+			JobStatusEVT.SetDataBindings(TableJobDataTable, "EVT");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

@@ -5,6 +5,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System.ComponentModel;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit {
 	[ToolboxItem(true)]
@@ -36,18 +37,18 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable) {
 			// データバインドの設定
-			textUnitID.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitID", true));
-			checkAirType.DataBindings.Add(new Binding("CheckState", tableUnitBindingSource, "Air", true));
-			checkAirType.DataBindings.Add(new Binding("Checked", tableUnitBindingSource, "Air", true));
-			textUnitName.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitName", true));
-			numericRare.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Rare", true));
-			numericWT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "WT", true));
-			textInfo.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "Info", true));
+			textUnitID.DataBindings.Add(new Binding("Text", TableUnitDataTable, "UnitID", true));
+			checkAirType.DataBindings.Add(new Binding("CheckState", TableUnitDataTable, "Air", true));
+			checkAirType.DataBindings.Add(new Binding("Checked", TableUnitDataTable, "Air", true));
+			textUnitName.DataBindings.Add(new Binding("Text", TableUnitDataTable, "UnitName", true));
+			numericRare.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Rare", true));
+			numericWT.DataBindings.Add(new Binding("Value", TableUnitDataTable, "WT", true));
+			textInfo.DataBindings.Add(new Binding("Text", TableUnitDataTable, "Info", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

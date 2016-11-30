@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab05Race {
 	[ToolboxItem(true)]
@@ -43,23 +44,23 @@ namespace Status_Editer.User_Control.tab05Race {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableRaceBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableRaceBindingSource) {
+		/// <param name="TableRaceDataTable">Race Data Table</param>
+		public void SetDataBindings(__table_raceDataTable TableRaceDataTable) {
 			// データバインドの設定
-			raceStatusHP.SetDataBindings(tableRaceBindingSource, "HP");
-			raceStatusTP.SetDataBindings(tableRaceBindingSource, "TP");
-			raceStatusMeleeATK.SetDataBindings(tableRaceBindingSource, "ATK");
-			raceStatusMeleeDEF.SetDataBindings(tableRaceBindingSource, "DEF");
-			raceStatusRangeATK.SetDataBindings(tableRaceBindingSource, "RAT");
-			raceStatusRangeDEF.SetDataBindings(tableRaceBindingSource, "RDF");
-			raceStatusMagicATK.SetDataBindings(tableRaceBindingSource, "MAT");
-			raceStatusMagicDEF.SetDataBindings(tableRaceBindingSource, "MDF");
-			raceStatusSPD.SetDataBindings(tableRaceBindingSource, "SPD");
-			raceStatusLuck.SetDataBindings(tableRaceBindingSource, "LUK");
-			raceStatusHIT.SetDataBindings(tableRaceBindingSource, "HIT");
-			raceStatusEVT.SetDataBindings(tableRaceBindingSource, "EVT");
+			raceStatusHP.SetDataBindings(TableRaceDataTable, "HP");
+			raceStatusTP.SetDataBindings(TableRaceDataTable, "TP");
+			raceStatusMeleeATK.SetDataBindings(TableRaceDataTable, "ATK");
+			raceStatusMeleeDEF.SetDataBindings(TableRaceDataTable, "DEF");
+			raceStatusRangeATK.SetDataBindings(TableRaceDataTable, "RAT");
+			raceStatusRangeDEF.SetDataBindings(TableRaceDataTable, "RDF");
+			raceStatusMagicATK.SetDataBindings(TableRaceDataTable, "MAT");
+			raceStatusMagicDEF.SetDataBindings(TableRaceDataTable, "MDF");
+			raceStatusSPD.SetDataBindings(TableRaceDataTable, "SPD");
+			raceStatusLuck.SetDataBindings(TableRaceDataTable, "LUK");
+			raceStatusHIT.SetDataBindings(TableRaceDataTable, "HIT");
+			raceStatusEVT.SetDataBindings(TableRaceDataTable, "EVT");
 			//NextEXP
 
 			//----------------------------------------------------------------------------------------------------

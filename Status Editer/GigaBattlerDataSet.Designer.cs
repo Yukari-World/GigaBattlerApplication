@@ -46591,11 +46591,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT                      WeaponID, WeaponName, PhysicsPower, MagicPower, PhysicsDefence, MagicDefence, ReductionRate, Element1, 
-                                      Element2, WT, EC, SSP, SPC, ATC, Target, Type, AType, EType, Maker, Rare, HP, TP, ATK, DEF, RAT, RDF, MAT, MDF, 
-                                      SPD, LUK, HIT, EVT, Duability, Price, Buy, Skill1, Skill2, Skill3, Info
-FROM                         __table_weapon
-ORDER BY               Type, Rare, Price";
+            this._commandCollection[1].CommandText = @"SELECT ATC, ATK, AType, Buy, DEF, Duability, EC, EType, EVT, Element1, Element2, HIT, HP, Info, LUK, MAT, MDF, MagicDefence, MagicPower, Maker, PhysicsDefence, PhysicsPower, Price, RAT, RDF, Rare, ReductionRate, SPC, SPD, SSP, Skill1, Skill2, Skill3, TP, Target, Type, WT, WeaponID, WeaponName FROM __table_weapon ORDER BY Type, Rare, Price";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

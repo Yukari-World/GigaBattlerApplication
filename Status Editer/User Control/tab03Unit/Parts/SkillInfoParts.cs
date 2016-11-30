@@ -49,14 +49,14 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
 		/// <param name="bindTag">string</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, string bindTag) {
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, string bindTag) {
 			// データバインドの設定
 			// ここでは「Skill*」が入る
-			comboSkill.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, bindTag, true));
+			comboSkill.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, bindTag, true));
 
 			// バインド項目の設定
 			comboSkill.DataSource = SkillTable;

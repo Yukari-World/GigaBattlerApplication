@@ -46,24 +46,18 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="WeaponAdapter">__table_weaponTableAdapter</param>
-		/// <param name="ShieldAdapter">__table_shieldTableAdapter</param>
-		/// <param name="HelmetAdapter">__table_helmetTableAdapter</param>
-		/// <param name="GauntletAdapter">__table_gauntletTableAdapter</param>
-		/// <param name="ArmorAdapter">__table_armorTableAdapter</param>
-		/// <param name="AccessoryAdapter">__table_accessoryTableAdapter</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable) {
 			// データバインドの設定
 			// オーバーロードを利用して大体コピペで済むように
-			dropInfoParts1.SetDataBindings(tableUnitBindingSource, WeaponTable);
-			dropInfoParts2.SetDataBindings(tableUnitBindingSource, ShieldTable);
-			dropInfoParts3.SetDataBindings(tableUnitBindingSource, HelmetTable);
-			dropInfoParts4.SetDataBindings(tableUnitBindingSource, GauntletTable);
-			dropInfoParts5.SetDataBindings(tableUnitBindingSource, ArmorTable);
-			dropInfoParts6.SetDataBindings(tableUnitBindingSource, AccresoryTable);
+			dropInfoParts1.SetDataBindings(TableUnitDataTable, WeaponTable);
+			dropInfoParts2.SetDataBindings(TableUnitDataTable, ShieldTable);
+			dropInfoParts3.SetDataBindings(TableUnitDataTable, HelmetTable);
+			dropInfoParts4.SetDataBindings(TableUnitDataTable, GauntletTable);
+			dropInfoParts5.SetDataBindings(TableUnitDataTable, ArmorTable);
+			dropInfoParts6.SetDataBindings(TableUnitDataTable, AccresoryTable);
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -80,7 +74,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="GauntletAdapter">__table_gauntletTableAdapter</param>
 		/// <param name="ArmorAdapter">__table_armorTableAdapter</param>
 		/// <param name="AccessoryAdapter">__table_accessoryTableAdapter</param>
-		public void ReloadBindings(__table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
+		public void ReloadDataTable(__table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
 			WeaponAdapter.Fill(WeaponTable);
 			ShieldAdapter.Fill(ShieldTable);
 			HelmetAdapter.Fill(HelmetTable);

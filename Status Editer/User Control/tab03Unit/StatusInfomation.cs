@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit {
 	[ToolboxItem(true)]
@@ -211,52 +212,52 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable) {
 			// データバインドの設定
-			numericReqLv.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Req Lv", true));
-			numericMinLevel.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Min Lv", true));
-			numericMaxLevel.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Max Lv", true));
-			numericHP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "HP", true));
-			numericLvPHP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvHP", true));
-			numericScaleHP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "HP Per", true));
-			numericTP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "StartTP", true));
-			numericMaxTP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MaxTP", true));
-			numericMeleeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MeleeATK", true));
-			numericLvPMeleeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvMeleeATK", true));
-			numericScaleMeleeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MeleeATKPer", true));
-			numericMeleeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MeleeDEF", true));
-			numericLvPMeleeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvMeleeDEF", true));
-			numericScaleMeleeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MeleeDEFPer", true));
-			numericRangeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "RangeATK", true));
-			numericLvPRangeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvRangeATK", true));
-			numericScaleRangeATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "RangeATKPer", true));
-			numericRangeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "RangeDEF", true));
-			numericLvPRangeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvRangeDEF", true));
-			numericScaleRangeDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "RangeDEFPer", true));
-			numericMagicATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MagicATK", true));
-			numericLvPMagicATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvMagicATK", true));
-			numericScaleMagicATK.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MagicATKPer", true));
-			numericMagicDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MagicDEF", true));
-			numericLvPMagicDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvMagicDEF", true));
-			numericScaleMagicDEF.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MagicDEFPer", true));
-			numericSPD.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "SPD", true));
-			numericLvPSPD.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvSPD", true));
-			numericScaleSPD.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "SPD Per", true));
-			numericLuck.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LUK", true));
-			numericLvPLuck.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvLUK", true));
-			numericHIT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "HIT", true));
-			numericLvPHIT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvHIT", true));
-			numericEVT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "EVT", true));
-			numericLvPEVT.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvEVT", true));
-			numericEXP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "EXP", true));
-			numericLvPEXP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvEXP", true));
-			numericScaleEXP.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "EXP Per", true));
-			numericMoney.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MNY", true));
-			numericLvPMoney.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "LvMNY", true));
-			numericScaleMoney.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "MNY Per", true));
+			numericReqLv.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Req Lv", true));
+			numericMinLevel.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Min Lv", true));
+			numericMaxLevel.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Max Lv", true));
+			numericHP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "HP", true));
+			numericLvPHP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvHP", true));
+			numericScaleHP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "HP Per", true));
+			numericTP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "StartTP", true));
+			numericMaxTP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MaxTP", true));
+			numericMeleeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MeleeATK", true));
+			numericLvPMeleeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvMeleeATK", true));
+			numericScaleMeleeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MeleeATKPer", true));
+			numericMeleeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MeleeDEF", true));
+			numericLvPMeleeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvMeleeDEF", true));
+			numericScaleMeleeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MeleeDEFPer", true));
+			numericRangeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "RangeATK", true));
+			numericLvPRangeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvRangeATK", true));
+			numericScaleRangeATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "RangeATKPer", true));
+			numericRangeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "RangeDEF", true));
+			numericLvPRangeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvRangeDEF", true));
+			numericScaleRangeDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "RangeDEFPer", true));
+			numericMagicATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MagicATK", true));
+			numericLvPMagicATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvMagicATK", true));
+			numericScaleMagicATK.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MagicATKPer", true));
+			numericMagicDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MagicDEF", true));
+			numericLvPMagicDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvMagicDEF", true));
+			numericScaleMagicDEF.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MagicDEFPer", true));
+			numericSPD.DataBindings.Add(new Binding("Value", TableUnitDataTable, "SPD", true));
+			numericLvPSPD.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvSPD", true));
+			numericScaleSPD.DataBindings.Add(new Binding("Value", TableUnitDataTable, "SPD Per", true));
+			numericLuck.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LUK", true));
+			numericLvPLuck.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvLUK", true));
+			numericHIT.DataBindings.Add(new Binding("Value", TableUnitDataTable, "HIT", true));
+			numericLvPHIT.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvHIT", true));
+			numericEVT.DataBindings.Add(new Binding("Value", TableUnitDataTable, "EVT", true));
+			numericLvPEVT.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvEVT", true));
+			numericEXP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "EXP", true));
+			numericLvPEXP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvEXP", true));
+			numericScaleEXP.DataBindings.Add(new Binding("Value", TableUnitDataTable, "EXP Per", true));
+			numericMoney.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MNY", true));
+			numericLvPMoney.DataBindings.Add(new Binding("Value", TableUnitDataTable, "LvMNY", true));
+			numericScaleMoney.DataBindings.Add(new Binding("Value", TableUnitDataTable, "MNY Per", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

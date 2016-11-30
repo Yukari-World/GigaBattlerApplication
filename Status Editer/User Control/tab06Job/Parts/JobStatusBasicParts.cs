@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab06Job.Parts {
 	[ToolboxItem(true)]
@@ -133,7 +134,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// </summary>
 		/// <param name="tableJobBindingSource">BindingSource</param>
 		/// <param name="bindTag">Status Tag</param>
-		public void SetDataBindings(BindingSource tableJobBindingSource, string bindTag) {
+		public void SetDataBindings(__table_jobDataTable tableJobBindingSource, string bindTag) {
 			// データバインドの設定
 			numericBaseStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, bindTag, true));
 			numericBonusStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, "Bonus" + bindTag, true));

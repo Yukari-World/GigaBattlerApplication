@@ -7,6 +7,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab05Race.Parts {
 	[ToolboxItem(true)]
@@ -58,14 +59,14 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableRaceBindingSource">BindingSource</param>
+		/// <param name="TableRaceDataTable">Race Data Table</param>
 		/// <param name="bindTag">Status Tag</param>
-		public void SetDataBindings(BindingSource tableRaceBindingSource, string bindTag) {
+		public void SetDataBindings(__table_raceDataTable TableRaceDataTable, string bindTag) {
 			// データバインドの設定
-			numericBase.DataBindings.Add(new Binding("Value", tableRaceBindingSource, bindTag, true));
-			numericLvPStatus.DataBindings.Add(new Binding("Value", tableRaceBindingSource, "Lv" + bindTag, true));
+			numericBase.DataBindings.Add(new Binding("Value", TableRaceDataTable, bindTag, true));
+			numericLvPStatus.DataBindings.Add(new Binding("Value", TableRaceDataTable, "Lv" + bindTag, true));
 		}// End Method
 
 
