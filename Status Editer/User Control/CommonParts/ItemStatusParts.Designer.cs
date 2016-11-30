@@ -48,6 +48,12 @@
 			this.numericUpDown1.TabIndex = 13;
 			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericUpDown1.ThousandsSeparator = true;
+			this.numericUpDown1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
 			// 
 			// label1
 			// 
@@ -76,6 +82,8 @@
 			this.Controls.Add(this.numericUpDown1);
 			this.Name = "ItemStatusParts";
 			this.Size = new System.Drawing.Size(450, 20);
+			this.Load += new System.EventHandler(this.ItemStatusParts_Load);
+			this.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemStatusParts_Paint);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			this.ResumeLayout(false);
 

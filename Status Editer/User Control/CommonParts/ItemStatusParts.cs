@@ -19,6 +19,8 @@ namespace Status_Editer.User_Control.CommonParts {
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		private Label StatusBar = new Label();
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -59,5 +61,55 @@ namespace Status_Editer.User_Control.CommonParts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// フォーム読み込み時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void ItemStatusParts_Load(object sender, EventArgs e) {
+
+			// Labelの初期化
+			StatusBar.AutoSize = false;
+			StatusBar.BackColor = Color.Green;
+			StatusBar.BorderStyle = BorderStyle.FixedSingle;
+			StatusBar.Name = "StatusBar";
+			StatusBar.Location = new Point(200, 7);
+			StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+
+			// LabelをUser Controlに追加する
+			Controls.Add(StatusBar);
+
+		}// End Function
+
+		/// <summary>
+		/// コントロールを再描画時に実行する処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">PaintEventArgs</param>
+		private void ItemStatusParts_Paint(object sender, PaintEventArgs e) {
+			// ラインを引く
+			// 所謂横棒グラフのライン
+			Pen myPen;
+			myPen = new Pen(Color.Black);
+			Graphics formGraphics = CreateGraphics();
+			// ラインを X = 200, 300, 400 に描画
+			formGraphics.DrawLine(myPen, 200, 0, 200, 20);
+			formGraphics.DrawLine(myPen, 300, 0, 300, 20);
+			formGraphics.DrawLine(myPen, 400, 0, 400, 20);
+			// 破棄破棄
+			myPen.Dispose();
+			formGraphics.Dispose();
+		}
+
+		/// <summary>
+		/// numericUpDown1の値が変更された時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
+			// ラベルのサイズ変更
+			StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 10);
+		}
 	}// End Class
 }
