@@ -26,12 +26,12 @@ namespace Status_Editer.User_Control.tab06Job {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プロパティ
+		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コンストラクタメソッド
+		// Constructor Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -43,7 +43,7 @@ namespace Status_Editer.User_Control.tab06Job {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// パブリック関数
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -69,11 +69,11 @@ namespace Status_Editer.User_Control.tab06Job {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プライベート関数
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -84,11 +84,11 @@ namespace Status_Editer.User_Control.tab06Job {
 			for (int i = 0; i < StatusCost.Length; i++) {
 				sumCost += StatusCost[i];
 			}// End Loop
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コントロールメソッド
+		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -99,7 +99,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusHP_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[0] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// TPのStatus Costが変更された時に発生するイベント
@@ -109,7 +109,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusTP_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[1] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Melee ATKのStatus Costが変更された時に発生するイベント
@@ -119,7 +119,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusMeleeATK_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[2] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Melee DEFのStatus Costが変更された時に発生するイベント
@@ -129,7 +129,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusMeleeDEF_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[3] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Range ATKのStatus Costが変更された時に発生するイベント
@@ -139,7 +139,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusRangeATK_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[4] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Range DEFのStatus Costが変更された時に発生するイベント
@@ -149,7 +149,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusRangeDEF_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[5] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Magic ATKのStatus Costが変更された時に発生するイベント
@@ -159,7 +159,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusMagicATK_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[6] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Magic DEFのStatus Costが変更された時に発生するイベント
@@ -169,7 +169,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusMagicDEF_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[7] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// SPDのStatus Costが変更された時に発生するイベント
@@ -179,7 +179,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusSPD_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[8] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// LuckのStatus Costが変更された時に発生するイベント
@@ -189,7 +189,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusLuck_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[9] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// HITのStatus Costが変更された時に発生するイベント
@@ -199,7 +199,7 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusHIT_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[10] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// EVTのStatus Costが変更された時に発生するイベント
@@ -209,6 +209,6 @@ namespace Status_Editer.User_Control.tab06Job {
 		private void JobStatusEVT_CostMultiplierChanged(object sender, NumEventArgs e) {
 			StatusCost[11] = e.Value;
 			CalcStatusCost();
-		}// End Function
+		}// End Method
 	}// End Class
 }

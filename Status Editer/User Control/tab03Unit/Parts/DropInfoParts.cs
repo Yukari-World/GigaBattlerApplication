@@ -16,7 +16,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プロパティ
+		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コンストラクタメソッド
+		// Constructor Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -42,7 +42,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// パブリック関数
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// Weapon
@@ -57,15 +57,17 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			comboDropTable.DisplayMember = "WeaponName";
 			comboDropTable.ValueMember = "WeaponID";
 
+			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
+
 			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item1", true));
 			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per1", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 		//Shield
 		/// <summary>
@@ -87,8 +89,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 		// Helmet
 		/// <summary>
@@ -110,8 +112,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 		// Gauntlet
 		/// <summary>
@@ -133,8 +135,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 		// Armor
 		/// <summary>
@@ -156,8 +158,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 		// Accessory
 		/// <summary>
@@ -179,17 +181,17 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プライベート関数
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コントロールメソッド
+		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	}// End Class
 }

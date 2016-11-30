@@ -48,18 +48,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericDropRate
 			// 
+			this.numericDropRate.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericDropRate.Location = new System.Drawing.Point(355, 31);
 			this.numericDropRate.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
+			10000,
+			0,
+			0,
+			0});
 			this.numericDropRate.Name = "numericDropRate";
 			this.numericDropRate.Size = new System.Drawing.Size(120, 19);
 			this.numericDropRate.TabIndex = 7;
 			this.numericDropRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericDropRate.ThousandsSeparator = true;
-			this.toolTipInfo.SetToolTip(this.numericDropRate, "ドロップ率。\r\n0だと絶対に出現せず、10,000だと必ず出現する\r\n設定値: 0 ～ 10,000");
+			this.toolTipInfo.SetToolTip(this.numericDropRate, "ドロップ率。\r\n0だと絶対にドロップせず、10,000だと必ずドロップする。\r\nドロップにはメルセンヌ・ツイスタの疑似乱数が使用される。\r\n設定値: 0 ～ 10" +
+		",000");
 			// 
 			// groupBoxDrop
 			// 

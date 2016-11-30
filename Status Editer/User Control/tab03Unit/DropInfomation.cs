@@ -25,12 +25,12 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プロパティ
+		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コンストラクタメソッド
+		// Constructor Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -42,7 +42,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// パブリック関数
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -56,14 +56,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="ArmorAdapter">__table_armorTableAdapter</param>
 		/// <param name="AccessoryAdapter">__table_accessoryTableAdapter</param>
 		public void LoadDataBindings(BindingSource tableUnitBindingSource, __table_weaponTableAdapter WeaponAdapter, __table_shieldTableAdapter ShieldAdapter, __table_helmetTableAdapter HelmetAdapter, __table_gauntletTableAdapter GauntletAdapter, __table_armorTableAdapter ArmorAdapter, __table_accessoryTableAdapter AccessoryAdapter) {
-			// 項目に関する準備
-			WeaponAdapter.Fill(WeaponTable);
-			ShieldAdapter.Fill(ShieldTable);
-			HelmetAdapter.Fill(HelmetTable);
-			GauntletAdapter.Fill(GauntletTable);
-			ArmorAdapter.Fill(ArmorTable);
-			AccessoryAdapter.Fill(AccresoryTable);
-
 			// データバインドの設定
 			// オーバーロードを利用して大体コピペで済むように
 			dropInfoParts1.SetDataBindings(tableUnitBindingSource, WeaponTable);
@@ -77,7 +69,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// バインド項目を再読み込みします。
@@ -95,16 +87,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 			GauntletAdapter.Fill(GauntletTable);
 			ArmorAdapter.Fill(ArmorTable);
 			AccessoryAdapter.Fill(AccresoryTable);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// プライベート関数
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// コントロールメソッド
+		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	}// End Class
 }

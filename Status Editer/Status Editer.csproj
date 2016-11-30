@@ -79,6 +79,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CommonParts\EquipItemStatusParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CommonParts\EquipItemStatusParts.Designer.cs">
+      <DependentUpon>EquipItemStatusParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemAbilityInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemAbilityInfoParts.Designer.cs">
+      <DependentUpon>ItemAbilityInfoParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemInfoParts.Designer.cs">
+      <DependentUpon>ItemInfoParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemStatusParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemStatusParts.Designer.cs">
+      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\MainForm\MainFormStripMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\MainForm\MainFormStripMenu.Designer.cs">
+      <DependentUpon>MainFormStripMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +213,21 @@
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CommonParts\EquipItemStatusParts.resx">
+      <DependentUpon>EquipItemStatusParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CommonParts\ItemAbilityInfoParts.resx">
+      <DependentUpon>ItemAbilityInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CommonParts\ItemInfoParts.resx">
+      <DependentUpon>ItemInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CommonParts\ItemStatusParts.resx">
+      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\MainForm\MainFormStripMenu.resx">
+      <DependentUpon>MainFormStripMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,7 +303,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="User Control\CommonParts\" />
     <Folder Include="User Control\tab04UnitType\Parts\" />
     <Folder Include="User Control\tab07Maker\Parts\" />
     <Folder Include="User Control\tab08Weapon\Parts\" />

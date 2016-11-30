@@ -34,6 +34,8 @@ namespace Status_Editer {
         
         private @__table_battle_areaDataTable table__table_battle_area;
         
+        private @__table_elementDataTable table__table_element;
+        
         private @__table_gauntletDataTable table__table_gauntlet;
         
         private @__table_helmetDataTable table__table_helmet;
@@ -64,9 +66,9 @@ namespace Status_Editer {
         
         private global::System.Data.DataRelation relation__table_unit_ibfk_6;
         
-        private global::System.Data.DataRelation relation__table_weapon_ibfk_1;
+        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_1;
         
-        private global::System.Data.DataRelation relation__table_weapon_ibfk_2;
+        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -110,6 +112,9 @@ namespace Status_Editer {
                 }
                 if ((ds.Tables["__table_battle_area"] != null)) {
                     base.Tables.Add(new @__table_battle_areaDataTable(ds.Tables["__table_battle_area"]));
+                }
+                if ((ds.Tables["__table_element"] != null)) {
+                    base.Tables.Add(new @__table_elementDataTable(ds.Tables["__table_element"]));
                 }
                 if ((ds.Tables["__table_gauntlet"] != null)) {
                     base.Tables.Add(new @__table_gauntletDataTable(ds.Tables["__table_gauntlet"]));
@@ -203,6 +208,16 @@ namespace Status_Editer {
         public @__table_battle_areaDataTable @__table_battle_area {
             get {
                 return this.table__table_battle_area;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public @__table_elementDataTable @__table_element {
+            get {
+                return this.table__table_element;
             }
         }
         
@@ -378,6 +393,9 @@ namespace Status_Editer {
                 if ((ds.Tables["__table_battle_area"] != null)) {
                     base.Tables.Add(new @__table_battle_areaDataTable(ds.Tables["__table_battle_area"]));
                 }
+                if ((ds.Tables["__table_element"] != null)) {
+                    base.Tables.Add(new @__table_elementDataTable(ds.Tables["__table_element"]));
+                }
                 if ((ds.Tables["__table_gauntlet"] != null)) {
                     base.Tables.Add(new @__table_gauntletDataTable(ds.Tables["__table_gauntlet"]));
                 }
@@ -468,6 +486,12 @@ namespace Status_Editer {
                     this.table__table_battle_area.InitVars();
                 }
             }
+            this.table__table_element = ((@__table_elementDataTable)(base.Tables["__table_element"]));
+            if ((initTable == true)) {
+                if ((this.table__table_element != null)) {
+                    this.table__table_element.InitVars();
+                }
+            }
             this.table__table_gauntlet = ((@__table_gauntletDataTable)(base.Tables["__table_gauntlet"]));
             if ((initTable == true)) {
                 if ((this.table__table_gauntlet != null)) {
@@ -528,8 +552,8 @@ namespace Status_Editer {
             this.relation__table_unit_ibfk_4 = this.Relations["__table_unit_ibfk_4"];
             this.relation__table_unit_ibfk_5 = this.Relations["__table_unit_ibfk_5"];
             this.relation__table_unit_ibfk_6 = this.Relations["__table_unit_ibfk_6"];
-            this.relation__table_weapon_ibfk_1 = this.Relations["__table_weapon_ibfk_1"];
-            this.relation__table_weapon_ibfk_2 = this.Relations["__table_weapon_ibfk_2"];
+            this.relationFK___table_weapon_ibfk_1 = this.Relations["FK___table_weapon_ibfk_1"];
+            this.relationFK___table_weapon_ibfk_2 = this.Relations["FK___table_weapon_ibfk_2"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -550,6 +574,8 @@ namespace Status_Editer {
             base.Tables.Add(this.table__table_armor);
             this.table__table_battle_area = new @__table_battle_areaDataTable();
             base.Tables.Add(this.table__table_battle_area);
+            this.table__table_element = new @__table_elementDataTable();
+            base.Tables.Add(this.table__table_element);
             this.table__table_gauntlet = new @__table_gauntletDataTable();
             base.Tables.Add(this.table__table_gauntlet);
             this.table__table_helmet = new @__table_helmetDataTable();
@@ -592,14 +618,14 @@ namespace Status_Editer {
                         this.table__table_accessory.AccessoryIDColumn}, new global::System.Data.DataColumn[] {
                         this.table__table_unit.Item6Column}, false);
             this.Relations.Add(this.relation__table_unit_ibfk_6);
-            this.relation__table_weapon_ibfk_1 = new global::System.Data.DataRelation("__table_weapon_ibfk_1", new global::System.Data.DataColumn[] {
+            this.relationFK___table_weapon_ibfk_1 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.table__table_weapon.TypeColumn}, false);
+            this.Relations.Add(this.relationFK___table_weapon_ibfk_1);
+            this.relationFK___table_weapon_ibfk_2 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_2", new global::System.Data.DataColumn[] {
                         this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
                         this.table__table_weapon.ATypeColumn}, false);
-            this.Relations.Add(this.relation__table_weapon_ibfk_1);
-            this.relation__table_weapon_ibfk_2 = new global::System.Data.DataRelation("__table_weapon_ibfk_2", new global::System.Data.DataColumn[] {
-                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.table__table_weapon.ETypeColumn}, false);
-            this.Relations.Add(this.relation__table_weapon_ibfk_2);
+            this.Relations.Add(this.relationFK___table_weapon_ibfk_2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -629,6 +655,12 @@ namespace Status_Editer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerialize__table_battle_area() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize__table_element() {
             return false;
         }
         
@@ -755,6 +787,9 @@ namespace Status_Editer {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void @__table_battle_areaRowChangeEventHandler(object sender, @__table_battle_areaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void @__table_elementRowChangeEventHandler(object sender, @__table_elementRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void @__table_gauntletRowChangeEventHandler(object sender, @__table_gauntletRowChangeEvent e);
@@ -3732,6 +3767,280 @@ namespace Status_Editer {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "__table_battle_areaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class @__table_elementDataTable : global::System.Data.TypedTableBase<@__table_elementRow> {
+            
+            private global::System.Data.DataColumn columnElementID;
+            
+            private global::System.Data.DataColumn columnElementName;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementDataTable() {
+                this.TableName = "__table_element";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal @__table_elementDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected @__table_elementDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ElementIDColumn {
+                get {
+                    return this.columnElementID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ElementNameColumn {
+                get {
+                    return this.columnElementName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRow this[int index] {
+                get {
+                    return ((@__table_elementRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event @__table_elementRowChangeEventHandler @__table_elementRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event @__table_elementRowChangeEventHandler @__table_elementRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event @__table_elementRowChangeEventHandler @__table_elementRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event @__table_elementRowChangeEventHandler @__table_elementRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add__table_elementRow(@__table_elementRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRow Add__table_elementRow(sbyte ElementID, string ElementName) {
+                @__table_elementRow row__table_elementRow = ((@__table_elementRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ElementID,
+                        ElementName};
+                row__table_elementRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row__table_elementRow);
+                return row__table_elementRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRow FindByElementID(sbyte ElementID) {
+                return ((@__table_elementRow)(this.Rows.Find(new object[] {
+                            ElementID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                @__table_elementDataTable cln = ((@__table_elementDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new @__table_elementDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnElementID = base.Columns["ElementID"];
+                this.columnElementName = base.Columns["ElementName"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnElementID = new global::System.Data.DataColumn("ElementID", typeof(sbyte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnElementID);
+                this.columnElementName = new global::System.Data.DataColumn("ElementName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnElementName);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnElementID}, true));
+                this.columnElementID.AllowDBNull = false;
+                this.columnElementID.Unique = true;
+                this.columnElementName.AllowDBNull = false;
+                this.columnElementName.MaxLength = 4;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRow New__table_elementRow() {
+                return ((@__table_elementRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new @__table_elementRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(@__table_elementRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.@__table_elementRowChanged != null)) {
+                    this.@__table_elementRowChanged(this, new @__table_elementRowChangeEvent(((@__table_elementRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.@__table_elementRowChanging != null)) {
+                    this.@__table_elementRowChanging(this, new @__table_elementRowChangeEvent(((@__table_elementRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.@__table_elementRowDeleted != null)) {
+                    this.@__table_elementRowDeleted(this, new @__table_elementRowChangeEvent(((@__table_elementRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.@__table_elementRowDeleting != null)) {
+                    this.@__table_elementRowDeleting(this, new @__table_elementRowChangeEvent(((@__table_elementRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove__table_elementRow(@__table_elementRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GigaBattlerDataSet ds = new GigaBattlerDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "__table_elementDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -11627,9 +11936,9 @@ namespace Status_Editer {
                         ushort SPC, 
                         ushort ATC, 
                         sbyte Target, 
-                        sbyte Type, 
-                        @__table_weapon_typeRow parent__table_weapon_typeRowBy__table_weapon_ibfk_1, 
-                        @__table_weapon_typeRow parent__table_weapon_typeRowBy__table_weapon_ibfk_2, 
+                        @__table_weapon_typeRow parent__table_weapon_typeRowByFK___table_weapon_ibfk_1, 
+                        @__table_weapon_typeRow parent__table_weapon_typeRowByFK___table_weapon_ibfk_2, 
+                        sbyte EType, 
                         int Maker, 
                         byte Rare, 
                         int HP, 
@@ -11668,9 +11977,9 @@ namespace Status_Editer {
                         SPC,
                         ATC,
                         Target,
-                        Type,
                         null,
                         null,
+                        EType,
                         Maker,
                         Rare,
                         HP,
@@ -11692,11 +12001,11 @@ namespace Status_Editer {
                         Skill2,
                         Skill3,
                         Info};
-                if ((parent__table_weapon_typeRowBy__table_weapon_ibfk_1 != null)) {
-                    columnValuesArray[16] = parent__table_weapon_typeRowBy__table_weapon_ibfk_1[0];
+                if ((parent__table_weapon_typeRowByFK___table_weapon_ibfk_1 != null)) {
+                    columnValuesArray[15] = parent__table_weapon_typeRowByFK___table_weapon_ibfk_1[0];
                 }
-                if ((parent__table_weapon_typeRowBy__table_weapon_ibfk_2 != null)) {
-                    columnValuesArray[17] = parent__table_weapon_typeRowBy__table_weapon_ibfk_2[0];
+                if ((parent__table_weapon_typeRowByFK___table_weapon_ibfk_2 != null)) {
+                    columnValuesArray[16] = parent__table_weapon_typeRowByFK___table_weapon_ibfk_2[0];
                 }
                 row__table_weaponRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row__table_weaponRow);
@@ -13865,6 +14174,43 @@ namespace Status_Editer {
                 }
                 set {
                     this[this.table__table_battle_area.Max_LvColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class @__table_elementRow : global::System.Data.DataRow {
+            
+            private @__table_elementDataTable table__table_element;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal @__table_elementRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.table__table_element = ((@__table_elementDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sbyte ElementID {
+                get {
+                    return ((sbyte)(this[this.table__table_element.ElementIDColumn]));
+                }
+                set {
+                    this[this.table__table_element.ElementIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ElementName {
+                get {
+                    return ((string)(this[this.table__table_element.ElementNameColumn]));
+                }
+                set {
+                    this[this.table__table_element.ElementNameColumn] = value;
                 }
             }
         }
@@ -18391,23 +18737,23 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weapon_typeRow @__table_weapon_typeRowBy__table_weapon_ibfk_1 {
+            public @__table_weapon_typeRow @__table_weapon_typeRowByFK___table_weapon_ibfk_1 {
                 get {
-                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["__table_weapon_ibfk_1"])));
+                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK___table_weapon_ibfk_1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["__table_weapon_ibfk_1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK___table_weapon_ibfk_1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weapon_typeRow @__table_weapon_typeRowBy__table_weapon_ibfk_2 {
+            public @__table_weapon_typeRow @__table_weapon_typeRowByFK___table_weapon_ibfk_2 {
                 get {
-                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["__table_weapon_ibfk_2"])));
+                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK___table_weapon_ibfk_2"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["__table_weapon_ibfk_2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK___table_weapon_ibfk_2"]);
                 }
             }
             
@@ -18638,23 +18984,23 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weaponRow[] Get__table_weaponRowsBy__table_weapon_ibfk_1() {
-                if ((this.Table.ChildRelations["__table_weapon_ibfk_1"] == null)) {
+            public @__table_weaponRow[] Get__table_weaponRowsByFK___table_weapon_ibfk_1() {
+                if ((this.Table.ChildRelations["FK___table_weapon_ibfk_1"] == null)) {
                     return new @__table_weaponRow[0];
                 }
                 else {
-                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["__table_weapon_ibfk_1"])));
+                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["FK___table_weapon_ibfk_1"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weaponRow[] Get__table_weaponRowsBy__table_weapon_ibfk_2() {
-                if ((this.Table.ChildRelations["__table_weapon_ibfk_2"] == null)) {
+            public @__table_weaponRow[] Get__table_weaponRowsByFK___table_weapon_ibfk_2() {
+                if ((this.Table.ChildRelations["FK___table_weapon_ibfk_2"] == null)) {
                     return new @__table_weaponRow[0];
                 }
                 else {
-                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["__table_weapon_ibfk_2"])));
+                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["FK___table_weapon_ibfk_2"])));
                 }
             }
         }
@@ -18815,6 +19161,40 @@ namespace Status_Editer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_battle_areaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class @__table_elementRowChangeEvent : global::System.EventArgs {
+            
+            private @__table_elementRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRowChangeEvent(@__table_elementRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_elementRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -25884,6 +26264,376 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class @__table_elementTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
+        
+        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
+        
+        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
+        
+        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public @__table_elementTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "__table_element";
+            tableMapping.ColumnMappings.Add("ElementID", "ElementID");
+            tableMapping.ColumnMappings.Add("ElementName", "ElementName");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `__table_element` WHERE ((`ElementID` = @p1) AND (`ElementName` = @p2" +
+                "))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p1";
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementName";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `__table_element` (`ElementID`, `ElementName`) VALUES (@p1, @p2)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p1";
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementName";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE `__table_element` SET `ElementID` = @p1, `ElementName` = @p2 WHERE ((`Elem" +
+                "entID` = @p3) AND (`ElementName` = @p4))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p1";
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementName";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p3";
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "ElementName";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
+            this._connection.ConnectionString = global::Status_Editer.Properties.Settings.Default.giga_battlerConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT `ElementID`, `ElementName` FROM `__table_element`";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GigaBattlerDataSet.@__table_elementDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GigaBattlerDataSet.@__table_elementDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            GigaBattlerDataSet.@__table_elementDataTable dataTable = new GigaBattlerDataSet.@__table_elementDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GigaBattlerDataSet.@__table_elementDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GigaBattlerDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "__table_element");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(byte p1, string p2) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(p1));
+            if ((p2 == null)) {
+                throw new global::System.ArgumentNullException("p2");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(p2));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(byte p1, string p2) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(p1));
+            if ((p2 == null)) {
+                throw new global::System.ArgumentNullException("p2");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(byte p1, string p2, byte p3, string p4) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(p1));
+            if ((p2 == null)) {
+                throw new global::System.ArgumentNullException("p2");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(p3));
+            if ((p4 == null)) {
+                throw new global::System.ArgumentNullException("p4");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string p2, byte p3, string p4) {
+            return this.Update(p3, p2, p3, p4);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class @__table_gauntletTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
@@ -30289,16 +31039,16 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p13";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "HIT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p14";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "EVT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -30569,15 +31319,15 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p13";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "HIT";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p14";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "EVT";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -30825,15 +31575,15 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p13";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "HIT";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p14";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "EVT";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -31089,16 +31839,16 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p49";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "HIT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p50";
-            param.DbType = global::System.Data.DbType.UInt16;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt16;
+            param.DbType = global::System.Data.DbType.Int16;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int16;
             param.IsNullable = true;
             param.SourceColumn = "EVT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -31368,8 +32118,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p10, 
                     ushort p11, 
                     byte p12, 
-                    ushort p13, 
-                    ushort p14, 
+                    short p13, 
+                    short p14, 
                     string p15, 
                     byte p16, 
                     uint p17, 
@@ -31409,8 +32159,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.DeleteCommand.Parameters[9].Value = ((ushort)(p10));
             this.Adapter.DeleteCommand.Parameters[10].Value = ((ushort)(p11));
             this.Adapter.DeleteCommand.Parameters[11].Value = ((byte)(p12));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((ushort)(p13));
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((ushort)(p14));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((short)(p13));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((short)(p14));
             if ((p15 == null)) {
                 throw new global::System.ArgumentNullException("p15");
             }
@@ -31496,8 +32246,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p10, 
                     ushort p11, 
                     byte p12, 
-                    ushort p13, 
-                    ushort p14, 
+                    short p13, 
+                    short p14, 
                     string p15, 
                     byte p16, 
                     uint p17, 
@@ -31537,8 +32287,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.InsertCommand.Parameters[9].Value = ((ushort)(p10));
             this.Adapter.InsertCommand.Parameters[10].Value = ((ushort)(p11));
             this.Adapter.InsertCommand.Parameters[11].Value = ((byte)(p12));
-            this.Adapter.InsertCommand.Parameters[12].Value = ((ushort)(p13));
-            this.Adapter.InsertCommand.Parameters[13].Value = ((ushort)(p14));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((short)(p13));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((short)(p14));
             if ((p15 == null)) {
                 throw new global::System.ArgumentNullException("p15");
             }
@@ -31624,8 +32374,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p10, 
                     ushort p11, 
                     byte p12, 
-                    ushort p13, 
-                    ushort p14, 
+                    short p13, 
+                    short p14, 
                     string p15, 
                     byte p16, 
                     uint p17, 
@@ -31660,8 +32410,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p46, 
                     ushort p47, 
                     byte p48, 
-                    ushort p49, 
-                    ushort p50, 
+                    short p49, 
+                    short p50, 
                     string p51, 
                     byte p52, 
                     uint p53, 
@@ -31701,8 +32451,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[9].Value = ((ushort)(p10));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((ushort)(p11));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((byte)(p12));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((ushort)(p13));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((ushort)(p14));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((short)(p13));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((short)(p14));
             if ((p15 == null)) {
                 throw new global::System.ArgumentNullException("p15");
             }
@@ -31772,8 +32522,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[45].Value = ((ushort)(p46));
             this.Adapter.UpdateCommand.Parameters[46].Value = ((ushort)(p47));
             this.Adapter.UpdateCommand.Parameters[47].Value = ((byte)(p48));
-            this.Adapter.UpdateCommand.Parameters[48].Value = ((ushort)(p49));
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((ushort)(p50));
+            this.Adapter.UpdateCommand.Parameters[48].Value = ((short)(p49));
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((short)(p50));
             if ((p51 == null)) {
                 throw new global::System.ArgumentNullException("p51");
             }
@@ -31858,8 +32608,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p10, 
                     ushort p11, 
                     byte p12, 
-                    ushort p13, 
-                    ushort p14, 
+                    short p13, 
+                    short p14, 
                     string p15, 
                     byte p16, 
                     uint p17, 
@@ -31894,8 +32644,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     ushort p46, 
                     ushort p47, 
                     byte p48, 
-                    ushort p49, 
-                    ushort p50, 
+                    short p49, 
+                    short p50, 
                     string p51, 
                     byte p52, 
                     uint p53, 
@@ -32506,8 +33256,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.UInt32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "RaceID";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -32515,6 +33265,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 16;
             param.IsNullable = true;
             param.SourceColumn = "RaceName";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -32688,8 +33439,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p27";
-            param.DbType = global::System.Data.DbType.UInt32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "NextEXP";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -32697,13 +33448,14 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p28";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 256;
             param.IsNullable = true;
             param.SourceColumn = "Info";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p29";
-            param.DbType = global::System.Data.DbType.UInt32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "RaceID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -32712,6 +33464,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p30";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 16;
             param.IsNullable = true;
             param.SourceColumn = "RaceName";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -32910,8 +33663,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p55";
-            param.DbType = global::System.Data.DbType.UInt32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "NextEXP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -32920,6 +33673,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p56";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 256;
             param.IsNullable = true;
             param.SourceColumn = "Info";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33178,7 +33932,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    uint p1, 
+                    int p1, 
                     string p2, 
                     short p3, 
                     short p4, 
@@ -33204,9 +33958,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p24, 
                     decimal p25, 
                     decimal p26, 
-                    uint p27, 
+                    int p27, 
                     string p28, 
-                    uint p29, 
+                    int p29, 
                     string p30, 
                     short p31, 
                     short p32, 
@@ -33232,9 +33986,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p52, 
                     decimal p53, 
                     decimal p54, 
-                    uint p55, 
+                    int p55, 
                     string p56) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((uint)(p1));
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
             }
@@ -33265,14 +34019,14 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(p24));
             this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(p25));
             this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(p26));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((uint)(p27));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(p27));
             if ((p28 == null)) {
                 throw new global::System.ArgumentNullException("p28");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(p28));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((uint)(p29));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(p29));
             if ((p30 == null)) {
                 throw new global::System.ArgumentNullException("p30");
             }
@@ -33303,7 +34057,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[51].Value = ((decimal)(p52));
             this.Adapter.UpdateCommand.Parameters[52].Value = ((decimal)(p53));
             this.Adapter.UpdateCommand.Parameters[53].Value = ((decimal)(p54));
-            this.Adapter.UpdateCommand.Parameters[54].Value = ((uint)(p55));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(p55));
             if ((p56 == null)) {
                 throw new global::System.ArgumentNullException("p56");
             }
@@ -33356,9 +34110,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p24, 
                     decimal p25, 
                     decimal p26, 
-                    uint p27, 
+                    int p27, 
                     string p28, 
-                    uint p29, 
+                    int p29, 
                     string p30, 
                     short p31, 
                     short p32, 
@@ -33384,7 +34138,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p52, 
                     decimal p53, 
                     decimal p54, 
-                    uint p55, 
+                    int p55, 
                     string p56) {
             return this.Update(p29, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56);
         }
@@ -45830,11 +46584,19 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT `WeaponID`, `WeaponName`, `PhysicsPower`, `MagicPower`, `PhysicsDefence`, `MagicDefence`, `ReductionRate`, `Element1`, `Element2`, `WT`, `EC`, `SSP`, `SPC`, `ATC`, `Target`, `Type`, `AType`, `EType`, `Maker`, `Rare`, `HP`, `TP`, `ATK`, `DEF`, `RAT`, `RDF`, `MAT`, `MDF`, `SPD`, `LUK`, `HIT`, `EVT`, `Duability`, `Price`, `Buy`, `Skill1`, `Skill2`, `Skill3`, `Info` FROM `__table_weapon`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT                      WeaponID, WeaponName, PhysicsPower, MagicPower, PhysicsDefence, MagicDefence, ReductionRate, Element1, 
+                                      Element2, WT, EC, SSP, SPC, ATC, Target, Type, AType, EType, Maker, Rare, HP, TP, ATK, DEF, RAT, RDF, MAT, MDF, 
+                                      SPD, LUK, HIT, EVT, Duability, Price, Buy, Skill1, Skill2, Skill3, Info
+FROM                         __table_weapon
+ORDER BY               Type, Rare, Price";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -45856,6 +46618,30 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual GigaBattlerDataSet.@__table_weaponDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            GigaBattlerDataSet.@__table_weaponDataTable dataTable = new GigaBattlerDataSet.@__table_weaponDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillSortByType(GigaBattlerDataSet.@__table_weaponDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual GigaBattlerDataSet.@__table_weaponDataTable GetDataSortByType() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             GigaBattlerDataSet.@__table_weaponDataTable dataTable = new GigaBattlerDataSet.@__table_weaponDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -47533,6 +48319,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         
         private @__table_battle_areaTableAdapter ___table_battle_areaTableAdapter;
         
+        private @__table_elementTableAdapter ___table_elementTableAdapter;
+        
         private @__table_gauntletTableAdapter ___table_gauntletTableAdapter;
         
         private @__table_helmetTableAdapter ___table_helmetTableAdapter;
@@ -47633,6 +48421,20 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             }
             set {
                 this.___table_battle_areaTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public @__table_elementTableAdapter @__table_elementTableAdapter {
+            get {
+                return this.___table_elementTableAdapter;
+            }
+            set {
+                this.___table_elementTableAdapter = value;
             }
         }
         
@@ -47801,6 +48603,10 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                             && (this.___table_battle_areaTableAdapter.Connection != null))) {
                     return this.___table_battle_areaTableAdapter.Connection;
                 }
+                if (((this.___table_elementTableAdapter != null) 
+                            && (this.___table_elementTableAdapter.Connection != null))) {
+                    return this.___table_elementTableAdapter.Connection;
+                }
                 if (((this.___table_gauntletTableAdapter != null) 
                             && (this.___table_gauntletTableAdapter.Connection != null))) {
                     return this.___table_gauntletTableAdapter.Connection;
@@ -47863,6 +48669,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     count = (count + 1);
                 }
                 if ((this.___table_battle_areaTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this.___table_elementTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this.___table_gauntletTableAdapter != null)) {
@@ -47993,6 +48802,15 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_elementTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this.___table_jobTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -48119,6 +48937,14 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_elementTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this.___table_jobTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -48190,6 +49016,14 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this.___table_jobTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_elementTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -48332,6 +49166,10 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                         && (this.MatchTableAdapterConnection(this.___table_battle_areaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
+            if (((this.___table_elementTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this.___table_elementTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
+            }
             if (((this.___table_gauntletTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this.___table_gauntletTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
@@ -48442,6 +49280,15 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     if (this.___table_battle_areaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this.___table_battle_areaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this.___table_battle_areaTableAdapter.Adapter);
+                    }
+                }
+                if ((this.___table_elementTableAdapter != null)) {
+                    revertConnections.Add(this.___table_elementTableAdapter, this.___table_elementTableAdapter.Connection);
+                    this.___table_elementTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this.___table_elementTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this.___table_elementTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this.___table_elementTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this.___table_elementTableAdapter.Adapter);
                     }
                 }
                 if ((this.___table_gauntletTableAdapter != null)) {
@@ -48602,6 +49449,10 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                 if ((this.___table_battle_areaTableAdapter != null)) {
                     this.___table_battle_areaTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this.___table_battle_areaTableAdapter]));
                     this.___table_battle_areaTableAdapter.Transaction = null;
+                }
+                if ((this.___table_elementTableAdapter != null)) {
+                    this.___table_elementTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this.___table_elementTableAdapter]));
+                    this.___table_elementTableAdapter.Transaction = null;
                 }
                 if ((this.___table_gauntletTableAdapter != null)) {
                     this.___table_gauntletTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this.___table_gauntletTableAdapter]));

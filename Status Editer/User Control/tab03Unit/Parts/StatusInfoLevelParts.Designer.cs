@@ -52,6 +52,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.groupLv.Controls.Add(this.labelMaxLevel);
 			this.groupLv.Controls.Add(this.numericMaxLevel);
 			this.groupLv.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupLv.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.groupLv.Location = new System.Drawing.Point(0, 0);
 			this.groupLv.Name = "groupLv";
 			this.groupLv.Size = new System.Drawing.Size(650, 75);
@@ -61,29 +62,30 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericReqLv
 			// 
+			this.numericReqLv.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericReqLv.Location = new System.Drawing.Point(10, 30);
 			this.numericReqLv.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
+			-727379969,
+			232,
+			0,
+			0});
 			this.numericReqLv.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			this.numericReqLv.Name = "numericReqLv";
 			this.numericReqLv.Size = new System.Drawing.Size(150, 19);
 			this.numericReqLv.TabIndex = 1;
 			this.numericReqLv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericReqLv.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericReqLv, "出現条件レベル。非常に高いレベルのユニットが出現することによるゲームバランスを崩さないための処置。\r\nこの条件を突破しない限り、絶対に出現することはない(出るとし" +
-        "たらバグ)。\r\n設定値: 1 ～ 999,999,999,999");
+		"たらバグ)。\r\n設定値: 1 ～ 999,999,999,999");
 			this.numericReqLv.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			// 
 			// labelReqLv
 			// 
@@ -107,17 +109,18 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericMinLevel
 			// 
+			this.numericMinLevel.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMinLevel.Location = new System.Drawing.Point(200, 30);
 			this.numericMinLevel.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
+			-727379969,
+			232,
+			0,
+			0});
 			this.numericMinLevel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			this.numericMinLevel.Name = "numericMinLevel";
 			this.numericMinLevel.Size = new System.Drawing.Size(150, 19);
 			this.numericMinLevel.TabIndex = 3;
@@ -125,10 +128,10 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.numericMinLevel.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericMinLevel, "最低レベル。出現条件レベルにそろえる必要はない。\r\nまた、敗北した時に奪われるお金の量にも影響する。\r\n設定値:1 ～ 999,999,999,999");
 			this.numericMinLevel.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+			1,
+			0,
+			0,
+			0});
 			// 
 			// label
 			// 
@@ -152,29 +155,30 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// numericMaxLevel
 			// 
+			this.numericMaxLevel.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMaxLevel.Location = new System.Drawing.Point(402, 30);
 			this.numericMaxLevel.Maximum = new decimal(new int[] {
-            1661992959,
-            1808227885,
-            5,
-            0});
+			1661992959,
+			1808227885,
+			5,
+			0});
 			this.numericMaxLevel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
+			1,
+			0,
+			0,
+			-2147483648});
 			this.numericMaxLevel.Name = "numericMaxLevel";
 			this.numericMaxLevel.Size = new System.Drawing.Size(150, 19);
 			this.numericMaxLevel.TabIndex = 6;
 			this.numericMaxLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericMaxLevel.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericMaxLevel, "最高レベル。限界突破補正などに影響します。\r\n-1を指定すると無制限となります。\r\nまた、最高レベルを超えるキャラクターが生成された時は、全ステータスに補正がかか" +
-        "る。\r\n設定値:1 ～ 99,999,999,999,999,999,999 もしくは -1");
+		"る。\r\n設定値:1 ～ 99,999,999,999,999,999,999 もしくは -1");
 			this.numericMaxLevel.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
+			1,
+			0,
+			0,
+			-2147483648});
 			// 
 			// toolTipInfo
 			// 

@@ -1,23 +1,35 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Active Skill Infomation
+// Item Status Parts
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
+using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control.tab03Unit {
+namespace Status_Editer.User_Control.CommonParts {
 	[ToolboxItem(true)]
-	public partial class SkillInfomation : UserControl {
+	public partial class ItemStatusParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		private Label StatusBar = new Label();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// ステータスラベルを設定します
+		/// </summary>
+		[Description("ステータスラベルを設定します")]
+		public string StatusLabel {
+			get { return label1.Text; }
+			set { label1.Text = value; }
+		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -27,7 +39,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public SkillInfomation() {
+		public ItemStatusParts() {
 			InitializeComponent();
 		}// End Method
 
@@ -36,65 +48,20 @@ namespace Status_Editer.User_Control.tab03Unit {
 		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		// ジャンル毎に必要かと思われたが、引数パラメータが全て同じなことが判明(オーバーロードの必要がない)
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+		/// <param name="tableBingingSource">Any Item Binding Source</param>
+		/// <param name="bindTag">Binding Tag</param>
+		public void SetDataBindings(BindingSource tableBingingSource, string bindTag) {
 			// データバインドの設定
-			SkillInfomation1.SetDataBindings(tableUnitBindingSource, "Skill1");
-			SkillInfomation2.SetDataBindings(tableUnitBindingSource, "Skill2");
-			SkillInfomation3.SetDataBindings(tableUnitBindingSource, "Skill3");
-			SkillInfomation4.SetDataBindings(tableUnitBindingSource, "Skill4");
-			SkillInfomation5.SetDataBindings(tableUnitBindingSource, "Skill5");
-			SkillInfomation6.SetDataBindings(tableUnitBindingSource, "Skill6");
-			SkillInfomation7.SetDataBindings(tableUnitBindingSource, "Skill7");
-			SkillInfomation8.SetDataBindings(tableUnitBindingSource, "Skill8");
-			SkillInfomation9.SetDataBindings(tableUnitBindingSource, "Skill9");
-			SkillInfomation10.SetDataBindings(tableUnitBindingSource, "Skill10");
-			SkillInfomation11.SetDataBindings(tableUnitBindingSource, "Skill11");
-			SkillInfomation12.SetDataBindings(tableUnitBindingSource, "Skill12");
-			SkillInfomation13.SetDataBindings(tableUnitBindingSource, "Skill13");
-			SkillInfomation14.SetDataBindings(tableUnitBindingSource, "Skill14");
-			SkillInfomation15.SetDataBindings(tableUnitBindingSource, "Skill15");
-			SkillInfomation16.SetDataBindings(tableUnitBindingSource, "Skill16");
-			SkillInfomation17.SetDataBindings(tableUnitBindingSource, "Skill17");
-			SkillInfomation18.SetDataBindings(tableUnitBindingSource, "Skill18");
-			SkillInfomation19.SetDataBindings(tableUnitBindingSource, "Skill19");
-			SkillInfomation20.SetDataBindings(tableUnitBindingSource, "Skill20");
+			numericUpDown1.DataBindings.Add(new Binding("Value", tableBingingSource, bindTag, true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Method
-
-		/// <summary>
-		/// バインド項目を再読み込みします。
-		/// </summary>
-		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
-			SkillInfomation1.ReloadBindings(SkillAdapter);
-			SkillInfomation2.ReloadBindings(SkillAdapter);
-			SkillInfomation3.ReloadBindings(SkillAdapter);
-			SkillInfomation4.ReloadBindings(SkillAdapter);
-			SkillInfomation5.ReloadBindings(SkillAdapter);
-			SkillInfomation6.ReloadBindings(SkillAdapter);
-			SkillInfomation7.ReloadBindings(SkillAdapter);
-			SkillInfomation8.ReloadBindings(SkillAdapter);
-			SkillInfomation9.ReloadBindings(SkillAdapter);
-			SkillInfomation10.ReloadBindings(SkillAdapter);
-			SkillInfomation11.ReloadBindings(SkillAdapter);
-			SkillInfomation12.ReloadBindings(SkillAdapter);
-			SkillInfomation13.ReloadBindings(SkillAdapter);
-			SkillInfomation14.ReloadBindings(SkillAdapter);
-			SkillInfomation15.ReloadBindings(SkillAdapter);
-			SkillInfomation16.ReloadBindings(SkillAdapter);
-			SkillInfomation17.ReloadBindings(SkillAdapter);
-			SkillInfomation18.ReloadBindings(SkillAdapter);
-			SkillInfomation19.ReloadBindings(SkillAdapter);
-			SkillInfomation20.ReloadBindings(SkillAdapter);
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
 		}// End Method
 
 
@@ -106,5 +73,78 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// フォーム読み込み時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void ItemStatusParts_Load(object sender, EventArgs e) {
+			// Labelの初期化
+			StatusBar.AutoSize = false;
+			StatusBar.BorderStyle = BorderStyle.FixedSingle;
+			StatusBar.Name = "StatusBar";
+
+			if (numericUpDown1.Value >= 0) {
+				StatusBar.BackColor = Color.Green;
+				StatusBar.Location = new Point(200, 7);
+				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+			} else {
+				StatusBar.BackColor = Color.Red;
+				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
+				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
+			}// End If
+
+			// LabelをUser Controlに追加する
+			Controls.Add(StatusBar);
+
+		}// End Method
+
+		/// <summary>
+		/// コントロールを再描画時に実行する処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">PaintEventArgs</param>
+		private void ItemStatusParts_Paint(object sender, PaintEventArgs e) {
+			// ラインを引く
+			// 所謂横棒グラフのライン
+			Pen PenBlack, PenGray;
+			PenBlack = new Pen(Color.Black);
+			PenGray = new Pen(Color.LightGray);
+			Graphics formGraphics = CreateGraphics();
+
+			// ラインを X の20の倍数毎に描画。100の倍数の場合、黒で描画
+			// 初期座標はX = 200、暫定で X = 1000まで
+			for (int i = 200; i <= 1000; i += 20) {
+				if (i % 100 == 0) {
+					formGraphics.DrawLine(PenBlack, i, 0, i, 20);
+				} else {
+					formGraphics.DrawLine(PenGray, i, 0, i, 20);
+				}
+			}// End Loop
+
+			// 破棄破棄
+			PenBlack.Dispose();
+			PenGray.Dispose();
+			formGraphics.Dispose();
+		}// End Method
+
+		/// <summary>
+		/// numericUpDown1の値が変更された時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
+			// ラベルのサイズ変更
+			if (numericUpDown1.Value >= 0) {
+				StatusBar.BackColor = Color.Green;
+				StatusBar.Location = new Point(200, 7);
+				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+			} else {
+				StatusBar.BackColor = Color.Red;
+				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
+				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
+			}// End If
+		}// End Method
 	}// End Class
 }

@@ -72,12 +72,37 @@ namespace Status_Editer {
 			this.JobInfomation = new Status_Editer.User_Control.tab06Job.JobInfomation();
 			this.listJob = new System.Windows.Forms.ListBox();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
+			this.listMaker = new System.Windows.Forms.ListBox();
 			this.tabPage8 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts1 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.ItemInfoWeapon = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.EquipItemWeapon = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.listWeapon = new System.Windows.Forms.ListBox();
 			this.tabPage9 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts2 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemShield = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoShield = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.listShield = new System.Windows.Forms.ListBox();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts3 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemHelmet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoHelmet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.listHelmet = new System.Windows.Forms.ListBox();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts4 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemGauntlet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoGauntlet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.listGauntlet = new System.Windows.Forms.ListBox();
 			this.tabPage12 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts5 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemArmor = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoArmor = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.listArmor = new System.Windows.Forms.ListBox();
 			this.tabPage13 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts6 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemAccessory = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.listAccessory = new System.Windows.Forms.ListBox();
 			this.tabPage14 = new System.Windows.Forms.TabPage();
 			this.tabPage15 = new System.Windows.Forms.TabPage();
 			this.tabPage16 = new System.Windows.Forms.TabPage();
@@ -105,6 +130,13 @@ namespace Status_Editer {
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
+			this.tabPage7.SuspendLayout();
+			this.tabPage8.SuspendLayout();
+			this.tabPage9.SuspendLayout();
+			this.tabPage10.SuspendLayout();
+			this.tabPage11.SuspendLayout();
+			this.tabPage12.SuspendLayout();
+			this.tabPage13.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -266,8 +298,7 @@ namespace Status_Editer {
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
 			this.tabControl.Size = new System.Drawing.Size(1600, 854);
-			this.tabControl.TabIndex = 2;
-			this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
+			this.tabControl.TabIndex = 0;
 			// 
 			// tabPage1
 			// 
@@ -331,7 +362,7 @@ namespace Status_Editer {
 			this.TotalUnitInfomation.BackColor = System.Drawing.Color.Transparent;
 			this.TotalUnitInfomation.Location = new System.Drawing.Point(0, 0);
 			this.TotalUnitInfomation.Name = "TotalUnitInfomation";
-			this.TotalUnitInfomation.Size = new System.Drawing.Size(1360, 800);
+			this.TotalUnitInfomation.Size = new System.Drawing.Size(1375, 800);
 			this.TotalUnitInfomation.TabIndex = 0;
 			// 
 			// tabPage22
@@ -352,7 +383,7 @@ namespace Status_Editer {
 			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
 			this.DropInfomation.Name = "DropInfomation";
 			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
-			this.DropInfomation.TabIndex = 3;
+			this.DropInfomation.TabIndex = 1;
 			// 
 			// UnitInfomation
 			// 
@@ -360,7 +391,7 @@ namespace Status_Editer {
 			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
 			this.UnitInfomation.Name = "UnitInfomation";
 			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
-			this.UnitInfomation.TabIndex = 2;
+			this.UnitInfomation.TabIndex = 0;
 			// 
 			// tabPage23
 			// 
@@ -579,7 +610,7 @@ namespace Status_Editer {
             0,
             0});
 			this.StatusInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.StatusInfomation.TabIndex = 1;
+			this.StatusInfomation.TabIndex = 0;
 			// 
 			// tabPage24
 			// 
@@ -597,7 +628,7 @@ namespace Status_Editer {
 			this.ActiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
 			this.ActiveSkillInfomation.Name = "ActiveSkillInfomation";
 			this.ActiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.ActiveSkillInfomation.TabIndex = 1;
+			this.ActiveSkillInfomation.TabIndex = 0;
 			// 
 			// tabPage25
 			// 
@@ -615,7 +646,7 @@ namespace Status_Editer {
 			this.PassiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
 			this.PassiveSkillInfomation.Name = "PassiveSkillInfomation";
 			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.PassiveSkillInfomation.TabIndex = 1;
+			this.PassiveSkillInfomation.TabIndex = 0;
 			// 
 			// listUnit
 			// 
@@ -664,7 +695,7 @@ namespace Status_Editer {
 			this.RaceInfomation.Location = new System.Drawing.Point(210, 0);
 			this.RaceInfomation.Name = "RaceInfomation";
 			this.RaceInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.RaceInfomation.TabIndex = 2;
+			this.RaceInfomation.TabIndex = 1;
 			// 
 			// listRace
 			// 
@@ -673,7 +704,7 @@ namespace Status_Editer {
 			this.listRace.Location = new System.Drawing.Point(3, 3);
 			this.listRace.Name = "listRace";
 			this.listRace.Size = new System.Drawing.Size(200, 820);
-			this.listRace.TabIndex = 1;
+			this.listRace.TabIndex = 0;
 			// 
 			// tabPage6
 			// 
@@ -693,7 +724,7 @@ namespace Status_Editer {
 			this.JobInfomation.Location = new System.Drawing.Point(210, 0);
 			this.JobInfomation.Name = "JobInfomation";
 			this.JobInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.JobInfomation.TabIndex = 2;
+			this.JobInfomation.TabIndex = 1;
 			// 
 			// listJob
 			// 
@@ -702,10 +733,11 @@ namespace Status_Editer {
 			this.listJob.Location = new System.Drawing.Point(3, 3);
 			this.listJob.Name = "listJob";
 			this.listJob.Size = new System.Drawing.Size(200, 820);
-			this.listJob.TabIndex = 1;
+			this.listJob.TabIndex = 0;
 			// 
 			// tabPage7
 			// 
+			this.tabPage7.Controls.Add(this.listMaker);
 			this.tabPage7.Location = new System.Drawing.Point(4, 22);
 			this.tabPage7.Name = "tabPage7";
 			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -714,8 +746,21 @@ namespace Status_Editer {
 			this.tabPage7.Text = "メーカー";
 			this.tabPage7.UseVisualStyleBackColor = true;
 			// 
+			// listMaker
+			// 
+			this.listMaker.FormattingEnabled = true;
+			this.listMaker.ItemHeight = 12;
+			this.listMaker.Location = new System.Drawing.Point(3, 3);
+			this.listMaker.Name = "listMaker";
+			this.listMaker.Size = new System.Drawing.Size(200, 820);
+			this.listMaker.TabIndex = 0;
+			// 
 			// tabPage8
 			// 
+			this.tabPage8.Controls.Add(this.ItemAbilityInfoParts1);
+			this.tabPage8.Controls.Add(this.ItemInfoWeapon);
+			this.tabPage8.Controls.Add(this.EquipItemWeapon);
+			this.tabPage8.Controls.Add(this.listWeapon);
 			this.tabPage8.Location = new System.Drawing.Point(4, 22);
 			this.tabPage8.Name = "tabPage8";
 			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -724,8 +769,45 @@ namespace Status_Editer {
 			this.tabPage8.Text = "武器";
 			this.tabPage8.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts1
+			// 
+			this.ItemAbilityInfoParts1.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts1.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts1.Name = "ItemAbilityInfoParts1";
+			this.ItemAbilityInfoParts1.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts1.TabIndex = 3;
+			// 
+			// ItemInfoWeapon
+			// 
+			this.ItemInfoWeapon.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoWeapon.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoWeapon.Name = "ItemInfoWeapon";
+			this.ItemInfoWeapon.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoWeapon.TabIndex = 1;
+			// 
+			// EquipItemWeapon
+			// 
+			this.EquipItemWeapon.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemWeapon.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemWeapon.Name = "EquipItemWeapon";
+			this.EquipItemWeapon.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemWeapon.TabIndex = 2;
+			// 
+			// listWeapon
+			// 
+			this.listWeapon.FormattingEnabled = true;
+			this.listWeapon.ItemHeight = 12;
+			this.listWeapon.Location = new System.Drawing.Point(3, 3);
+			this.listWeapon.Name = "listWeapon";
+			this.listWeapon.Size = new System.Drawing.Size(200, 820);
+			this.listWeapon.TabIndex = 0;
+			// 
 			// tabPage9
 			// 
+			this.tabPage9.Controls.Add(this.ItemAbilityInfoParts2);
+			this.tabPage9.Controls.Add(this.EquipItemShield);
+			this.tabPage9.Controls.Add(this.ItemInfoShield);
+			this.tabPage9.Controls.Add(this.listShield);
 			this.tabPage9.Location = new System.Drawing.Point(4, 22);
 			this.tabPage9.Name = "tabPage9";
 			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -734,8 +816,45 @@ namespace Status_Editer {
 			this.tabPage9.Text = "盾";
 			this.tabPage9.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts2
+			// 
+			this.ItemAbilityInfoParts2.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts2.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts2.Name = "ItemAbilityInfoParts2";
+			this.ItemAbilityInfoParts2.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts2.TabIndex = 3;
+			// 
+			// EquipItemShield
+			// 
+			this.EquipItemShield.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemShield.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemShield.Name = "EquipItemShield";
+			this.EquipItemShield.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemShield.TabIndex = 2;
+			// 
+			// ItemInfoShield
+			// 
+			this.ItemInfoShield.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoShield.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoShield.Name = "ItemInfoShield";
+			this.ItemInfoShield.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoShield.TabIndex = 1;
+			// 
+			// listShield
+			// 
+			this.listShield.FormattingEnabled = true;
+			this.listShield.ItemHeight = 12;
+			this.listShield.Location = new System.Drawing.Point(3, 3);
+			this.listShield.Name = "listShield";
+			this.listShield.Size = new System.Drawing.Size(200, 820);
+			this.listShield.TabIndex = 0;
+			// 
 			// tabPage10
 			// 
+			this.tabPage10.Controls.Add(this.ItemAbilityInfoParts3);
+			this.tabPage10.Controls.Add(this.EquipItemHelmet);
+			this.tabPage10.Controls.Add(this.ItemInfoHelmet);
+			this.tabPage10.Controls.Add(this.listHelmet);
 			this.tabPage10.Location = new System.Drawing.Point(4, 22);
 			this.tabPage10.Name = "tabPage10";
 			this.tabPage10.Size = new System.Drawing.Size(1592, 828);
@@ -743,8 +862,45 @@ namespace Status_Editer {
 			this.tabPage10.Text = "頭防具";
 			this.tabPage10.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts3
+			// 
+			this.ItemAbilityInfoParts3.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts3.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts3.Name = "ItemAbilityInfoParts3";
+			this.ItemAbilityInfoParts3.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts3.TabIndex = 3;
+			// 
+			// EquipItemHelmet
+			// 
+			this.EquipItemHelmet.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemHelmet.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemHelmet.Name = "EquipItemHelmet";
+			this.EquipItemHelmet.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemHelmet.TabIndex = 2;
+			// 
+			// ItemInfoHelmet
+			// 
+			this.ItemInfoHelmet.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoHelmet.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoHelmet.Name = "ItemInfoHelmet";
+			this.ItemInfoHelmet.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoHelmet.TabIndex = 1;
+			// 
+			// listHelmet
+			// 
+			this.listHelmet.FormattingEnabled = true;
+			this.listHelmet.ItemHeight = 12;
+			this.listHelmet.Location = new System.Drawing.Point(3, 3);
+			this.listHelmet.Name = "listHelmet";
+			this.listHelmet.Size = new System.Drawing.Size(200, 820);
+			this.listHelmet.TabIndex = 0;
+			// 
 			// tabPage11
 			// 
+			this.tabPage11.Controls.Add(this.ItemAbilityInfoParts4);
+			this.tabPage11.Controls.Add(this.EquipItemGauntlet);
+			this.tabPage11.Controls.Add(this.ItemInfoGauntlet);
+			this.tabPage11.Controls.Add(this.listGauntlet);
 			this.tabPage11.Location = new System.Drawing.Point(4, 22);
 			this.tabPage11.Name = "tabPage11";
 			this.tabPage11.Size = new System.Drawing.Size(1592, 828);
@@ -752,8 +908,45 @@ namespace Status_Editer {
 			this.tabPage11.Text = "籠手";
 			this.tabPage11.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts4
+			// 
+			this.ItemAbilityInfoParts4.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts4.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts4.Name = "ItemAbilityInfoParts4";
+			this.ItemAbilityInfoParts4.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts4.TabIndex = 3;
+			// 
+			// EquipItemGauntlet
+			// 
+			this.EquipItemGauntlet.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemGauntlet.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemGauntlet.Name = "EquipItemGauntlet";
+			this.EquipItemGauntlet.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemGauntlet.TabIndex = 2;
+			// 
+			// ItemInfoGauntlet
+			// 
+			this.ItemInfoGauntlet.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoGauntlet.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoGauntlet.Name = "ItemInfoGauntlet";
+			this.ItemInfoGauntlet.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoGauntlet.TabIndex = 0;
+			// 
+			// listGauntlet
+			// 
+			this.listGauntlet.FormattingEnabled = true;
+			this.listGauntlet.ItemHeight = 12;
+			this.listGauntlet.Location = new System.Drawing.Point(3, 3);
+			this.listGauntlet.Name = "listGauntlet";
+			this.listGauntlet.Size = new System.Drawing.Size(200, 820);
+			this.listGauntlet.TabIndex = 0;
+			// 
 			// tabPage12
 			// 
+			this.tabPage12.Controls.Add(this.ItemAbilityInfoParts5);
+			this.tabPage12.Controls.Add(this.EquipItemArmor);
+			this.tabPage12.Controls.Add(this.ItemInfoArmor);
+			this.tabPage12.Controls.Add(this.listArmor);
 			this.tabPage12.Location = new System.Drawing.Point(4, 22);
 			this.tabPage12.Name = "tabPage12";
 			this.tabPage12.Size = new System.Drawing.Size(1592, 828);
@@ -761,14 +954,84 @@ namespace Status_Editer {
 			this.tabPage12.Text = "体防具";
 			this.tabPage12.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts5
+			// 
+			this.ItemAbilityInfoParts5.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts5.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts5.Name = "ItemAbilityInfoParts5";
+			this.ItemAbilityInfoParts5.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts5.TabIndex = 3;
+			// 
+			// EquipItemArmor
+			// 
+			this.EquipItemArmor.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemArmor.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemArmor.Name = "EquipItemArmor";
+			this.EquipItemArmor.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemArmor.TabIndex = 2;
+			// 
+			// ItemInfoArmor
+			// 
+			this.ItemInfoArmor.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoArmor.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoArmor.Name = "ItemInfoArmor";
+			this.ItemInfoArmor.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoArmor.TabIndex = 0;
+			// 
+			// listArmor
+			// 
+			this.listArmor.FormattingEnabled = true;
+			this.listArmor.ItemHeight = 12;
+			this.listArmor.Location = new System.Drawing.Point(3, 3);
+			this.listArmor.Name = "listArmor";
+			this.listArmor.Size = new System.Drawing.Size(200, 820);
+			this.listArmor.TabIndex = 0;
+			// 
 			// tabPage13
 			// 
+			this.tabPage13.Controls.Add(this.ItemAbilityInfoParts6);
+			this.tabPage13.Controls.Add(this.EquipItemAccessory);
+			this.tabPage13.Controls.Add(this.ItemInfoAccessory);
+			this.tabPage13.Controls.Add(this.listAccessory);
 			this.tabPage13.Location = new System.Drawing.Point(4, 22);
 			this.tabPage13.Name = "tabPage13";
 			this.tabPage13.Size = new System.Drawing.Size(1592, 828);
 			this.tabPage13.TabIndex = 12;
 			this.tabPage13.Text = "アクセサリー";
 			this.tabPage13.UseVisualStyleBackColor = true;
+			// 
+			// ItemAbilityInfoParts6
+			// 
+			this.ItemAbilityInfoParts6.BackColor = System.Drawing.Color.Transparent;
+			this.ItemAbilityInfoParts6.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts6.Name = "ItemAbilityInfoParts6";
+			this.ItemAbilityInfoParts6.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts6.TabIndex = 3;
+			// 
+			// EquipItemAccessory
+			// 
+			this.EquipItemAccessory.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemAccessory.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemAccessory.Name = "EquipItemAccessory";
+			this.EquipItemAccessory.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemAccessory.TabIndex = 2;
+			// 
+			// ItemInfoAccessory
+			// 
+			this.ItemInfoAccessory.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoAccessory.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoAccessory.Name = "ItemInfoAccessory";
+			this.ItemInfoAccessory.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoAccessory.TabIndex = 1;
+			// 
+			// listAccessory
+			// 
+			this.listAccessory.FormattingEnabled = true;
+			this.listAccessory.ItemHeight = 12;
+			this.listAccessory.Location = new System.Drawing.Point(3, 3);
+			this.listAccessory.Name = "listAccessory";
+			this.listAccessory.Size = new System.Drawing.Size(200, 820);
+			this.listAccessory.TabIndex = 0;
 			// 
 			// tabPage14
 			// 
@@ -882,14 +1145,18 @@ namespace Status_Editer {
 			// 
 			// StripInfo
 			// 
+			this.StripInfo.BorderStyle = System.Windows.Forms.Border3DStyle.RaisedOuter;
 			this.StripInfo.Name = "StripInfo";
-			this.StripInfo.Size = new System.Drawing.Size(117, 17);
+			this.StripInfo.Size = new System.Drawing.Size(1383, 17);
+			this.StripInfo.Spring = true;
 			this.StripInfo.Text = "StripInfomationLabel";
+			this.StripInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// toolStripProgressBar1
 			// 
 			this.toolStripProgressBar1.Name = "toolStripProgressBar1";
 			this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 16);
+			this.toolStripProgressBar1.Step = 1;
 			// 
 			// contextMenu
 			// 
@@ -926,6 +1193,13 @@ namespace Status_Editer {
 			this.tabPage4.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage6.ResumeLayout(false);
+			this.tabPage7.ResumeLayout(false);
+			this.tabPage8.ResumeLayout(false);
+			this.tabPage9.ResumeLayout(false);
+			this.tabPage10.ResumeLayout(false);
+			this.tabPage11.ResumeLayout(false);
+			this.tabPage12.ResumeLayout(false);
+			this.tabPage13.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
@@ -988,22 +1262,47 @@ namespace Status_Editer {
 		private NotifyIcon notifyIcon;
 		private ToolStripProgressBar toolStripProgressBar1;
 		private GigaBattlerDataSet GigaBattlerDataSet;
+		private ListBox listUnitType;
 		private TabControl tabControlUnit;
 		private TabPage tabPage21;
 		private TabPage tabPage22;
 		private TabPage tabPage23;
-		private ListBox listUnitType;
 		private TabPage tabPage24;
-		private User_Control.tab03Unit.DropInfomation DropInfomation;
+		private TabPage tabPage25;
+		private User_Control.tab03Unit.TotalUnitInfomation TotalUnitInfomation;
 		private User_Control.tab03Unit.UnitInfomation UnitInfomation;
+		private User_Control.tab03Unit.DropInfomation DropInfomation;
 		private User_Control.tab03Unit.StatusInfomation StatusInfomation;
 		private User_Control.tab03Unit.SkillInfomation ActiveSkillInfomation;
-		private TabPage tabPage25;
 		private User_Control.tab03Unit.AbilityInfomation PassiveSkillInfomation;
-		private User_Control.tab03Unit.TotalUnitInfomation TotalUnitInfomation;
 		private ListBox listRace;
 		private User_Control.tab05Race.RaceInfomation RaceInfomation;
 		private ListBox listJob;
 		private User_Control.tab06Job.JobInfomation JobInfomation;
+		private ListBox listMaker;
+		private ListBox listWeapon;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoWeapon;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemWeapon;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts1;
+		private ListBox listShield;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoShield;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemShield;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts2;
+		private ListBox listHelmet;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoHelmet;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemHelmet;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts3;
+		private ListBox listGauntlet;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoGauntlet;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemGauntlet;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts4;
+		private ListBox listArmor;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoArmor;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemArmor;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts5;
+		private ListBox listAccessory;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoAccessory;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemAccessory;
+		private User_Control.CommonParts.ItemAbilityInfoParts ItemAbilityInfoParts6;
 	}
 }

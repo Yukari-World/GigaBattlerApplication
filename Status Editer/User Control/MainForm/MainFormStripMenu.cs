@@ -1,21 +1,21 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Test Form
+// Main Form Strip Menu Parts
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer {
-	public partial class TestForm : Form {
+namespace Status_Editer.User_Control.MainForm {
+	[ToolboxItem(true)]
+	public partial class MainFormStripMenu : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public TestForm() {
+		public MainFormStripMenu() {
 			InitializeComponent();
 		}// End Method
 
@@ -51,9 +51,5 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		private void TestForm_Load(object sender, EventArgs e) {
-			___table_unitTableAdapter.Fill(gigaBattlerDataSet.@__table_unit);
-		}// End Method
 	}// End Class
 }
