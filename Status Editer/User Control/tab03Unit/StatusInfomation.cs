@@ -207,7 +207,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -262,11 +262,11 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -316,7 +316,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			chartStatus.Series[0].Points.Add(dataPoint5);
 			chartStatus.Series[0].Points.Add(dataPoint6);
 			chartStatus.Series[0].Points.Add(dataPoint7);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -330,14 +330,14 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="e">EventArgs</param>
 		private void numericTestLv_ValueChanged(object sender, EventArgs e) {
 			ChartChanges();
-		}// End Function
+		}// End Method
 
 		private void numericMinLevel_ValueChanged(object sender, EventArgs e) {
 			numericTestLv.Value = numericMinLevel.Value;
-		}// End Function
+		}// End Method
 
 		private void Status_ValueChanged(object sender, EventArgs e) {
 			ChartChanges();
-		}// End Function
+		}// End Method
 	}// End Class
 }

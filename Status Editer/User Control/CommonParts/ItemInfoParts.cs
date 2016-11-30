@@ -49,7 +49,7 @@ namespace Status_Editer.User_Control.CommonParts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace Status_Editer.User_Control.CommonParts {
 
 			// 共通設定
 			CommonSettings(tableWeaponBingingSource);
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
@@ -178,7 +178,7 @@ namespace Status_Editer.User_Control.CommonParts {
 
 			// 共通設定
 			CommonSettings(tableBingingSource);
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// バインド項目を再読み込みします。 
@@ -190,7 +190,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			ElementTableAdapter.Fill(elementTable2);
 			WeaponTypeTableAdapter.Fill(weaponType1);
 			WeaponTypeTableAdapter.Fill(weaponType2);
-		}// End Function
+		}// End Method
 
 		/// <summary> 
 		/// バインド項目を再読み込みします。 
@@ -199,11 +199,11 @@ namespace Status_Editer.User_Control.CommonParts {
 		public void ReloadBindings(__table_elementTableAdapter ElementTableAdapter) {
 			ElementTableAdapter.Fill(elementTable1);
 			ElementTableAdapter.Fill(elementTable2);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -243,7 +243,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -262,20 +262,6 @@ namespace Status_Editer.User_Control.CommonParts {
 				// カンマの除去
 				textPrice.Text = textPrice.Text.Replace(",", "");
 			}// End If
-		}// End Function
-
-		/// <summary>
-		/// Priceの値が変更された時の処理
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void textPrice_TextChanged(object sender, EventArgs e) {
-			if (textPrice.Text == "") {
-				textPrice.Text = "0";
-			} else {
-				// カンマの除去
-				textPrice.Text = textPrice.Text.Replace(",", "");
-			}// End If
-		}
+		}// End Method
 	}// End Class
 }

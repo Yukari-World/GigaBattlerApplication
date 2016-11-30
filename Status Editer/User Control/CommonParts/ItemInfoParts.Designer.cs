@@ -28,6 +28,18 @@ namespace Status_Editer.User_Control.CommonParts {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupInfomation = new System.Windows.Forms.GroupBox();
+			this.textPrice = new System.Windows.Forms.TextBox();
+			this.labelPrice = new System.Windows.Forms.Label();
+			this.numericReductionRate = new System.Windows.Forms.NumericUpDown();
+			this.labelReductionRate = new System.Windows.Forms.Label();
+			this.numericMagicDefence = new System.Windows.Forms.NumericUpDown();
+			this.labelMagicDefence = new System.Windows.Forms.Label();
+			this.numericPhysicsDefence = new System.Windows.Forms.NumericUpDown();
+			this.labelPhysicsDefence = new System.Windows.Forms.Label();
+			this.numericMagicPower = new System.Windows.Forms.NumericUpDown();
+			this.labelMagicPower = new System.Windows.Forms.Label();
+			this.numericPhysicsPower = new System.Windows.Forms.NumericUpDown();
+			this.labelPhysicsPower = new System.Windows.Forms.Label();
 			this.comboEType = new System.Windows.Forms.ComboBox();
 			this.labelEType = new System.Windows.Forms.Label();
 			this.comboMaker = new System.Windows.Forms.ComboBox();
@@ -61,30 +73,18 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.textItemID = new System.Windows.Forms.TextBox();
 			this.labelItemID = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.labelPhysicsPower = new System.Windows.Forms.Label();
-			this.numericPhysicsPower = new System.Windows.Forms.NumericUpDown();
-			this.labelMagicPower = new System.Windows.Forms.Label();
-			this.numericMagicPower = new System.Windows.Forms.NumericUpDown();
-			this.labelPhysicsDefence = new System.Windows.Forms.Label();
-			this.numericPhysicsDefence = new System.Windows.Forms.NumericUpDown();
-			this.labelMagicDefence = new System.Windows.Forms.Label();
-			this.numericMagicDefence = new System.Windows.Forms.NumericUpDown();
-			this.numericReductionRate = new System.Windows.Forms.NumericUpDown();
-			this.labelReductionRate = new System.Windows.Forms.Label();
-			this.textPrice = new System.Windows.Forms.TextBox();
-			this.labelPrice = new System.Windows.Forms.Label();
 			this.groupInfomation.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericReductionRate)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericMagicDefence)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsDefence)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericMagicPower)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsPower)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericATC)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericSSP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEC)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsPower)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericMagicPower)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsDefence)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericMagicDefence)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericReductionRate)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupInfomation
@@ -140,6 +140,175 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.groupInfomation.TabIndex = 0;
 			this.groupInfomation.TabStop = false;
 			this.groupInfomation.Text = "Item Infomation";
+			// 
+			// textPrice
+			// 
+			this.textPrice.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.textPrice.Location = new System.Drawing.Point(10, 315);
+			this.textPrice.Name = "textPrice";
+			this.textPrice.Size = new System.Drawing.Size(400, 19);
+			this.textPrice.TabIndex = 60;
+			this.textPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textPrice_Validating);
+			// 
+			// labelPrice
+			// 
+			this.labelPrice.AutoSize = true;
+			this.labelPrice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelPrice.Location = new System.Drawing.Point(10, 300);
+			this.labelPrice.Name = "labelPrice";
+			this.labelPrice.Size = new System.Drawing.Size(149, 12);
+			this.labelPrice.TabIndex = 59;
+			this.labelPrice.Text = "販売価格(売却額はこの半分)";
+			// 
+			// numericReductionRate
+			// 
+			this.numericReductionRate.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericReductionRate.Location = new System.Drawing.Point(480, 270);
+			this.numericReductionRate.Maximum = new decimal(new int[] {
+            30000,
+            0,
+            0,
+            0});
+			this.numericReductionRate.Minimum = new decimal(new int[] {
+            30000,
+            0,
+            0,
+            -2147483648});
+			this.numericReductionRate.Name = "numericReductionRate";
+			this.numericReductionRate.Size = new System.Drawing.Size(100, 19);
+			this.numericReductionRate.TabIndex = 58;
+			this.numericReductionRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericReductionRate.ThousandsSeparator = true;
+			// 
+			// labelReductionRate
+			// 
+			this.labelReductionRate.AutoSize = true;
+			this.labelReductionRate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelReductionRate.Location = new System.Drawing.Point(480, 255);
+			this.labelReductionRate.Name = "labelReductionRate";
+			this.labelReductionRate.Size = new System.Drawing.Size(78, 12);
+			this.labelReductionRate.TabIndex = 57;
+			this.labelReductionRate.Text = "ダメージ軽減率";
+			// 
+			// numericMagicDefence
+			// 
+			this.numericMagicDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericMagicDefence.Location = new System.Drawing.Point(360, 270);
+			this.numericMagicDefence.Maximum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            0});
+			this.numericMagicDefence.Minimum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            -2147483648});
+			this.numericMagicDefence.Name = "numericMagicDefence";
+			this.numericMagicDefence.Size = new System.Drawing.Size(100, 19);
+			this.numericMagicDefence.TabIndex = 56;
+			this.numericMagicDefence.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMagicDefence.ThousandsSeparator = true;
+			// 
+			// labelMagicDefence
+			// 
+			this.labelMagicDefence.AutoSize = true;
+			this.labelMagicDefence.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelMagicDefence.Location = new System.Drawing.Point(360, 255);
+			this.labelMagicDefence.Name = "labelMagicDefence";
+			this.labelMagicDefence.Size = new System.Drawing.Size(53, 12);
+			this.labelMagicDefence.TabIndex = 55;
+			this.labelMagicDefence.Text = "魔法耐性";
+			// 
+			// numericPhysicsDefence
+			// 
+			this.numericPhysicsDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericPhysicsDefence.Location = new System.Drawing.Point(240, 270);
+			this.numericPhysicsDefence.Maximum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            0});
+			this.numericPhysicsDefence.Minimum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            -2147483648});
+			this.numericPhysicsDefence.Name = "numericPhysicsDefence";
+			this.numericPhysicsDefence.Size = new System.Drawing.Size(100, 19);
+			this.numericPhysicsDefence.TabIndex = 54;
+			this.numericPhysicsDefence.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericPhysicsDefence.ThousandsSeparator = true;
+			// 
+			// labelPhysicsDefence
+			// 
+			this.labelPhysicsDefence.AutoSize = true;
+			this.labelPhysicsDefence.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelPhysicsDefence.Location = new System.Drawing.Point(240, 255);
+			this.labelPhysicsDefence.Name = "labelPhysicsDefence";
+			this.labelPhysicsDefence.Size = new System.Drawing.Size(53, 12);
+			this.labelPhysicsDefence.TabIndex = 53;
+			this.labelPhysicsDefence.Text = "物理耐性";
+			// 
+			// numericMagicPower
+			// 
+			this.numericMagicPower.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericMagicPower.Location = new System.Drawing.Point(120, 270);
+			this.numericMagicPower.Maximum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            0});
+			this.numericMagicPower.Minimum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            -2147483648});
+			this.numericMagicPower.Name = "numericMagicPower";
+			this.numericMagicPower.Size = new System.Drawing.Size(100, 19);
+			this.numericMagicPower.TabIndex = 52;
+			this.numericMagicPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericMagicPower.ThousandsSeparator = true;
+			// 
+			// labelMagicPower
+			// 
+			this.labelMagicPower.AutoSize = true;
+			this.labelMagicPower.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelMagicPower.Location = new System.Drawing.Point(120, 255);
+			this.labelMagicPower.Name = "labelMagicPower";
+			this.labelMagicPower.Size = new System.Drawing.Size(53, 12);
+			this.labelMagicPower.TabIndex = 51;
+			this.labelMagicPower.Text = "魔法威力";
+			// 
+			// numericPhysicsPower
+			// 
+			this.numericPhysicsPower.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericPhysicsPower.Location = new System.Drawing.Point(10, 270);
+			this.numericPhysicsPower.Maximum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            0});
+			this.numericPhysicsPower.Minimum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            -2147483648});
+			this.numericPhysicsPower.Name = "numericPhysicsPower";
+			this.numericPhysicsPower.Size = new System.Drawing.Size(100, 19);
+			this.numericPhysicsPower.TabIndex = 50;
+			this.numericPhysicsPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericPhysicsPower.ThousandsSeparator = true;
+			// 
+			// labelPhysicsPower
+			// 
+			this.labelPhysicsPower.AutoSize = true;
+			this.labelPhysicsPower.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelPhysicsPower.Location = new System.Drawing.Point(10, 255);
+			this.labelPhysicsPower.Name = "labelPhysicsPower";
+			this.labelPhysicsPower.Size = new System.Drawing.Size(53, 12);
+			this.labelPhysicsPower.TabIndex = 49;
+			this.labelPhysicsPower.Text = "物理威力";
 			// 
 			// comboEType
 			// 
@@ -575,176 +744,6 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// labelPhysicsPower
-			// 
-			this.labelPhysicsPower.AutoSize = true;
-			this.labelPhysicsPower.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelPhysicsPower.Location = new System.Drawing.Point(10, 255);
-			this.labelPhysicsPower.Name = "labelPhysicsPower";
-			this.labelPhysicsPower.Size = new System.Drawing.Size(53, 12);
-			this.labelPhysicsPower.TabIndex = 49;
-			this.labelPhysicsPower.Text = "物理威力";
-			// 
-			// numericPhysicsPower
-			// 
-			this.numericPhysicsPower.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericPhysicsPower.Location = new System.Drawing.Point(10, 270);
-			this.numericPhysicsPower.Maximum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            0});
-			this.numericPhysicsPower.Minimum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            -2147483648});
-			this.numericPhysicsPower.Name = "numericPhysicsPower";
-			this.numericPhysicsPower.Size = new System.Drawing.Size(100, 19);
-			this.numericPhysicsPower.TabIndex = 50;
-			this.numericPhysicsPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericPhysicsPower.ThousandsSeparator = true;
-			// 
-			// labelMagicPower
-			// 
-			this.labelMagicPower.AutoSize = true;
-			this.labelMagicPower.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelMagicPower.Location = new System.Drawing.Point(120, 255);
-			this.labelMagicPower.Name = "labelMagicPower";
-			this.labelMagicPower.Size = new System.Drawing.Size(53, 12);
-			this.labelMagicPower.TabIndex = 51;
-			this.labelMagicPower.Text = "魔法威力";
-			// 
-			// numericMagicPower
-			// 
-			this.numericMagicPower.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericMagicPower.Location = new System.Drawing.Point(120, 270);
-			this.numericMagicPower.Maximum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            0});
-			this.numericMagicPower.Minimum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            -2147483648});
-			this.numericMagicPower.Name = "numericMagicPower";
-			this.numericMagicPower.Size = new System.Drawing.Size(100, 19);
-			this.numericMagicPower.TabIndex = 52;
-			this.numericMagicPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericMagicPower.ThousandsSeparator = true;
-			// 
-			// labelPhysicsDefence
-			// 
-			this.labelPhysicsDefence.AutoSize = true;
-			this.labelPhysicsDefence.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelPhysicsDefence.Location = new System.Drawing.Point(240, 255);
-			this.labelPhysicsDefence.Name = "labelPhysicsDefence";
-			this.labelPhysicsDefence.Size = new System.Drawing.Size(53, 12);
-			this.labelPhysicsDefence.TabIndex = 53;
-			this.labelPhysicsDefence.Text = "物理耐性";
-			// 
-			// numericPhysicsDefence
-			// 
-			this.numericPhysicsDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericPhysicsDefence.Location = new System.Drawing.Point(240, 270);
-			this.numericPhysicsDefence.Maximum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            0});
-			this.numericPhysicsDefence.Minimum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            -2147483648});
-			this.numericPhysicsDefence.Name = "numericPhysicsDefence";
-			this.numericPhysicsDefence.Size = new System.Drawing.Size(100, 19);
-			this.numericPhysicsDefence.TabIndex = 54;
-			this.numericPhysicsDefence.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericPhysicsDefence.ThousandsSeparator = true;
-			// 
-			// labelMagicDefence
-			// 
-			this.labelMagicDefence.AutoSize = true;
-			this.labelMagicDefence.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelMagicDefence.Location = new System.Drawing.Point(360, 255);
-			this.labelMagicDefence.Name = "labelMagicDefence";
-			this.labelMagicDefence.Size = new System.Drawing.Size(53, 12);
-			this.labelMagicDefence.TabIndex = 55;
-			this.labelMagicDefence.Text = "魔法耐性";
-			// 
-			// numericMagicDefence
-			// 
-			this.numericMagicDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericMagicDefence.Location = new System.Drawing.Point(360, 270);
-			this.numericMagicDefence.Maximum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            0});
-			this.numericMagicDefence.Minimum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            -2147483648});
-			this.numericMagicDefence.Name = "numericMagicDefence";
-			this.numericMagicDefence.Size = new System.Drawing.Size(100, 19);
-			this.numericMagicDefence.TabIndex = 56;
-			this.numericMagicDefence.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericMagicDefence.ThousandsSeparator = true;
-			// 
-			// numericReductionRate
-			// 
-			this.numericReductionRate.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericReductionRate.Location = new System.Drawing.Point(480, 270);
-			this.numericReductionRate.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-			this.numericReductionRate.Minimum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            -2147483648});
-			this.numericReductionRate.Name = "numericReductionRate";
-			this.numericReductionRate.Size = new System.Drawing.Size(100, 19);
-			this.numericReductionRate.TabIndex = 58;
-			this.numericReductionRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericReductionRate.ThousandsSeparator = true;
-			// 
-			// labelReductionRate
-			// 
-			this.labelReductionRate.AutoSize = true;
-			this.labelReductionRate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelReductionRate.Location = new System.Drawing.Point(480, 255);
-			this.labelReductionRate.Name = "labelReductionRate";
-			this.labelReductionRate.Size = new System.Drawing.Size(78, 12);
-			this.labelReductionRate.TabIndex = 57;
-			this.labelReductionRate.Text = "ダメージ軽減率";
-			// 
-			// textPrice
-			// 
-			this.textPrice.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.textPrice.Location = new System.Drawing.Point(10, 315);
-			this.textPrice.Name = "textPrice";
-			this.textPrice.Size = new System.Drawing.Size(400, 19);
-			this.textPrice.TabIndex = 60;
-			this.textPrice.TextChanged += new System.EventHandler(this.textPrice_TextChanged);
-			this.textPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textPrice_Validating);
-			// 
-			// labelPrice
-			// 
-			this.labelPrice.AutoSize = true;
-			this.labelPrice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelPrice.Location = new System.Drawing.Point(10, 300);
-			this.labelPrice.Name = "labelPrice";
-			this.labelPrice.Size = new System.Drawing.Size(149, 12);
-			this.labelPrice.TabIndex = 59;
-			this.labelPrice.Text = "販売価格(売却額はこの半分)";
-			// 
 			// ItemInfoParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -755,17 +754,17 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.Size = new System.Drawing.Size(600, 800);
 			this.groupInfomation.ResumeLayout(false);
 			this.groupInfomation.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericReductionRate)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericMagicDefence)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsDefence)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericMagicPower)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsPower)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericATC)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericSSP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEC)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsPower)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericMagicPower)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericPhysicsDefence)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericMagicDefence)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericReductionRate)).EndInit();
 			this.ResumeLayout(false);
 
 		}

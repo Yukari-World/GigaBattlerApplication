@@ -45,7 +45,7 @@ namespace Status_Editer.User_Control.CommonParts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// ジャンル毎に必要かと思われたが、引数パラメータが全て同じなことが判明(オーバーロードの必要がない)
@@ -62,11 +62,11 @@ namespace Status_Editer.User_Control.CommonParts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -98,7 +98,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			// LabelをUser Controlに追加する
 			Controls.Add(StatusBar);
 
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// コントロールを再描画時に実行する処理
@@ -127,7 +127,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			PenBlack.Dispose();
 			PenGray.Dispose();
 			formGraphics.Dispose();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// numericUpDown1の値が変更された時の処理
@@ -145,6 +145,6 @@ namespace Status_Editer.User_Control.CommonParts {
 				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
 				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
 			}// End If
-		}// End Function
+		}// End Method
 	}// End Class
 }

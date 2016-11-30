@@ -42,7 +42,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// Weapon
@@ -67,7 +67,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		//Shield
 		/// <summary>
@@ -90,7 +90,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		// Helmet
 		/// <summary>
@@ -113,7 +113,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		// Gauntlet
 		/// <summary>
@@ -136,7 +136,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		// Armor
 		/// <summary>
@@ -159,7 +159,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 		// Accessory
 		/// <summary>
@@ -182,11 +182,11 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

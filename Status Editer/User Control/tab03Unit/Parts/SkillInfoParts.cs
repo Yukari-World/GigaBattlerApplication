@@ -45,7 +45,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			comboSkill.DataSource = SkillTable;
 			comboSkill.DisplayMember = "SkillName";
 			comboSkill.ValueMember = "SkillID";
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// バインド項目を再読み込みします。
@@ -70,11 +70,11 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
 		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
 			SkillAdapter.Fill(SkillTable);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

@@ -927,7 +927,7 @@ namespace Status_Editer {
 			// 
 			this.StripInfo.BorderStyle = System.Windows.Forms.Border3DStyle.RaisedOuter;
 			this.StripInfo.Name = "StripInfo";
-			this.StripInfo.Size = new System.Drawing.Size(1383, 17);
+			this.StripInfo.Size = new System.Drawing.Size(1352, 17);
 			this.StripInfo.Spring = true;
 			this.StripInfo.Text = "StripInfomationLabel";
 			this.StripInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -936,6 +936,7 @@ namespace Status_Editer {
 			// 
 			this.toolStripProgressBar1.Name = "toolStripProgressBar1";
 			this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 16);
+			this.toolStripProgressBar1.Step = 1;
 			// 
 			// contextMenu
 			// 

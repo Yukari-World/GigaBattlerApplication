@@ -112,7 +112,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -129,12 +129,12 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -144,7 +144,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		protected virtual void OnCostMultiplierChanged(NumEventArgs e) {
 			// この1行で済むらしい……?
 			CostMultiplierChanged?.Invoke(this, e);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 			// LabelをGroupBoxに追加する
 			groupBase.Controls.Add(StatusBar);
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// Base Statusの値が変化した時の処理
@@ -218,6 +218,6 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 					StatusCost = (int)numericBaseStatus.Value * CostMultiplier;
 					break;
 			}// End Switch
-		}// End Function
+		}// End Method
 	}// End Class
 }

@@ -66,7 +66,7 @@ namespace Status_Editer {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -74,10 +74,11 @@ namespace Status_Editer {
 		/// </summary>
 		private void UpdateSQL() {
 			toolStripProgressBar1.Value = 0;
-			toolStripProgressBar1.Maximum = 110;
+			toolStripProgressBar1.Maximum = 11;
 			StripInfo.Text = "Updating Database...";
 
 			// 編集終了宣言
+			Validate();
 			tableUnitBindingSource.EndEdit();
 			tableRaceBindingSource.EndEdit();
 			tableJobBindingSource.EndEdit();
@@ -91,36 +92,36 @@ namespace Status_Editer {
 
 			toolStripProgressBar1.PerformStep();
 
-			//try {
+			try {
 				// 更新処理
-				tableUnitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
+				tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
 				toolStripProgressBar1.PerformStep();
-				tableRaceTableAdapter.Update(GigaBattlerDataSet.@__table_race);
+				tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
 				toolStripProgressBar1.PerformStep();
-				tableJobTableAdapter.Update(GigaBattlerDataSet.@__table_job);
+				tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
 				toolStripProgressBar1.PerformStep();
-				tableWeaponTableAdapter.Update(GigaBattlerDataSet.@__table_weapon);
+				tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
 				toolStripProgressBar1.PerformStep();
-				tableShieldTableAdapter.Update(GigaBattlerDataSet.@__table_shield);
+				tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
 				toolStripProgressBar1.PerformStep();
-				tableHelmetTableAdapter.Update(GigaBattlerDataSet.@__table_helmet);
+				tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
 				toolStripProgressBar1.PerformStep();
-				tableGauntletTableAdapter.Update(GigaBattlerDataSet.@__table_gauntlet);
+				tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
 				toolStripProgressBar1.PerformStep();
-				tableArmorTableAdapter.Update(GigaBattlerDataSet.@__table_armor);
+				tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
 				toolStripProgressBar1.PerformStep();
-				tableAccessoryTableAdapter.Update(GigaBattlerDataSet.@__table_accessory);
+				tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
 				toolStripProgressBar1.PerformStep();
-				tableSkillTableAdapter.Update(GigaBattlerDataSet.@__table_skill);
+				tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
 				toolStripProgressBar1.PerformStep();
 
 				StripInfo.Text = "Update Succses!!";
-			//} catch (Exception ex) {
-			//	StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
-			//	Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
-			//	MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			//}
-		}// End Function
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -322,18 +323,18 @@ namespace Status_Editer {
 			// データの埋め込み
 			// ネットワーク関連を使用するのでtryを使用
 			try {
-				tableElementTableAdapter.Fill(GigaBattlerDataSet.@__table_element);
-				tableWeaponTypeTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon_type);
-				tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
-				tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
-				tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
-				tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.@__table_weapon);
-				tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
-				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
-				tableGauntletTableAdapter.Fill(GigaBattlerDataSet.@__table_gauntlet);
-				tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
-				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
-				tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+				tableElementTableAdapter.Fill(GigaBattlerDataSet.__table_element);
+				tableWeaponTypeTableAdapter.Fill(GigaBattlerDataSet.__table_weapon_type);
+				tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
+				tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
+				tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
+				tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
+				tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
+				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
+				tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
+				tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
+				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
+				tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
 
 				// TAB: ユニット
 				DropInfomation.ReloadBindings(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
@@ -362,7 +363,7 @@ namespace Status_Editer {
 			Task5_8.Dispose();
 
 			StripInfo.Text = "Welcome!!";
-		}// End Function
+		}// End Method
 
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
@@ -397,7 +398,7 @@ namespace Status_Editer {
 				// 選択されたフォルダを表示する
 				rootDirectory = fbd.SelectedPath;
 			}// End If
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 「ファイル」→「アプリケーションの終了」の処理内容
@@ -417,7 +418,7 @@ namespace Status_Editer {
 			}// End Switch
 			Close();
 			Application.Exit();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 「データベース」→「再読み込み」の処理内容
@@ -428,30 +429,30 @@ namespace Status_Editer {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
 				// ステータスバーの更新
 				toolStripProgressBar1.Value = 0;
-				toolStripProgressBar1.Maximum = 100;
+				toolStripProgressBar1.Maximum = 10;
 				StripInfo.Text = "Reloading Database...";
 
 				try {
 					toolStripProgressBar1.Value = 0;
-					tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
+					tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
 					toolStripProgressBar1.PerformStep();
-					tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
+					tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
 					toolStripProgressBar1.PerformStep();
-					tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
+					tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
 					toolStripProgressBar1.PerformStep();
-					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.@__table_weapon);
+					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
 					toolStripProgressBar1.PerformStep();
-					tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
+					tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
 					toolStripProgressBar1.PerformStep();
-					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
+					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
 					toolStripProgressBar1.PerformStep();
-					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.@__table_gauntlet);
+					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
 					toolStripProgressBar1.PerformStep();
-					tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
+					tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
 					toolStripProgressBar1.PerformStep();
-					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
+					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
 					toolStripProgressBar1.PerformStep();
-					tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+					tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
 					toolStripProgressBar1.PerformStep();
 
 					StripInfo.Text = "Done!!";
@@ -461,7 +462,7 @@ namespace Status_Editer {
 					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}// End Try
 			}// End If
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 「データベース」→「変更の適用」の処理内容
@@ -470,7 +471,7 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
 			UpdateSQL();
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 
@@ -481,7 +482,7 @@ namespace Status_Editer {
 			TestForm Form2 = new TestForm();
 			Form2.Show();
 			//DataBindings();
-		}// End Function
+		}// End Method
 
 		//----------------------------------------------------------------------------------------------------
 		// TAB: ユニット

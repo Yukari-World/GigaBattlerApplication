@@ -38,7 +38,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Pubilc Function
+		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -93,11 +93,11 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Private Function
+		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
@@ -194,7 +194,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			labelMaxLvEVT.Text = (BaseEVT + LvPEVT * Math.Min(maxLv, 100M) + (decimal)Math.Sqrt((double)MaxLvSPD / 10D)).ToString("N0");
 			labelMaxLvEXP.Text = ((BaseEXP + LvPEXP * maxLv) * Math.Min((decimal)(Math.Sqrt(maxLv) * 2D) + 100M, ScaleEXP) / 100M).ToString("N0");
 			labelMaxLvMoney.Text = ((BaseMoney + LvPMoney * maxLv) * Math.Min((decimal)(Math.Sqrt(maxLv) * 2D) + 100M, ScaleMoney) / 100M).ToString("N0");
-		}// End Function
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -207,7 +207,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void TotalUnitInfomation_Load(object sender, EventArgs e) {
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 最小Lv.に関する処理
@@ -226,7 +226,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 			minLv = long.Parse(labelMinLv.Text.Replace(",", ""));
 			labelLvMin.Text = "Lv." + labelMinLv.Text;
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// 最大Lv.に関する処理。-1の処理に関する仕様
@@ -248,7 +248,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 				maxLv = long.Parse(labelMaxLv.Text.Replace(",", ""));
 			}// End If
 			labelLvMax.Text = "Lv." + maxLv.ToString("N0");
-		}// End Function
+		}// End Method
 
 		/// <summary>
 		/// ステータスの値が更新された時の処理
@@ -265,6 +265,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			}// End If
 
 			Change_LvValue();
-		}// End Function
+		}// End Method
 	}// End Class
 }
