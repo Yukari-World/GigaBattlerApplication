@@ -37,25 +37,25 @@ namespace Status_Editer.User_Control.CommonParts {
 			// 
 			this.numericUpDown1.Location = new System.Drawing.Point(100, 1);
 			this.numericUpDown1.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
+			999999,
+			0,
+			0,
+			0});
 			this.numericUpDown1.Minimum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            -2147483648});
+			999999,
+			0,
+			0,
+			-2147483648});
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(80, 19);
 			this.numericUpDown1.TabIndex = 13;
 			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericUpDown1.ThousandsSeparator = true;
 			this.numericUpDown1.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
+			100,
+			0,
+			0,
+			0});
 			this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
 			// 
 			// label1

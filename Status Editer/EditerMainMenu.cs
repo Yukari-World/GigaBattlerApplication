@@ -219,9 +219,24 @@ namespace Status_Editer {
 				listWeapon.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
 				// TAB: 盾
+
+				listShield.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 				// TAB: 頭防具
+
+				listHelmet.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 				// TAB: 腕防具
+
+				listGauntlet.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 				// TAB: 体防具
+
+				listArmor.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
+				// TAB: アクセサリー
+
+				listAccessory.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
 				Debug.WriteLine("Task 3 Finish.");
 			});
@@ -250,6 +265,26 @@ namespace Status_Editer {
 				listWeapon.DataSource = tableWeaponBingingSource;
 				listWeapon.DisplayMember = "WeaponName";
 				listWeapon.ValueMember = "WeaponID";
+
+				listShield.DataSource = tableShieldBingingSource;
+				listShield.DisplayMember = "ShieldName";
+				listShield.ValueMember = "ShieldID";
+
+				listHelmet.DataSource = tableHelmetBingingSource;
+				listHelmet.DisplayMember = "HelmetName";
+				listHelmet.ValueMember = "HelmetID";
+
+				listGauntlet.DataSource = tableGauntletBingingSource;
+				listGauntlet.DisplayMember = "GauntletName";
+				listGauntlet.ValueMember = "GauntletID";
+
+				listArmor.DataSource = tableArmorBingingSource;
+				listArmor.DisplayMember = "ArmorName";
+				listArmor.ValueMember = "ArmorID";
+
+				listAccessory.DataSource = tableAccessoryBingingSource;
+				listAccessory.DisplayMember = "AccessoryName";
+				listAccessory.ValueMember = "AccessoryID";
 
 				Debug.WriteLine("Task 4 Finish.");
 			});
@@ -309,14 +344,70 @@ namespace Status_Editer {
 			});
 
 			// TAB: 盾
+
+			var Task5_9 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-9 Start.");
+
+				ItemInfoShield.LoadDataBindings(tableShieldBingingSource, "Shield");
+				EquipItemShield.LoadDataBindings(tableShieldBingingSource);
+
+				Debug.WriteLine("Task 5-9 Finish.");
+			});
+
 			// TAB: 頭防具
+
+			var Task5_10 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-10 Start.");
+
+				ItemInfoHelmet.LoadDataBindings(tableHelmetBingingSource, "Helmet");
+				EquipItemHelmet.LoadDataBindings(tableHelmetBingingSource);
+
+				Debug.WriteLine("Task 5-10 Finish.");
+			});
+
 			// TAB: 腕防具
+
+			var Task5_11 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-11 Start.");
+
+				ItemInfoGauntlet.LoadDataBindings(tableGauntletBingingSource, "Gauntlet");
+				EquipItemGauntlet.LoadDataBindings(tableGauntletBingingSource);
+
+				Debug.WriteLine("Task 5-11 Finish.");
+			});
+
 			// TAB: 体防具
+
+			var Task5_12 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-12 Start.");
+
+				ItemInfoArmor.LoadDataBindings(tableArmorBingingSource, "Armor");
+				EquipItemArmor.LoadDataBindings(tableArmorBingingSource);
+
+				Debug.WriteLine("Task 5-12 Finish.");
+			});
+
+			// TAB: アクセサリー
+
+			var Task5_13 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-13 Start.");
+
+				ItemInfoAccessory.LoadDataBindings(tableAccessoryBingingSource, "Accessory");
+				EquipItemAccessory.LoadDataBindings(tableAccessoryBingingSource);
+
+				Debug.WriteLine("Task 5-13 Finish.");
+			});
+
 
 			Task5_3.Wait();
 			Task5_5.Wait();
 			Task5_6.Wait();
 			Task5_8.Wait();
+			Task5_9.Wait();
+			Task5_10.Wait();
+			Task5_11.Wait();
+			Task5_12.Wait();
+			Task5_13.Wait();
 
 			//----------------------------------------------------------------------------------------------------
 			// 共通
@@ -343,6 +434,27 @@ namespace Status_Editer {
 				// TAB: 武器
 
 				ItemInfoWeapon.ReloadBindings(tableElementTableAdapter, tableWeaponTypeTableAdapter);
+
+				// TAB: 盾
+
+				ItemInfoShield.ReloadBindings(tableElementTableAdapter);
+
+				// TAB: 頭防具
+
+				ItemInfoHelmet.ReloadBindings(tableElementTableAdapter);
+
+				// TAB: 腕防具
+
+				ItemInfoGauntlet.ReloadBindings(tableElementTableAdapter);
+
+				// TAB: 体防具
+
+				ItemInfoArmor.ReloadBindings(tableElementTableAdapter);
+
+				// TAB: アクセサリー
+
+				ItemInfoAccessory.ReloadBindings(tableElementTableAdapter);
+
 			} catch (Exception ex) {
 				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -361,6 +473,11 @@ namespace Status_Editer {
 			Task5_5.Dispose();
 			Task5_6.Dispose();
 			Task5_8.Dispose();
+			Task5_9.Dispose();
+			Task5_10.Dispose();
+			Task5_11.Dispose();
+			Task5_12.Dispose();
+			Task5_13.Dispose();
 
 			StripInfo.Text = "Welcome!!";
 		}// End Method

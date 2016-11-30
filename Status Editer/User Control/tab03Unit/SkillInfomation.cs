@@ -66,6 +66,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
+
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 		}// End Method
 

@@ -111,9 +111,6 @@ namespace Status_Editer.User_Control.CommonParts {
 			}// End Loop
 
 			//----------------------------------------------------------------------------------------------------
-			// Binding Sourceの設定
-
-			//----------------------------------------------------------------------------------------------------
 			// コンボボックスの設定
 
 			comboEquipItemGroup.DataSource = weaponType1;
@@ -135,6 +132,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
 			// Weapon Data専用で必要なもの
+
 			textItemID.DataBindings.Add(new Binding("Text", tableWeaponBingingSource, "WeaponID", true));
 			textItemName.DataBindings.Add(new Binding("Text", tableWeaponBingingSource, "WeaponName", true));
 
@@ -171,6 +169,8 @@ namespace Status_Editer.User_Control.CommonParts {
 			numericATC.Visible = false;
 			labelTarget.Visible = false;
 			comboTarget.Visible = false;
+			labelEType.Visible = false;
+			comboEType.Visible = false;
 			labelAttackItemGroup.Visible = false;
 			comboAttackItemGroup.Visible = false;
 			labelEquipItemGroup.Visible = false;
@@ -209,8 +209,8 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <summary>
 		/// 共通するBinding Sourceの割り当てやデザイナーの設定を行います
 		/// </summary>
-		/// <param name="DatBindingSource">DatBindingSource</param>
-		private void CommonSettings(BindingSource DatBindingSource) {
+		/// <param name="DataBindingSource">DatBindingSource</param>
+		private void CommonSettings(BindingSource DataBindingSource) {
 			// コンボボックスの設定
 
 			comboElement1.DataSource = elementTable1;
@@ -223,21 +223,24 @@ namespace Status_Editer.User_Control.CommonParts {
 
 			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
-			textPrice.DataBindings.Add(new Binding("Text", DatBindingSource, "Price", true));
-			textInfo.DataBindings.Add(new Binding("Text", DatBindingSource, "Info", true));
 
-			numericPhysicsPower.DataBindings.Add(new Binding("Value", DatBindingSource, "PhysicsPower", true));
-			numericMagicPower.DataBindings.Add(new Binding("Value", DatBindingSource, "MagicPower", true));
-			numericPhysicsDefence.DataBindings.Add(new Binding("Value", DatBindingSource, "PhysicsDefence", true));
-			numericMagicDefence.DataBindings.Add(new Binding("Value", DatBindingSource, "MagicDefence", true));
-			numericReductionRate.DataBindings.Add(new Binding("Value", DatBindingSource, "ReductionRate", true));
-			numericWT.DataBindings.Add(new Binding("Value", DatBindingSource, "WT", true));
-			numericEC.DataBindings.Add(new Binding("Value", DatBindingSource, "EC", true));
-			numericSSP.DataBindings.Add(new Binding("Value", DatBindingSource, "SSP", true));
-			numericRare.DataBindings.Add(new Binding("Value", DatBindingSource, "Rare", true));
+			textPrice.DataBindings.Add(new Binding("Text", DataBindingSource, "Price", true));
+			textInfo.DataBindings.Add(new Binding("Text", DataBindingSource, "Info", true));
 
-			comboElement1.DataBindings.Add(new Binding("SelectedValue", DatBindingSource, "Element1", true));
-			comboElement2.DataBindings.Add(new Binding("SelectedValue", DatBindingSource, "Element2", true));
+			numericPhysicsPower.DataBindings.Add(new Binding("Value", DataBindingSource, "PhysicsPower", true));
+			numericMagicPower.DataBindings.Add(new Binding("Value", DataBindingSource, "MagicPower", true));
+			numericPhysicsDefence.DataBindings.Add(new Binding("Value", DataBindingSource, "PhysicsDefence", true));
+			numericMagicDefence.DataBindings.Add(new Binding("Value", DataBindingSource, "MagicDefence", true));
+			numericReductionRate.DataBindings.Add(new Binding("Value", DataBindingSource, "ReductionRate", true));
+			numericWT.DataBindings.Add(new Binding("Value", DataBindingSource, "WT", true));
+			numericEC.DataBindings.Add(new Binding("Value", DataBindingSource, "EC", true));
+			numericSSP.DataBindings.Add(new Binding("Value", DataBindingSource, "SSP", true));
+			numericRare.DataBindings.Add(new Binding("Value", DataBindingSource, "Rare", true));
+
+			comboElement1.DataBindings.Add(new Binding("SelectedValue", DataBindingSource, "Element1", true));
+			comboElement2.DataBindings.Add(new Binding("SelectedValue", DataBindingSource, "Element2", true));
+
+			checkBuyFlag.DataBindings.Add(new Binding("Checked", DataBindingSource, "Buy", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
