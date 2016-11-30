@@ -161,6 +161,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.textPrice.Name = "textPrice";
 			this.textPrice.Size = new System.Drawing.Size(400, 19);
 			this.textPrice.TabIndex = 41;
+			this.textPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.textPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textPrice_Validating);
 			// 
 			// labelPrice
@@ -178,22 +179,22 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericReductionRate.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericReductionRate.Location = new System.Drawing.Point(480, 270);
 			this.numericReductionRate.Maximum = new decimal(new int[] {
-			30000,
-			0,
-			0,
-			0});
+            30000,
+            0,
+            0,
+            0});
 			this.numericReductionRate.Minimum = new decimal(new int[] {
-			30000,
-			0,
-			0,
-			-2147483648});
+            30000,
+            0,
+            0,
+            -2147483648});
 			this.numericReductionRate.Name = "numericReductionRate";
 			this.numericReductionRate.Size = new System.Drawing.Size(100, 19);
 			this.numericReductionRate.TabIndex = 39;
 			this.numericReductionRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericReductionRate.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericReductionRate, "ダメージの軽減率。\r\nXを設定値として X > 0なら減少、X < 0なら増加する。\r\n1辺り0.01%ほど変化し、最小0.01%まで減少(クリティカルに応じて効" +
-		"果減)するが、最大の上限はない。\r\n設定値: -30,000 ～ 30,000");
+        "果減)するが、最大の上限はない。\r\n設定値: -30,000 ～ 30,000");
 			// 
 			// labelReductionRate
 			// 
@@ -210,15 +211,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericMagicDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMagicDefence.Location = new System.Drawing.Point(360, 270);
 			this.numericMagicDefence.Maximum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			0});
+            150000,
+            0,
+            0,
+            0});
 			this.numericMagicDefence.Minimum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			-2147483648});
+            150000,
+            0,
+            0,
+            -2147483648});
 			this.numericMagicDefence.Name = "numericMagicDefence";
 			this.numericMagicDefence.Size = new System.Drawing.Size(100, 19);
 			this.numericMagicDefence.TabIndex = 37;
@@ -240,15 +241,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericPhysicsDefence.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericPhysicsDefence.Location = new System.Drawing.Point(240, 270);
 			this.numericPhysicsDefence.Maximum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			0});
+            150000,
+            0,
+            0,
+            0});
 			this.numericPhysicsDefence.Minimum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			-2147483648});
+            150000,
+            0,
+            0,
+            -2147483648});
 			this.numericPhysicsDefence.Name = "numericPhysicsDefence";
 			this.numericPhysicsDefence.Size = new System.Drawing.Size(100, 19);
 			this.numericPhysicsDefence.TabIndex = 35;
@@ -270,15 +271,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericMagicPower.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericMagicPower.Location = new System.Drawing.Point(120, 270);
 			this.numericMagicPower.Maximum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			0});
+            150000,
+            0,
+            0,
+            0});
 			this.numericMagicPower.Minimum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			-2147483648});
+            150000,
+            0,
+            0,
+            -2147483648});
 			this.numericMagicPower.Name = "numericMagicPower";
 			this.numericMagicPower.Size = new System.Drawing.Size(100, 19);
 			this.numericMagicPower.TabIndex = 33;
@@ -300,15 +301,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericPhysicsPower.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericPhysicsPower.Location = new System.Drawing.Point(10, 270);
 			this.numericPhysicsPower.Maximum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			0});
+            150000,
+            0,
+            0,
+            0});
 			this.numericPhysicsPower.Minimum = new decimal(new int[] {
-			150000,
-			0,
-			0,
-			-2147483648});
+            150000,
+            0,
+            0,
+            -2147483648});
 			this.numericPhysicsPower.Name = "numericPhysicsPower";
 			this.numericPhysicsPower.Size = new System.Drawing.Size(100, 19);
 			this.numericPhysicsPower.TabIndex = 31;
@@ -389,15 +390,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericATC.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericATC.Location = new System.Drawing.Point(105, 180);
 			this.numericATC.Maximum = new decimal(new int[] {
-			1000,
-			0,
-			0,
-			0});
+            1000,
+            0,
+            0,
+            0});
 			this.numericATC.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericATC.Name = "numericATC";
 			this.numericATC.Size = new System.Drawing.Size(75, 19);
 			this.numericATC.TabIndex = 19;
@@ -405,10 +406,10 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericATC.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericATC, "攻撃回数。\r\nマシンガン系は10以上指定を推奨\r\n設定値: 1 ～ 1,000");
 			this.numericATC.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelATC
 			// 
@@ -425,15 +426,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericSPC.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericSPC.Location = new System.Drawing.Point(10, 180);
 			this.numericSPC.Maximum = new decimal(new int[] {
-			10000,
-			0,
-			0,
-			0});
+            10000,
+            0,
+            0,
+            0});
 			this.numericSPC.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericSPC.Name = "numericSPC";
 			this.numericSPC.Size = new System.Drawing.Size(75, 19);
 			this.numericSPC.TabIndex = 17;
@@ -441,10 +442,10 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericSPC.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericSPC, "通常攻撃時に消費されるSPの量。\r\n略称はSPC。決してShark Panch Centerの略ではない。\r\n設定値: 1 ～ 10,000");
 			this.numericSPC.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelSPC
 			// 
@@ -529,28 +530,28 @@ namespace Status_Editer.User_Control.CommonParts {
 			// 
 			this.numericSSP.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericSSP.Increment = new decimal(new int[] {
-			5,
-			0,
-			0,
-			0});
+            5,
+            0,
+            0,
+            0});
 			this.numericSSP.Location = new System.Drawing.Point(390, 135);
 			this.numericSSP.Maximum = new decimal(new int[] {
-			100000,
-			0,
-			0,
-			0});
+            100000,
+            0,
+            0,
+            0});
 			this.numericSSP.Minimum = new decimal(new int[] {
-			100000,
-			0,
-			0,
-			-2147483648});
+            100000,
+            0,
+            0,
+            -2147483648});
 			this.numericSSP.Name = "numericSSP";
 			this.numericSSP.Size = new System.Drawing.Size(75, 19);
 			this.numericSSP.TabIndex = 13;
 			this.numericSSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericSSP.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericSSP, "戦闘開始時のSPに付与されるボーナス値。\r\n適応される範囲は 3,000 ～ 50,000 まであり、それ以上、またはそれ以下の値は切り捨てられる。\r\n設定値の範" +
-		"囲が有効範囲より広いのは、装備全体で決まるためである。\r\n設定値: -100,000 ～ 100,000");
+        "囲が有効範囲より広いのは、装備全体で決まるためである。\r\n設定値: -100,000 ～ 100,000");
 			// 
 			// labelSSP
 			// 
@@ -567,27 +568,27 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericEC.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericEC.Location = new System.Drawing.Point(270, 135);
 			this.numericEC.Maximum = new decimal(new int[] {
-			-727379969,
-			232,
-			0,
-			0});
+            -727379969,
+            232,
+            0,
+            0});
 			this.numericEC.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericEC.Name = "numericEC";
 			this.numericEC.Size = new System.Drawing.Size(100, 19);
 			this.numericEC.TabIndex = 11;
 			this.numericEC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericEC.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericEC, "装備コスト。\r\n装備する時はトータルコストが最大値未満にしなければならない。\r\nEC = (100 + (Level - 1) * 0.73 + JobRank " +
-		"* 1.67)\r\n設定値: 1 ～ 999,999,999,999");
+        "* 1.67)\r\n設定値: 1 ～ 999,999,999,999");
 			this.numericEC.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelEC
 			// 
@@ -614,27 +615,27 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericWT.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericWT.Location = new System.Drawing.Point(150, 135);
 			this.numericWT.Maximum = new decimal(new int[] {
-			9999999,
-			0,
-			0,
-			0});
+            9999999,
+            0,
+            0,
+            0});
 			this.numericWT.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericWT.Name = "numericWT";
 			this.numericWT.Size = new System.Drawing.Size(100, 19);
 			this.numericWT.TabIndex = 9;
 			this.numericWT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericWT.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericWT, "Weight。重さ。\r\n1 = 大体1kgで換算。攻撃の優先順位やフィールドの重力などに影響。\r\n先制値: SPD / (WT * (Gravity ** 2 +" +
-		" 100) / 100)\r\n設定値: 1 ～ 9,999,999");
+        " 100) / 100)\r\n設定値: 1 ～ 9,999,999");
 			this.numericWT.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// textInfo
 			// 
@@ -660,25 +661,25 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.numericRare.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericRare.Location = new System.Drawing.Point(485, 135);
 			this.numericRare.Maximum = new decimal(new int[] {
-			30,
-			0,
-			0,
-			0});
+            30,
+            0,
+            0,
+            0});
 			this.numericRare.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericRare.Name = "numericRare";
 			this.numericRare.Size = new System.Drawing.Size(50, 19);
 			this.numericRare.TabIndex = 15;
 			this.numericRare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericRare.ThousandsSeparator = true;
 			this.numericRare.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelRare
 			// 

@@ -91,6 +91,7 @@ namespace Status_Editer.User_Control.MainForm {
 			this.StripMenuExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
 			this.StripMenuExit.Size = new System.Drawing.Size(234, 22);
 			this.StripMenuExit.Text = "アプリケーションの終了(&X)";
+			this.StripMenuExit.Click += new System.EventHandler(this.StripMenuExit_Click);
 			// 
 			// StripMenuEdit
 			// 

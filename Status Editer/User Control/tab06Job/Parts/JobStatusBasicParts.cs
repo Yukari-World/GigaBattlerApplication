@@ -40,17 +40,17 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 		// Delegate
 		/// <summary>
-		/// BaseValueChangedのデリゲート宣言
+		/// BaseValueChangedイベントのデリゲート宣言
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">NumEventArgs</param>
-		public delegate void BaseValueChangedEventHandler(object sender, NumEventArgs e);
+		public delegate void EventBaseValueChangedHandler(object sender, NumEventArgs e);
 
 		// EventHandler
-		// イベントデリゲートの宣言
+		// イベントの宣言
 		[Category("Action")]
 		[Description("StatusCostの値が変動した時に発動するイベントです")]
-		public event BaseValueChangedEventHandler CostMultiplierChanged;
+		public event EventBaseValueChangedHandler CostMultiplierChanged;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

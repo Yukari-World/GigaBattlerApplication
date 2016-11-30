@@ -487,10 +487,13 @@ namespace Status_Editer {
 
 		/// <summary>
 		/// 「ファイル」→「開く」の処理内容
-		/// http://dobon.net/vb/dotnet/form/folderdialog.htmlより参照
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://dobon.net/vb/dotnet/form/folderdialog.html
+		/// </remarks>
 		private void StripMenuFileOpen_Click(object sender, EventArgs e) {
 			// FolderBrowserDialogクラスのインスタンスを作成
 			FolderBrowserDialog fbd = new FolderBrowserDialog();
