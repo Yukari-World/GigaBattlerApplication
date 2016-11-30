@@ -23,9 +23,9 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		// イベントの登録を許可
 		[Browsable(true)]
 
-		private int _StatusCost;	// ステータスコスト計算用
-		private int CostMultiplier;	// ステータスコスト倍率
-		private int GrooveGauge;	// ステータスバーの比率
+		private int _StatusCost;    // ステータスコスト計算用
+		private int CostMultiplier; // ステータスコスト倍率
+		private int GrooveGauge;    // ステータスバーの比率
 		private Label StatusBar = new Label();
 
 		/// <summary>
@@ -34,11 +34,21 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		string[] ExtraIndex = new string[] { "TP", "HIT", "EVT" };
 
 		// Class in Class
+		/// <summary>
+		/// 値転送データ付きEvent Args
+		/// </summary>
 		public class NumEventArgs : EventArgs {
+			/// <summary>
+			/// 付与する値(int)
+			/// </summary>
 			public int Value;
 		}// End Class
 
+
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Delegate
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		/// <summary>
 		/// BaseValueChangedイベントのデリゲート宣言
 		/// </summary>
@@ -46,10 +56,13 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <param name="e">NumEventArgs</param>
 		public delegate void EventBaseValueChangedHandler(object sender, NumEventArgs e);
 
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// EventHandler
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 		// イベントの宣言
 		[Category("Action")]
-		[Description("StatusCostの値が変動した時に発動するイベントです")]
+		[Description("StatusCostの値が変動した時に発生します。")]
 		public event EventBaseValueChangedHandler CostMultiplierChanged;
 
 
@@ -164,7 +177,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			} else if (Array.IndexOf(ExtraIndex, groupBase.Text) != -1) {
 				GrooveGauge = 1;
 				CostMultiplier = 5;
-				numericBaseStatus.Increment = 5;	// 5の倍数で指定する
+				numericBaseStatus.Increment = 5;    // 5の倍数で指定する
 			} else {
 				GrooveGauge = 2;
 				CostMultiplier = 1;

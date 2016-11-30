@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditerMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +108,6 @@
     </Compile>
     <Compile Include="User Control\CommonParts\ItemStatusParts.Designer.cs">
       <DependentUpon>ItemStatusParts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Control\MainForm\MainFormStripMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\MainForm\MainFormStripMenu.Designer.cs">
-      <DependentUpon>MainFormStripMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +198,9 @@
     <Compile Include="User Control\tab05Race\RaceInfomation.Designer.cs">
       <DependentUpon>RaceInfomation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditerMainMenu.resx">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,9 +227,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\CommonParts\ItemStatusParts.resx">
       <DependentUpon>ItemStatusParts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control\MainForm\MainFormStripMenu.resx">
-      <DependentUpon>MainFormStripMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>

@@ -1,6 +1,9 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Editer Main Menu
 //
+// エディタのメインフォーム。
+// ソースコードが長く成り気味なのでregionを利用すること。
+//
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using Status_Editer.GigaBattlerDataSetTableAdapters;
@@ -17,6 +20,9 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// 変数
+		private readonly int ControlCount = 8;
+		private readonly int TableCount = 10;
+
 		public string rootDirectory = "";
 
 		// TableAdapter
@@ -70,11 +76,53 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
+		/// 各コントロールの選択項目を再読み込みします
+		/// </summary>
+		private void ReloadControl() {
+			// TAB: ユニット
+			DropInfomation.ReloadBindings(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+			ActiveSkillInfomation.ReloadBindings(tableSkillTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 武器
+
+			ItemInfoWeapon.ReloadBindings(tableElementTableAdapter, tableWeaponTypeTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 盾
+
+			ItemInfoShield.ReloadBindings(tableElementTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 頭防具
+
+			ItemInfoHelmet.ReloadBindings(tableElementTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 腕防具
+
+			ItemInfoGauntlet.ReloadBindings(tableElementTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 体防具
+
+			ItemInfoArmor.ReloadBindings(tableElementTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: アクセサリー
+
+			ItemInfoAccessory.ReloadBindings(tableElementTableAdapter);
+			toolStripProgressBar1.PerformStep();    // カウント
+		}
+
+		/// <summary>
 		/// 変更した更新内容を適用します。
 		/// </summary>
 		private void UpdateSQL() {
+			int sum = 0;    // 更新件数計算用
 			toolStripProgressBar1.Value = 0;
-			toolStripProgressBar1.Maximum = 11;
+			toolStripProgressBar1.Maximum = TableCount + 1;
 			StripInfo.Text = "Updating Database...";
 
 			// 編集終了宣言
@@ -94,28 +142,28 @@ namespace Status_Editer {
 
 			try {
 				// 更新処理
-				tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
-				toolStripProgressBar1.PerformStep();
-				tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
-				toolStripProgressBar1.PerformStep();
-				tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
-				toolStripProgressBar1.PerformStep();
-				tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
-				toolStripProgressBar1.PerformStep();
-				tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
-				toolStripProgressBar1.PerformStep();
-				tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
-				toolStripProgressBar1.PerformStep();
-				tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
-				toolStripProgressBar1.PerformStep();
-				tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
-				toolStripProgressBar1.PerformStep();
-				tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
-				toolStripProgressBar1.PerformStep();
-				tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
-				toolStripProgressBar1.PerformStep();
+				sum += tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
+				toolStripProgressBar1.PerformStep();    // カウント
 
-				StripInfo.Text = "Update Succses!!";
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
 				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -127,6 +175,8 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		#region フォーム読み込み時の処理
 
 		/// <summary>
 		/// フォーム読み込み時の処理
@@ -427,34 +477,8 @@ namespace Status_Editer {
 				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
 				tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
 
-				// TAB: ユニット
-				DropInfomation.ReloadBindings(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
-				ActiveSkillInfomation.ReloadBindings(tableSkillTableAdapter);
-
-				// TAB: 武器
-
-				ItemInfoWeapon.ReloadBindings(tableElementTableAdapter, tableWeaponTypeTableAdapter);
-
-				// TAB: 盾
-
-				ItemInfoShield.ReloadBindings(tableElementTableAdapter);
-
-				// TAB: 頭防具
-
-				ItemInfoHelmet.ReloadBindings(tableElementTableAdapter);
-
-				// TAB: 腕防具
-
-				ItemInfoGauntlet.ReloadBindings(tableElementTableAdapter);
-
-				// TAB: 体防具
-
-				ItemInfoArmor.ReloadBindings(tableElementTableAdapter);
-
-				// TAB: アクセサリー
-
-				ItemInfoAccessory.ReloadBindings(tableElementTableAdapter);
-
+				// コントロール側の処理はメソッドに移動
+				ReloadControl();
 			} catch (Exception ex) {
 				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -482,8 +506,12 @@ namespace Status_Editer {
 			StripInfo.Text = "Welcome!!";
 		}// End Method
 
+		#endregion
+
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
+
+		#region ファイル
 
 		/// <summary>
 		/// 「ファイル」→「開く」の処理内容
@@ -540,16 +568,43 @@ namespace Status_Editer {
 			Application.Exit();
 		}// End Method
 
+		#endregion
+
+		//----------------------------------------------------------------------------------------------------
+		#region 表示
+
 		/// <summary>
-		/// 「データベース」→「再読み込み」の処理内容
+		/// 「表示」→「ステータスバー」の処理内容
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void StripMenuDatabaseReload_Click(object sender, EventArgs e) {
+		private void StripMenuViwerStatusBar_Click(object sender, EventArgs e) {
+			if (StripMenuViwerStatusBar.Checked == true) {
+				StripMenuViwerStatusBar.Checked = false;
+				ToolStripContainer.BottomToolStripPanelVisible = false;
+			} else {
+				StripMenuViwerStatusBar.Checked = true;
+				ToolStripContainer.BottomToolStripPanelVisible = true;
+			}// End If
+		}// End Method
+
+		#endregion
+
+		//----------------------------------------------------------------------------------------------------
+		#region データベース
+
+		#region 再読み込み
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「全て」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadAll_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
 				// ステータスバーの更新
 				toolStripProgressBar1.Value = 0;
-				toolStripProgressBar1.Maximum = 10;
+				toolStripProgressBar1.Maximum = ControlCount + TableCount;
 				StripInfo.Text = "Reloading Database...";
 
 				try {
@@ -575,7 +630,52 @@ namespace Status_Editer {
 					tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
 					toolStripProgressBar1.PerformStep();
 
-					StripInfo.Text = "Done!!";
+					ReloadControl();
+
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「メニュー項目のみ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadMenu_Click(object sender, EventArgs e) {
+			// ステータスバーの更新
+			toolStripProgressBar1.Value = 0;
+			toolStripProgressBar1.Maximum = ControlCount;
+			StripInfo.Text = "Reloading Database...";
+
+			// 問い合わせる必要がないので再読み込みのみ行う
+			try {
+				ReloadControl();
+				StripInfo.Text = "Reloading Complete!!";
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message;
+				Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「ユニット」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadUnit_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
+					StripInfo.Text = "Reloading Complete!!";
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -585,13 +685,541 @@ namespace Status_Editer {
 		}// End Method
 
 		/// <summary>
-		/// 「データベース」→「変更の適用」の処理内容
+		/// 「データベース」→「再読み込み」→「ユニットタイプ」の処理内容
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void StripMenuDatabaseSave_Click(object sender, EventArgs e) {
+		private void StripMenuDbReloadUnitType_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「種族」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadRace_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「ジョブ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadJob_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「メーカー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadMaker_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「武器」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadWeapon_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「盾」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadShield_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「頭防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadHelmet_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「腕防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadGauntlet_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「体防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadArmor_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「アクセサリー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadAccessory_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「スキル」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadSkill_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「再読み込み」→「アビリティ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbReloadAbility_Click(object sender, EventArgs e) {
+			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
+				// ステータスバーの更新
+				StripInfo.Text = "Reloading Database...";
+				try {
+					StripInfo.Text = "Reloading Complete!!";
+				} catch (Exception ex) {
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}// End Try
+			}// End If
+		}// End Method
+
+		#endregion
+
+		#region 変更の適用
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「全て」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveAll_Click(object sender, EventArgs e) {
 			UpdateSQL();
 		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「ユニット」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveUnit_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableUnitBindingSource.EndEdit();
+
+			try {
+				sum = tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「ユニットタイプ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveUnitType_Click(object sender, EventArgs e) {
+			int sum = 0;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+
+			try {
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「種族」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveRace_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableRaceBindingSource.EndEdit();
+
+			try {
+				sum = tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「ジョブ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveJob_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableJobBindingSource.EndEdit();
+
+			try {
+				sum = tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「メーカー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveMaker_Click(object sender, EventArgs e) {
+			int sum = 0;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+
+			try {
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「武器」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveWeapon_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableWeaponBingingSource.EndEdit();
+
+			try {
+				sum = tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「盾」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveShield_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableShieldBingingSource.EndEdit();
+
+			try {
+				sum = tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「頭防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveHelmet_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableHelmetBingingSource.EndEdit();
+
+			try {
+				sum = tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「腕防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveGauntlet_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableGauntletBingingSource.EndEdit();
+
+			try {
+				sum = tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「体防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveArmor_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableArmorBingingSource.EndEdit();
+
+			try {
+				sum = tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「アクセサリー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveAccessory_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableAccessoryBingingSource.EndEdit();
+
+			try {
+				sum = tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「スキル」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveSkill_Click(object sender, EventArgs e) {
+			int sum;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+			tableSkillBingingSource.EndEdit();
+
+			try {
+				sum = tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「変更の適用」→「アビリティ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuDbSaveAbility_Click(object sender, EventArgs e) {
+			int sum = 0;    // 更新件数計算用
+
+			// 編集終了宣言
+			Validate();
+
+			try {
+				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
+		}// End Method
+
+		#endregion
+
+		#endregion
+
+		//----------------------------------------------------------------------------------------------------
+		#region ウィンドウ
 
 		/// <summary>
 		/// 
@@ -604,7 +1232,32 @@ namespace Status_Editer {
 			//DataBindings();
 		}// End Method
 
+		#endregion
+
 		//----------------------------------------------------------------------------------------------------
-		// TAB: ユニット
+
+		#region ヘルプ
+
+		/// <summary>
+		/// 「ヘルプ」→「ヘルプの表示」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuHelpHelp_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「ヘルプ」→「バージョン情報」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuHelpVersion_Click(object sender, EventArgs e) {
+			AboutBox1 Form2 = new AboutBox1();
+			Form2.ShowDialog();
+		}// End Method
+
+		#endregion
+
 	}// End Class
 }
