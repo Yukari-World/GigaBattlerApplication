@@ -85,6 +85,8 @@ namespace Status_Editer {
 			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.listMaker = new System.Windows.Forms.ListBox();
+			this.listWeapon = new System.Windows.Forms.ListBox();
 			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
 			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
@@ -93,6 +95,8 @@ namespace Status_Editer {
 			this.PassiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.AbilityInfomation();
 			this.RaceInfomation = new Status_Editer.User_Control.tab05Race.RaceInfomation();
 			this.JobInfomation = new Status_Editer.User_Control.tab06Job.JobInfomation();
+			this.ItemInfoWeapon = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.EquipItemWeapon = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
 			this.StripMainMenu.SuspendLayout();
 			this.tabControl.SuspendLayout();
 			this.tabPage3.SuspendLayout();
@@ -105,6 +109,8 @@ namespace Status_Editer {
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
+			this.tabPage7.SuspendLayout();
+			this.tabPage8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -418,7 +424,7 @@ namespace Status_Editer {
 			this.listRace.Location = new System.Drawing.Point(3, 3);
 			this.listRace.Name = "listRace";
 			this.listRace.Size = new System.Drawing.Size(200, 820);
-			this.listRace.TabIndex = 1;
+			this.listRace.TabIndex = 0;
 			// 
 			// tabPage6
 			// 
@@ -439,10 +445,11 @@ namespace Status_Editer {
 			this.listJob.Location = new System.Drawing.Point(3, 3);
 			this.listJob.Name = "listJob";
 			this.listJob.Size = new System.Drawing.Size(200, 820);
-			this.listJob.TabIndex = 1;
+			this.listJob.TabIndex = 0;
 			// 
 			// tabPage7
 			// 
+			this.tabPage7.Controls.Add(this.listMaker);
 			this.tabPage7.Location = new System.Drawing.Point(4, 22);
 			this.tabPage7.Name = "tabPage7";
 			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -453,6 +460,9 @@ namespace Status_Editer {
 			// 
 			// tabPage8
 			// 
+			this.tabPage8.Controls.Add(this.ItemInfoWeapon);
+			this.tabPage8.Controls.Add(this.EquipItemWeapon);
+			this.tabPage8.Controls.Add(this.listWeapon);
 			this.tabPage8.Location = new System.Drawing.Point(4, 22);
 			this.tabPage8.Name = "tabPage8";
 			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -621,7 +631,7 @@ namespace Status_Editer {
 			// 
 			this.StripInfo.BorderStyle = System.Windows.Forms.Border3DStyle.RaisedOuter;
 			this.StripInfo.Name = "StripInfo";
-			this.StripInfo.Size = new System.Drawing.Size(1352, 17);
+			this.StripInfo.Size = new System.Drawing.Size(1383, 17);
 			this.StripInfo.Spring = true;
 			this.StripInfo.Text = "StripInfomationLabel";
 			this.StripInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -641,12 +651,30 @@ namespace Status_Editer {
 			// 
 			this.notifyIcon.Visible = true;
 			// 
+			// listMaker
+			// 
+			this.listMaker.FormattingEnabled = true;
+			this.listMaker.ItemHeight = 12;
+			this.listMaker.Location = new System.Drawing.Point(3, 3);
+			this.listMaker.Name = "listMaker";
+			this.listMaker.Size = new System.Drawing.Size(200, 820);
+			this.listMaker.TabIndex = 0;
+			// 
+			// listWeapon
+			// 
+			this.listWeapon.FormattingEnabled = true;
+			this.listWeapon.ItemHeight = 12;
+			this.listWeapon.Location = new System.Drawing.Point(3, 3);
+			this.listWeapon.Name = "listWeapon";
+			this.listWeapon.Size = new System.Drawing.Size(200, 820);
+			this.listWeapon.TabIndex = 0;
+			// 
 			// TotalUnitInfomation
 			// 
 			this.TotalUnitInfomation.BackColor = System.Drawing.Color.Transparent;
 			this.TotalUnitInfomation.Location = new System.Drawing.Point(0, 0);
 			this.TotalUnitInfomation.Name = "TotalUnitInfomation";
-			this.TotalUnitInfomation.Size = new System.Drawing.Size(1360, 800);
+			this.TotalUnitInfomation.Size = new System.Drawing.Size(1375, 800);
 			this.TotalUnitInfomation.TabIndex = 0;
 			// 
 			// DropInfomation
@@ -655,7 +683,7 @@ namespace Status_Editer {
 			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
 			this.DropInfomation.Name = "DropInfomation";
 			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
-			this.DropInfomation.TabIndex = 3;
+			this.DropInfomation.TabIndex = 1;
 			// 
 			// UnitInfomation
 			// 
@@ -663,7 +691,7 @@ namespace Status_Editer {
 			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
 			this.UnitInfomation.Name = "UnitInfomation";
 			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
-			this.UnitInfomation.TabIndex = 2;
+			this.UnitInfomation.TabIndex = 0;
 			// 
 			// StatusInfomation
 			// 
@@ -871,7 +899,7 @@ namespace Status_Editer {
             0,
             0});
 			this.StatusInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.StatusInfomation.TabIndex = 1;
+			this.StatusInfomation.TabIndex = 0;
 			// 
 			// ActiveSkillInfomation
 			// 
@@ -879,7 +907,7 @@ namespace Status_Editer {
 			this.ActiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
 			this.ActiveSkillInfomation.Name = "ActiveSkillInfomation";
 			this.ActiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.ActiveSkillInfomation.TabIndex = 1;
+			this.ActiveSkillInfomation.TabIndex = 0;
 			// 
 			// PassiveSkillInfomation
 			// 
@@ -887,7 +915,7 @@ namespace Status_Editer {
 			this.PassiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
 			this.PassiveSkillInfomation.Name = "PassiveSkillInfomation";
 			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.PassiveSkillInfomation.TabIndex = 1;
+			this.PassiveSkillInfomation.TabIndex = 0;
 			// 
 			// RaceInfomation
 			// 
@@ -895,7 +923,7 @@ namespace Status_Editer {
 			this.RaceInfomation.Location = new System.Drawing.Point(210, 0);
 			this.RaceInfomation.Name = "RaceInfomation";
 			this.RaceInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.RaceInfomation.TabIndex = 2;
+			this.RaceInfomation.TabIndex = 1;
 			// 
 			// JobInfomation
 			// 
@@ -903,7 +931,23 @@ namespace Status_Editer {
 			this.JobInfomation.Location = new System.Drawing.Point(210, 0);
 			this.JobInfomation.Name = "JobInfomation";
 			this.JobInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.JobInfomation.TabIndex = 2;
+			this.JobInfomation.TabIndex = 1;
+			// 
+			// ItemInfoWeapon
+			// 
+			this.ItemInfoWeapon.BackColor = System.Drawing.Color.Transparent;
+			this.ItemInfoWeapon.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoWeapon.Name = "ItemInfoWeapon";
+			this.ItemInfoWeapon.Size = new System.Drawing.Size(600, 800);
+			this.ItemInfoWeapon.TabIndex = 1;
+			// 
+			// EquipItemWeapon
+			// 
+			this.EquipItemWeapon.BackColor = System.Drawing.Color.Transparent;
+			this.EquipItemWeapon.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemWeapon.Name = "EquipItemWeapon";
+			this.EquipItemWeapon.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemWeapon.TabIndex = 2;
 			// 
 			// EditerMainMenu
 			// 
@@ -930,6 +974,8 @@ namespace Status_Editer {
 			this.tabPage4.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage6.ResumeLayout(false);
+			this.tabPage7.ResumeLayout(false);
+			this.tabPage8.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
 			this.ToolStripContainer.BottomToolStripPanel.ResumeLayout(false);
 			this.ToolStripContainer.BottomToolStripPanel.PerformLayout();
@@ -1009,5 +1055,9 @@ namespace Status_Editer {
 		private User_Control.tab05Race.RaceInfomation RaceInfomation;
 		private ListBox listJob;
 		private User_Control.tab06Job.JobInfomation JobInfomation;
+		private ListBox listMaker;
+		private ListBox listWeapon;
+		private User_Control.CommonParts.ItemInfoParts ItemInfoWeapon;
+		private User_Control.CommonParts.EquipItemStatusParts EquipItemWeapon;
 	}
 }

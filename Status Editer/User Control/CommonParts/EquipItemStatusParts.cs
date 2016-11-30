@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.CommonParts {
+	[ToolboxItem(true)]
 	public partial class EquipItemStatusParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
@@ -40,6 +41,32 @@ namespace Status_Editer.User_Control.CommonParts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Pubilc Function
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// </summary>
+		/// <param name="tableBindingSource">BindingSource</param>
+		public void LoadDataBindings(BindingSource tableBindingSource) {
+			// データバインドの設定
+			itemStatusHP.SetDataBindings(tableBindingSource, "HP");
+			itemStatusTP.SetDataBindings(tableBindingSource, "TP");
+			itemStatusMeleeATK.SetDataBindings(tableBindingSource, "ATK");
+			itemStatusMeleeDEF.SetDataBindings(tableBindingSource, "DEF");
+			itemStatusRangeATK.SetDataBindings(tableBindingSource, "RAT");
+			itemStatusRangeDEF.SetDataBindings(tableBindingSource, "RDF");
+			itemStatusMagicATK.SetDataBindings(tableBindingSource, "MAT");
+			itemStatusMagicDEF.SetDataBindings(tableBindingSource, "MDF");
+			itemStatusSPD.SetDataBindings(tableBindingSource, "SPD");
+			itemStatusLuck.SetDataBindings(tableBindingSource, "LUK");
+			itemStatusHIT.SetDataBindings(tableBindingSource, "HIT");
+			itemStatusEVT.SetDataBindings(tableBindingSource, "EVT");
+
+
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
+		}// End Function
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

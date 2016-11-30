@@ -110,7 +110,7 @@ namespace Status_Editer {
 				toolStripProgressBar1.PerformStep();
 
 				StripInfo.Text = "Update Succses!!";
-			} catch(Exception e) {
+			} catch (Exception e) {
 				MessageBox.Show("Database Update Failed:\n" + e.InnerException + "\n" + e.Message + "\n" + e.Source + "\n" + e.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				StripInfo.Text = "Error!!";
 			}
@@ -188,7 +188,13 @@ namespace Status_Editer {
 				listJob.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
 				// TAB: メーカー
+
+				listMaker.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 				// TAB: 武器
+
+				listWeapon.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
 				// TAB: 盾
 				// TAB: 頭防具
 				// TAB: 腕防具
@@ -210,6 +216,10 @@ namespace Status_Editer {
 				listJob.DataSource = tableJobBindingSource;
 				listJob.DisplayMember = "JobName";
 				listJob.ValueMember = "JobID";
+
+				listWeapon.DataSource = tableWeaponBingingSource;
+				listWeapon.DisplayMember = "WeaponName";
+				listWeapon.ValueMember = "WeaponID";
 			});
 
 			// ややこしく、ミスが多く、また、ネットワーク関連を使用するのでtryを使用
@@ -237,6 +247,12 @@ namespace Status_Editer {
 
 				// TAB: メーカー
 				// TAB: 武器
+
+				//WeaponInfomation.LoadDataBindings(tableWeaponBingingSource);
+
+				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource);
+				EquipItemWeapon.LoadDataBindings(tableWeaponBingingSource);
+
 				// TAB: 盾
 				// TAB: 頭防具
 				// TAB: 腕防具

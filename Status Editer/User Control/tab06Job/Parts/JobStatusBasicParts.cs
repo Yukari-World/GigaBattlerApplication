@@ -128,7 +128,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
 		}// End Function
 
 

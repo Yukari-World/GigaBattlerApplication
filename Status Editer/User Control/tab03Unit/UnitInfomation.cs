@@ -40,6 +40,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// </summary>
 		/// <param name="tableUnitBindingSource">BindingSource</param>
 		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+			// データバインドの設定
 			textUnitID.DataBindings.Add(new Binding("Text", tableUnitBindingSource, "UnitID", true));
 			checkAirType.DataBindings.Add(new Binding("CheckState", tableUnitBindingSource, "Air", true));
 			checkAirType.DataBindings.Add(new Binding("Checked", tableUnitBindingSource, "Air", true));

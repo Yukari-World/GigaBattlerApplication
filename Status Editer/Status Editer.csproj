@@ -85,6 +85,12 @@
     <Compile Include="User Control\CommonParts\EquipItemStatusParts.Designer.cs">
       <DependentUpon>EquipItemStatusParts.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\CommonParts\ItemInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\CommonParts\ItemInfoParts.Designer.cs">
+      <DependentUpon>ItemInfoParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\CommonParts\ItemStatusParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.Designer.cs">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab08Weapon\WeaponInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab08Weapon\WeaponInfomation.Designer.cs">
+      <DependentUpon>WeaponInfomation.cs</DependentUpon>
     </Compile>
     <Compile Include="ZUserControl.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="User Control\CommonParts\EquipItemStatusParts.resx">
       <DependentUpon>EquipItemStatusParts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\CommonParts\ItemInfoParts.resx">
+      <DependentUpon>ItemInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\CommonParts\ItemStatusParts.resx">
       <DependentUpon>ItemStatusParts.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab06Job\Parts\JobStatusBasicParts.resx">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab08Weapon\WeaponInfomation.resx">
+      <DependentUpon>WeaponInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="GigaBattlerDataSet.xsc">
