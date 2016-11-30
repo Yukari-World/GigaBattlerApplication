@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.CommonParts {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.CommonParts {
 	partial class ItemInfoParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -25,11 +28,17 @@
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupInfomation = new System.Windows.Forms.GroupBox();
-			this.numericSPC = new System.Windows.Forms.NumericUpDown();
-			this.labelSPC = new System.Windows.Forms.Label();
+			this.comboAttackItemGroup = new System.Windows.Forms.ComboBox();
+			this.labelAttackItemGroup = new System.Windows.Forms.Label();
+			this.comboElement2 = new System.Windows.Forms.ComboBox();
+			this.labelElement2 = new System.Windows.Forms.Label();
+			this.comboElement1 = new System.Windows.Forms.ComboBox();
+			this.labelElement1 = new System.Windows.Forms.Label();
+			this.numericSSP = new System.Windows.Forms.NumericUpDown();
+			this.labelSSP = new System.Windows.Forms.Label();
 			this.numericEC = new System.Windows.Forms.NumericUpDown();
 			this.labelEC = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
+			this.labelInfo = new System.Windows.Forms.Label();
 			this.numericWT = new System.Windows.Forms.NumericUpDown();
 			this.textInfo = new System.Windows.Forms.TextBox();
 			this.labelWT = new System.Windows.Forms.Label();
@@ -42,32 +51,48 @@
 			this.textItemID = new System.Windows.Forms.TextBox();
 			this.labelItemID = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.comboElement1 = new System.Windows.Forms.ComboBox();
-			this.labelElement1 = new System.Windows.Forms.Label();
-			this.comboElement2 = new System.Windows.Forms.ComboBox();
-			this.labelElement2 = new System.Windows.Forms.Label();
-			this.comboAttackItemGroup = new System.Windows.Forms.ComboBox();
-			this.labelAttackItemGroup = new System.Windows.Forms.Label();
+			this.numericSPC = new System.Windows.Forms.NumericUpDown();
+			this.labelSPC = new System.Windows.Forms.Label();
+			this.numericATC = new System.Windows.Forms.NumericUpDown();
+			this.labelATC = new System.Windows.Forms.Label();
+			this.labelTarget = new System.Windows.Forms.Label();
+			this.comboTarget = new System.Windows.Forms.ComboBox();
+			this.labelMaker = new System.Windows.Forms.Label();
+			this.comboMaker = new System.Windows.Forms.ComboBox();
+			this.labelEType = new System.Windows.Forms.Label();
+			this.comboEType = new System.Windows.Forms.ComboBox();
 			this.groupInfomation.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericSSP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEC)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericATC)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupInfomation
 			// 
+			this.groupInfomation.Controls.Add(this.comboEType);
+			this.groupInfomation.Controls.Add(this.labelEType);
+			this.groupInfomation.Controls.Add(this.comboMaker);
+			this.groupInfomation.Controls.Add(this.labelMaker);
+			this.groupInfomation.Controls.Add(this.comboTarget);
+			this.groupInfomation.Controls.Add(this.labelTarget);
+			this.groupInfomation.Controls.Add(this.numericATC);
+			this.groupInfomation.Controls.Add(this.labelATC);
+			this.groupInfomation.Controls.Add(this.numericSPC);
+			this.groupInfomation.Controls.Add(this.labelSPC);
 			this.groupInfomation.Controls.Add(this.comboAttackItemGroup);
 			this.groupInfomation.Controls.Add(this.labelAttackItemGroup);
 			this.groupInfomation.Controls.Add(this.comboElement2);
 			this.groupInfomation.Controls.Add(this.labelElement2);
 			this.groupInfomation.Controls.Add(this.comboElement1);
 			this.groupInfomation.Controls.Add(this.labelElement1);
-			this.groupInfomation.Controls.Add(this.numericSPC);
-			this.groupInfomation.Controls.Add(this.labelSPC);
+			this.groupInfomation.Controls.Add(this.numericSSP);
+			this.groupInfomation.Controls.Add(this.labelSSP);
 			this.groupInfomation.Controls.Add(this.numericEC);
 			this.groupInfomation.Controls.Add(this.labelEC);
-			this.groupInfomation.Controls.Add(this.label1);
+			this.groupInfomation.Controls.Add(this.labelInfo);
 			this.groupInfomation.Controls.Add(this.numericWT);
 			this.groupInfomation.Controls.Add(this.textInfo);
 			this.groupInfomation.Controls.Add(this.labelWT);
@@ -87,39 +112,111 @@
 			this.groupInfomation.TabStop = false;
 			this.groupInfomation.Text = "Item Infomation";
 			// 
-			// numericSPC
+			// comboAttackItemGroup
 			// 
-			this.numericSPC.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.numericSPC.Increment = new decimal(new int[] {
+			this.comboAttackItemGroup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboAttackItemGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboAttackItemGroup.FormattingEnabled = true;
+			this.comboAttackItemGroup.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.comboAttackItemGroup.Location = new System.Drawing.Point(350, 224);
+			this.comboAttackItemGroup.MaxDropDownItems = 10;
+			this.comboAttackItemGroup.Name = "comboAttackItemGroup";
+			this.comboAttackItemGroup.Size = new System.Drawing.Size(100, 20);
+			this.comboAttackItemGroup.TabIndex = 38;
+			this.toolTipInfo.SetToolTip(this.comboAttackItemGroup, "攻撃時に影響する装備の種類。");
+			// 
+			// labelAttackItemGroup
+			// 
+			this.labelAttackItemGroup.AutoSize = true;
+			this.labelAttackItemGroup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelAttackItemGroup.Location = new System.Drawing.Point(350, 209);
+			this.labelAttackItemGroup.Name = "labelAttackItemGroup";
+			this.labelAttackItemGroup.Size = new System.Drawing.Size(99, 12);
+			this.labelAttackItemGroup.TabIndex = 37;
+			this.labelAttackItemGroup.Text = "Attack Item Group";
+			// 
+			// comboElement2
+			// 
+			this.comboElement2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboElement2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboElement2.FormattingEnabled = true;
+			this.comboElement2.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.comboElement2.Location = new System.Drawing.Point(80, 134);
+			this.comboElement2.MaxDropDownItems = 10;
+			this.comboElement2.Name = "comboElement2";
+			this.comboElement2.Size = new System.Drawing.Size(50, 20);
+			this.comboElement2.TabIndex = 36;
+			this.toolTipInfo.SetToolTip(this.comboElement2, "属性情報。");
+			// 
+			// labelElement2
+			// 
+			this.labelElement2.AutoSize = true;
+			this.labelElement2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelElement2.Location = new System.Drawing.Point(80, 119);
+			this.labelElement2.Name = "labelElement2";
+			this.labelElement2.Size = new System.Drawing.Size(35, 12);
+			this.labelElement2.TabIndex = 35;
+			this.labelElement2.Text = "属性2";
+			// 
+			// comboElement1
+			// 
+			this.comboElement1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboElement1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboElement1.FormattingEnabled = true;
+			this.comboElement1.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.comboElement1.Location = new System.Drawing.Point(10, 134);
+			this.comboElement1.MaxDropDownItems = 10;
+			this.comboElement1.Name = "comboElement1";
+			this.comboElement1.Size = new System.Drawing.Size(50, 20);
+			this.comboElement1.TabIndex = 34;
+			this.toolTipInfo.SetToolTip(this.comboElement1, "属性情報。");
+			// 
+			// labelElement1
+			// 
+			this.labelElement1.AutoSize = true;
+			this.labelElement1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelElement1.Location = new System.Drawing.Point(10, 119);
+			this.labelElement1.Name = "labelElement1";
+			this.labelElement1.Size = new System.Drawing.Size(35, 12);
+			this.labelElement1.TabIndex = 33;
+			this.labelElement1.Text = "属性1";
+			// 
+			// numericSSP
+			// 
+			this.numericSSP.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericSSP.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-			this.numericSPC.Location = new System.Drawing.Point(390, 135);
-			this.numericSPC.Maximum = new decimal(new int[] {
+			this.numericSSP.Location = new System.Drawing.Point(390, 135);
+			this.numericSSP.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-			this.numericSPC.Minimum = new decimal(new int[] {
+			this.numericSSP.Minimum = new decimal(new int[] {
             100000,
             0,
             0,
             -2147483648});
-			this.numericSPC.Name = "numericSPC";
-			this.numericSPC.Size = new System.Drawing.Size(75, 19);
-			this.numericSPC.TabIndex = 32;
-			this.numericSPC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericSSP.Name = "numericSSP";
+			this.numericSSP.Size = new System.Drawing.Size(75, 19);
+			this.numericSSP.TabIndex = 32;
+			this.numericSSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericSSP.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericSSP, "戦闘開始時のSPに付与されるボーナス値。\r\n適応される範囲は 3,000 ～ 50,000 まであり、それ以上、またはそれ以下の値は切り捨てられる。\r\n設定値の範" +
+        "囲が有効範囲より広いのは、装備全体で決まるためである。\r\n設定値: -100,000 ～ 100,000");
 			// 
-			// labelSPC
+			// labelSSP
 			// 
-			this.labelSPC.AutoSize = true;
-			this.labelSPC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelSPC.Location = new System.Drawing.Point(390, 120);
-			this.labelSPC.Name = "labelSPC";
-			this.labelSPC.Size = new System.Drawing.Size(27, 12);
-			this.labelSPC.TabIndex = 31;
-			this.labelSPC.Text = "SPC";
+			this.labelSSP.AutoSize = true;
+			this.labelSSP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelSSP.Location = new System.Drawing.Point(390, 120);
+			this.labelSSP.Name = "labelSSP";
+			this.labelSSP.Size = new System.Drawing.Size(48, 12);
+			this.labelSSP.TabIndex = 31;
+			this.labelSSP.Text = "Start SP";
 			// 
 			// numericEC
 			// 
@@ -139,7 +236,9 @@
 			this.numericEC.Size = new System.Drawing.Size(100, 19);
 			this.numericEC.TabIndex = 30;
 			this.numericEC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.toolTipInfo.SetToolTip(this.numericEC, "装備コスト。\r\n設定値: 1 ～ 999,999,999,999");
+			this.numericEC.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericEC, "装備コスト。\r\n装備する時はトータルコストが最大値未満にしなければならない。\r\nEC = (100 + (Level - 1) * 0.73 + JobRank " +
+        "* 1.67)\r\n設定値: 1 ～ 999,999,999,999");
 			this.numericEC.Value = new decimal(new int[] {
             1,
             0,
@@ -152,19 +251,19 @@
 			this.labelEC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.labelEC.Location = new System.Drawing.Point(270, 120);
 			this.labelEC.Name = "labelEC";
-			this.labelEC.Size = new System.Drawing.Size(20, 12);
+			this.labelEC.Size = new System.Drawing.Size(67, 12);
 			this.labelEC.TabIndex = 29;
-			this.labelEC.Text = "EC";
+			this.labelEC.Text = "Equip Ccost";
 			// 
-			// label1
+			// labelInfo
 			// 
-			this.label1.AutoSize = true;
-			this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.label1.Location = new System.Drawing.Point(10, 675);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(85, 12);
-			this.label1.TabIndex = 16;
-			this.label1.Text = "Text Infomation";
+			this.labelInfo.AutoSize = true;
+			this.labelInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelInfo.Location = new System.Drawing.Point(10, 675);
+			this.labelInfo.Name = "labelInfo";
+			this.labelInfo.Size = new System.Drawing.Size(85, 12);
+			this.labelInfo.TabIndex = 16;
+			this.labelInfo.Text = "Text Infomation";
 			// 
 			// numericWT
 			// 
@@ -230,6 +329,7 @@
 			this.numericRare.Size = new System.Drawing.Size(50, 19);
 			this.numericRare.TabIndex = 24;
 			this.numericRare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericRare.ThousandsSeparator = true;
 			this.numericRare.Value = new decimal(new int[] {
             1,
             0,
@@ -270,7 +370,7 @@
 			this.comboEquipItemGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboEquipItemGroup.FormattingEnabled = true;
 			this.comboEquipItemGroup.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboEquipItemGroup.Location = new System.Drawing.Point(10, 179);
+			this.comboEquipItemGroup.Location = new System.Drawing.Point(230, 224);
 			this.comboEquipItemGroup.MaxDropDownItems = 10;
 			this.comboEquipItemGroup.Name = "comboEquipItemGroup";
 			this.comboEquipItemGroup.Size = new System.Drawing.Size(100, 20);
@@ -281,7 +381,7 @@
 			// 
 			this.labelEquipItemGroup.AutoSize = true;
 			this.labelEquipItemGroup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelEquipItemGroup.Location = new System.Drawing.Point(10, 164);
+			this.labelEquipItemGroup.Location = new System.Drawing.Point(230, 209);
 			this.labelEquipItemGroup.Name = "labelEquipItemGroup";
 			this.labelEquipItemGroup.Size = new System.Drawing.Size(93, 12);
 			this.labelEquipItemGroup.TabIndex = 18;
@@ -315,74 +415,136 @@
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// comboElement1
+			// numericSPC
 			// 
-			this.comboElement1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboElement1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboElement1.FormattingEnabled = true;
-			this.comboElement1.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboElement1.Location = new System.Drawing.Point(10, 134);
-			this.comboElement1.MaxDropDownItems = 10;
-			this.comboElement1.Name = "comboElement1";
-			this.comboElement1.Size = new System.Drawing.Size(50, 20);
-			this.comboElement1.TabIndex = 34;
-			this.toolTipInfo.SetToolTip(this.comboElement1, "属性情報。");
+			this.numericSPC.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericSPC.Location = new System.Drawing.Point(10, 180);
+			this.numericSPC.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.numericSPC.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericSPC.Name = "numericSPC";
+			this.numericSPC.Size = new System.Drawing.Size(75, 19);
+			this.numericSPC.TabIndex = 40;
+			this.numericSPC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericSPC.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericSPC, "通常攻撃時に消費されるSPの量。\r\n略称はSPC。決してShark Panch Centerの略ではない。\r\n設定値: 1 ～ 10,000");
+			this.numericSPC.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			// 
-			// labelElement1
+			// labelSPC
 			// 
-			this.labelElement1.AutoSize = true;
-			this.labelElement1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelElement1.Location = new System.Drawing.Point(10, 119);
-			this.labelElement1.Name = "labelElement1";
-			this.labelElement1.Size = new System.Drawing.Size(35, 12);
-			this.labelElement1.TabIndex = 33;
-			this.labelElement1.Text = "属性1";
+			this.labelSPC.AutoSize = true;
+			this.labelSPC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelSPC.Location = new System.Drawing.Point(10, 165);
+			this.labelSPC.Name = "labelSPC";
+			this.labelSPC.Size = new System.Drawing.Size(47, 12);
+			this.labelSPC.TabIndex = 39;
+			this.labelSPC.Text = "SP Cost";
 			// 
-			// comboElement2
+			// numericATC
 			// 
-			this.comboElement2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboElement2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboElement2.FormattingEnabled = true;
-			this.comboElement2.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboElement2.Location = new System.Drawing.Point(80, 134);
-			this.comboElement2.MaxDropDownItems = 10;
-			this.comboElement2.Name = "comboElement2";
-			this.comboElement2.Size = new System.Drawing.Size(50, 20);
-			this.comboElement2.TabIndex = 36;
-			this.toolTipInfo.SetToolTip(this.comboElement2, "属性情報。");
+			this.numericATC.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.numericATC.Location = new System.Drawing.Point(105, 180);
+			this.numericATC.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.numericATC.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.numericATC.Name = "numericATC";
+			this.numericATC.Size = new System.Drawing.Size(75, 19);
+			this.numericATC.TabIndex = 42;
+			this.numericATC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericATC.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericATC, "攻撃回数。\r\nマシンガン系は10以上指定を推奨\r\n設定値: 1 ～ 1,000");
+			this.numericATC.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
 			// 
-			// labelElement2
+			// labelATC
 			// 
-			this.labelElement2.AutoSize = true;
-			this.labelElement2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelElement2.Location = new System.Drawing.Point(80, 119);
-			this.labelElement2.Name = "labelElement2";
-			this.labelElement2.Size = new System.Drawing.Size(35, 12);
-			this.labelElement2.TabIndex = 35;
-			this.labelElement2.Text = "属性2";
+			this.labelATC.AutoSize = true;
+			this.labelATC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelATC.Location = new System.Drawing.Point(105, 165);
+			this.labelATC.Name = "labelATC";
+			this.labelATC.Size = new System.Drawing.Size(73, 12);
+			this.labelATC.TabIndex = 41;
+			this.labelATC.Text = "Attack Count";
 			// 
-			// comboAttackItemGroup
+			// labelTarget
 			// 
-			this.comboAttackItemGroup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			this.comboAttackItemGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.comboAttackItemGroup.FormattingEnabled = true;
-			this.comboAttackItemGroup.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboAttackItemGroup.Location = new System.Drawing.Point(130, 179);
-			this.comboAttackItemGroup.MaxDropDownItems = 10;
-			this.comboAttackItemGroup.Name = "comboAttackItemGroup";
-			this.comboAttackItemGroup.Size = new System.Drawing.Size(100, 20);
-			this.comboAttackItemGroup.TabIndex = 38;
-			this.toolTipInfo.SetToolTip(this.comboAttackItemGroup, "攻撃時に影響する装備の種類。");
+			this.labelTarget.AutoSize = true;
+			this.labelTarget.Location = new System.Drawing.Point(200, 165);
+			this.labelTarget.Name = "labelTarget";
+			this.labelTarget.Size = new System.Drawing.Size(53, 12);
+			this.labelTarget.TabIndex = 43;
+			this.labelTarget.Text = "攻撃対象";
 			// 
-			// labelAttackItemGroup
+			// comboTarget
 			// 
-			this.labelAttackItemGroup.AutoSize = true;
-			this.labelAttackItemGroup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelAttackItemGroup.Location = new System.Drawing.Point(130, 164);
-			this.labelAttackItemGroup.Name = "labelAttackItemGroup";
-			this.labelAttackItemGroup.Size = new System.Drawing.Size(99, 12);
-			this.labelAttackItemGroup.TabIndex = 37;
-			this.labelAttackItemGroup.Text = "Attack Item Group";
+			this.comboTarget.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboTarget.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboTarget.FormattingEnabled = true;
+			this.comboTarget.Location = new System.Drawing.Point(200, 179);
+			this.comboTarget.Name = "comboTarget";
+			this.comboTarget.Size = new System.Drawing.Size(100, 20);
+			this.comboTarget.TabIndex = 44;
+			this.toolTipInfo.SetToolTip(this.comboTarget, "攻撃対象。");
+			// 
+			// labelMaker
+			// 
+			this.labelMaker.AutoSize = true;
+			this.labelMaker.Location = new System.Drawing.Point(10, 209);
+			this.labelMaker.Name = "labelMaker";
+			this.labelMaker.Size = new System.Drawing.Size(36, 12);
+			this.labelMaker.TabIndex = 45;
+			this.labelMaker.Text = "Maker";
+			// 
+			// comboMaker
+			// 
+			this.comboMaker.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboMaker.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboMaker.FormattingEnabled = true;
+			this.comboMaker.Location = new System.Drawing.Point(10, 224);
+			this.comboMaker.Name = "comboMaker";
+			this.comboMaker.Size = new System.Drawing.Size(200, 20);
+			this.comboMaker.TabIndex = 46;
+			this.toolTipInfo.SetToolTip(this.comboMaker, "装備開発元。\r\n所謂RP用のデータでありあまり大きな意味を持たない。");
+			// 
+			// labelEType
+			// 
+			this.labelEType.AutoSize = true;
+			this.labelEType.Location = new System.Drawing.Point(320, 165);
+			this.labelEType.Name = "labelEType";
+			this.labelEType.Size = new System.Drawing.Size(31, 12);
+			this.labelEType.TabIndex = 47;
+			this.labelEType.Text = "Hand";
+			// 
+			// comboEType
+			// 
+			this.comboEType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboEType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboEType.FormattingEnabled = true;
+			this.comboEType.Location = new System.Drawing.Point(320, 179);
+			this.comboEType.Name = "comboEType";
+			this.comboEType.Size = new System.Drawing.Size(60, 20);
+			this.comboEType.TabIndex = 48;
 			// 
 			// ItemInfoParts
 			// 
@@ -394,39 +556,51 @@
 			this.Size = new System.Drawing.Size(600, 800);
 			this.groupInfomation.ResumeLayout(false);
 			this.groupInfomation.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericSSP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericEC)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericWT)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericRare)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericSPC)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericATC)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.GroupBox groupInfomation;
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.NumericUpDown numericWT;
-		private System.Windows.Forms.Label labelWT;
-		private System.Windows.Forms.NumericUpDown numericRare;
-		private System.Windows.Forms.Label labelRare;
-		private System.Windows.Forms.TextBox textItemName;
-		private System.Windows.Forms.Label labelItemName;
-		private System.Windows.Forms.TextBox textItemID;
-		private System.Windows.Forms.Label labelItemID;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textInfo;
-		private System.Windows.Forms.NumericUpDown numericSPC;
-		private System.Windows.Forms.Label labelSPC;
-		private System.Windows.Forms.NumericUpDown numericEC;
-		private System.Windows.Forms.Label labelEC;
-		private System.Windows.Forms.ComboBox comboEquipItemGroup;
-		private System.Windows.Forms.Label labelEquipItemGroup;
-		private System.Windows.Forms.ComboBox comboElement2;
-		private System.Windows.Forms.Label labelElement2;
-		private System.Windows.Forms.ComboBox comboElement1;
-		private System.Windows.Forms.Label labelElement1;
-		private System.Windows.Forms.ComboBox comboAttackItemGroup;
-		private System.Windows.Forms.Label labelAttackItemGroup;
+		private GroupBox groupInfomation;
+		private ToolTip toolTipInfo;
+		private NumericUpDown numericWT;
+		private Label labelWT;
+		private NumericUpDown numericRare;
+		private Label labelRare;
+		private TextBox textItemName;
+		private Label labelItemName;
+		private TextBox textItemID;
+		private Label labelItemID;
+		private Label labelInfo;
+		private TextBox textInfo;
+		private NumericUpDown numericSSP;
+		private Label labelSSP;
+		private NumericUpDown numericEC;
+		private Label labelEC;
+		private ComboBox comboEquipItemGroup;
+		private Label labelEquipItemGroup;
+		private ComboBox comboElement2;
+		private Label labelElement2;
+		private ComboBox comboElement1;
+		private Label labelElement1;
+		private ComboBox comboAttackItemGroup;
+		private Label labelAttackItemGroup;
+		private NumericUpDown numericSPC;
+		private Label labelSPC;
+		private NumericUpDown numericATC;
+		private Label labelATC;
+		private ComboBox comboMaker;
+		private Label labelMaker;
+		private ComboBox comboTarget;
+		private Label labelTarget;
+		private ComboBox comboEType;
+		private Label labelEType;
 	}
 }

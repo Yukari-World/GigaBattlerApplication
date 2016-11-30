@@ -6,6 +6,7 @@
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,8 @@ namespace Status_Editer {
 		public string rootDirectory = "";
 
 		// TableAdapter
+		__table_elementTableAdapter tableElementTableAdapter = new __table_elementTableAdapter();
+		__table_weapon_typeTableAdapter tableWeaponTypeTableAdapter = new __table_weapon_typeTableAdapter();
 		__table_unitTableAdapter tableUnitTableAdapter = new __table_unitTableAdapter();
 		__table_raceTableAdapter tableRaceTableAdapter = new __table_raceTableAdapter();
 		__table_jobTableAdapter tableJobTableAdapter = new __table_jobTableAdapter();
@@ -31,6 +34,8 @@ namespace Status_Editer {
 		__table_skillTableAdapter tableSkillTableAdapter = new __table_skillTableAdapter();
 
 		// BindingSource
+		BindingSource tableElementBindingSource = new BindingSource();
+		BindingSource tableWeaponTypeBindingSource = new BindingSource();
 		BindingSource tableUnitBindingSource = new BindingSource();
 		BindingSource tableRaceBindingSource = new BindingSource();
 		BindingSource tableJobBindingSource = new BindingSource();
@@ -110,8 +115,9 @@ namespace Status_Editer {
 				toolStripProgressBar1.PerformStep();
 
 				StripInfo.Text = "Update Succses!!";
-			} catch (Exception e) {
-				MessageBox.Show("Database Update Failed:\n" + e.InnerException + "\n" + e.Message + "\n" + e.Source + "\n" + e.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			} catch (Exception ex) {
+				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				StripInfo.Text = "Error!!";
 			}
 		}// End Function
@@ -132,6 +138,10 @@ namespace Status_Editer {
 			// タスク化しているけど無意味?
 
 			var Task1 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 1 Start.");
+
+				tableElementTableAdapter.ClearBeforeFill = true;
+				tableWeaponTypeTableAdapter.ClearBeforeFill = true;
 				tableUnitTableAdapter.ClearBeforeFill = true;
 				tableRaceTableAdapter.ClearBeforeFill = true;
 				tableJobTableAdapter.ClearBeforeFill = true;
@@ -142,12 +152,20 @@ namespace Status_Editer {
 				tableArmorTableAdapter.ClearBeforeFill = true;
 				tableAccessoryTableAdapter.ClearBeforeFill = true;
 				tableSkillTableAdapter.ClearBeforeFill = true;
+
+				Debug.WriteLine("Task 1 Finish.");
 			});
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の関連付け
 
 			var Task2 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 2 Start.");
+
+				tableElementBindingSource.DataMember = "__table_element";
+				tableElementBindingSource.DataSource = GigaBattlerDataSet;
+				tableWeaponTypeBindingSource.DataMember = "__table_weapon_type";
+				tableWeaponTypeBindingSource.DataSource = GigaBattlerDataSet;
 				tableUnitBindingSource.DataMember = "__table_unit";
 				tableUnitBindingSource.DataSource = GigaBattlerDataSet;
 				tableRaceBindingSource.DataMember = "__table_race";
@@ -168,14 +186,18 @@ namespace Status_Editer {
 				tableAccessoryBingingSource.DataSource = GigaBattlerDataSet;
 				tableSkillBingingSource.DataMember = "__table_skill";
 				tableSkillBingingSource.DataSource = GigaBattlerDataSet;
+
+				Debug.WriteLine("Task 2 Finish.");
 			});
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナープロパティの設定
-			// できればデザイナープロパティに設定したいが、バグの関係でここで設定。
-			// TAB: ユニット
+			// 出来ればデザイナープロパティに設定したいが、バグ(仕様?:Anchorの設定によってはフォームデザイナが勝手に書き換えられる)の関係でここで設定。
 
 			var Task3 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 3 Start.");
+
+				// TAB: ユニット
 				listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
 
@@ -199,12 +221,19 @@ namespace Status_Editer {
 				// TAB: 頭防具
 				// TAB: 腕防具
 				// TAB: 体防具
+
+				Debug.WriteLine("Task 3 Finish.");
 			});
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
 
 			var Task4 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 4 Standby.");
+				// Task2の完了を待つ
+				Task2.Wait();
+				Debug.WriteLine("Task 4 Start.");
+
 				listUnit.DataSource = tableUnitBindingSource;
 				listUnit.DisplayMember = "UnitName";
 				listUnit.ValueMember = "UnitID";
@@ -220,46 +249,81 @@ namespace Status_Editer {
 				listWeapon.DataSource = tableWeaponBingingSource;
 				listWeapon.DisplayMember = "WeaponName";
 				listWeapon.ValueMember = "WeaponID";
+
+				Debug.WriteLine("Task 4 Finish.");
 			});
 
-			// ややこしく、ミスが多く、また、ネットワーク関連を使用するのでtryを使用
-			try {
-				// 別コントロールへのバインディング設定
-				// TAB: ユニット
+			//----------------------------------------------------------------------------------------------------
+			// 別コントロールへのバインディング設定
+			// TAB: ユニット
+
+			var Task5_3 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-3 Start.");
 
 				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
 				DropInfomation.LoadDataBindings(tableUnitBindingSource, tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
 				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
-				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource, tableSkillTableAdapter);
+				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource);
 
-				// TAB: ユニットタイプ
+				Debug.WriteLine("Task 5-3 Finish.");
+			});
 
-				// NULL
+			// TAB: ユニットタイプ
 
-				// TAB: 種族
+			// NULL
+
+			// TAB: 種族
+
+			var Task5_5 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-5 Start.");
 
 				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
 
-				// TAB: ジョブ
+				Debug.WriteLine("Task 5-5 Finish.");
+			});
 
+			// TAB: ジョブ
+
+			var Task5_6 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-6 Start.");
 				JobInfomation.LoadDataBindings(tableJobBindingSource);
 
-				// TAB: メーカー
-				// TAB: 武器
+				Debug.WriteLine("Task 5-6 Finish.");
+			});
 
-				//WeaponInfomation.LoadDataBindings(tableWeaponBingingSource);
+			// TAB: メーカー
 
-				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource);
+			// NULL
+
+			// TAB: 武器
+
+			var Task5_8 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 5-8 Start.");
+
+				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource, tableWeaponTypeBindingSource);
 				EquipItemWeapon.LoadDataBindings(tableWeaponBingingSource);
 
-				// TAB: 盾
-				// TAB: 頭防具
-				// TAB: 腕防具
-				// TAB: 体防具
+				Debug.WriteLine("Task 5-8 Finish.");
+			});
 
-				// 共通
+			// TAB: 盾
+			// TAB: 頭防具
+			// TAB: 腕防具
+			// TAB: 体防具
 
+			Task5_3.Wait();
+			Task5_5.Wait();
+			Task5_6.Wait();
+			Task5_8.Wait();
+
+			//----------------------------------------------------------------------------------------------------
+			// 共通
+			// データの埋め込み
+			// ネットワーク関連を使用するのでtryを使用
+			try {
+				tableElementTableAdapter.Fill(GigaBattlerDataSet.@__table_element);
+				tableWeaponTypeTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon_type);
 				tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
@@ -270,8 +334,18 @@ namespace Status_Editer {
 				tableArmorTableAdapter.Fill(GigaBattlerDataSet.@__table_armor);
 				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.@__table_accessory);
 				tableSkillTableAdapter.Fill(GigaBattlerDataSet.@__table_skill);
+
+				// TAB: ユニット
+				DropInfomation.ReloadBindings(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
+				ActiveSkillInfomation.ReloadBindings(tableSkillTableAdapter);
+
+				// TAB: 武器
+
+				ItemInfoWeapon.ReloadBindings(tableElementTableAdapter);
 			} catch (Exception ex) {
+				Debug.WriteLine("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				// 続行不可能なので終了させる
 				Close();
 				Dispose();
 				Application.Exit();
@@ -282,6 +356,10 @@ namespace Status_Editer {
 			Task2.Dispose();
 			Task3.Dispose();
 			Task4.Dispose();
+			Task5_3.Dispose();
+			Task5_5.Dispose();
+			Task5_6.Dispose();
+			Task5_8.Dispose();
 
 			StripInfo.Text = "Welcome!!";
 		}// End Function
@@ -378,6 +456,7 @@ namespace Status_Editer {
 
 					StripInfo.Text = "Done!!";
 				} catch (Exception ex) {
+					Debug.WriteLine("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					StripInfo.Text = "Error!!";
 				}// End Try
@@ -402,19 +481,6 @@ namespace Status_Editer {
 			TestForm Form2 = new TestForm();
 			Form2.Show();
 			//DataBindings();
-		}// End Function
-
-		//----------------------------------------------------------------------------------------------------
-		// TAB
-
-		/// <summary>
-		/// TAB変更時に発生する内容
-		/// </summary>
-		/// <param name="sender">object</param>
-		/// <param name="e">EventArgs</param>
-		private void tabControl_SelectedIndexChanged(object sender, EventArgs e) {
-			// 処理軽減のため画面更新を止める
-			tabControl.Invalidate(true);
 		}// End Function
 
 		//----------------------------------------------------------------------------------------------------

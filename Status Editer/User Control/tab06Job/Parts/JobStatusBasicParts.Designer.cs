@@ -65,6 +65,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			this.numericBaseStatus.Size = new System.Drawing.Size(120, 19);
 			this.numericBaseStatus.TabIndex = 1;
 			this.numericBaseStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericBaseStatus.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericBaseStatus, "基本ステータスに対して影響を受ける割合(%)\r\n設定値: 0 ～ 9,000");
 			this.numericBaseStatus.Value = new decimal(new int[] {
             100,
@@ -86,6 +87,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			this.numericBonusStatus.Size = new System.Drawing.Size(120, 19);
 			this.numericBonusStatus.TabIndex = 3;
 			this.numericBonusStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericBonusStatus.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericBonusStatus, "ジョブマスター時に獲得できるボーナスステータス\r\n設定値: 0 ～ 99");
 			// 
 			// groupBase

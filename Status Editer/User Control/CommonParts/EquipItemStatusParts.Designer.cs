@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.CommonParts {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.CommonParts {
 	partial class EquipItemStatusParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -261,8 +264,8 @@
 
 		#endregion
 
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private ToolTip toolTipInfo;
+		private GroupBox groupBox1;
 		private ItemStatusParts itemStatusHIT;
 		private ItemStatusParts itemStatusLuck;
 		private ItemStatusParts itemStatusSPD;
@@ -275,11 +278,11 @@
 		private ItemStatusParts itemStatusTP;
 		private ItemStatusParts itemStatusHP;
 		private ItemStatusParts itemStatusEVT;
-		private System.Windows.Forms.Label labelGraph6;
-		private System.Windows.Forms.Label labelGraph5;
-		private System.Windows.Forms.Label labelGraph4;
-		private System.Windows.Forms.Label labelGraph3;
-		private System.Windows.Forms.Label labelGraph2;
-		private System.Windows.Forms.Label labelGraph1;
+		private Label labelGraph6;
+		private Label labelGraph5;
+		private Label labelGraph4;
+		private Label labelGraph3;
+		private Label labelGraph2;
+		private Label labelGraph1;
 	}
 }

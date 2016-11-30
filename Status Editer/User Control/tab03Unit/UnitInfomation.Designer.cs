@@ -34,7 +34,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelWT = new System.Windows.Forms.Label();
 			this.numericRare2 = new System.Windows.Forms.NumericUpDown();
 			this.labelRare2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
+			this.labelInfo = new System.Windows.Forms.Label();
 			this.textInfo = new System.Windows.Forms.TextBox();
 			this.numericRare = new System.Windows.Forms.NumericUpDown();
 			this.labelRare = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.groupUnitInfo.Controls.Add(this.labelWT);
 			this.groupUnitInfo.Controls.Add(this.numericRare2);
 			this.groupUnitInfo.Controls.Add(this.labelRare2);
-			this.groupUnitInfo.Controls.Add(this.label1);
+			this.groupUnitInfo.Controls.Add(this.labelInfo);
 			this.groupUnitInfo.Controls.Add(this.textInfo);
 			this.groupUnitInfo.Controls.Add(this.numericRare);
 			this.groupUnitInfo.Controls.Add(this.labelRare);
@@ -122,10 +122,10 @@ namespace Status_Editer.User_Control.tab03Unit {
 			resources.ApplyResources(this.labelRare2, "labelRare2");
 			this.labelRare2.Name = "labelRare2";
 			// 
-			// label1
+			// labelInfo
 			// 
-			resources.ApplyResources(this.label1, "label1");
-			this.label1.Name = "label1";
+			resources.ApplyResources(this.labelInfo, "labelInfo");
+			this.labelInfo.Name = "labelInfo";
 			// 
 			// textInfo
 			// 
@@ -239,7 +239,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		private ComboBox comboMonsterGroup;
 		private NumericUpDown numericRare;
 		private ToolTip toolTipInfo;
-		private Label label1;
+		private Label labelInfo;
 		private TextBox textInfo;
 		private NumericUpDown numericRare2;
 		private Label labelRare2;

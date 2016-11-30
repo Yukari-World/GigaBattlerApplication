@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.CommonParts {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.CommonParts {
 	partial class ItemStatusParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -91,8 +94,8 @@
 
 		#endregion
 
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ToolTip toolTipInfo;
+		private NumericUpDown numericUpDown1;
+		private Label label1;
+		private ToolTip toolTipInfo;
 	}
 }

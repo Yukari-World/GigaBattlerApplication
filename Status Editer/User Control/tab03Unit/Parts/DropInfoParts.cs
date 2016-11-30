@@ -57,7 +57,9 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			comboDropTable.DisplayMember = "WeaponName";
 			comboDropTable.ValueMember = "WeaponID";
 
+			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
+
 			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item1", true));
 			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per1", true));
 
