@@ -21,24 +21,66 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		private Label StatusBar = new Label();
 		private Label PlusStatusBar = new Label();
 
+		// Class in Class
+		/// <summary>
+		/// 値転送データ付きEvent Args
+		/// </summary>
+		public class NumEventArgs : EventArgs {
+			/// <summary>
+			/// 付与する値(decimal)
+			/// </summary>
+			public decimal Value;
+		}// End Class
+
+
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		// Delegate
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// BaseValueChangedイベントのデリゲート宣言
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">NumEventArgs</param>
+		public delegate void EventBaseValueChangedHandler(object sender, NumEventArgs e);
+
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		// EventHandler
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		// イベントの宣言
+		[Category("Action")]
+		[Description("StatusValueの値が変動した時に発生します。")]
+		public event EventBaseValueChangedHandler BaseValueChanged;
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// [ReadOnly]ベースステータスの値を抽出します
+		/// [R/W]グループラベルのテキストを設定します
 		/// </summary>
-		public decimal numericBaseValue {
-			get { return numericBase.Value; }
-		}// End Property
-
-		/// <summary>
-		/// [R/W]グループラベルのテキストを設定します。
-		/// </summary>
+		[Description("[R/W]グループラベルのテキストを設定します")]
 		public string labelText {
 			get { return groupBasic.Text; }
 			set { groupBasic.Text = value; }
+		}// End Property
+
+		/// <summary>
+		/// [R/W Private]ベースステータスの値を抽出します
+		/// </summary>
+		[Description("[R/W Private]ベースステータスの値を抽出します")]
+		private decimal numericBaseValue {
+			get { return numericBase.Value; }
+			set {
+				numericBase.Value = value;
+
+				// 転送用準備
+				NumEventArgs ex = new NumEventArgs();
+				ex.Value = numericBase.Value;// 送るデータの中身
+				OnBaseValueChanged(ex);
+			}// End Set
 		}// End Property
 
 
@@ -73,6 +115,15 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// イベント『CostMultiplierChanged』のデータを転送します
+		/// </summary>
+		/// <param name="e">NumEventArgs</param>
+		protected virtual void OnBaseValueChanged(NumEventArgs e) {
+			// この1行で済むらしい……?
+			BaseValueChanged?.Invoke(this, e);
+		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -109,7 +160,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			PlusStatusBar.BackColor = Color.Yellow;
 			PlusStatusBar.BorderStyle = BorderStyle.FixedSingle;
 			PlusStatusBar.Name = "PlusStatusBar";
-			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);	// 10pxずらして配置
+			PlusStatusBar.Location = new Point(StatusBar.Size.Width + 10, 50);  // 10pxずらして配置
 			PlusStatusBar.Size = new Size(Math.Max((int)numericLvPStatus.Value * GrooveGauge, 0), 5);
 
 			// 各種LabelをGroupBoxに追加する
@@ -119,8 +170,8 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// コントロールの設定変更
 			// ExtraIndexのいずれかならば設定
 			if (Array.IndexOf(ExtraIndex, groupBasic.Text) != -1) {
-				buttonSubmitRecommend.Visible = false;	// ボタンを非表示
-				labelRecommend.Visible = false;			// 不要なラベルを非表示
+				buttonSubmitRecommend.Visible = false;  // ボタンを非表示
+				labelRecommend.Visible = false;         // 不要なラベルを非表示
 				numericBase.Increment = 5M; // 設定変動幅を変更
 
 				if (groupBasic.Text != "TP") {  // TPでなければ、設定可能最小値を変更

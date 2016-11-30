@@ -33256,8 +33256,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.UInt32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
             param.IsNullable = true;
             param.SourceColumn = "RaceID";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -33265,7 +33265,6 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 16;
             param.IsNullable = true;
             param.SourceColumn = "RaceName";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -33439,8 +33438,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p27";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.UInt32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
             param.IsNullable = true;
             param.SourceColumn = "NextEXP";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -33448,14 +33447,13 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p28";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 256;
             param.IsNullable = true;
             param.SourceColumn = "Info";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p29";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.UInt32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
             param.IsNullable = true;
             param.SourceColumn = "RaceID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33464,7 +33462,6 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p30";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 16;
             param.IsNullable = true;
             param.SourceColumn = "RaceName";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33663,8 +33660,8 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p55";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.UInt32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.UInt32;
             param.IsNullable = true;
             param.SourceColumn = "NextEXP";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33673,7 +33670,6 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             param.ParameterName = "@p56";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 256;
             param.IsNullable = true;
             param.SourceColumn = "Info";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -33932,7 +33928,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    int p1, 
+                    uint p1, 
                     string p2, 
                     short p3, 
                     short p4, 
@@ -33958,9 +33954,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p24, 
                     decimal p25, 
                     decimal p26, 
-                    int p27, 
+                    uint p27, 
                     string p28, 
-                    int p29, 
+                    uint p29, 
                     string p30, 
                     short p31, 
                     short p32, 
@@ -33986,9 +33982,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p52, 
                     decimal p53, 
                     decimal p54, 
-                    int p55, 
+                    uint p55, 
                     string p56) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((uint)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
             }
@@ -34019,14 +34015,14 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(p24));
             this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(p25));
             this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(p26));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(p27));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((uint)(p27));
             if ((p28 == null)) {
                 throw new global::System.ArgumentNullException("p28");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(p28));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(p29));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((uint)(p29));
             if ((p30 == null)) {
                 throw new global::System.ArgumentNullException("p30");
             }
@@ -34057,7 +34053,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[51].Value = ((decimal)(p52));
             this.Adapter.UpdateCommand.Parameters[52].Value = ((decimal)(p53));
             this.Adapter.UpdateCommand.Parameters[53].Value = ((decimal)(p54));
-            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(p55));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((uint)(p55));
             if ((p56 == null)) {
                 throw new global::System.ArgumentNullException("p56");
             }
@@ -34110,9 +34106,9 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p24, 
                     decimal p25, 
                     decimal p26, 
-                    int p27, 
+                    uint p27, 
                     string p28, 
-                    int p29, 
+                    uint p29, 
                     string p30, 
                     short p31, 
                     short p32, 
@@ -34138,7 +34134,7 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     decimal p52, 
                     decimal p53, 
                     decimal p54, 
-                    int p55, 
+                    uint p55, 
                     string p56) {
             return this.Update(p29, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56);
         }

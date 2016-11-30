@@ -57,6 +57,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <param name="e">NumEventArgs</param>
 		public delegate void EventBaseValueChangedHandler(object sender, NumEventArgs e);
 
+
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// EventHandler
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -109,7 +110,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 				NumEventArgs ex = new NumEventArgs();
 				ex.Value = _StatusCost;// 送るデータの中身
 				OnCostMultiplierChanged(ex);
-			}
+			}// End Set
 		}// End Property
 
 
@@ -130,14 +131,14 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableJobBindingSource">BindingSource</param>
+		/// <param name="TableJobDataTable">Job Data Table</param>
 		/// <param name="bindTag">Status Tag</param>
-		public void SetDataBindings(__table_jobDataTable tableJobBindingSource, string bindTag) {
+		public void SetDataBindings(__table_jobDataTable TableJobDataTable, string bindTag) {
 			// データバインドの設定
-			numericBaseStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, bindTag, true));
-			numericBonusStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, "Bonus" + bindTag, true));
+			numericBaseStatus.DataBindings.Add(new Binding("Value", TableJobDataTable, bindTag, true));
+			numericBonusStatus.DataBindings.Add(new Binding("Value", TableJobDataTable, "Bonus" + bindTag, true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
