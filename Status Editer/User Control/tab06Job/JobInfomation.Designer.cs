@@ -74,7 +74,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusEVT.Name = "JobStatusEVT";
 			this.JobStatusEVT.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusEVT.TabIndex = 11;
-			this.JobStatusEVT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusEVT_CostMultiplierChanged);
+			this.JobStatusEVT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusEVT_CostMultiplierChanged);
 			// 
 			// JobStatusHIT
 			// 
@@ -84,7 +84,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusHIT.Name = "JobStatusHIT";
 			this.JobStatusHIT.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusHIT.TabIndex = 10;
-			this.JobStatusHIT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusHIT_CostMultiplierChanged);
+			this.JobStatusHIT.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusHIT_CostMultiplierChanged);
 			// 
 			// JobStatusLuck
 			// 
@@ -94,7 +94,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusLuck.Name = "JobStatusLuck";
 			this.JobStatusLuck.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusLuck.TabIndex = 9;
-			this.JobStatusLuck.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusLuck_CostMultiplierChanged);
+			this.JobStatusLuck.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusLuck_CostMultiplierChanged);
 			// 
 			// JobStatusSPD
 			// 
@@ -104,7 +104,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusSPD.Name = "JobStatusSPD";
 			this.JobStatusSPD.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusSPD.TabIndex = 8;
-			this.JobStatusSPD.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusSPD_CostMultiplierChanged);
+			this.JobStatusSPD.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusSPD_CostMultiplierChanged);
 			// 
 			// JobStatusMagicDEF
 			// 
@@ -114,7 +114,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusMagicDEF.Name = "JobStatusMagicDEF";
 			this.JobStatusMagicDEF.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusMagicDEF.TabIndex = 7;
-			this.JobStatusMagicDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMagicDEF_CostMultiplierChanged);
+			this.JobStatusMagicDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusMagicDEF_CostMultiplierChanged);
 			// 
 			// JobStatusMagicATK
 			// 
@@ -124,7 +124,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusMagicATK.Name = "JobStatusMagicATK";
 			this.JobStatusMagicATK.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusMagicATK.TabIndex = 6;
-			this.JobStatusMagicATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMagicATK_CostMultiplierChanged);
+			this.JobStatusMagicATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusMagicATK_CostMultiplierChanged);
 			// 
 			// JobStatusRangeDEF
 			// 
@@ -134,7 +134,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusRangeDEF.Name = "JobStatusRangeDEF";
 			this.JobStatusRangeDEF.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusRangeDEF.TabIndex = 5;
-			this.JobStatusRangeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusRangeDEF_CostMultiplierChanged);
+			this.JobStatusRangeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusRangeDEF_CostMultiplierChanged);
 			// 
 			// JobStatusRangeATK
 			// 
@@ -144,7 +144,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusRangeATK.Name = "JobStatusRangeATK";
 			this.JobStatusRangeATK.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusRangeATK.TabIndex = 4;
-			this.JobStatusRangeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusRangeATK_CostMultiplierChanged);
+			this.JobStatusRangeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusRangeATK_CostMultiplierChanged);
 			// 
 			// JobStatusMeleeDEF
 			// 
@@ -154,7 +154,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusMeleeDEF.Name = "JobStatusMeleeDEF";
 			this.JobStatusMeleeDEF.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusMeleeDEF.TabIndex = 3;
-			this.JobStatusMeleeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMeleeDEF_CostMultiplierChanged);
+			this.JobStatusMeleeDEF.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusMeleeDEF_CostMultiplierChanged);
 			// 
 			// JobStatusMeleeATK
 			// 
@@ -164,7 +164,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusMeleeATK.Name = "JobStatusMeleeATK";
 			this.JobStatusMeleeATK.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusMeleeATK.TabIndex = 2;
-			this.JobStatusMeleeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusMeleeATK_CostMultiplierChanged);
+			this.JobStatusMeleeATK.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusMeleeATK_CostMultiplierChanged);
 			// 
 			// JobStatusTP
 			// 
@@ -174,7 +174,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusTP.Name = "JobStatusTP";
 			this.JobStatusTP.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusTP.TabIndex = 1;
-			this.JobStatusTP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusTP_CostMultiplierChanged);
+			this.JobStatusTP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusTP_CostMultiplierChanged);
 			// 
 			// JobStatusHP
 			// 
@@ -184,7 +184,7 @@ namespace Status_Editer.User_Control.tab06Job {
 			this.JobStatusHP.Name = "JobStatusHP";
 			this.JobStatusHP.Size = new System.Drawing.Size(650, 60);
 			this.JobStatusHP.TabIndex = 0;
-			this.JobStatusHP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.BaseValueChangedEventHandler(this.JobStatusHP_CostMultiplierChanged);
+			this.JobStatusHP.CostMultiplierChanged += new Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts.EventBaseValueChangedHandler(this.JobStatusHP_CostMultiplierChanged);
 			// 
 			// toolTipInfo
 			// 
