@@ -3006,7 +3006,20 @@
               <Mapping SourceColumn="Skill3" DataSetColumn="Skill3" />
               <Mapping SourceColumn="Info" DataSetColumn="Info" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="giga_battlerConnectionString (Settings)" DbObjectName="`giga battler`.__table_weapon" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSortByType" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataSortByType" GeneratorSourceName="FillSortByType" GetMethodModifier="Public" GetMethodName="GetDataSortByType" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataSortByType" UserSourceName="FillSortByType">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      WeaponID, WeaponName, PhysicsPower, MagicPower, PhysicsDefence, MagicDefence, ReductionRate, Element1, 
+                                      Element2, WT, EC, SSP, SPC, ATC, Target, Type, AType, EType, Maker, Rare, HP, TP, ATK, DEF, RAT, RDF, MAT, MDF, 
+                                      SPD, LUK, HIT, EVT, Duability, Price, Buy, Skill1, Skill2, Skill3, Info
+FROM                         __table_weapon
+ORDER BY               Type, Rare, Price</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="__table_weapon_typeTableAdapter" GeneratorDataComponentClassName="__table_weapon_typeTableAdapter" Name="__table_weapon_type" UserDataComponentName="__table_weapon_typeTableAdapter">
             <MainSource>

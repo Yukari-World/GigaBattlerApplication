@@ -46580,11 +46580,19 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT `WeaponID`, `WeaponName`, `PhysicsPower`, `MagicPower`, `PhysicsDefence`, `MagicDefence`, `ReductionRate`, `Element1`, `Element2`, `WT`, `EC`, `SSP`, `SPC`, `ATC`, `Target`, `Type`, `AType`, `EType`, `Maker`, `Rare`, `HP`, `TP`, `ATK`, `DEF`, `RAT`, `RDF`, `MAT`, `MDF`, `SPD`, `LUK`, `HIT`, `EVT`, `Duability`, `Price`, `Buy`, `Skill1`, `Skill2`, `Skill3`, `Info` FROM `__table_weapon`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT                      WeaponID, WeaponName, PhysicsPower, MagicPower, PhysicsDefence, MagicDefence, ReductionRate, Element1, 
+                                      Element2, WT, EC, SSP, SPC, ATC, Target, Type, AType, EType, Maker, Rare, HP, TP, ATK, DEF, RAT, RDF, MAT, MDF, 
+                                      SPD, LUK, HIT, EVT, Duability, Price, Buy, Skill1, Skill2, Skill3, Info
+FROM                         __table_weapon
+ORDER BY               Type, Rare, Price";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -46606,6 +46614,30 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual GigaBattlerDataSet.@__table_weaponDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            GigaBattlerDataSet.@__table_weaponDataTable dataTable = new GigaBattlerDataSet.@__table_weaponDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillSortByType(GigaBattlerDataSet.@__table_weaponDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual GigaBattlerDataSet.@__table_weaponDataTable GetDataSortByType() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             GigaBattlerDataSet.@__table_weaponDataTable dataTable = new GigaBattlerDataSet.@__table_weaponDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

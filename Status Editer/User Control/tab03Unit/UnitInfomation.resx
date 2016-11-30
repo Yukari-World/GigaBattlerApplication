@@ -239,7 +239,7 @@ Dragon: 2,000 ～ 25,000</value>
   <data name="numericRare2.ToolTip" xml:space="preserve">
     <value>内部レアリティ。
 同一レアリティにおけるレア度を設定する。*半没機能*
-設定値: 0 ～ 100</value>
+設定値: 0 ～ 1,000</value>
   </data>
   <data name="&gt;&gt;numericRare2.Name" xml:space="preserve">
     <value>numericRare2</value>

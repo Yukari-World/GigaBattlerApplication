@@ -109,13 +109,13 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// numericRare2
 			// 
 			resources.ApplyResources(this.numericRare2, "numericRare2");
-			this.numericRare2.Name = "numericRare2";
-			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
-			this.numericRare2.Value = new decimal(new int[] {
-            1,
+			this.numericRare2.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
+			this.numericRare2.Name = "numericRare2";
+			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
 			// 
 			// labelRare2
 			// 

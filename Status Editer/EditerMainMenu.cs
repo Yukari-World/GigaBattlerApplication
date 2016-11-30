@@ -91,7 +91,7 @@ namespace Status_Editer {
 
 			toolStripProgressBar1.PerformStep();
 
-			try {
+			//try {
 				// 更新処理
 				tableUnitTableAdapter.Update(GigaBattlerDataSet.@__table_unit);
 				toolStripProgressBar1.PerformStep();
@@ -115,11 +115,11 @@ namespace Status_Editer {
 				toolStripProgressBar1.PerformStep();
 
 				StripInfo.Text = "Update Succses!!";
-			} catch (Exception ex) {
-				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
-				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				StripInfo.Text = "Error!!";
-			}
+			//} catch (Exception ex) {
+			//	StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+			//	Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+			//	MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			//}
 		}// End Function
 
 
@@ -301,7 +301,7 @@ namespace Status_Editer {
 			var Task5_8 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-8 Start.");
 
-				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource, tableWeaponTypeBindingSource);
+				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource);
 				EquipItemWeapon.LoadDataBindings(tableWeaponBingingSource);
 
 				Debug.WriteLine("Task 5-8 Finish.");
@@ -327,7 +327,7 @@ namespace Status_Editer {
 				tableUnitTableAdapter.Fill(GigaBattlerDataSet.@__table_unit);
 				tableRaceTableAdapter.Fill(GigaBattlerDataSet.@__table_race);
 				tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
-				tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+				tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.@__table_weapon);
 				tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
 				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.@__table_helmet);
 				tableGauntletTableAdapter.Fill(GigaBattlerDataSet.@__table_gauntlet);
@@ -341,10 +341,10 @@ namespace Status_Editer {
 
 				// TAB: 武器
 
-				ItemInfoWeapon.ReloadBindings(tableElementTableAdapter);
+				ItemInfoWeapon.ReloadBindings(tableElementTableAdapter, tableWeaponTypeTableAdapter);
 			} catch (Exception ex) {
-				Debug.WriteLine("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
-				MessageBox.Show("System Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				// 続行不可能なので終了させる
 				Close();
 				Dispose();
@@ -439,7 +439,7 @@ namespace Status_Editer {
 					toolStripProgressBar1.PerformStep();
 					tableJobTableAdapter.Fill(GigaBattlerDataSet.@__table_job);
 					toolStripProgressBar1.PerformStep();
-					tableWeaponTableAdapter.Fill(GigaBattlerDataSet.@__table_weapon);
+					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.@__table_weapon);
 					toolStripProgressBar1.PerformStep();
 					tableShieldTableAdapter.Fill(GigaBattlerDataSet.@__table_shield);
 					toolStripProgressBar1.PerformStep();
@@ -456,9 +456,9 @@ namespace Status_Editer {
 
 					StripInfo.Text = "Done!!";
 				} catch (Exception ex) {
-					Debug.WriteLine("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
-					MessageBox.Show("Database Load Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					StripInfo.Text = "Error!!";
+					StripInfo.Text = "Error Info:" + ex.Message;
+					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+					MessageBox.Show("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}// End Try
 			}// End If
 		}// End Function

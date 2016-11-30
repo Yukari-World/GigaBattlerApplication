@@ -82,11 +82,18 @@ namespace Status_Editer.User_Control.CommonParts {
 		private void ItemStatusParts_Load(object sender, EventArgs e) {
 			// Labelの初期化
 			StatusBar.AutoSize = false;
-			StatusBar.BackColor = Color.Green;
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
-			StatusBar.Location = new Point(200, 7);
-			StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+
+			if (numericUpDown1.Value >= 0) {
+				StatusBar.BackColor = Color.Green;
+				StatusBar.Location = new Point(200, 7);
+				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+			} else {
+				StatusBar.BackColor = Color.Red;
+				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
+				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
+			}// End If
 
 			// LabelをUser Controlに追加する
 			Controls.Add(StatusBar);
@@ -114,13 +121,13 @@ namespace Status_Editer.User_Control.CommonParts {
 				} else {
 					formGraphics.DrawLine(PenGray, i, 0, i, 20);
 				}
-			}
+			}// End Loop
 
 			// 破棄破棄
 			PenBlack.Dispose();
 			PenGray.Dispose();
 			formGraphics.Dispose();
-		}
+		}// End Function
 
 		/// <summary>
 		/// numericUpDown1の値が変更された時の処理
@@ -129,7 +136,15 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <param name="e">EventArgs</param>
 		private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
 			// ラベルのサイズ変更
-			StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 10);
-		}
+			if (numericUpDown1.Value >= 0) {
+				StatusBar.BackColor = Color.Green;
+				StatusBar.Location = new Point(200, 7);
+				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
+			} else {
+				StatusBar.BackColor = Color.Red;
+				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
+				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
+			}// End If
+		}// End Function
 	}// End Class
 }

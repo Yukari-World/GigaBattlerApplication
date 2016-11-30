@@ -24,6 +24,9 @@ namespace Status_Editer.User_Control.CommonParts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// Data Table
+		private __table_weapon_typeDataTable weaponType1 = new __table_weapon_typeDataTable();
+		private __table_weapon_typeDataTable weaponType2 = new __table_weapon_typeDataTable();
+
 		private __table_elementDataTable elementTable1 = new __table_elementDataTable();
 		private __table_elementDataTable elementTable2 = new __table_elementDataTable();
 
@@ -53,10 +56,9 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableWeaponBingingSource">Weapon Binding Source</param>
-		/// <param name="tableElementBindingSource">Element Binding Source</param>
-		/// <param name="tableWeaponTypeBingingSource">Weapon Type Binding Source</param>
-		public void LoadDataBindings(BindingSource tableWeaponBingingSource, BindingSource tableWeaponTypeBingingSource) {
+		public void LoadDataBindings(BindingSource tableWeaponBingingSource) {
 			// データ項目の作成
+			// データ項目が少なく、わざわざデータベース化する必要のない項目
 
 			// Target
 			DataTable TargetDataTable = new DataTable();
@@ -114,19 +116,11 @@ namespace Status_Editer.User_Control.CommonParts {
 			//----------------------------------------------------------------------------------------------------
 			// コンボボックスの設定
 
-			comboElement1.DataSource = elementTable1;
-			comboElement1.DisplayMember = "ElementName";
-			comboElement1.ValueMember = "ElementID";
-
-			comboElement2.DataSource = elementTable2;
-			comboElement2.DisplayMember = "ElementName";
-			comboElement2.ValueMember = "ElementID";
-
-			comboEquipItemGroup.DataSource = tableWeaponTypeBingingSource;
+			comboEquipItemGroup.DataSource = weaponType1;
 			comboEquipItemGroup.DisplayMember = "WeaponTypeName";
 			comboEquipItemGroup.ValueMember = "WeaponTypeID";
 
-			comboAttackItemGroup.DataSource = tableWeaponTypeBingingSource;
+			comboAttackItemGroup.DataSource = weaponType2;
 			comboAttackItemGroup.DisplayMember = "WeaponTypeName";
 			comboAttackItemGroup.ValueMember = "WeaponTypeID";
 
@@ -140,37 +134,32 @@ namespace Status_Editer.User_Control.CommonParts {
 
 			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
-
-			comboElement1.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "Element1", true));
-			comboElement2.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "Element2", true));
-
 			// Weapon Data専用で必要なもの
+			textItemID.DataBindings.Add(new Binding("Text", tableWeaponBingingSource, "WeaponID", true));
+			textItemName.DataBindings.Add(new Binding("Text", tableWeaponBingingSource, "WeaponName", true));
+
+			numericSPC.DataBindings.Add(new Binding("Value", tableWeaponBingingSource, "SPC", true));
+			numericATC.DataBindings.Add(new Binding("Value", tableWeaponBingingSource, "ATC", true));
+
+
 			comboEquipItemGroup.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "Type", true));
 			comboAttackItemGroup.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "AType", true));
 			comboTarget.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "Target", true));
 			comboEType.DataBindings.Add(new Binding("SelectedValue", tableWeaponBingingSource, "EType", true));
 
-			//----------------------------------------------------------------------------------------------------
-			// デザイナーの設定
-
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			// 共通設定
+			CommonSettings(tableWeaponBingingSource);
 		}// End Function
 
 		/// <summary>
 		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="tableBingingSource">Binding Source</param>
-		/// <param name="tableElementBindingSource">Element Binding Source</param>
-		public void LoadDataBindings(BindingSource tableBingingSource) {
-			// コンボボックスの設定
-
-			comboElement1.DataSource = elementTable1;
-			comboElement1.DisplayMember = "ElementName";
-			comboElement1.ValueMember = "ElementID";
-
-			comboElement2.DataSource = elementTable2;
-			comboElement2.DisplayMember = "ElementName";
-			comboElement2.ValueMember = "ElementID";
+		/// <param name="bindtag">ターゲットのアイテムジャンル</param>
+		public void LoadDataBindings(BindingSource tableBingingSource, string bindtag) {
+			// データバインドの設定
+			textItemID.DataBindings.Add(new Binding("Text", tableBingingSource, bindtag + "ID", true));
+			textItemName.DataBindings.Add(new Binding("Text", tableBingingSource, bindtag + "Name", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -187,13 +176,26 @@ namespace Status_Editer.User_Control.CommonParts {
 			labelEquipItemGroup.Visible = false;
 			comboEquipItemGroup.Visible = false;
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			// 共通設定
+			CommonSettings(tableBingingSource);
+		}// End Function
+
+		/// <summary>
+		/// バインド項目を再読み込みします。 
+		/// </summary>
+		/// <param name="ElementTableAdapter">__table_elementTableAdapter</param>
+		/// <param name="WeaponTypeTableAdapter">__table_weapon_typeTableAdapter</param>
+		public void ReloadBindings(__table_elementTableAdapter ElementTableAdapter, __table_weapon_typeTableAdapter WeaponTypeTableAdapter) {
+			ElementTableAdapter.Fill(elementTable1);
+			ElementTableAdapter.Fill(elementTable2);
+			WeaponTypeTableAdapter.Fill(weaponType1);
+			WeaponTypeTableAdapter.Fill(weaponType2);
 		}// End Function
 
 		/// <summary> 
 		/// バインド項目を再読み込みします。 
 		/// </summary> 
-		/// <param name="ElementTableAdapter">__table_elementTableAdapter</param> 
+		/// <param name="ElementTableAdapter">__table_elementTableAdapter</param>
 		public void ReloadBindings(__table_elementTableAdapter ElementTableAdapter) {
 			ElementTableAdapter.Fill(elementTable1);
 			ElementTableAdapter.Fill(elementTable2);
@@ -204,9 +206,76 @@ namespace Status_Editer.User_Control.CommonParts {
 		// Private Function
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		/// <summary>
+		/// 共通するBinding Sourceの割り当てやデザイナーの設定を行います
+		/// </summary>
+		/// <param name="DatBindingSource">DatBindingSource</param>
+		private void CommonSettings(BindingSource DatBindingSource) {
+			// コンボボックスの設定
+
+			comboElement1.DataSource = elementTable1;
+			comboElement1.DisplayMember = "ElementName";
+			comboElement1.ValueMember = "ElementID";
+
+			comboElement2.DataSource = elementTable2;
+			comboElement2.DisplayMember = "ElementName";
+			comboElement2.ValueMember = "ElementID";
+
+			//----------------------------------------------------------------------------------------------------
+			// データバインドの設定
+			textPrice.DataBindings.Add(new Binding("Text", DatBindingSource, "Price", true));
+			textInfo.DataBindings.Add(new Binding("Text", DatBindingSource, "Info", true));
+
+			numericPhysicsPower.DataBindings.Add(new Binding("Value", DatBindingSource, "PhysicsPower", true));
+			numericMagicPower.DataBindings.Add(new Binding("Value", DatBindingSource, "MagicPower", true));
+			numericPhysicsDefence.DataBindings.Add(new Binding("Value", DatBindingSource, "PhysicsDefence", true));
+			numericMagicDefence.DataBindings.Add(new Binding("Value", DatBindingSource, "MagicDefence", true));
+			numericReductionRate.DataBindings.Add(new Binding("Value", DatBindingSource, "ReductionRate", true));
+			numericWT.DataBindings.Add(new Binding("Value", DatBindingSource, "WT", true));
+			numericEC.DataBindings.Add(new Binding("Value", DatBindingSource, "EC", true));
+			numericSSP.DataBindings.Add(new Binding("Value", DatBindingSource, "SSP", true));
+			numericRare.DataBindings.Add(new Binding("Value", DatBindingSource, "Rare", true));
+
+			comboElement1.DataBindings.Add(new Binding("SelectedValue", DatBindingSource, "Element1", true));
+			comboElement2.DataBindings.Add(new Binding("SelectedValue", DatBindingSource, "Element2", true));
+
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+		}// End Function
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// Priceの入力値の検査。
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">CancelEventArgs</param>
+		private void textPrice_Validating(object sender, CancelEventArgs e) {
+			if (textPrice.Text == "") {
+				textPrice.Text = "0";
+			} else {
+				// カンマの除去
+				textPrice.Text = textPrice.Text.Replace(",", "");
+			}// End If
+		}// End Function
+
+		/// <summary>
+		/// Priceの値が変更された時の処理
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void textPrice_TextChanged(object sender, EventArgs e) {
+			if (textPrice.Text == "") {
+				textPrice.Text = "0";
+			} else {
+				// カンマの除去
+				textPrice.Text = textPrice.Text.Replace(",", "");
+			}// End If
+		}
 	}// End Class
 }
