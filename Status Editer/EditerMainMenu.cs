@@ -23,7 +23,6 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// 変数
-		private bool isExit = false;
 		private int[] RowCount = new int[12];
 		/// <summary>
 		/// DataTableを使用しているUserControlの数
@@ -494,7 +493,7 @@ namespace Status_Editer {
 		#endregion
 
 		/// <summary>
-		/// フォームを閉じる直前の処理
+		/// フォームを閉じる直前の処理。キャンセルで閉じる動作をキャンセルする
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
@@ -1371,8 +1370,8 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void StripMenuWindowView_Click(object sender, EventArgs e) {
-			TestForm Form2 = new TestForm();
+		private void StripMenuWindowViewUnit_Click(object sender, EventArgs e) {
+			FormUnit Form2 = new FormUnit(TableUnitDataTable);
 			Form2.Show();
 			//DataBindings();
 		}// End Method

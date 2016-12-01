@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Test Form
+// Unit Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -13,13 +13,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class TestForm : Form {
+	public partial class FormUnit : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		// DataTable
+		private DataTable UnitDataTable = new __table_unitDataTable();
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -33,7 +36,9 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public TestForm() {
+		public FormUnit(__table_unitDataTable DataTable) {
+			// 割り当て
+			UnitDataTable = DataTable;
 			InitializeComponent();
 		}// End Method
 
@@ -52,8 +57,25 @@ namespace Status_Editer {
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		/// <summary>
+		/// フォーム読み込み時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
 		private void TestForm_Load(object sender, EventArgs e) {
-			___table_unitTableAdapter.Fill(gigaBattlerDataSet.@__table_unit);
+			// データソースのすり替え
+			dataGridView1.DataSource = UnitDataTable;
+			dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
+
+		/// <summary>
+		/// フォームを閉じる時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void FormUnit_FormClosed(object sender, FormClosedEventArgs e) {
+			Dispose();
+		}
 	}// End Class
 }

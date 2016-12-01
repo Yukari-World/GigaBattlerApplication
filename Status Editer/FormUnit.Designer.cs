@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Status_Editer {
-	partial class TestForm {
+	partial class FormUnit {
 		/// <summary>
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -30,23 +30,16 @@ namespace Status_Editer {
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.tableunitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-			this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-			this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-			this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-			this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.___table_unitTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter();
 			this.unitIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.unitNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,6 +129,16 @@ namespace Status_Editer {
 			this.skill18DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.skill19DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.skill20DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill21DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill22DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill23DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill24DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill25DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill26DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill27DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill28DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill29DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.skill30DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ability1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ability2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ability3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -168,13 +171,10 @@ namespace Status_Editer {
 			this.ability30DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
-			this.ToolStripContainer.TopToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-			this.bindingNavigator1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// ToolStripContainer
@@ -184,17 +184,13 @@ namespace Status_Editer {
 			// 
 			this.ToolStripContainer.ContentPanel.BackColor = System.Drawing.Color.Transparent;
 			this.ToolStripContainer.ContentPanel.Controls.Add(this.dataGridView1);
-			this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1280, 755);
+			this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1440, 785);
 			this.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ToolStripContainer.Location = new System.Drawing.Point(0, 0);
 			this.ToolStripContainer.Name = "ToolStripContainer";
-			this.ToolStripContainer.Size = new System.Drawing.Size(1280, 780);
+			this.ToolStripContainer.Size = new System.Drawing.Size(1440, 810);
 			this.ToolStripContainer.TabIndex = 0;
 			this.ToolStripContainer.Text = "toolStripContainer1";
-			// 
-			// ToolStripContainer.TopToolStripPanel
-			// 
-			this.ToolStripContainer.TopToolStripPanel.Controls.Add(this.bindingNavigator1);
 			// 
 			// dataGridView1
 			// 
@@ -202,133 +198,143 @@ namespace Status_Editer {
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-			this.unitIDDataGridViewTextBoxColumn,
-			this.unitNameDataGridViewTextBoxColumn,
-			this.raceDataGridViewTextBoxColumn,
-			this.reqLvDataGridViewTextBoxColumn,
-			this.minLvDataGridViewTextBoxColumn,
-			this.maxLvDataGridViewTextBoxColumn,
-			this.startTPDataGridViewTextBoxColumn,
-			this.maxTPDataGridViewTextBoxColumn,
-			this.hPDataGridViewTextBoxColumn,
-			this.meleeATKDataGridViewTextBoxColumn,
-			this.meleeDEFDataGridViewTextBoxColumn,
-			this.rangeATKDataGridViewTextBoxColumn,
-			this.rangeDEFDataGridViewTextBoxColumn,
-			this.magicATKDataGridViewTextBoxColumn,
-			this.magicDEFDataGridViewTextBoxColumn,
-			this.sPDDataGridViewTextBoxColumn,
-			this.lUKDataGridViewTextBoxColumn,
-			this.hITDataGridViewTextBoxColumn,
-			this.eVTDataGridViewTextBoxColumn,
-			this.eXPDataGridViewTextBoxColumn,
-			this.mNYDataGridViewTextBoxColumn,
-			this.lvHPDataGridViewTextBoxColumn,
-			this.lvMeleeATKDataGridViewTextBoxColumn,
-			this.lvMeleeDEFDataGridViewTextBoxColumn,
-			this.lvRangeATKDataGridViewTextBoxColumn,
-			this.lvRangeDEFDataGridViewTextBoxColumn,
-			this.lvMagicATKDataGridViewTextBoxColumn,
-			this.lvMagicDEFDataGridViewTextBoxColumn,
-			this.lvSPDDataGridViewTextBoxColumn,
-			this.lvLUKDataGridViewTextBoxColumn,
-			this.lvHITDataGridViewTextBoxColumn,
-			this.lvEVTDataGridViewTextBoxColumn,
-			this.lvEXPDataGridViewTextBoxColumn,
-			this.lvMNYDataGridViewTextBoxColumn,
-			this.hPPerDataGridViewTextBoxColumn,
-			this.meleeATKPerDataGridViewTextBoxColumn,
-			this.meleeDEFPerDataGridViewTextBoxColumn,
-			this.rangeATKPerDataGridViewTextBoxColumn,
-			this.rangeDEFPerDataGridViewTextBoxColumn,
-			this.magicATKPerDataGridViewTextBoxColumn,
-			this.magicDEFPerDataGridViewTextBoxColumn,
-			this.sPDPerDataGridViewTextBoxColumn,
-			this.eXPPerDataGridViewTextBoxColumn,
-			this.mNYPerDataGridViewTextBoxColumn,
-			this.wTDataGridViewTextBoxColumn,
-			this.sSPDataGridViewTextBoxColumn,
-			this.sPCDataGridViewTextBoxColumn,
-			this.aTCDataGridViewTextBoxColumn,
-			this.typeDataGridViewTextBoxColumn,
-			this.dMGPerDataGridViewTextBoxColumn,
-			this.airDataGridViewCheckBoxColumn,
-			this.verDataGridViewTextBoxColumn,
-			this.algorithmDataGridViewTextBoxColumn,
-			this.aIIDDataGridViewTextBoxColumn,
-			this.rareDataGridViewTextBoxColumn,
-			this.rare2DataGridViewTextBoxColumn,
-			this.item1DataGridViewTextBoxColumn,
-			this.per1DataGridViewTextBoxColumn,
-			this.item2DataGridViewTextBoxColumn,
-			this.per2DataGridViewTextBoxColumn,
-			this.item3DataGridViewTextBoxColumn,
-			this.per3DataGridViewTextBoxColumn,
-			this.item4DataGridViewTextBoxColumn,
-			this.per4DataGridViewTextBoxColumn,
-			this.item5DataGridViewTextBoxColumn,
-			this.per5DataGridViewTextBoxColumn,
-			this.item6DataGridViewTextBoxColumn,
-			this.per6DataGridViewTextBoxColumn,
-			this.skill1DataGridViewTextBoxColumn,
-			this.skill2DataGridViewTextBoxColumn,
-			this.skill3DataGridViewTextBoxColumn,
-			this.skill4DataGridViewTextBoxColumn,
-			this.skill5DataGridViewTextBoxColumn,
-			this.skill6DataGridViewTextBoxColumn,
-			this.skill7DataGridViewTextBoxColumn,
-			this.skill8DataGridViewTextBoxColumn,
-			this.skill9DataGridViewTextBoxColumn,
-			this.skill10DataGridViewTextBoxColumn,
-			this.skill11DataGridViewTextBoxColumn,
-			this.skill12DataGridViewTextBoxColumn,
-			this.skill13DataGridViewTextBoxColumn,
-			this.skill14DataGridViewTextBoxColumn,
-			this.skill15DataGridViewTextBoxColumn,
-			this.skill16DataGridViewTextBoxColumn,
-			this.skill17DataGridViewTextBoxColumn,
-			this.skill18DataGridViewTextBoxColumn,
-			this.skill19DataGridViewTextBoxColumn,
-			this.skill20DataGridViewTextBoxColumn,
-			this.ability1DataGridViewTextBoxColumn,
-			this.ability2DataGridViewTextBoxColumn,
-			this.ability3DataGridViewTextBoxColumn,
-			this.ability4DataGridViewTextBoxColumn,
-			this.ability5DataGridViewTextBoxColumn,
-			this.ability6DataGridViewTextBoxColumn,
-			this.ability7DataGridViewTextBoxColumn,
-			this.ability8DataGridViewTextBoxColumn,
-			this.ability9DataGridViewTextBoxColumn,
-			this.ability10DataGridViewTextBoxColumn,
-			this.ability11DataGridViewTextBoxColumn,
-			this.ability12DataGridViewTextBoxColumn,
-			this.ability13DataGridViewTextBoxColumn,
-			this.ability14DataGridViewTextBoxColumn,
-			this.ability15DataGridViewTextBoxColumn,
-			this.ability16DataGridViewTextBoxColumn,
-			this.ability17DataGridViewTextBoxColumn,
-			this.ability18DataGridViewTextBoxColumn,
-			this.ability19DataGridViewTextBoxColumn,
-			this.ability20DataGridViewTextBoxColumn,
-			this.ability21DataGridViewTextBoxColumn,
-			this.ability22DataGridViewTextBoxColumn,
-			this.ability23DataGridViewTextBoxColumn,
-			this.ability24DataGridViewTextBoxColumn,
-			this.ability25DataGridViewTextBoxColumn,
-			this.ability26DataGridViewTextBoxColumn,
-			this.ability27DataGridViewTextBoxColumn,
-			this.ability28DataGridViewTextBoxColumn,
-			this.ability29DataGridViewTextBoxColumn,
-			this.ability30DataGridViewTextBoxColumn,
-			this.infoDataGridViewTextBoxColumn});
+            this.unitIDDataGridViewTextBoxColumn,
+            this.unitNameDataGridViewTextBoxColumn,
+            this.raceDataGridViewTextBoxColumn,
+            this.reqLvDataGridViewTextBoxColumn,
+            this.minLvDataGridViewTextBoxColumn,
+            this.maxLvDataGridViewTextBoxColumn,
+            this.startTPDataGridViewTextBoxColumn,
+            this.maxTPDataGridViewTextBoxColumn,
+            this.hPDataGridViewTextBoxColumn,
+            this.meleeATKDataGridViewTextBoxColumn,
+            this.meleeDEFDataGridViewTextBoxColumn,
+            this.rangeATKDataGridViewTextBoxColumn,
+            this.rangeDEFDataGridViewTextBoxColumn,
+            this.magicATKDataGridViewTextBoxColumn,
+            this.magicDEFDataGridViewTextBoxColumn,
+            this.sPDDataGridViewTextBoxColumn,
+            this.lUKDataGridViewTextBoxColumn,
+            this.hITDataGridViewTextBoxColumn,
+            this.eVTDataGridViewTextBoxColumn,
+            this.eXPDataGridViewTextBoxColumn,
+            this.mNYDataGridViewTextBoxColumn,
+            this.lvHPDataGridViewTextBoxColumn,
+            this.lvMeleeATKDataGridViewTextBoxColumn,
+            this.lvMeleeDEFDataGridViewTextBoxColumn,
+            this.lvRangeATKDataGridViewTextBoxColumn,
+            this.lvRangeDEFDataGridViewTextBoxColumn,
+            this.lvMagicATKDataGridViewTextBoxColumn,
+            this.lvMagicDEFDataGridViewTextBoxColumn,
+            this.lvSPDDataGridViewTextBoxColumn,
+            this.lvLUKDataGridViewTextBoxColumn,
+            this.lvHITDataGridViewTextBoxColumn,
+            this.lvEVTDataGridViewTextBoxColumn,
+            this.lvEXPDataGridViewTextBoxColumn,
+            this.lvMNYDataGridViewTextBoxColumn,
+            this.hPPerDataGridViewTextBoxColumn,
+            this.meleeATKPerDataGridViewTextBoxColumn,
+            this.meleeDEFPerDataGridViewTextBoxColumn,
+            this.rangeATKPerDataGridViewTextBoxColumn,
+            this.rangeDEFPerDataGridViewTextBoxColumn,
+            this.magicATKPerDataGridViewTextBoxColumn,
+            this.magicDEFPerDataGridViewTextBoxColumn,
+            this.sPDPerDataGridViewTextBoxColumn,
+            this.eXPPerDataGridViewTextBoxColumn,
+            this.mNYPerDataGridViewTextBoxColumn,
+            this.wTDataGridViewTextBoxColumn,
+            this.sSPDataGridViewTextBoxColumn,
+            this.sPCDataGridViewTextBoxColumn,
+            this.aTCDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.dMGPerDataGridViewTextBoxColumn,
+            this.airDataGridViewCheckBoxColumn,
+            this.verDataGridViewTextBoxColumn,
+            this.algorithmDataGridViewTextBoxColumn,
+            this.aIIDDataGridViewTextBoxColumn,
+            this.rareDataGridViewTextBoxColumn,
+            this.rare2DataGridViewTextBoxColumn,
+            this.item1DataGridViewTextBoxColumn,
+            this.per1DataGridViewTextBoxColumn,
+            this.item2DataGridViewTextBoxColumn,
+            this.per2DataGridViewTextBoxColumn,
+            this.item3DataGridViewTextBoxColumn,
+            this.per3DataGridViewTextBoxColumn,
+            this.item4DataGridViewTextBoxColumn,
+            this.per4DataGridViewTextBoxColumn,
+            this.item5DataGridViewTextBoxColumn,
+            this.per5DataGridViewTextBoxColumn,
+            this.item6DataGridViewTextBoxColumn,
+            this.per6DataGridViewTextBoxColumn,
+            this.skill1DataGridViewTextBoxColumn,
+            this.skill2DataGridViewTextBoxColumn,
+            this.skill3DataGridViewTextBoxColumn,
+            this.skill4DataGridViewTextBoxColumn,
+            this.skill5DataGridViewTextBoxColumn,
+            this.skill6DataGridViewTextBoxColumn,
+            this.skill7DataGridViewTextBoxColumn,
+            this.skill8DataGridViewTextBoxColumn,
+            this.skill9DataGridViewTextBoxColumn,
+            this.skill10DataGridViewTextBoxColumn,
+            this.skill11DataGridViewTextBoxColumn,
+            this.skill12DataGridViewTextBoxColumn,
+            this.skill13DataGridViewTextBoxColumn,
+            this.skill14DataGridViewTextBoxColumn,
+            this.skill15DataGridViewTextBoxColumn,
+            this.skill16DataGridViewTextBoxColumn,
+            this.skill17DataGridViewTextBoxColumn,
+            this.skill18DataGridViewTextBoxColumn,
+            this.skill19DataGridViewTextBoxColumn,
+            this.skill20DataGridViewTextBoxColumn,
+            this.skill21DataGridViewTextBoxColumn,
+            this.skill22DataGridViewTextBoxColumn,
+            this.skill23DataGridViewTextBoxColumn,
+            this.skill24DataGridViewTextBoxColumn,
+            this.skill25DataGridViewTextBoxColumn,
+            this.skill26DataGridViewTextBoxColumn,
+            this.skill27DataGridViewTextBoxColumn,
+            this.skill28DataGridViewTextBoxColumn,
+            this.skill29DataGridViewTextBoxColumn,
+            this.skill30DataGridViewTextBoxColumn,
+            this.ability1DataGridViewTextBoxColumn,
+            this.ability2DataGridViewTextBoxColumn,
+            this.ability3DataGridViewTextBoxColumn,
+            this.ability4DataGridViewTextBoxColumn,
+            this.ability5DataGridViewTextBoxColumn,
+            this.ability6DataGridViewTextBoxColumn,
+            this.ability7DataGridViewTextBoxColumn,
+            this.ability8DataGridViewTextBoxColumn,
+            this.ability9DataGridViewTextBoxColumn,
+            this.ability10DataGridViewTextBoxColumn,
+            this.ability11DataGridViewTextBoxColumn,
+            this.ability12DataGridViewTextBoxColumn,
+            this.ability13DataGridViewTextBoxColumn,
+            this.ability14DataGridViewTextBoxColumn,
+            this.ability15DataGridViewTextBoxColumn,
+            this.ability16DataGridViewTextBoxColumn,
+            this.ability17DataGridViewTextBoxColumn,
+            this.ability18DataGridViewTextBoxColumn,
+            this.ability19DataGridViewTextBoxColumn,
+            this.ability20DataGridViewTextBoxColumn,
+            this.ability21DataGridViewTextBoxColumn,
+            this.ability22DataGridViewTextBoxColumn,
+            this.ability23DataGridViewTextBoxColumn,
+            this.ability24DataGridViewTextBoxColumn,
+            this.ability25DataGridViewTextBoxColumn,
+            this.ability26DataGridViewTextBoxColumn,
+            this.ability27DataGridViewTextBoxColumn,
+            this.ability28DataGridViewTextBoxColumn,
+            this.ability29DataGridViewTextBoxColumn,
+            this.ability30DataGridViewTextBoxColumn,
+            this.infoDataGridViewTextBoxColumn});
 			this.dataGridView1.DataSource = this.tableunitBindingSource;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(1280, 755);
+			this.dataGridView1.Size = new System.Drawing.Size(1440, 785);
 			this.dataGridView1.TabIndex = 0;
 			// 
-			// tablemonsterBindingSource
+			// tableunitBindingSource
 			// 
 			this.tableunitBindingSource.DataMember = "__table_unit";
 			this.tableunitBindingSource.DataSource = this.gigaBattlerDataSet;
@@ -338,137 +344,23 @@ namespace Status_Editer {
 			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
 			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
-			// bindingNavigator1
-			// 
-			this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-			this.bindingNavigator1.BindingSource = this.tableunitBindingSource;
-			this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-			this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-			this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
-			this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.bindingNavigatorMoveFirstItem,
-			this.bindingNavigatorMovePreviousItem,
-			this.bindingNavigatorSeparator,
-			this.bindingNavigatorPositionItem,
-			this.bindingNavigatorCountItem,
-			this.bindingNavigatorSeparator1,
-			this.bindingNavigatorMoveNextItem,
-			this.bindingNavigatorMoveLastItem,
-			this.bindingNavigatorSeparator2,
-			this.bindingNavigatorAddNewItem,
-			this.bindingNavigatorDeleteItem});
-			this.bindingNavigator1.Location = new System.Drawing.Point(3, 0);
-			this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-			this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-			this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-			this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-			this.bindingNavigator1.Name = "bindingNavigator1";
-			this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-			this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.bindingNavigator1.Size = new System.Drawing.Size(249, 25);
-			this.bindingNavigator1.TabIndex = 0;
-			// 
-			// bindingNavigatorAddNewItem
-			// 
-			this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-			this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-			this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorAddNewItem.Text = "新規追加";
-			// 
-			// bindingNavigatorCountItem
-			// 
-			this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-			this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
-			this.bindingNavigatorCountItem.Text = "/ {0}";
-			this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-			// 
-			// bindingNavigatorDeleteItem
-			// 
-			this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-			this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-			this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorDeleteItem.Text = "削除";
-			// 
-			// bindingNavigatorMoveFirstItem
-			// 
-			this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-			this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-			this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorMoveFirstItem.Text = "最初に移動";
-			// 
-			// bindingNavigatorMovePreviousItem
-			// 
-			this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-			this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-			this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorMovePreviousItem.Text = "前に戻る";
-			// 
-			// bindingNavigatorSeparator
-			// 
-			this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-			this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-			// 
-			// bindingNavigatorPositionItem
-			// 
-			this.bindingNavigatorPositionItem.AccessibleName = "位置";
-			this.bindingNavigatorPositionItem.AutoSize = false;
-			this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-			this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-			this.bindingNavigatorPositionItem.Text = "0";
-			this.bindingNavigatorPositionItem.ToolTipText = "現在の場所";
-			// 
-			// bindingNavigatorSeparator1
-			// 
-			this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-			this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
-			// bindingNavigatorMoveNextItem
-			// 
-			this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-			this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-			this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorMoveNextItem.Text = "次に移動";
-			// 
-			// bindingNavigatorMoveLastItem
-			// 
-			this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-			this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-			this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorMoveLastItem.Text = "最後に移動";
-			// 
-			// bindingNavigatorSeparator2
-			// 
-			this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-			this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-			// 
-			// ___table_monsterTableAdapter
+			// ___table_unitTableAdapter
 			// 
 			this.___table_unitTableAdapter.ClearBeforeFill = true;
 			// 
 			// unitIDDataGridViewTextBoxColumn
 			// 
-			this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "MonsterID";
-			this.unitIDDataGridViewTextBoxColumn.HeaderText = "MonsterID";
-			this.unitIDDataGridViewTextBoxColumn.Name = "monsterIDDataGridViewTextBoxColumn";
-			this.unitIDDataGridViewTextBoxColumn.Width = 82;
+			this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "UnitID";
+			this.unitIDDataGridViewTextBoxColumn.HeaderText = "UnitID";
+			this.unitIDDataGridViewTextBoxColumn.Name = "unitIDDataGridViewTextBoxColumn";
+			this.unitIDDataGridViewTextBoxColumn.Width = 62;
 			// 
 			// unitNameDataGridViewTextBoxColumn
 			// 
-			this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "MonsterName";
-			this.unitNameDataGridViewTextBoxColumn.HeaderText = "MonsterName";
-			this.unitNameDataGridViewTextBoxColumn.Name = "monsterNameDataGridViewTextBoxColumn";
+			this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "UnitName";
+			this.unitNameDataGridViewTextBoxColumn.HeaderText = "UnitName";
+			this.unitNameDataGridViewTextBoxColumn.Name = "unitNameDataGridViewTextBoxColumn";
+			this.unitNameDataGridViewTextBoxColumn.Width = 80;
 			// 
 			// raceDataGridViewTextBoxColumn
 			// 
@@ -480,6 +372,10 @@ namespace Status_Editer {
 			// reqLvDataGridViewTextBoxColumn
 			// 
 			this.reqLvDataGridViewTextBoxColumn.DataPropertyName = "Req Lv";
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle1.Format = "N0";
+			dataGridViewCellStyle1.NullValue = null;
+			this.reqLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
 			this.reqLvDataGridViewTextBoxColumn.HeaderText = "Req Lv";
 			this.reqLvDataGridViewTextBoxColumn.Name = "reqLvDataGridViewTextBoxColumn";
 			this.reqLvDataGridViewTextBoxColumn.Width = 66;
@@ -487,6 +383,10 @@ namespace Status_Editer {
 			// minLvDataGridViewTextBoxColumn
 			// 
 			this.minLvDataGridViewTextBoxColumn.DataPropertyName = "Min Lv";
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle2.Format = "N0";
+			dataGridViewCellStyle2.NullValue = null;
+			this.minLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
 			this.minLvDataGridViewTextBoxColumn.HeaderText = "Min Lv";
 			this.minLvDataGridViewTextBoxColumn.Name = "minLvDataGridViewTextBoxColumn";
 			this.minLvDataGridViewTextBoxColumn.Width = 64;
@@ -494,6 +394,10 @@ namespace Status_Editer {
 			// maxLvDataGridViewTextBoxColumn
 			// 
 			this.maxLvDataGridViewTextBoxColumn.DataPropertyName = "Max Lv";
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle3.Format = "N0";
+			dataGridViewCellStyle3.NullValue = null;
+			this.maxLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
 			this.maxLvDataGridViewTextBoxColumn.HeaderText = "Max Lv";
 			this.maxLvDataGridViewTextBoxColumn.Name = "maxLvDataGridViewTextBoxColumn";
 			this.maxLvDataGridViewTextBoxColumn.Width = 67;
@@ -501,6 +405,9 @@ namespace Status_Editer {
 			// startTPDataGridViewTextBoxColumn
 			// 
 			this.startTPDataGridViewTextBoxColumn.DataPropertyName = "StartTP";
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle4.Format = "N0";
+			this.startTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
 			this.startTPDataGridViewTextBoxColumn.HeaderText = "StartTP";
 			this.startTPDataGridViewTextBoxColumn.Name = "startTPDataGridViewTextBoxColumn";
 			this.startTPDataGridViewTextBoxColumn.Width = 69;
@@ -508,6 +415,9 @@ namespace Status_Editer {
 			// maxTPDataGridViewTextBoxColumn
 			// 
 			this.maxTPDataGridViewTextBoxColumn.DataPropertyName = "MaxTP";
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle5.Format = "N0";
+			this.maxTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
 			this.maxTPDataGridViewTextBoxColumn.HeaderText = "MaxTP";
 			this.maxTPDataGridViewTextBoxColumn.Name = "maxTPDataGridViewTextBoxColumn";
 			this.maxTPDataGridViewTextBoxColumn.Width = 65;
@@ -515,6 +425,9 @@ namespace Status_Editer {
 			// hPDataGridViewTextBoxColumn
 			// 
 			this.hPDataGridViewTextBoxColumn.DataPropertyName = "HP";
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle6.Format = "N2";
+			this.hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
 			this.hPDataGridViewTextBoxColumn.HeaderText = "HP";
 			this.hPDataGridViewTextBoxColumn.Name = "hPDataGridViewTextBoxColumn";
 			this.hPDataGridViewTextBoxColumn.Width = 45;
@@ -1072,6 +985,76 @@ namespace Status_Editer {
 			this.skill20DataGridViewTextBoxColumn.Name = "skill20DataGridViewTextBoxColumn";
 			this.skill20DataGridViewTextBoxColumn.Width = 64;
 			// 
+			// skill21DataGridViewTextBoxColumn
+			// 
+			this.skill21DataGridViewTextBoxColumn.DataPropertyName = "Skill21";
+			this.skill21DataGridViewTextBoxColumn.HeaderText = "Skill21";
+			this.skill21DataGridViewTextBoxColumn.Name = "skill21DataGridViewTextBoxColumn";
+			this.skill21DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill22DataGridViewTextBoxColumn
+			// 
+			this.skill22DataGridViewTextBoxColumn.DataPropertyName = "Skill22";
+			this.skill22DataGridViewTextBoxColumn.HeaderText = "Skill22";
+			this.skill22DataGridViewTextBoxColumn.Name = "skill22DataGridViewTextBoxColumn";
+			this.skill22DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill23DataGridViewTextBoxColumn
+			// 
+			this.skill23DataGridViewTextBoxColumn.DataPropertyName = "Skill23";
+			this.skill23DataGridViewTextBoxColumn.HeaderText = "Skill23";
+			this.skill23DataGridViewTextBoxColumn.Name = "skill23DataGridViewTextBoxColumn";
+			this.skill23DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill24DataGridViewTextBoxColumn
+			// 
+			this.skill24DataGridViewTextBoxColumn.DataPropertyName = "Skill24";
+			this.skill24DataGridViewTextBoxColumn.HeaderText = "Skill24";
+			this.skill24DataGridViewTextBoxColumn.Name = "skill24DataGridViewTextBoxColumn";
+			this.skill24DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill25DataGridViewTextBoxColumn
+			// 
+			this.skill25DataGridViewTextBoxColumn.DataPropertyName = "Skill25";
+			this.skill25DataGridViewTextBoxColumn.HeaderText = "Skill25";
+			this.skill25DataGridViewTextBoxColumn.Name = "skill25DataGridViewTextBoxColumn";
+			this.skill25DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill26DataGridViewTextBoxColumn
+			// 
+			this.skill26DataGridViewTextBoxColumn.DataPropertyName = "Skill26";
+			this.skill26DataGridViewTextBoxColumn.HeaderText = "Skill26";
+			this.skill26DataGridViewTextBoxColumn.Name = "skill26DataGridViewTextBoxColumn";
+			this.skill26DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill27DataGridViewTextBoxColumn
+			// 
+			this.skill27DataGridViewTextBoxColumn.DataPropertyName = "Skill27";
+			this.skill27DataGridViewTextBoxColumn.HeaderText = "Skill27";
+			this.skill27DataGridViewTextBoxColumn.Name = "skill27DataGridViewTextBoxColumn";
+			this.skill27DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill28DataGridViewTextBoxColumn
+			// 
+			this.skill28DataGridViewTextBoxColumn.DataPropertyName = "Skill28";
+			this.skill28DataGridViewTextBoxColumn.HeaderText = "Skill28";
+			this.skill28DataGridViewTextBoxColumn.Name = "skill28DataGridViewTextBoxColumn";
+			this.skill28DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill29DataGridViewTextBoxColumn
+			// 
+			this.skill29DataGridViewTextBoxColumn.DataPropertyName = "Skill29";
+			this.skill29DataGridViewTextBoxColumn.HeaderText = "Skill29";
+			this.skill29DataGridViewTextBoxColumn.Name = "skill29DataGridViewTextBoxColumn";
+			this.skill29DataGridViewTextBoxColumn.Width = 64;
+			// 
+			// skill30DataGridViewTextBoxColumn
+			// 
+			this.skill30DataGridViewTextBoxColumn.DataPropertyName = "Skill30";
+			this.skill30DataGridViewTextBoxColumn.HeaderText = "Skill30";
+			this.skill30DataGridViewTextBoxColumn.Name = "skill30DataGridViewTextBoxColumn";
+			this.skill30DataGridViewTextBoxColumn.Width = 64;
+			// 
 			// ability1DataGridViewTextBoxColumn
 			// 
 			this.ability1DataGridViewTextBoxColumn.DataPropertyName = "Ability1";
@@ -1289,27 +1272,23 @@ namespace Status_Editer {
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
 			this.infoDataGridViewTextBoxColumn.Width = 49;
 			// 
-			// TestForm
+			// FormUnit
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.ClientSize = new System.Drawing.Size(1280, 780);
+			this.ClientSize = new System.Drawing.Size(1440, 810);
 			this.Controls.Add(this.ToolStripContainer);
-			this.Name = "TestForm";
-			this.Text = "TestForm";
+			this.Name = "FormUnit";
+			this.Text = "Unit Table";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUnit_FormClosed);
 			this.Load += new System.EventHandler(this.TestForm_Load);
 			this.ToolStripContainer.ContentPanel.ResumeLayout(false);
-			this.ToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-			this.ToolStripContainer.TopToolStripPanel.PerformLayout();
 			this.ToolStripContainer.ResumeLayout(false);
 			this.ToolStripContainer.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-			this.bindingNavigator1.ResumeLayout(false);
-			this.bindingNavigator1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1321,18 +1300,6 @@ namespace Status_Editer {
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableunitBindingSource;
 		private GigaBattlerDataSetTableAdapters.__table_unitTableAdapter ___table_unitTableAdapter;
-		private BindingNavigator bindingNavigator1;
-		private ToolStripButton bindingNavigatorAddNewItem;
-		private ToolStripLabel bindingNavigatorCountItem;
-		private ToolStripButton bindingNavigatorDeleteItem;
-		private ToolStripButton bindingNavigatorMoveFirstItem;
-		private ToolStripButton bindingNavigatorMovePreviousItem;
-		private ToolStripSeparator bindingNavigatorSeparator;
-		private ToolStripTextBox bindingNavigatorPositionItem;
-		private ToolStripSeparator bindingNavigatorSeparator1;
-		private ToolStripButton bindingNavigatorMoveNextItem;
-		private ToolStripButton bindingNavigatorMoveLastItem;
-		private ToolStripSeparator bindingNavigatorSeparator2;
 		private DataGridViewTextBoxColumn unitIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn unitNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn raceDataGridViewTextBoxColumn;
@@ -1421,6 +1388,16 @@ namespace Status_Editer {
 		private DataGridViewTextBoxColumn skill18DataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn skill19DataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn skill20DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill21DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill22DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill23DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill24DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill25DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill26DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill27DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill28DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill29DataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn skill30DataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn ability1DataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn ability2DataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn ability3DataGridViewTextBoxColumn;
