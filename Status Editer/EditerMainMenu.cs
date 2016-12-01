@@ -9,9 +9,12 @@
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.ComponentModel;
+using System.Data;
 using System.Diagnostics;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
@@ -20,8 +23,16 @@ namespace Status_Editer {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// 変数
+		private int[] RowCount = new int[12];
+		/// <summary>
+		/// DataTableを使用しているUserControlの数
+		/// </summary>
 		private readonly int ControlCount = 8;
-		private readonly int TableCount = 10;
+
+		/// <summary>
+		/// データベースのテーブルの数
+		/// </summary>
+		private readonly int TableCount = 12;
 
 		public string rootDirectory = "";
 
@@ -40,18 +51,18 @@ namespace Status_Editer {
 		__table_skillTableAdapter tableSkillTableAdapter = new __table_skillTableAdapter();
 
 		// BindingSource
-		BindingSource tableElementBindingSource = new BindingSource();
-		BindingSource tableWeaponTypeBindingSource = new BindingSource();
-		BindingSource tableUnitBindingSource = new BindingSource();
-		BindingSource tableRaceBindingSource = new BindingSource();
-		BindingSource tableJobBindingSource = new BindingSource();
-		BindingSource tableWeaponBingingSource = new BindingSource();
-		BindingSource tableShieldBingingSource = new BindingSource();
-		BindingSource tableHelmetBingingSource = new BindingSource();
-		BindingSource tableGauntletBingingSource = new BindingSource();
-		BindingSource tableArmorBingingSource = new BindingSource();
-		BindingSource tableAccessoryBingingSource = new BindingSource();
-		BindingSource tableSkillBingingSource = new BindingSource();
+		__table_elementDataTable TableElementDataTable = new __table_elementDataTable();
+		__table_weapon_typeDataTable TableWeaponTypeDataTable = new __table_weapon_typeDataTable();
+		__table_unitDataTable TableUnitDataTable = new __table_unitDataTable();
+		__table_raceDataTable TableRaceDataTable = new __table_raceDataTable();
+		__table_jobDataTable TableJobDataTable = new __table_jobDataTable();
+		__table_weaponDataTable TableWeaponDataTable = new __table_weaponDataTable();
+		__table_shieldDataTable TableShieldDataTable = new __table_shieldDataTable();
+		__table_helmetDataTable TableHelmetDataTable = new __table_helmetDataTable();
+		__table_gauntletDataTable TableGauntletDataTable = new __table_gauntletDataTable();
+		__table_armorDataTable TableArmorDataTable = new __table_armorDataTable();
+		__table_accessoryDataTable TableAccessoryDataTable = new __table_accessoryDataTable();
+		__table_skillDataTable TableSkillDataTable = new __table_skillDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -80,39 +91,39 @@ namespace Status_Editer {
 		/// </summary>
 		private void ReloadControl() {
 			// TAB: ユニット
-			DropInfomation.ReloadBindings(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
+			DropInfomation.ReloadDataTable(tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 			ActiveSkillInfomation.ReloadBindings(tableSkillTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 武器
 
-			ItemInfoWeapon.ReloadBindings(tableElementTableAdapter, tableWeaponTypeTableAdapter);
+			ItemInfoWeapon.ReloadDataTable(tableElementTableAdapter, tableWeaponTypeTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 盾
 
-			ItemInfoShield.ReloadBindings(tableElementTableAdapter);
+			ItemInfoShield.ReloadDataTable(tableElementTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 頭防具
 
-			ItemInfoHelmet.ReloadBindings(tableElementTableAdapter);
+			ItemInfoHelmet.ReloadDataTable(tableElementTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 腕防具
 
-			ItemInfoGauntlet.ReloadBindings(tableElementTableAdapter);
+			ItemInfoGauntlet.ReloadDataTable(tableElementTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 体防具
 
-			ItemInfoArmor.ReloadBindings(tableElementTableAdapter);
+			ItemInfoArmor.ReloadDataTable(tableElementTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: アクセサリー
 
-			ItemInfoAccessory.ReloadBindings(tableElementTableAdapter);
+			ItemInfoAccessory.ReloadDataTable(tableElementTableAdapter);
 			toolStripProgressBar1.PerformStep();    // カウント
 		}
 
@@ -121,46 +132,41 @@ namespace Status_Editer {
 		/// </summary>
 		private void UpdateSQL() {
 			int sum = 0;    // 更新件数計算用
+							// ステータスバーの更新
 			toolStripProgressBar1.Value = 0;
 			toolStripProgressBar1.Maximum = TableCount + 1;
 			StripInfo.Text = "Updating Database...";
 
 			// 編集終了宣言
 			Validate();
-			tableUnitBindingSource.EndEdit();
-			tableRaceBindingSource.EndEdit();
-			tableJobBindingSource.EndEdit();
-			tableWeaponBingingSource.EndEdit();
-			tableShieldBingingSource.EndEdit();
-			tableHelmetBingingSource.EndEdit();
-			tableGauntletBingingSource.EndEdit();
-			tableArmorBingingSource.EndEdit();
-			tableAccessoryBingingSource.EndEdit();
-			tableSkillBingingSource.EndEdit();
 
 			toolStripProgressBar1.PerformStep();
 
 			try {
 				// 更新処理
-				sum += tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
+				sum += RowCount[0] = tableElementTableAdapter.Update(TableElementDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
+				sum += RowCount[1] = tableWeaponTypeTableAdapter.Update(TableWeaponTypeDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
+				sum += RowCount[2] = tableUnitTableAdapter.Update(TableUnitDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
+				sum += RowCount[3] = tableRaceTableAdapter.Update(TableRaceDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
+				sum += RowCount[4] = tableJobTableAdapter.Update(TableJobDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
+				sum += RowCount[5] = tableWeaponTableAdapter.Update(TableWeaponDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
+				sum += RowCount[6] = tableShieldTableAdapter.Update(TableShieldDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
+				sum += RowCount[7] = tableHelmetTableAdapter.Update(TableHelmetDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
+				sum += RowCount[8] = tableGauntletTableAdapter.Update(TableGauntletDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
-				sum += tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
+				sum += RowCount[9] = tableArmorTableAdapter.Update(TableArmorDataTable);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += RowCount[10] = tableAccessoryTableAdapter.Update(TableAccessoryDataTable);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += RowCount[11] = tableSkillTableAdapter.Update(TableSkillDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
 
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
@@ -212,32 +218,7 @@ namespace Status_Editer {
 
 			var Task2 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 2 Start.");
-
-				tableElementBindingSource.DataMember = "__table_element";
-				tableElementBindingSource.DataSource = GigaBattlerDataSet;
-				tableWeaponTypeBindingSource.DataMember = "__table_weapon_type";
-				tableWeaponTypeBindingSource.DataSource = GigaBattlerDataSet;
-				tableUnitBindingSource.DataMember = "__table_unit";
-				tableUnitBindingSource.DataSource = GigaBattlerDataSet;
-				tableRaceBindingSource.DataMember = "__table_race";
-				tableRaceBindingSource.DataSource = GigaBattlerDataSet;
-				tableJobBindingSource.DataMember = "__table_job";
-				tableJobBindingSource.DataSource = GigaBattlerDataSet;
-				tableWeaponBingingSource.DataMember = "__table_weapon";
-				tableWeaponBingingSource.DataSource = GigaBattlerDataSet;
-				tableShieldBingingSource.DataMember = "__table_shield";
-				tableShieldBingingSource.DataSource = GigaBattlerDataSet;
-				tableHelmetBingingSource.DataMember = "__table_helmet";
-				tableHelmetBingingSource.DataSource = GigaBattlerDataSet;
-				tableGauntletBingingSource.DataMember = "__table_gauntlet";
-				tableGauntletBingingSource.DataSource = GigaBattlerDataSet;
-				tableArmorBingingSource.DataMember = "__table_armor";
-				tableArmorBingingSource.DataSource = GigaBattlerDataSet;
-				tableAccessoryBingingSource.DataMember = "__table_accessory";
-				tableAccessoryBingingSource.DataSource = GigaBattlerDataSet;
-				tableSkillBingingSource.DataMember = "__table_skill";
-				tableSkillBingingSource.DataSource = GigaBattlerDataSet;
-
+				// 現在空
 				Debug.WriteLine("Task 2 Finish.");
 			});
 
@@ -300,39 +281,39 @@ namespace Status_Editer {
 				Task2.Wait();
 				Debug.WriteLine("Task 4 Start.");
 
-				listUnit.DataSource = tableUnitBindingSource;
+				listUnit.DataSource = TableUnitDataTable;
 				listUnit.DisplayMember = "UnitName";
 				listUnit.ValueMember = "UnitID";
 
-				listRace.DataSource = tableRaceBindingSource;
+				listRace.DataSource = TableRaceDataTable;
 				listRace.DisplayMember = "RaceName";
 				listRace.ValueMember = "RaceID";
 
-				listJob.DataSource = tableJobBindingSource;
+				listJob.DataSource = TableJobDataTable;
 				listJob.DisplayMember = "JobName";
 				listJob.ValueMember = "JobID";
 
-				listWeapon.DataSource = tableWeaponBingingSource;
+				listWeapon.DataSource = TableWeaponDataTable;
 				listWeapon.DisplayMember = "WeaponName";
 				listWeapon.ValueMember = "WeaponID";
 
-				listShield.DataSource = tableShieldBingingSource;
+				listShield.DataSource = TableShieldDataTable;
 				listShield.DisplayMember = "ShieldName";
 				listShield.ValueMember = "ShieldID";
 
-				listHelmet.DataSource = tableHelmetBingingSource;
+				listHelmet.DataSource = TableHelmetDataTable;
 				listHelmet.DisplayMember = "HelmetName";
 				listHelmet.ValueMember = "HelmetID";
 
-				listGauntlet.DataSource = tableGauntletBingingSource;
+				listGauntlet.DataSource = TableGauntletDataTable;
 				listGauntlet.DisplayMember = "GauntletName";
 				listGauntlet.ValueMember = "GauntletID";
 
-				listArmor.DataSource = tableArmorBingingSource;
+				listArmor.DataSource = TableArmorDataTable;
 				listArmor.DisplayMember = "ArmorName";
 				listArmor.ValueMember = "ArmorID";
 
-				listAccessory.DataSource = tableAccessoryBingingSource;
+				listAccessory.DataSource = TableAccessoryDataTable;
 				listAccessory.DisplayMember = "AccessoryName";
 				listAccessory.ValueMember = "AccessoryID";
 
@@ -343,17 +324,17 @@ namespace Status_Editer {
 			// 別コントロールへのバインディング設定
 			// TAB: ユニット
 
-			var Task5_3 = Task.Factory.StartNew(() => {
+			var Task5_3 = Task.Factory.StartNew((Action)(() => {
 				Debug.WriteLine("Task 5-3 Start.");
 
-				TotalUnitInfomation.LoadDataBindings(tableUnitBindingSource);
-				UnitInfomation.LoadDataBindings(tableUnitBindingSource);
-				DropInfomation.LoadDataBindings(tableUnitBindingSource, tableWeaponTableAdapter, tableShieldTableAdapter, tableHelmetTableAdapter, tableGauntletTableAdapter, tableArmorTableAdapter, tableAccessoryTableAdapter);
-				StatusInfomation.LoadDataBindings(tableUnitBindingSource);
-				ActiveSkillInfomation.LoadDataBindings(tableUnitBindingSource);
+				TotalUnitInfomation.SetDataBindings(TableUnitDataTable);
+				UnitInfomation.SetDataBindings(TableUnitDataTable);
+				DropInfomation.SetDataBindings(TableUnitDataTable);
+				StatusInfomation.SetDataBindings(TableUnitDataTable);
+				ActiveSkillInfomation.SetDataBindings(TableUnitDataTable);
 
 				Debug.WriteLine("Task 5-3 Finish.");
-			});
+			}));
 
 			// TAB: ユニットタイプ
 
@@ -364,7 +345,7 @@ namespace Status_Editer {
 			var Task5_5 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-5 Start.");
 
-				RaceInfomation.LoadDataBindings(tableRaceBindingSource);
+				RaceInfomation.SetDataBindings(TableRaceDataTable);
 
 				Debug.WriteLine("Task 5-5 Finish.");
 			});
@@ -373,7 +354,7 @@ namespace Status_Editer {
 
 			var Task5_6 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-6 Start.");
-				JobInfomation.LoadDataBindings(tableJobBindingSource);
+				JobInfomation.LoadDataBindings(TableJobDataTable);
 
 				Debug.WriteLine("Task 5-6 Finish.");
 			});
@@ -387,8 +368,8 @@ namespace Status_Editer {
 			var Task5_8 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-8 Start.");
 
-				ItemInfoWeapon.LoadDataBindings(tableWeaponBingingSource);
-				EquipItemWeapon.LoadDataBindings(tableWeaponBingingSource);
+				ItemInfoWeapon.SetDataBindings(TableWeaponDataTable);
+				EquipItemWeapon.SetDataBindings(TableWeaponDataTable);
 
 				Debug.WriteLine("Task 5-8 Finish.");
 			});
@@ -398,8 +379,8 @@ namespace Status_Editer {
 			var Task5_9 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-9 Start.");
 
-				ItemInfoShield.LoadDataBindings(tableShieldBingingSource, "Shield");
-				EquipItemShield.LoadDataBindings(tableShieldBingingSource);
+				ItemInfoShield.SetDataBindings(TableShieldDataTable, "Shield");
+				EquipItemShield.SetDataBindings(TableShieldDataTable);
 
 				Debug.WriteLine("Task 5-9 Finish.");
 			});
@@ -409,8 +390,8 @@ namespace Status_Editer {
 			var Task5_10 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-10 Start.");
 
-				ItemInfoHelmet.LoadDataBindings(tableHelmetBingingSource, "Helmet");
-				EquipItemHelmet.LoadDataBindings(tableHelmetBingingSource);
+				ItemInfoHelmet.SetDataBindings(TableHelmetDataTable, "Helmet");
+				EquipItemHelmet.SetDataBindings(TableHelmetDataTable);
 
 				Debug.WriteLine("Task 5-10 Finish.");
 			});
@@ -420,8 +401,8 @@ namespace Status_Editer {
 			var Task5_11 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-11 Start.");
 
-				ItemInfoGauntlet.LoadDataBindings(tableGauntletBingingSource, "Gauntlet");
-				EquipItemGauntlet.LoadDataBindings(tableGauntletBingingSource);
+				ItemInfoGauntlet.SetDataBindings(TableGauntletDataTable, "Gauntlet");
+				EquipItemGauntlet.SetDataBindings(TableGauntletDataTable);
 
 				Debug.WriteLine("Task 5-11 Finish.");
 			});
@@ -431,8 +412,8 @@ namespace Status_Editer {
 			var Task5_12 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-12 Start.");
 
-				ItemInfoArmor.LoadDataBindings(tableArmorBingingSource, "Armor");
-				EquipItemArmor.LoadDataBindings(tableArmorBingingSource);
+				ItemInfoArmor.SetDataBindings(TableArmorDataTable, "Armor");
+				EquipItemArmor.SetDataBindings(TableArmorDataTable);
 
 				Debug.WriteLine("Task 5-12 Finish.");
 			});
@@ -442,13 +423,13 @@ namespace Status_Editer {
 			var Task5_13 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 5-13 Start.");
 
-				ItemInfoAccessory.LoadDataBindings(tableAccessoryBingingSource, "Accessory");
-				EquipItemAccessory.LoadDataBindings(tableAccessoryBingingSource);
+				ItemInfoAccessory.SetDataBindings(TableAccessoryDataTable, "Accessory");
+				EquipItemAccessory.SetDataBindings(TableAccessoryDataTable);
 
 				Debug.WriteLine("Task 5-13 Finish.");
 			});
 
-
+			// 待機～～
 			Task5_3.Wait();
 			Task5_5.Wait();
 			Task5_6.Wait();
@@ -464,21 +445,22 @@ namespace Status_Editer {
 			// データの埋め込み
 			// ネットワーク関連を使用するのでtryを使用
 			try {
-				tableElementTableAdapter.Fill(GigaBattlerDataSet.__table_element);
-				tableWeaponTypeTableAdapter.Fill(GigaBattlerDataSet.__table_weapon_type);
-				tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
-				tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
-				tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
-				tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
-				tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
-				tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
-				tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
-				tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
-				tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
-				tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
+				RowCount[0] = tableElementTableAdapter.Fill(TableElementDataTable);
+				RowCount[1] = tableWeaponTypeTableAdapter.Fill(TableWeaponTypeDataTable);
+				RowCount[2] = tableUnitTableAdapter.Fill(TableUnitDataTable);
+				RowCount[3] = tableRaceTableAdapter.Fill(TableRaceDataTable);
+				RowCount[4] = tableJobTableAdapter.Fill(TableJobDataTable);
+				RowCount[5] = tableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+				RowCount[6] = tableShieldTableAdapter.Fill(TableShieldDataTable);
+				RowCount[7] = tableHelmetTableAdapter.Fill(TableHelmetDataTable);
+				RowCount[8] = tableGauntletTableAdapter.Fill(TableGauntletDataTable);
+				RowCount[9] = tableArmorTableAdapter.Fill(TableArmorDataTable);
+				RowCount[10] = tableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
+				RowCount[11] = tableSkillTableAdapter.Fill(TableSkillDataTable);
 
 				// コントロール側の処理はメソッドに移動
 				ReloadControl();
+				toolStripProgressBar1.Value = 0;    // 値をリセット
 			} catch (Exception ex) {
 				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -503,10 +485,38 @@ namespace Status_Editer {
 			Task5_12.Dispose();
 			Task5_13.Dispose();
 
+			// タイトルにバージョン番号を付与
+			Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			StripInfo.Text = "Welcome!!";
 		}// End Method
 
 		#endregion
+
+		/// <summary>
+		/// フォームを閉じる直前の処理。キャンセルで閉じる動作をキャンセルする
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void EditerMainMenu_FormClosing(object sender, FormClosingEventArgs e) {
+			DialogResult result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+			switch (result) {
+				case DialogResult.Yes:
+					try {
+						UpdateSQL();
+					} catch (Exception ex) {
+						Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+						e.Cancel = true;
+					} finally {
+
+					}
+					break;
+				case DialogResult.No:
+					break;
+				case DialogResult.Cancel:
+					e.Cancel = true;
+					break;
+			}// End Switch
+		}// End Method
 
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
@@ -554,18 +564,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuExit_Click(object sender, EventArgs e) {
-			DialogResult result = MessageBox.Show("終了時にデータベースをアップデートしますか?", "確認", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-			switch (result) {
-				case DialogResult.Yes:
-					UpdateSQL();
-					break;
-				case DialogResult.No:
-					break;
-				case DialogResult.Cancel:
-					return;
-			}// End Switch
 			Close();
-			Application.Exit();
 		}// End Method
 
 		#endregion
@@ -593,6 +592,143 @@ namespace Status_Editer {
 		//----------------------------------------------------------------------------------------------------
 		#region データベース
 
+		#region 新規登録
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ユニット」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddUnit_Click(object sender, EventArgs e) {
+			// ダミーデータの作成
+			Random rand = new Random();
+			int Dummy = rand.Next(10000);
+
+			try {
+				DataRow row = TableUnitDataTable.NewRow();
+				row["UnitID"] = "Unit" + Dummy.ToString();
+				row["UnitName"] = "Unit" + Dummy.ToString();
+				row["Type"] = 0;
+				row["Info"] = "";
+
+				TableUnitDataTable.Rows.Add(row);
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("New Row Insert Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("New Row Insert Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ユニットタイプ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddUnitType_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「種族」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddRace_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「ジョブ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddJob_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「メーカー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddMaker_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「武器」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddWeapon_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「盾」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddShield_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「頭防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddHelmet_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「腕防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddGauntlet_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「体防具」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddArmor_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「アクセサリー」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddAccessory_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「スキル」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddSkill_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「データベース」→「新規登録」→「アビリティ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void toolStripDbAddAbility_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		#endregion
+
 		#region 再読み込み
 
 		/// <summary>
@@ -602,37 +738,41 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadAll_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				toolStripProgressBar1.Value = 0;
 				toolStripProgressBar1.Maximum = ControlCount + TableCount;
 				StripInfo.Text = "Reloading Database...";
 
 				try {
-					toolStripProgressBar1.Value = 0;
-					tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
-					toolStripProgressBar1.PerformStep();
-					tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
-					toolStripProgressBar1.PerformStep();
-					tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
-					toolStripProgressBar1.PerformStep();
-					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
-					toolStripProgressBar1.PerformStep();
-					tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
-					toolStripProgressBar1.PerformStep();
-					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
-					toolStripProgressBar1.PerformStep();
-					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
-					toolStripProgressBar1.PerformStep();
-					tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
-					toolStripProgressBar1.PerformStep();
-					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
-					toolStripProgressBar1.PerformStep();
-					tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
-					toolStripProgressBar1.PerformStep();
+					sum += RowCount[0] = tableElementTableAdapter.Fill(TableElementDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[1] = tableWeaponTypeTableAdapter.Fill(TableWeaponTypeDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[2] = tableUnitTableAdapter.Fill(TableUnitDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[3] = tableRaceTableAdapter.Fill(TableRaceDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[4] = tableJobTableAdapter.Fill(TableJobDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[5] = tableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[6] = tableShieldTableAdapter.Fill(TableShieldDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[7] = tableHelmetTableAdapter.Fill(TableHelmetDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[8] = tableGauntletTableAdapter.Fill(TableGauntletDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[9] = tableArmorTableAdapter.Fill(TableArmorDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[10] = tableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[11] = tableSkillTableAdapter.Fill(TableSkillDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
 
 					ReloadControl();
 
-					StripInfo.Text = "Reloading Complete!!";
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -671,11 +811,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadUnit_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableUnitTableAdapter.Fill(GigaBattlerDataSet.__table_unit);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[2] = tableUnitTableAdapter.Fill(TableUnitDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -691,10 +832,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadUnitType_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					StripInfo.Text = "Reloading Complete!!";
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -710,11 +852,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadRace_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableRaceTableAdapter.Fill(GigaBattlerDataSet.__table_race);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[3] = tableRaceTableAdapter.Fill(TableRaceDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -730,11 +873,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadJob_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableJobTableAdapter.Fill(GigaBattlerDataSet.__table_job);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[4] = tableJobTableAdapter.Fill(TableJobDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -750,10 +894,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadMaker_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					StripInfo.Text = "Reloading Complete!!";
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -769,11 +914,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadWeapon_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableWeaponTableAdapter.FillSortByType(GigaBattlerDataSet.__table_weapon);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[5] = tableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -789,11 +935,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadShield_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableShieldTableAdapter.Fill(GigaBattlerDataSet.__table_shield);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[6] = tableShieldTableAdapter.Fill(TableShieldDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -809,11 +956,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadHelmet_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableHelmetTableAdapter.Fill(GigaBattlerDataSet.__table_helmet);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[7] = tableHelmetTableAdapter.Fill(TableHelmetDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -829,11 +977,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadGauntlet_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableGauntletTableAdapter.Fill(GigaBattlerDataSet.__table_gauntlet);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[8] = tableGauntletTableAdapter.Fill(TableGauntletDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -849,11 +998,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadArmor_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableArmorTableAdapter.Fill(GigaBattlerDataSet.__table_armor);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[9] = tableArmorTableAdapter.Fill(TableArmorDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -869,11 +1019,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadAccessory_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableAccessoryTableAdapter.Fill(GigaBattlerDataSet.__table_accessory);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[10] = tableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -889,11 +1040,12 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadSkill_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					tableSkillTableAdapter.Fill(GigaBattlerDataSet.__table_skill);
-					StripInfo.Text = "Reloading Complete!!";
+					sum = RowCount[11] = tableSkillTableAdapter.Fill(TableSkillDataTable);
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -909,10 +1061,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadAbility_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				// ステータスバーの更新
+				int sum = 0;    // 更新件数計算用
+								// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					StripInfo.Text = "Reloading Complete!!";
+					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
 					Debug.WriteLine("Database Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
@@ -944,10 +1097,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableUnitBindingSource.EndEdit();
 
 			try {
-				sum = tableUnitTableAdapter.Update(GigaBattlerDataSet.__table_unit);
+				sum = tableUnitTableAdapter.Update(TableUnitDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -986,10 +1138,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableRaceBindingSource.EndEdit();
 
 			try {
-				sum = tableRaceTableAdapter.Update(GigaBattlerDataSet.__table_race);
+				sum = tableRaceTableAdapter.Update(TableRaceDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1008,10 +1159,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableJobBindingSource.EndEdit();
 
 			try {
-				sum = tableJobTableAdapter.Update(GigaBattlerDataSet.__table_job);
+				sum = tableJobTableAdapter.Update(TableJobDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1050,10 +1200,10 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableWeaponBingingSource.EndEdit();
+			//tableWeaponBingingSource.EndEdit();
 
 			try {
-				sum = tableWeaponTableAdapter.Update(GigaBattlerDataSet.__table_weapon);
+				sum = tableWeaponTableAdapter.Update(TableWeaponDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1072,10 +1222,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableShieldBingingSource.EndEdit();
 
 			try {
-				sum = tableShieldTableAdapter.Update(GigaBattlerDataSet.__table_shield);
+				sum = tableShieldTableAdapter.Update(TableShieldDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1094,10 +1243,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableHelmetBingingSource.EndEdit();
 
 			try {
-				sum = tableHelmetTableAdapter.Update(GigaBattlerDataSet.__table_helmet);
+				sum = tableHelmetTableAdapter.Update(TableHelmetDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1116,10 +1264,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableGauntletBingingSource.EndEdit();
 
 			try {
-				sum = tableGauntletTableAdapter.Update(GigaBattlerDataSet.__table_gauntlet);
+				sum = tableGauntletTableAdapter.Update(TableGauntletDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1138,10 +1285,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableArmorBingingSource.EndEdit();
 
 			try {
-				sum = tableArmorTableAdapter.Update(GigaBattlerDataSet.__table_armor);
+				sum = tableArmorTableAdapter.Update(TableArmorDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1160,10 +1306,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableAccessoryBingingSource.EndEdit();
 
 			try {
-				sum = tableAccessoryTableAdapter.Update(GigaBattlerDataSet.__table_accessory);
+				sum = tableAccessoryTableAdapter.Update(TableAccessoryDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1182,10 +1327,9 @@ namespace Status_Editer {
 
 			// 編集終了宣言
 			Validate();
-			tableSkillBingingSource.EndEdit();
 
 			try {
-				sum = tableSkillTableAdapter.Update(GigaBattlerDataSet.__table_skill);
+				sum = tableSkillTableAdapter.Update(TableSkillDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1226,8 +1370,8 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void StripMenuWindowView_Click(object sender, EventArgs e) {
-			TestForm Form2 = new TestForm();
+		private void StripMenuWindowViewUnit_Click(object sender, EventArgs e) {
+			FormUnit Form2 = new FormUnit(TableUnitDataTable);
 			Form2.Show();
 			//DataBindings();
 		}// End Method

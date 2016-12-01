@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab06Job.Parts {
 	[ToolboxItem(true)]
@@ -19,9 +20,6 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		// イベントの登録を許可
-		[Browsable(true)]
 
 		private int _StatusCost;    // ステータスコスト計算用
 		private int CostMultiplier; // ステータスコスト倍率
@@ -56,11 +54,13 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		/// <param name="e">NumEventArgs</param>
 		public delegate void EventBaseValueChangedHandler(object sender, NumEventArgs e);
 
+
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// EventHandler
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// イベントの宣言
+		[Browsable(true)]
 		[Category("Action")]
 		[Description("StatusCostの値が変動した時に発生します。")]
 		public event EventBaseValueChangedHandler CostMultiplierChanged;
@@ -108,7 +108,7 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 				NumEventArgs ex = new NumEventArgs();
 				ex.Value = _StatusCost;// 送るデータの中身
 				OnCostMultiplierChanged(ex);
-			}
+			}// End Set
 		}// End Property
 
 
@@ -129,14 +129,14 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableJobBindingSource">BindingSource</param>
+		/// <param name="TableJobDataTable">Job Data Table</param>
 		/// <param name="bindTag">Status Tag</param>
-		public void SetDataBindings(BindingSource tableJobBindingSource, string bindTag) {
+		public void SetDataBindings(__table_jobDataTable TableJobDataTable, string bindTag) {
 			// データバインドの設定
-			numericBaseStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, bindTag, true));
-			numericBonusStatus.DataBindings.Add(new Binding("Value", tableJobBindingSource, "Bonus" + bindTag, true));
+			numericBaseStatus.DataBindings.Add(new Binding("Value", TableJobDataTable, bindTag, true));
+			numericBonusStatus.DataBindings.Add(new Binding("Value", TableJobDataTable, "Bonus" + bindTag, true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -148,6 +148,11 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Private Method
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		// Protected Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>

@@ -6,6 +6,7 @@
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System.ComponentModel;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit {
 	[ToolboxItem(true)]
@@ -37,32 +38,31 @@ namespace Status_Editer.User_Control.tab03Unit {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		public void LoadDataBindings(BindingSource tableUnitBindingSource) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable) {
 			// データバインドの設定
-			SkillInfomation1.SetDataBindings(tableUnitBindingSource, "Skill1");
-			SkillInfomation2.SetDataBindings(tableUnitBindingSource, "Skill2");
-			SkillInfomation3.SetDataBindings(tableUnitBindingSource, "Skill3");
-			SkillInfomation4.SetDataBindings(tableUnitBindingSource, "Skill4");
-			SkillInfomation5.SetDataBindings(tableUnitBindingSource, "Skill5");
-			SkillInfomation6.SetDataBindings(tableUnitBindingSource, "Skill6");
-			SkillInfomation7.SetDataBindings(tableUnitBindingSource, "Skill7");
-			SkillInfomation8.SetDataBindings(tableUnitBindingSource, "Skill8");
-			SkillInfomation9.SetDataBindings(tableUnitBindingSource, "Skill9");
-			SkillInfomation10.SetDataBindings(tableUnitBindingSource, "Skill10");
-			SkillInfomation11.SetDataBindings(tableUnitBindingSource, "Skill11");
-			SkillInfomation12.SetDataBindings(tableUnitBindingSource, "Skill12");
-			SkillInfomation13.SetDataBindings(tableUnitBindingSource, "Skill13");
-			SkillInfomation14.SetDataBindings(tableUnitBindingSource, "Skill14");
-			SkillInfomation15.SetDataBindings(tableUnitBindingSource, "Skill15");
-			SkillInfomation16.SetDataBindings(tableUnitBindingSource, "Skill16");
-			SkillInfomation17.SetDataBindings(tableUnitBindingSource, "Skill17");
-			SkillInfomation18.SetDataBindings(tableUnitBindingSource, "Skill18");
-			SkillInfomation19.SetDataBindings(tableUnitBindingSource, "Skill19");
-			SkillInfomation20.SetDataBindings(tableUnitBindingSource, "Skill20");
+			SkillInfomation1.SetDataBindings(TableUnitDataTable, "Skill1");
+			SkillInfomation2.SetDataBindings(TableUnitDataTable, "Skill2");
+			SkillInfomation3.SetDataBindings(TableUnitDataTable, "Skill3");
+			SkillInfomation4.SetDataBindings(TableUnitDataTable, "Skill4");
+			SkillInfomation5.SetDataBindings(TableUnitDataTable, "Skill5");
+			SkillInfomation6.SetDataBindings(TableUnitDataTable, "Skill6");
+			SkillInfomation7.SetDataBindings(TableUnitDataTable, "Skill7");
+			SkillInfomation8.SetDataBindings(TableUnitDataTable, "Skill8");
+			SkillInfomation9.SetDataBindings(TableUnitDataTable, "Skill9");
+			SkillInfomation10.SetDataBindings(TableUnitDataTable, "Skill10");
+			SkillInfomation11.SetDataBindings(TableUnitDataTable, "Skill11");
+			SkillInfomation12.SetDataBindings(TableUnitDataTable, "Skill12");
+			SkillInfomation13.SetDataBindings(TableUnitDataTable, "Skill13");
+			SkillInfomation14.SetDataBindings(TableUnitDataTable, "Skill14");
+			SkillInfomation15.SetDataBindings(TableUnitDataTable, "Skill15");
+			SkillInfomation16.SetDataBindings(TableUnitDataTable, "Skill16");
+			SkillInfomation17.SetDataBindings(TableUnitDataTable, "Skill17");
+			SkillInfomation18.SetDataBindings(TableUnitDataTable, "Skill18");
+			SkillInfomation19.SetDataBindings(TableUnitDataTable, "Skill19");
+			SkillInfomation20.SetDataBindings(TableUnitDataTable, "Skill20");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

@@ -47,21 +47,21 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		// Weapon
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Weapon Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_weaponDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableWeaponDataTable">Weapon Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_weaponDataTable TableWeaponDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableWeaponDataTable;
 			comboDropTable.DisplayMember = "WeaponName";
 			comboDropTable.ValueMember = "WeaponID";
 
 			//----------------------------------------------------------------------------------------------------
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item1", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per1", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item1", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per1", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -71,20 +71,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		//Shield
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Shield Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_shieldDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableShieldDataTable">Shield Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_shieldDataTable TableShieldDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableShieldDataTable;
 			comboDropTable.DisplayMember = "ShieldName";
 			comboDropTable.ValueMember = "ShieldID";
 
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item2", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per2", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item2", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per2", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -94,20 +94,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		// Helmet
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Helmet Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_helmetDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableHelmetDataTable">Helmet Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_helmetDataTable TableHelmetDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableHelmetDataTable;
 			comboDropTable.DisplayMember = "HelmetName";
 			comboDropTable.ValueMember = "HelmetID";
 
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item3", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per3", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item3", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per3", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -117,20 +117,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		// Gauntlet
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Gauntlet Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_gauntletDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableGauntletDataTable">Gauntlet Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_gauntletDataTable TableGauntletDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableGauntletDataTable;
 			comboDropTable.DisplayMember = "GauntletName";
 			comboDropTable.ValueMember = "GauntletID";
 
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item4", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per4", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item4", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per4", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -140,20 +140,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		// Armor
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Armor Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_armorDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableArmorDataTable">Armor Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_armorDataTable TableArmorDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableArmorDataTable;
 			comboDropTable.DisplayMember = "ArmorName";
 			comboDropTable.ValueMember = "ArmorID";
 
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item5", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per5", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item5", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per5", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -163,20 +163,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 
 		// Accessory
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		/// <param name="bindTag">Accessory Adapter</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource, __table_accessoryDataTable bindTag) {
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableAccessoryDataTable">Accessory Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_accessoryDataTable TableAccessoryDataTable) {
 			// コンボボックスの設定
-			comboDropTable.DataSource = bindTag;
+			comboDropTable.DataSource = TableAccessoryDataTable;
 			comboDropTable.DisplayMember = "AccessoryName";
 			comboDropTable.ValueMember = "AccessoryID";
 
 			// データバインドの設定
 
-			comboDropTable.DataBindings.Add(new Binding("SelectedValue", tableUnitBindingSource, "Item6", true));
-			numericDropRate.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Per6", true));
+			comboDropTable.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, "Item6", true));
+			numericDropRate.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Per6", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

@@ -5,6 +5,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -50,13 +51,13 @@ namespace Status_Editer.User_Control.CommonParts {
 
 		// ジャンル毎に必要かと思われたが、引数パラメータが全て同じなことが判明(オーバーロードの必要がない)
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableBingingSource">Any Item Binding Source</param>
+		/// <param name="ItemDataTable">Item Data Table</param>
 		/// <param name="bindTag">Binding Tag</param>
-		public void SetDataBindings(BindingSource tableBingingSource, string bindTag) {
+		public void SetDataBindings(DataTable ItemDataTable, string bindTag) {
 			// データバインドの設定
-			numericUpDown1.DataBindings.Add(new Binding("Value", tableBingingSource, bindTag, true));
+			numericUpDown1.DataBindings.Add(new Binding("Value", ItemDataTable, bindTag, true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

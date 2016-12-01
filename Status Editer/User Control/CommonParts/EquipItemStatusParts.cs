@@ -43,23 +43,23 @@ namespace Status_Editer.User_Control.CommonParts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableBindingSource">BindingSource</param>
-		public void LoadDataBindings(BindingSource tableBindingSource) {
+		/// <param name="ItemDataTable">Item Data Table</param>
+		public void SetDataBindings(DataTable ItemDataTable) {
 			// データバインドの設定
-			itemStatusHP.SetDataBindings(tableBindingSource, "HP");
-			itemStatusTP.SetDataBindings(tableBindingSource, "TP");
-			itemStatusMeleeATK.SetDataBindings(tableBindingSource, "ATK");
-			itemStatusMeleeDEF.SetDataBindings(tableBindingSource, "DEF");
-			itemStatusRangeATK.SetDataBindings(tableBindingSource, "RAT");
-			itemStatusRangeDEF.SetDataBindings(tableBindingSource, "RDF");
-			itemStatusMagicATK.SetDataBindings(tableBindingSource, "MAT");
-			itemStatusMagicDEF.SetDataBindings(tableBindingSource, "MDF");
-			itemStatusSPD.SetDataBindings(tableBindingSource, "SPD");
-			itemStatusLuck.SetDataBindings(tableBindingSource, "LUK");
-			itemStatusHIT.SetDataBindings(tableBindingSource, "HIT");
-			itemStatusEVT.SetDataBindings(tableBindingSource, "EVT");
+			itemStatusHP.SetDataBindings(ItemDataTable, "HP");
+			itemStatusTP.SetDataBindings(ItemDataTable, "TP");
+			itemStatusMeleeATK.SetDataBindings(ItemDataTable, "ATK");
+			itemStatusMeleeDEF.SetDataBindings(ItemDataTable, "DEF");
+			itemStatusRangeATK.SetDataBindings(ItemDataTable, "RAT");
+			itemStatusRangeDEF.SetDataBindings(ItemDataTable, "RDF");
+			itemStatusMagicATK.SetDataBindings(ItemDataTable, "MAT");
+			itemStatusMagicDEF.SetDataBindings(ItemDataTable, "MDF");
+			itemStatusSPD.SetDataBindings(ItemDataTable, "SPD");
+			itemStatusLuck.SetDataBindings(ItemDataTable, "LUK");
+			itemStatusHIT.SetDataBindings(ItemDataTable, "HIT");
+			itemStatusEVT.SetDataBindings(ItemDataTable, "EVT");
 
 
 			//----------------------------------------------------------------------------------------------------

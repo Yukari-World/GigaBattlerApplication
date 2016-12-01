@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit.Parts {
 	[ToolboxItem(true)]
@@ -62,13 +63,13 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// DataBindingsの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
+		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="tableUnitBindingSource">BindingSource</param>
-		public void SetDataBindings(BindingSource tableUnitBindingSource) {
-			numericReqLv.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Req Lv", true));
-			numericMinLevel.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Min Lv", true));
-			numericMaxLevel.DataBindings.Add(new Binding("Value", tableUnitBindingSource, "Max Lv", true));
+		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable) {
+			numericReqLv.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Req Lv", true));
+			numericMinLevel.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Min Lv", true));
+			numericMaxLevel.DataBindings.Add(new Binding("Value", TableUnitDataTable, "Max Lv", true));
 		}// End Method
 
 
