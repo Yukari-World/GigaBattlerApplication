@@ -5,18 +5,10 @@
     <Setting Name="giga_battlerConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=192.168.10.90;user id=sa;database="giga battler";allowuservariables=True;persistsecurityinfo=True;password=manager;characterset=utf8&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=127.0.0.1;user id=Z-Yukari;database="giga battler";allowuservariables=True;persistsecurityinfo=True;password=Yukari;characterset=utf8&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=192.168.10.90;user id=sa;database="giga battler";allowuservariables=True;persistsecurityinfo=True;password=manager;characterset=utf8</Value>
-    </Setting>
-    <Setting Name="giga_battlerConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=192.168.10.90;user id=sa;database="giga battler";allowuservariables=True;persistsecurityinfo=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=192.168.10.90;user id=sa;database="giga battler";allowuservariables=True;persistsecurityinfo=True</Value>
+      <Value Profile="(Default)">server=127.0.0.1;user id=Z-Yukari;database="giga battler";allowuservariables=True;persistsecurityinfo=True;password=Yukari;characterset=utf8</Value>
     </Setting>
   </Settings>
 </SettingsFile>

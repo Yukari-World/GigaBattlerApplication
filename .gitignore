@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/.vs
+/packages/MySql.Data.6.9.9
+/Giga Battler Client for Windows
+/Status Editer/bin
+/Status Editer/obj

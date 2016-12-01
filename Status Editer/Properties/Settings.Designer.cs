@@ -26,22 +26,11 @@ namespace Status_Editer.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.10.90;user id=sa;database=\"giga battler\";allowuservariables=True;p" +
-            "ersistsecurityinfo=True;password=manager;characterset=utf8")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;user id=Z-Yukari;database=\"giga battler\";allowuservariables=True" +
+            ";persistsecurityinfo=True;password=Yukari;characterset=utf8")]
         public string giga_battlerConnectionString {
             get {
                 return ((string)(this["giga_battlerConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.10.90;user id=sa;database=\"giga battler\";allowuservariables=True;p" +
-            "ersistsecurityinfo=True")]
-        public string giga_battlerConnectionString1 {
-            get {
-                return ((string)(this["giga_battlerConnectionString1"]));
             }
         }
     }
