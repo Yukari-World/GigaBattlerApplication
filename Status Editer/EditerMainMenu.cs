@@ -216,7 +216,7 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void EditerMainMenu_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
-			// 初期化
+			// Initialize
 
 			TableElementTableAdapter.ClearBeforeFill = true;
 			TableWeaponTypeTableAdapter.ClearBeforeFill = true;
@@ -269,106 +269,126 @@ namespace Status_Editer {
 			// タスク化しているけど無意味?
 
 			var Task1 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 1 Start.");
+				Debug.WriteLine("Task 1: Start.");
 
 				// TAB: ユニット
 				listUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				tabControlUnit.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Unit Designer Setting End.");
 
 				// TAB: 種族
 
 				listRace.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Race Designer Setting End.");
 
 				// TAB: ジョブ
 
 				listJob.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Job Designer Setting End.");
 
 				// TAB: メーカー
 
 				listMaker.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Maker Designer Setting End.");
 
 				// TAB: 武器
 
 				listWeapon.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Weapon Designer Setting End.");
 
 				// TAB: 盾
 
 				listShield.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Shield Designer Setting End.");
 
 				// TAB: 頭防具
 
 				listHelmet.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Helmet Designer Setting End.");
 
 				// TAB: 腕防具
 
 				listGauntlet.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Gauntlet Designer Setting End.");
 
 				// TAB: 体防具
 
 				listArmor.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Armor Designer Setting End.");
 
 				// TAB: アクセサリー
 
 				listAccessory.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Accessory Designer Setting End.");
 
-				Debug.WriteLine("Task 1 Finish.");
+				Debug.WriteLine("Task 1: Finish.");
 			});
 
 			//----------------------------------------------------------------------------------------------------
 			// バインド項目の設定
 
 			var Task2 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 2 Start.");
+				Debug.WriteLine("Task 2: Start.");
 
 				listUnit.DataSource = TableUnitDataTable;
 				listUnit.DisplayMember = "UnitName";
 				listUnit.ValueMember = "UnitID";
+				Debug.WriteLine("Task 2: List Unit Data Source Setting End.");
 
 				listRace.DataSource = TableRaceDataTable;
 				listRace.DisplayMember = "RaceName";
 				listRace.ValueMember = "RaceID";
+				Debug.WriteLine("Task 2: List Race Data Source Setting End.");
 
 				listJob.DataSource = TableJobDataTable;
 				listJob.DisplayMember = "JobName";
 				listJob.ValueMember = "JobID";
+				Debug.WriteLine("Task 2: List Job Data Source Setting End.");
 
 				listMaker.DataSource = TableMakerDataTable;
 				listMaker.DisplayMember = "MakerName";
 				listMaker.ValueMember = "MakerID";
+				Debug.WriteLine("Task 2: List Maker Data Source Setting End.");
 
 				listWeapon.DataSource = TableWeaponDataTable;
 				listWeapon.DisplayMember = "WeaponName";
 				listWeapon.ValueMember = "WeaponID";
+				Debug.WriteLine("Task 2: List Weapon Data Source Setting End.");
 
 				listShield.DataSource = TableShieldDataTable;
 				listShield.DisplayMember = "ShieldName";
 				listShield.ValueMember = "ShieldID";
+				Debug.WriteLine("Task 2: List Shield Data Source Setting End.");
 
 				listHelmet.DataSource = TableHelmetDataTable;
 				listHelmet.DisplayMember = "HelmetName";
 				listHelmet.ValueMember = "HelmetID";
+				Debug.WriteLine("Task 2: List Helmet Data Source Setting End.");
 
 				listGauntlet.DataSource = TableGauntletDataTable;
 				listGauntlet.DisplayMember = "GauntletName";
 				listGauntlet.ValueMember = "GauntletID";
+				Debug.WriteLine("Task 2: List Gauntlet Data Source Setting End.");
 
 				listArmor.DataSource = TableArmorDataTable;
 				listArmor.DisplayMember = "ArmorName";
 				listArmor.ValueMember = "ArmorID";
+				Debug.WriteLine("Task 2: List Armor Data Source Setting End.");
 
 				listAccessory.DataSource = TableAccessoryDataTable;
 				listAccessory.DisplayMember = "AccessoryName";
 				listAccessory.ValueMember = "AccessoryID";
+				Debug.WriteLine("Task 2: List Accessory Data Source Setting End.");
 
-				Debug.WriteLine("Task 2 Finish.");
+				Debug.WriteLine("Task 2: Finish.");
 			});
 
 			//----------------------------------------------------------------------------------------------------
 			// 別コントロールへのバインディング設定
 			// TAB: ユニット
 
-			var Task3_3 = Task.Factory.StartNew((Action)(() => {
-				Debug.WriteLine("Task 3-3 Start.");
+			var Task3_3 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 3-3: Start.");
 
 				TotalUnitInfomation.SetDataBindings(TableUnitDataTable);
 				UnitInfomation.SetDataBindings(TableUnitDataTable);
@@ -376,8 +396,8 @@ namespace Status_Editer {
 				StatusInfomation.SetDataBindings(TableUnitDataTable);
 				ActiveSkillInfomation.SetDataBindings(TableUnitDataTable, TableSkillDataTable);
 
-				Debug.WriteLine("Task 3-3 Finish.");
-			}));
+				Debug.WriteLine("Task 3-3: Finish.");
+			});
 
 			// TAB: ユニットタイプ
 
@@ -386,96 +406,96 @@ namespace Status_Editer {
 			// TAB: 種族
 
 			var Task3_5 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-5 Start.");
+				Debug.WriteLine("Task 3-5: Start.");
 
 				RaceInfomation.SetDataBindings(TableRaceDataTable);
 
-				Debug.WriteLine("Task 3-5 Finish.");
+				Debug.WriteLine("Task 3-5: Finish.");
 			});
 
 			// TAB: ジョブ
 
 			var Task3_6 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-6 Start.");
+				Debug.WriteLine("Task 3-6: Start.");
 
 				JobInfomation.LoadDataBindings(TableJobDataTable);
 
-				Debug.WriteLine("Task 3-6 Finish.");
+				Debug.WriteLine("Task 3-6: Finish.");
 			});
 
 			// TAB: メーカー
 
 
 			var Task3_7 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-7 Start.");
+				Debug.WriteLine("Task 3-7: Start.");
 
-				Debug.WriteLine("Task 3-7 Finish.");
+				Debug.WriteLine("Task 3-7: Finish.");
 			});
 
 			// TAB: 武器
 
 			var Task3_8 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-8 Start.");
+				Debug.WriteLine("Task 3-8: Start.");
 
 				ItemInfoWeapon.SetDataBindings(TableWeaponDataTable, TableElementDataTable, TableWeaponTypeDataTable);
 				EquipItemWeapon.SetDataBindings(TableWeaponDataTable);
 
-				Debug.WriteLine("Task 3-8 Finish.");
+				Debug.WriteLine("Task 3-8: Finish.");
 			});
 
 			// TAB: 盾
 
 			var Task3_9 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-9 Start.");
+				Debug.WriteLine("Task 3-9: Start.");
 
 				ItemInfoShield.SetDataBindings(TableShieldDataTable, TableElementDataTable, "Shield");
 				EquipItemShield.SetDataBindings(TableShieldDataTable);
 
-				Debug.WriteLine("Task 3-9 Finish.");
+				Debug.WriteLine("Task 3-9: Finish.");
 			});
 
 			// TAB: 頭防具
 
 			var Task3_10 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-10 Start.");
+				Debug.WriteLine("Task 3-10: Start.");
 
 				ItemInfoHelmet.SetDataBindings(TableHelmetDataTable, TableElementDataTable, "Helmet");
 				EquipItemHelmet.SetDataBindings(TableHelmetDataTable);
 
-				Debug.WriteLine("Task 3-10 Finish.");
+				Debug.WriteLine("Task 3-10: Finish.");
 			});
 
 			// TAB: 腕防具
 
 			var Task3_11 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-11 Start.");
+				Debug.WriteLine("Task 3-11: Start.");
 
 				ItemInfoGauntlet.SetDataBindings(TableGauntletDataTable, TableElementDataTable, "Gauntlet");
 				EquipItemGauntlet.SetDataBindings(TableGauntletDataTable);
 
-				Debug.WriteLine("Task 3-11 Finish.");
+				Debug.WriteLine("Task 3-11: Finish.");
 			});
 
 			// TAB: 体防具
 
 			var Task3_12 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-12 Start.");
+				Debug.WriteLine("Task 3-12: Start.");
 
 				ItemInfoArmor.SetDataBindings(TableArmorDataTable, TableElementDataTable, "Armor");
 				EquipItemArmor.SetDataBindings(TableArmorDataTable);
 
-				Debug.WriteLine("Task 3-12 Finish.");
+				Debug.WriteLine("Task 3-12: Finish.");
 			});
 
 			// TAB: アクセサリー
 
 			var Task3_13 = Task.Factory.StartNew(() => {
-				Debug.WriteLine("Task 3-13 Start.");
+				Debug.WriteLine("Task 3-13: Start.");
 
 				ItemInfoAccessory.SetDataBindings(TableAccessoryDataTable, TableElementDataTable, "Accessory");
 				EquipItemAccessory.SetDataBindings(TableAccessoryDataTable);
 
-				Debug.WriteLine("Task 3-13 Finish.");
+				Debug.WriteLine("Task 3-13: Finish.");
 			});
 
 			// 待機～～
@@ -491,6 +511,7 @@ namespace Status_Editer {
 			Task3_11.Wait();
 			Task3_12.Wait();
 			Task3_13.Wait();
+			Debug.WriteLine("All Task Finish.");
 
 			// 破棄破棄
 			Task1.Dispose();
@@ -509,6 +530,7 @@ namespace Status_Editer {
 			// タイトルにバージョン番号を付与
 			Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			StripInfo.Text = "Welcome!!";
+			Debug.WriteLine("System Starting Without Errors.");
 		}// End Method
 
 		#endregion
@@ -590,6 +612,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuExit_Click(object sender, EventArgs e) {
+			// 閉じる。後の処理はメソッドに任せる
 			Close();
 		}// End Method
 
@@ -604,6 +627,7 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuViwerStatusBar_Click(object sender, EventArgs e) {
+			// チェックが付いているかで切り替える
 			if (StripMenuViwerStatusBar.Checked == true) {
 				StripMenuViwerStatusBar.Checked = false;
 				ToolStripContainer.BottomToolStripPanelVisible = false;
