@@ -36,10 +36,16 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public FormUnit(__table_unitDataTable DataTable) {
-			// 割り当て
-			UnitDataTable = DataTable;
+		public FormUnit(__table_unitDataTable DataTable, __table_weapon_typeDataTable TypeDataTable) {
 			InitializeComponent();
+
+			// 割り当て。編集がリアルタイムに適応されるようになる
+			UnitDataTable = DataTable;
+
+			// コンボボックスの設定
+			typeDataGridViewComboBoxColumn.DataSource = TypeDataTable;
+			typeDataGridViewComboBoxColumn.ValueMember = "WeaponTypeID";
+			typeDataGridViewComboBoxColumn.DisplayMember = "WeaponTypeName";
 		}// End Method
 
 
@@ -64,9 +70,9 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void TestForm_Load(object sender, EventArgs e) {
 			// データソースのすり替え
-			dataGridView1.DataSource = UnitDataTable;
-			dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+			DataGridViewUnit.DataSource = UnitDataTable;
+			DataGridViewUnit.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewUnit.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>

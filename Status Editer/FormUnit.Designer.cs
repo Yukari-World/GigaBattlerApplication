@@ -37,7 +37,7 @@ namespace Status_Editer {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.DataGridViewUnit = new System.Windows.Forms.DataGridView();
 			this.tableunitBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
 			this.___table_unitTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter();
@@ -89,7 +89,7 @@ namespace Status_Editer {
 			this.sSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.aTCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.typeDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.dMGPerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.airDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.verDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,7 +172,7 @@ namespace Status_Editer {
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewUnit)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
 			this.SuspendLayout();
@@ -183,7 +183,7 @@ namespace Status_Editer {
 			// ToolStripContainer.ContentPanel
 			// 
 			this.ToolStripContainer.ContentPanel.BackColor = System.Drawing.Color.Transparent;
-			this.ToolStripContainer.ContentPanel.Controls.Add(this.dataGridView1);
+			this.ToolStripContainer.ContentPanel.Controls.Add(this.DataGridViewUnit);
 			this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1440, 785);
 			this.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ToolStripContainer.Location = new System.Drawing.Point(0, 0);
@@ -192,12 +192,12 @@ namespace Status_Editer {
 			this.ToolStripContainer.TabIndex = 0;
 			this.ToolStripContainer.Text = "toolStripContainer1";
 			// 
-			// dataGridView1
+			// DataGridViewUnit
 			// 
-			this.dataGridView1.AutoGenerateColumns = false;
-			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.DataGridViewUnit.AutoGenerateColumns = false;
+			this.DataGridViewUnit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.DataGridViewUnit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.DataGridViewUnit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.unitIDDataGridViewTextBoxColumn,
             this.unitNameDataGridViewTextBoxColumn,
             this.raceDataGridViewTextBoxColumn,
@@ -246,7 +246,7 @@ namespace Status_Editer {
             this.sSPDataGridViewTextBoxColumn,
             this.sPCDataGridViewTextBoxColumn,
             this.aTCDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
+            this.typeDataGridViewComboBoxColumn,
             this.dMGPerDataGridViewTextBoxColumn,
             this.airDataGridViewCheckBoxColumn,
             this.verDataGridViewTextBoxColumn,
@@ -327,12 +327,12 @@ namespace Status_Editer {
             this.ability29DataGridViewTextBoxColumn,
             this.ability30DataGridViewTextBoxColumn,
             this.infoDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.tableunitBindingSource;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(1440, 785);
-			this.dataGridView1.TabIndex = 0;
+			this.DataGridViewUnit.DataSource = this.tableunitBindingSource;
+			this.DataGridViewUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.DataGridViewUnit.Location = new System.Drawing.Point(0, 0);
+			this.DataGridViewUnit.Name = "DataGridViewUnit";
+			this.DataGridViewUnit.Size = new System.Drawing.Size(1440, 785);
+			this.DataGridViewUnit.TabIndex = 0;
 			// 
 			// tableunitBindingSource
 			// 
@@ -351,6 +351,7 @@ namespace Status_Editer {
 			// unitIDDataGridViewTextBoxColumn
 			// 
 			this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "UnitID";
+			this.unitIDDataGridViewTextBoxColumn.Frozen = true;
 			this.unitIDDataGridViewTextBoxColumn.HeaderText = "UnitID";
 			this.unitIDDataGridViewTextBoxColumn.Name = "unitIDDataGridViewTextBoxColumn";
 			this.unitIDDataGridViewTextBoxColumn.Width = 62;
@@ -358,6 +359,7 @@ namespace Status_Editer {
 			// unitNameDataGridViewTextBoxColumn
 			// 
 			this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "UnitName";
+			this.unitNameDataGridViewTextBoxColumn.Frozen = true;
 			this.unitNameDataGridViewTextBoxColumn.HeaderText = "UnitName";
 			this.unitNameDataGridViewTextBoxColumn.Name = "unitNameDataGridViewTextBoxColumn";
 			this.unitNameDataGridViewTextBoxColumn.Width = 80;
@@ -705,12 +707,14 @@ namespace Status_Editer {
 			this.aTCDataGridViewTextBoxColumn.Name = "aTCDataGridViewTextBoxColumn";
 			this.aTCDataGridViewTextBoxColumn.Width = 53;
 			// 
-			// typeDataGridViewTextBoxColumn
+			// typeDataGridViewComboBoxColumn
 			// 
-			this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-			this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-			this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-			this.typeDataGridViewTextBoxColumn.Width = 55;
+			this.typeDataGridViewComboBoxColumn.DataPropertyName = "Type";
+			this.typeDataGridViewComboBoxColumn.HeaderText = "Type";
+			this.typeDataGridViewComboBoxColumn.Name = "typeDataGridViewComboBoxColumn";
+			this.typeDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.typeDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.typeDataGridViewComboBoxColumn.Width = 55;
 			// 
 			// dMGPerDataGridViewTextBoxColumn
 			// 
@@ -1268,9 +1272,10 @@ namespace Status_Editer {
 			// infoDataGridViewTextBoxColumn
 			// 
 			this.infoDataGridViewTextBoxColumn.DataPropertyName = "Info";
-			this.infoDataGridViewTextBoxColumn.HeaderText = "Info";
+			this.infoDataGridViewTextBoxColumn.HeaderText = "Text Infomation";
+			this.infoDataGridViewTextBoxColumn.MaxInputLength = 512;
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
-			this.infoDataGridViewTextBoxColumn.Width = 49;
+			this.infoDataGridViewTextBoxColumn.Width = 101;
 			// 
 			// FormUnit
 			// 
@@ -1286,7 +1291,7 @@ namespace Status_Editer {
 			this.ToolStripContainer.ContentPanel.ResumeLayout(false);
 			this.ToolStripContainer.ResumeLayout(false);
 			this.ToolStripContainer.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewUnit)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableunitBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
 			this.ResumeLayout(false);
@@ -1296,7 +1301,7 @@ namespace Status_Editer {
 		#endregion
 
 		private ToolStripContainer ToolStripContainer;
-		private DataGridView dataGridView1;
+		private DataGridView DataGridViewUnit;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableunitBindingSource;
 		private GigaBattlerDataSetTableAdapters.__table_unitTableAdapter ___table_unitTableAdapter;
@@ -1348,7 +1353,7 @@ namespace Status_Editer {
 		private DataGridViewTextBoxColumn sSPDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn sPCDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn aTCDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+		private DataGridViewComboBoxColumn typeDataGridViewComboBoxColumn;
 		private DataGridViewTextBoxColumn dMGPerDataGridViewTextBoxColumn;
 		private DataGridViewCheckBoxColumn airDataGridViewCheckBoxColumn;
 		private DataGridViewTextBoxColumn verDataGridViewTextBoxColumn;

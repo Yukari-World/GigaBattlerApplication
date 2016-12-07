@@ -23,13 +23,6 @@ namespace Status_Editer.User_Control.CommonParts {
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-		// Data Table
-		private __table_weapon_typeDataTable WeaponType1 = new __table_weapon_typeDataTable();
-		private __table_weapon_typeDataTable WeaponType2 = new __table_weapon_typeDataTable();
-
-		private __table_elementDataTable ElementTable1 = new __table_elementDataTable();
-		private __table_elementDataTable ElementTable2 = new __table_elementDataTable();
-
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -56,7 +49,9 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="TableWeaponDataTable">Weapon Data Table</param>
-		public void SetDataBindings(__table_weaponDataTable TableWeaponDataTable) {
+		/// <param name="TableElementDataTable">Table Element Data Table</param>
+		/// <param name="TableWeaponTypeDataTable">Weapon Type Data Table</param>
+		public void SetDataBindings(__table_weaponDataTable TableWeaponDataTable, __table_elementDataTable TableElementDataTable, __table_weapon_typeDataTable TableWeaponTypeDataTable) {
 			// データ項目の作成
 			// データ項目が少なく、わざわざデータベース化する必要のない項目
 
@@ -113,11 +108,11 @@ namespace Status_Editer.User_Control.CommonParts {
 			//----------------------------------------------------------------------------------------------------
 			// コンボボックスの設定
 
-			comboEquipItemGroup.DataSource = WeaponType1;
+			comboEquipItemGroup.DataSource = TableWeaponTypeDataTable.Copy();
 			comboEquipItemGroup.DisplayMember = "WeaponTypeName";
 			comboEquipItemGroup.ValueMember = "WeaponTypeID";
 
-			comboAttackItemGroup.DataSource = WeaponType2;
+			comboAttackItemGroup.DataSource = TableWeaponTypeDataTable.Copy();
 			comboAttackItemGroup.DisplayMember = "WeaponTypeName";
 			comboAttackItemGroup.ValueMember = "WeaponTypeID";
 
@@ -146,18 +141,19 @@ namespace Status_Editer.User_Control.CommonParts {
 			comboEType.DataBindings.Add(new Binding("SelectedValue", TableWeaponDataTable, "EType", true));
 
 			// 共通設定
-			CommonSettings(TableWeaponDataTable);
+			CommonSettings(TableWeaponDataTable, TableElementDataTable);
 		}// End Method
 
 		/// <summary>
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="DataTable">対象のData Table</param>
-		/// <param name="bindtag">ターゲットのアイテムジャンル</param>
-		public void SetDataBindings(DataTable DataTable, string bindtag) {
+		/// <param name="TableElementDataTable">Table Element Data Table</param>
+		/// <param name="ItemTag">ターゲットのアイテムジャンル</param>
+		public void SetDataBindings(DataTable DataTable, __table_elementDataTable TableElementDataTable, string ItemTag) {
 			// データバインドの設定
-			textItemID.DataBindings.Add(new Binding("Text", DataTable, bindtag + "ID", true));
-			textItemName.DataBindings.Add(new Binding("Text", DataTable, bindtag + "Name", true));
+			textItemID.DataBindings.Add(new Binding("Text", DataTable, ItemTag + "ID", true));
+			textItemName.DataBindings.Add(new Binding("Text", DataTable, ItemTag + "Name", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -177,28 +173,29 @@ namespace Status_Editer.User_Control.CommonParts {
 			comboEquipItemGroup.Visible = false;
 
 			// 共通設定
-			CommonSettings(DataTable);
+			CommonSettings(DataTable, TableElementDataTable);
 		}// End Method
 
 		/// <summary>
 		/// バインド項目を再読み込みします。 
 		/// </summary>
-		/// <param name="ElementTableAdapter">__table_elementTableAdapter</param>
-		/// <param name="WeaponTypeTableAdapter">__table_weapon_typeTableAdapter</param>
-		public void ReloadDataTable(__table_elementTableAdapter ElementTableAdapter, __table_weapon_typeTableAdapter WeaponTypeTableAdapter) {
-			ElementTableAdapter.Fill(ElementTable1);
-			ElementTableAdapter.Fill(ElementTable2);
-			WeaponTypeTableAdapter.Fill(WeaponType1);
-			WeaponTypeTableAdapter.Fill(WeaponType2);
+		/// <param name="TableElementDataTable">Table Element Data Table</param>
+		/// <param name="TableWeaponTypeDataTable">Weapon Type Data Table</param>
+		public void ReloadDataTable(__table_elementDataTable TableElementDataTable, __table_weapon_typeDataTable TableWeaponTypeDataTable) {
+			comboEquipItemGroup.DataSource = TableWeaponTypeDataTable.Copy();
+			comboAttackItemGroup.DataSource = TableWeaponTypeDataTable.Copy();
+
+			comboElement1.DataSource = TableElementDataTable.Copy();
+			comboElement2.DataSource = TableElementDataTable.Copy();
 		}// End Method
 
 		/// <summary> 
 		/// バインド項目を再読み込みします。 
 		/// </summary> 
-		/// <param name="ElementTableAdapter">__table_elementTableAdapter</param>
-		public void ReloadDataTable(__table_elementTableAdapter ElementTableAdapter) {
-			ElementTableAdapter.Fill(ElementTable1);
-			ElementTableAdapter.Fill(ElementTable2);
+		/// <param name="TableElementDataTable">Table Element Data Table</param>
+		public void ReloadDataTable(__table_elementDataTable TableElementDataTable) {
+			comboElement1.DataSource = TableElementDataTable.Copy();
+			comboElement2.DataSource = TableElementDataTable.Copy();
 		}// End Method
 
 
@@ -210,14 +207,15 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// 共通するDataTableの割り当てやデザイナーの設定を行います
 		/// </summary>
 		/// <param name="DataTable">Item Data Table</param>
-		private void CommonSettings(DataTable DataTable) {
+		/// <param name="TableElementDataTable">Table Element Data Table</param>
+		private void CommonSettings(DataTable DataTable, __table_elementDataTable TableElementDataTable) {
 			// コンボボックスの設定
 
-			comboElement1.DataSource = ElementTable1;
+			comboElement1.DataSource = TableElementDataTable.Copy();
 			comboElement1.DisplayMember = "ElementName";
 			comboElement1.ValueMember = "ElementID";
 
-			comboElement2.DataSource = ElementTable2;
+			comboElement2.DataSource = TableElementDataTable.Copy();
 			comboElement2.DisplayMember = "ElementName";
 			comboElement2.ValueMember = "ElementID";
 
