@@ -3,7 +3,6 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

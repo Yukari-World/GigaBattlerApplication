@@ -52,14 +52,15 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="TableUnitDataTable">Unit Data Table</param>
+		/// <param name="TableSkillDataTable">Skill Data Table</param>
 		/// <param name="bindTag">string</param>
-		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, string bindTag) {
+		public void SetDataBindings(__table_unitDataTable TableUnitDataTable,__table_skillDataTable TableSkillDataTable, string bindTag) {
 			// データバインドの設定
 			// ここでは「Skill*」が入る
 			comboSkill.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, bindTag, true));
 
 			// バインド項目の設定
-			comboSkill.DataSource = SkillTable;
+			comboSkill.DataSource = TableSkillDataTable.Copy();
 			comboSkill.DisplayMember = "SkillName";
 			comboSkill.ValueMember = "SkillID";
 		}// End Method
@@ -67,9 +68,9 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// バインド項目を再読み込みします。
 		/// </summary>
-		/// <param name="SkillAdapter">__table_skillTableAdapter</param>
-		public void ReloadBindings(__table_skillTableAdapter SkillAdapter) {
-			SkillAdapter.Fill(SkillTable);
+		/// <param name="TableSkillDataTable">Skill Data Table</param>
+		public void ReloadBindings( __table_skillDataTable TableSkillDataTable) {
+			comboSkill.DataSource = TableSkillDataTable.Copy();
 		}// End Method
 
 

@@ -27,7 +27,7 @@ namespace Status_Editer.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;user id=Z-Yukari;database=\"giga battler\";allowuservariables=True" +
-            ";persistsecurityinfo=True;password=Yukari;characterset=utf8")]
+            ";password=Yukari;persistsecurityinfo=True;characterset=utf8")]
         public string giga_battlerConnectionString {
             get {
                 return ((string)(this["giga_battlerConnectionString"]));
