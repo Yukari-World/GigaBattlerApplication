@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>50</ApplicationRevision>
+    <ApplicationRevision>51</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -71,17 +71,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
+    <Compile Include="AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="EditerMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditerMainMenu.Designer.cs">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRace.Designer.cs">
+      <DependentUpon>FormRace.cs</DependentUpon>
     </Compile>
     <Compile Include="GigaBattlerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -201,11 +207,14 @@
     <Compile Include="User Control\tab05Race\RaceInfomation.Designer.cs">
       <DependentUpon>RaceInfomation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditerMainMenu.resx">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRace.resx">
+      <DependentUpon>FormRace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

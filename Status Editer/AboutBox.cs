@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer {
-	partial class AboutBox1 : Form {
-		public AboutBox1() {
+	partial class AboutBox : Form {
+		public AboutBox() {
 			InitializeComponent();
 			this.Text = String.Format("{0} のバージョン情報", AssemblyTitle);
 			this.labelProductName.Text = AssemblyProduct;

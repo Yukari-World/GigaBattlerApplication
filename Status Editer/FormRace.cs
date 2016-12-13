@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Unit Form
+// Race Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -15,13 +15,13 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class FormUnit : Form {
+	public partial class FormRace : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// DataTable
-		private DataTable UnitDataTable = new __table_unitDataTable();
+		private DataTable RaceDataTable = new __table_raceDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -36,18 +36,12 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Unit Data Table</param>
-		/// <param name="TypeDataTable">Weapon Type Data Table</param>
-		public FormUnit(__table_unitDataTable DataTable, __table_weapon_typeDataTable TypeDataTable) {
+		/// <param name="DataTable">Race Data Table</param>
+		public FormRace(__table_raceDataTable DataTable) {
 			InitializeComponent();
 
 			// 割り当て。編集がリアルタイムに適応されるようになる
-			UnitDataTable = DataTable;
-
-			// コンボボックスの設定
-			typeDataGridViewComboBoxColumn.DataSource = TypeDataTable;
-			typeDataGridViewComboBoxColumn.ValueMember = "WeaponTypeID";
-			typeDataGridViewComboBoxColumn.DisplayMember = "WeaponTypeName";
+			RaceDataTable = DataTable;
 		}// End Method
 
 
@@ -70,20 +64,11 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void TestForm_Load(object sender, EventArgs e) {
+		private void Form1_Load(object sender, EventArgs e) {
 			// データソースのすり替え
-			DataGridViewUnit.DataSource = UnitDataTable;
-			DataGridViewUnit.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			DataGridViewUnit.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+			DataGridViewRace.DataSource = RaceDataTable;
+			DataGridViewRace.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewRace.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
-
-		/// <summary>
-		/// フォームを閉じる時の処理
-		/// </summary>
-		/// <param name="sender">object</param>
-		/// <param name="e">EventArgs</param>
-		private void FormUnit_FormClosed(object sender, FormClosedEventArgs e) {
-			Dispose();
-		}
 	}// End Class
 }

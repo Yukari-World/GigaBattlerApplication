@@ -1,5 +1,5 @@
 ﻿namespace Status_Editer {
-	partial class AboutBox1 {
+	partial class AboutBox {
 		/// <summary>
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -22,7 +22,7 @@
 		/// コード エディターで変更しないでください。
 		/// </summary>
 		private void InitializeComponent() {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
 			this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.labelProductName = new System.Windows.Forms.Label();

@@ -166,6 +166,8 @@ namespace Status_Editer {
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
 			this.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.StripMenuWindowViewUnitType = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindowViewRace = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlUnit.SuspendLayout();
@@ -1181,97 +1183,97 @@ namespace Status_Editer {
             this.toolStripDbAddSkill,
             this.toolStripDbAddAbility});
 			this.toolStripDatabaseAdd.Name = "toolStripDatabaseAdd";
-			this.toolStripDatabaseAdd.Size = new System.Drawing.Size(147, 22);
+			this.toolStripDatabaseAdd.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDatabaseAdd.Text = "新規登録(&N)";
 			// 
 			// toolStripDbAddUnit
 			// 
 			this.toolStripDbAddUnit.Name = "toolStripDbAddUnit";
-			this.toolStripDbAddUnit.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddUnit.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddUnit.Text = "ユニット(&U)";
 			this.toolStripDbAddUnit.Click += new System.EventHandler(this.toolStripDbAddUnit_Click);
 			// 
 			// toolStripDbAddUnitType
 			// 
 			this.toolStripDbAddUnitType.Name = "toolStripDbAddUnitType";
-			this.toolStripDbAddUnitType.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddUnitType.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddUnitType.Text = "ユニットタイプ(&E)";
 			this.toolStripDbAddUnitType.Click += new System.EventHandler(this.toolStripDbAddUnitType_Click);
 			// 
 			// toolStripDbAddRace
 			// 
 			this.toolStripDbAddRace.Name = "toolStripDbAddRace";
-			this.toolStripDbAddRace.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddRace.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddRace.Text = "種族(&R)";
 			this.toolStripDbAddRace.Click += new System.EventHandler(this.toolStripDbAddRace_Click);
 			// 
 			// toolStripDbAddJob
 			// 
 			this.toolStripDbAddJob.Name = "toolStripDbAddJob";
-			this.toolStripDbAddJob.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddJob.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddJob.Text = "ジョブ(&J)";
 			this.toolStripDbAddJob.Click += new System.EventHandler(this.toolStripDbAddJob_Click);
 			// 
 			// toolStripDbAddMaker
 			// 
 			this.toolStripDbAddMaker.Name = "toolStripDbAddMaker";
-			this.toolStripDbAddMaker.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddMaker.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddMaker.Text = "メーカー(&M)";
 			this.toolStripDbAddMaker.Click += new System.EventHandler(this.toolStripDbAddMaker_Click);
 			// 
 			// toolStripDbAddWeapon
 			// 
 			this.toolStripDbAddWeapon.Name = "toolStripDbAddWeapon";
-			this.toolStripDbAddWeapon.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddWeapon.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddWeapon.Text = "武器(&W)";
 			this.toolStripDbAddWeapon.Click += new System.EventHandler(this.toolStripDbAddWeapon_Click);
 			// 
 			// toolStripDbAddShield
 			// 
 			this.toolStripDbAddShield.Name = "toolStripDbAddShield";
-			this.toolStripDbAddShield.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddShield.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddShield.Text = "盾(&S)";
 			this.toolStripDbAddShield.Click += new System.EventHandler(this.toolStripDbAddShield_Click);
 			// 
 			// toolStripDbAddHelmet
 			// 
 			this.toolStripDbAddHelmet.Name = "toolStripDbAddHelmet";
-			this.toolStripDbAddHelmet.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddHelmet.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddHelmet.Text = "頭防具(&H)";
 			this.toolStripDbAddHelmet.Click += new System.EventHandler(this.toolStripDbAddHelmet_Click);
 			// 
 			// toolStripDbAddGauntlet
 			// 
 			this.toolStripDbAddGauntlet.Name = "toolStripDbAddGauntlet";
-			this.toolStripDbAddGauntlet.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddGauntlet.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddGauntlet.Text = "腕防具(&G)";
 			this.toolStripDbAddGauntlet.Click += new System.EventHandler(this.toolStripDbAddGauntlet_Click);
 			// 
 			// toolStripDbAddArmor
 			// 
 			this.toolStripDbAddArmor.Name = "toolStripDbAddArmor";
-			this.toolStripDbAddArmor.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddArmor.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddArmor.Text = "体防具(&B)";
 			this.toolStripDbAddArmor.Click += new System.EventHandler(this.toolStripDbAddArmor_Click);
 			// 
 			// toolStripDbAddAccessory
 			// 
 			this.toolStripDbAddAccessory.Name = "toolStripDbAddAccessory";
-			this.toolStripDbAddAccessory.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddAccessory.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddAccessory.Text = "アクセサリー(&A)";
 			this.toolStripDbAddAccessory.Click += new System.EventHandler(this.toolStripDbAddAccessory_Click);
 			// 
 			// toolStripDbAddSkill
 			// 
 			this.toolStripDbAddSkill.Name = "toolStripDbAddSkill";
-			this.toolStripDbAddSkill.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddSkill.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddSkill.Text = "スキル(&N)";
 			this.toolStripDbAddSkill.Click += new System.EventHandler(this.toolStripDbAddSkill_Click);
 			// 
 			// toolStripDbAddAbility
 			// 
 			this.toolStripDbAddAbility.Name = "toolStripDbAddAbility";
-			this.toolStripDbAddAbility.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddAbility.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddAbility.Text = "アビリティ(&P)";
 			this.toolStripDbAddAbility.Click += new System.EventHandler(this.toolStripDbAddAbility_Click);
 			// 
@@ -1295,7 +1297,7 @@ namespace Status_Editer {
             this.StripMenuDbReloadSkill,
             this.StripMenuDbReloadAbility});
 			this.StripMenuDatabaseReload.Name = "StripMenuDatabaseReload";
-			this.StripMenuDatabaseReload.Size = new System.Drawing.Size(147, 22);
+			this.StripMenuDatabaseReload.Size = new System.Drawing.Size(152, 22);
 			this.StripMenuDatabaseReload.Text = "再読み込み(&R)";
 			// 
 			// StripMenuDbReloadAll
@@ -1427,7 +1429,7 @@ namespace Status_Editer {
             this.StripMenuDbSaveSkill,
             this.StripMenuDbSaveAbility});
 			this.StripMenuDatabaseSave.Name = "StripMenuDatabaseSave";
-			this.StripMenuDatabaseSave.Size = new System.Drawing.Size(147, 22);
+			this.StripMenuDatabaseSave.Size = new System.Drawing.Size(152, 22);
 			this.StripMenuDatabaseSave.Text = "変更を適用(&S)";
 			// 
 			// StripMenuDbSaveAll
@@ -1544,7 +1546,9 @@ namespace Status_Editer {
 			// StripMenuWindowView
 			// 
 			this.StripMenuWindowView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StripMenuWindowViewUnit});
+            this.StripMenuWindowViewUnit,
+            this.StripMenuWindowViewUnitType,
+            this.StripMenuWindowViewRace});
 			this.StripMenuWindowView.Name = "StripMenuWindowView";
 			this.StripMenuWindowView.Size = new System.Drawing.Size(157, 22);
 			this.StripMenuWindowView.Text = "テーブルの表示(&T)";
@@ -1552,7 +1556,7 @@ namespace Status_Editer {
 			// StripMenuWindowViewUnit
 			// 
 			this.StripMenuWindowViewUnit.Name = "StripMenuWindowViewUnit";
-			this.StripMenuWindowViewUnit.Size = new System.Drawing.Size(125, 22);
+			this.StripMenuWindowViewUnit.Size = new System.Drawing.Size(152, 22);
 			this.StripMenuWindowViewUnit.Text = "ユニット(&U)";
 			this.StripMenuWindowViewUnit.Click += new System.EventHandler(this.StripMenuWindowViewUnit_Click);
 			// 
@@ -1599,7 +1603,21 @@ namespace Status_Editer {
 			// ContextMenuStrip
 			// 
 			this.ContextMenuStrip.Name = "ContextMenuStrip";
-			this.ContextMenuStrip.Size = new System.Drawing.Size(153, 26);
+			this.ContextMenuStrip.Size = new System.Drawing.Size(61, 4);
+			// 
+			// StripMenuWindowViewUnitType
+			// 
+			this.StripMenuWindowViewUnitType.Name = "StripMenuWindowViewUnitType";
+			this.StripMenuWindowViewUnitType.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewUnitType.Text = "ユニットタイプ(&E)";
+			this.StripMenuWindowViewUnitType.Click += new System.EventHandler(this.StripMenuWindowViewUnitType_Click);
+			// 
+			// StripMenuWindowViewRace
+			// 
+			this.StripMenuWindowViewRace.Name = "StripMenuWindowViewRace";
+			this.StripMenuWindowViewRace.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewRace.Text = "種族(&R)";
+			this.StripMenuWindowViewRace.Click += new System.EventHandler(this.StripMenuWindowViewRace_Click);
 			// 
 			// EditerMainMenu
 			// 
@@ -1786,5 +1804,7 @@ namespace Status_Editer {
 		private ToolStripMenuItem toolStripDbAddAbility;
 		private ToolStripMenuItem StripMenuWindowViewUnit;
 		private ContextMenuStrip ContextMenuStrip;
+		private ToolStripMenuItem StripMenuWindowViewUnitType;
+		private ToolStripMenuItem StripMenuWindowViewRace;
 	}
 }

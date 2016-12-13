@@ -86,6 +86,7 @@ namespace Status_Editer {
 
 		// Form
 		FormUnit FormUnitData = null;
+		FormRace FormRaceData = null;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -528,7 +529,7 @@ namespace Status_Editer {
 			Task3_13.Dispose();
 
 			// タイトルにバージョン番号を付与
-			Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+			Text = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false) + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			StripInfo.Text = "Welcome!!";
 			Debug.WriteLine("System Starting Without Errors.");
 		}// End Method
@@ -1432,7 +1433,36 @@ namespace Status_Editer {
 			if ((FormUnitData == null) || FormUnitData.IsDisposed) {
 				FormUnitData = new FormUnit(TableUnitDataTable, TableWeaponTypeDataTable);
 				FormUnitData.Show();
-			}
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「ユニットタイプ」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewUnitType_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「ユニット種族」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewRace_Click(object sender, EventArgs e) {
+			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
+				FormRaceData = new FormRace(TableRaceDataTable);
+				FormRaceData.Show();
+			}// End If
 		}// End Method
 
 		#endregion
@@ -1456,11 +1486,10 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuHelpVersion_Click(object sender, EventArgs e) {
-			AboutBox1 Form2 = new AboutBox1();
+			AboutBox Form2 = new AboutBox();
 			Form2.ShowDialog();
 		}// End Method
 
 		#endregion
-
 	}// End Class
 }

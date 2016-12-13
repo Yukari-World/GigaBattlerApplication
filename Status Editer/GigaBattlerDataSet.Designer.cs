@@ -56,6 +56,10 @@ namespace Status_Editer {
         
         private @__table_weapon_typeDataTable table__table_weapon_type;
         
+        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_2;
+        
+        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_1;
+        
         private global::System.Data.DataRelation relation__table_unit_ibfk_1;
         
         private global::System.Data.DataRelation relation__table_unit_ibfk_2;
@@ -67,10 +71,6 @@ namespace Status_Editer {
         private global::System.Data.DataRelation relation__table_unit_ibfk_5;
         
         private global::System.Data.DataRelation relation__table_unit_ibfk_6;
-        
-        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_1;
-        
-        private global::System.Data.DataRelation relationFK___table_weapon_ibfk_2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -570,14 +570,14 @@ namespace Status_Editer {
                     this.table__table_weapon_type.InitVars();
                 }
             }
+            this.relationFK___table_weapon_ibfk_2 = this.Relations["FK___table_weapon_ibfk_2"];
+            this.relationFK___table_weapon_ibfk_1 = this.Relations["FK___table_weapon_ibfk_1"];
             this.relation__table_unit_ibfk_1 = this.Relations["__table_unit_ibfk_1"];
             this.relation__table_unit_ibfk_2 = this.Relations["__table_unit_ibfk_2"];
             this.relation__table_unit_ibfk_3 = this.Relations["__table_unit_ibfk_3"];
             this.relation__table_unit_ibfk_4 = this.Relations["__table_unit_ibfk_4"];
             this.relation__table_unit_ibfk_5 = this.Relations["__table_unit_ibfk_5"];
             this.relation__table_unit_ibfk_6 = this.Relations["__table_unit_ibfk_6"];
-            this.relationFK___table_weapon_ibfk_1 = this.Relations["FK___table_weapon_ibfk_1"];
-            this.relationFK___table_weapon_ibfk_2 = this.Relations["FK___table_weapon_ibfk_2"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -620,6 +620,14 @@ namespace Status_Editer {
             base.Tables.Add(this.table__table_weapon);
             this.table__table_weapon_type = new @__table_weapon_typeDataTable();
             base.Tables.Add(this.table__table_weapon_type);
+            this.relationFK___table_weapon_ibfk_2 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_2", new global::System.Data.DataColumn[] {
+                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.table__table_weapon.ATypeColumn}, false);
+            this.Relations.Add(this.relationFK___table_weapon_ibfk_2);
+            this.relationFK___table_weapon_ibfk_1 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.table__table_weapon.TypeColumn}, false);
+            this.Relations.Add(this.relationFK___table_weapon_ibfk_1);
             this.relation__table_unit_ibfk_1 = new global::System.Data.DataRelation("__table_unit_ibfk_1", new global::System.Data.DataColumn[] {
                         this.table__table_weapon.WeaponIDColumn}, new global::System.Data.DataColumn[] {
                         this.table__table_unit.Item1Column}, false);
@@ -644,14 +652,6 @@ namespace Status_Editer {
                         this.table__table_accessory.AccessoryIDColumn}, new global::System.Data.DataColumn[] {
                         this.table__table_unit.Item6Column}, false);
             this.Relations.Add(this.relation__table_unit_ibfk_6);
-            this.relationFK___table_weapon_ibfk_1 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_1", new global::System.Data.DataColumn[] {
-                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.table__table_weapon.TypeColumn}, false);
-            this.Relations.Add(this.relationFK___table_weapon_ibfk_1);
-            this.relationFK___table_weapon_ibfk_2 = new global::System.Data.DataRelation("FK___table_weapon_ibfk_2", new global::System.Data.DataColumn[] {
-                        this.table__table_weapon_type.WeaponTypeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.table__table_weapon.ATypeColumn}, false);
-            this.Relations.Add(this.relationFK___table_weapon_ibfk_2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7553,17 +7553,17 @@ namespace Status_Editer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_raceRow Add__table_raceRow(
-                        uint RaceID, 
+                        string RaceID, 
                         string RaceName, 
                         short HP, 
                         short TP, 
-                        short ATK, 
-                        short DEF, 
-                        short RAT, 
-                        short RDF, 
-                        short MAT, 
-                        short MDF, 
-                        short SPD, 
+                        decimal ATK, 
+                        decimal DEF, 
+                        decimal RAT, 
+                        decimal RDF, 
+                        decimal MAT, 
+                        decimal MDF, 
+                        decimal SPD, 
                         short LUK, 
                         short HIT, 
                         short EVT, 
@@ -7618,7 +7618,7 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_raceRow FindByRaceID(uint RaceID) {
+            public @__table_raceRow FindByRaceID(string RaceID) {
                 return ((@__table_raceRow)(this.Rows.Find(new object[] {
                             RaceID})));
             }
@@ -7673,7 +7673,7 @@ namespace Status_Editer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnRaceID = new global::System.Data.DataColumn("RaceID", typeof(uint), null, global::System.Data.MappingType.Element);
+                this.columnRaceID = new global::System.Data.DataColumn("RaceID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRaceID);
                 this.columnRaceName = new global::System.Data.DataColumn("RaceName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRaceName);
@@ -7681,19 +7681,19 @@ namespace Status_Editer {
                 base.Columns.Add(this.columnHP);
                 this.columnTP = new global::System.Data.DataColumn("TP", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTP);
-                this.columnATK = new global::System.Data.DataColumn("ATK", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnATK = new global::System.Data.DataColumn("ATK", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnATK);
-                this.columnDEF = new global::System.Data.DataColumn("DEF", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnDEF = new global::System.Data.DataColumn("DEF", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDEF);
-                this.columnRAT = new global::System.Data.DataColumn("RAT", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnRAT = new global::System.Data.DataColumn("RAT", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRAT);
-                this.columnRDF = new global::System.Data.DataColumn("RDF", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnRDF = new global::System.Data.DataColumn("RDF", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRDF);
-                this.columnMAT = new global::System.Data.DataColumn("MAT", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnMAT = new global::System.Data.DataColumn("MAT", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMAT);
-                this.columnMDF = new global::System.Data.DataColumn("MDF", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnMDF = new global::System.Data.DataColumn("MDF", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMDF);
-                this.columnSPD = new global::System.Data.DataColumn("SPD", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnSPD = new global::System.Data.DataColumn("SPD", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSPD);
                 this.columnLUK = new global::System.Data.DataColumn("LUK", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLUK);
@@ -16330,9 +16330,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public uint RaceID {
+            public string RaceID {
                 get {
-                    return ((uint)(this[this.table__table_race.RaceIDColumn]));
+                    return ((string)(this[this.table__table_race.RaceIDColumn]));
                 }
                 set {
                     this[this.table__table_race.RaceIDColumn] = value;
@@ -16374,9 +16374,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short ATK {
+            public decimal ATK {
                 get {
-                    return ((short)(this[this.table__table_race.ATKColumn]));
+                    return ((decimal)(this[this.table__table_race.ATKColumn]));
                 }
                 set {
                     this[this.table__table_race.ATKColumn] = value;
@@ -16385,9 +16385,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short DEF {
+            public decimal DEF {
                 get {
-                    return ((short)(this[this.table__table_race.DEFColumn]));
+                    return ((decimal)(this[this.table__table_race.DEFColumn]));
                 }
                 set {
                     this[this.table__table_race.DEFColumn] = value;
@@ -16396,9 +16396,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short RAT {
+            public decimal RAT {
                 get {
-                    return ((short)(this[this.table__table_race.RATColumn]));
+                    return ((decimal)(this[this.table__table_race.RATColumn]));
                 }
                 set {
                     this[this.table__table_race.RATColumn] = value;
@@ -16407,9 +16407,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short RDF {
+            public decimal RDF {
                 get {
-                    return ((short)(this[this.table__table_race.RDFColumn]));
+                    return ((decimal)(this[this.table__table_race.RDFColumn]));
                 }
                 set {
                     this[this.table__table_race.RDFColumn] = value;
@@ -16418,9 +16418,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short MAT {
+            public decimal MAT {
                 get {
-                    return ((short)(this[this.table__table_race.MATColumn]));
+                    return ((decimal)(this[this.table__table_race.MATColumn]));
                 }
                 set {
                     this[this.table__table_race.MATColumn] = value;
@@ -16429,9 +16429,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short MDF {
+            public decimal MDF {
                 get {
-                    return ((short)(this[this.table__table_race.MDFColumn]));
+                    return ((decimal)(this[this.table__table_race.MDFColumn]));
                 }
                 set {
                     this[this.table__table_race.MDFColumn] = value;
@@ -16440,9 +16440,9 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short SPD {
+            public decimal SPD {
                 get {
-                    return ((short)(this[this.table__table_race.SPDColumn]));
+                    return ((decimal)(this[this.table__table_race.SPDColumn]));
                 }
                 set {
                     this[this.table__table_race.SPDColumn] = value;
@@ -19481,23 +19481,23 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weapon_typeRow @__table_weapon_typeRowByFK___table_weapon_ibfk_1 {
-                get {
-                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK___table_weapon_ibfk_1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK___table_weapon_ibfk_1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_weapon_typeRow @__table_weapon_typeRowByFK___table_weapon_ibfk_2 {
                 get {
                     return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK___table_weapon_ibfk_2"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK___table_weapon_ibfk_2"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_weapon_typeRow @__table_weapon_typeRowByFK___table_weapon_ibfk_1 {
+                get {
+                    return ((@__table_weapon_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK___table_weapon_ibfk_1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK___table_weapon_ibfk_1"]);
                 }
             }
             
@@ -19728,23 +19728,23 @@ namespace Status_Editer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_weaponRow[] Get__table_weaponRowsByFK___table_weapon_ibfk_1() {
-                if ((this.Table.ChildRelations["FK___table_weapon_ibfk_1"] == null)) {
-                    return new @__table_weaponRow[0];
-                }
-                else {
-                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["FK___table_weapon_ibfk_1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_weaponRow[] Get__table_weaponRowsByFK___table_weapon_ibfk_2() {
                 if ((this.Table.ChildRelations["FK___table_weapon_ibfk_2"] == null)) {
                     return new @__table_weaponRow[0];
                 }
                 else {
                     return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["FK___table_weapon_ibfk_2"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public @__table_weaponRow[] Get__table_weaponRowsByFK___table_weapon_ibfk_1() {
+                if ((this.Table.ChildRelations["FK___table_weapon_ibfk_1"] == null)) {
+                    return new @__table_weaponRow[0];
+                }
+                else {
+                    return ((@__table_weaponRow[])(base.GetChildRows(this.Table.ChildRelations["FK___table_weapon_ibfk_1"])));
                 }
             }
         }
@@ -49916,39 +49916,12 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_accessoryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_weaponTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_accessoryTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_armorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_armor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_armorTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_gauntletTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_gauntletTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_helmetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_helmetTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_weaponTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49961,75 +49934,48 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_weaponTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_helmetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_weaponTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_helmetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_abilityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_gauntletTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_abilityTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_gauntletTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_areaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_armorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_armor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_areaTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_armorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_battle_areaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_accessoryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_battle_areaTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_accessoryTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_elementTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_unitTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_elementTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_jobTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_jobTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_makerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_makerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this.___table_raceTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_raceTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_unitTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -50042,12 +49988,66 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this.___table_unitTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.___table_raceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.___table_unitTableAdapter.Update(updatedRows));
+                    result = (result + this.___table_raceTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_makerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_makerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_jobTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_jobTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_elementTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_battle_areaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_battle_areaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_areaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_areaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this.___table_abilityTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this.___table_abilityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -50069,35 +50069,11 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_accessoryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_weaponTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_accessoryTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_armorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_armor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_armorTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_gauntletTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_gauntletTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_helmetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_helmetTableAdapter.Update(addedRows));
+                    result = (result + this.___table_weaponTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -50109,67 +50085,43 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_weaponTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_helmetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_weaponTableAdapter.Update(addedRows));
+                    result = (result + this.___table_helmetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_abilityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_gauntletTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_abilityTableAdapter.Update(addedRows));
+                    result = (result + this.___table_gauntletTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_areaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_area.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_armorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_armor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_areaTableAdapter.Update(addedRows));
+                    result = (result + this.___table_armorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_battle_areaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_accessoryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_battle_areaTableAdapter.Update(addedRows));
+                    result = (result + this.___table_accessoryTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_elementTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_unitTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_elementTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_jobTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_jobTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_makerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_makerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this.___table_raceTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this.___table_raceTableAdapter.Update(addedRows));
+                    result = (result + this.___table_unitTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -50181,11 +50133,59 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this.___table_unitTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.___table_raceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.___table_unitTableAdapter.Update(addedRows));
+                    result = (result + this.___table_raceTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_makerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_makerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_jobTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_jobTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_elementTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_battle_areaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_battle_areaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_areaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_area.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_areaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this.___table_abilityTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this.___table_abilityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -50199,59 +50199,11 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(GigaBattlerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this.___table_unitTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_abilityTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_unitTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_skillTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_skill.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_skillTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_raceTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_raceTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_makerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_makerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_jobTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_jobTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_elementTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_elementTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this.___table_battle_areaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_battle_areaTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_abilityTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -50263,43 +50215,67 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_abilityTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_ability.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_battle_areaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_battle_area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_abilityTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_battle_areaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_weaponTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_elementTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_element.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_weaponTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_elementTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_shieldTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_shield.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_jobTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_job.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_shieldTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_jobTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_helmetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_makerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_maker.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_helmetTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_makerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_gauntletTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_raceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_race.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_gauntletTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_raceTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_skillTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_skill.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_skillTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_unitTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_unit.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_unitTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_accessoryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_accessoryTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -50311,11 +50287,35 @@ namespace Status_Editer.GigaBattlerDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this.___table_accessoryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__table_accessory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.___table_gauntletTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_gauntlet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.___table_accessoryTableAdapter.Update(deletedRows));
+                    result = (result + this.___table_gauntletTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_helmetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_helmet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_helmetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_shieldTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_shield.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_shieldTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this.___table_weaponTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.@__table_weapon.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this.___table_weaponTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
