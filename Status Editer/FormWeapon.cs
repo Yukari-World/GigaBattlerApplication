@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Unit Form
+// Weapon Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -15,18 +15,13 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class FormUnit : Form {
+	public partial class FormWeapon : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// DataTable
-		private DataTable UnitDataTable = new __table_unitDataTable();
-
-		// DataGridViewCellStyle
-		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
-		private DataGridViewCellStyle dataGridViewCellStyleN2 = new DataGridViewCellStyle();
-
+		private DataTable WeaponDataTable = new __table_weaponDataTable();
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -40,20 +35,10 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Unit Data Table</param>
-		/// <param name="TypeDataTable">Weapon Type Data Table</param>
-		public FormUnit(__table_unitDataTable DataTable, __table_weapon_typeDataTable TypeDataTable) {
+		public FormWeapon(__table_weaponDataTable DataTable) {
+			WeaponDataTable = DataTable;
 			InitializeComponent();
-
-			// 割り当て。編集がリアルタイムに適応されるようになる
-			UnitDataTable = DataTable;
-
-			// コンボボックスの設定
-			typeDataGridViewComboBoxColumn.DataSource = TypeDataTable;
-			typeDataGridViewComboBoxColumn.ValueMember = "WeaponTypeID";
-			typeDataGridViewComboBoxColumn.DisplayMember = "WeaponTypeName";
-		}// End Method
-
+		}
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Pubilc Method
@@ -74,34 +59,11 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void TestForm_Load(object sender, EventArgs e) {
-			//----------------------------------------------------------------------------------------------------
-			// 共通デザイナー設定
-
-			dataGridViewCellStyleN0.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyleN0.Format = "N0";
-			dataGridViewCellStyleN0.NullValue = null;
-
-			dataGridViewCellStyleN2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyleN2.Format = "N2";
-			dataGridViewCellStyleN2.NullValue = null;
-
-			//----------------------------------------------------------------------------------------------------
-			// カラムデザイナー設定
-
-			reqLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			minLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			maxLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			startTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			maxTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
-
-			//----------------------------------------------------------------------------------------------------
+		private void FormWeapon_Load(object sender, EventArgs e) {
 			// データソースのすり替え
-
-			DataGridViewUnit.DataSource = UnitDataTable;
-			DataGridViewUnit.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			DataGridViewUnit.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+			dataGridView1.DataSource = WeaponDataTable;
+			dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>
@@ -109,7 +71,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormUnit_FormClosed(object sender, FormClosedEventArgs e) {
+		private void FormWeapon_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
 		}
 	}// End Class

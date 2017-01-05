@@ -23,6 +23,10 @@ namespace Status_Editer {
 		// DataTable
 		private DataTable RaceDataTable = new __table_raceDataTable();
 
+		// DataGridViewCellStyle
+		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
+		private DataGridViewCellStyle dataGridViewCellStyleN2 = new DataGridViewCellStyle();
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -65,7 +69,51 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void Form1_Load(object sender, EventArgs e) {
+			//----------------------------------------------------------------------------------------------------
+			// 共通デザイナー設定
+
+			dataGridViewCellStyleN0.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN0.Format = "N0";
+			dataGridViewCellStyleN0.NullValue = null;
+
+			dataGridViewCellStyleN2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN2.Format = "N2";
+			dataGridViewCellStyleN2.NullValue = null;
+
+			//----------------------------------------------------------------------------------------------------
+			// カラムデザイナー設定
+
+			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			tPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			aTKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			dEFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			rATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			rDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			mATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			mDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			sPDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lUKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hITDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			eVTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			lvHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			lvHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvATKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvDEFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvRATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvRDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvMATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvMDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvSPDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+			lvLUKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			lvHITDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			lvEVTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			nextEXPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+
+			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
+
 			DataGridViewRace.DataSource = RaceDataTable;
 			DataGridViewRace.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
 			DataGridViewRace.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);

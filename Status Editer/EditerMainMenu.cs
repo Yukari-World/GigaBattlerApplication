@@ -87,6 +87,8 @@ namespace Status_Editer {
 		// Form
 		FormUnit FormUnitData = null;
 		FormRace FormRaceData = null;
+		FormWeapon FormWeaponData = null;
+		FormShield FormShieldData = null;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -529,7 +531,7 @@ namespace Status_Editer {
 			Task3_13.Dispose();
 
 			// タイトルにバージョン番号を付与
-			Text = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false) + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+			Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			StripInfo.Text = "Welcome!!";
 			Debug.WriteLine("System Starting Without Errors.");
 		}// End Method
@@ -1450,7 +1452,7 @@ namespace Status_Editer {
 		}// End Method
 
 		/// <summary>
-		/// 「ウィンドウ」→「ユニット種族」の処理内容
+		/// 「ウィンドウ」→「種族」の処理内容
 		/// </summary>
 		/// <remarks>
 		/// 以下のページより参照
@@ -1462,6 +1464,64 @@ namespace Status_Editer {
 			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
 				FormRaceData = new FormRace(TableRaceDataTable);
 				FormRaceData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「ジョブ」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewJob_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「メーカー」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewMaker_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「武器」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewWeapon_Click(object sender, EventArgs e) {
+			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
+				FormWeaponData = new FormWeapon(TableWeaponDataTable);
+				FormWeaponData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「盾」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewShield_Click(object sender, EventArgs e) {
+			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
+				FormShieldData = new FormShield(TableShieldDataTable);
+				FormShieldData.Show();
 			}// End If
 		}// End Method
 

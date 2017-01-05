@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>51</ApplicationRevision>
+    <ApplicationRevision>52</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -88,6 +88,18 @@
     </Compile>
     <Compile Include="FormRace.Designer.cs">
       <DependentUpon>FormRace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShield.designer.cs">
+      <DependentUpon>FormShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWeapon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWeapon.designer.cs">
+      <DependentUpon>FormWeapon.cs</DependentUpon>
     </Compile>
     <Compile Include="GigaBattlerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -215,6 +227,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRace.resx">
       <DependentUpon>FormRace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShield.resx">
+      <DependentUpon>FormShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWeapon.resx">
+      <DependentUpon>FormWeapon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

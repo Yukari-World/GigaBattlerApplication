@@ -30,12 +30,6 @@ namespace Status_Editer {
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
 			this.DataGridViewUnit = new System.Windows.Forms.DataGridView();
 			this.tableunitBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -351,7 +345,6 @@ namespace Status_Editer {
 			// unitIDDataGridViewTextBoxColumn
 			// 
 			this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "UnitID";
-			this.unitIDDataGridViewTextBoxColumn.Frozen = true;
 			this.unitIDDataGridViewTextBoxColumn.HeaderText = "UnitID";
 			this.unitIDDataGridViewTextBoxColumn.Name = "unitIDDataGridViewTextBoxColumn";
 			this.unitIDDataGridViewTextBoxColumn.Width = 62;
@@ -359,7 +352,6 @@ namespace Status_Editer {
 			// unitNameDataGridViewTextBoxColumn
 			// 
 			this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "UnitName";
-			this.unitNameDataGridViewTextBoxColumn.Frozen = true;
 			this.unitNameDataGridViewTextBoxColumn.HeaderText = "UnitName";
 			this.unitNameDataGridViewTextBoxColumn.Name = "unitNameDataGridViewTextBoxColumn";
 			this.unitNameDataGridViewTextBoxColumn.Width = 80;
@@ -374,10 +366,6 @@ namespace Status_Editer {
 			// reqLvDataGridViewTextBoxColumn
 			// 
 			this.reqLvDataGridViewTextBoxColumn.DataPropertyName = "Req Lv";
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle1.Format = "N0";
-			dataGridViewCellStyle1.NullValue = null;
-			this.reqLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
 			this.reqLvDataGridViewTextBoxColumn.HeaderText = "Req Lv";
 			this.reqLvDataGridViewTextBoxColumn.Name = "reqLvDataGridViewTextBoxColumn";
 			this.reqLvDataGridViewTextBoxColumn.Width = 66;
@@ -385,10 +373,6 @@ namespace Status_Editer {
 			// minLvDataGridViewTextBoxColumn
 			// 
 			this.minLvDataGridViewTextBoxColumn.DataPropertyName = "Min Lv";
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle2.Format = "N0";
-			dataGridViewCellStyle2.NullValue = null;
-			this.minLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
 			this.minLvDataGridViewTextBoxColumn.HeaderText = "Min Lv";
 			this.minLvDataGridViewTextBoxColumn.Name = "minLvDataGridViewTextBoxColumn";
 			this.minLvDataGridViewTextBoxColumn.Width = 64;
@@ -396,10 +380,6 @@ namespace Status_Editer {
 			// maxLvDataGridViewTextBoxColumn
 			// 
 			this.maxLvDataGridViewTextBoxColumn.DataPropertyName = "Max Lv";
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle3.Format = "N0";
-			dataGridViewCellStyle3.NullValue = null;
-			this.maxLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
 			this.maxLvDataGridViewTextBoxColumn.HeaderText = "Max Lv";
 			this.maxLvDataGridViewTextBoxColumn.Name = "maxLvDataGridViewTextBoxColumn";
 			this.maxLvDataGridViewTextBoxColumn.Width = 67;
@@ -407,9 +387,6 @@ namespace Status_Editer {
 			// startTPDataGridViewTextBoxColumn
 			// 
 			this.startTPDataGridViewTextBoxColumn.DataPropertyName = "StartTP";
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle4.Format = "N0";
-			this.startTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
 			this.startTPDataGridViewTextBoxColumn.HeaderText = "StartTP";
 			this.startTPDataGridViewTextBoxColumn.Name = "startTPDataGridViewTextBoxColumn";
 			this.startTPDataGridViewTextBoxColumn.Width = 69;
@@ -417,9 +394,6 @@ namespace Status_Editer {
 			// maxTPDataGridViewTextBoxColumn
 			// 
 			this.maxTPDataGridViewTextBoxColumn.DataPropertyName = "MaxTP";
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle5.Format = "N0";
-			this.maxTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
 			this.maxTPDataGridViewTextBoxColumn.HeaderText = "MaxTP";
 			this.maxTPDataGridViewTextBoxColumn.Name = "maxTPDataGridViewTextBoxColumn";
 			this.maxTPDataGridViewTextBoxColumn.Width = 65;
@@ -427,9 +401,6 @@ namespace Status_Editer {
 			// hPDataGridViewTextBoxColumn
 			// 
 			this.hPDataGridViewTextBoxColumn.DataPropertyName = "HP";
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle6.Format = "N2";
-			this.hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
 			this.hPDataGridViewTextBoxColumn.HeaderText = "HP";
 			this.hPDataGridViewTextBoxColumn.Name = "hPDataGridViewTextBoxColumn";
 			this.hPDataGridViewTextBoxColumn.Width = 45;
@@ -1272,10 +1243,9 @@ namespace Status_Editer {
 			// infoDataGridViewTextBoxColumn
 			// 
 			this.infoDataGridViewTextBoxColumn.DataPropertyName = "Info";
-			this.infoDataGridViewTextBoxColumn.HeaderText = "Text Infomation";
-			this.infoDataGridViewTextBoxColumn.MaxInputLength = 512;
+			this.infoDataGridViewTextBoxColumn.HeaderText = "Info";
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
-			this.infoDataGridViewTextBoxColumn.Width = 101;
+			this.infoDataGridViewTextBoxColumn.Width = 49;
 			// 
 			// FormUnit
 			// 
