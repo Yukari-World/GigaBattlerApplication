@@ -28,7 +28,10 @@ namespace Status_Editer {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.DataGridViewWeapon = new System.Windows.Forms.DataGridView();
+			this.tableweaponBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
+			this.___table_weaponTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter();
 			this.weaponIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.weaponNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.physicsPowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +39,8 @@ namespace Status_Editer {
 			this.physicsDefenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.magicDefenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.reductionRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.element1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.element2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.element1DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.element2DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.wTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.eCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,12 +71,9 @@ namespace Status_Editer {
 			this.skill2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.skill3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tableweaponBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_weaponTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewWeapon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
 			this.SuspendLayout();
@@ -83,7 +83,7 @@ namespace Status_Editer {
 			// 
 			// toolStripContainer1.ContentPanel
 			// 
-			this.toolStripContainer1.ContentPanel.Controls.Add(this.dataGridView1);
+			this.toolStripContainer1.ContentPanel.Controls.Add(this.DataGridViewWeapon);
 			this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1440, 785);
 			this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
@@ -92,11 +92,10 @@ namespace Status_Editer {
 			this.toolStripContainer1.TabIndex = 0;
 			this.toolStripContainer1.Text = "toolStripContainer1";
 			// 
-			// dataGridView1
+			// DataGridViewWeapon
 			// 
-			this.dataGridView1.AutoGenerateColumns = false;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.DataGridViewWeapon.AutoGenerateColumns = false;
+			this.DataGridViewWeapon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.weaponIDDataGridViewTextBoxColumn,
             this.weaponNameDataGridViewTextBoxColumn,
             this.physicsPowerDataGridViewTextBoxColumn,
@@ -104,8 +103,8 @@ namespace Status_Editer {
             this.physicsDefenceDataGridViewTextBoxColumn,
             this.magicDefenceDataGridViewTextBoxColumn,
             this.reductionRateDataGridViewTextBoxColumn,
-            this.element1DataGridViewTextBoxColumn,
-            this.element2DataGridViewTextBoxColumn,
+            this.element1DataGridViewComboBoxColumn,
+            this.element2DataGridViewComboBoxColumn,
             this.wTDataGridViewTextBoxColumn,
             this.eCDataGridViewTextBoxColumn,
             this.sSPDataGridViewTextBoxColumn,
@@ -136,13 +135,26 @@ namespace Status_Editer {
             this.skill2DataGridViewTextBoxColumn,
             this.skill3DataGridViewTextBoxColumn,
             this.infoDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.tableweaponBindingSource;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowTemplate.Height = 21;
-			this.dataGridView1.Size = new System.Drawing.Size(1440, 785);
-			this.dataGridView1.TabIndex = 0;
+			this.DataGridViewWeapon.DataSource = this.tableweaponBindingSource;
+			this.DataGridViewWeapon.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.DataGridViewWeapon.Location = new System.Drawing.Point(0, 0);
+			this.DataGridViewWeapon.Name = "DataGridViewWeapon";
+			this.DataGridViewWeapon.Size = new System.Drawing.Size(1440, 785);
+			this.DataGridViewWeapon.TabIndex = 0;
+			// 
+			// tableweaponBindingSource
+			// 
+			this.tableweaponBindingSource.DataMember = "__table_weapon";
+			this.tableweaponBindingSource.DataSource = this.gigaBattlerDataSet;
+			// 
+			// gigaBattlerDataSet
+			// 
+			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// ___table_weaponTableAdapter
+			// 
+			this.___table_weaponTableAdapter.ClearBeforeFill = true;
 			// 
 			// weaponIDDataGridViewTextBoxColumn
 			// 
@@ -186,17 +198,21 @@ namespace Status_Editer {
 			this.reductionRateDataGridViewTextBoxColumn.HeaderText = "ReductionRate";
 			this.reductionRateDataGridViewTextBoxColumn.Name = "reductionRateDataGridViewTextBoxColumn";
 			// 
-			// element1DataGridViewTextBoxColumn
+			// element1DataGridViewComboBoxColumn
 			// 
-			this.element1DataGridViewTextBoxColumn.DataPropertyName = "Element1";
-			this.element1DataGridViewTextBoxColumn.HeaderText = "Element1";
-			this.element1DataGridViewTextBoxColumn.Name = "element1DataGridViewTextBoxColumn";
+			this.element1DataGridViewComboBoxColumn.DataPropertyName = "Element1";
+			this.element1DataGridViewComboBoxColumn.HeaderText = "Element1";
+			this.element1DataGridViewComboBoxColumn.Name = "element1DataGridViewComboBoxColumn";
+			this.element1DataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.element1DataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
-			// element2DataGridViewTextBoxColumn
+			// element2DataGridViewComboBoxColumn
 			// 
-			this.element2DataGridViewTextBoxColumn.DataPropertyName = "Element2";
-			this.element2DataGridViewTextBoxColumn.HeaderText = "Element2";
-			this.element2DataGridViewTextBoxColumn.Name = "element2DataGridViewTextBoxColumn";
+			this.element2DataGridViewComboBoxColumn.DataPropertyName = "Element2";
+			this.element2DataGridViewComboBoxColumn.HeaderText = "Element2";
+			this.element2DataGridViewComboBoxColumn.Name = "element2DataGridViewComboBoxColumn";
+			this.element2DataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.element2DataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
 			// wTDataGridViewTextBoxColumn
 			// 
@@ -378,20 +394,6 @@ namespace Status_Editer {
 			this.infoDataGridViewTextBoxColumn.HeaderText = "Info";
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
 			// 
-			// tableweaponBindingSource
-			// 
-			this.tableweaponBindingSource.DataMember = "__table_weapon";
-			this.tableweaponBindingSource.DataSource = this.gigaBattlerDataSet;
-			// 
-			// gigaBattlerDataSet
-			// 
-			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// ___table_weaponTableAdapter
-			// 
-			this.___table_weaponTableAdapter.ClearBeforeFill = true;
-			// 
 			// FormWeapon
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -399,13 +401,13 @@ namespace Status_Editer {
 			this.ClientSize = new System.Drawing.Size(1440, 810);
 			this.Controls.Add(this.toolStripContainer1);
 			this.Name = "FormWeapon";
-			this.Text = "FormWeapon";
+			this.Text = "Weapon Table";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormWeapon_FormClosed);
 			this.Load += new System.EventHandler(this.FormWeapon_Load);
 			this.toolStripContainer1.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer1.ResumeLayout(false);
 			this.toolStripContainer1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewWeapon)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tableweaponBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
 			this.ResumeLayout(false);
@@ -415,7 +417,7 @@ namespace Status_Editer {
 		#endregion
 
 		private ToolStripContainer toolStripContainer1;
-		private DataGridView dataGridView1;
+		private DataGridView DataGridViewWeapon;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableweaponBindingSource;
 		private GigaBattlerDataSetTableAdapters.__table_weaponTableAdapter ___table_weaponTableAdapter;
@@ -426,8 +428,8 @@ namespace Status_Editer {
 		private DataGridViewTextBoxColumn physicsDefenceDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn magicDefenceDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn reductionRateDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn element1DataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn element2DataGridViewTextBoxColumn;
+		private DataGridViewComboBoxColumn element1DataGridViewComboBoxColumn;
+		private DataGridViewComboBoxColumn element2DataGridViewComboBoxColumn;
 		private DataGridViewTextBoxColumn wTDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn eCDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn sSPDataGridViewTextBoxColumn;

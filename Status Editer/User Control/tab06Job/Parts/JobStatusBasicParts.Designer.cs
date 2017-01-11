@@ -51,16 +51,16 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// 
 			this.numericBaseStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBaseStatus.Increment = new decimal(new int[] {
-			5,
-			0,
-			0,
-			0});
+            5,
+            0,
+            0,
+            0});
 			this.numericBaseStatus.Location = new System.Drawing.Point(10, 30);
 			this.numericBaseStatus.Maximum = new decimal(new int[] {
-			9000,
-			0,
-			0,
-			0});
+            9000,
+            0,
+            0,
+            0});
 			this.numericBaseStatus.Name = "numericBaseStatus";
 			this.numericBaseStatus.Size = new System.Drawing.Size(120, 19);
 			this.numericBaseStatus.TabIndex = 1;
@@ -68,10 +68,10 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			this.numericBaseStatus.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericBaseStatus, "基本ステータスに対して影響を受ける割合(%)\r\n設定値: 0 ～ 9,000");
 			this.numericBaseStatus.Value = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
+            100,
+            0,
+            0,
+            0});
 			this.numericBaseStatus.ValueChanged += new System.EventHandler(this.numericBaseStatus_ValueChanged);
 			// 
 			// numericBonusStatus
@@ -79,10 +79,10 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			this.numericBonusStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBonusStatus.Location = new System.Drawing.Point(150, 30);
 			this.numericBonusStatus.Maximum = new decimal(new int[] {
-			99,
-			0,
-			0,
-			0});
+            99,
+            0,
+            0,
+            0});
 			this.numericBonusStatus.Name = "numericBonusStatus";
 			this.numericBonusStatus.Size = new System.Drawing.Size(120, 19);
 			this.numericBonusStatus.TabIndex = 3;
@@ -126,7 +126,6 @@ namespace Status_Editer.User_Control.tab06Job.Parts {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupBase);
 			this.Name = "JobStatusBasicParts";
 			this.Size = new System.Drawing.Size(650, 60);

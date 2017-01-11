@@ -4,13 +4,8 @@
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
@@ -22,6 +17,11 @@ namespace Status_Editer {
 
 		// DataTable
 		private DataTable WeaponDataTable = new __table_weaponDataTable();
+
+		// DataGridViewCellStyle
+		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
+		private DataGridViewCellStyle dataGridViewCellStyleN2 = new DataGridViewCellStyle();
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -35,10 +35,24 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public FormWeapon(__table_weaponDataTable DataTable) {
-			WeaponDataTable = DataTable;
+		/// <param name="DataTable">Weapon Data Table</param>
+		/// <param name="ElementDataTable">Element Data Table</param>
+		public FormWeapon(__table_weaponDataTable DataTable, __table_elementDataTable ElementDataTable) {
 			InitializeComponent();
-		}
+
+			// 割り当て。編集がリアルタイムに適応されるようになる
+			WeaponDataTable = DataTable;
+
+			// コンボボックスの設定
+			element1DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
+			element1DataGridViewComboBoxColumn.ValueMember = "ElementID";
+			element1DataGridViewComboBoxColumn.DisplayMember = "ElementName";
+
+			element2DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
+			element2DataGridViewComboBoxColumn.ValueMember = "ElementID";
+			element2DataGridViewComboBoxColumn.DisplayMember = "ElementName";
+		}// End Method
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Pubilc Method
@@ -60,10 +74,53 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void FormWeapon_Load(object sender, EventArgs e) {
+			//----------------------------------------------------------------------------------------------------
+			// 共通デザイナー設定
+
+			dataGridViewCellStyleN0.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN0.Format = "N0";
+			dataGridViewCellStyleN0.NullValue = null;
+
+			dataGridViewCellStyleN2.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN2.Format = "N2";
+			dataGridViewCellStyleN2.NullValue = null;
+
+			//----------------------------------------------------------------------------------------------------
+			// カラムデザイナー設定
+
+			physicsPowerDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			magicPowerDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			physicsDefenceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			magicDefenceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			reductionRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			wTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			eCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			sSPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			sPCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			aTCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			targetDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			rareDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			tPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			aTKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			dEFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			rATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			rDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			mATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			mDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			sPDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			lUKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hITDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			eVTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			duabilityDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+
+			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
-			dataGridView1.DataSource = WeaponDataTable;
-			dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+			DataGridViewWeapon.DataSource = WeaponDataTable;
+			DataGridViewWeapon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewWeapon.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewWeapon.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>
@@ -73,6 +130,6 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void FormWeapon_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
-		}
+		}// End Method
 	}// End Class
 }

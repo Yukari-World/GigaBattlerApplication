@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace Status_Editer {
-	partial class FormShield {
+	partial class FormAccessory {
 		/// <summary>
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -27,13 +27,10 @@ namespace Status_Editer {
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			this.DataGridViewShield = new System.Windows.Forms.DataGridView();
-			this.tableshieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-			this.___table_shieldTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_shieldTableAdapter();
-			this.shieldIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shieldNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DataGridViewAccessory = new System.Windows.Forms.DataGridView();
+			this.accessoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.accessoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.physicsPowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.magicPowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.physicsDefenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,19 +68,36 @@ namespace Status_Editer {
 			this.skill2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.skill3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			((System.ComponentModel.ISupportInitialize)(this.DataGridViewShield)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableshieldBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
+			this.tableaccessoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
+			this.___table_accessoryTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_accessoryTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewAccessory)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableaccessoryBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// DataGridViewShield
+			// toolStripContainer1
 			// 
-			this.DataGridViewShield.AutoGenerateColumns = false;
-			this.DataGridViewShield.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.shieldIDDataGridViewTextBoxColumn,
-            this.shieldNameDataGridViewTextBoxColumn,
+			// 
+			// toolStripContainer1.ContentPanel
+			// 
+			this.toolStripContainer1.ContentPanel.Controls.Add(this.DataGridViewAccessory);
+			this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1440, 785);
+			this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+			this.toolStripContainer1.Name = "toolStripContainer1";
+			this.toolStripContainer1.Size = new System.Drawing.Size(1440, 810);
+			this.toolStripContainer1.TabIndex = 0;
+			this.toolStripContainer1.Text = "toolStripContainer1";
+			// 
+			// DataGridViewAccessory
+			// 
+			this.DataGridViewAccessory.AutoGenerateColumns = false;
+			this.DataGridViewAccessory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.accessoryIDDataGridViewTextBoxColumn,
+            this.accessoryNameDataGridViewTextBoxColumn,
             this.physicsPowerDataGridViewTextBoxColumn,
             this.magicPowerDataGridViewTextBoxColumn,
             this.physicsDefenceDataGridViewTextBoxColumn,
@@ -121,53 +135,24 @@ namespace Status_Editer {
             this.skill2DataGridViewTextBoxColumn,
             this.skill3DataGridViewTextBoxColumn,
             this.infoDataGridViewTextBoxColumn});
-			this.DataGridViewShield.DataSource = this.tableshieldBindingSource;
-			this.DataGridViewShield.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.DataGridViewShield.Location = new System.Drawing.Point(0, 0);
-			this.DataGridViewShield.Name = "DataGridViewShield";
-			this.DataGridViewShield.RowTemplate.Height = 21;
-			this.DataGridViewShield.Size = new System.Drawing.Size(1440, 785);
-			this.DataGridViewShield.TabIndex = 0;
+			this.DataGridViewAccessory.DataSource = this.tableaccessoryBindingSource;
+			this.DataGridViewAccessory.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.DataGridViewAccessory.Location = new System.Drawing.Point(0, 0);
+			this.DataGridViewAccessory.Name = "DataGridViewAccessory";
+			this.DataGridViewAccessory.Size = new System.Drawing.Size(1440, 785);
+			this.DataGridViewAccessory.TabIndex = 0;
 			// 
-			// tableshieldBindingSource
+			// accessoryIDDataGridViewTextBoxColumn
 			// 
-			this.tableshieldBindingSource.DataMember = "__table_shield";
-			this.tableshieldBindingSource.DataSource = this.gigaBattlerDataSet;
+			this.accessoryIDDataGridViewTextBoxColumn.DataPropertyName = "AccessoryID";
+			this.accessoryIDDataGridViewTextBoxColumn.HeaderText = "AccessoryID";
+			this.accessoryIDDataGridViewTextBoxColumn.Name = "accessoryIDDataGridViewTextBoxColumn";
 			// 
-			// gigaBattlerDataSet
+			// accessoryNameDataGridViewTextBoxColumn
 			// 
-			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// toolStripContainer1
-			// 
-			// 
-			// toolStripContainer1.ContentPanel
-			// 
-			this.toolStripContainer1.ContentPanel.Controls.Add(this.DataGridViewShield);
-			this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1440, 785);
-			this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-			this.toolStripContainer1.Name = "toolStripContainer1";
-			this.toolStripContainer1.Size = new System.Drawing.Size(1440, 810);
-			this.toolStripContainer1.TabIndex = 1;
-			this.toolStripContainer1.Text = "toolStripContainer1";
-			// 
-			// ___table_shieldTableAdapter
-			// 
-			this.___table_shieldTableAdapter.ClearBeforeFill = true;
-			// 
-			// shieldIDDataGridViewTextBoxColumn
-			// 
-			this.shieldIDDataGridViewTextBoxColumn.DataPropertyName = "ShieldID";
-			this.shieldIDDataGridViewTextBoxColumn.HeaderText = "ShieldID";
-			this.shieldIDDataGridViewTextBoxColumn.Name = "shieldIDDataGridViewTextBoxColumn";
-			// 
-			// shieldNameDataGridViewTextBoxColumn
-			// 
-			this.shieldNameDataGridViewTextBoxColumn.DataPropertyName = "ShieldName";
-			this.shieldNameDataGridViewTextBoxColumn.HeaderText = "ShieldName";
-			this.shieldNameDataGridViewTextBoxColumn.Name = "shieldNameDataGridViewTextBoxColumn";
+			this.accessoryNameDataGridViewTextBoxColumn.DataPropertyName = "AccessoryName";
+			this.accessoryNameDataGridViewTextBoxColumn.HeaderText = "AccessoryName";
+			this.accessoryNameDataGridViewTextBoxColumn.Name = "accessoryNameDataGridViewTextBoxColumn";
 			// 
 			// physicsPowerDataGridViewTextBoxColumn
 			// 
@@ -268,7 +253,6 @@ namespace Status_Editer {
 			this.eTypeDataGridViewTextBoxColumn.DataPropertyName = "EType";
 			this.eTypeDataGridViewTextBoxColumn.HeaderText = "EType";
 			this.eTypeDataGridViewTextBoxColumn.Name = "eTypeDataGridViewTextBoxColumn";
-			this.eTypeDataGridViewTextBoxColumn.Width = 62;
 			// 
 			// makerDataGridViewTextBoxColumn
 			// 
@@ -396,35 +380,49 @@ namespace Status_Editer {
 			this.infoDataGridViewTextBoxColumn.HeaderText = "Info";
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
 			// 
-			// FormShield
+			// tableaccessoryBindingSource
+			// 
+			this.tableaccessoryBindingSource.DataMember = "__table_accessory";
+			this.tableaccessoryBindingSource.DataSource = this.gigaBattlerDataSet;
+			// 
+			// gigaBattlerDataSet
+			// 
+			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// ___table_accessoryTableAdapter
+			// 
+			this.___table_accessoryTableAdapter.ClearBeforeFill = true;
+			// 
+			// FormAccessory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1440, 810);
 			this.Controls.Add(this.toolStripContainer1);
-			this.Name = "FormShield";
-			this.Text = "Shield Table";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormShield_FormClosed);
-			this.Load += new System.EventHandler(this.FormShield_Load);
-			((System.ComponentModel.ISupportInitialize)(this.DataGridViewShield)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableshieldBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
+			this.Name = "FormAccessory";
+			this.Text = "Accessory Table";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAccessory_FormClosed);
+			this.Load += new System.EventHandler(this.FormAccessory_Load);
 			this.toolStripContainer1.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer1.ResumeLayout(false);
 			this.toolStripContainer1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DataGridViewAccessory)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tableaccessoryBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gigaBattlerDataSet)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private DataGridView DataGridViewShield;
 		private ToolStripContainer toolStripContainer1;
+		private DataGridView DataGridViewAccessory;
 		private GigaBattlerDataSet gigaBattlerDataSet;
-		private BindingSource tableshieldBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_shieldTableAdapter ___table_shieldTableAdapter;
-		private DataGridViewTextBoxColumn shieldIDDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn shieldNameDataGridViewTextBoxColumn;
+		private BindingSource tableaccessoryBindingSource;
+		private GigaBattlerDataSetTableAdapters.__table_accessoryTableAdapter ___table_accessoryTableAdapter;
+		private DataGridViewTextBoxColumn accessoryIDDataGridViewTextBoxColumn;
+		private DataGridViewTextBoxColumn accessoryNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn physicsPowerDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn magicPowerDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn physicsDefenceDataGridViewTextBoxColumn;

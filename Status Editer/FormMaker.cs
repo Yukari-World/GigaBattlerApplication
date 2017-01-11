@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Shield Form
+// Maker Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class FormShield : Form {
+	public partial class FormMaker : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// DataTable
-		private DataTable ShieldDataTable = new __table_shieldDataTable();
+		private DataTable UnitDataTable = new __table_makerDataTable();
 
 		// DataGridViewCellStyle
 		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
@@ -35,22 +35,12 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Shield Data Table</param>
-		/// <param name="ElementDataTable">Element Data Table</param>
-		public FormShield(__table_shieldDataTable DataTable, __table_elementDataTable ElementDataTable) {
+		/// <param name="DataTable">Maker Data Table</param>
+		public FormMaker(__table_makerDataTable DataTable) {
 			InitializeComponent();
 
 			// 割り当て。編集がリアルタイムに適応されるようになる
-			ShieldDataTable = DataTable;
-
-			// コンボボックスの設定
-			element1DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
-			element1DataGridViewComboBoxColumn.ValueMember = "ElementID";
-			element1DataGridViewComboBoxColumn.DisplayMember = "ElementName";
-
-			element2DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
-			element2DataGridViewComboBoxColumn.ValueMember = "ElementID";
-			element2DataGridViewComboBoxColumn.DisplayMember = "ElementName";
+			UnitDataTable = DataTable;
 		}// End Method
 
 
@@ -73,7 +63,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormShield_Load(object sender, EventArgs e) {
+		private void FormMaker_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 共通デザイナー設定
 
@@ -88,39 +78,16 @@ namespace Status_Editer {
 			//----------------------------------------------------------------------------------------------------
 			// カラムデザイナー設定
 
-			physicsPowerDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			magicPowerDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			physicsDefenceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			magicDefenceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			reductionRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			wTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			eCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			sSPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			sPCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			aTCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			targetDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			rareDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			tPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			aTKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			dEFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			rATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			rDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			mATDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			mDFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			sPDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			lUKDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			hITDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			eVTDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
-			duabilityDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
 
 			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
-			DataGridViewShield.DataSource = ShieldDataTable;
-			DataGridViewShield.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-			DataGridViewShield.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			DataGridViewShield.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+
+			DataGridViewMaker.DataSource = UnitDataTable;
+			DataGridViewMaker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewMaker.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			DataGridViewMaker.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewMaker.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+
 		}// End Method
 
 		/// <summary>
@@ -128,7 +95,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormShield_FormClosed(object sender, FormClosedEventArgs e) {
+		private void FormMaker_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
 		}// End Method
 	}// End Class

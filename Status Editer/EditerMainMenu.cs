@@ -8,7 +8,6 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Reflection;
@@ -87,8 +86,14 @@ namespace Status_Editer {
 		// Form
 		FormUnit FormUnitData = null;
 		FormRace FormRaceData = null;
+		FormJob FormJobData = null;
+		FormMaker FormMakerData = null;
 		FormWeapon FormWeaponData = null;
 		FormShield FormShieldData = null;
+		FormHelmet FormHelmetData = null;
+		FormGauntlet FormGauntletData = null;
+		FormArmor FormArmorData = null;
+		FormAccessory FormAccessoryData = null;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -202,7 +207,7 @@ namespace Status_Editer {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
 				Debug.WriteLine("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+			}// End Try
 		}// End Method
 
 
@@ -538,6 +543,8 @@ namespace Status_Editer {
 
 		#endregion
 
+		#region フォームを閉じる直前の処理
+
 		/// <summary>
 		/// フォームを閉じる直前の処理。キャンセルで閉じる動作をキャンセルする
 		/// </summary>
@@ -568,6 +575,8 @@ namespace Status_Editer {
 				}// End Switch
 			}// End If
 		}// End Method
+
+		#endregion
 
 		//----------------------------------------------------------------------------------------------------
 		// Strip Menu 項目
@@ -1477,7 +1486,10 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuWindowViewJob_Click(object sender, EventArgs e) {
-
+			if ((FormJobData == null) || FormJobData.IsDisposed) {
+				FormJobData = new FormJob(TableJobDataTable);
+				FormJobData.Show();
+			}// End If
 		}// End Method
 
 		/// <summary>
@@ -1490,7 +1502,10 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuWindowViewMaker_Click(object sender, EventArgs e) {
-
+			if ((FormMakerData == null) || FormMakerData.IsDisposed) {
+				FormMakerData = new FormMaker(TableMakerDataTable);
+				FormMakerData.Show();
+			}// End If
 		}// End Method
 
 		/// <summary>
@@ -1503,8 +1518,8 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuWindowViewWeapon_Click(object sender, EventArgs e) {
-			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
-				FormWeaponData = new FormWeapon(TableWeaponDataTable);
+			if ((FormWeaponData == null) || FormWeaponData.IsDisposed) {
+				FormWeaponData = new FormWeapon(TableWeaponDataTable, TableElementDataTable);
 				FormWeaponData.Show();
 			}// End If
 		}// End Method
@@ -1519,16 +1534,79 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuWindowViewShield_Click(object sender, EventArgs e) {
-			if ((FormRaceData == null) || FormRaceData.IsDisposed) {
-				FormShieldData = new FormShield(TableShieldDataTable);
+			if ((FormShieldData == null) || FormShieldData.IsDisposed) {
+				FormShieldData = new FormShield(TableShieldDataTable, TableElementDataTable);
 				FormShieldData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「頭防具」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewHelmet_Click(object sender, EventArgs e) {
+			if ((FormHelmetData == null) || FormHelmetData.IsDisposed) {
+				FormHelmetData = new FormHelmet(TableHelmetDataTable, TableElementDataTable);
+				FormHelmetData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「腕防具」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewGauntlet_Click(object sender, EventArgs e) {
+			if ((FormGauntletData == null) || FormGauntletData.IsDisposed) {
+				FormGauntletData = new FormGauntlet(TableGauntletDataTable, TableElementDataTable);
+				FormGauntletData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「体防具」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewArmor_Click(object sender, EventArgs e) {
+			if ((FormArmorData == null) || FormArmorData.IsDisposed) {
+				FormArmorData = new FormArmor(TableArmorDataTable, TableElementDataTable);
+				FormArmorData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「アクセサリー」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewAccessory_Click(object sender, EventArgs e) {
+			if ((FormAccessoryData == null) || FormAccessoryData.IsDisposed) {
+				FormAccessoryData = new FormAccessory(TableAccessoryDataTable, TableElementDataTable);
+				FormAccessoryData.Show();
 			}// End If
 		}// End Method
 
 		#endregion
 
 		//----------------------------------------------------------------------------------------------------
-
 		#region ヘルプ
 
 		/// <summary>
@@ -1551,5 +1629,6 @@ namespace Status_Editer {
 		}// End Method
 
 		#endregion
+
 	}// End Class
 }

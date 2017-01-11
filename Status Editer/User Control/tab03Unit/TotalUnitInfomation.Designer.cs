@@ -165,7 +165,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
 			this.tableLayoutPanel1.Controls.Add(this.labelLevel, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.labelReqLvLabel, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.labelReqLv, 2, 0);
@@ -285,7 +285,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(919, 316);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(920, 316);
 			this.tableLayoutPanel1.TabIndex = 4;
 			// 
 			// labelLevel
@@ -360,7 +360,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLv.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLv.Location = new System.Drawing.Point(739, 1);
 			this.labelMaxLv.Name = "labelMaxLv";
-			this.labelMaxLv.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLv.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLv.TabIndex = 6;
 			this.labelMaxLv.Text = "0";
 			this.labelMaxLv.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -427,7 +427,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelLvMax.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelLvMax.Location = new System.Drawing.Point(739, 22);
 			this.labelLvMax.Name = "labelLvMax";
-			this.labelLvMax.Size = new System.Drawing.Size(176, 20);
+			this.labelLvMax.Size = new System.Drawing.Size(177, 20);
 			this.labelLvMax.TabIndex = 12;
 			this.labelLvMax.Text = "Max Lv.";
 			this.labelLvMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -496,7 +496,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvHP.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvHP.Location = new System.Drawing.Point(739, 43);
 			this.labelMaxLvHP.Name = "labelMaxLvHP";
-			this.labelMaxLvHP.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvHP.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvHP.TabIndex = 19;
 			this.labelMaxLvHP.Text = "0.00";
 			this.labelMaxLvHP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -587,7 +587,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvMeleeATK.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvMeleeATK.Location = new System.Drawing.Point(739, 64);
 			this.labelMaxLvMeleeATK.Name = "labelMaxLvMeleeATK";
-			this.labelMaxLvMeleeATK.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvMeleeATK.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvMeleeATK.TabIndex = 26;
 			this.labelMaxLvMeleeATK.Text = "0.00";
 			this.labelMaxLvMeleeATK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -667,7 +667,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvMeleeDEF.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvMeleeDEF.Location = new System.Drawing.Point(739, 85);
 			this.labelMaxLvMeleeDEF.Name = "labelMaxLvMeleeDEF";
-			this.labelMaxLvMeleeDEF.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvMeleeDEF.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvMeleeDEF.TabIndex = 33;
 			this.labelMaxLvMeleeDEF.Text = "0.00";
 			this.labelMaxLvMeleeDEF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -747,7 +747,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvRangeATK.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvRangeATK.Location = new System.Drawing.Point(739, 106);
 			this.labelMaxLvRangeATK.Name = "labelMaxLvRangeATK";
-			this.labelMaxLvRangeATK.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvRangeATK.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvRangeATK.TabIndex = 40;
 			this.labelMaxLvRangeATK.Text = "0.00";
 			this.labelMaxLvRangeATK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -827,7 +827,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvRangeDEF.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvRangeDEF.Location = new System.Drawing.Point(739, 127);
 			this.labelMaxLvRangeDEF.Name = "labelMaxLvRangeDEF";
-			this.labelMaxLvRangeDEF.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvRangeDEF.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvRangeDEF.TabIndex = 47;
 			this.labelMaxLvRangeDEF.Text = "0.00";
 			this.labelMaxLvRangeDEF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -907,7 +907,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvMagicATK.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvMagicATK.Location = new System.Drawing.Point(739, 148);
 			this.labelMaxLvMagicATK.Name = "labelMaxLvMagicATK";
-			this.labelMaxLvMagicATK.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvMagicATK.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvMagicATK.TabIndex = 54;
 			this.labelMaxLvMagicATK.Text = "0.00";
 			this.labelMaxLvMagicATK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -987,7 +987,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvMagicDEF.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvMagicDEF.Location = new System.Drawing.Point(739, 169);
 			this.labelMaxLvMagicDEF.Name = "labelMaxLvMagicDEF";
-			this.labelMaxLvMagicDEF.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvMagicDEF.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvMagicDEF.TabIndex = 61;
 			this.labelMaxLvMagicDEF.Text = "0.00";
 			this.labelMaxLvMagicDEF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1067,7 +1067,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvSPD.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvSPD.Location = new System.Drawing.Point(739, 190);
 			this.labelMaxLvSPD.Name = "labelMaxLvSPD";
-			this.labelMaxLvSPD.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvSPD.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvSPD.TabIndex = 68;
 			this.labelMaxLvSPD.Text = "0.00";
 			this.labelMaxLvSPD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1135,7 +1135,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvLuck.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvLuck.Location = new System.Drawing.Point(739, 211);
 			this.labelMaxLvLuck.Name = "labelMaxLvLuck";
-			this.labelMaxLvLuck.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvLuck.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvLuck.TabIndex = 74;
 			this.labelMaxLvLuck.Text = "0";
 			this.labelMaxLvLuck.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1203,7 +1203,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvHIT.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvHIT.Location = new System.Drawing.Point(739, 232);
 			this.labelMaxLvHIT.Name = "labelMaxLvHIT";
-			this.labelMaxLvHIT.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvHIT.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvHIT.TabIndex = 80;
 			this.labelMaxLvHIT.Text = "0";
 			this.labelMaxLvHIT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1271,7 +1271,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvEVT.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvEVT.Location = new System.Drawing.Point(739, 253);
 			this.labelMaxLvEVT.Name = "labelMaxLvEVT";
-			this.labelMaxLvEVT.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvEVT.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvEVT.TabIndex = 86;
 			this.labelMaxLvEVT.Text = "0";
 			this.labelMaxLvEVT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1351,7 +1351,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvEXP.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvEXP.Location = new System.Drawing.Point(739, 274);
 			this.labelMaxLvEXP.Name = "labelMaxLvEXP";
-			this.labelMaxLvEXP.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvEXP.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvEXP.TabIndex = 93;
 			this.labelMaxLvEXP.Text = "0";
 			this.labelMaxLvEXP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1431,7 +1431,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.labelMaxLvMoney.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelMaxLvMoney.Location = new System.Drawing.Point(739, 295);
 			this.labelMaxLvMoney.Name = "labelMaxLvMoney";
-			this.labelMaxLvMoney.Size = new System.Drawing.Size(176, 20);
+			this.labelMaxLvMoney.Size = new System.Drawing.Size(177, 20);
 			this.labelMaxLvMoney.TabIndex = 100;
 			this.labelMaxLvMoney.Text = "0";
 			this.labelMaxLvMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1478,7 +1478,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupTotal);
 			this.Name = "TotalUnitInfomation";
 			this.Size = new System.Drawing.Size(1375, 800);

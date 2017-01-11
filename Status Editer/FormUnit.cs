@@ -4,13 +4,8 @@
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
@@ -74,15 +69,15 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void TestForm_Load(object sender, EventArgs e) {
+		private void FormUnit_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 共通デザイナー設定
 
-			dataGridViewCellStyleN0.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN0.Alignment = DataGridViewContentAlignment.MiddleRight;
 			dataGridViewCellStyleN0.Format = "N0";
 			dataGridViewCellStyleN0.NullValue = null;
 
-			dataGridViewCellStyleN2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN2.Alignment = DataGridViewContentAlignment.MiddleRight;
 			dataGridViewCellStyleN2.Format = "N2";
 			dataGridViewCellStyleN2.NullValue = null;
 
@@ -100,6 +95,7 @@ namespace Status_Editer {
 			// データソースのすり替え
 
 			DataGridViewUnit.DataSource = UnitDataTable;
+			DataGridViewUnit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 			DataGridViewUnit.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
 			DataGridViewUnit.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
@@ -111,6 +107,6 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void FormUnit_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
-		}
+		}// End Method
 	}// End Class
 }

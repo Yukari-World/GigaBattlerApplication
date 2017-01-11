@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Shield Form
+// Gauntlet Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class FormShield : Form {
+	public partial class FormGauntlet : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// DataTable
-		private DataTable ShieldDataTable = new __table_shieldDataTable();
+		private DataTable GauntletDataTable = new __table_gauntletDataTable();
 
 		// DataGridViewCellStyle
 		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
@@ -35,13 +35,13 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Shield Data Table</param>
+		/// <param name="DataTable">Gauntlet Data Table</param>
 		/// <param name="ElementDataTable">Element Data Table</param>
-		public FormShield(__table_shieldDataTable DataTable, __table_elementDataTable ElementDataTable) {
+		public FormGauntlet(__table_gauntletDataTable DataTable, __table_elementDataTable ElementDataTable) {
 			InitializeComponent();
 
 			// 割り当て。編集がリアルタイムに適応されるようになる
-			ShieldDataTable = DataTable;
+			GauntletDataTable = DataTable;
 
 			// コンボボックスの設定
 			element1DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
@@ -73,7 +73,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormShield_Load(object sender, EventArgs e) {
+		private void FormGauntlet_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 共通デザイナー設定
 
@@ -117,10 +117,11 @@ namespace Status_Editer {
 
 			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
-			DataGridViewShield.DataSource = ShieldDataTable;
-			DataGridViewShield.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-			DataGridViewShield.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			DataGridViewShield.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+
+			DataGridViewGauntlet.DataSource = GauntletDataTable;
+			DataGridViewGauntlet.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewGauntlet.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewGauntlet.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>
@@ -128,7 +129,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormShield_FormClosed(object sender, FormClosedEventArgs e) {
+		private void FormGauntlet_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
 		}// End Method
 	}// End Class

@@ -176,7 +176,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupRaceInfo);
 			this.Name = "RaceInfomation";
 			this.Size = new System.Drawing.Size(1380, 820);

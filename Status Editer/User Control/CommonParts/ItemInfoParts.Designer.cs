@@ -764,7 +764,6 @@ namespace Status_Editer.User_Control.CommonParts {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupInfomation);
 			this.Name = "ItemInfoParts";
 			this.Size = new System.Drawing.Size(600, 820);

@@ -36,30 +36,56 @@ namespace Status_Editer {
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabControlUnit = new System.Windows.Forms.TabControl();
 			this.tabPage21 = new System.Windows.Forms.TabPage();
+			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.tabPage22 = new System.Windows.Forms.TabPage();
+			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
+			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
 			this.tabPage23 = new System.Windows.Forms.TabPage();
+			this.StatusInfomation = new Status_Editer.User_Control.tab03Unit.StatusInfomation();
 			this.tabPage24 = new System.Windows.Forms.TabPage();
+			this.ActiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.SkillInfomation();
 			this.tabPage25 = new System.Windows.Forms.TabPage();
+			this.PassiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.AbilityInfomation();
 			this.listUnit = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.listUnitType = new System.Windows.Forms.ListBox();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.RaceInfomation = new Status_Editer.User_Control.tab05Race.RaceInfomation();
 			this.listRace = new System.Windows.Forms.ListBox();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
+			this.JobInfomation = new Status_Editer.User_Control.tab06Job.JobInfomation();
 			this.listJob = new System.Windows.Forms.ListBox();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.listMaker = new System.Windows.Forms.ListBox();
 			this.tabPage8 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts1 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.ItemInfoWeapon = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.EquipItemWeapon = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
 			this.listWeapon = new System.Windows.Forms.ListBox();
 			this.tabPage9 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts2 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemShield = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoShield = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
 			this.listShield = new System.Windows.Forms.ListBox();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts3 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemHelmet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoHelmet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
 			this.listHelmet = new System.Windows.Forms.ListBox();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts4 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemGauntlet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoGauntlet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
 			this.listGauntlet = new System.Windows.Forms.ListBox();
 			this.tabPage12 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts5 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemArmor = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoArmor = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
 			this.listArmor = new System.Windows.Forms.ListBox();
 			this.tabPage13 = new System.Windows.Forms.TabPage();
+			this.ItemAbilityInfoParts6 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
+			this.EquipItemAccessory = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
+			this.ItemInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
 			this.listAccessory = new System.Windows.Forms.ListBox();
 			this.tabPage14 = new System.Windows.Forms.TabPage();
 			this.tabPage15 = new System.Windows.Forms.TabPage();
@@ -146,32 +172,10 @@ namespace Status_Editer {
 			this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
 			this.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
-			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
-			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
-			this.StatusInfomation = new Status_Editer.User_Control.tab03Unit.StatusInfomation();
-			this.ActiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.SkillInfomation();
-			this.PassiveSkillInfomation = new Status_Editer.User_Control.tab03Unit.AbilityInfomation();
-			this.RaceInfomation = new Status_Editer.User_Control.tab05Race.RaceInfomation();
-			this.JobInfomation = new Status_Editer.User_Control.tab06Job.JobInfomation();
-			this.ItemAbilityInfoParts1 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.ItemInfoWeapon = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.EquipItemWeapon = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemAbilityInfoParts2 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.EquipItemShield = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemInfoShield = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.ItemAbilityInfoParts3 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.EquipItemHelmet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemInfoHelmet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.ItemAbilityInfoParts4 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.EquipItemGauntlet = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemInfoGauntlet = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.ItemAbilityInfoParts5 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.EquipItemArmor = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemInfoArmor = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.ItemAbilityInfoParts6 = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
-			this.EquipItemAccessory = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
-			this.ItemInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
+			this.StripMenuWindowViewHelmet = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindowViewGauntlet = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindowViewArmor = new System.Windows.Forms.ToolStripMenuItem();
+			this.StripMenuWindowViewAccessory = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabControlUnit.SuspendLayout();
@@ -285,6 +289,13 @@ namespace Status_Editer {
 			this.tabPage21.Text = "概要";
 			this.tabPage21.UseVisualStyleBackColor = true;
 			// 
+			// TotalUnitInfomation
+			// 
+			this.TotalUnitInfomation.Location = new System.Drawing.Point(0, 0);
+			this.TotalUnitInfomation.Name = "TotalUnitInfomation";
+			this.TotalUnitInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.TotalUnitInfomation.TabIndex = 0;
+			// 
 			// tabPage22
 			// 
 			this.tabPage22.Controls.Add(this.DropInfomation);
@@ -297,6 +308,20 @@ namespace Status_Editer {
 			this.tabPage22.Text = "基本データ";
 			this.tabPage22.UseVisualStyleBackColor = true;
 			// 
+			// DropInfomation
+			// 
+			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
+			this.DropInfomation.Name = "DropInfomation";
+			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
+			this.DropInfomation.TabIndex = 1;
+			// 
+			// UnitInfomation
+			// 
+			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
+			this.UnitInfomation.Name = "UnitInfomation";
+			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
+			this.UnitInfomation.TabIndex = 0;
+			// 
 			// tabPage23
 			// 
 			this.tabPage23.Controls.Add(this.StatusInfomation);
@@ -308,6 +333,213 @@ namespace Status_Editer {
 			this.tabPage23.Text = "ステータス";
 			this.tabPage23.UseVisualStyleBackColor = true;
 			// 
+			// StatusInfomation
+			// 
+			this.StatusInfomation.Location = new System.Drawing.Point(0, 0);
+			this.StatusInfomation.Name = "StatusInfomation";
+			this.StatusInfomation.numEVT = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numEXP = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numHIT = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numHP = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLuck = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPEVT = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPEXP = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPHIT = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPHP = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPLuck = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPMagicATK = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPMagicDEF = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPMeleeATK = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPMeleeDEF = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPMoney = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPRangeATK = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPRangeDEF = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numLvPSPD = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMagicATK = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMagicDEF = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMaxLevel = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+			this.StatusInfomation.numMaxTP = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMeleeATK = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMeleeDEF = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMinLevel = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numMoney = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numRangeATK = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numRangeDEF = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleEXP = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleHP = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleMagicATK = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleMagicDEF = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleMeleeATK = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleMeleeDEF = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleMoney = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleRangeATK = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleRangeDEF = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numScaleSPD = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numSPD = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.StatusInfomation.numTP = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+			this.StatusInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.StatusInfomation.TabIndex = 0;
+			// 
 			// tabPage24
 			// 
 			this.tabPage24.Controls.Add(this.ActiveSkillInfomation);
@@ -318,6 +550,13 @@ namespace Status_Editer {
 			this.tabPage24.Text = "スキル";
 			this.tabPage24.UseVisualStyleBackColor = true;
 			// 
+			// ActiveSkillInfomation
+			// 
+			this.ActiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
+			this.ActiveSkillInfomation.Name = "ActiveSkillInfomation";
+			this.ActiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.ActiveSkillInfomation.TabIndex = 0;
+			// 
 			// tabPage25
 			// 
 			this.tabPage25.Controls.Add(this.PassiveSkillInfomation);
@@ -327,6 +566,13 @@ namespace Status_Editer {
 			this.tabPage25.TabIndex = 4;
 			this.tabPage25.Text = "アビリティ";
 			this.tabPage25.UseVisualStyleBackColor = true;
+			// 
+			// PassiveSkillInfomation
+			// 
+			this.PassiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
+			this.PassiveSkillInfomation.Name = "PassiveSkillInfomation";
+			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
+			this.PassiveSkillInfomation.TabIndex = 0;
 			// 
 			// listUnit
 			// 
@@ -369,6 +615,13 @@ namespace Status_Editer {
 			this.tabPage5.Text = "種族";
 			this.tabPage5.UseVisualStyleBackColor = true;
 			// 
+			// RaceInfomation
+			// 
+			this.RaceInfomation.Location = new System.Drawing.Point(210, 0);
+			this.RaceInfomation.Name = "RaceInfomation";
+			this.RaceInfomation.Size = new System.Drawing.Size(1380, 820);
+			this.RaceInfomation.TabIndex = 1;
+			// 
 			// listRace
 			// 
 			this.listRace.FormattingEnabled = true;
@@ -389,6 +642,13 @@ namespace Status_Editer {
 			this.tabPage6.TabIndex = 5;
 			this.tabPage6.Text = "ジョブ";
 			this.tabPage6.UseVisualStyleBackColor = true;
+			// 
+			// JobInfomation
+			// 
+			this.JobInfomation.Location = new System.Drawing.Point(210, 0);
+			this.JobInfomation.Name = "JobInfomation";
+			this.JobInfomation.Size = new System.Drawing.Size(1380, 820);
+			this.JobInfomation.TabIndex = 1;
 			// 
 			// listJob
 			// 
@@ -433,6 +693,27 @@ namespace Status_Editer {
 			this.tabPage8.Text = "武器";
 			this.tabPage8.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts1
+			// 
+			this.ItemAbilityInfoParts1.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts1.Name = "ItemAbilityInfoParts1";
+			this.ItemAbilityInfoParts1.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts1.TabIndex = 3;
+			// 
+			// ItemInfoWeapon
+			// 
+			this.ItemInfoWeapon.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoWeapon.Name = "ItemInfoWeapon";
+			this.ItemInfoWeapon.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoWeapon.TabIndex = 1;
+			// 
+			// EquipItemWeapon
+			// 
+			this.EquipItemWeapon.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemWeapon.Name = "EquipItemWeapon";
+			this.EquipItemWeapon.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemWeapon.TabIndex = 2;
+			// 
 			// listWeapon
 			// 
 			this.listWeapon.FormattingEnabled = true;
@@ -456,6 +737,27 @@ namespace Status_Editer {
 			this.tabPage9.Text = "盾";
 			this.tabPage9.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts2
+			// 
+			this.ItemAbilityInfoParts2.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts2.Name = "ItemAbilityInfoParts2";
+			this.ItemAbilityInfoParts2.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts2.TabIndex = 3;
+			// 
+			// EquipItemShield
+			// 
+			this.EquipItemShield.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemShield.Name = "EquipItemShield";
+			this.EquipItemShield.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemShield.TabIndex = 2;
+			// 
+			// ItemInfoShield
+			// 
+			this.ItemInfoShield.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoShield.Name = "ItemInfoShield";
+			this.ItemInfoShield.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoShield.TabIndex = 1;
+			// 
 			// listShield
 			// 
 			this.listShield.FormattingEnabled = true;
@@ -477,6 +779,27 @@ namespace Status_Editer {
 			this.tabPage10.TabIndex = 9;
 			this.tabPage10.Text = "頭防具";
 			this.tabPage10.UseVisualStyleBackColor = true;
+			// 
+			// ItemAbilityInfoParts3
+			// 
+			this.ItemAbilityInfoParts3.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts3.Name = "ItemAbilityInfoParts3";
+			this.ItemAbilityInfoParts3.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts3.TabIndex = 3;
+			// 
+			// EquipItemHelmet
+			// 
+			this.EquipItemHelmet.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemHelmet.Name = "EquipItemHelmet";
+			this.EquipItemHelmet.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemHelmet.TabIndex = 2;
+			// 
+			// ItemInfoHelmet
+			// 
+			this.ItemInfoHelmet.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoHelmet.Name = "ItemInfoHelmet";
+			this.ItemInfoHelmet.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoHelmet.TabIndex = 1;
 			// 
 			// listHelmet
 			// 
@@ -500,6 +823,27 @@ namespace Status_Editer {
 			this.tabPage11.Text = "籠手";
 			this.tabPage11.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts4
+			// 
+			this.ItemAbilityInfoParts4.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts4.Name = "ItemAbilityInfoParts4";
+			this.ItemAbilityInfoParts4.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts4.TabIndex = 3;
+			// 
+			// EquipItemGauntlet
+			// 
+			this.EquipItemGauntlet.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemGauntlet.Name = "EquipItemGauntlet";
+			this.EquipItemGauntlet.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemGauntlet.TabIndex = 2;
+			// 
+			// ItemInfoGauntlet
+			// 
+			this.ItemInfoGauntlet.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoGauntlet.Name = "ItemInfoGauntlet";
+			this.ItemInfoGauntlet.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoGauntlet.TabIndex = 0;
+			// 
 			// listGauntlet
 			// 
 			this.listGauntlet.FormattingEnabled = true;
@@ -522,6 +866,27 @@ namespace Status_Editer {
 			this.tabPage12.Text = "体防具";
 			this.tabPage12.UseVisualStyleBackColor = true;
 			// 
+			// ItemAbilityInfoParts5
+			// 
+			this.ItemAbilityInfoParts5.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts5.Name = "ItemAbilityInfoParts5";
+			this.ItemAbilityInfoParts5.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts5.TabIndex = 3;
+			// 
+			// EquipItemArmor
+			// 
+			this.EquipItemArmor.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemArmor.Name = "EquipItemArmor";
+			this.EquipItemArmor.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemArmor.TabIndex = 2;
+			// 
+			// ItemInfoArmor
+			// 
+			this.ItemInfoArmor.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoArmor.Name = "ItemInfoArmor";
+			this.ItemInfoArmor.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoArmor.TabIndex = 0;
+			// 
 			// listArmor
 			// 
 			this.listArmor.FormattingEnabled = true;
@@ -543,6 +908,27 @@ namespace Status_Editer {
 			this.tabPage13.TabIndex = 12;
 			this.tabPage13.Text = "アクセサリー";
 			this.tabPage13.UseVisualStyleBackColor = true;
+			// 
+			// ItemAbilityInfoParts6
+			// 
+			this.ItemAbilityInfoParts6.Location = new System.Drawing.Point(820, 300);
+			this.ItemAbilityInfoParts6.Name = "ItemAbilityInfoParts6";
+			this.ItemAbilityInfoParts6.Size = new System.Drawing.Size(760, 520);
+			this.ItemAbilityInfoParts6.TabIndex = 3;
+			// 
+			// EquipItemAccessory
+			// 
+			this.EquipItemAccessory.Location = new System.Drawing.Point(820, 0);
+			this.EquipItemAccessory.Name = "EquipItemAccessory";
+			this.EquipItemAccessory.Size = new System.Drawing.Size(760, 300);
+			this.EquipItemAccessory.TabIndex = 2;
+			// 
+			// ItemInfoAccessory
+			// 
+			this.ItemInfoAccessory.Location = new System.Drawing.Point(210, 0);
+			this.ItemInfoAccessory.Name = "ItemInfoAccessory";
+			this.ItemInfoAccessory.Size = new System.Drawing.Size(600, 820);
+			this.ItemInfoAccessory.TabIndex = 1;
 			// 
 			// listAccessory
 			// 
@@ -779,97 +1165,97 @@ namespace Status_Editer {
             this.toolStripDbAddSkill,
             this.toolStripDbAddAbility});
 			this.toolStripDatabaseAdd.Name = "toolStripDatabaseAdd";
-			this.toolStripDatabaseAdd.Size = new System.Drawing.Size(147, 22);
+			this.toolStripDatabaseAdd.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDatabaseAdd.Text = "新規登録(&N)";
 			// 
 			// toolStripDbAddUnit
 			// 
 			this.toolStripDbAddUnit.Name = "toolStripDbAddUnit";
-			this.toolStripDbAddUnit.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddUnit.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddUnit.Text = "ユニット(&U)";
 			this.toolStripDbAddUnit.Click += new System.EventHandler(this.toolStripDbAddUnit_Click);
 			// 
 			// toolStripDbAddUnitType
 			// 
 			this.toolStripDbAddUnitType.Name = "toolStripDbAddUnitType";
-			this.toolStripDbAddUnitType.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddUnitType.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddUnitType.Text = "ユニットタイプ(&E)";
 			this.toolStripDbAddUnitType.Click += new System.EventHandler(this.toolStripDbAddUnitType_Click);
 			// 
 			// toolStripDbAddRace
 			// 
 			this.toolStripDbAddRace.Name = "toolStripDbAddRace";
-			this.toolStripDbAddRace.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddRace.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddRace.Text = "種族(&R)";
 			this.toolStripDbAddRace.Click += new System.EventHandler(this.toolStripDbAddRace_Click);
 			// 
 			// toolStripDbAddJob
 			// 
 			this.toolStripDbAddJob.Name = "toolStripDbAddJob";
-			this.toolStripDbAddJob.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddJob.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddJob.Text = "ジョブ(&J)";
 			this.toolStripDbAddJob.Click += new System.EventHandler(this.toolStripDbAddJob_Click);
 			// 
 			// toolStripDbAddMaker
 			// 
 			this.toolStripDbAddMaker.Name = "toolStripDbAddMaker";
-			this.toolStripDbAddMaker.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddMaker.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddMaker.Text = "メーカー(&M)";
 			this.toolStripDbAddMaker.Click += new System.EventHandler(this.toolStripDbAddMaker_Click);
 			// 
 			// toolStripDbAddWeapon
 			// 
 			this.toolStripDbAddWeapon.Name = "toolStripDbAddWeapon";
-			this.toolStripDbAddWeapon.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddWeapon.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddWeapon.Text = "武器(&W)";
 			this.toolStripDbAddWeapon.Click += new System.EventHandler(this.toolStripDbAddWeapon_Click);
 			// 
 			// toolStripDbAddShield
 			// 
 			this.toolStripDbAddShield.Name = "toolStripDbAddShield";
-			this.toolStripDbAddShield.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddShield.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddShield.Text = "盾(&S)";
 			this.toolStripDbAddShield.Click += new System.EventHandler(this.toolStripDbAddShield_Click);
 			// 
 			// toolStripDbAddHelmet
 			// 
 			this.toolStripDbAddHelmet.Name = "toolStripDbAddHelmet";
-			this.toolStripDbAddHelmet.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddHelmet.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddHelmet.Text = "頭防具(&H)";
 			this.toolStripDbAddHelmet.Click += new System.EventHandler(this.toolStripDbAddHelmet_Click);
 			// 
 			// toolStripDbAddGauntlet
 			// 
 			this.toolStripDbAddGauntlet.Name = "toolStripDbAddGauntlet";
-			this.toolStripDbAddGauntlet.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddGauntlet.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddGauntlet.Text = "腕防具(&G)";
 			this.toolStripDbAddGauntlet.Click += new System.EventHandler(this.toolStripDbAddGauntlet_Click);
 			// 
 			// toolStripDbAddArmor
 			// 
 			this.toolStripDbAddArmor.Name = "toolStripDbAddArmor";
-			this.toolStripDbAddArmor.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddArmor.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddArmor.Text = "体防具(&B)";
 			this.toolStripDbAddArmor.Click += new System.EventHandler(this.toolStripDbAddArmor_Click);
 			// 
 			// toolStripDbAddAccessory
 			// 
 			this.toolStripDbAddAccessory.Name = "toolStripDbAddAccessory";
-			this.toolStripDbAddAccessory.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddAccessory.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddAccessory.Text = "アクセサリー(&A)";
 			this.toolStripDbAddAccessory.Click += new System.EventHandler(this.toolStripDbAddAccessory_Click);
 			// 
 			// toolStripDbAddSkill
 			// 
 			this.toolStripDbAddSkill.Name = "toolStripDbAddSkill";
-			this.toolStripDbAddSkill.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddSkill.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddSkill.Text = "スキル(&N)";
 			this.toolStripDbAddSkill.Click += new System.EventHandler(this.toolStripDbAddSkill_Click);
 			// 
 			// toolStripDbAddAbility
 			// 
 			this.toolStripDbAddAbility.Name = "toolStripDbAddAbility";
-			this.toolStripDbAddAbility.Size = new System.Drawing.Size(150, 22);
+			this.toolStripDbAddAbility.Size = new System.Drawing.Size(152, 22);
 			this.toolStripDbAddAbility.Text = "アビリティ(&P)";
 			this.toolStripDbAddAbility.Click += new System.EventHandler(this.toolStripDbAddAbility_Click);
 			// 
@@ -893,7 +1279,7 @@ namespace Status_Editer {
             this.StripMenuDbReloadSkill,
             this.StripMenuDbReloadAbility});
 			this.StripMenuDatabaseReload.Name = "StripMenuDatabaseReload";
-			this.StripMenuDatabaseReload.Size = new System.Drawing.Size(147, 22);
+			this.StripMenuDatabaseReload.Size = new System.Drawing.Size(152, 22);
 			this.StripMenuDatabaseReload.Text = "再読み込み(&R)";
 			// 
 			// StripMenuDbReloadAll
@@ -1025,7 +1411,7 @@ namespace Status_Editer {
             this.StripMenuDbSaveSkill,
             this.StripMenuDbSaveAbility});
 			this.StripMenuDatabaseSave.Name = "StripMenuDatabaseSave";
-			this.StripMenuDatabaseSave.Size = new System.Drawing.Size(147, 22);
+			this.StripMenuDatabaseSave.Size = new System.Drawing.Size(152, 22);
 			this.StripMenuDatabaseSave.Text = "変更を適用(&S)";
 			// 
 			// StripMenuDbSaveAll
@@ -1148,7 +1534,11 @@ namespace Status_Editer {
             this.StripMenuWindowViewJob,
             this.StripMenuWindowViewMaker,
             this.StripMenuWindowViewWeapon,
-            this.StripMenuWindowViewShield});
+            this.StripMenuWindowViewShield,
+            this.StripMenuWindowViewHelmet,
+            this.StripMenuWindowViewGauntlet,
+            this.StripMenuWindowViewArmor,
+            this.StripMenuWindowViewAccessory});
 			this.StripMenuWindowView.Name = "StripMenuWindowView";
 			this.StripMenuWindowView.Size = new System.Drawing.Size(157, 22);
 			this.StripMenuWindowView.Text = "テーブルの表示(&T)";
@@ -1247,413 +1637,33 @@ namespace Status_Editer {
 			this.ContextMenuStrip.Name = "ContextMenuStrip";
 			this.ContextMenuStrip.Size = new System.Drawing.Size(61, 4);
 			// 
-			// TotalUnitInfomation
+			// StripMenuWindowViewHelmet
 			// 
-			this.TotalUnitInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.TotalUnitInfomation.Location = new System.Drawing.Point(0, 0);
-			this.TotalUnitInfomation.Name = "TotalUnitInfomation";
-			this.TotalUnitInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.TotalUnitInfomation.TabIndex = 0;
+			this.StripMenuWindowViewHelmet.Name = "StripMenuWindowViewHelmet";
+			this.StripMenuWindowViewHelmet.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewHelmet.Text = "頭防具(&H)";
+			this.StripMenuWindowViewHelmet.Click += new System.EventHandler(this.StripMenuWindowViewHelmet_Click);
 			// 
-			// DropInfomation
+			// StripMenuWindowViewGauntlet
 			// 
-			this.DropInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.DropInfomation.Location = new System.Drawing.Point(610, 0);
-			this.DropInfomation.Name = "DropInfomation";
-			this.DropInfomation.Size = new System.Drawing.Size(760, 800);
-			this.DropInfomation.TabIndex = 1;
+			this.StripMenuWindowViewGauntlet.Name = "StripMenuWindowViewGauntlet";
+			this.StripMenuWindowViewGauntlet.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewGauntlet.Text = "腕防具(&G)";
+			this.StripMenuWindowViewGauntlet.Click += new System.EventHandler(this.StripMenuWindowViewGauntlet_Click);
 			// 
-			// UnitInfomation
+			// StripMenuWindowViewArmor
 			// 
-			this.UnitInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.UnitInfomation.Location = new System.Drawing.Point(0, 0);
-			this.UnitInfomation.Name = "UnitInfomation";
-			this.UnitInfomation.Size = new System.Drawing.Size(600, 800);
-			this.UnitInfomation.TabIndex = 0;
+			this.StripMenuWindowViewArmor.Name = "StripMenuWindowViewArmor";
+			this.StripMenuWindowViewArmor.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewArmor.Text = "体防具(&B)";
+			this.StripMenuWindowViewArmor.Click += new System.EventHandler(this.StripMenuWindowViewArmor_Click);
 			// 
-			// StatusInfomation
+			// StripMenuWindowViewAccessory
 			// 
-			this.StatusInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.StatusInfomation.Location = new System.Drawing.Point(0, 0);
-			this.StatusInfomation.Name = "StatusInfomation";
-			this.StatusInfomation.numEVT = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numEXP = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numHIT = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numHP = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLuck = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPEVT = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPEXP = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPHIT = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPHP = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPLuck = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPMagicATK = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPMagicDEF = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPMeleeATK = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPMeleeDEF = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPMoney = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPRangeATK = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPRangeDEF = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numLvPSPD = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMagicATK = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMagicDEF = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMaxLevel = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-			this.StatusInfomation.numMaxTP = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMeleeATK = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMeleeDEF = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMinLevel = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numMoney = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numRangeATK = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numRangeDEF = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleEXP = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleHP = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleMagicATK = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleMagicDEF = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleMeleeATK = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleMeleeDEF = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleMoney = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleRangeATK = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleRangeDEF = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numScaleSPD = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numSPD = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-			this.StatusInfomation.numTP = new decimal(new int[] {
-            250,
-            0,
-            0,
-            0});
-			this.StatusInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.StatusInfomation.TabIndex = 0;
-			// 
-			// ActiveSkillInfomation
-			// 
-			this.ActiveSkillInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.ActiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
-			this.ActiveSkillInfomation.Name = "ActiveSkillInfomation";
-			this.ActiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.ActiveSkillInfomation.TabIndex = 0;
-			// 
-			// PassiveSkillInfomation
-			// 
-			this.PassiveSkillInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.PassiveSkillInfomation.Location = new System.Drawing.Point(0, 0);
-			this.PassiveSkillInfomation.Name = "PassiveSkillInfomation";
-			this.PassiveSkillInfomation.Size = new System.Drawing.Size(1375, 800);
-			this.PassiveSkillInfomation.TabIndex = 0;
-			// 
-			// RaceInfomation
-			// 
-			this.RaceInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.RaceInfomation.Location = new System.Drawing.Point(210, 0);
-			this.RaceInfomation.Name = "RaceInfomation";
-			this.RaceInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.RaceInfomation.TabIndex = 1;
-			// 
-			// JobInfomation
-			// 
-			this.JobInfomation.BackColor = System.Drawing.Color.Transparent;
-			this.JobInfomation.Location = new System.Drawing.Point(210, 0);
-			this.JobInfomation.Name = "JobInfomation";
-			this.JobInfomation.Size = new System.Drawing.Size(1380, 820);
-			this.JobInfomation.TabIndex = 1;
-			// 
-			// ItemAbilityInfoParts1
-			// 
-			this.ItemAbilityInfoParts1.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts1.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts1.Name = "ItemAbilityInfoParts1";
-			this.ItemAbilityInfoParts1.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts1.TabIndex = 3;
-			// 
-			// ItemInfoWeapon
-			// 
-			this.ItemInfoWeapon.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoWeapon.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoWeapon.Name = "ItemInfoWeapon";
-			this.ItemInfoWeapon.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoWeapon.TabIndex = 1;
-			// 
-			// EquipItemWeapon
-			// 
-			this.EquipItemWeapon.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemWeapon.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemWeapon.Name = "EquipItemWeapon";
-			this.EquipItemWeapon.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemWeapon.TabIndex = 2;
-			// 
-			// ItemAbilityInfoParts2
-			// 
-			this.ItemAbilityInfoParts2.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts2.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts2.Name = "ItemAbilityInfoParts2";
-			this.ItemAbilityInfoParts2.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts2.TabIndex = 3;
-			// 
-			// EquipItemShield
-			// 
-			this.EquipItemShield.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemShield.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemShield.Name = "EquipItemShield";
-			this.EquipItemShield.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemShield.TabIndex = 2;
-			// 
-			// ItemInfoShield
-			// 
-			this.ItemInfoShield.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoShield.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoShield.Name = "ItemInfoShield";
-			this.ItemInfoShield.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoShield.TabIndex = 1;
-			// 
-			// ItemAbilityInfoParts3
-			// 
-			this.ItemAbilityInfoParts3.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts3.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts3.Name = "ItemAbilityInfoParts3";
-			this.ItemAbilityInfoParts3.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts3.TabIndex = 3;
-			// 
-			// EquipItemHelmet
-			// 
-			this.EquipItemHelmet.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemHelmet.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemHelmet.Name = "EquipItemHelmet";
-			this.EquipItemHelmet.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemHelmet.TabIndex = 2;
-			// 
-			// ItemInfoHelmet
-			// 
-			this.ItemInfoHelmet.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoHelmet.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoHelmet.Name = "ItemInfoHelmet";
-			this.ItemInfoHelmet.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoHelmet.TabIndex = 1;
-			// 
-			// ItemAbilityInfoParts4
-			// 
-			this.ItemAbilityInfoParts4.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts4.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts4.Name = "ItemAbilityInfoParts4";
-			this.ItemAbilityInfoParts4.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts4.TabIndex = 3;
-			// 
-			// EquipItemGauntlet
-			// 
-			this.EquipItemGauntlet.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemGauntlet.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemGauntlet.Name = "EquipItemGauntlet";
-			this.EquipItemGauntlet.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemGauntlet.TabIndex = 2;
-			// 
-			// ItemInfoGauntlet
-			// 
-			this.ItemInfoGauntlet.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoGauntlet.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoGauntlet.Name = "ItemInfoGauntlet";
-			this.ItemInfoGauntlet.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoGauntlet.TabIndex = 0;
-			// 
-			// ItemAbilityInfoParts5
-			// 
-			this.ItemAbilityInfoParts5.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts5.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts5.Name = "ItemAbilityInfoParts5";
-			this.ItemAbilityInfoParts5.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts5.TabIndex = 3;
-			// 
-			// EquipItemArmor
-			// 
-			this.EquipItemArmor.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemArmor.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemArmor.Name = "EquipItemArmor";
-			this.EquipItemArmor.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemArmor.TabIndex = 2;
-			// 
-			// ItemInfoArmor
-			// 
-			this.ItemInfoArmor.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoArmor.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoArmor.Name = "ItemInfoArmor";
-			this.ItemInfoArmor.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoArmor.TabIndex = 0;
-			// 
-			// ItemAbilityInfoParts6
-			// 
-			this.ItemAbilityInfoParts6.BackColor = System.Drawing.Color.Transparent;
-			this.ItemAbilityInfoParts6.Location = new System.Drawing.Point(820, 300);
-			this.ItemAbilityInfoParts6.Name = "ItemAbilityInfoParts6";
-			this.ItemAbilityInfoParts6.Size = new System.Drawing.Size(760, 520);
-			this.ItemAbilityInfoParts6.TabIndex = 3;
-			// 
-			// EquipItemAccessory
-			// 
-			this.EquipItemAccessory.BackColor = System.Drawing.Color.Transparent;
-			this.EquipItemAccessory.Location = new System.Drawing.Point(820, 0);
-			this.EquipItemAccessory.Name = "EquipItemAccessory";
-			this.EquipItemAccessory.Size = new System.Drawing.Size(760, 300);
-			this.EquipItemAccessory.TabIndex = 2;
-			// 
-			// ItemInfoAccessory
-			// 
-			this.ItemInfoAccessory.BackColor = System.Drawing.Color.Transparent;
-			this.ItemInfoAccessory.Location = new System.Drawing.Point(210, 0);
-			this.ItemInfoAccessory.Name = "ItemInfoAccessory";
-			this.ItemInfoAccessory.Size = new System.Drawing.Size(600, 820);
-			this.ItemInfoAccessory.TabIndex = 1;
+			this.StripMenuWindowViewAccessory.Name = "StripMenuWindowViewAccessory";
+			this.StripMenuWindowViewAccessory.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewAccessory.Text = "アクセサリー(&A)";
+			this.StripMenuWindowViewAccessory.Click += new System.EventHandler(this.StripMenuWindowViewAccessory_Click);
 			// 
 			// EditerMainMenu
 			// 
@@ -1846,5 +1856,9 @@ namespace Status_Editer {
 		private ToolStripMenuItem StripMenuWindowViewMaker;
 		private ToolStripMenuItem StripMenuWindowViewWeapon;
 		private ToolStripMenuItem StripMenuWindowViewShield;
+		private ToolStripMenuItem StripMenuWindowViewHelmet;
+		private ToolStripMenuItem StripMenuWindowViewGauntlet;
+		private ToolStripMenuItem StripMenuWindowViewArmor;
+		private ToolStripMenuItem StripMenuWindowViewAccessory;
 	}
 }
