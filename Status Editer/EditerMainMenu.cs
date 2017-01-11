@@ -587,12 +587,12 @@ namespace Status_Editer {
 		/// <summary>
 		/// 「ファイル」→「開く」の処理内容
 		/// </summary>
-		/// <param name="sender">object</param>
-		/// <param name="e">EventArgs</param>
 		/// <remarks>
 		/// 以下のページより参照
 		/// http://dobon.net/vb/dotnet/form/folderdialog.html
 		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
 		private void StripMenuFileOpen_Click(object sender, EventArgs e) {
 			// FolderBrowserDialogクラスのインスタンスを作成
 			FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -1721,6 +1721,15 @@ namespace Status_Editer {
 		}// End Method
 
 		/// <summary>
+		/// 「ヘルプ」→「Githubのページへ」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuHelpDevelop_Click(object sender, EventArgs e) {
+			Process.Start("https://github.com/Yukari-World/GigaBattlerApplication");
+		}// End Method
+
+		/// <summary>
 		/// 「ヘルプ」→「バージョン情報」の処理内容
 		/// </summary>
 		/// <param name="sender">object</param>
@@ -1728,6 +1737,31 @@ namespace Status_Editer {
 		private void StripMenuHelpVersion_Click(object sender, EventArgs e) {
 			AboutBox Form2 = new AboutBox();
 			Form2.ShowDialog();
+		}// End Method
+
+		#endregion
+
+		//----------------------------------------------------------------------------------------------------
+		// Context Menu 項目
+
+		#region Context Menu
+
+		/// <summary>
+		/// 「複製」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuContextDuplicate_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「複製」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuContextDelete_Click(object sender, EventArgs e) {
+
 		}// End Method
 
 		#endregion
