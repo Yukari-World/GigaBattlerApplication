@@ -148,9 +148,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ICommand.cs" />
-    <Compile Include="Memento.cs" />
-    <Compile Include="MementoCommand.cs" />
     <Compile Include="User Control\CommonParts\EquipItemStatusParts.cs">
       <SubType>UserControl</SubType>
     </Compile>

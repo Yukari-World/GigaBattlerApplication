@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
+using Common Library;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
@@ -587,7 +588,6 @@ namespace Status_Editer {
 		/// <summary>
 		/// 「ファイル」→「CSVファイルからインポート」の処理内容
 		/// </summary>
-		/// <remarks>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuFileOpen_Click(object sender, EventArgs e) {
@@ -1755,7 +1755,7 @@ namespace Status_Editer {
 		}// End Method
 
 		/// <summary>
-		/// 「複製」の処理内容
+		/// 「削除」の処理内容
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
@@ -1764,5 +1764,6 @@ namespace Status_Editer {
 		}// End Method
 
 		#endregion
+
 	}// End Class
 }
