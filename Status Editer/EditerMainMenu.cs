@@ -94,6 +94,7 @@ namespace Status_Editer {
 		FormGauntlet FormGauntletData = null;
 		FormArmor FormArmorData = null;
 		FormAccessory FormAccessoryData = null;
+		FormSkill FormSkillData = null;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -661,24 +662,96 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddUnit_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddUnit_Click(object sender, EventArgs e) {
 			// ダミーデータの作成
 			Random rand = new Random();
 			int Dummy = rand.Next(10000);
 
 			try {
+				// 行を作成する
 				DataRow row = TableUnitDataTable.NewRow();
+
 				row["UnitID"] = "Unit" + Dummy.ToString();
 				row["UnitName"] = "Unit" + Dummy.ToString();
-				row["Type"] = 0;
-				row["Info"] = "";
+				row["Race"] = "";
+				row["Req Lv"] = 1;
+				row["Min Lv"] = 1;
+				row["Max Lv"] = 1;
+				row["StartTP"] = 250;
+				row["MaxTP"] = 500;
+				row["HP"] = 100.00M;
+				row["MeleeATK"] = 50.00M;
+				row["MeleeDEF"] = 50.00M;
+				row["RangeATK"] = 50.00M;
+				row["RangeDEF"] = 50.00M;
+				row["MagicATK"] = 50.00M;
+				row["MagicDEF"] = 50.00M;
+				row["SPD"] = 50.00M;
+				row["LUK"] = 10;
+				row["HIT"] = 0;
+				row["EVT"] = 0;
+				row["EXP"] = 50;
+				row["MNY"] = 50;
+				row["LvHP"] = 10.00M;
+				row["LvMeleeATK"] = 10.00M;
+				row["LvMeleeDEF"] = 10.00M;
+				row["LvRangeATK"] = 10.00M;
+				row["LvRangeDEF"] = 10.00M;
+				row["LvMagicATK"] = 10.00M;
+				row["LvMagicDEF"] = 10.00M;
+				row["LvSPD"] = 10.00M;
+				row["LvLUK"] = 0;
+				row["LvHIT"] = 0;
+				row["LvEVT"] = 0;
+				row["LvEXP"] = 10;
+				row["LvMNY"] = 10;
+				row["HP Per"] = 1000.00M;
+				row["MeleeATKPer"] = 1000.00M;
+				row["MeleeDEFPer"] = 1000.00M;
+				row["RangeATKPer"] = 1000.00M;
+				row["RangeDEFPer"] = 1000.00M;
+				row["MagicATKPer"] = 1000.00M;
+				row["MagicDEFPer"] = 1000.00M;
+				row["SPD Per"] = 1000.00M;
+				row["EXP Per"] = 1000.00M;
+				row["MNY Per"] = 1000.00M;
+				row["WT"] = 100;
+				row["SSP"] = 0;
+				row["SPC"] = 50;
+				row["ATC"] = 1;
+				row["Type"] = "-1";
+				row["DMG Per"] = 0;
+				row["Air"] = 0;
+				row["Ver"] = 1;
+				row["Algorithm"] = "0";
+				row["AI ID"] = -1;
+				row["Rare"] = 1;
+				row["Rare2"] = 1000;
+				row["Item1"] = "-1";
+				row["Per1"] = 0;
+				row["Item2"] = "-1";
+				row["Per2"] = 0;
+				row["Item3"] = "-1";
+				row["Per3"] = 0;
+				row["Item4"] = "-1";
+				row["Per4"] = 0;
+				row["Item5"] = "-1";
+				row["Per5"] = 0;
+				row["Item6"] = "-1";
+				row["Per6"] = 0;
+				// 行が長すぎるので短縮
+				for (int i = 1; i <= 30; i++) {
+					row["Skill" + i.ToString()] = "-1";
+					row["Ability" + i.ToString()] = "-1";
+				}// End Loop
+				row["Info"] = "プログラムで追加されたデータだよ。必要ないなら削除してね。";
 
 				TableUnitDataTable.Rows.Add(row);
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
 				Debug.WriteLine("New Row Insert Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("New Row Insert Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+			}// End Try
 		}// End Method
 
 		/// <summary>
@@ -686,7 +759,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddUnitType_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddUnitType_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -695,7 +768,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddRace_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddRace_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -704,7 +777,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddJob_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddJob_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -713,7 +786,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddMaker_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddMaker_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -722,7 +795,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddWeapon_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddWeapon_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -731,7 +804,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddShield_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddShield_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -740,7 +813,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddHelmet_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddHelmet_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -749,7 +822,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddGauntlet_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddGauntlet_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -758,7 +831,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddArmor_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddArmor_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -767,7 +840,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddAccessory_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddAccessory_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -776,7 +849,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddSkill_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddSkill_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -785,7 +858,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void toolStripDbAddAbility_Click(object sender, EventArgs e) {
+		private void StripMenuDbAddAbility_Click(object sender, EventArgs e) {
 
 		}// End Method
 
@@ -1602,6 +1675,35 @@ namespace Status_Editer {
 				FormAccessoryData = new FormAccessory(TableAccessoryDataTable, TableElementDataTable);
 				FormAccessoryData.Show();
 			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「スキル」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewSkill_Click(object sender, EventArgs e) {
+			if ((FormSkillData == null) || FormSkillData.IsDisposed) {
+				FormSkillData = new FormSkill(TableSkillDataTable, TableElementDataTable);
+				FormSkillData.Show();
+			}// End If
+		}// End Method
+
+		/// <summary>
+		/// 「ウィンドウ」→「アビリティ」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewAbility_Click(object sender, EventArgs e) {
+
 		}// End Method
 
 		#endregion

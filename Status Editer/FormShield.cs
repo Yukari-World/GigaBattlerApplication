@@ -117,6 +117,7 @@ namespace Status_Editer {
 
 			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
+
 			DataGridViewShield.DataSource = ShieldDataTable;
 			DataGridViewShield.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 			DataGridViewShield.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
