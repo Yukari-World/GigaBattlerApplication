@@ -411,6 +411,12 @@
     <Folder Include="User Control\tab17BattleField\Parts\" />
     <Folder Include="User Control\tab18WaveData\Parts\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common Library\CommonLibrary.csproj">
+      <Project>{f946030b-55b7-4369-9404-4934138f0637}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

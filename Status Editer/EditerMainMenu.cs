@@ -14,7 +14,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
-using Common Library;
+using CommonLibrary;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
