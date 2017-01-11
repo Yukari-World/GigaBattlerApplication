@@ -37,13 +37,12 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.groupBox1.Size = new System.Drawing.Size(760, 520);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "groupBox1";
+			this.groupBox1.Text = "Item Ability Info";
 			// 
 			// ItemAbilityInfoParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupBox1);
 			this.Name = "ItemAbilityInfoParts";
 			this.Size = new System.Drawing.Size(760, 520);

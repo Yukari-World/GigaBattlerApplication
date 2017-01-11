@@ -1,35 +1,31 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Skill Infomation
+// Job Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
-using System.ComponentModel;
+using System;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
-namespace Status_Editer.User_Control.tab03Unit.Parts {
-	[ToolboxItem(true)]
-	public partial class SkillInfoParts : UserControl {
+namespace Status_Editer {
+	public partial class FormJob : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-		// バインド
-		private __table_skillDataTable SkillTable = new __table_skillDataTable();
+		// DataTable
+		private DataTable JobDataTable = new __table_jobDataTable();
+
+		// DataGridViewCellStyle
+		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
+		private DataGridViewCellStyle dataGridViewCellStyleN2 = new DataGridViewCellStyle();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// [R/W]グループラベルのテキストを設定します。
-		/// </summary>
-		public string labelText {
-			get { return groupSkill.Text; }
-			set { groupSkill.Text = value; }
-		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -39,42 +35,18 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public SkillInfoParts() {
+		/// <param name="DataTable">Job Data Table</param>
+		public FormJob(__table_jobDataTable DataTable) {
 			InitializeComponent();
+
+			// 割り当て。編集がリアルタイムに適応されるようになる
+			JobDataTable = DataTable;
 		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
-		/// </summary>
-		/// <param name="TableUnitDataTable">Unit Data Table</param>
-		/// <param name="TableSkillDataTable">Skill Data Table</param>
-		/// <param name="bindTag">string</param>
-		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_skillDataTable TableSkillDataTable, string bindTag) {
-			// データバインドの設定
-			// ここでは「Skill*」が入る
-			comboSkill.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, bindTag, true));
-
-			// スキルの説明を追加
-			labelSkilleffect.DataBindings.Add(new Binding("Text", TableSkillDataTable, "Info", true));
-
-			// バインド項目の設定
-			comboSkill.DataSource = TableSkillDataTable.Copy();
-			comboSkill.DisplayMember = "SkillName";
-			comboSkill.ValueMember = "SkillID";
-		}// End Method
-
-		/// <summary>
-		/// バインド項目を再読み込みします。
-		/// </summary>
-		/// <param name="TableSkillDataTable">Skill Data Table</param>
-		public void ReloadBindings(__table_skillDataTable TableSkillDataTable) {
-			comboSkill.DataSource = TableSkillDataTable.Copy();
-		}// End Method
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -87,13 +59,42 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		/// <summary>
-		/// テキスト項目が更新された時の処理
+		/// フォーム読み込み時の処理
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void labelSkilleffect_TextChanged(object sender, System.EventArgs e) {
-			// 表示しきれない場合の対策
-			toolTipInfo.SetToolTip(labelSkilleffect, labelSkilleffect.Text);
+		private void FormJob_Load(object sender, EventArgs e) {
+			//----------------------------------------------------------------------------------------------------
+			// 共通デザイナー設定
+
+			dataGridViewCellStyleN0.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN0.Format = "N0";
+			dataGridViewCellStyleN0.NullValue = null;
+
+			dataGridViewCellStyleN2.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN2.Format = "N2";
+			dataGridViewCellStyleN2.NullValue = null;
+
+			//----------------------------------------------------------------------------------------------------
+			// カラムデザイナー設定
+
+
+			//----------------------------------------------------------------------------------------------------
+			// データソースのすり替え
+
+			DataGridViewJob.DataSource = JobDataTable;
+			DataGridViewJob.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewJob.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewJob.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+		}// End Method
+
+		/// <summary>
+		/// フォームを閉じる時の処理
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void FormJob_FormClosed(object sender, FormClosedEventArgs e) {
+			Dispose();
 		}// End Method
 	}// End Class
 }

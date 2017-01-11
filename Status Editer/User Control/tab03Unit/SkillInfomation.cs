@@ -43,7 +43,7 @@ namespace Status_Editer.User_Control.tab03Unit {
 		/// <param name="TableUnitDataTable">Unit Data Table</param>
 		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_skillDataTable TableSkillDataTable) {
 			// データバインドの設定
-			SkillInfomation1.SetDataBindings(TableUnitDataTable,  TableSkillDataTable, "Skill1");
+			SkillInfomation1.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill1");
 			SkillInfomation2.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill2");
 			SkillInfomation3.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill3");
 			SkillInfomation4.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill4");
@@ -63,6 +63,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 			SkillInfomation18.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill18");
 			SkillInfomation19.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill19");
 			SkillInfomation20.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill20");
+			SkillInfomation21.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill21");
+			SkillInfomation22.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill22");
+			SkillInfomation23.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill23");
+			SkillInfomation24.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill24");
+			SkillInfomation25.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill25");
+			SkillInfomation26.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill26");
+			SkillInfomation27.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill27");
+			SkillInfomation28.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill28");
+			SkillInfomation29.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill29");
+			SkillInfomation30.SetDataBindings(TableUnitDataTable, TableSkillDataTable, "Skill30");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -95,6 +105,16 @@ namespace Status_Editer.User_Control.tab03Unit {
 			SkillInfomation18.ReloadBindings(TableSkillDataTable);
 			SkillInfomation19.ReloadBindings(TableSkillDataTable);
 			SkillInfomation20.ReloadBindings(TableSkillDataTable);
+			SkillInfomation21.ReloadBindings(TableSkillDataTable);
+			SkillInfomation22.ReloadBindings(TableSkillDataTable);
+			SkillInfomation23.ReloadBindings(TableSkillDataTable);
+			SkillInfomation24.ReloadBindings(TableSkillDataTable);
+			SkillInfomation25.ReloadBindings(TableSkillDataTable);
+			SkillInfomation26.ReloadBindings(TableSkillDataTable);
+			SkillInfomation27.ReloadBindings(TableSkillDataTable);
+			SkillInfomation28.ReloadBindings(TableSkillDataTable);
+			SkillInfomation29.ReloadBindings(TableSkillDataTable);
+			SkillInfomation30.ReloadBindings(TableSkillDataTable);
 		}// End Method
 
 

@@ -30,12 +30,12 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.components = new System.ComponentModel.Container();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.groupDropInfo = new System.Windows.Forms.GroupBox();
-			this.dropInfoParts1 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
-			this.dropInfoParts2 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
-			this.dropInfoParts3 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
-			this.dropInfoParts4 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
-			this.dropInfoParts5 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
 			this.dropInfoParts6 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
+			this.dropInfoParts5 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
+			this.dropInfoParts4 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
+			this.dropInfoParts3 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
+			this.dropInfoParts2 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
+			this.dropInfoParts1 = new Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts();
 			this.groupDropInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -64,41 +64,14 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.groupDropInfo.TabStop = false;
 			this.groupDropInfo.Text = "Drop Infomation";
 			// 
-			// dropInfoParts1
+			// dropInfoParts6
 			// 
-			this.dropInfoParts1.BackColor = System.Drawing.Color.Transparent;
-			this.dropInfoParts1.labelText = "Weapon";
-			this.dropInfoParts1.Location = new System.Drawing.Point(15, 15);
-			this.dropInfoParts1.Name = "dropInfoParts1";
-			this.dropInfoParts1.Size = new System.Drawing.Size(730, 130);
-			this.dropInfoParts1.TabIndex = 0;
-			// 
-			// dropInfoParts2
-			// 
-			this.dropInfoParts2.BackColor = System.Drawing.Color.Transparent;
-			this.dropInfoParts2.labelText = "Shield";
-			this.dropInfoParts2.Location = new System.Drawing.Point(15, 145);
-			this.dropInfoParts2.Name = "dropInfoParts2";
-			this.dropInfoParts2.Size = new System.Drawing.Size(730, 130);
-			this.dropInfoParts2.TabIndex = 1;
-			// 
-			// dropInfoParts3
-			// 
-			this.dropInfoParts3.BackColor = System.Drawing.Color.Transparent;
-			this.dropInfoParts3.labelText = "Helmet";
-			this.dropInfoParts3.Location = new System.Drawing.Point(15, 275);
-			this.dropInfoParts3.Name = "dropInfoParts3";
-			this.dropInfoParts3.Size = new System.Drawing.Size(730, 130);
-			this.dropInfoParts3.TabIndex = 2;
-			// 
-			// dropInfoParts4
-			// 
-			this.dropInfoParts4.BackColor = System.Drawing.Color.Transparent;
-			this.dropInfoParts4.labelText = "Gauntlet";
-			this.dropInfoParts4.Location = new System.Drawing.Point(15, 405);
-			this.dropInfoParts4.Name = "dropInfoParts4";
-			this.dropInfoParts4.Size = new System.Drawing.Size(730, 130);
-			this.dropInfoParts4.TabIndex = 3;
+			this.dropInfoParts6.BackColor = System.Drawing.Color.Transparent;
+			this.dropInfoParts6.labelText = "Accessory";
+			this.dropInfoParts6.Location = new System.Drawing.Point(15, 665);
+			this.dropInfoParts6.Name = "dropInfoParts6";
+			this.dropInfoParts6.Size = new System.Drawing.Size(730, 130);
+			this.dropInfoParts6.TabIndex = 5;
 			// 
 			// dropInfoParts5
 			// 
@@ -109,20 +82,46 @@ namespace Status_Editer.User_Control.tab03Unit {
 			this.dropInfoParts5.Size = new System.Drawing.Size(730, 130);
 			this.dropInfoParts5.TabIndex = 4;
 			// 
-			// dropInfoParts6
+			// dropInfoParts4
 			// 
-			this.dropInfoParts6.BackColor = System.Drawing.Color.Transparent;
-			this.dropInfoParts6.labelText = "Accessory";
-			this.dropInfoParts6.Location = new System.Drawing.Point(15, 665);
-			this.dropInfoParts6.Name = "dropInfoParts6";
-			this.dropInfoParts6.Size = new System.Drawing.Size(730, 130);
-			this.dropInfoParts6.TabIndex = 5;
+			this.dropInfoParts4.BackColor = System.Drawing.Color.Transparent;
+			this.dropInfoParts4.labelText = "Gauntlet";
+			this.dropInfoParts4.Location = new System.Drawing.Point(15, 405);
+			this.dropInfoParts4.Name = "dropInfoParts4";
+			this.dropInfoParts4.Size = new System.Drawing.Size(730, 130);
+			this.dropInfoParts4.TabIndex = 3;
+			// 
+			// dropInfoParts3
+			// 
+			this.dropInfoParts3.BackColor = System.Drawing.Color.Transparent;
+			this.dropInfoParts3.labelText = "Helmet";
+			this.dropInfoParts3.Location = new System.Drawing.Point(15, 275);
+			this.dropInfoParts3.Name = "dropInfoParts3";
+			this.dropInfoParts3.Size = new System.Drawing.Size(730, 130);
+			this.dropInfoParts3.TabIndex = 2;
+			// 
+			// dropInfoParts2
+			// 
+			this.dropInfoParts2.BackColor = System.Drawing.Color.Transparent;
+			this.dropInfoParts2.labelText = "Shield";
+			this.dropInfoParts2.Location = new System.Drawing.Point(15, 145);
+			this.dropInfoParts2.Name = "dropInfoParts2";
+			this.dropInfoParts2.Size = new System.Drawing.Size(730, 130);
+			this.dropInfoParts2.TabIndex = 1;
+			// 
+			// dropInfoParts1
+			// 
+			this.dropInfoParts1.BackColor = System.Drawing.Color.Transparent;
+			this.dropInfoParts1.labelText = "Weapon";
+			this.dropInfoParts1.Location = new System.Drawing.Point(15, 15);
+			this.dropInfoParts1.Name = "dropInfoParts1";
+			this.dropInfoParts1.Size = new System.Drawing.Size(730, 130);
+			this.dropInfoParts1.TabIndex = 0;
 			// 
 			// DropInfomation
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupDropInfo);
 			this.Name = "DropInfomation";
 			this.Size = new System.Drawing.Size(760, 800);

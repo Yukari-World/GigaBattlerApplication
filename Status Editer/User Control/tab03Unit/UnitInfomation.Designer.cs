@@ -84,22 +84,22 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			resources.ApplyResources(this.numericWT, "numericWT");
 			this.numericWT.Maximum = new decimal(new int[] {
-			9999999,
-			0,
-			0,
-			0});
+            9999999,
+            0,
+            0,
+            0});
 			this.numericWT.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericWT.Name = "numericWT";
 			this.toolTipInfo.SetToolTip(this.numericWT, resources.GetString("numericWT.ToolTip"));
 			this.numericWT.Value = new decimal(new int[] {
-			85,
-			0,
-			0,
-			0});
+            85,
+            0,
+            0,
+            0});
 			// 
 			// labelWT
 			// 
@@ -110,10 +110,10 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			resources.ApplyResources(this.numericRare2, "numericRare2");
 			this.numericRare2.Maximum = new decimal(new int[] {
-			1000,
-			0,
-			0,
-			0});
+            1000,
+            0,
+            0,
+            0});
 			this.numericRare2.Name = "numericRare2";
 			this.toolTipInfo.SetToolTip(this.numericRare2, resources.GetString("numericRare2.ToolTip"));
 			// 
@@ -137,21 +137,21 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			resources.ApplyResources(this.numericRare, "numericRare");
 			this.numericRare.Maximum = new decimal(new int[] {
-			30,
-			0,
-			0,
-			0});
+            30,
+            0,
+            0,
+            0});
 			this.numericRare.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericRare.Name = "numericRare";
 			this.numericRare.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			// 
 			// labelRare
 			// 
@@ -214,7 +214,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupUnitInfo);
 			this.Name = "UnitInfomation";
 			this.groupUnitInfo.ResumeLayout(false);

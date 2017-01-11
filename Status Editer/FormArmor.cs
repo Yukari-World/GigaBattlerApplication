@@ -1,5 +1,5 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Weapon Form
+// Armor Form
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using static Status_Editer.GigaBattlerDataSet;
 
 namespace Status_Editer {
-	public partial class FormWeapon : Form {
+	public partial class FormArmor : Form {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		// DataTable
-		private DataTable WeaponDataTable = new __table_weaponDataTable();
+		private DataTable ArmorDataTable = new __table_armorDataTable();
 
 		// DataGridViewCellStyle
 		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
@@ -35,13 +35,13 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Weapon Data Table</param>
+		/// <param name="DataTable">Armor Data Table</param>
 		/// <param name="ElementDataTable">Element Data Table</param>
-		public FormWeapon(__table_weaponDataTable DataTable, __table_elementDataTable ElementDataTable) {
+		public FormArmor(__table_armorDataTable DataTable, __table_elementDataTable ElementDataTable) {
 			InitializeComponent();
 
 			// 割り当て。編集がリアルタイムに適応されるようになる
-			WeaponDataTable = DataTable;
+			ArmorDataTable = DataTable;
 
 			// コンボボックスの設定
 			element1DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
@@ -73,7 +73,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormWeapon_Load(object sender, EventArgs e) {
+		private void FormArmor_Load(object sender, EventArgs e) {
 			//----------------------------------------------------------------------------------------------------
 			// 共通デザイナー設定
 
@@ -118,10 +118,10 @@ namespace Status_Editer {
 			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
 
-			DataGridViewWeapon.DataSource = WeaponDataTable;
-			DataGridViewWeapon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-			DataGridViewWeapon.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			DataGridViewWeapon.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+			DataGridViewArmor.DataSource = ArmorDataTable;
+			DataGridViewArmor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewArmor.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewArmor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>
@@ -129,7 +129,7 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void FormWeapon_FormClosed(object sender, FormClosedEventArgs e) {
+		private void FormArmor_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
 		}// End Method
 	}// End Class
