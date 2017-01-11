@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>55</ApplicationRevision>
+    <ApplicationRevision>56</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -148,6 +148,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="Memento.cs" />
+    <Compile Include="MementoCommand.cs" />
     <Compile Include="User Control\CommonParts\EquipItemStatusParts.cs">
       <SubType>UserControl</SubType>
     </Compile>

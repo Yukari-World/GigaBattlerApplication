@@ -27,7 +27,7 @@ namespace Status_Editer {
 		/// </summary>
 		private enum RowState : int {
 			Element, WeaponType, Unit, UnitType, Race, Job, Maker, Weapon, Shield, Helmet, Gauntlet, Armor, Accessory, Skill, Ability, City, BattleField, WaveData, FOE
-		}
+		}// End Enum
 
 		// 変数
 		/// <summary>
@@ -585,38 +585,13 @@ namespace Status_Editer {
 		#region ファイル
 
 		/// <summary>
-		/// 「ファイル」→「開く」の処理内容
+		/// 「ファイル」→「CSVファイルからインポート」の処理内容
 		/// </summary>
 		/// <remarks>
-		/// 以下のページより参照
-		/// http://dobon.net/vb/dotnet/form/folderdialog.html
-		/// </remarks>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuFileOpen_Click(object sender, EventArgs e) {
-			// FolderBrowserDialogクラスのインスタンスを作成
-			FolderBrowserDialog fbd = new FolderBrowserDialog();
 
-			// 上部に表示する説明テキストを指定する
-			fbd.Description = "Databaseフォルダを指定してください。";
-
-			// ルートフォルダを指定する
-			// デフォルトでDesktop
-			fbd.RootFolder = Environment.SpecialFolder.Desktop;
-
-			// 最初に選択するフォルダを指定する
-			// RootFolder以下にあるフォルダである必要がある
-			fbd.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-
-			// ユーザーが新しいフォルダを作成できるようにする
-			// デフォルトでTrue
-			fbd.ShowNewFolderButton = false;
-
-			// ダイアログを表示する
-			if (fbd.ShowDialog(this) == DialogResult.OK) {
-				// 選択されたフォルダを表示する
-				rootDirectory = fbd.SelectedPath;
-			}// End If
 		}// End Method
 
 		/// <summary>
@@ -625,8 +600,32 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuExit_Click(object sender, EventArgs e) {
-			// 閉じる。後の処理はメソッドに任せる
+			// 閉じる。後の処理は別のメソッドに任せる
 			Close();
+		}// End Method
+
+		#endregion
+
+		//----------------------------------------------------------------------------------------------------
+		#region 編集
+
+
+		/// <summary>
+		/// 「編集」→「元に戻す」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuEditUndo_Click(object sender, EventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// 「編集」→「やり直し」の処理内容
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuEditRedo_Click(object sender, EventArgs e) {
+
 		}// End Method
 
 		#endregion
@@ -1765,6 +1764,5 @@ namespace Status_Editer {
 		}// End Method
 
 		#endregion
-
 	}// End Class
 }
