@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Status_Editer.Properties {
+namespace CommonLibrary.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,6 +20,17 @@ namespace Status_Editer.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;user id=Z-Yukari;database=\"giga battler\";allowuservariables=True" +
+            ";password=Yukari;persistsecurityinfo=True;characterset=utf8")]
+        public string giga_battlerConnectionString {
+            get {
+                return ((string)(this["giga_battlerConnectionString"]));
             }
         }
     }

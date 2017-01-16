@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab05Race {
 	[ToolboxItem(true)]
@@ -49,6 +49,9 @@ namespace Status_Editer.User_Control.tab05Race {
 		/// <param name="TableRaceDataTable">Race Data Table</param>
 		public void SetDataBindings(__table_raceDataTable TableRaceDataTable) {
 			// データバインドの設定
+			// ベース
+			raceInfoParts1.SetDataBindings(TableRaceDataTable);
+			// ステータス
 			raceStatusHP.SetDataBindings(TableRaceDataTable, "HP");
 			raceStatusTP.SetDataBindings(TableRaceDataTable, "TP");
 			raceStatusMeleeATK.SetDataBindings(TableRaceDataTable, "ATK");

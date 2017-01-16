@@ -1,34 +1,30 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Skill Infomation
+// Race Infomation Parts
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static CommonLibrary.GigaBattlerDataSet;
 
-namespace Status_Editer.User_Control.tab03Unit.Parts {
+namespace Status_Editer.User_Control.tab05Race.Parts {
 	[ToolboxItem(true)]
-	public partial class SkillInfoParts : UserControl {
+	public partial class RaceInfoParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		// バインド
-		private __table_skillDataTable SkillTable = new __table_skillDataTable();
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// [R/W]グループラベルのテキストを設定します。
-		/// </summary>
-		public string labelText {
-			get { return groupSkill.Text; }
-			set { groupSkill.Text = value; }
-		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,7 +34,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public SkillInfoParts() {
+		public RaceInfoParts() {
 			InitializeComponent();
 		}// End Method
 
@@ -50,29 +46,19 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		/// <summary>
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="TableUnitDataTable">Unit Data Table</param>
-		/// <param name="TableSkillDataTable">Skill Data Table</param>
-		/// <param name="bindTag">string</param>
-		public void SetDataBindings(__table_unitDataTable TableUnitDataTable, __table_skillDataTable TableSkillDataTable, string bindTag) {
-			// データバインドの設定
-			// ここでは「Skill*」が入る
-			comboSkill.DataBindings.Add(new Binding("SelectedValue", TableUnitDataTable, bindTag, true));
+		/// <param name="TableRaceDataTable">Race Data Table</param>
+		public void SetDataBindings(__table_raceDataTable TableRaceDataTable) {
+			textRaceID.DataBindings.Add(new Binding("Text", TableRaceDataTable, "RaceID", true));
+			textRaceName.DataBindings.Add(new Binding("Text", TableRaceDataTable, "RaceName", true));
+			textInfo.DataBindings.Add(new Binding("Text", TableRaceDataTable, "Info", true));
 
-			// スキルの説明を追加
-			labelSkilleffect.DataBindings.Add(new Binding("Text", TableSkillDataTable, "Info", true));
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
 
-			// バインド項目の設定
-			comboSkill.DataSource = TableSkillDataTable.Copy();
-			comboSkill.DisplayMember = "SkillName";
-			comboSkill.ValueMember = "SkillID";
-		}// End Method
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 
-		/// <summary>
-		/// バインド項目を再読み込みします。
-		/// </summary>
-		/// <param name="TableSkillDataTable">Skill Data Table</param>
-		public void ReloadBindings(__table_skillDataTable TableSkillDataTable) {
-			comboSkill.DataSource = TableSkillDataTable.Copy();
+			labelInfo.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+			textInfo.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
 		}// End Method
 
 
@@ -84,15 +70,5 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// テキスト項目が更新された時の処理
-		/// </summary>
-		/// <param name="sender">object</param>
-		/// <param name="e">EventArgs</param>
-		private void labelSkilleffect_TextChanged(object sender, System.EventArgs e) {
-			// 表示しきれない場合の対策
-			toolTipInfo.SetToolTip(labelSkilleffect, labelSkilleffect.Text);
-		}// End Method
 	}// End Class
 }

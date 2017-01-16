@@ -3,10 +3,10 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
+using CommonLibrary.GigaBattlerDataSetTableAdapters;
 using System.ComponentModel;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit {
 	[ToolboxItem(true)]

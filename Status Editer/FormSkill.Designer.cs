@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CommonLibrary;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Status_Editer {
@@ -67,8 +68,8 @@ namespace Status_Editer {
 			this.element10DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tableskillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_skillTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_skillTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewSkill)).BeginInit();
@@ -420,7 +421,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewSkill;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableskillBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_skillTableAdapter ___table_skillTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_skillTableAdapter ___table_skillTableAdapter;
 		private DataGridViewTextBoxColumn skillIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn skillNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn percentDataGridViewTextBoxColumn;

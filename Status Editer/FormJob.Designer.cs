@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CommonLibrary;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Status_Editer {
@@ -66,8 +67,8 @@ namespace Status_Editer {
 			this.condition4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.condition5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tablejobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_jobTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_jobTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_jobTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_jobTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewJob)).BeginInit();
@@ -393,7 +394,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewJob;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tablejobBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_jobTableAdapter ___table_jobTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_jobTableAdapter ___table_jobTableAdapter;
 		private DataGridViewTextBoxColumn jobIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn jobNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn hPDataGridViewTextBoxColumn;

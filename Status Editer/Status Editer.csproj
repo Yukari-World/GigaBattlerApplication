@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>56</ApplicationRevision>
+    <ApplicationRevision>57</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -143,11 +143,6 @@
     <Compile Include="FormWeapon.designer.cs">
       <DependentUpon>FormWeapon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GigaBattlerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="User Control\CommonParts\EquipItemStatusParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +178,12 @@
     </Compile>
     <Compile Include="User Control\tab03Unit\Parts\StatusInfoLevelParts.Designer.cs">
       <DependentUpon>StatusInfoLevelParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceInfoParts.designer.cs">
+      <DependentUpon>RaceInfoParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab06Job\JobInfomation.cs">
       <SubType>UserControl</SubType>
@@ -348,6 +349,9 @@
     <EmbeddedResource Include="User Control\tab03Unit\UnitInfomation.resx">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab05Race\Parts\RaceInfoParts.resx">
+      <DependentUpon>RaceInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab05Race\Parts\RaceStatusBasicParts.resx">
       <DependentUpon>RaceStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,17 +365,6 @@
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
-    <None Include="GigaBattlerDataSet.xsc">
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GigaBattlerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GigaBattlerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GigaBattlerDataSet.xss">
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

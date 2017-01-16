@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CommonLibrary;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Status_Editer {
@@ -30,8 +31,8 @@ namespace Status_Editer {
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			this.DataGridViewMaker = new System.Windows.Forms.DataGridView();
 			this.tablemakerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_makerTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_makerTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_makerTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_makerTableAdapter();
 			this.makerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.makerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -240,7 +241,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewMaker;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tablemakerBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_makerTableAdapter ___table_makerTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_makerTableAdapter ___table_makerTableAdapter;
 		private DataGridViewTextBoxColumn makerIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn makerNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;

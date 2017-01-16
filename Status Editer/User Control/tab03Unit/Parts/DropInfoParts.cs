@@ -8,7 +8,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab03Unit.Parts {
 	[ToolboxItem(true)]

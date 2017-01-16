@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.CommonParts {
 	[ToolboxItem(true)]
@@ -243,6 +243,9 @@ namespace Status_Editer.User_Control.CommonParts {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+
+			labelInfo.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+			textInfo.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
 		}// End Method
 
 

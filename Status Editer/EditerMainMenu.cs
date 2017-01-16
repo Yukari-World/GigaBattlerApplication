@@ -6,15 +6,14 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
+using CommonLibrary.GigaBattlerDataSetTableAdapters;
 using System;
 using System.Data;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
-using CommonLibrary;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class EditerMainMenu : Form {
@@ -50,7 +49,7 @@ namespace Status_Editer {
 		/// データベースのテーブルの数
 		/// </summary>
 		//private readonly int TableCount = (int)RowState.FOE;
-		private readonly int TableCount = 13;
+		private readonly int TableCount = 14;
 
 		public string rootDirectory = "";
 
@@ -68,6 +67,7 @@ namespace Status_Editer {
 		__table_armorTableAdapter TableArmorTableAdapter = new __table_armorTableAdapter();
 		__table_accessoryTableAdapter TableAccessoryTableAdapter = new __table_accessoryTableAdapter();
 		__table_skillTableAdapter TableSkillTableAdapter = new __table_skillTableAdapter();
+		__table_abilityTableAdapter TableAbilityTableAdapter = new __table_abilityTableAdapter();
 
 		// DataTable
 		__table_elementDataTable TableElementDataTable = new __table_elementDataTable();
@@ -83,6 +83,7 @@ namespace Status_Editer {
 		__table_armorDataTable TableArmorDataTable = new __table_armorDataTable();
 		__table_accessoryDataTable TableAccessoryDataTable = new __table_accessoryDataTable();
 		__table_skillDataTable TableSkillDataTable = new __table_skillDataTable();
+		__table_abilityDataTable TableAbilityDataTable = new __table_abilityDataTable();
 
 		// Form
 		FormUnit FormUnitData = null;
@@ -203,6 +204,8 @@ namespace Status_Editer {
 				toolStripProgressBar1.PerformStep();    // カウント
 				sum += RowCount[(int)RowState.Skill] = TableSkillTableAdapter.Update(TableSkillDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
+				sum += RowCount[(int)RowState.Ability] = TableAbilityTableAdapter.Update(TableAbilityDataTable);
+				toolStripProgressBar1.PerformStep();    // カウント
 
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
@@ -252,7 +255,7 @@ namespace Status_Editer {
 				RowCount[(int)RowState.Race] = TableRaceTableAdapter.Fill(TableRaceDataTable);
 				RowCount[(int)RowState.Job] = TableJobTableAdapter.Fill(TableJobDataTable);
 				RowCount[(int)RowState.Maker] = TableMakerTableAdapter.Fill(TableMakerDataTable);
-				RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+				RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillByType(TableWeaponDataTable);
 				RowCount[(int)RowState.Shield] = TableShieldTableAdapter.Fill(TableShieldDataTable);
 				RowCount[(int)RowState.Helmet] = TableHelmetTableAdapter.Fill(TableHelmetDataTable);
 				RowCount[(int)RowState.Gauntlet] = TableGauntletTableAdapter.Fill(TableGauntletDataTable);
@@ -264,7 +267,7 @@ namespace Status_Editer {
 				ReloadControl();
 				toolStripProgressBar1.Value = 0;    // 値をリセット
 			} catch (Exception ex) {
-				isError = true;
+				isError = true;// 強制終了フラグを立てる。これにより確認ダイアログを無効化する
 				Debug.WriteLine("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				// 続行不可能なので終了させる
@@ -331,6 +334,16 @@ namespace Status_Editer {
 				listAccessory.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				Debug.WriteLine("Task 1: List Accessory Designer Setting End.");
 
+				// TAB: スキル
+
+				listSkill.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Skill Designer Setting End.");
+
+				// TAB: スキル
+
+				listAbility.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Ability Designer Setting End.");
+
 				Debug.WriteLine("Task 1: Finish.");
 			});
 
@@ -389,6 +402,16 @@ namespace Status_Editer {
 				listAccessory.DisplayMember = "AccessoryName";
 				listAccessory.ValueMember = "AccessoryID";
 				Debug.WriteLine("Task 2: List Accessory Data Source Setting End.");
+
+				listSkill.DataSource = TableSkillDataTable;
+				listSkill.DisplayMember = "SkillName";
+				listSkill.ValueMember = "SkillID";
+				Debug.WriteLine("Task 2: List Skill Data Source Setting End.");
+
+				listAbility.DataSource = TableAbilityDataTable;
+				listAbility.DisplayMember = "AbilityName";
+				listAbility.ValueMember = "AbilityID";
+				Debug.WriteLine("Task 2: List Ability Data Source Setting End.");
 
 				Debug.WriteLine("Task 2: Finish.");
 			});
@@ -891,7 +914,7 @@ namespace Status_Editer {
 					toolStripProgressBar1.PerformStep();    // カウント
 					sum += RowCount[(int)RowState.Maker] = TableMakerTableAdapter.Update(TableMakerDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
-					sum += RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+					sum += RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillByType(TableWeaponDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
 					sum += RowCount[(int)RowState.Shield] = TableShieldTableAdapter.Fill(TableShieldDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
@@ -904,6 +927,8 @@ namespace Status_Editer {
 					sum += RowCount[(int)RowState.Accessory] = TableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
 					sum += RowCount[(int)RowState.Skill] = TableSkillTableAdapter.Fill(TableSkillDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[(int)RowState.Ability] = TableAbilityTableAdapter.Fill(TableAbilityDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
 
 					ReloadControl();
@@ -947,8 +972,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadUnit_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Unit] = TableUnitTableAdapter.Fill(TableUnitDataTable);
@@ -988,8 +1013,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadRace_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Race] = TableRaceTableAdapter.Fill(TableRaceDataTable);
@@ -1009,8 +1034,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadJob_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Job] = TableJobTableAdapter.Fill(TableJobDataTable);
@@ -1030,11 +1055,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadMaker_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					sum += RowCount[(int)RowState.Maker] = TableMakerTableAdapter.Fill(TableMakerDataTable);
+					sum = RowCount[(int)RowState.Maker] = TableMakerTableAdapter.Fill(TableMakerDataTable);
 					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
@@ -1051,11 +1076,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadWeapon_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
-					sum = RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillSortByType(TableWeaponDataTable);
+					sum = RowCount[(int)RowState.Weapon] = TableWeaponTableAdapter.FillByType(TableWeaponDataTable);
 					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
@@ -1072,8 +1097,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadShield_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Shield] = TableShieldTableAdapter.Fill(TableShieldDataTable);
@@ -1093,8 +1118,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadHelmet_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Helmet] = TableHelmetTableAdapter.Fill(TableHelmetDataTable);
@@ -1114,8 +1139,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadGauntlet_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Gauntlet] = TableGauntletTableAdapter.Fill(TableGauntletDataTable);
@@ -1135,8 +1160,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadArmor_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Armor] = TableArmorTableAdapter.Fill(TableArmorDataTable);
@@ -1156,8 +1181,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadAccessory_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Accessory] = TableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
@@ -1177,8 +1202,8 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadSkill_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
 					sum = RowCount[(int)RowState.Skill] = TableSkillTableAdapter.Fill(TableSkillDataTable);
@@ -1198,10 +1223,11 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbReloadAbility_Click(object sender, EventArgs e) {
 			if (MessageBox.Show("データベースの再読み込みをします。保存されていない変更内容は失われてしまいますが、よろしいですか?", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK) {
-				int sum = 0;    // 更新件数計算用
-								// ステータスバーの更新
+				int sum;    // 更新件数計算用
+							// ステータスバーの更新
 				StripInfo.Text = "Reloading Database...";
 				try {
+					sum = RowCount[(int)RowState.Ability] = TableAbilityTableAdapter.Fill(TableAbilityDataTable);
 					StripInfo.Text = "Reloading Complete!! Record Count:" + sum.ToString("N0");
 				} catch (Exception ex) {
 					StripInfo.Text = "Error Info:" + ex.Message;
@@ -1482,12 +1508,13 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuDbSaveAbility_Click(object sender, EventArgs e) {
-			int sum = 0;    // 更新件数計算用
+			int sum;    // 更新件数計算用
 
 			// 編集終了宣言
 			Validate();
 
 			try {
+				sum = TableAbilityTableAdapter.Update(TableAbilityDataTable);
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;

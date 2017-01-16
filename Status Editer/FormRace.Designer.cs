@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CommonLibrary;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Status_Editer {
@@ -29,8 +30,8 @@ namespace Status_Editer {
 			this.components = new System.ComponentModel.Container();
 			this.DataGridViewRace = new System.Windows.Forms.DataGridView();
 			this.tableraceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_raceTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_raceTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter();
 			this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
 			this.raceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.raceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -327,7 +328,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewRace;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableraceBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_raceTableAdapter ___table_raceTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_raceTableAdapter ___table_raceTableAdapter;
 		private ToolStripContainer ToolStripContainer;
 		private DataGridViewTextBoxColumn raceIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn raceNameDataGridViewTextBoxColumn;

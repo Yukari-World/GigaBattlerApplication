@@ -54,7 +54,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.groupBasic.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBasic.Location = new System.Drawing.Point(0, 0);
 			this.groupBasic.Name = "groupBasic";
-			this.groupBasic.Size = new System.Drawing.Size(650, 60);
+			this.groupBasic.Size = new System.Drawing.Size(700, 60);
 			this.groupBasic.TabIndex = 0;
 			this.groupBasic.TabStop = false;
 			this.groupBasic.Text = "Label";
@@ -167,7 +167,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.groupBasic);
 			this.Name = "RaceStatusBasicParts";
-			this.Size = new System.Drawing.Size(650, 60);
+			this.Size = new System.Drawing.Size(700, 60);
 			this.Load += new System.EventHandler(this.RaceStatusBasicParts_Load);
 			this.groupBasic.ResumeLayout(false);
 			this.groupBasic.PerformLayout();
