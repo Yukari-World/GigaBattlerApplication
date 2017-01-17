@@ -159,7 +159,7 @@ namespace Status_Editer {
 
 			ItemInfoAccessory.ReloadDataTable(TableElementDataTable);
 			toolStripProgressBar1.PerformStep();    // カウント
-		}
+		}// End Method
 
 		/// <summary>
 		/// 変更した更新内容を適用します。
@@ -768,6 +768,7 @@ namespace Status_Editer {
 				}// End Loop
 				row["Info"] = "プログラムで追加されたデータだよ。必要ないなら削除してね。";
 
+				// 追加する
 				TableUnitDataTable.Rows.Add(row);
 			} catch (Exception ex) {
 				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
@@ -1774,11 +1775,278 @@ namespace Status_Editer {
 
 		/// <summary>
 		/// 「複製」の処理内容
+		/// 全体的に中途半端な部分が多いが、何か良い方法はないのか?
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuContextDuplicate_Click(object sender, EventArgs e) {
+			DataRow CopyRow;
 
+			try {
+				// タブ毎に処理を変える
+				// そもそもデータテーブルの形が異なるので一部処理の使い回しが効かない
+				switch (tabControl.SelectedIndex) {
+					//TAB: ユニット
+					case 2:
+						// 新しい行であることを宣言
+						CopyRow = TableUnitDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableUnitDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableUnitDataTable.Rows[listUnit.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["UnitID"] = "CopyFrom" + CopyRow["UnitID"];
+						CopyRow["UnitName"] = "Copy From " + CopyRow["UnitName"];
+
+						// 追加
+						TableUnitDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listUnit.SelectedIndex = TableUnitDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: ユニットタイプ
+					case 3:
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 種族
+					case 4:
+						// 新しい行であることを宣言
+						CopyRow = TableRaceDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableRaceDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableRaceDataTable.Rows[listRace.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["RaceID"] = "CopyFrom" + CopyRow["RaceID"];
+						CopyRow["RaceName"] = "Copy From " + CopyRow["RaceName"];
+
+						// 追加
+						TableRaceDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listRace.SelectedIndex = TableRaceDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: ジョブ
+					case 5:
+						// 新しい行であることを宣言
+						CopyRow = TableJobDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableJobDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableJobDataTable.Rows[listJob.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["JobID"] = "CopyFrom" + CopyRow["JobID"];
+						CopyRow["JobName"] = "Copy From " + CopyRow["JobName"];
+
+						// 追加
+						TableJobDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listJob.SelectedIndex = TableJobDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: メーカー
+					case 6:
+						// 新しい行であることを宣言
+						CopyRow = TableMakerDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableMakerDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableMakerDataTable.Rows[listMaker.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["MakerID"] = "CopyFrom" + CopyRow["MakerID"];
+						CopyRow["MakerName"] = "Copy From " + CopyRow["MakerName"];
+
+						// 追加
+						TableMakerDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listMaker.SelectedIndex = TableMakerDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 武器
+					case 7:
+						// 新しい行であることを宣言
+						CopyRow = TableWeaponDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableWeaponDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableWeaponDataTable.Rows[listWeapon.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["WeaponID"] = "CopyFrom" + CopyRow["WeaponID"];
+						CopyRow["WeaponName"] = "Copy From " + CopyRow["WeaponName"];
+
+						// 追加
+						TableWeaponDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listWeapon.SelectedIndex = TableWeaponDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 盾
+					case 8:
+						// 新しい行であることを宣言
+						CopyRow = TableShieldDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableShieldDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableShieldDataTable.Rows[listShield.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["ShieldID"] = "CopyFrom" + CopyRow["ShieldID"];
+						CopyRow["ShieldName"] = "Copy From " + CopyRow["ShieldName"];
+
+						// 追加
+						TableShieldDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listShield.SelectedIndex = TableShieldDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 頭防具
+					case 9:
+						// 新しい行であることを宣言
+						CopyRow = TableHelmetDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableHelmetDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableHelmetDataTable.Rows[listHelmet.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["HelmetID"] = "CopyFrom" + CopyRow["HelmetID"];
+						CopyRow["HelmetName"] = "Copy From " + CopyRow["HelmetName"];
+
+						// 追加
+						TableHelmetDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listHelmet.SelectedIndex = TableHelmetDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 腕防具
+					case 10:
+						// 新しい行であることを宣言
+						CopyRow = TableGauntletDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableGauntletDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableGauntletDataTable.Rows[listGauntlet.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["GauntletID"] = "CopyFrom" + CopyRow["GauntletID"];
+						CopyRow["GauntletName"] = "Copy From " + CopyRow["GauntletName"];
+
+						// 追加
+						TableGauntletDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listGauntlet.SelectedIndex = TableGauntletDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 体防具
+					case 11:
+						// 新しい行であることを宣言
+						CopyRow = TableArmorDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableArmorDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableArmorDataTable.Rows[listArmor.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["ArmorID"] = "CopyFrom" + CopyRow["ArmorID"];
+						CopyRow["ArmorName"] = "Copy From " + CopyRow["ArmorName"];
+
+						// 追加
+						TableArmorDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listArmor.SelectedIndex = TableArmorDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: アクセサリー
+					case 12:
+						// 新しい行であることを宣言
+						CopyRow = TableAccessoryDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableAccessoryDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableAccessoryDataTable.Rows[listAccessory.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["AccessoryID"] = "CopyFrom" + CopyRow["AccessoryID"];
+						CopyRow["AccessoryName"] = "Copy From " + CopyRow["AccessoryName"];
+
+						// 追加
+						TableAccessoryDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listAccessory.SelectedIndex = TableAccessoryDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: スキル
+					case 13:
+						// 新しい行であることを宣言
+						CopyRow = TableSkillDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableSkillDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableSkillDataTable.Rows[listSkill.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["SkillID"] = "CopyFrom" + CopyRow["SkillID"];
+						CopyRow["SkillName"] = "Copy From " + CopyRow["SkillName"];
+
+						// 追加
+						TableSkillDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listSkill.SelectedIndex = TableSkillDataTable.Rows.Count - 1;
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: アビリティ
+					case 14:
+						// 新しい行であることを宣言
+						CopyRow = TableAbilityDataTable.NewRow();
+
+						// 中身をコピー……なのだがこれより良い方法はないのか?
+						for (int i = 0; i < TableAbilityDataTable.Columns.Count; i++) {
+							CopyRow[i] = TableAbilityDataTable.Rows[listAbility.SelectedIndex][i];
+						}// End Loop
+
+						// 整合性を保つための処理とコピーデータであることを分かり易くするための処理
+						CopyRow["AbilityID"] = "CopyFrom" + CopyRow["AbilityID"];
+						CopyRow["AbilityName"] = "Copy From " + CopyRow["AbilityName"];
+
+						// 追加
+						TableAbilityDataTable.Rows.Add(CopyRow);
+
+						// 追加した行に飛ぶ
+						listAbility.SelectedIndex = TableAbilityDataTable.Rows.Count - 1;
+						break;
+				}// End Switch
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Duplicate Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Duplicate Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
 		}// End Method
 
 		/// <summary>

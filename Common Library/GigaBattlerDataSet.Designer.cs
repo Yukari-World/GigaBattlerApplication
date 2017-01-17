@@ -7031,7 +7031,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_jobRow Add__table_jobRow(
-                        int JobID, 
+                        string JobID, 
                         string JobName, 
                         ushort HP, 
                         ushort TP, 
@@ -7112,7 +7112,7 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_jobRow FindByJobID(int JobID) {
+            public @__table_jobRow FindByJobID(string JobID) {
                 return ((@__table_jobRow)(this.Rows.Find(new object[] {
                             JobID})));
             }
@@ -7175,7 +7175,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnJobID = new global::System.Data.DataColumn("JobID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnJobID = new global::System.Data.DataColumn("JobID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJobID);
                 this.columnJobName = new global::System.Data.DataColumn("JobName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJobName);
@@ -7251,6 +7251,7 @@ namespace CommonLibrary {
                                 this.columnJobID}, true));
                 this.columnJobID.AllowDBNull = false;
                 this.columnJobID.Unique = true;
+                this.columnJobID.MaxLength = 16;
                 this.columnJobName.AllowDBNull = false;
                 this.columnJobName.MaxLength = 16;
                 this.columnHP.AllowDBNull = false;
@@ -7667,7 +7668,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_makerRow Add__table_makerRow(
-                        int MakerID, 
+                        string MakerID, 
                         string MakerName, 
                         ushort Power, 
                         ushort SHit, 
@@ -7710,7 +7711,7 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_makerRow FindByMakerID(int MakerID) {
+            public @__table_makerRow FindByMakerID(string MakerID) {
                 return ((@__table_makerRow)(this.Rows.Find(new object[] {
                             MakerID})));
             }
@@ -7754,7 +7755,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnMakerID = new global::System.Data.DataColumn("MakerID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMakerID = new global::System.Data.DataColumn("MakerID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMakerID);
                 this.columnMakerName = new global::System.Data.DataColumn("MakerName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMakerName);
@@ -7792,6 +7793,7 @@ namespace CommonLibrary {
                                 this.columnMakerID}, true));
                 this.columnMakerID.AllowDBNull = false;
                 this.columnMakerID.Unique = true;
+                this.columnMakerID.MaxLength = 16;
                 this.columnMakerName.AllowDBNull = false;
                 this.columnMakerName.MaxLength = 32;
                 this.columnPower.AllowDBNull = false;
@@ -22901,9 +22903,9 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int JobID {
+            public string JobID {
                 get {
-                    return ((int)(this[this.table__table_job.JobIDColumn]));
+                    return ((string)(this[this.table__table_job.JobIDColumn]));
                 }
                 set {
                     this[this.table__table_job.JobIDColumn] = value;
@@ -23312,9 +23314,9 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MakerID {
+            public string MakerID {
                 get {
-                    return ((int)(this[this.table__table_maker.MakerIDColumn]));
+                    return ((string)(this[this.table__table_maker.MakerIDColumn]));
                 }
                 set {
                     this[this.table__table_maker.MakerIDColumn] = value;
