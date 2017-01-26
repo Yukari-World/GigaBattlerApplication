@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Skill Infomation Parts
+//
+// Programed By Yukari-World
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Windows.Forms;
 using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab14Skill {
@@ -203,7 +203,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
 
-			Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
+			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 		}// End Method
 
 		/// <summary>

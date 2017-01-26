@@ -75,7 +75,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusEVT
 			// 
-			this.raceStatusEVT.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusEVT.labelText = "EVT";
 			this.raceStatusEVT.Location = new System.Drawing.Point(670, 675);
 			this.raceStatusEVT.Name = "raceStatusEVT";
@@ -84,7 +83,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusHIT
 			// 
-			this.raceStatusHIT.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusHIT.labelText = "HIT";
 			this.raceStatusHIT.Location = new System.Drawing.Point(670, 615);
 			this.raceStatusHIT.Name = "raceStatusHIT";
@@ -93,7 +91,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusLuck
 			// 
-			this.raceStatusLuck.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusLuck.labelText = "Luck";
 			this.raceStatusLuck.Location = new System.Drawing.Point(670, 555);
 			this.raceStatusLuck.Name = "raceStatusLuck";
@@ -102,7 +99,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusSPD
 			// 
-			this.raceStatusSPD.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusSPD.labelText = "SPD";
 			this.raceStatusSPD.Location = new System.Drawing.Point(670, 495);
 			this.raceStatusSPD.Name = "raceStatusSPD";
@@ -111,7 +107,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusMagicDEF
 			// 
-			this.raceStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMagicDEF.labelText = "Magic DEF";
 			this.raceStatusMagicDEF.Location = new System.Drawing.Point(670, 435);
 			this.raceStatusMagicDEF.Name = "raceStatusMagicDEF";
@@ -120,7 +115,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusMagicATK
 			// 
-			this.raceStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMagicATK.labelText = "Magic ATK";
 			this.raceStatusMagicATK.Location = new System.Drawing.Point(670, 375);
 			this.raceStatusMagicATK.Name = "raceStatusMagicATK";
@@ -129,7 +123,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusRangeDEF
 			// 
-			this.raceStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusRangeDEF.labelText = "Range DEF";
 			this.raceStatusRangeDEF.Location = new System.Drawing.Point(670, 315);
 			this.raceStatusRangeDEF.Name = "raceStatusRangeDEF";
@@ -138,7 +131,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusRangeATK
 			// 
-			this.raceStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusRangeATK.labelText = "Range ATK";
 			this.raceStatusRangeATK.Location = new System.Drawing.Point(670, 255);
 			this.raceStatusRangeATK.Name = "raceStatusRangeATK";
@@ -147,7 +139,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusMeleeDEF
 			// 
-			this.raceStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMeleeDEF.labelText = "Melee DEF";
 			this.raceStatusMeleeDEF.Location = new System.Drawing.Point(670, 195);
 			this.raceStatusMeleeDEF.Name = "raceStatusMeleeDEF";
@@ -156,7 +147,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusMeleeATK
 			// 
-			this.raceStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusMeleeATK.labelText = "Melee ATK";
 			this.raceStatusMeleeATK.Location = new System.Drawing.Point(670, 135);
 			this.raceStatusMeleeATK.Name = "raceStatusMeleeATK";
@@ -165,7 +155,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusTP
 			// 
-			this.raceStatusTP.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusTP.labelText = "TP";
 			this.raceStatusTP.Location = new System.Drawing.Point(670, 75);
 			this.raceStatusTP.Name = "raceStatusTP";
@@ -174,7 +163,6 @@ namespace Status_Editer.User_Control.tab05Race {
 			// 
 			// raceStatusHP
 			// 
-			this.raceStatusHP.BackColor = System.Drawing.Color.Transparent;
 			this.raceStatusHP.labelText = "HP";
 			this.raceStatusHP.Location = new System.Drawing.Point(670, 15);
 			this.raceStatusHP.Name = "raceStatusHP";

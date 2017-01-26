@@ -66,7 +66,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts6
 			// 
-			this.dropInfoParts6.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts6.labelText = "Accessory";
 			this.dropInfoParts6.Location = new System.Drawing.Point(15, 665);
 			this.dropInfoParts6.Name = "dropInfoParts6";
@@ -75,7 +74,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts5
 			// 
-			this.dropInfoParts5.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts5.labelText = "Armor";
 			this.dropInfoParts5.Location = new System.Drawing.Point(15, 535);
 			this.dropInfoParts5.Name = "dropInfoParts5";
@@ -84,7 +82,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts4
 			// 
-			this.dropInfoParts4.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts4.labelText = "Gauntlet";
 			this.dropInfoParts4.Location = new System.Drawing.Point(15, 405);
 			this.dropInfoParts4.Name = "dropInfoParts4";
@@ -93,7 +90,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts3
 			// 
-			this.dropInfoParts3.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts3.labelText = "Helmet";
 			this.dropInfoParts3.Location = new System.Drawing.Point(15, 275);
 			this.dropInfoParts3.Name = "dropInfoParts3";
@@ -102,7 +98,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts2
 			// 
-			this.dropInfoParts2.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts2.labelText = "Shield";
 			this.dropInfoParts2.Location = new System.Drawing.Point(15, 145);
 			this.dropInfoParts2.Name = "dropInfoParts2";
@@ -111,7 +106,6 @@ namespace Status_Editer.User_Control.tab03Unit {
 			// 
 			// dropInfoParts1
 			// 
-			this.dropInfoParts1.BackColor = System.Drawing.Color.Transparent;
 			this.dropInfoParts1.labelText = "Weapon";
 			this.dropInfoParts1.Location = new System.Drawing.Point(15, 15);
 			this.dropInfoParts1.Name = "dropInfoParts1";

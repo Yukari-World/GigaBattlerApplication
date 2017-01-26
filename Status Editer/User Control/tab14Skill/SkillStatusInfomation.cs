@@ -3,15 +3,9 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab14Skill {
 	[ToolboxItem(true)]
@@ -46,7 +40,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
 		/// <param name="SkillDataTable">Skill Data Table</param>
-		public void SetDataBindings(DataTable SkillDataTable) {
+		public void SetDataBindings(__table_skillDataTable SkillDataTable) {
 			// データバインドの設定
 			StatusGraphMeleeATK.SetDataBindings(SkillDataTable, "ATK");
 			StatusGraphMeleeDEF.SetDataBindings(SkillDataTable, "DEF");

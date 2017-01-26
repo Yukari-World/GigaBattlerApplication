@@ -3,7 +3,6 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using CommonLibrary.GigaBattlerDataSetTableAdapters;
 using System.ComponentModel;
 using System.Windows.Forms;
 using static CommonLibrary.GigaBattlerDataSet;

@@ -26,7 +26,7 @@ namespace Status_Editer {
 		/// 行数を数える為の列挙型。FOEは配列に充てるためのもの(明示的変換が必要なことを忘れずに!!)
 		/// </summary>
 		private enum RowState : int {
-			Element, WeaponType, Unit, UnitType, Race, Job, Maker, Weapon, Shield, Helmet, Gauntlet, Armor, Accessory, Skill, Ability, City, BattleField, WaveData, FOE
+			Element, WeaponType, Unit, UnitType, Race, Job, Maker, Weapon, Shield, Helmet, Gauntlet, Armor, Accessory, Skill, Ability, Area, BattleArea, WaveData, FOE
 		}// End Enum
 
 		// 変数
@@ -43,13 +43,13 @@ namespace Status_Editer {
 		/// <summary>
 		/// DataTableを使用しているUserControlの数
 		/// </summary>
-		private readonly int ControlCount = 8;
+		private readonly int ControlCount = 9;
 
 		/// <summary>
 		/// データベースのテーブルの数
 		/// </summary>
 		//private readonly int TableCount = (int)RowState.FOE;
-		private readonly int TableCount = 14;
+		private readonly int TableCount = 16;
 
 		public string rootDirectory = "";
 
@@ -68,6 +68,8 @@ namespace Status_Editer {
 		__table_accessoryTableAdapter TableAccessoryTableAdapter = new __table_accessoryTableAdapter();
 		__table_skillTableAdapter TableSkillTableAdapter = new __table_skillTableAdapter();
 		__table_abilityTableAdapter TableAbilityTableAdapter = new __table_abilityTableAdapter();
+		__table_areaTableAdapter TableAreaTableAdapter = new __table_areaTableAdapter();
+		__table_battle_areaTableAdapter TAbleBattleAreaTableAdapter = new __table_battle_areaTableAdapter();
 
 		// DataTable
 		__table_elementDataTable TableElementDataTable = new __table_elementDataTable();
@@ -84,6 +86,8 @@ namespace Status_Editer {
 		__table_accessoryDataTable TableAccessoryDataTable = new __table_accessoryDataTable();
 		__table_skillDataTable TableSkillDataTable = new __table_skillDataTable();
 		__table_abilityDataTable TableAbilityDataTable = new __table_abilityDataTable();
+		__table_areaDataTable TableAreaDataTable = new __table_areaDataTable();
+		__table_battle_areaDataTable TableBattleAreaDataTable = new __table_battle_areaDataTable();
 
 		// Form
 		FormUnit FormUnitData = null;
@@ -113,6 +117,9 @@ namespace Status_Editer {
 		/// </summary>
 		public EditerMainMenu() {
 			InitializeComponent();
+
+			// Event Handler登録
+			TableAreaDataTable.RowChanged += new DataRowChangeEventHandler(TableAreaDataTable_Changed);
 		}// End Method
 
 
@@ -128,6 +135,11 @@ namespace Status_Editer {
 			DropInfomation.ReloadDataTable(TableWeaponDataTable, TableShieldDataTable, TableHelmetDataTable, TableGauntletDataTable, TableArmorDataTable, TableAccessoryDataTable);
 			toolStripProgressBar1.PerformStep();    // カウント
 			ActiveSkillInfomation.ReloadBindings(TableSkillDataTable);
+			toolStripProgressBar1.PerformStep();    // カウント
+
+			// TAB: 種族
+
+			SkillInfomation.ReloadDataTable(TableWeaponTypeDataTable);
 			toolStripProgressBar1.PerformStep();    // カウント
 
 			// TAB: 武器
@@ -206,6 +218,10 @@ namespace Status_Editer {
 				toolStripProgressBar1.PerformStep();    // カウント
 				sum += RowCount[(int)RowState.Ability] = TableAbilityTableAdapter.Update(TableAbilityDataTable);
 				toolStripProgressBar1.PerformStep();    // カウント
+				sum += RowCount[(int)RowState.Area] = TableAreaTableAdapter.Update(TableAreaDataTable);
+				toolStripProgressBar1.PerformStep();    // カウント
+				sum += RowCount[(int)RowState.BattleArea] = TAbleBattleAreaTableAdapter.Update(TableBattleAreaDataTable);
+				toolStripProgressBar1.PerformStep();    // カウント
 
 				StripInfo.Text = "Update Complete!! Update Count:" + sum.ToString("N0");
 			} catch (Exception ex) {
@@ -244,10 +260,13 @@ namespace Status_Editer {
 			TableArmorTableAdapter.ClearBeforeFill = true;
 			TableAccessoryTableAdapter.ClearBeforeFill = true;
 			TableSkillTableAdapter.ClearBeforeFill = true;
+			TableAreaTableAdapter.ClearBeforeFill = true;
+			TAbleBattleAreaTableAdapter.ClearBeforeFill = true;
 
 			//----------------------------------------------------------------------------------------------------
 			// データの埋め込み
 			// ネットワーク関連を使用するのでtryを使用
+
 			try {
 				RowCount[(int)RowState.Element] = TableElementTableAdapter.Fill(TableElementDataTable);
 				RowCount[(int)RowState.WeaponType] = TableWeaponTypeTableAdapter.Fill(TableWeaponTypeDataTable);
@@ -262,6 +281,8 @@ namespace Status_Editer {
 				RowCount[(int)RowState.Armor] = TableArmorTableAdapter.Fill(TableArmorDataTable);
 				RowCount[(int)RowState.Accessory] = TableAccessoryTableAdapter.Fill(TableAccessoryDataTable);
 				RowCount[(int)RowState.Skill] = TableSkillTableAdapter.Fill(TableSkillDataTable);
+				RowCount[(int)RowState.Area] = TableAreaTableAdapter.Fill(TableAreaDataTable);
+				RowCount[(int)RowState.BattleArea] = TAbleBattleAreaTableAdapter.Fill(TableBattleAreaDataTable);
 
 				// コントロール側の処理はメソッドに移動
 				ReloadControl();
@@ -272,7 +293,6 @@ namespace Status_Editer {
 				MessageBox.Show("System Load Failed:\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				// 続行不可能なので終了させる
 				Close();
-				Dispose();
 				Application.Exit();
 			}// End Try
 
@@ -344,6 +364,16 @@ namespace Status_Editer {
 				listAbility.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				Debug.WriteLine("Task 1: List Ability Designer Setting End.");
 
+				// TAB: 都市名・地名
+
+				listArea.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Area Designer Setting End.");
+
+				// TAB: 戦闘場所
+
+				listBattleField.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+				Debug.WriteLine("Task 1: List Battle Area Designer Setting End.");
+
 				Debug.WriteLine("Task 1: Finish.");
 			});
 
@@ -412,6 +442,16 @@ namespace Status_Editer {
 				listAbility.DisplayMember = "AbilityName";
 				listAbility.ValueMember = "AbilityID";
 				Debug.WriteLine("Task 2: List Ability Data Source Setting End.");
+
+				listArea.DataSource = TableAreaDataTable;
+				listArea.DisplayMember = "AreaName";
+				listArea.ValueMember = "AreaID";
+				Debug.WriteLine("Task 2: List Area Data Source Setting End.");
+
+				listBattleField.DataSource = TableBattleAreaDataTable;
+				listBattleField.DisplayMember = "BattleAreaName";
+				listBattleField.ValueMember = "BattleAreaID";
+				Debug.WriteLine("Task 2: List Battle Area Data Source Setting End.");
 
 				Debug.WriteLine("Task 2: Finish.");
 			});
@@ -543,26 +583,34 @@ namespace Status_Editer {
 				Debug.WriteLine("Task 3-14: Start.");
 
 				SkillInfomation.SetDataBindings(TableSkillDataTable, TableWeaponTypeDataTable);
-				skillStatusInfomation1.SetDataBindings(TableSkillDataTable);
+				SkillStatusInfomation.SetDataBindings(TableSkillDataTable);
 
 				Debug.WriteLine("Task 3-14: Finish.");
 			});
 
 			// 待機～～
-			Task1.Wait();
-			Task2.Wait();
-			Task3_3.Wait();
-			Task3_4.Wait();
-			Task3_5.Wait();
-			Task3_6.Wait();
-			Task3_7.Wait();
-			Task3_8.Wait();
-			Task3_9.Wait();
-			Task3_10.Wait();
-			Task3_11.Wait();
-			Task3_12.Wait();
-			Task3_13.Wait();
-			Task3_14.Wait();
+			try {
+				Task1.Wait();
+				Task2.Wait();
+				Task3_3.Wait();
+				Task3_4.Wait();
+				Task3_5.Wait();
+				Task3_6.Wait();
+				Task3_7.Wait();
+				Task3_8.Wait();
+				Task3_9.Wait();
+				Task3_10.Wait();
+				Task3_11.Wait();
+				Task3_12.Wait();
+				Task3_13.Wait();
+				Task3_14.Wait();
+			} catch (AggregateException ex) {
+				foreach (var a in ex.InnerExceptions) {
+					Debug.WriteLine("Error: " + a);
+				}
+				Close();
+			}
+
 			Debug.WriteLine("All Task Finish.");
 
 			// 破棄破棄
@@ -2081,5 +2129,16 @@ namespace Status_Editer {
 
 		#endregion
 
+		//----------------------------------------------------------------------------------------------------
+		// Data Table 関連
+
+		/// <summary>
+		/// Table Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void TableAreaDataTable_Changed(object sender, DataRowChangeEventArgs e) {
+
+		}// End Method
 	}// End Class
 }

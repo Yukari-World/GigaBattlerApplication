@@ -23,7 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>60</ApplicationRevision>
+    <TargetCulture>ja-JP</TargetCulture>
+    <ApplicationRevision>61</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -197,11 +198,23 @@
     <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.Designer.cs">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\ElementSelectParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\ElementSelectParts.Designer.cs">
+      <DependentUpon>ElementSelectParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.Designer.cs">
       <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillElementInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillElementInfomation.Designer.cs">
+      <DependentUpon>SkillElementInfomation.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab14Skill\SkillInfomation.cs">
       <SubType>UserControl</SubType>
@@ -382,8 +395,14 @@
     <EmbeddedResource Include="User Control\tab06Job\Parts\JobStatusBasicParts.resx">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\Parts\ElementSelectParts.resx">
+      <DependentUpon>ElementSelectParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab14Skill\Parts\PowerGraphParts.resx">
       <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillElementInfomation.resx">
+      <DependentUpon>SkillElementInfomation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab14Skill\SkillInfomation.resx">
       <DependentUpon>SkillInfomation.cs</DependentUpon>

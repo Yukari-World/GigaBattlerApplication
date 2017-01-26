@@ -43,14 +43,14 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			// 
 			this.labelPower.Location = new System.Drawing.Point(10, 10);
 			this.labelPower.Name = "labelPower";
-			this.labelPower.Size = new System.Drawing.Size(75, 15);
+			this.labelPower.Size = new System.Drawing.Size(35, 15);
 			this.labelPower.TabIndex = 0;
 			this.labelPower.Text = "威力";
 			this.labelPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// numericPower
 			// 
-			this.numericPower.Location = new System.Drawing.Point(100, 9);
+			this.numericPower.Location = new System.Drawing.Point(50, 9);
 			this.numericPower.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -70,7 +70,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			// 
 			// labelDamage
 			// 
-			this.labelDamage.Location = new System.Drawing.Point(215, 10);
+			this.labelDamage.Location = new System.Drawing.Point(170, 10);
 			this.labelDamage.Name = "labelDamage";
 			this.labelDamage.Size = new System.Drawing.Size(75, 15);
 			this.labelDamage.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			// 
 			// numericDamage
 			// 
-			this.numericDamage.Location = new System.Drawing.Point(305, 9);
+			this.numericDamage.Location = new System.Drawing.Point(260, 9);
 			this.numericDamage.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -108,7 +108,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			// 
 			// labelBlurring
 			// 
-			this.labelBlurring.Location = new System.Drawing.Point(420, 10);
+			this.labelBlurring.Location = new System.Drawing.Point(375, 10);
 			this.labelBlurring.Name = "labelBlurring";
 			this.labelBlurring.Size = new System.Drawing.Size(75, 15);
 			this.labelBlurring.TabIndex = 4;
@@ -122,7 +122,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
             0,
             0,
             0});
-			this.numericBlurring.Location = new System.Drawing.Point(510, 9);
+			this.numericBlurring.Location = new System.Drawing.Point(465, 9);
 			this.numericBlurring.Maximum = new decimal(new int[] {
             10000,
             0,

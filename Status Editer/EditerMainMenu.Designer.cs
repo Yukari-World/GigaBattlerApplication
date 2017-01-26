@@ -161,6 +161,7 @@ namespace Status_Editer {
 			this.StripMenuHelpDevelop = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenuHelpSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.StripMenuHelpVersion = new System.Windows.Forms.ToolStripMenuItem();
+			this.GigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
 			this.TotalUnitInfomation = new Status_Editer.User_Control.tab03Unit.TotalUnitInfomation();
 			this.DropInfomation = new Status_Editer.User_Control.tab03Unit.DropInfomation();
 			this.UnitInfomation = new Status_Editer.User_Control.tab03Unit.UnitInfomation();
@@ -187,9 +188,10 @@ namespace Status_Editer {
 			this.ItemAbilityInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts();
 			this.EquipItemAccessory = new Status_Editer.User_Control.CommonParts.EquipItemStatusParts();
 			this.ItemInfoAccessory = new Status_Editer.User_Control.CommonParts.ItemInfoParts();
-			this.GigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.SkillStatusInfomation = new Status_Editer.User_Control.tab14Skill.SkillStatusInfomation();
 			this.SkillInfomation = new Status_Editer.User_Control.tab14Skill.SkillInfomation();
-			this.skillStatusInfomation1 = new Status_Editer.User_Control.tab14Skill.SkillStatusInfomation();
+			this.listArea = new System.Windows.Forms.ListBox();
+			this.listBattleField = new System.Windows.Forms.ListBox();
 			this.ContextListMenu.SuspendLayout();
 			this.ToolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
@@ -216,6 +218,8 @@ namespace Status_Editer {
 			this.tabPage13.SuspendLayout();
 			this.tabPage14.SuspendLayout();
 			this.tabPage15.SuspendLayout();
+			this.tabPage16.SuspendLayout();
+			this.tabPage17.SuspendLayout();
 			this.StripMainMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).BeginInit();
 			this.SuspendLayout();
@@ -672,7 +676,7 @@ namespace Status_Editer {
 			// 
 			// tabPage14
 			// 
-			this.tabPage14.Controls.Add(this.skillStatusInfomation1);
+			this.tabPage14.Controls.Add(this.SkillStatusInfomation);
 			this.tabPage14.Controls.Add(this.SkillInfomation);
 			this.tabPage14.Controls.Add(this.listSkill);
 			this.tabPage14.Location = new System.Drawing.Point(4, 22);
@@ -714,6 +718,7 @@ namespace Status_Editer {
 			// 
 			// tabPage16
 			// 
+			this.tabPage16.Controls.Add(this.listArea);
 			this.tabPage16.Location = new System.Drawing.Point(4, 22);
 			this.tabPage16.Name = "tabPage16";
 			this.tabPage16.Size = new System.Drawing.Size(1592, 828);
@@ -723,6 +728,7 @@ namespace Status_Editer {
 			// 
 			// tabPage17
 			// 
+			this.tabPage17.Controls.Add(this.listBattleField);
 			this.tabPage17.Location = new System.Drawing.Point(4, 22);
 			this.tabPage17.Name = "tabPage17";
 			this.tabPage17.Size = new System.Drawing.Size(1592, 828);
@@ -1279,91 +1285,91 @@ namespace Status_Editer {
 			// StripMenuWindowViewUnit
 			// 
 			this.StripMenuWindowViewUnit.Name = "StripMenuWindowViewUnit";
-			this.StripMenuWindowViewUnit.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewUnit.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewUnit.Text = "ユニット(&U)";
 			this.StripMenuWindowViewUnit.Click += new System.EventHandler(this.StripMenuWindowViewUnit_Click);
 			// 
 			// StripMenuWindowViewUnitType
 			// 
 			this.StripMenuWindowViewUnitType.Name = "StripMenuWindowViewUnitType";
-			this.StripMenuWindowViewUnitType.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewUnitType.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewUnitType.Text = "ユニットタイプ(&E)";
 			this.StripMenuWindowViewUnitType.Click += new System.EventHandler(this.StripMenuWindowViewUnitType_Click);
 			// 
 			// StripMenuWindowViewRace
 			// 
 			this.StripMenuWindowViewRace.Name = "StripMenuWindowViewRace";
-			this.StripMenuWindowViewRace.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewRace.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewRace.Text = "種族(&R)";
 			this.StripMenuWindowViewRace.Click += new System.EventHandler(this.StripMenuWindowViewRace_Click);
 			// 
 			// StripMenuWindowViewJob
 			// 
 			this.StripMenuWindowViewJob.Name = "StripMenuWindowViewJob";
-			this.StripMenuWindowViewJob.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewJob.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewJob.Text = "ジョブ(&J)";
 			this.StripMenuWindowViewJob.Click += new System.EventHandler(this.StripMenuWindowViewJob_Click);
 			// 
 			// StripMenuWindowViewMaker
 			// 
 			this.StripMenuWindowViewMaker.Name = "StripMenuWindowViewMaker";
-			this.StripMenuWindowViewMaker.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewMaker.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewMaker.Text = "メーカー(&M)";
 			this.StripMenuWindowViewMaker.Click += new System.EventHandler(this.StripMenuWindowViewMaker_Click);
 			// 
 			// StripMenuWindowViewWeapon
 			// 
 			this.StripMenuWindowViewWeapon.Name = "StripMenuWindowViewWeapon";
-			this.StripMenuWindowViewWeapon.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewWeapon.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewWeapon.Text = "武器(&W)";
 			this.StripMenuWindowViewWeapon.Click += new System.EventHandler(this.StripMenuWindowViewWeapon_Click);
 			// 
 			// StripMenuWindowViewShield
 			// 
 			this.StripMenuWindowViewShield.Name = "StripMenuWindowViewShield";
-			this.StripMenuWindowViewShield.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewShield.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewShield.Text = "盾(&S)";
 			this.StripMenuWindowViewShield.Click += new System.EventHandler(this.StripMenuWindowViewShield_Click);
 			// 
 			// StripMenuWindowViewHelmet
 			// 
 			this.StripMenuWindowViewHelmet.Name = "StripMenuWindowViewHelmet";
-			this.StripMenuWindowViewHelmet.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewHelmet.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewHelmet.Text = "頭防具(&H)";
 			this.StripMenuWindowViewHelmet.Click += new System.EventHandler(this.StripMenuWindowViewHelmet_Click);
 			// 
 			// StripMenuWindowViewGauntlet
 			// 
 			this.StripMenuWindowViewGauntlet.Name = "StripMenuWindowViewGauntlet";
-			this.StripMenuWindowViewGauntlet.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewGauntlet.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewGauntlet.Text = "腕防具(&G)";
 			this.StripMenuWindowViewGauntlet.Click += new System.EventHandler(this.StripMenuWindowViewGauntlet_Click);
 			// 
 			// StripMenuWindowViewArmor
 			// 
 			this.StripMenuWindowViewArmor.Name = "StripMenuWindowViewArmor";
-			this.StripMenuWindowViewArmor.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewArmor.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewArmor.Text = "体防具(&B)";
 			this.StripMenuWindowViewArmor.Click += new System.EventHandler(this.StripMenuWindowViewArmor_Click);
 			// 
 			// StripMenuWindowViewAccessory
 			// 
 			this.StripMenuWindowViewAccessory.Name = "StripMenuWindowViewAccessory";
-			this.StripMenuWindowViewAccessory.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewAccessory.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewAccessory.Text = "アクセサリー(&A)";
 			this.StripMenuWindowViewAccessory.Click += new System.EventHandler(this.StripMenuWindowViewAccessory_Click);
 			// 
 			// StripMenuWindowViewSkill
 			// 
 			this.StripMenuWindowViewSkill.Name = "StripMenuWindowViewSkill";
-			this.StripMenuWindowViewSkill.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewSkill.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewSkill.Text = "スキル(&N)";
 			this.StripMenuWindowViewSkill.Click += new System.EventHandler(this.StripMenuWindowViewSkill_Click);
 			// 
 			// StripMenuWindowViewAbility
 			// 
 			this.StripMenuWindowViewAbility.Name = "StripMenuWindowViewAbility";
-			this.StripMenuWindowViewAbility.Size = new System.Drawing.Size(152, 22);
+			this.StripMenuWindowViewAbility.Size = new System.Drawing.Size(150, 22);
 			this.StripMenuWindowViewAbility.Text = "アビリティ(&P)";
 			this.StripMenuWindowViewAbility.Click += new System.EventHandler(this.StripMenuWindowViewAbility_Click);
 			// 
@@ -1405,6 +1411,11 @@ namespace Status_Editer {
 			this.StripMenuHelpVersion.Size = new System.Drawing.Size(183, 22);
 			this.StripMenuHelpVersion.Text = "バージョン情報(&A)";
 			this.StripMenuHelpVersion.Click += new System.EventHandler(this.StripMenuHelpVersion_Click);
+			// 
+			// GigaBattlerDataSet
+			// 
+			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// TotalUnitInfomation
 			// 
@@ -1788,10 +1799,12 @@ namespace Status_Editer {
 			this.ItemInfoAccessory.Size = new System.Drawing.Size(600, 820);
 			this.ItemInfoAccessory.TabIndex = 1;
 			// 
-			// GigaBattlerDataSet
+			// SkillStatusInfomation
 			// 
-			this.GigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.GigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			this.SkillStatusInfomation.Location = new System.Drawing.Point(820, 0);
+			this.SkillStatusInfomation.Name = "SkillStatusInfomation";
+			this.SkillStatusInfomation.Size = new System.Drawing.Size(760, 300);
+			this.SkillStatusInfomation.TabIndex = 2;
 			// 
 			// SkillInfomation
 			// 
@@ -1800,12 +1813,25 @@ namespace Status_Editer {
 			this.SkillInfomation.Size = new System.Drawing.Size(600, 820);
 			this.SkillInfomation.TabIndex = 1;
 			// 
-			// skillStatusInfomation1
+			// listArea
 			// 
-			this.skillStatusInfomation1.Location = new System.Drawing.Point(820, 0);
-			this.skillStatusInfomation1.Name = "skillStatusInfomation1";
-			this.skillStatusInfomation1.Size = new System.Drawing.Size(760, 300);
-			this.skillStatusInfomation1.TabIndex = 2;
+			this.listArea.ContextMenuStrip = this.ContextListMenu;
+			this.listArea.FormattingEnabled = true;
+			this.listArea.ItemHeight = 12;
+			this.listArea.Location = new System.Drawing.Point(3, 3);
+			this.listArea.Name = "listArea";
+			this.listArea.Size = new System.Drawing.Size(200, 820);
+			this.listArea.TabIndex = 0;
+			// 
+			// listBattleField
+			// 
+			this.listBattleField.ContextMenuStrip = this.ContextListMenu;
+			this.listBattleField.FormattingEnabled = true;
+			this.listBattleField.ItemHeight = 12;
+			this.listBattleField.Location = new System.Drawing.Point(3, 3);
+			this.listBattleField.Name = "listBattleField";
+			this.listBattleField.Size = new System.Drawing.Size(200, 820);
+			this.listBattleField.TabIndex = 0;
 			// 
 			// EditerMainMenu
 			// 
@@ -1850,6 +1876,8 @@ namespace Status_Editer {
 			this.tabPage13.ResumeLayout(false);
 			this.tabPage14.ResumeLayout(false);
 			this.tabPage15.ResumeLayout(false);
+			this.tabPage16.ResumeLayout(false);
+			this.tabPage17.ResumeLayout(false);
 			this.StripMainMenu.ResumeLayout(false);
 			this.StripMainMenu.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GigaBattlerDataSet)).EndInit();
@@ -2016,7 +2044,9 @@ namespace Status_Editer {
 		private ToolStripMenuItem StripMenuEditSearch;
 		private ListBox listSkill;
 		private ListBox listAbility;
-		private User_Control.tab14Skill.SkillStatusInfomation skillStatusInfomation1;
+		private User_Control.tab14Skill.SkillStatusInfomation SkillStatusInfomation;
 		private User_Control.tab14Skill.SkillInfomation SkillInfomation;
+		private ListBox listArea;
+		private ListBox listBattleField;
 	}
 }
