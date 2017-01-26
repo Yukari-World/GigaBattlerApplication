@@ -1,9 +1,12 @@
-﻿namespace Status_Editer.User_Control.tab14Skill.Parts {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Status_Editer.User_Control.tab14Skill.Parts {
 	partial class PowerGraphParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary> 
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -67,7 +70,7 @@
 			// 
 			// labelDamage
 			// 
-			this.labelDamage.Location = new System.Drawing.Point(10, 35);
+			this.labelDamage.Location = new System.Drawing.Point(215, 10);
 			this.labelDamage.Name = "labelDamage";
 			this.labelDamage.Size = new System.Drawing.Size(75, 15);
 			this.labelDamage.TabIndex = 2;
@@ -76,7 +79,7 @@
 			// 
 			// numericDamage
 			// 
-			this.numericDamage.Location = new System.Drawing.Point(100, 34);
+			this.numericDamage.Location = new System.Drawing.Point(305, 9);
 			this.numericDamage.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -105,7 +108,7 @@
 			// 
 			// labelBlurring
 			// 
-			this.labelBlurring.Location = new System.Drawing.Point(10, 60);
+			this.labelBlurring.Location = new System.Drawing.Point(420, 10);
 			this.labelBlurring.Name = "labelBlurring";
 			this.labelBlurring.Size = new System.Drawing.Size(75, 15);
 			this.labelBlurring.TabIndex = 4;
@@ -119,7 +122,7 @@
             0,
             0,
             0});
-			this.numericBlurring.Location = new System.Drawing.Point(100, 59);
+			this.numericBlurring.Location = new System.Drawing.Point(510, 9);
 			this.numericBlurring.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -160,12 +163,12 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label labelPower;
-		private System.Windows.Forms.NumericUpDown numericPower;
-		private System.Windows.Forms.Label labelDamage;
-		private System.Windows.Forms.NumericUpDown numericDamage;
-		private System.Windows.Forms.ToolTip toolTipInfo;
-		private System.Windows.Forms.Label labelBlurring;
-		private System.Windows.Forms.NumericUpDown numericBlurring;
+		private Label labelPower;
+		private NumericUpDown numericPower;
+		private Label labelDamage;
+		private NumericUpDown numericDamage;
+		private ToolTip toolTipInfo;
+		private Label labelBlurring;
+		private NumericUpDown numericBlurring;
 	}
 }

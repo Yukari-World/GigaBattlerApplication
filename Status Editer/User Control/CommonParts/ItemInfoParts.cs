@@ -54,14 +54,15 @@ namespace Status_Editer.User_Control.CommonParts {
 			// データ項目の作成
 			// データ項目が少なく、わざわざデータベース化する必要のない項目
 
+			//--------------------------------------------------
 			// Target
 			DataTable TargetDataTable = new DataTable();
 
-			TargetDataTable.Columns.Add("DataID", Type.GetType("System.Int32"));
+			TargetDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
 			TargetDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?
-			int[] TargetDataValue = new int[] { 0, 1 };
+			byte[] TargetDataValue = new byte[] { 0, 1 };
 			string[] TargetDataName = new string[] { "単体", "全体" };
 
 			// 項目の構築
@@ -79,14 +80,15 @@ namespace Status_Editer.User_Control.CommonParts {
 				TargetDataTable.Rows.Add(row);
 			}// End Loop
 
+			//--------------------------------------------------
 			// EType
 			DataTable HandDataTable = new DataTable();
 
-			HandDataTable.Columns.Add("DataID", Type.GetType("System.Int32"));
+			HandDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
 			HandDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?
-			int[] HandDataValue = new int[] { 1, 2 };
+			byte[] HandDataValue = new byte[] { 1, 2 };
 			string[] HandDataName = new string[] { "片手", "両手" };
 
 			// 項目の構築

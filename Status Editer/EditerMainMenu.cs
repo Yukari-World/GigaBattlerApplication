@@ -542,7 +542,7 @@ namespace Status_Editer {
 			var Task3_14 = Task.Factory.StartNew(() => {
 				Debug.WriteLine("Task 3-14: Start.");
 
-				SkillInfomation.SetDataBindings(TableSkillDataTable);
+				SkillInfomation.SetDataBindings(TableSkillDataTable, TableWeaponTypeDataTable);
 				skillStatusInfomation1.SetDataBindings(TableSkillDataTable);
 
 				Debug.WriteLine("Task 3-14: Finish.");

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab14Skill.Parts {
 	[ToolboxItem(true)]
@@ -28,7 +29,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 		/// <summary>
 		/// ステータスバーの開始位置
 		/// </summary>
-		private readonly int StartX = 250;
+		private readonly int StartX = 10;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -55,12 +56,12 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 		/// <summary>
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="SkillDataTable">Item Data Table</param>
-		public void SetDataBindings(DataTable SkillDataTable) {
+		/// <param name="TableSkillDataTable">Item Data Table</param>
+		public void SetDataBindings(__table_skillDataTable TableSkillDataTable) {
 			// データバインドの設定
-			numericPower.DataBindings.Add(new Binding("Value", SkillDataTable, "Power", true));
-			numericDamage.DataBindings.Add(new Binding("Value", SkillDataTable, "DamagePercent", true));
-			numericBlurring.DataBindings.Add(new Binding("Value", SkillDataTable, "Blurring", true));
+			numericPower.DataBindings.Add(new Binding("Value", TableSkillDataTable, "Power", true));
+			numericDamage.DataBindings.Add(new Binding("Value", TableSkillDataTable, "DamagePercent", true));
+			numericBlurring.DataBindings.Add(new Binding("Value", TableSkillDataTable, "Blurring", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -90,7 +91,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			StatusBar.Name = "StatusBar";
 
 			StatusBar.BackColor = Color.Green;
-			StatusBar.Location = new Point(StartX, 12);
+			StatusBar.Location = new Point(StartX, 42);
 			StatusBar.Size = new Size(Math.Min((int)numericPower.Value * 1, 10000), 6);
 
 			// LabelをUser Controlに追加する
@@ -120,23 +121,23 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			// 初期座標はX = 200、暫定で X = 1000まで
 			for (int i = StartX; i <= 1000; i += 20) {
 				if ((i - StartX) % 100 == 0) {
-					formGraphics.DrawLine(PenBlack, i, 5, i, 25);
+					formGraphics.DrawLine(PenBlack, i, 35, i, 55);
 				} else {
-					formGraphics.DrawLine(PenGray, i, 5, i, 25);
+					formGraphics.DrawLine(PenGray, i, 35, i, 55);
 				}// End If
 			}// End Loop
 
 			// 威力のブレ幅の線を引く
-			formGraphics.DrawLine(PenRed, BlurringMin, 5, BlurringMin, 40);     // 最小
-			formGraphics.DrawLine(PenRed, BlurringMax, 5, BlurringMax, 40);     // 最大
+			formGraphics.DrawLine(PenRed, BlurringMin, 35, BlurringMin, 70);     // 最小
+			formGraphics.DrawLine(PenRed, BlurringMax, 35, BlurringMax, 70);     // 最大
 
 			// 飾り線
 			// 大体矢印の様な見た目になる
 			for (int i = 0; i <= 5; i++) {
-				formGraphics.DrawLine(PenRed, BlurringMin+i, 35 - i, BlurringMin + i, 35 + i);
-				formGraphics.DrawLine(PenRed, BlurringMax - i, 35 - i, BlurringMax - i, 35 + i);
+				formGraphics.DrawLine(PenRed, BlurringMin+i, 65 - i, BlurringMin + i, 65 + i);
+				formGraphics.DrawLine(PenRed, BlurringMax - i, 65 - i, BlurringMax - i, 65 + i);
 			}// End Loop
-			formGraphics.DrawLine(PenRed, BlurringMin, 35, BlurringMax, 35);    // スケール
+			formGraphics.DrawLine(PenRed, BlurringMin, 65, BlurringMax, 65);    // スケール
 
 			// 破棄破棄
 			PenBlack.Dispose();
