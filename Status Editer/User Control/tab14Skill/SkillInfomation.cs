@@ -78,7 +78,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 			// Use Weapon
 			DataTable UseWeaponDataTable = new DataTable();
 
-			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
+			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
 			UseWeaponDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?

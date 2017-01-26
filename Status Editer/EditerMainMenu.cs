@@ -1784,7 +1784,7 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void StripMenuWindowViewSkill_Click(object sender, EventArgs e) {
 			if ((FormSkillData == null) || FormSkillData.IsDisposed) {
-				FormSkillData = new FormSkill(TableSkillDataTable, TableElementDataTable);
+				FormSkillData = new FormSkill(TableSkillDataTable, TableWeaponTypeDataTable, TableElementDataTable);
 				FormSkillData.Show();
 			}// End If
 		}// End Method
@@ -2131,13 +2131,23 @@ namespace Status_Editer {
 
 		//----------------------------------------------------------------------------------------------------
 		// Data Table 関連
+		// コンボボックスにリアルタイムで変更を反映するためのコード
 
 		/// <summary>
 		/// Table Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object</param>
+		/// <param name="e">DataRowChangeEventArgs</param>
 		private void TableAreaDataTable_Changed(object sender, DataRowChangeEventArgs e) {
+
+		}// End Method
+
+		/// <summary>
+		/// Table Battle Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
+		/// </summary>
+		/// <param name="sender">object</param>
+		/// <param name="e">DataRowChangeEventArgs</param>
+		private void TableBattleAreaDataTable_Changed(object sender, DataRowChangeEventArgs e) {
 
 		}// End Method
 	}// End Class
