@@ -146,7 +146,7 @@ namespace Status_Editer {
 			// Use Weapon
 			DataTable UseWeaponDataTable = new DataTable();
 
-			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
+			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
 			UseWeaponDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?
@@ -172,7 +172,7 @@ namespace Status_Editer {
 			// Target
 			DataTable TargetDataTable = new DataTable();
 
-			TargetDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
+			TargetDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
 			TargetDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?

@@ -584,6 +584,7 @@ namespace Status_Editer {
 
 				SkillInfomation.SetDataBindings(TableSkillDataTable, TableWeaponTypeDataTable);
 				SkillStatusInfomation.SetDataBindings(TableSkillDataTable);
+				skillElementInfomation1.SetDataBindings(TableSkillDataTable, TableElementDataTable);
 
 				Debug.WriteLine("Task 3-14: Finish.");
 			});
