@@ -30,12 +30,12 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 		/// </summary>
 		private void InitializeComponent() {
 			this.GroupBoxRaceInfo = new System.Windows.Forms.GroupBox();
+			this.labelInfo = new System.Windows.Forms.Label();
+			this.textInfo = new System.Windows.Forms.TextBox();
 			this.textRaceName = new System.Windows.Forms.TextBox();
 			this.labelRaceName = new System.Windows.Forms.Label();
 			this.textRaceID = new System.Windows.Forms.TextBox();
 			this.labelRaceID = new System.Windows.Forms.Label();
-			this.labelInfo = new System.Windows.Forms.Label();
-			this.textInfo = new System.Windows.Forms.TextBox();
 			this.GroupBoxRaceInfo.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -55,41 +55,6 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.GroupBoxRaceInfo.TabStop = false;
 			this.GroupBoxRaceInfo.Text = "Race Infomation";
 			// 
-			// textRaceName
-			// 
-			this.textRaceName.Location = new System.Drawing.Point(10, 90);
-			this.textRaceName.Name = "textRaceName";
-			this.textRaceName.Size = new System.Drawing.Size(465, 19);
-			this.textRaceName.TabIndex = 7;
-			// 
-			// labelRaceName
-			// 
-			this.labelRaceName.AutoSize = true;
-			this.labelRaceName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelRaceName.Location = new System.Drawing.Point(10, 75);
-			this.labelRaceName.Name = "labelRaceName";
-			this.labelRaceName.Size = new System.Drawing.Size(126, 12);
-			this.labelRaceName.TabIndex = 6;
-			this.labelRaceName.Text = "Race Name(表記データ):";
-			// 
-			// textRaceID
-			// 
-			this.textRaceID.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.textRaceID.Location = new System.Drawing.Point(10, 45);
-			this.textRaceID.Name = "textRaceID";
-			this.textRaceID.Size = new System.Drawing.Size(300, 19);
-			this.textRaceID.TabIndex = 5;
-			// 
-			// labelRaceID
-			// 
-			this.labelRaceID.AutoSize = true;
-			this.labelRaceID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.labelRaceID.Location = new System.Drawing.Point(10, 30);
-			this.labelRaceID.Name = "labelRaceID";
-			this.labelRaceID.Size = new System.Drawing.Size(184, 12);
-			this.labelRaceID.TabIndex = 4;
-			this.labelRaceID.Text = "Race ID(システムで識別されるデータ):";
-			// 
 			// labelInfo
 			// 
 			this.labelInfo.AutoSize = true;
@@ -97,7 +62,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.labelInfo.Location = new System.Drawing.Point(10, 675);
 			this.labelInfo.Name = "labelInfo";
 			this.labelInfo.Size = new System.Drawing.Size(85, 12);
-			this.labelInfo.TabIndex = 45;
+			this.labelInfo.TabIndex = 4;
 			this.labelInfo.Text = "Text Infomation";
 			// 
 			// textInfo
@@ -106,7 +71,42 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.textInfo.Multiline = true;
 			this.textInfo.Name = "textInfo";
 			this.textInfo.Size = new System.Drawing.Size(580, 100);
-			this.textInfo.TabIndex = 46;
+			this.textInfo.TabIndex = 5;
+			// 
+			// textRaceName
+			// 
+			this.textRaceName.Location = new System.Drawing.Point(10, 90);
+			this.textRaceName.Name = "textRaceName";
+			this.textRaceName.Size = new System.Drawing.Size(465, 19);
+			this.textRaceName.TabIndex = 3;
+			// 
+			// labelRaceName
+			// 
+			this.labelRaceName.AutoSize = true;
+			this.labelRaceName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelRaceName.Location = new System.Drawing.Point(10, 75);
+			this.labelRaceName.Name = "labelRaceName";
+			this.labelRaceName.Size = new System.Drawing.Size(126, 12);
+			this.labelRaceName.TabIndex = 2;
+			this.labelRaceName.Text = "Race Name(表記データ):";
+			// 
+			// textRaceID
+			// 
+			this.textRaceID.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.textRaceID.Location = new System.Drawing.Point(10, 45);
+			this.textRaceID.Name = "textRaceID";
+			this.textRaceID.Size = new System.Drawing.Size(300, 19);
+			this.textRaceID.TabIndex = 1;
+			// 
+			// labelRaceID
+			// 
+			this.labelRaceID.AutoSize = true;
+			this.labelRaceID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.labelRaceID.Location = new System.Drawing.Point(10, 30);
+			this.labelRaceID.Name = "labelRaceID";
+			this.labelRaceID.Size = new System.Drawing.Size(184, 12);
+			this.labelRaceID.TabIndex = 0;
+			this.labelRaceID.Text = "Race ID(システムで識別されるデータ):";
 			// 
 			// RaceInfoParts
 			// 

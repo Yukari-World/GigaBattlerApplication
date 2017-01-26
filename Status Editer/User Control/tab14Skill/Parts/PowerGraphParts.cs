@@ -1,36 +1,39 @@
 ﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Item Status Parts
+// Skill Power Graph Parts
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control.CommonParts {
+namespace Status_Editer.User_Control.tab14Skill.Parts {
 	[ToolboxItem(true)]
-	public partial class ItemStatusParts : UserControl {
+	public partial class PowerGraphParts : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		/// <summary>
+		/// ステータスバー。ラベルを伸縮させることで利用
+		/// </summary>
 		private Label StatusBar = new Label();
+
+		/// <summary>
+		/// ステータスバーの開始位置
+		/// </summary>
+		private readonly int StartX = 250;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-		/// <summary>
-		/// ステータスラベルを設定します
-		/// </summary>
-		[Description("ステータスラベルを設定します")]
-		public string StatusLabel {
-			get { return label1.Text; }
-			set { label1.Text = value; }
-		}// End Property
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -40,7 +43,7 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public ItemStatusParts() {
+		public PowerGraphParts() {
 			InitializeComponent();
 		}// End Method
 
@@ -49,15 +52,15 @@ namespace Status_Editer.User_Control.CommonParts {
 		// Pubilc Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-		// ジャンル毎に必要かと思われたが、引数パラメータが全て同じなことが判明(オーバーロードの必要がない)
 		/// <summary>
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="ItemDataTable">Item Data Table</param>
-		/// <param name="bindTag">Binding Tag</param>
-		public void SetDataBindings(DataTable ItemDataTable, string bindTag) {
+		/// <param name="SkillDataTable">Item Data Table</param>
+		public void SetDataBindings(DataTable SkillDataTable) {
 			// データバインドの設定
-			numericUpDown1.DataBindings.Add(new Binding("Value", ItemDataTable, bindTag, true));
+			numericPower.DataBindings.Add(new Binding("Value", SkillDataTable, "Power", true));
+			numericDamage.DataBindings.Add(new Binding("Value", SkillDataTable, "DamagePercent", true));
+			numericBlurring.DataBindings.Add(new Binding("Value", SkillDataTable, "Blurring", true));
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
@@ -86,15 +89,9 @@ namespace Status_Editer.User_Control.CommonParts {
 			StatusBar.BorderStyle = BorderStyle.FixedSingle;
 			StatusBar.Name = "StatusBar";
 
-			if (numericUpDown1.Value >= 0) {
-				StatusBar.BackColor = Color.Green;
-				StatusBar.Location = new Point(200, 7);
-				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
-			} else {
-				StatusBar.BackColor = Color.Red;
-				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
-				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
-			}// End If
+			StatusBar.BackColor = Color.Green;
+			StatusBar.Location = new Point(StartX, 12);
+			StatusBar.Size = new Size(Math.Min((int)numericPower.Value * 1, 10000), 6);
 
 			// LabelをUser Controlに追加する
 			Controls.Add(StatusBar);
@@ -109,43 +106,53 @@ namespace Status_Editer.User_Control.CommonParts {
 		private void ItemStatusParts_Paint(object sender, PaintEventArgs e) {
 			// ラインを引く
 			// 所謂横棒グラフのライン
-			Pen PenBlack, PenGray;
+			Pen PenBlack, PenGray, PenRed;
 			PenBlack = new Pen(Color.Black);
 			PenGray = new Pen(Color.LightGray);
+			PenRed = new Pen(Color.Red);
 			Graphics formGraphics = CreateGraphics();
+
+			// ブレ幅の目安ライン
+			int BlurringMin = StartX + (int)numericPower.Value * (10000 - (int)numericBlurring.Value) / 10000;
+			int BlurringMax = StartX + StatusBar.Size.Width;
 
 			// ラインを X の20の倍数毎に描画。100の倍数の場合、黒で描画
 			// 初期座標はX = 200、暫定で X = 1000まで
-			for (int i = 200; i <= 1000; i += 20) {
-				if (i % 100 == 0) {
-					formGraphics.DrawLine(PenBlack, i, 0, i, 20);
+			for (int i = StartX; i <= 1000; i += 20) {
+				if ((i - StartX) % 100 == 0) {
+					formGraphics.DrawLine(PenBlack, i, 5, i, 25);
 				} else {
-					formGraphics.DrawLine(PenGray, i, 0, i, 20);
-				}
+					formGraphics.DrawLine(PenGray, i, 5, i, 25);
+				}// End If
 			}// End Loop
+
+			// 威力のブレ幅の線を引く
+			formGraphics.DrawLine(PenRed, BlurringMin, 5, BlurringMin, 40);     // 最小
+			formGraphics.DrawLine(PenRed, BlurringMax, 5, BlurringMax, 40);     // 最大
+
+			// 飾り線
+			// 大体矢印の様な見た目になる
+			for (int i = 0; i <= 5; i++) {
+				formGraphics.DrawLine(PenRed, BlurringMin+i, 35 - i, BlurringMin + i, 35 + i);
+				formGraphics.DrawLine(PenRed, BlurringMax - i, 35 - i, BlurringMax - i, 35 + i);
+			}// End Loop
+			formGraphics.DrawLine(PenRed, BlurringMin, 35, BlurringMax, 35);    // スケール
 
 			// 破棄破棄
 			PenBlack.Dispose();
 			PenGray.Dispose();
+			PenRed.Dispose();
 			formGraphics.Dispose();
 		}// End Method
 
 		/// <summary>
-		/// numericUpDown1の値が変更された時の処理
+		/// numericの何れかの値が変更された時の処理
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
-			// ラベルのサイズ変更
-			if (numericUpDown1.Value >= 0) {
-				StatusBar.BackColor = Color.Green;
-				StatusBar.Location = new Point(200, 7);
-				StatusBar.Size = new Size(Math.Max((int)numericUpDown1.Value * 1, 0), 6);
-			} else {
-				StatusBar.BackColor = Color.Red;
-				StatusBar.Location = new Point(200 + (int)numericUpDown1.Value, 7);
-				StatusBar.Size = new Size(Math.Abs((int)numericUpDown1.Value * 1), 6);
-			}// End If
+		private void numericValue_ValueChanged(object sender, EventArgs e) {
+			StatusBar.Size = new Size(Math.Min((int)numericPower.Value * 1, 10000), 6);
+			Invalidate();   // 再描画させる
 		}// End Method
 	}// End Class
 }

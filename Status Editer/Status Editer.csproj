@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>58</ApplicationRevision>
+    <ApplicationRevision>59</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -161,11 +161,11 @@
     <Compile Include="User Control\CommonParts\ItemInfoParts.Designer.cs">
       <DependentUpon>ItemInfoParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\CommonParts\ItemStatusParts.cs">
+    <Compile Include="User Control\CommonParts\StatusGraphParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\CommonParts\ItemStatusParts.Designer.cs">
-      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    <Compile Include="User Control\CommonParts\StatusGraphParts.Designer.cs">
+      <DependentUpon>StatusGraphParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +196,24 @@
     </Compile>
     <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.Designer.cs">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.Designer.cs">
+      <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillInfomation.Designer.cs">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillStatusInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillStatusInfomation.Designer.cs">
+      <DependentUpon>SkillStatusInfomation.cs</DependentUpon>
     </Compile>
     <Compile Include="ZUserControl.cs">
       <SubType>UserControl</SubType>
@@ -319,8 +337,8 @@
     <EmbeddedResource Include="User Control\CommonParts\ItemInfoParts.resx">
       <DependentUpon>ItemInfoParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\CommonParts\ItemStatusParts.resx">
-      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    <EmbeddedResource Include="User Control\CommonParts\StatusGraphParts.resx">
+      <DependentUpon>StatusGraphParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
@@ -364,6 +382,15 @@
     <EmbeddedResource Include="User Control\tab06Job\Parts\JobStatusBasicParts.resx">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\Parts\PowerGraphParts.resx">
+      <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillInfomation.resx">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillStatusInfomation.resx">
+      <DependentUpon>SkillStatusInfomation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -398,7 +425,6 @@
     <Folder Include="User Control\tab11Gauntlet\Parts\" />
     <Folder Include="User Control\tab12Armor\Parts\" />
     <Folder Include="User Control\tab13Accessory\Parts\" />
-    <Folder Include="User Control\tab14Skill\Parts\" />
     <Folder Include="User Control\tab15Ability\Parts\" />
     <Folder Include="User Control\tab16City\Parts\" />
     <Folder Include="User Control\tab17BattleField\Parts\" />

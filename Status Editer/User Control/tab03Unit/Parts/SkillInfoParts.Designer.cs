@@ -29,8 +29,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.groupSkill = new System.Windows.Forms.GroupBox();
-			this.comboSkill = new System.Windows.Forms.ComboBox();
 			this.labelSkilleffect = new System.Windows.Forms.Label();
+			this.comboSkill = new System.Windows.Forms.ComboBox();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
 			this.groupSkill.SuspendLayout();
 			this.SuspendLayout();
@@ -43,19 +43,9 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.groupSkill.Location = new System.Drawing.Point(0, 0);
 			this.groupSkill.Name = "groupSkill";
 			this.groupSkill.Size = new System.Drawing.Size(650, 50);
-			this.groupSkill.TabIndex = 1;
+			this.groupSkill.TabIndex = 0;
 			this.groupSkill.TabStop = false;
 			this.groupSkill.Text = "Skill**";
-			// 
-			// comboSkill
-			// 
-			this.comboSkill.DisplayMember = "SkillName";
-			this.comboSkill.FormattingEnabled = true;
-			this.comboSkill.Location = new System.Drawing.Point(10, 20);
-			this.comboSkill.Name = "comboSkill";
-			this.comboSkill.Size = new System.Drawing.Size(250, 20);
-			this.comboSkill.TabIndex = 0;
-			this.comboSkill.ValueMember = "SkillID";
 			// 
 			// labelSkilleffect
 			// 
@@ -66,6 +56,16 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.labelSkilleffect.Text = "Skill Effect";
 			this.labelSkilleffect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.labelSkilleffect.TextChanged += new System.EventHandler(this.labelSkilleffect_TextChanged);
+			// 
+			// comboSkill
+			// 
+			this.comboSkill.DisplayMember = "SkillName";
+			this.comboSkill.FormattingEnabled = true;
+			this.comboSkill.Location = new System.Drawing.Point(10, 20);
+			this.comboSkill.Name = "comboSkill";
+			this.comboSkill.Size = new System.Drawing.Size(250, 20);
+			this.comboSkill.TabIndex = 0;
+			this.comboSkill.ValueMember = "SkillID";
 			// 
 			// toolTipInfo
 			// 

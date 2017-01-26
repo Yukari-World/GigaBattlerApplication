@@ -339,7 +339,7 @@ namespace Status_Editer {
 				listSkill.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				Debug.WriteLine("Task 1: List Skill Designer Setting End.");
 
-				// TAB: スキル
+				// TAB: アビリティ
 
 				listAbility.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
 				Debug.WriteLine("Task 1: List Ability Designer Setting End.");
@@ -434,7 +434,13 @@ namespace Status_Editer {
 
 			// TAB: ユニットタイプ
 
-			// NULL
+			var Task3_4 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 3-4: Start.");
+
+				// Null
+
+				Debug.WriteLine("Task 3-4: Finish.");
+			});
 
 			// TAB: 種族
 
@@ -531,10 +537,22 @@ namespace Status_Editer {
 				Debug.WriteLine("Task 3-13: Finish.");
 			});
 
+			// TAB: スキル
+
+			var Task3_14 = Task.Factory.StartNew(() => {
+				Debug.WriteLine("Task 3-14: Start.");
+
+				SkillInfomation.SetDataBindings(TableSkillDataTable);
+				skillStatusInfomation1.SetDataBindings(TableSkillDataTable);
+
+				Debug.WriteLine("Task 3-14: Finish.");
+			});
+
 			// 待機～～
 			Task1.Wait();
 			Task2.Wait();
 			Task3_3.Wait();
+			Task3_4.Wait();
 			Task3_5.Wait();
 			Task3_6.Wait();
 			Task3_7.Wait();
@@ -544,12 +562,14 @@ namespace Status_Editer {
 			Task3_11.Wait();
 			Task3_12.Wait();
 			Task3_13.Wait();
+			Task3_14.Wait();
 			Debug.WriteLine("All Task Finish.");
 
 			// 破棄破棄
 			Task1.Dispose();
 			Task2.Dispose();
 			Task3_3.Dispose();
+			Task3_4.Dispose();
 			Task3_5.Dispose();
 			Task3_6.Dispose();
 			Task3_7.Dispose();
@@ -559,6 +579,7 @@ namespace Status_Editer {
 			Task3_11.Dispose();
 			Task3_12.Dispose();
 			Task3_13.Dispose();
+			Task3_14.Dispose();
 
 			// タイトルにバージョン番号を付与
 			Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();

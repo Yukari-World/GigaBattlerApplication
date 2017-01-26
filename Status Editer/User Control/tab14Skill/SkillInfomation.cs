@@ -1,9 +1,4 @@
-﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Equip Item Status Parts
-//
-// Programed By Yukari-World
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -13,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Status_Editer.User_Control.CommonParts {
+namespace Status_Editer.User_Control.tab14Skill {
 	[ToolboxItem(true)]
-	public partial class EquipItemStatusParts : UserControl {
+	public partial class SkillInfomation : UserControl {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Initialize
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +28,7 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public EquipItemStatusParts() {
+		public SkillInfomation() {
 			InitializeComponent();
 		}// End Method
 
@@ -45,21 +40,10 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <summary>
 		/// DataTableの設定をします。外部から引数を利用することでコントロール側に持ってこれることが判明。
 		/// </summary>
-		/// <param name="ItemDataTable">Item Data Table</param>
-		public void SetDataBindings(DataTable ItemDataTable) {
+		/// <param name="SkillDataTable">Skill Data Table</param>
+		public void SetDataBindings(DataTable SkillDataTable) {
 			// データバインドの設定
-			StatusGraphHP.SetDataBindings(ItemDataTable, "HP");
-			StatusGraphTP.SetDataBindings(ItemDataTable, "TP");
-			StatusGraphMeleeATK.SetDataBindings(ItemDataTable, "ATK");
-			StatusGraphMeleeDEF.SetDataBindings(ItemDataTable, "DEF");
-			StatusGraphRangeATK.SetDataBindings(ItemDataTable, "RAT");
-			StatusGraphRangeDEF.SetDataBindings(ItemDataTable, "RDF");
-			StatusGraphMagicATK.SetDataBindings(ItemDataTable, "MAT");
-			StatusGraphMagicDEF.SetDataBindings(ItemDataTable, "MDF");
-			StatusGraphSPD.SetDataBindings(ItemDataTable, "SPD");
-			StatusGraphLuck.SetDataBindings(ItemDataTable, "LUK");
-			StatusGraphHIT.SetDataBindings(ItemDataTable, "HIT");
-			StatusGraphEVT.SetDataBindings(ItemDataTable, "EVT");
+			PowerGraph.SetDataBindings(SkillDataTable);
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定
