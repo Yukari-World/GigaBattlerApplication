@@ -30,18 +30,21 @@ namespace Status_Editer {
 			this.components = new System.ComponentModel.Container();
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			this.DataGridViewSkill = new System.Windows.Forms.DataGridView();
+			this.tableskillBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_skillTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter();
 			this.skillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.skillNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.percentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.firstDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.airDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.useWeaponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.wTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.airDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.useWeaponDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.wTypeDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.sPCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tPCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.aTCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.targetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.targetDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.typeDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.damagePercentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sHitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +70,6 @@ namespace Status_Editer {
 			this.element9DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.element10DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tableskillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
-			this.___table_skillTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewSkill)).BeginInit();
@@ -99,14 +99,14 @@ namespace Status_Editer {
             this.skillNameDataGridViewTextBoxColumn,
             this.percentDataGridViewTextBoxColumn,
             this.firstDataGridViewTextBoxColumn,
-            this.airDataGridViewTextBoxColumn,
-            this.useWeaponDataGridViewTextBoxColumn,
-            this.wTypeDataGridViewTextBoxColumn,
+            this.airDataGridViewComboBoxColumn,
+            this.useWeaponDataGridViewComboBoxColumn,
+            this.wTypeDataGridViewComboBoxColumn,
             this.sPCostDataGridViewTextBoxColumn,
             this.tPCostDataGridViewTextBoxColumn,
             this.aTCountDataGridViewTextBoxColumn,
-            this.targetDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
+            this.targetDataGridViewComboBoxColumn,
+            this.typeDataGridViewComboBoxColumn,
             this.powerDataGridViewTextBoxColumn,
             this.damagePercentDataGridViewTextBoxColumn,
             this.sHitDataGridViewTextBoxColumn,
@@ -138,6 +138,21 @@ namespace Status_Editer {
 			this.DataGridViewSkill.Name = "DataGridViewSkill";
 			this.DataGridViewSkill.Size = new System.Drawing.Size(1440, 785);
 			this.DataGridViewSkill.TabIndex = 0;
+			this.DataGridViewSkill.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataGridViewSkill_DataError);
+			// 
+			// tableskillBindingSource
+			// 
+			this.tableskillBindingSource.DataMember = "__table_skill";
+			this.tableskillBindingSource.DataSource = this.gigaBattlerDataSet;
+			// 
+			// gigaBattlerDataSet
+			// 
+			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
+			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// ___table_skillTableAdapter
+			// 
+			this.___table_skillTableAdapter.ClearBeforeFill = true;
 			// 
 			// skillIDDataGridViewTextBoxColumn
 			// 
@@ -163,23 +178,29 @@ namespace Status_Editer {
 			this.firstDataGridViewTextBoxColumn.HeaderText = "First";
 			this.firstDataGridViewTextBoxColumn.Name = "firstDataGridViewTextBoxColumn";
 			// 
-			// airDataGridViewTextBoxColumn
+			// airDataGridViewComboBoxColumn
 			// 
-			this.airDataGridViewTextBoxColumn.DataPropertyName = "Air";
-			this.airDataGridViewTextBoxColumn.HeaderText = "Air";
-			this.airDataGridViewTextBoxColumn.Name = "airDataGridViewTextBoxColumn";
+			this.airDataGridViewComboBoxColumn.DataPropertyName = "Air";
+			this.airDataGridViewComboBoxColumn.HeaderText = "Air";
+			this.airDataGridViewComboBoxColumn.Name = "airDataGridViewComboBoxColumn";
+			this.airDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.airDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
-			// useWeaponDataGridViewTextBoxColumn
+			// useWeaponDataGridViewComboBoxColumn
 			// 
-			this.useWeaponDataGridViewTextBoxColumn.DataPropertyName = "UseWeapon";
-			this.useWeaponDataGridViewTextBoxColumn.HeaderText = "UseWeapon";
-			this.useWeaponDataGridViewTextBoxColumn.Name = "useWeaponDataGridViewTextBoxColumn";
+			this.useWeaponDataGridViewComboBoxColumn.DataPropertyName = "UseWeapon";
+			this.useWeaponDataGridViewComboBoxColumn.HeaderText = "UseWeapon";
+			this.useWeaponDataGridViewComboBoxColumn.Name = "useWeaponDataGridViewComboBoxColumn";
+			this.useWeaponDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.useWeaponDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
-			// wTypeDataGridViewTextBoxColumn
+			// wTypeDataGridViewComboBoxColumn
 			// 
-			this.wTypeDataGridViewTextBoxColumn.DataPropertyName = "WType";
-			this.wTypeDataGridViewTextBoxColumn.HeaderText = "WType";
-			this.wTypeDataGridViewTextBoxColumn.Name = "wTypeDataGridViewTextBoxColumn";
+			this.wTypeDataGridViewComboBoxColumn.DataPropertyName = "WType";
+			this.wTypeDataGridViewComboBoxColumn.HeaderText = "WType";
+			this.wTypeDataGridViewComboBoxColumn.Name = "wTypeDataGridViewComboBoxColumn";
+			this.wTypeDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.wTypeDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
 			// sPCostDataGridViewTextBoxColumn
 			// 
@@ -199,17 +220,21 @@ namespace Status_Editer {
 			this.aTCountDataGridViewTextBoxColumn.HeaderText = "ATCount";
 			this.aTCountDataGridViewTextBoxColumn.Name = "aTCountDataGridViewTextBoxColumn";
 			// 
-			// targetDataGridViewTextBoxColumn
+			// targetDataGridViewComboBoxColumn
 			// 
-			this.targetDataGridViewTextBoxColumn.DataPropertyName = "Target";
-			this.targetDataGridViewTextBoxColumn.HeaderText = "Target";
-			this.targetDataGridViewTextBoxColumn.Name = "targetDataGridViewTextBoxColumn";
+			this.targetDataGridViewComboBoxColumn.DataPropertyName = "Target";
+			this.targetDataGridViewComboBoxColumn.HeaderText = "Target";
+			this.targetDataGridViewComboBoxColumn.Name = "targetDataGridViewComboBoxColumn";
+			this.targetDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.targetDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
-			// typeDataGridViewTextBoxColumn
+			// typeDataGridViewComboBoxColumn
 			// 
-			this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-			this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-			this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+			this.typeDataGridViewComboBoxColumn.DataPropertyName = "Type";
+			this.typeDataGridViewComboBoxColumn.HeaderText = "Type";
+			this.typeDataGridViewComboBoxColumn.Name = "typeDataGridViewComboBoxColumn";
+			this.typeDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.typeDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			// 
 			// powerDataGridViewTextBoxColumn
 			// 
@@ -381,20 +406,6 @@ namespace Status_Editer {
 			this.infoDataGridViewTextBoxColumn.HeaderText = "Info";
 			this.infoDataGridViewTextBoxColumn.Name = "infoDataGridViewTextBoxColumn";
 			// 
-			// tableskillBindingSource
-			// 
-			this.tableskillBindingSource.DataMember = "__table_skill";
-			this.tableskillBindingSource.DataSource = this.gigaBattlerDataSet;
-			// 
-			// gigaBattlerDataSet
-			// 
-			this.gigaBattlerDataSet.DataSetName = "GigaBattlerDataSet";
-			this.gigaBattlerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// ___table_skillTableAdapter
-			// 
-			this.___table_skillTableAdapter.ClearBeforeFill = true;
-			// 
 			// FormSkill
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -426,14 +437,14 @@ namespace Status_Editer {
 		private DataGridViewTextBoxColumn skillNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn percentDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn firstDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn airDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn useWeaponDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn wTypeDataGridViewTextBoxColumn;
+		private DataGridViewComboBoxColumn airDataGridViewComboBoxColumn;
+		private DataGridViewComboBoxColumn useWeaponDataGridViewComboBoxColumn;
+		private DataGridViewComboBoxColumn wTypeDataGridViewComboBoxColumn;
 		private DataGridViewTextBoxColumn sPCostDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn tPCostDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn aTCountDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn targetDataGridViewTextBoxColumn;
-		private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+		private DataGridViewComboBoxColumn targetDataGridViewComboBoxColumn;
+		private DataGridViewComboBoxColumn typeDataGridViewComboBoxColumn;
 		private DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn damagePercentDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn sHitDataGridViewTextBoxColumn;

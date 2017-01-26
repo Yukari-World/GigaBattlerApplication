@@ -78,7 +78,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 			// Use Weapon
 			DataTable UseWeaponDataTable = new DataTable();
 
-			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
+			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
 			UseWeaponDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?
@@ -104,7 +104,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 			// Target
 			DataTable TargetDataTable = new DataTable();
 
-			TargetDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
+			TargetDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
 			TargetDataTable.Columns.Add("DataName", Type.GetType("System.String"));
 
 			// 項目配列。Listでもよかったかも...?
@@ -204,6 +204,7 @@ namespace Status_Editer.User_Control.tab14Skill {
 			// デザイナーの設定
 
 			Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left);
+			textInfo.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
 		}// End Method
 
 		/// <summary>

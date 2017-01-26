@@ -5,6 +5,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using static CommonLibrary.GigaBattlerDataSet;
@@ -36,14 +37,20 @@ namespace Status_Editer {
 		/// コンストラクタメソッド
 		/// </summary>
 		/// <param name="DataTable">Shield Data Table</param>
+		/// <param name="TableWeaponTypeDataTable">Table Weapon Type Data Table</param>
 		/// <param name="ElementDataTable">Element Data Table</param>
-		public FormSkill(__table_skillDataTable DataTable, __table_elementDataTable ElementDataTable) {
+		public FormSkill(__table_skillDataTable DataTable, __table_weapon_typeDataTable TableWeaponTypeDataTable, __table_elementDataTable ElementDataTable) {
 			InitializeComponent();
 
 			// 割り当て。編集がリアルタイムに適応されるようになる
 			SkillDataTable = DataTable;
 
 			// コンボボックスの設定
+
+			wTypeDataGridViewComboBoxColumn.DataSource = TableWeaponTypeDataTable.Copy();
+			wTypeDataGridViewComboBoxColumn.DisplayMember = "WeaponTypeName";
+			wTypeDataGridViewComboBoxColumn.ValueMember = "WeaponTypeID";
+
 			element1DataGridViewComboBoxColumn.DataSource = ElementDataTable.Copy();
 			element1DataGridViewComboBoxColumn.ValueMember = "ElementID";
 			element1DataGridViewComboBoxColumn.DisplayMember = "ElementName";
@@ -106,10 +113,116 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void FormSkill_Load(object sender, EventArgs e) {
-			// TODO: このコード行はデータを 'gigaBattlerDataSet.__table_skill' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-			this.___table_skillTableAdapter.Fill(this.gigaBattlerDataSet.@__table_skill);
+			// データ項目の作成
+			// データ項目が少なく、わざわざデータベース化する必要のない項目
+
+			//--------------------------------------------------
+			// Air
+			DataTable AirDataTable = new DataTable();
+
+			AirDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
+			AirDataTable.Columns.Add("DataName", Type.GetType("System.String"));
+
+			// 項目配列。Listでもよかったかも...?
+			byte[] AirDataValue = new byte[] { 0, 1, 2 };
+			string[] AirDataName = new string[] { "無効", "有効", "特効" };
+
+			// 項目の構築
+			for (int i = 0; i < AirDataValue.Length; i++) {
+				DataRow row = AirDataTable.NewRow();
+
+				// カラムにデータを割り当てる
+				row["DataID"] = AirDataValue[i];
+				row["DataName"] = AirDataName[i];
+
+				// Debug文
+				Debug.WriteLine("Air Data Table Row Data:" + AirDataValue[i] + "\t" + AirDataName[i] + ";");
+
+				// 追加する
+				AirDataTable.Rows.Add(row);
+			}// End Loop
+
+			//--------------------------------------------------
+			// Use Weapon
+			DataTable UseWeaponDataTable = new DataTable();
+
+			UseWeaponDataTable.Columns.Add("DataID", Type.GetType("System.Byte"));
+			UseWeaponDataTable.Columns.Add("DataName", Type.GetType("System.String"));
+
+			// 項目配列。Listでもよかったかも...?
+			byte[] UseWeaponDataValue = new byte[] { 0, 1 };
+			string[] UseWeaponDataName = new string[] { "無効", "有効" };
+
+			// 項目の構築
+			for (int i = 0; i < UseWeaponDataValue.Length; i++) {
+				DataRow row = UseWeaponDataTable.NewRow();
+
+				// カラムにデータを割り当てる
+				row["DataID"] = UseWeaponDataValue[i];
+				row["DataName"] = UseWeaponDataName[i];
+
+				// Debug文
+				Debug.WriteLine("UseWeapon Data Table Row Data:" + UseWeaponDataValue[i] + "\t" + UseWeaponDataName[i] + ";");
+
+				// 追加する
+				UseWeaponDataTable.Rows.Add(row);
+			}// End Loop
+
+			//--------------------------------------------------
+			// Target
+			DataTable TargetDataTable = new DataTable();
+
+			TargetDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
+			TargetDataTable.Columns.Add("DataName", Type.GetType("System.String"));
+
+			// 項目配列。Listでもよかったかも...?
+			byte[] TargetDataValue = new byte[] { 0, 1, 2, 3, 4, 5 };
+			string[] TargetDataName = new string[] { "敵単体", "敵全体", "全体", "味方単体", "味方全体", "敵ランダム単体" };
+
+			// 項目の構築
+			for (int i = 0; i < TargetDataValue.Length; i++) {
+				DataRow row = TargetDataTable.NewRow();
+
+				// カラムにデータを割り当てる
+				row["DataID"] = TargetDataValue[i];
+				row["DataName"] = TargetDataName[i];
+
+				// Debug文
+				Debug.WriteLine("Target Data Table Row Data:" + TargetDataValue[i] + "\t" + TargetDataName[i] + ";");
+
+				// 追加する
+				TargetDataTable.Rows.Add(row);
+			}// End Loop
+
+			//--------------------------------------------------
+			// Type
+			DataTable TypeDataTable = new DataTable();
+
+			TypeDataTable.Columns.Add("DataID", Type.GetType("System.SByte"));
+			TypeDataTable.Columns.Add("DataName", Type.GetType("System.String"));
+
+			// 項目配列。Listでもよかったかも...?
+			// 内容を覚えていないため、未確定
+			sbyte[] TypeDataValue = new sbyte[] { -1, 0, 1, 2, 3, 4, 5, 6 };
+			string[] TypeDataName = new string[] { "*使用不可*", "近接", "間接", "魔法", "不明", "不明", "不明", "回復" };
+
+			// 項目の構築
+			for (int i = 0; i < TypeDataValue.Length; i++) {
+				DataRow row = TypeDataTable.NewRow();
+
+				// カラムにデータを割り当てる
+				row["DataID"] = TypeDataValue[i];
+				row["DataName"] = TypeDataName[i];
+
+				// Debug文
+				Debug.WriteLine("Type Data Table Row Data:" + TypeDataValue[i] + "\t" + TypeDataName[i] + ";");
+
+				// 追加する
+				TypeDataTable.Rows.Add(row);
+			}// End Loop
+			
 			//----------------------------------------------------------------------------------------------------
-			// 共通デザイナー設定
+			 // 共通デザイナー設定
 
 			dataGridViewCellStyleN0.Alignment = DataGridViewContentAlignment.MiddleRight;
 			dataGridViewCellStyleN0.Format = "N0";
@@ -118,6 +231,25 @@ namespace Status_Editer {
 			dataGridViewCellStyleN2.Alignment = DataGridViewContentAlignment.MiddleRight;
 			dataGridViewCellStyleN2.Format = "N2";
 			dataGridViewCellStyleN2.NullValue = null;
+
+			//----------------------------------------------------------------------------------------------------
+			// コンボボックスの設定
+
+			airDataGridViewComboBoxColumn.DataSource = AirDataTable;
+			airDataGridViewComboBoxColumn.DisplayMember = "DataName";
+			airDataGridViewComboBoxColumn.ValueMember = "DataID";
+
+			useWeaponDataGridViewComboBoxColumn.DataSource = UseWeaponDataTable;
+			useWeaponDataGridViewComboBoxColumn.DisplayMember = "DataName";
+			useWeaponDataGridViewComboBoxColumn.ValueMember = "DataID";
+			
+			targetDataGridViewComboBoxColumn.DataSource = TargetDataTable;
+			targetDataGridViewComboBoxColumn.DisplayMember = "DataName";
+			targetDataGridViewComboBoxColumn.ValueMember = "DataID";
+
+			typeDataGridViewComboBoxColumn.DataSource = TypeDataTable;
+			typeDataGridViewComboBoxColumn.DisplayMember = "DataName";
+			typeDataGridViewComboBoxColumn.ValueMember = "DataID";
 
 			//----------------------------------------------------------------------------------------------------
 			// カラムデザイナー設定
@@ -138,6 +270,36 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void FormSkill_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
+		}// End Method
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">sender</param>
+		/// <param name="e">Data Grid View Data Error Event Args</param>
+		private void DataGridViewSkill_DataError(object sender, DataGridViewDataErrorEventArgs e) {
+			MessageBox.Show("Error happened " + e.Context.ToString());
+
+			if (e.Context == DataGridViewDataErrorContexts.Commit) {
+				MessageBox.Show("Commit error");
+			}
+			if (e.Context == DataGridViewDataErrorContexts.CurrentCellChange) {
+				MessageBox.Show("Cell change");
+			}
+			if (e.Context == DataGridViewDataErrorContexts.Parsing) {
+				MessageBox.Show("parsing error");
+			}
+			if (e.Context == DataGridViewDataErrorContexts.LeaveControl) {
+				MessageBox.Show("leave control error");
+			}
+
+			if ((e.Exception) is ConstraintException) {
+				DataGridView view = (DataGridView)sender;
+				view.Rows[e.RowIndex].ErrorText = "an error";
+				view.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "an error";
+
+				e.ThrowException = false;
+			}
 		}// End Method
 	}// End Class
 }
