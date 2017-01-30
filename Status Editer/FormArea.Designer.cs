@@ -55,7 +55,7 @@ namespace Status_Editer {
 			this.movetoArea8DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.movetoArea9DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.movetoArea10DataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.infoDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.infoDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewArea)).BeginInit();
@@ -313,6 +313,6 @@ namespace Status_Editer {
 		private DataGridViewComboBoxColumn movetoArea8DataGridViewComboBoxColumn;
 		private DataGridViewComboBoxColumn movetoArea9DataGridViewComboBoxColumn;
 		private DataGridViewComboBoxColumn movetoArea10DataGridViewComboBoxColumn;
-		private DataGridViewComboBoxColumn infoDataGridViewComboBoxColumn;
+		private DataGridViewTextBoxColumn infoDataGridViewComboBoxColumn;
 	}
 }
