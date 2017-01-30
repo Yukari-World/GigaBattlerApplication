@@ -61,6 +61,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			this.numericPower.TabIndex = 1;
 			this.numericPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericPower.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericPower, "スキルの威力。1 ≒ 1%\r\n値が大きい程ダメージが大きくなる\r\n設定値: 0～ 65,535\r\n");
 			this.numericPower.Value = new decimal(new int[] {
             100,
             0,
@@ -90,6 +91,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			this.numericDamage.TabIndex = 3;
 			this.numericDamage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericDamage.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericDamage, "ダメージ計算後に増減する倍率。1 = 0.01%\r\nダメージが大きいほどこの値の影響が大きくなる。\r\n設定値: 0～ 9,999,999");
 			this.numericDamage.Value = new decimal(new int[] {
             10000,
             0,
@@ -133,6 +135,7 @@ namespace Status_Editer.User_Control.tab14Skill.Parts {
 			this.numericBlurring.TabIndex = 5;
 			this.numericBlurring.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericBlurring.ThousandsSeparator = true;
+			this.toolTipInfo.SetToolTip(this.numericBlurring, "全ての計算後に影響するダメージのランダム幅。1 = 0.01%\r\n0で固定。100.00%で不安定ダメージとなる\r\n設定値: 0～ 10,000\r\n");
 			this.numericBlurring.Value = new decimal(new int[] {
             1500,
             0,

@@ -101,6 +101,7 @@ namespace Status_Editer {
 		FormArmor FormArmorData = null;
 		FormAccessory FormAccessoryData = null;
 		FormSkill FormSkillData = null;
+		FormArea FormAreaData = null;
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1803,6 +1804,24 @@ namespace Status_Editer {
 
 		}// End Method
 
+
+
+		/// <summary>
+		/// 「ウィンドウ」→「都市名･地域名」の処理内容
+		/// </summary>
+		/// <remarks>
+		/// 以下のページより参照
+		/// http://tkmcra01.web.fc2.com/index/tajuu.html
+		/// </remarks>
+		/// <param name="sender">object</param>
+		/// <param name="e">EventArgs</param>
+		private void StripMenuWindowViewArea_Click(object sender, EventArgs e) {
+			if ((FormAreaData == null) || FormAreaData.IsDisposed) {
+				FormAreaData = new FormArea(TableAreaDataTable, TableBattleAreaDataTable);
+				FormAreaData.Show();
+			}// End If
+		}// End Method
+
 		#endregion
 
 		//----------------------------------------------------------------------------------------------------
@@ -2138,18 +2157,24 @@ namespace Status_Editer {
 		/// Table Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
 		/// </summary>
 		/// <param name="sender">object</param>
-		/// <param name="e">DataRowChangeEventArgs</param>
+		/// <param name="e">Data Row Change Event Args</param>
 		private void TableAreaDataTable_Changed(object sender, DataRowChangeEventArgs e) {
-
+			// フォームが閉じていなければ
+			if (!(FormAreaData == null)) {
+				FormAreaData.ReloadDataSource(TableAreaDataTable);
+			}// End If
 		}// End Method
 
 		/// <summary>
 		/// Table Battle Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
 		/// </summary>
 		/// <param name="sender">object</param>
-		/// <param name="e">DataRowChangeEventArgs</param>
+		/// <param name="e">Data Row Change Event Args</param>
 		private void TableBattleAreaDataTable_Changed(object sender, DataRowChangeEventArgs e) {
-
+			// フォームが閉じていなければ
+			if (!(FormAreaData == null)) {
+				FormAreaData.ReloadDataSource(TableBattleAreaDataTable);
+			}// End If
 		}// End Method
 	}// End Class
 }

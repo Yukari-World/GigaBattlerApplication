@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>ja-JP</TargetCulture>
-    <ApplicationRevision>63</ApplicationRevision>
+    <ApplicationRevision>64</ApplicationRevision>
     <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArea.Designer.cs">
+      <DependentUpon>FormArea.cs</DependentUpon>
     </Compile>
     <Compile Include="EditerMainMenu.cs">
       <SubType>Form</SubType>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAccessory.resx">
       <DependentUpon>FormAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArea.resx">
+      <DependentUpon>FormArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormArmor.resx">
       <DependentUpon>FormArmor.cs</DependentUpon>

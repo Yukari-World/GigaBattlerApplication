@@ -3040,7 +3040,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public @__table_areaRow Add__table_areaRow(
-                        int AreaID, 
+                        string AreaID, 
                         string AreaName, 
                         string BattleID1, 
                         string BattleID2, 
@@ -3095,7 +3095,7 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_areaRow FindByAreaID(int AreaID) {
+            public @__table_areaRow FindByAreaID(string AreaID) {
                 return ((@__table_areaRow)(this.Rows.Find(new object[] {
                             AreaID})));
             }
@@ -3145,7 +3145,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnAreaID = new global::System.Data.DataColumn("AreaID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnAreaID = new global::System.Data.DataColumn("AreaID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAreaID);
                 this.columnAreaName = new global::System.Data.DataColumn("AreaName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAreaName);
@@ -4375,7 +4375,7 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_battle_areaRow Add__table_battle_areaRow(int BattleAreaID, string BattleAreaName, string Info, decimal Gravity, int Min_Lv, int Max_Lv) {
+            public @__table_battle_areaRow Add__table_battle_areaRow(string BattleAreaID, string BattleAreaName, string Info, decimal Gravity, int Min_Lv, int Max_Lv) {
                 @__table_battle_areaRow row__table_battle_areaRow = ((@__table_battle_areaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BattleAreaID,
@@ -4391,7 +4391,7 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public @__table_battle_areaRow FindByBattleAreaID(int BattleAreaID) {
+            public @__table_battle_areaRow FindByBattleAreaID(string BattleAreaID) {
                 return ((@__table_battle_areaRow)(this.Rows.Find(new object[] {
                             BattleAreaID})));
             }
@@ -4424,7 +4424,7 @@ namespace CommonLibrary {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnBattleAreaID = new global::System.Data.DataColumn("BattleAreaID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnBattleAreaID = new global::System.Data.DataColumn("BattleAreaID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBattleAreaID);
                 this.columnBattleAreaName = new global::System.Data.DataColumn("BattleAreaName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBattleAreaName);
@@ -21101,9 +21101,9 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int AreaID {
+            public string AreaID {
                 get {
-                    return ((int)(this[this.table__table_area.AreaIDColumn]));
+                    return ((string)(this[this.table__table_area.AreaIDColumn]));
                 }
                 set {
                     this[this.table__table_area.AreaIDColumn] = value;
@@ -21841,9 +21841,9 @@ namespace CommonLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int BattleAreaID {
+            public string BattleAreaID {
                 get {
-                    return ((int)(this[this.table__table_battle_area.BattleAreaIDColumn]));
+                    return ((string)(this[this.table__table_battle_area.BattleAreaIDColumn]));
                 }
                 set {
                     this[this.table__table_battle_area.BattleAreaIDColumn] = value;

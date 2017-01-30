@@ -36,7 +36,7 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		/// <param name="DataTable">Shield Data Table</param>
+		/// <param name="DataTable">Skill Data Table</param>
 		/// <param name="TableWeaponTypeDataTable">Table Weapon Type Data Table</param>
 		/// <param name="ElementDataTable">Element Data Table</param>
 		public FormSkill(__table_skillDataTable DataTable, __table_weapon_typeDataTable TableWeaponTypeDataTable, __table_elementDataTable ElementDataTable) {
@@ -273,25 +273,36 @@ namespace Status_Editer {
 		}// End Method
 
 		/// <summary>
-		/// 
+		/// Data Error 発生時のメッセージや処理
 		/// </summary>
 		/// <param name="sender">sender</param>
 		/// <param name="e">Data Grid View Data Error Event Args</param>
 		private void DataGridViewSkill_DataError(object sender, DataGridViewDataErrorEventArgs e) {
-			MessageBox.Show("Error happened " + e.Context.ToString());
+			string er = "Error Info: \n";
+			//MessageBox.Show("Error Happened: " + e.Context.ToString());
 
-			if (e.Context == DataGridViewDataErrorContexts.Commit) {
-				MessageBox.Show("Commit error");
-			}
-			if (e.Context == DataGridViewDataErrorContexts.CurrentCellChange) {
-				MessageBox.Show("Cell change");
-			}
-			if (e.Context == DataGridViewDataErrorContexts.Parsing) {
-				MessageBox.Show("parsing error");
-			}
-			if (e.Context == DataGridViewDataErrorContexts.LeaveControl) {
-				MessageBox.Show("leave control error");
-			}
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.Commit)) {
+				er += "Commit Error\n";
+			}// End If
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.CurrentCellChange)) {
+				er += "Cell Change Error\n";
+			}// End If
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.Formatting)) {
+				er += "Formatting Error\n";
+			}// End If
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.LeaveControl)) {
+				er += "Leave Control Error\n";
+			}// End If
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.Parsing)) {
+				er += "Parsing Error\n";
+			}// End If
+			if (e.Context.HasFlag(DataGridViewDataErrorContexts.PreferredSize)) {
+				er += "Preferred Size Error\n";
+			}// End If
+
+			MessageBox.Show(er + e.RowIndex + "行 " + e.ColumnIndex + "列 " + e.Exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+			Debug.WriteLine(er + e.RowIndex + "行 " + e.ColumnIndex + "列 " + e.Exception);
 
 			if ((e.Exception) is ConstraintException) {
 				DataGridView view = (DataGridView)sender;
@@ -299,7 +310,7 @@ namespace Status_Editer {
 				view.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "an error";
 
 				e.ThrowException = false;
-			}
+			}// End If
 		}// End Method
 	}// End Class
 }
