@@ -59,6 +59,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			// 
 			// comboSkill
 			// 
+			this.comboSkill.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboSkill.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboSkill.DisplayMember = "SkillName";
 			this.comboSkill.FormattingEnabled = true;
 			this.comboSkill.Location = new System.Drawing.Point(10, 20);

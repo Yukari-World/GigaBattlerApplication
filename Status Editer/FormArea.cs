@@ -244,9 +244,9 @@ namespace Status_Editer {
 				er += "Preferred Size Error\n";
 			}// End If
 
-			MessageBox.Show(er + e.RowIndex + "行 " + e.ColumnIndex + "列 " + e.Exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show(er + (e.RowIndex + 1) + "行 " + (e.ColumnIndex + 1) + "列 " + e.Exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-			Debug.WriteLine(er + e.RowIndex + "行 " + e.ColumnIndex + "列 " + e.Exception);
+			Debug.WriteLine(er + (e.RowIndex + 1) + "行 " + (e.ColumnIndex + 1) + "列 " + e.Exception);
 
 			if ((e.Exception) is ConstraintException) {
 				DataGridView view = (DataGridView)sender;

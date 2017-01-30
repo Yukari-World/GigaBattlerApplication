@@ -95,6 +95,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.comboDropTable.Name = "comboDropTable";
 			this.comboDropTable.Size = new System.Drawing.Size(300, 20);
 			this.comboDropTable.TabIndex = 1;
+			this.comboDropTable.SelectedIndexChanged += new System.EventHandler(this.comboDropTable_SelectedIndexChanged);
 			// 
 			// labelDropTable
 			// 

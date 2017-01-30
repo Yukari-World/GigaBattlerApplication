@@ -5,6 +5,7 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
@@ -224,5 +225,20 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Control Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		/// <summary>
+		/// comboDropTableの内容が変更された時の処理内容
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void comboDropTable_SelectedIndexChanged(object sender, EventArgs e) {
+			// アイテム未指定の場合、エラー防止のため、ドロップ率を0にした上で編集不可にする
+			if (comboDropTable.SelectedIndex == 0) {
+				numericDropRate.Value = 0;
+				numericDropRate.Enabled = false;
+			}else {
+				numericDropRate.Enabled = true;
+			}
+		}// End Method
 	}// End Class
 }

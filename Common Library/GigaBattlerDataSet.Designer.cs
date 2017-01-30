@@ -3195,6 +3195,7 @@ namespace CommonLibrary {
                                 this.columnAreaID}, true));
                 this.columnAreaID.AllowDBNull = false;
                 this.columnAreaID.Unique = true;
+                this.columnAreaID.MaxLength = 32;
                 this.columnAreaName.AllowDBNull = false;
                 this.columnAreaName.MaxLength = 64;
                 this.columnBattleID1.AllowDBNull = false;
@@ -4440,6 +4441,7 @@ namespace CommonLibrary {
                                 this.columnBattleAreaID}, true));
                 this.columnBattleAreaID.AllowDBNull = false;
                 this.columnBattleAreaID.Unique = true;
+                this.columnBattleAreaID.MaxLength = 32;
                 this.columnBattleAreaName.AllowDBNull = false;
                 this.columnBattleAreaName.MaxLength = 64;
                 this.columnInfo.AllowDBNull = false;

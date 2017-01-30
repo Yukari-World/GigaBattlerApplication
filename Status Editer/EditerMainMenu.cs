@@ -128,6 +128,8 @@ namespace Status_Editer {
 		// Private Method
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		#region ReloadControl
+
 		/// <summary>
 		/// 各コントロールの選択項目を再読み込みします
 		/// </summary>
@@ -173,6 +175,10 @@ namespace Status_Editer {
 			ItemInfoAccessory.ReloadDataTable(TableElementDataTable);
 			toolStripProgressBar1.PerformStep();    // カウント
 		}// End Method
+
+		#endregion
+
+		#region UpdateSQL
 
 		/// <summary>
 		/// 変更した更新内容を適用します。
@@ -231,6 +237,8 @@ namespace Status_Editer {
 				MessageBox.Show("Database Update Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}// End Try
 		}// End Method
+
+		#endregion
 
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1002,6 +1010,10 @@ namespace Status_Editer {
 					toolStripProgressBar1.PerformStep();    // カウント
 					sum += RowCount[(int)RowState.Ability] = TableAbilityTableAdapter.Fill(TableAbilityDataTable);
 					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[(int)RowState.Area] = TableAreaTableAdapter.Fill(TableAreaDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
+					sum += RowCount[(int)RowState.BattleArea] = TAbleBattleAreaTableAdapter.Fill(TableBattleAreaDataTable);
+					toolStripProgressBar1.PerformStep();    // カウント
 
 					ReloadControl();
 
@@ -1016,7 +1028,7 @@ namespace Status_Editer {
 
 
 		/// <summary>
-		/// 「データベース」→「再読み込み」→「メニュー項目のみ」の処理内容
+		/// 「データベース」→「再読み込み」→「メニュー項目のみ」の処理内容(※削除予定)
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
@@ -2144,7 +2156,79 @@ namespace Status_Editer {
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
 		private void StripMenuContextDelete_Click(object sender, EventArgs e) {
-
+			try {
+				// タブ毎に処理を変える
+				// そもそもデータテーブルの形が異なるので一部処理の使い回しが効かない
+				switch (tabControl.SelectedIndex) {
+					//TAB: ユニット
+					case 2:
+						TableUnitDataTable.Rows[listUnit.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: ユニットタイプ
+					case 3:
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 種族
+					case 4:
+						TableRaceDataTable.Rows[listRace.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: ジョブ
+					case 5:
+						TableJobDataTable.Rows[listJob.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: メーカー
+					case 6:
+						TableMakerDataTable.Rows[listMaker.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 武器
+					case 7:
+						TableWeaponDataTable.Rows[listWeapon.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 盾
+					case 8:
+						TableShieldDataTable.Rows[listShield.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 頭防具
+					case 9:
+						TableHelmetDataTable.Rows[listHelmet.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 腕防具
+					case 10:
+						TableGauntletDataTable.Rows[listGauntlet.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: 体防具
+					case 11:
+						TableArmorDataTable.Rows[listArmor.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: アクセサリー
+					case 12:
+						TableAccessoryDataTable.Rows[listAccessory.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: スキル
+					case 13:
+						TableSkillDataTable.Rows[listSkill.SelectedIndex].Delete();
+						break;
+					//----------------------------------------------------------------------------------------------------
+					// TAB: アビリティ
+					case 14:
+						TableAbilityDataTable.Rows[listAbility.SelectedIndex].Delete();
+						break;
+				}// End Switch
+			} catch (Exception ex) {
+				StripInfo.Text = "Error Info:" + ex.Message + ex.HelpLink;
+				Debug.WriteLine("Duplicate Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace);
+				MessageBox.Show("Duplicate Failed:\n" + ex.InnerException + "\n" + ex.Message + "\n" + ex.Source + "\n" + ex.StackTrace, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}// End Try
 		}// End Method
 
 		#endregion
@@ -2152,6 +2236,8 @@ namespace Status_Editer {
 		//----------------------------------------------------------------------------------------------------
 		// Data Table 関連
 		// コンボボックスにリアルタイムで変更を反映するためのコード
+
+		#region Data Table 関連
 
 		/// <summary>
 		/// Table Area Data Tableが更新された時の処理。このData Tableは自己データを参照するため値変更時、更新処理が必要
@@ -2176,5 +2262,8 @@ namespace Status_Editer {
 				FormAreaData.ReloadDataSource(TableBattleAreaDataTable);
 			}// End If
 		}// End Method
+
+		#endregion
+
 	}// End Class
 }
