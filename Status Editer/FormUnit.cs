@@ -3,17 +3,11 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using Status_Editer.GigaBattlerDataSetTableAdapters;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class FormUnit : Form {
@@ -23,6 +17,11 @@ namespace Status_Editer {
 
 		// DataTable
 		private DataTable UnitDataTable = new __table_unitDataTable();
+
+		// DataGridViewCellStyle
+		private DataGridViewCellStyle dataGridViewCellStyleN0 = new DataGridViewCellStyle();
+		private DataGridViewCellStyle dataGridViewCellStyleN2 = new DataGridViewCellStyle();
+
 
 		//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Property
@@ -36,10 +35,18 @@ namespace Status_Editer {
 		/// <summary>
 		/// コンストラクタメソッド
 		/// </summary>
-		public FormUnit(__table_unitDataTable DataTable) {
-			// 割り当て
-			UnitDataTable = DataTable;
+		/// <param name="DataTable">Unit Data Table</param>
+		/// <param name="TypeDataTable">Weapon Type Data Table</param>
+		public FormUnit(__table_unitDataTable DataTable, __table_weapon_typeDataTable TypeDataTable) {
 			InitializeComponent();
+
+			// 割り当て。編集がリアルタイムに適応されるようになる
+			UnitDataTable = DataTable;
+
+			// コンボボックスの設定
+			typeDataGridViewComboBoxColumn.DataSource = TypeDataTable;
+			typeDataGridViewComboBoxColumn.ValueMember = "WeaponTypeID";
+			typeDataGridViewComboBoxColumn.DisplayMember = "WeaponTypeName";
 		}// End Method
 
 
@@ -62,11 +69,35 @@ namespace Status_Editer {
 		/// </summary>
 		/// <param name="sender">object</param>
 		/// <param name="e">EventArgs</param>
-		private void TestForm_Load(object sender, EventArgs e) {
+		private void FormUnit_Load(object sender, EventArgs e) {
+			//----------------------------------------------------------------------------------------------------
+			// 共通デザイナー設定
+
+			dataGridViewCellStyleN0.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN0.Format = "N0";
+			dataGridViewCellStyleN0.NullValue = null;
+
+			dataGridViewCellStyleN2.Alignment = DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyleN2.Format = "N2";
+			dataGridViewCellStyleN2.NullValue = null;
+
+			//----------------------------------------------------------------------------------------------------
+			// カラムデザイナー設定
+
+			reqLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			minLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			maxLvDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			startTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			maxTPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN0;
+			hPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyleN2;
+
+			//----------------------------------------------------------------------------------------------------
 			// データソースのすり替え
-			dataGridView1.DataSource = UnitDataTable;
-			dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
-			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
+
+			DataGridViewUnit.DataSource = UnitDataTable;
+			DataGridViewUnit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			DataGridViewUnit.DefaultCellStyle.BackColor = Color.FromArgb(189, 215, 238);
+			DataGridViewUnit.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(221, 235, 247);
 		}// End Method
 
 		/// <summary>
@@ -76,6 +107,6 @@ namespace Status_Editer {
 		/// <param name="e">EventArgs</param>
 		private void FormUnit_FormClosed(object sender, FormClosedEventArgs e) {
 			Dispose();
-		}
+		}// End Method
 	}// End Class
 }

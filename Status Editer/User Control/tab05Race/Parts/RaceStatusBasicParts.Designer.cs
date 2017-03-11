@@ -54,7 +54,7 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.groupBasic.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBasic.Location = new System.Drawing.Point(0, 0);
 			this.groupBasic.Name = "groupBasic";
-			this.groupBasic.Size = new System.Drawing.Size(650, 60);
+			this.groupBasic.Size = new System.Drawing.Size(700, 60);
 			this.groupBasic.TabIndex = 0;
 			this.groupBasic.TabStop = false;
 			this.groupBasic.Text = "Label";
@@ -80,28 +80,29 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// 
 			// numericBase
 			// 
+			this.numericBase.DecimalPlaces = 2;
 			this.numericBase.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericBase.Location = new System.Drawing.Point(10, 30);
 			this.numericBase.Maximum = new decimal(new int[] {
-			9999,
-			0,
-			0,
-			0});
+            9999,
+            0,
+            0,
+            0});
 			this.numericBase.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+            1,
+            0,
+            0,
+            0});
 			this.numericBase.Name = "numericBase";
 			this.numericBase.Size = new System.Drawing.Size(150, 19);
 			this.numericBase.TabIndex = 1;
 			this.numericBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericBase.ThousandsSeparator = true;
 			this.numericBase.Value = new decimal(new int[] {
-			9,
-			0,
-			0,
-			0});
+            9,
+            0,
+            0,
+            0});
 			this.numericBase.ValueChanged += new System.EventHandler(this.numericBase_ValueChanged);
 			// 
 			// labelBase
@@ -129,26 +130,26 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			this.numericLvPStatus.DecimalPlaces = 2;
 			this.numericLvPStatus.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericLvPStatus.Increment = new decimal(new int[] {
-			5,
-			0,
-			0,
-			65536});
+            5,
+            0,
+            0,
+            65536});
 			this.numericLvPStatus.Location = new System.Drawing.Point(200, 30);
 			this.numericLvPStatus.Maximum = new decimal(new int[] {
-			999999,
-			0,
-			0,
-			131072});
+            999999,
+            0,
+            0,
+            131072});
 			this.numericLvPStatus.Name = "numericLvPStatus";
 			this.numericLvPStatus.Size = new System.Drawing.Size(150, 19);
 			this.numericLvPStatus.TabIndex = 3;
 			this.numericLvPStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericLvPStatus.ThousandsSeparator = true;
 			this.numericLvPStatus.Value = new decimal(new int[] {
-			63,
-			0,
-			0,
-			65536});
+            63,
+            0,
+            0,
+            65536});
 			this.numericLvPStatus.ValueChanged += new System.EventHandler(this.numericLvPStatus_ValueChanged);
 			// 
 			// toolTipInfo
@@ -164,10 +165,9 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupBasic);
 			this.Name = "RaceStatusBasicParts";
-			this.Size = new System.Drawing.Size(650, 60);
+			this.Size = new System.Drawing.Size(700, 60);
 			this.Load += new System.EventHandler(this.RaceStatusBasicParts_Load);
 			this.groupBasic.ResumeLayout(false);
 			this.groupBasic.PerformLayout();

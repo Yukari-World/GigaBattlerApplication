@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.CommonParts {
-	partial class ItemStatusParts {
+	partial class StatusGraphParts {
 		/// <summary> 
 		/// 必要なデザイナー変数です。
 		/// </summary>
@@ -27,43 +27,43 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numericValue = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericValue)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// numericUpDown1
+			// numericValue
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(100, 1);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
-			999999,
-			0,
-			0,
-			0});
-			this.numericUpDown1.Minimum = new decimal(new int[] {
-			999999,
-			0,
-			0,
-			-2147483648});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(80, 19);
-			this.numericUpDown1.TabIndex = 13;
-			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numericUpDown1.ThousandsSeparator = true;
-			this.numericUpDown1.Value = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
-			this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+			this.numericValue.Location = new System.Drawing.Point(100, 1);
+			this.numericValue.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+			this.numericValue.Minimum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            -2147483648});
+			this.numericValue.Name = "numericValue";
+			this.numericValue.Size = new System.Drawing.Size(80, 19);
+			this.numericValue.TabIndex = 1;
+			this.numericValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericValue.ThousandsSeparator = true;
+			this.numericValue.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.numericValue.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
 			// 
 			// label1
 			// 
 			this.label1.Location = new System.Drawing.Point(10, 3);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(70, 15);
-			this.label1.TabIndex = 14;
+			this.label1.TabIndex = 0;
 			this.label1.Text = "Label";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
@@ -76,25 +76,24 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// ItemStatusParts
+			// StatusGraphParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.numericUpDown1);
-			this.Name = "ItemStatusParts";
+			this.Controls.Add(this.numericValue);
+			this.Name = "StatusGraphParts";
 			this.Size = new System.Drawing.Size(730, 20);
 			this.Load += new System.EventHandler(this.ItemStatusParts_Load);
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemStatusParts_Paint);
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericValue)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private NumericUpDown numericUpDown1;
+		private NumericUpDown numericValue;
 		private Label label1;
 		private ToolTip toolTipInfo;
 	}

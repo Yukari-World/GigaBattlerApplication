@@ -7,7 +7,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer.User_Control.tab05Race.Parts {
 	[ToolboxItem(true)]
@@ -110,6 +110,11 @@ namespace Status_Editer.User_Control.tab05Race.Parts {
 			// データバインドの設定
 			numericBase.DataBindings.Add(new Binding("Value", TableRaceDataTable, bindTag, true));
 			numericLvPStatus.DataBindings.Add(new Binding("Value", TableRaceDataTable, "Lv" + bindTag, true));
+
+			//----------------------------------------------------------------------------------------------------
+			// デザイナーの設定
+
+			Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
 		}// End Method
 
 

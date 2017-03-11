@@ -28,26 +28,26 @@ namespace Status_Editer.User_Control.CommonParts {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.GroupItemStatus = new System.Windows.Forms.GroupBox();
 			this.labelGraph6 = new System.Windows.Forms.Label();
 			this.labelGraph5 = new System.Windows.Forms.Label();
 			this.labelGraph4 = new System.Windows.Forms.Label();
 			this.labelGraph3 = new System.Windows.Forms.Label();
 			this.labelGraph2 = new System.Windows.Forms.Label();
 			this.labelGraph1 = new System.Windows.Forms.Label();
-			this.itemStatusEVT = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusHIT = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusLuck = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusSPD = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusMagicDEF = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusMagicATK = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusRangeDEF = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusRangeATK = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusMeleeDEF = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusMeleeATK = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusTP = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.itemStatusHP = new Status_Editer.User_Control.CommonParts.ItemStatusParts();
-			this.groupBox1.SuspendLayout();
+			this.StatusGraphEVT = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphHIT = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphLuck = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphSPD = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphMagicDEF = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphMagicATK = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphRangeDEF = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphRangeATK = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphMeleeDEF = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphMeleeATK = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphTP = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.StatusGraphHP = new Status_Editer.User_Control.CommonParts.StatusGraphParts();
+			this.GroupItemStatus.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolTipInfo
@@ -59,33 +59,33 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.toolTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.toolTipInfo.ToolTipTitle = "Infomation";
 			// 
-			// groupBox1
+			// GroupItemStatus
 			// 
-			this.groupBox1.Controls.Add(this.labelGraph6);
-			this.groupBox1.Controls.Add(this.labelGraph5);
-			this.groupBox1.Controls.Add(this.labelGraph4);
-			this.groupBox1.Controls.Add(this.labelGraph3);
-			this.groupBox1.Controls.Add(this.labelGraph2);
-			this.groupBox1.Controls.Add(this.labelGraph1);
-			this.groupBox1.Controls.Add(this.itemStatusEVT);
-			this.groupBox1.Controls.Add(this.itemStatusHIT);
-			this.groupBox1.Controls.Add(this.itemStatusLuck);
-			this.groupBox1.Controls.Add(this.itemStatusSPD);
-			this.groupBox1.Controls.Add(this.itemStatusMagicDEF);
-			this.groupBox1.Controls.Add(this.itemStatusMagicATK);
-			this.groupBox1.Controls.Add(this.itemStatusRangeDEF);
-			this.groupBox1.Controls.Add(this.itemStatusRangeATK);
-			this.groupBox1.Controls.Add(this.itemStatusMeleeDEF);
-			this.groupBox1.Controls.Add(this.itemStatusMeleeATK);
-			this.groupBox1.Controls.Add(this.itemStatusTP);
-			this.groupBox1.Controls.Add(this.itemStatusHP);
-			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupBox1.Location = new System.Drawing.Point(0, 0);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(760, 300);
-			this.groupBox1.TabIndex = 0;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Item Status";
+			this.GroupItemStatus.Controls.Add(this.labelGraph6);
+			this.GroupItemStatus.Controls.Add(this.labelGraph5);
+			this.GroupItemStatus.Controls.Add(this.labelGraph4);
+			this.GroupItemStatus.Controls.Add(this.labelGraph3);
+			this.GroupItemStatus.Controls.Add(this.labelGraph2);
+			this.GroupItemStatus.Controls.Add(this.labelGraph1);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphEVT);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphHIT);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphLuck);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphSPD);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphMagicDEF);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphMagicATK);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphRangeDEF);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphRangeATK);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphMeleeDEF);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphMeleeATK);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphTP);
+			this.GroupItemStatus.Controls.Add(this.StatusGraphHP);
+			this.GroupItemStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.GroupItemStatus.Location = new System.Drawing.Point(0, 0);
+			this.GroupItemStatus.Name = "GroupItemStatus";
+			this.GroupItemStatus.Size = new System.Drawing.Size(760, 300);
+			this.GroupItemStatus.TabIndex = 0;
+			this.GroupItemStatus.TabStop = false;
+			this.GroupItemStatus.Text = "Item Status";
 			// 
 			// labelGraph6
 			// 
@@ -141,123 +141,122 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.labelGraph1.Text = "0";
 			this.labelGraph1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// itemStatusEVT
+			// StatusGraphEVT
 			// 
-			this.itemStatusEVT.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusEVT.Location = new System.Drawing.Point(15, 240);
-			this.itemStatusEVT.Name = "itemStatusEVT";
-			this.itemStatusEVT.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusEVT.StatusLabel = "EVT";
-			this.itemStatusEVT.TabIndex = 11;
+			this.StatusGraphEVT.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphEVT.Location = new System.Drawing.Point(15, 240);
+			this.StatusGraphEVT.Name = "StatusGraphEVT";
+			this.StatusGraphEVT.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphEVT.StatusLabel = "EVT";
+			this.StatusGraphEVT.TabIndex = 11;
 			// 
-			// itemStatusHIT
+			// StatusGraphHIT
 			// 
-			this.itemStatusHIT.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusHIT.Location = new System.Drawing.Point(15, 220);
-			this.itemStatusHIT.Name = "itemStatusHIT";
-			this.itemStatusHIT.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusHIT.StatusLabel = "HIT";
-			this.itemStatusHIT.TabIndex = 10;
+			this.StatusGraphHIT.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphHIT.Location = new System.Drawing.Point(15, 220);
+			this.StatusGraphHIT.Name = "StatusGraphHIT";
+			this.StatusGraphHIT.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphHIT.StatusLabel = "HIT";
+			this.StatusGraphHIT.TabIndex = 10;
 			// 
-			// itemStatusLuck
+			// StatusGraphLuck
 			// 
-			this.itemStatusLuck.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusLuck.Location = new System.Drawing.Point(15, 200);
-			this.itemStatusLuck.Name = "itemStatusLuck";
-			this.itemStatusLuck.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusLuck.StatusLabel = "Luck";
-			this.itemStatusLuck.TabIndex = 9;
+			this.StatusGraphLuck.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphLuck.Location = new System.Drawing.Point(15, 200);
+			this.StatusGraphLuck.Name = "StatusGraphLuck";
+			this.StatusGraphLuck.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphLuck.StatusLabel = "Luck";
+			this.StatusGraphLuck.TabIndex = 9;
 			// 
-			// itemStatusSPD
+			// StatusGraphSPD
 			// 
-			this.itemStatusSPD.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusSPD.Location = new System.Drawing.Point(15, 180);
-			this.itemStatusSPD.Name = "itemStatusSPD";
-			this.itemStatusSPD.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusSPD.StatusLabel = "SPD";
-			this.itemStatusSPD.TabIndex = 8;
+			this.StatusGraphSPD.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphSPD.Location = new System.Drawing.Point(15, 180);
+			this.StatusGraphSPD.Name = "StatusGraphSPD";
+			this.StatusGraphSPD.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphSPD.StatusLabel = "SPD";
+			this.StatusGraphSPD.TabIndex = 8;
 			// 
-			// itemStatusMagicDEF
+			// StatusGraphMagicDEF
 			// 
-			this.itemStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusMagicDEF.Location = new System.Drawing.Point(15, 160);
-			this.itemStatusMagicDEF.Name = "itemStatusMagicDEF";
-			this.itemStatusMagicDEF.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusMagicDEF.StatusLabel = "Magic DEF";
-			this.itemStatusMagicDEF.TabIndex = 7;
+			this.StatusGraphMagicDEF.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphMagicDEF.Location = new System.Drawing.Point(15, 160);
+			this.StatusGraphMagicDEF.Name = "StatusGraphMagicDEF";
+			this.StatusGraphMagicDEF.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphMagicDEF.StatusLabel = "Magic DEF";
+			this.StatusGraphMagicDEF.TabIndex = 7;
 			// 
-			// itemStatusMagicATK
+			// StatusGraphMagicATK
 			// 
-			this.itemStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusMagicATK.Location = new System.Drawing.Point(15, 140);
-			this.itemStatusMagicATK.Name = "itemStatusMagicATK";
-			this.itemStatusMagicATK.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusMagicATK.StatusLabel = "Magic ATK";
-			this.itemStatusMagicATK.TabIndex = 6;
+			this.StatusGraphMagicATK.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphMagicATK.Location = new System.Drawing.Point(15, 140);
+			this.StatusGraphMagicATK.Name = "StatusGraphMagicATK";
+			this.StatusGraphMagicATK.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphMagicATK.StatusLabel = "Magic ATK";
+			this.StatusGraphMagicATK.TabIndex = 6;
 			// 
-			// itemStatusRangeDEF
+			// StatusGraphRangeDEF
 			// 
-			this.itemStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusRangeDEF.Location = new System.Drawing.Point(15, 120);
-			this.itemStatusRangeDEF.Name = "itemStatusRangeDEF";
-			this.itemStatusRangeDEF.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusRangeDEF.StatusLabel = "Range DEF";
-			this.itemStatusRangeDEF.TabIndex = 5;
+			this.StatusGraphRangeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphRangeDEF.Location = new System.Drawing.Point(15, 120);
+			this.StatusGraphRangeDEF.Name = "StatusGraphRangeDEF";
+			this.StatusGraphRangeDEF.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphRangeDEF.StatusLabel = "Range DEF";
+			this.StatusGraphRangeDEF.TabIndex = 5;
 			// 
-			// itemStatusRangeATK
+			// StatusGraphRangeATK
 			// 
-			this.itemStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusRangeATK.Location = new System.Drawing.Point(15, 100);
-			this.itemStatusRangeATK.Name = "itemStatusRangeATK";
-			this.itemStatusRangeATK.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusRangeATK.StatusLabel = "Range ATK";
-			this.itemStatusRangeATK.TabIndex = 4;
+			this.StatusGraphRangeATK.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphRangeATK.Location = new System.Drawing.Point(15, 100);
+			this.StatusGraphRangeATK.Name = "StatusGraphRangeATK";
+			this.StatusGraphRangeATK.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphRangeATK.StatusLabel = "Range ATK";
+			this.StatusGraphRangeATK.TabIndex = 4;
 			// 
-			// itemStatusMeleeDEF
+			// StatusGraphMeleeDEF
 			// 
-			this.itemStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusMeleeDEF.Location = new System.Drawing.Point(15, 80);
-			this.itemStatusMeleeDEF.Name = "itemStatusMeleeDEF";
-			this.itemStatusMeleeDEF.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusMeleeDEF.StatusLabel = "Melee DEF";
-			this.itemStatusMeleeDEF.TabIndex = 3;
+			this.StatusGraphMeleeDEF.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphMeleeDEF.Location = new System.Drawing.Point(15, 80);
+			this.StatusGraphMeleeDEF.Name = "StatusGraphMeleeDEF";
+			this.StatusGraphMeleeDEF.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphMeleeDEF.StatusLabel = "Melee DEF";
+			this.StatusGraphMeleeDEF.TabIndex = 3;
 			// 
-			// itemStatusMeleeATK
+			// StatusGraphMeleeATK
 			// 
-			this.itemStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusMeleeATK.Location = new System.Drawing.Point(15, 60);
-			this.itemStatusMeleeATK.Name = "itemStatusMeleeATK";
-			this.itemStatusMeleeATK.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusMeleeATK.StatusLabel = "Melee ATK";
-			this.itemStatusMeleeATK.TabIndex = 2;
+			this.StatusGraphMeleeATK.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphMeleeATK.Location = new System.Drawing.Point(15, 60);
+			this.StatusGraphMeleeATK.Name = "StatusGraphMeleeATK";
+			this.StatusGraphMeleeATK.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphMeleeATK.StatusLabel = "Melee ATK";
+			this.StatusGraphMeleeATK.TabIndex = 2;
 			// 
-			// itemStatusTP
+			// StatusGraphTP
 			// 
-			this.itemStatusTP.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusTP.Location = new System.Drawing.Point(15, 40);
-			this.itemStatusTP.Name = "itemStatusTP";
-			this.itemStatusTP.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusTP.StatusLabel = "TP";
-			this.itemStatusTP.TabIndex = 1;
+			this.StatusGraphTP.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphTP.Location = new System.Drawing.Point(15, 40);
+			this.StatusGraphTP.Name = "StatusGraphTP";
+			this.StatusGraphTP.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphTP.StatusLabel = "TP";
+			this.StatusGraphTP.TabIndex = 1;
 			// 
-			// itemStatusHP
+			// StatusGraphHP
 			// 
-			this.itemStatusHP.BackColor = System.Drawing.Color.Transparent;
-			this.itemStatusHP.Location = new System.Drawing.Point(15, 20);
-			this.itemStatusHP.Name = "itemStatusHP";
-			this.itemStatusHP.Size = new System.Drawing.Size(1050, 20);
-			this.itemStatusHP.StatusLabel = "HP";
-			this.itemStatusHP.TabIndex = 0;
+			this.StatusGraphHP.BackColor = System.Drawing.Color.Transparent;
+			this.StatusGraphHP.Location = new System.Drawing.Point(15, 20);
+			this.StatusGraphHP.Name = "StatusGraphHP";
+			this.StatusGraphHP.Size = new System.Drawing.Size(1050, 20);
+			this.StatusGraphHP.StatusLabel = "HP";
+			this.StatusGraphHP.TabIndex = 0;
 			// 
 			// EquipItemStatusParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.GroupItemStatus);
 			this.Name = "EquipItemStatusParts";
 			this.Size = new System.Drawing.Size(760, 300);
-			this.groupBox1.ResumeLayout(false);
+			this.GroupItemStatus.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -265,19 +264,19 @@ namespace Status_Editer.User_Control.CommonParts {
 		#endregion
 
 		private ToolTip toolTipInfo;
-		private GroupBox groupBox1;
-		private ItemStatusParts itemStatusHIT;
-		private ItemStatusParts itemStatusLuck;
-		private ItemStatusParts itemStatusSPD;
-		private ItemStatusParts itemStatusMagicDEF;
-		private ItemStatusParts itemStatusMagicATK;
-		private ItemStatusParts itemStatusRangeDEF;
-		private ItemStatusParts itemStatusRangeATK;
-		private ItemStatusParts itemStatusMeleeDEF;
-		private ItemStatusParts itemStatusMeleeATK;
-		private ItemStatusParts itemStatusTP;
-		private ItemStatusParts itemStatusHP;
-		private ItemStatusParts itemStatusEVT;
+		private GroupBox GroupItemStatus;
+		private StatusGraphParts StatusGraphHIT;
+		private StatusGraphParts StatusGraphLuck;
+		private StatusGraphParts StatusGraphSPD;
+		private StatusGraphParts StatusGraphMagicDEF;
+		private StatusGraphParts StatusGraphMagicATK;
+		private StatusGraphParts StatusGraphRangeDEF;
+		private StatusGraphParts StatusGraphRangeATK;
+		private StatusGraphParts StatusGraphMeleeDEF;
+		private StatusGraphParts StatusGraphMeleeATK;
+		private StatusGraphParts StatusGraphTP;
+		private StatusGraphParts StatusGraphHP;
+		private StatusGraphParts StatusGraphEVT;
 		private Label labelGraph6;
 		private Label labelGraph5;
 		private Label labelGraph4;

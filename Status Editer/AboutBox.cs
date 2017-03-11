@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
+﻿//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// about Box Form
+//
+// Programed By Yukari-World
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System.IO;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer {
-	partial class AboutBox1 : Form {
-		public AboutBox1() {
+	partial class AboutBox : Form {
+		public AboutBox() {
 			InitializeComponent();
-			this.Text = String.Format("{0} のバージョン情報", AssemblyTitle);
-			this.labelProductName.Text = AssemblyProduct;
-			this.labelVersion.Text = String.Format("バージョン {0}", AssemblyVersion);
-			this.labelCopyright.Text = AssemblyCopyright;
-			this.labelCompanyName.Text = AssemblyCompany;
-			this.textBoxDescription.Text = AssemblyDescription;
-		}
+			Text = string.Format("{0} のバージョン情報", AssemblyTitle);
+			labelProductName.Text = AssemblyProduct;
+			labelVersion.Text = string.Format("バージョン {0}", AssemblyVersion);
+			labelCopyright.Text = AssemblyCopyright;
+			labelCompanyName.Text = AssemblyCompany;
+			textBoxDescription.Text = AssemblyDescription;
+		}// End Method
 
 		#region アセンブリ属性アクセサー
 
@@ -30,7 +30,7 @@ namespace Status_Editer {
 						return titleAttribute.Title;
 					}
 				}
-				return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
+				return Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
 			}
 		}
 
@@ -80,5 +80,5 @@ namespace Status_Editer {
 			}
 		}
 		#endregion
-	}
+	}// End Class
 }

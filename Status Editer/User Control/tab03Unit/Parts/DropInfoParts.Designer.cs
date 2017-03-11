@@ -51,17 +51,17 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.numericDropRate.ImeMode = System.Windows.Forms.ImeMode.Off;
 			this.numericDropRate.Location = new System.Drawing.Point(355, 31);
 			this.numericDropRate.Maximum = new decimal(new int[] {
-			10000,
-			0,
-			0,
-			0});
+            10000,
+            0,
+            0,
+            0});
 			this.numericDropRate.Name = "numericDropRate";
 			this.numericDropRate.Size = new System.Drawing.Size(120, 19);
-			this.numericDropRate.TabIndex = 7;
+			this.numericDropRate.TabIndex = 3;
 			this.numericDropRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.numericDropRate.ThousandsSeparator = true;
 			this.toolTipInfo.SetToolTip(this.numericDropRate, "ドロップ率。\r\n0だと絶対にドロップせず、10,000だと必ずドロップする。\r\nドロップにはメルセンヌ・ツイスタの疑似乱数が使用される。\r\n設定値: 0 ～ 10" +
-		",000");
+        ",000");
 			// 
 			// groupBoxDrop
 			// 
@@ -83,7 +83,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.labelDropRate.Location = new System.Drawing.Point(355, 15);
 			this.labelDropRate.Name = "labelDropRate";
 			this.labelDropRate.Size = new System.Drawing.Size(57, 12);
-			this.labelDropRate.TabIndex = 6;
+			this.labelDropRate.TabIndex = 2;
 			this.labelDropRate.Text = "Drop Rate";
 			// 
 			// comboDropTable
@@ -94,7 +94,8 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.comboDropTable.Location = new System.Drawing.Point(15, 30);
 			this.comboDropTable.Name = "comboDropTable";
 			this.comboDropTable.Size = new System.Drawing.Size(300, 20);
-			this.comboDropTable.TabIndex = 5;
+			this.comboDropTable.TabIndex = 1;
+			this.comboDropTable.SelectedIndexChanged += new System.EventHandler(this.comboDropTable_SelectedIndexChanged);
 			// 
 			// labelDropTable
 			// 
@@ -102,14 +103,13 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.labelDropTable.Location = new System.Drawing.Point(15, 15);
 			this.labelDropTable.Name = "labelDropTable";
 			this.labelDropTable.Size = new System.Drawing.Size(61, 12);
-			this.labelDropTable.TabIndex = 4;
+			this.labelDropTable.TabIndex = 0;
 			this.labelDropTable.Text = "Drop Table";
 			// 
 			// DropInfoParts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupBoxDrop);
 			this.Name = "DropInfoParts";
 			this.Size = new System.Drawing.Size(730, 130);

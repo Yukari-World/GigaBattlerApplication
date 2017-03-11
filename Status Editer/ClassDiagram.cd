@@ -1,288 +1,284 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
   <Class Name="Status_Editer.EditerMainMenu" Collapsed="true">
-    <Position X="8.25" Y="10.25" Width="1.5" />
+    <Position X="5.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EACVWS1KITGIRRAkBgDgIYQiGU4SECsiAEBACgQhAoA=</HashCode>
+      <HashCode>3mzveThfG/udZz4wJuvyZ8/yu09/nn8/UFmqbJR5svI=</HashCode>
       <FileName>EditerMainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSet" Collapsed="true">
-    <Position X="5.75" Y="4.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>gAQEOCEAD4gCMAZARAIBxAAQAygHQJpSFBAIACECFBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Status_Editer.Program" Collapsed="true">
-    <Position X="87.5" Y="0.5" Width="1.5" />
+    <Position X="74.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_jobTableAdapter" Collapsed="true">
-    <Position X="78" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_raceTableAdapter" Collapsed="true">
-    <Position X="54.75" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weaponTableAdapter" Collapsed="true">
-    <Position X="80.75" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.TableAdapterManager" Collapsed="true">
-    <Position X="63.75" Y="4.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>QSIEAKAIYgBABIFHgABAcEAhAAACgAAAoAwBUSAAFAQ=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Status_Editer.Properties.Resources" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+    <Position X="3.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.TestForm" Collapsed="true">
-    <Position X="10.5" Y="10.25" Width="1.5" />
+  <Class Name="Status_Editer.FormUnit" Collapsed="true">
+    <Position X="7.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>t7QZj8GBkGGIFHPGoBjENBATZBkB6KIoEBQKAITT50E=</HashCode>
-      <FileName>TestForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_skillTableAdapter" Collapsed="true">
-    <Position X="72.25" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_accessoryTableAdapter" Collapsed="true">
-    <Position X="60.5" Y="4.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_armorTableAdapter" Collapsed="true">
-    <Position X="66.25" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_helmetTableAdapter" Collapsed="true">
-    <Position X="75" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_shieldTableAdapter" Collapsed="true">
-    <Position X="69.25" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <HashCode>t7QJj0GBkGGIEHPGgRjAJBAjRTkB6KIoEBRKAITS50E=</HashCode>
+      <FileName>FormUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Windows.Forms.UserControl" Collapsed="true">
-    <Position X="26.75" Y="9" Width="1.5" />
+    <Position X="53.25" Y="9" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Windows.Forms.Form" Collapsed="true">
-    <Position X="9.5" Y="9" Width="1.5" />
+    <Position X="19" Y="9" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.ComponentModel.Component" Collapsed="true">
-    <Position X="46.75" Y="3" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="System.Data.DataSet" Collapsed="true">
-    <Position X="5.75" Y="3" Width="1.75" />
+    <Position X="38.5" Y="3" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
-    <Position X="3" Y="3" Width="1.75" />
+    <Position X="0.75" Y="3" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Windows.Forms.ContainerControl" Collapsed="true">
-    <Position X="24.5" Y="7.5" Width="1.5" />
+    <Position X="38.5" Y="7.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.AbilityInfomation" Collapsed="true">
-    <Position X="26.5" Y="11.75" Width="1.5" />
+    <Position X="48.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>User Control\tab03Unit\AbilityInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.DropInfomation" Collapsed="true">
-    <Position X="15.25" Y="10.25" Width="1.5" />
+    <Position X="37.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAKgAAAACAIAQAAAACAIAACAABAKCCAEAQAAABAJAA=</HashCode>
+      <HashCode>AAAAgAAAACAIAQAAAACAAAACAABAIgCAAAAAAABgIAA=</HashCode>
       <FileName>User Control\tab03Unit\DropInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.SkillInfomation" Collapsed="true">
-    <Position X="19.75" Y="10.25" Width="1.5" />
+    <Position X="41.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAEgACAAAAAQgED4DwACADABCAAAIAEAAAAAgEA=</HashCode>
+      <HashCode>AAAIAAFgACAAAAAwwGD4DwACADgDAAAAMAMAAAAggME=</HashCode>
       <FileName>User Control\tab03Unit\SkillInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.StatusInfomation" Collapsed="true">
-    <Position X="22" Y="10.25" Width="1.5" />
+    <Position X="44" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>H03JedELYDkpAFLzTgTJsY5W/Avx/rLFDIDD9IPxxcg=</HashCode>
+      <HashCode>H03JedELYDkpAFLzTgTJsY5W/Avx9rLFDIDD9IPxxcg=</HashCode>
       <FileName>User Control\tab03Unit\StatusInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.TotalUnitInfomation" Collapsed="true">
-    <Position X="12.75" Y="10.25" Width="1.75" />
+    <Position X="34.75" Y="10.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>8P8vmFEKtjsCAksF4qSIIABO1CRHHqpFjITaBUkhlTo=</HashCode>
       <FileName>User Control\tab03Unit\TotalUnitInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.UnitInfomation" Collapsed="true">
-    <Position X="28.75" Y="11.75" Width="1.5" />
+    <Position X="50.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAEkAKAIABAAAgCAEQACgAAACAAAAABAgACAgAA=</HashCode>
+      <HashCode>AACAAAEkAKAIABAAAgCAEQACgAAAAAAAAABAgQCggAA=</HashCode>
       <FileName>User Control\tab03Unit\UnitInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.Parts.SkillInfoParts" Collapsed="true">
-    <Position X="17.5" Y="10.25" Width="1.5" />
+    <Position X="39.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAIAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAIkAEA=</HashCode>
+      <HashCode>gAAIAAAAACAMAAAAAACAAAACAAAAAAAAAAAAAAYkAEA=</HashCode>
       <FileName>User Control\tab03Unit\Parts\SkillInfoParts.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_gauntletTableAdapter" Collapsed="true">
-    <Position X="57.5" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Status_Editer.ZUserControl" Collapsed="true">
-    <Position X="30.25" Y="10.25" Width="1.5" />
+    <Position X="52" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAIAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ZUserControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter" Collapsed="true">
-    <Position X="52" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_weapon_typeTableAdapter" Collapsed="true">
-    <Position X="83.75" Y="4.5" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Status_Editer.User_Control.tab05Race.Parts.RaceStatusBasicParts" Collapsed="true">
-    <Position X="31" Y="11.75" Width="1.75" />
+    <Position X="53" Y="11.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>gAAAFQAggCIIQAAAEACAAAACBAAAEAAAABAAAIQgJAA=</HashCode>
+      <HashCode>gIAAFQAggCIIQAAAEACAAAACBAACEAAAABAAAIQgJAA=</HashCode>
       <FileName>User Control\tab05Race\Parts\RaceStatusBasicParts.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab05Race.RaceInfomation" Collapsed="true">
-    <Position X="33.5" Y="11.75" Width="1.5" />
+    <Position X="55.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAQAgCCAAAAAAAACASABCIAAAGIAAgAAEAAACAAA=</HashCode>
+      <HashCode>AACAAQAgCCAAAAAAAACASABCIAAAEIAAgAAEAAAiAAA=</HashCode>
       <FileName>User Control\tab05Race\RaceInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Configuration.SettingsBase" Collapsed="true">
-    <Position X="3.25" Y="1.75" Width="1.5" />
+    <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier />
-  </Class>
-  <Class Name="System.ComponentModel.MarshalByValueComponent" Collapsed="true">
-    <Position X="5.5" Y="1.75" Width="2" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Windows.Forms.ScrollableControl" Collapsed="true">
-    <Position X="24.5" Y="6" Width="1.5" />
+    <Position X="38.5" Y="6" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Windows.Forms.Control" Collapsed="true">
-    <Position X="24.5" Y="4.5" Width="1.5" />
+    <Position X="38.5" Y="4.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.MarshalByRefObject" Collapsed="true">
-    <Position X="46.75" Y="1.75" Width="1.5" />
+    <Position X="38.5" Y="1.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Status_Editer.Properties.Settings" Collapsed="true">
-    <Position X="3" Y="4.5" Width="1.75" />
+    <Position X="0.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab06Job.JobInfomation" Collapsed="true">
-    <Position X="24.25" Y="11.75" Width="1.5" />
+    <Position X="46.25" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AJIAAIACCCAOBAAAIAKBCAgCAIAQCBABAAAAAABQkUQ=</HashCode>
       <FileName>User Control\tab06Job\JobInfomation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab06Job.Parts.JobStatusBasicParts" Collapsed="true">
-    <Position X="35.75" Y="11.75" Width="1.75" />
+    <Position X="57.75" Y="11.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>kAAABEAAACAIAAIAwACEBAACkAAACBAAAAAAAJAgAAE=</HashCode>
       <FileName>User Control\tab06Job\Parts\JobStatusBasicParts.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_abilityTableAdapter" Collapsed="true">
-    <Position X="49" Y="4.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_areaTableAdapter" Collapsed="true">
-    <Position X="46.25" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Status_Editer.GigaBattlerDataSetTableAdapters.@__table_battle_areaTableAdapter" Collapsed="true">
-    <Position X="43" Y="4.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.Parts.DropInfoParts" Collapsed="true">
-    <Position X="38.25" Y="10.25" Width="1.5" />
+    <Position X="60.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAIACAIAAAAAACAAAASAABAIAAAAAAAAgAgAAA=</HashCode>
+      <HashCode>gAAIAAAIACAIAAAAAACAAAASAABAIAAAAAAAAgAgAAA=</HashCode>
       <FileName>User Control\tab03Unit\Parts\DropInfoParts.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Status_Editer.User_Control.tab03Unit.Parts.StatusInfoLevelParts" Collapsed="true">
-    <Position X="40.5" Y="10.25" Width="1.75" />
+    <Position X="62.5" Y="10.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>BAAAEQAAADAIABCQAACAAIACAAAAIAAAAAAAAAAgAIA=</HashCode>
       <FileName>User Control\tab03Unit\Parts\StatusInfoLevelParts.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Status_Editer.AboutBox" Collapsed="true">
+    <Position X="14.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIAAAAgAACAgCAUAAACAAAADAAAAEIAAAAAAAAAAAAA=</HashCode>
+      <FileName>AboutBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormAccessory" Collapsed="true">
+    <Position X="10" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAKAEAMAGClEDxAAUCAABEDIgEBAKIggABAFBABEAA=</HashCode>
+      <FileName>FormAccessory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormArmor" Collapsed="true">
+    <Position X="19" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAIIEAGClEDxIBQCAABEDIgkBAKIggABAFRABAAI=</HashCode>
+      <FileName>FormArmor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormGauntlet" Collapsed="true">
+    <Position X="23.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAgEAGDlEDxAAYCAABETIgkBAKIggABAFBBBAAA=</HashCode>
+      <FileName>FormGauntlet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormHelmet" Collapsed="true">
+    <Position X="25.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAABEAGClEDxIAQCCABEDIgEBAKIgoABAVBAhAAA=</HashCode>
+      <FileName>FormHelmet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormJob" Collapsed="true">
+    <Position X="28" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEIQEBGAlGBRAAQDggIATAwEGAAoiAAlAAABAABg=</HashCode>
+      <FileName>FormJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormMaker" Collapsed="true">
+    <Position X="30.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACAAEACAkEDRAASGABAALAQEIAAIgABBIAAAEAAA=</HashCode>
+      <FileName>FormMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormRace" Collapsed="true">
+    <Position X="32.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAEAgEgGAsEDDCgQCAAFADAAMAQAIgAABAAAIAAgQ=</HashCode>
+      <FileName>FormRace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormShield" Collapsed="true">
+    <Position X="12.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAEAGCnEDxAAQCAQBEDMgEBAKIggABAFTAVEAA=</HashCode>
+      <FileName>FormShield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormSkill" Collapsed="true">
+    <Position X="16.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABLgIMEKAsEDxAASSAYCADMAEABAIhAGFCEAhEAAA=</HashCode>
+      <FileName>FormSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.FormWeapon" Collapsed="true">
+    <Position X="21.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAEA2ClEDxAAQCIABEDKgEBAKIggABAFBABAgA=</HashCode>
+      <FileName>FormWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.CommonParts.EquipItemStatusParts" Collapsed="true">
+    <Position X="67.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQBACAIAAAAAACIAAACgQQEAAIACCCCIAggBQI=</HashCode>
+      <FileName>User Control\CommonParts\EquipItemStatusParts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.CommonParts.ItemAbilityInfoParts" Collapsed="true">
+    <Position X="69.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAACAAAACAAAAAAAAA=</HashCode>
+      <FileName>User Control\CommonParts\ItemAbilityInfoParts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.CommonParts.ItemInfoParts" Collapsed="true">
+    <Position X="71.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAkJDCRKQAEBAiCCYUACACBAwoQAJMDkQQDgAAA=</HashCode>
+      <FileName>User Control\CommonParts\ItemInfoParts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Status_Editer.User_Control.CommonParts.ItemStatusParts" Collapsed="true">
+    <Position X="65" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKEIABAAAACAAAACAAAAAAgAAAAAAYAgAAA=</HashCode>
+      <FileName>User Control\CommonParts\ItemStatusParts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="43" Y="0.5" Width="1.5" />
+    <Position X="36.25" Y="0.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Font Name="Yu Gothic UI" Size="9" />

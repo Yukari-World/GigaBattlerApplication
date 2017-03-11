@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Status_Editer</RootNamespace>
     <AssemblyName>Status Editer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,8 +24,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>47</ApplicationRevision>
-    <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
+    <TargetCulture>ja-JP</TargetCulture>
+    <ApplicationRevision>68</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,9 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -71,11 +73,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
+    <Compile Include="AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArea.Designer.cs">
+      <DependentUpon>FormArea.cs</DependentUpon>
     </Compile>
     <Compile Include="EditerMainMenu.cs">
       <SubType>Form</SubType>
@@ -83,10 +91,65 @@
     <Compile Include="EditerMainMenu.Designer.cs">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GigaBattlerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
+    <Compile Include="FormAccessory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccessory.Designer.cs">
+      <DependentUpon>FormAccessory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArmor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArmor.Designer.cs">
+      <DependentUpon>FormArmor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGauntlet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGauntlet.Designer.cs">
+      <DependentUpon>FormGauntlet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelmet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelmet.Designer.cs">
+      <DependentUpon>FormHelmet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJob.Designer.cs">
+      <DependentUpon>FormJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaker.Designer.cs">
+      <DependentUpon>FormMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRace.Designer.cs">
+      <DependentUpon>FormRace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShield.designer.cs">
+      <DependentUpon>FormShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSkill.Designer.cs">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWeapon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWeapon.designer.cs">
+      <DependentUpon>FormWeapon.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\CommonParts\EquipItemStatusParts.cs">
       <SubType>UserControl</SubType>
@@ -106,11 +169,11 @@
     <Compile Include="User Control\CommonParts\ItemInfoParts.Designer.cs">
       <DependentUpon>ItemInfoParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\CommonParts\ItemStatusParts.cs">
+    <Compile Include="User Control\CommonParts\StatusGraphParts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\CommonParts\ItemStatusParts.Designer.cs">
-      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    <Compile Include="User Control\CommonParts\StatusGraphParts.Designer.cs">
+      <DependentUpon>StatusGraphParts.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\tab03Unit\Parts\DropInfoParts.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +187,12 @@
     <Compile Include="User Control\tab03Unit\Parts\StatusInfoLevelParts.Designer.cs">
       <DependentUpon>StatusInfoLevelParts.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceInfoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab05Race\Parts\RaceInfoParts.designer.cs">
+      <DependentUpon>RaceInfoParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\tab06Job\JobInfomation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +204,36 @@
     </Compile>
     <Compile Include="User Control\tab06Job\Parts\JobStatusBasicParts.Designer.cs">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\ElementSelectParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\ElementSelectParts.Designer.cs">
+      <DependentUpon>ElementSelectParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\Parts\PowerGraphParts.Designer.cs">
+      <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillElementInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillElementInfomation.Designer.cs">
+      <DependentUpon>SkillElementInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillInfomation.Designer.cs">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillStatusInfomation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\tab14Skill\SkillStatusInfomation.Designer.cs">
+      <DependentUpon>SkillStatusInfomation.cs</DependentUpon>
     </Compile>
     <Compile Include="ZUserControl.cs">
       <SubType>UserControl</SubType>
@@ -201,11 +300,44 @@
     <Compile Include="User Control\tab05Race\RaceInfomation.Designer.cs">
       <DependentUpon>RaceInfomation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditerMainMenu.resx">
       <DependentUpon>EditerMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAccessory.resx">
+      <DependentUpon>FormAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArea.resx">
+      <DependentUpon>FormArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArmor.resx">
+      <DependentUpon>FormArmor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGauntlet.resx">
+      <DependentUpon>FormGauntlet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelmet.resx">
+      <DependentUpon>FormHelmet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJob.resx">
+      <DependentUpon>FormJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaker.resx">
+      <DependentUpon>FormMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRace.resx">
+      <DependentUpon>FormRace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShield.resx">
+      <DependentUpon>FormShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSkill.resx">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWeapon.resx">
+      <DependentUpon>FormWeapon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -215,6 +347,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FormUnit.resx">
       <DependentUpon>FormUnit.cs</DependentUpon>
@@ -228,8 +361,8 @@
     <EmbeddedResource Include="User Control\CommonParts\ItemInfoParts.resx">
       <DependentUpon>ItemInfoParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\CommonParts\ItemStatusParts.resx">
-      <DependentUpon>ItemStatusParts.cs</DependentUpon>
+    <EmbeddedResource Include="User Control\CommonParts\StatusGraphParts.resx">
+      <DependentUpon>StatusGraphParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab03Unit\DropInfomation.resx">
       <DependentUpon>DropInfomation.cs</DependentUpon>
@@ -258,6 +391,9 @@
     <EmbeddedResource Include="User Control\tab03Unit\UnitInfomation.resx">
       <DependentUpon>UnitInfomation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab05Race\Parts\RaceInfoParts.resx">
+      <DependentUpon>RaceInfoParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\tab05Race\Parts\RaceStatusBasicParts.resx">
       <DependentUpon>RaceStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,18 +406,22 @@
     <EmbeddedResource Include="User Control\tab06Job\Parts\JobStatusBasicParts.resx">
       <DependentUpon>JobStatusBasicParts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\Parts\ElementSelectParts.resx">
+      <DependentUpon>ElementSelectParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\Parts\PowerGraphParts.resx">
+      <DependentUpon>PowerGraphParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillElementInfomation.resx">
+      <DependentUpon>SkillElementInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillInfomation.resx">
+      <DependentUpon>SkillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\tab14Skill\SkillStatusInfomation.resx">
+      <DependentUpon>SkillStatusInfomation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
-    <None Include="GigaBattlerDataSet.xsc">
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GigaBattlerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GigaBattlerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GigaBattlerDataSet.xss">
-      <DependentUpon>GigaBattlerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -315,11 +455,16 @@
     <Folder Include="User Control\tab11Gauntlet\Parts\" />
     <Folder Include="User Control\tab12Armor\Parts\" />
     <Folder Include="User Control\tab13Accessory\Parts\" />
-    <Folder Include="User Control\tab14Skill\Parts\" />
     <Folder Include="User Control\tab15Ability\Parts\" />
     <Folder Include="User Control\tab16City\Parts\" />
     <Folder Include="User Control\tab17BattleField\Parts\" />
     <Folder Include="User Control\tab18WaveData\Parts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common Library\CommonLibrary.csproj">
+      <Project>{f946030b-55b7-4369-9404-4934138f0637}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

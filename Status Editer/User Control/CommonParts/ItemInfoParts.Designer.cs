@@ -486,7 +486,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.comboElement2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboElement2.FormattingEnabled = true;
 			this.comboElement2.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboElement2.Location = new System.Drawing.Point(80, 134);
+			this.comboElement2.Location = new System.Drawing.Point(82, 134);
 			this.comboElement2.MaxDropDownItems = 10;
 			this.comboElement2.Name = "comboElement2";
 			this.comboElement2.Size = new System.Drawing.Size(50, 20);
@@ -764,7 +764,6 @@ namespace Status_Editer.User_Control.CommonParts {
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Transparent;
 			this.Controls.Add(this.groupInfomation);
 			this.Name = "ItemInfoParts";
 			this.Size = new System.Drawing.Size(600, 820);

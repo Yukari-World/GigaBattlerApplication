@@ -634,6 +634,6 @@ ID名は英名表記で統一し、データの整合性のため、変更を行
     <value>UnitInfomation</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Status_Editer.ZUserControl, Status Editer, Version=0.2.0.102, Culture=neutral, PublicKeyToken=null</value>
+    <value>Status_Editer.ZUserControl, Status Editer, Version=0.3.1.52, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
