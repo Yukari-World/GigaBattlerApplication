@@ -3,14 +3,8 @@
 //
 // Programed By Yukari-World
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Status_Editer.User_Control.CommonParts {
@@ -48,19 +42,18 @@ namespace Status_Editer.User_Control.CommonParts {
 		/// <param name="ItemDataTable">Item Data Table</param>
 		public void SetDataBindings(DataTable ItemDataTable) {
 			// データバインドの設定
-			itemStatusHP.SetDataBindings(ItemDataTable, "HP");
-			itemStatusTP.SetDataBindings(ItemDataTable, "TP");
-			itemStatusMeleeATK.SetDataBindings(ItemDataTable, "ATK");
-			itemStatusMeleeDEF.SetDataBindings(ItemDataTable, "DEF");
-			itemStatusRangeATK.SetDataBindings(ItemDataTable, "RAT");
-			itemStatusRangeDEF.SetDataBindings(ItemDataTable, "RDF");
-			itemStatusMagicATK.SetDataBindings(ItemDataTable, "MAT");
-			itemStatusMagicDEF.SetDataBindings(ItemDataTable, "MDF");
-			itemStatusSPD.SetDataBindings(ItemDataTable, "SPD");
-			itemStatusLuck.SetDataBindings(ItemDataTable, "LUK");
-			itemStatusHIT.SetDataBindings(ItemDataTable, "HIT");
-			itemStatusEVT.SetDataBindings(ItemDataTable, "EVT");
-
+			StatusGraphHP.SetDataBindings(ItemDataTable, "HP");
+			StatusGraphTP.SetDataBindings(ItemDataTable, "TP");
+			StatusGraphMeleeATK.SetDataBindings(ItemDataTable, "ATK");
+			StatusGraphMeleeDEF.SetDataBindings(ItemDataTable, "DEF");
+			StatusGraphRangeATK.SetDataBindings(ItemDataTable, "RAT");
+			StatusGraphRangeDEF.SetDataBindings(ItemDataTable, "RDF");
+			StatusGraphMagicATK.SetDataBindings(ItemDataTable, "MAT");
+			StatusGraphMagicDEF.SetDataBindings(ItemDataTable, "MDF");
+			StatusGraphSPD.SetDataBindings(ItemDataTable, "SPD");
+			StatusGraphLuck.SetDataBindings(ItemDataTable, "LUK");
+			StatusGraphHIT.SetDataBindings(ItemDataTable, "HIT");
+			StatusGraphEVT.SetDataBindings(ItemDataTable, "EVT");
 
 			//----------------------------------------------------------------------------------------------------
 			// デザイナーの設定

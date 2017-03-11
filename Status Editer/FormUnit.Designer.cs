@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonLibrary;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -162,8 +163,8 @@ namespace Status_Editer {
 			this.ability30DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tableunitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_unitTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_unitTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_unitTableAdapter();
 			this.ToolStripContainer.ContentPanel.SuspendLayout();
 			this.ToolStripContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewUnit)).BeginInit();
@@ -1143,7 +1144,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewUnit;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableunitBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_unitTableAdapter ___table_unitTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_unitTableAdapter ___table_unitTableAdapter;
 		private DataGridViewTextBoxColumn unitIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn unitNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn raceDataGridViewTextBoxColumn;

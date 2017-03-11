@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CommonLibrary;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Status_Editer {
@@ -69,8 +70,8 @@ namespace Status_Editer {
 			this.skill3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.infoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tableaccessoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gigaBattlerDataSet = new Status_Editer.GigaBattlerDataSet();
-			this.___table_accessoryTableAdapter = new Status_Editer.GigaBattlerDataSetTableAdapters.@__table_accessoryTableAdapter();
+			this.gigaBattlerDataSet = new CommonLibrary.GigaBattlerDataSet();
+			this.___table_accessoryTableAdapter = new CommonLibrary.GigaBattlerDataSetTableAdapters.@__table_accessoryTableAdapter();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.DataGridViewAccessory)).BeginInit();
@@ -420,7 +421,7 @@ namespace Status_Editer {
 		private DataGridView DataGridViewAccessory;
 		private GigaBattlerDataSet gigaBattlerDataSet;
 		private BindingSource tableaccessoryBindingSource;
-		private GigaBattlerDataSetTableAdapters.__table_accessoryTableAdapter ___table_accessoryTableAdapter;
+		private CommonLibrary.GigaBattlerDataSetTableAdapters.__table_accessoryTableAdapter ___table_accessoryTableAdapter;
 		private DataGridViewTextBoxColumn accessoryIDDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn accessoryNameDataGridViewTextBoxColumn;
 		private DataGridViewTextBoxColumn physicsPowerDataGridViewTextBoxColumn;

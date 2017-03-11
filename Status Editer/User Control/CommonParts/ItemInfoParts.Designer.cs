@@ -486,7 +486,7 @@ namespace Status_Editer.User_Control.CommonParts {
 			this.comboElement2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboElement2.FormattingEnabled = true;
 			this.comboElement2.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.comboElement2.Location = new System.Drawing.Point(80, 134);
+			this.comboElement2.Location = new System.Drawing.Point(82, 134);
 			this.comboElement2.MaxDropDownItems = 10;
 			this.comboElement2.Name = "comboElement2";
 			this.comboElement2.Size = new System.Drawing.Size(50, 20);

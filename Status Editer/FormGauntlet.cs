@@ -7,7 +7,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using static Status_Editer.GigaBattlerDataSet;
+using static CommonLibrary.GigaBattlerDataSet;
 
 namespace Status_Editer {
 	public partial class FormGauntlet : Form {

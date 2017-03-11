@@ -4,11 +4,12 @@
 //     ランタイム バージョン:4.0.30319.42000
 //
 //     このファイルへの変更は、以下の状況下で不正な動作の原因になったり、
-//     コードが再生成されるときに損失したりします
+//     コードが再生成されるときに損失したりします。
 // </auto-generated>
 //------------------------------------------------------------------------------
 
 namespace Status_Editer.Properties {
+	using System;
 
 
 	/// <summary>
@@ -17,7 +18,7 @@ namespace Status_Editer.Properties {
 	// このクラスは StronglyTypedResourceBuilder クラスが ResGen
 	// または Visual Studio のようなツールを使用して自動生成されました。
 	// メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
-	// ResGen を実行し直すか、または VS プロジェクトをリビルドします。
+	// ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
 	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
 	[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
 	[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -32,12 +33,12 @@ namespace Status_Editer.Properties {
 		}
 
 		/// <summary>
-		///   このクラスで使用されるキャッシュされた ResourceManager インスタンスを返します。
+		///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
 		/// </summary>
 		[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
 		internal static global::System.Resources.ResourceManager ResourceManager {
 			get {
-				if ((resourceMan == null)) {
+				if (object.ReferenceEquals(resourceMan, null)) {
 					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Status_Editer.Properties.Resources", typeof(Resources).Assembly);
 					resourceMan = temp;
 				}

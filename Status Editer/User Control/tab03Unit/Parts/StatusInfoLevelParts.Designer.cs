@@ -56,7 +56,7 @@ namespace Status_Editer.User_Control.tab03Unit.Parts {
 			this.groupLv.Location = new System.Drawing.Point(0, 0);
 			this.groupLv.Name = "groupLv";
 			this.groupLv.Size = new System.Drawing.Size(650, 75);
-			this.groupLv.TabIndex = 1;
+			this.groupLv.TabIndex = 0;
 			this.groupLv.TabStop = false;
 			this.groupLv.Text = "Level";
 			// 

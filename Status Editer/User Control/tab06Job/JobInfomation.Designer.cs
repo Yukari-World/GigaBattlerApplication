@@ -68,7 +68,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusEVT
 			// 
-			this.JobStatusEVT.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusEVT.labelText = "EVT";
 			this.JobStatusEVT.Location = new System.Drawing.Point(720, 675);
 			this.JobStatusEVT.Name = "JobStatusEVT";
@@ -78,7 +77,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusHIT
 			// 
-			this.JobStatusHIT.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusHIT.labelText = "HIT";
 			this.JobStatusHIT.Location = new System.Drawing.Point(720, 615);
 			this.JobStatusHIT.Name = "JobStatusHIT";
@@ -88,7 +86,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusLuck
 			// 
-			this.JobStatusLuck.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusLuck.labelText = "Luck";
 			this.JobStatusLuck.Location = new System.Drawing.Point(720, 555);
 			this.JobStatusLuck.Name = "JobStatusLuck";
@@ -98,7 +95,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusSPD
 			// 
-			this.JobStatusSPD.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusSPD.labelText = "SPD";
 			this.JobStatusSPD.Location = new System.Drawing.Point(720, 495);
 			this.JobStatusSPD.Name = "JobStatusSPD";
@@ -108,7 +104,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusMagicDEF
 			// 
-			this.JobStatusMagicDEF.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusMagicDEF.labelText = "Magic DEF";
 			this.JobStatusMagicDEF.Location = new System.Drawing.Point(720, 435);
 			this.JobStatusMagicDEF.Name = "JobStatusMagicDEF";
@@ -118,7 +113,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusMagicATK
 			// 
-			this.JobStatusMagicATK.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusMagicATK.labelText = "Magic ATK";
 			this.JobStatusMagicATK.Location = new System.Drawing.Point(720, 375);
 			this.JobStatusMagicATK.Name = "JobStatusMagicATK";
@@ -128,7 +122,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusRangeDEF
 			// 
-			this.JobStatusRangeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusRangeDEF.labelText = "Range DEF";
 			this.JobStatusRangeDEF.Location = new System.Drawing.Point(720, 315);
 			this.JobStatusRangeDEF.Name = "JobStatusRangeDEF";
@@ -138,7 +131,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusRangeATK
 			// 
-			this.JobStatusRangeATK.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusRangeATK.labelText = "Range ATK";
 			this.JobStatusRangeATK.Location = new System.Drawing.Point(720, 255);
 			this.JobStatusRangeATK.Name = "JobStatusRangeATK";
@@ -148,7 +140,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusMeleeDEF
 			// 
-			this.JobStatusMeleeDEF.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusMeleeDEF.labelText = "Melee DEF";
 			this.JobStatusMeleeDEF.Location = new System.Drawing.Point(720, 195);
 			this.JobStatusMeleeDEF.Name = "JobStatusMeleeDEF";
@@ -158,7 +149,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusMeleeATK
 			// 
-			this.JobStatusMeleeATK.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusMeleeATK.labelText = "Melee ATK";
 			this.JobStatusMeleeATK.Location = new System.Drawing.Point(720, 135);
 			this.JobStatusMeleeATK.Name = "JobStatusMeleeATK";
@@ -168,7 +158,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusTP
 			// 
-			this.JobStatusTP.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusTP.labelText = "TP";
 			this.JobStatusTP.Location = new System.Drawing.Point(720, 75);
 			this.JobStatusTP.Name = "JobStatusTP";
@@ -178,7 +167,6 @@ namespace Status_Editer.User_Control.tab06Job {
 			// 
 			// JobStatusHP
 			// 
-			this.JobStatusHP.BackColor = System.Drawing.Color.Transparent;
 			this.JobStatusHP.labelText = "HP";
 			this.JobStatusHP.Location = new System.Drawing.Point(720, 15);
 			this.JobStatusHP.Name = "JobStatusHP";
